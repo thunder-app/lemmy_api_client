@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'pictrs.dart';
 
@@ -33,34 +33,37 @@ mixin _$PictrsUploadFile {
 abstract class $PictrsUploadFileCopyWith<$Res> {
   factory $PictrsUploadFileCopyWith(
           PictrsUploadFile value, $Res Function(PictrsUploadFile) then) =
-      _$PictrsUploadFileCopyWithImpl<$Res>;
+      _$PictrsUploadFileCopyWithImpl<$Res, PictrsUploadFile>;
+  @useResult
   $Res call({String deleteToken, String file});
 }
 
 /// @nodoc
-class _$PictrsUploadFileCopyWithImpl<$Res>
+class _$PictrsUploadFileCopyWithImpl<$Res, $Val extends PictrsUploadFile>
     implements $PictrsUploadFileCopyWith<$Res> {
   _$PictrsUploadFileCopyWithImpl(this._value, this._then);
 
-  final PictrsUploadFile _value;
   // ignore: unused_field
-  final $Res Function(PictrsUploadFile) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? deleteToken = freezed,
-    Object? file = freezed,
+    Object? deleteToken = null,
+    Object? file = null,
   }) {
     return _then(_value.copyWith(
-      deleteToken: deleteToken == freezed
+      deleteToken: null == deleteToken
           ? _value.deleteToken
           : deleteToken // ignore: cast_nullable_to_non_nullable
               as String,
-      file: file == freezed
+      file: null == file
           ? _value.file
           : file // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -71,31 +74,30 @@ abstract class _$$_PictrsUploadFileCopyWith<$Res>
           _$_PictrsUploadFile value, $Res Function(_$_PictrsUploadFile) then) =
       __$$_PictrsUploadFileCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String deleteToken, String file});
 }
 
 /// @nodoc
 class __$$_PictrsUploadFileCopyWithImpl<$Res>
-    extends _$PictrsUploadFileCopyWithImpl<$Res>
+    extends _$PictrsUploadFileCopyWithImpl<$Res, _$_PictrsUploadFile>
     implements _$$_PictrsUploadFileCopyWith<$Res> {
   __$$_PictrsUploadFileCopyWithImpl(
       _$_PictrsUploadFile _value, $Res Function(_$_PictrsUploadFile) _then)
-      : super(_value, (v) => _then(v as _$_PictrsUploadFile));
+      : super(_value, _then);
 
-  @override
-  _$_PictrsUploadFile get _value => super._value as _$_PictrsUploadFile;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? deleteToken = freezed,
-    Object? file = freezed,
+    Object? deleteToken = null,
+    Object? file = null,
   }) {
     return _then(_$_PictrsUploadFile(
-      deleteToken: deleteToken == freezed
+      deleteToken: null == deleteToken
           ? _value.deleteToken
           : deleteToken // ignore: cast_nullable_to_non_nullable
               as String,
-      file: file == freezed
+      file: null == file
           ? _value.file
           : file // ignore: cast_nullable_to_non_nullable
               as String,
@@ -128,20 +130,18 @@ class _$_PictrsUploadFile extends _PictrsUploadFile {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PictrsUploadFile &&
-            const DeepCollectionEquality()
-                .equals(other.deleteToken, deleteToken) &&
-            const DeepCollectionEquality().equals(other.file, file));
+            (identical(other.deleteToken, deleteToken) ||
+                other.deleteToken == deleteToken) &&
+            (identical(other.file, file) || other.file == file));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(deleteToken),
-      const DeepCollectionEquality().hash(file));
+  int get hashCode => Object.hash(runtimeType, deleteToken, file);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PictrsUploadFileCopyWith<_$_PictrsUploadFile> get copyWith =>
       __$$_PictrsUploadFileCopyWithImpl<_$_PictrsUploadFile>(this, _$identity);
 
@@ -192,38 +192,42 @@ mixin _$PictrsUpload {
 abstract class $PictrsUploadCopyWith<$Res> {
   factory $PictrsUploadCopyWith(
           PictrsUpload value, $Res Function(PictrsUpload) then) =
-      _$PictrsUploadCopyWithImpl<$Res>;
+      _$PictrsUploadCopyWithImpl<$Res, PictrsUpload>;
+  @useResult
   $Res call({String msg, List<PictrsUploadFile> files, String instanceHost});
 }
 
 /// @nodoc
-class _$PictrsUploadCopyWithImpl<$Res> implements $PictrsUploadCopyWith<$Res> {
+class _$PictrsUploadCopyWithImpl<$Res, $Val extends PictrsUpload>
+    implements $PictrsUploadCopyWith<$Res> {
   _$PictrsUploadCopyWithImpl(this._value, this._then);
 
-  final PictrsUpload _value;
   // ignore: unused_field
-  final $Res Function(PictrsUpload) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? msg = freezed,
-    Object? files = freezed,
-    Object? instanceHost = freezed,
+    Object? msg = null,
+    Object? files = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      msg: msg == freezed
+      msg: null == msg
           ? _value.msg
           : msg // ignore: cast_nullable_to_non_nullable
               as String,
-      files: files == freezed
+      files: null == files
           ? _value.files
           : files // ignore: cast_nullable_to_non_nullable
               as List<PictrsUploadFile>,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -234,36 +238,35 @@ abstract class _$$_PictrsUploadCopyWith<$Res>
           _$_PictrsUpload value, $Res Function(_$_PictrsUpload) then) =
       __$$_PictrsUploadCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String msg, List<PictrsUploadFile> files, String instanceHost});
 }
 
 /// @nodoc
 class __$$_PictrsUploadCopyWithImpl<$Res>
-    extends _$PictrsUploadCopyWithImpl<$Res>
+    extends _$PictrsUploadCopyWithImpl<$Res, _$_PictrsUpload>
     implements _$$_PictrsUploadCopyWith<$Res> {
   __$$_PictrsUploadCopyWithImpl(
       _$_PictrsUpload _value, $Res Function(_$_PictrsUpload) _then)
-      : super(_value, (v) => _then(v as _$_PictrsUpload));
+      : super(_value, _then);
 
-  @override
-  _$_PictrsUpload get _value => super._value as _$_PictrsUpload;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? msg = freezed,
-    Object? files = freezed,
-    Object? instanceHost = freezed,
+    Object? msg = null,
+    Object? files = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_PictrsUpload(
-      msg: msg == freezed
+      msg: null == msg
           ? _value.msg
           : msg // ignore: cast_nullable_to_non_nullable
               as String,
-      files: files == freezed
+      files: null == files
           ? _value._files
           : files // ignore: cast_nullable_to_non_nullable
               as List<PictrsUploadFile>,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -290,6 +293,7 @@ class _$_PictrsUpload extends _PictrsUpload {
   final List<PictrsUploadFile> _files;
   @override
   List<PictrsUploadFile> get files {
+    if (_files is EqualUnmodifiableListView) return _files;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_files);
   }
@@ -307,22 +311,20 @@ class _$_PictrsUpload extends _PictrsUpload {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PictrsUpload &&
-            const DeepCollectionEquality().equals(other.msg, msg) &&
+            (identical(other.msg, msg) || other.msg == msg) &&
             const DeepCollectionEquality().equals(other._files, _files) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(msg),
-      const DeepCollectionEquality().hash(_files),
-      const DeepCollectionEquality().hash(instanceHost));
+  int get hashCode => Object.hash(runtimeType, msg,
+      const DeepCollectionEquality().hash(_files), instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PictrsUploadCopyWith<_$_PictrsUpload> get copyWith =>
       __$$_PictrsUploadCopyWithImpl<_$_PictrsUpload>(this, _$identity);
 

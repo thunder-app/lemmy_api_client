@@ -191,6 +191,7 @@ class GetComments
     int? limit,
     int? communityId,
     String? communityName,
+    int? postId,
     bool? savedOnly,
     String? auth,
   }) = _GetComments;

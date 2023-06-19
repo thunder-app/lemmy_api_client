@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'source.dart';
 
@@ -50,7 +50,8 @@ mixin _$PersonSafe {
 abstract class $PersonSafeCopyWith<$Res> {
   factory $PersonSafeCopyWith(
           PersonSafe value, $Res Function(PersonSafe) then) =
-      _$PersonSafeCopyWithImpl<$Res>;
+      _$PersonSafeCopyWithImpl<$Res, PersonSafe>;
+  @useResult
   $Res call(
       {int id,
       String name,
@@ -74,113 +75,116 @@ abstract class $PersonSafeCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PersonSafeCopyWithImpl<$Res> implements $PersonSafeCopyWith<$Res> {
+class _$PersonSafeCopyWithImpl<$Res, $Val extends PersonSafe>
+    implements $PersonSafeCopyWith<$Res> {
   _$PersonSafeCopyWithImpl(this._value, this._then);
 
-  final PersonSafe _value;
   // ignore: unused_field
-  final $Res Function(PersonSafe) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
+    Object? id = null,
+    Object? name = null,
     Object? displayName = freezed,
     Object? avatar = freezed,
-    Object? banned = freezed,
-    Object? published = freezed,
+    Object? banned = null,
+    Object? published = null,
     Object? updated = freezed,
-    Object? actorId = freezed,
+    Object? actorId = null,
     Object? bio = freezed,
-    Object? local = freezed,
+    Object? local = null,
     Object? banner = freezed,
-    Object? deleted = freezed,
-    Object? inboxUrl = freezed,
-    Object? sharedInboxUrl = freezed,
+    Object? deleted = null,
+    Object? inboxUrl = null,
+    Object? sharedInboxUrl = null,
     Object? matrixUserId = freezed,
-    Object? admin = freezed,
-    Object? botAccount = freezed,
+    Object? admin = null,
+    Object? botAccount = null,
     Object? banExpires = freezed,
-    Object? instanceHost = freezed,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      displayName: displayName == freezed
+      displayName: freezed == displayName
           ? _value.displayName
           : displayName // ignore: cast_nullable_to_non_nullable
               as String?,
-      avatar: avatar == freezed
+      avatar: freezed == avatar
           ? _value.avatar
           : avatar // ignore: cast_nullable_to_non_nullable
               as String?,
-      banned: banned == freezed
+      banned: null == banned
           ? _value.banned
           : banned // ignore: cast_nullable_to_non_nullable
               as bool,
-      published: published == freezed
+      published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      updated: updated == freezed
+      updated: freezed == updated
           ? _value.updated
           : updated // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      actorId: actorId == freezed
+      actorId: null == actorId
           ? _value.actorId
           : actorId // ignore: cast_nullable_to_non_nullable
               as String,
-      bio: bio == freezed
+      bio: freezed == bio
           ? _value.bio
           : bio // ignore: cast_nullable_to_non_nullable
               as String?,
-      local: local == freezed
+      local: null == local
           ? _value.local
           : local // ignore: cast_nullable_to_non_nullable
               as bool,
-      banner: banner == freezed
+      banner: freezed == banner
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
-      deleted: deleted == freezed
+      deleted: null == deleted
           ? _value.deleted
           : deleted // ignore: cast_nullable_to_non_nullable
               as bool,
-      inboxUrl: inboxUrl == freezed
+      inboxUrl: null == inboxUrl
           ? _value.inboxUrl
           : inboxUrl // ignore: cast_nullable_to_non_nullable
               as String,
-      sharedInboxUrl: sharedInboxUrl == freezed
+      sharedInboxUrl: null == sharedInboxUrl
           ? _value.sharedInboxUrl
           : sharedInboxUrl // ignore: cast_nullable_to_non_nullable
               as String,
-      matrixUserId: matrixUserId == freezed
+      matrixUserId: freezed == matrixUserId
           ? _value.matrixUserId
           : matrixUserId // ignore: cast_nullable_to_non_nullable
               as String?,
-      admin: admin == freezed
+      admin: null == admin
           ? _value.admin
           : admin // ignore: cast_nullable_to_non_nullable
               as bool,
-      botAccount: botAccount == freezed
+      botAccount: null == botAccount
           ? _value.botAccount
           : botAccount // ignore: cast_nullable_to_non_nullable
               as bool,
-      banExpires: banExpires == freezed
+      banExpires: freezed == banExpires
           ? _value.banExpires
           : banExpires // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -191,6 +195,7 @@ abstract class _$$_PersonSafeCopyWith<$Res>
           _$_PersonSafe value, $Res Function(_$_PersonSafe) then) =
       __$$_PersonSafeCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       String name,
@@ -214,111 +219,110 @@ abstract class _$$_PersonSafeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PersonSafeCopyWithImpl<$Res> extends _$PersonSafeCopyWithImpl<$Res>
+class __$$_PersonSafeCopyWithImpl<$Res>
+    extends _$PersonSafeCopyWithImpl<$Res, _$_PersonSafe>
     implements _$$_PersonSafeCopyWith<$Res> {
   __$$_PersonSafeCopyWithImpl(
       _$_PersonSafe _value, $Res Function(_$_PersonSafe) _then)
-      : super(_value, (v) => _then(v as _$_PersonSafe));
+      : super(_value, _then);
 
-  @override
-  _$_PersonSafe get _value => super._value as _$_PersonSafe;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
+    Object? id = null,
+    Object? name = null,
     Object? displayName = freezed,
     Object? avatar = freezed,
-    Object? banned = freezed,
-    Object? published = freezed,
+    Object? banned = null,
+    Object? published = null,
     Object? updated = freezed,
-    Object? actorId = freezed,
+    Object? actorId = null,
     Object? bio = freezed,
-    Object? local = freezed,
+    Object? local = null,
     Object? banner = freezed,
-    Object? deleted = freezed,
-    Object? inboxUrl = freezed,
-    Object? sharedInboxUrl = freezed,
+    Object? deleted = null,
+    Object? inboxUrl = null,
+    Object? sharedInboxUrl = null,
     Object? matrixUserId = freezed,
-    Object? admin = freezed,
-    Object? botAccount = freezed,
+    Object? admin = null,
+    Object? botAccount = null,
     Object? banExpires = freezed,
-    Object? instanceHost = freezed,
+    Object? instanceHost = null,
   }) {
     return _then(_$_PersonSafe(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      displayName: displayName == freezed
+      displayName: freezed == displayName
           ? _value.displayName
           : displayName // ignore: cast_nullable_to_non_nullable
               as String?,
-      avatar: avatar == freezed
+      avatar: freezed == avatar
           ? _value.avatar
           : avatar // ignore: cast_nullable_to_non_nullable
               as String?,
-      banned: banned == freezed
+      banned: null == banned
           ? _value.banned
           : banned // ignore: cast_nullable_to_non_nullable
               as bool,
-      published: published == freezed
+      published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      updated: updated == freezed
+      updated: freezed == updated
           ? _value.updated
           : updated // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      actorId: actorId == freezed
+      actorId: null == actorId
           ? _value.actorId
           : actorId // ignore: cast_nullable_to_non_nullable
               as String,
-      bio: bio == freezed
+      bio: freezed == bio
           ? _value.bio
           : bio // ignore: cast_nullable_to_non_nullable
               as String?,
-      local: local == freezed
+      local: null == local
           ? _value.local
           : local // ignore: cast_nullable_to_non_nullable
               as bool,
-      banner: banner == freezed
+      banner: freezed == banner
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
-      deleted: deleted == freezed
+      deleted: null == deleted
           ? _value.deleted
           : deleted // ignore: cast_nullable_to_non_nullable
               as bool,
-      inboxUrl: inboxUrl == freezed
+      inboxUrl: null == inboxUrl
           ? _value.inboxUrl
           : inboxUrl // ignore: cast_nullable_to_non_nullable
               as String,
-      sharedInboxUrl: sharedInboxUrl == freezed
+      sharedInboxUrl: null == sharedInboxUrl
           ? _value.sharedInboxUrl
           : sharedInboxUrl // ignore: cast_nullable_to_non_nullable
               as String,
-      matrixUserId: matrixUserId == freezed
+      matrixUserId: freezed == matrixUserId
           ? _value.matrixUserId
           : matrixUserId // ignore: cast_nullable_to_non_nullable
               as String?,
-      admin: admin == freezed
+      admin: null == admin
           ? _value.admin
           : admin // ignore: cast_nullable_to_non_nullable
               as bool,
-      botAccount: botAccount == freezed
+      botAccount: null == botAccount
           ? _value.botAccount
           : botAccount // ignore: cast_nullable_to_non_nullable
               as bool,
-      banExpires: banExpires == freezed
+      banExpires: freezed == banExpires
           ? _value.banExpires
           : banExpires // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -404,60 +408,63 @@ class _$_PersonSafe extends _PersonSafe {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PersonSafe &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.displayName, displayName) &&
-            const DeepCollectionEquality().equals(other.avatar, avatar) &&
-            const DeepCollectionEquality().equals(other.banned, banned) &&
-            const DeepCollectionEquality().equals(other.published, published) &&
-            const DeepCollectionEquality().equals(other.updated, updated) &&
-            const DeepCollectionEquality().equals(other.actorId, actorId) &&
-            const DeepCollectionEquality().equals(other.bio, bio) &&
-            const DeepCollectionEquality().equals(other.local, local) &&
-            const DeepCollectionEquality().equals(other.banner, banner) &&
-            const DeepCollectionEquality().equals(other.deleted, deleted) &&
-            const DeepCollectionEquality().equals(other.inboxUrl, inboxUrl) &&
-            const DeepCollectionEquality()
-                .equals(other.sharedInboxUrl, sharedInboxUrl) &&
-            const DeepCollectionEquality()
-                .equals(other.matrixUserId, matrixUserId) &&
-            const DeepCollectionEquality().equals(other.admin, admin) &&
-            const DeepCollectionEquality()
-                .equals(other.botAccount, botAccount) &&
-            const DeepCollectionEquality()
-                .equals(other.banExpires, banExpires) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.displayName, displayName) ||
+                other.displayName == displayName) &&
+            (identical(other.avatar, avatar) || other.avatar == avatar) &&
+            (identical(other.banned, banned) || other.banned == banned) &&
+            (identical(other.published, published) ||
+                other.published == published) &&
+            (identical(other.updated, updated) || other.updated == updated) &&
+            (identical(other.actorId, actorId) || other.actorId == actorId) &&
+            (identical(other.bio, bio) || other.bio == bio) &&
+            (identical(other.local, local) || other.local == local) &&
+            (identical(other.banner, banner) || other.banner == banner) &&
+            (identical(other.deleted, deleted) || other.deleted == deleted) &&
+            (identical(other.inboxUrl, inboxUrl) ||
+                other.inboxUrl == inboxUrl) &&
+            (identical(other.sharedInboxUrl, sharedInboxUrl) ||
+                other.sharedInboxUrl == sharedInboxUrl) &&
+            (identical(other.matrixUserId, matrixUserId) ||
+                other.matrixUserId == matrixUserId) &&
+            (identical(other.admin, admin) || other.admin == admin) &&
+            (identical(other.botAccount, botAccount) ||
+                other.botAccount == botAccount) &&
+            (identical(other.banExpires, banExpires) ||
+                other.banExpires == banExpires) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(name),
-        const DeepCollectionEquality().hash(displayName),
-        const DeepCollectionEquality().hash(avatar),
-        const DeepCollectionEquality().hash(banned),
-        const DeepCollectionEquality().hash(published),
-        const DeepCollectionEquality().hash(updated),
-        const DeepCollectionEquality().hash(actorId),
-        const DeepCollectionEquality().hash(bio),
-        const DeepCollectionEquality().hash(local),
-        const DeepCollectionEquality().hash(banner),
-        const DeepCollectionEquality().hash(deleted),
-        const DeepCollectionEquality().hash(inboxUrl),
-        const DeepCollectionEquality().hash(sharedInboxUrl),
-        const DeepCollectionEquality().hash(matrixUserId),
-        const DeepCollectionEquality().hash(admin),
-        const DeepCollectionEquality().hash(botAccount),
-        const DeepCollectionEquality().hash(banExpires),
-        const DeepCollectionEquality().hash(instanceHost)
+        id,
+        name,
+        displayName,
+        avatar,
+        banned,
+        published,
+        updated,
+        actorId,
+        bio,
+        local,
+        banner,
+        deleted,
+        inboxUrl,
+        sharedInboxUrl,
+        matrixUserId,
+        admin,
+        botAccount,
+        banExpires,
+        instanceHost
       ]);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PersonSafeCopyWith<_$_PersonSafe> get copyWith =>
       __$$_PersonSafeCopyWithImpl<_$_PersonSafe>(this, _$identity);
 
@@ -575,7 +582,8 @@ mixin _$LocalUserSettings {
 abstract class $LocalUserSettingsCopyWith<$Res> {
   factory $LocalUserSettingsCopyWith(
           LocalUserSettings value, $Res Function(LocalUserSettings) then) =
-      _$LocalUserSettingsCopyWithImpl<$Res>;
+      _$LocalUserSettingsCopyWithImpl<$Res, LocalUserSettings>;
+  @useResult
   $Res call(
       {int id,
       int personId,
@@ -599,104 +607,106 @@ abstract class $LocalUserSettingsCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$LocalUserSettingsCopyWithImpl<$Res>
+class _$LocalUserSettingsCopyWithImpl<$Res, $Val extends LocalUserSettings>
     implements $LocalUserSettingsCopyWith<$Res> {
   _$LocalUserSettingsCopyWithImpl(this._value, this._then);
 
-  final LocalUserSettings _value;
   // ignore: unused_field
-  final $Res Function(LocalUserSettings) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? personId = freezed,
+    Object? id = null,
+    Object? personId = null,
     Object? email = freezed,
-    Object? showNsfw = freezed,
-    Object? theme = freezed,
-    Object? defaultSortType = freezed,
-    Object? defaultListingType = freezed,
-    Object? lang = freezed,
-    Object? showAvatars = freezed,
-    Object? showScores = freezed,
-    Object? sendNotificationsToEmail = freezed,
-    Object? showReadPosts = freezed,
-    Object? showBotAccounts = freezed,
-    Object? showNewPostNotifs = freezed,
-    Object? emailVerified = freezed,
-    Object? acceptedApplication = freezed,
-    Object? instanceHost = freezed,
+    Object? showNsfw = null,
+    Object? theme = null,
+    Object? defaultSortType = null,
+    Object? defaultListingType = null,
+    Object? lang = null,
+    Object? showAvatars = null,
+    Object? showScores = null,
+    Object? sendNotificationsToEmail = null,
+    Object? showReadPosts = null,
+    Object? showBotAccounts = null,
+    Object? showNewPostNotifs = null,
+    Object? emailVerified = null,
+    Object? acceptedApplication = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      personId: personId == freezed
+      personId: null == personId
           ? _value.personId
           : personId // ignore: cast_nullable_to_non_nullable
               as int,
-      email: email == freezed
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
-      showNsfw: showNsfw == freezed
+      showNsfw: null == showNsfw
           ? _value.showNsfw
           : showNsfw // ignore: cast_nullable_to_non_nullable
               as bool,
-      theme: theme == freezed
+      theme: null == theme
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
               as String,
-      defaultSortType: defaultSortType == freezed
+      defaultSortType: null == defaultSortType
           ? _value.defaultSortType
           : defaultSortType // ignore: cast_nullable_to_non_nullable
               as SortType,
-      defaultListingType: defaultListingType == freezed
+      defaultListingType: null == defaultListingType
           ? _value.defaultListingType
           : defaultListingType // ignore: cast_nullable_to_non_nullable
               as PostListingType,
-      lang: lang == freezed
+      lang: null == lang
           ? _value.lang
           : lang // ignore: cast_nullable_to_non_nullable
               as String,
-      showAvatars: showAvatars == freezed
+      showAvatars: null == showAvatars
           ? _value.showAvatars
           : showAvatars // ignore: cast_nullable_to_non_nullable
               as bool,
-      showScores: showScores == freezed
+      showScores: null == showScores
           ? _value.showScores
           : showScores // ignore: cast_nullable_to_non_nullable
               as bool,
-      sendNotificationsToEmail: sendNotificationsToEmail == freezed
+      sendNotificationsToEmail: null == sendNotificationsToEmail
           ? _value.sendNotificationsToEmail
           : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
               as bool,
-      showReadPosts: showReadPosts == freezed
+      showReadPosts: null == showReadPosts
           ? _value.showReadPosts
           : showReadPosts // ignore: cast_nullable_to_non_nullable
               as bool,
-      showBotAccounts: showBotAccounts == freezed
+      showBotAccounts: null == showBotAccounts
           ? _value.showBotAccounts
           : showBotAccounts // ignore: cast_nullable_to_non_nullable
               as bool,
-      showNewPostNotifs: showNewPostNotifs == freezed
+      showNewPostNotifs: null == showNewPostNotifs
           ? _value.showNewPostNotifs
           : showNewPostNotifs // ignore: cast_nullable_to_non_nullable
               as bool,
-      emailVerified: emailVerified == freezed
+      emailVerified: null == emailVerified
           ? _value.emailVerified
           : emailVerified // ignore: cast_nullable_to_non_nullable
               as bool,
-      acceptedApplication: acceptedApplication == freezed
+      acceptedApplication: null == acceptedApplication
           ? _value.acceptedApplication
           : acceptedApplication // ignore: cast_nullable_to_non_nullable
               as bool,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -707,6 +717,7 @@ abstract class _$$_LocalUserSettingsCopyWith<$Res>
           $Res Function(_$_LocalUserSettings) then) =
       __$$_LocalUserSettingsCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       int personId,
@@ -731,101 +742,99 @@ abstract class _$$_LocalUserSettingsCopyWith<$Res>
 
 /// @nodoc
 class __$$_LocalUserSettingsCopyWithImpl<$Res>
-    extends _$LocalUserSettingsCopyWithImpl<$Res>
+    extends _$LocalUserSettingsCopyWithImpl<$Res, _$_LocalUserSettings>
     implements _$$_LocalUserSettingsCopyWith<$Res> {
   __$$_LocalUserSettingsCopyWithImpl(
       _$_LocalUserSettings _value, $Res Function(_$_LocalUserSettings) _then)
-      : super(_value, (v) => _then(v as _$_LocalUserSettings));
+      : super(_value, _then);
 
-  @override
-  _$_LocalUserSettings get _value => super._value as _$_LocalUserSettings;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? personId = freezed,
+    Object? id = null,
+    Object? personId = null,
     Object? email = freezed,
-    Object? showNsfw = freezed,
-    Object? theme = freezed,
-    Object? defaultSortType = freezed,
-    Object? defaultListingType = freezed,
-    Object? lang = freezed,
-    Object? showAvatars = freezed,
-    Object? showScores = freezed,
-    Object? sendNotificationsToEmail = freezed,
-    Object? showReadPosts = freezed,
-    Object? showBotAccounts = freezed,
-    Object? showNewPostNotifs = freezed,
-    Object? emailVerified = freezed,
-    Object? acceptedApplication = freezed,
-    Object? instanceHost = freezed,
+    Object? showNsfw = null,
+    Object? theme = null,
+    Object? defaultSortType = null,
+    Object? defaultListingType = null,
+    Object? lang = null,
+    Object? showAvatars = null,
+    Object? showScores = null,
+    Object? sendNotificationsToEmail = null,
+    Object? showReadPosts = null,
+    Object? showBotAccounts = null,
+    Object? showNewPostNotifs = null,
+    Object? emailVerified = null,
+    Object? acceptedApplication = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_LocalUserSettings(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      personId: personId == freezed
+      personId: null == personId
           ? _value.personId
           : personId // ignore: cast_nullable_to_non_nullable
               as int,
-      email: email == freezed
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
-      showNsfw: showNsfw == freezed
+      showNsfw: null == showNsfw
           ? _value.showNsfw
           : showNsfw // ignore: cast_nullable_to_non_nullable
               as bool,
-      theme: theme == freezed
+      theme: null == theme
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
               as String,
-      defaultSortType: defaultSortType == freezed
+      defaultSortType: null == defaultSortType
           ? _value.defaultSortType
           : defaultSortType // ignore: cast_nullable_to_non_nullable
               as SortType,
-      defaultListingType: defaultListingType == freezed
+      defaultListingType: null == defaultListingType
           ? _value.defaultListingType
           : defaultListingType // ignore: cast_nullable_to_non_nullable
               as PostListingType,
-      lang: lang == freezed
+      lang: null == lang
           ? _value.lang
           : lang // ignore: cast_nullable_to_non_nullable
               as String,
-      showAvatars: showAvatars == freezed
+      showAvatars: null == showAvatars
           ? _value.showAvatars
           : showAvatars // ignore: cast_nullable_to_non_nullable
               as bool,
-      showScores: showScores == freezed
+      showScores: null == showScores
           ? _value.showScores
           : showScores // ignore: cast_nullable_to_non_nullable
               as bool,
-      sendNotificationsToEmail: sendNotificationsToEmail == freezed
+      sendNotificationsToEmail: null == sendNotificationsToEmail
           ? _value.sendNotificationsToEmail
           : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
               as bool,
-      showReadPosts: showReadPosts == freezed
+      showReadPosts: null == showReadPosts
           ? _value.showReadPosts
           : showReadPosts // ignore: cast_nullable_to_non_nullable
               as bool,
-      showBotAccounts: showBotAccounts == freezed
+      showBotAccounts: null == showBotAccounts
           ? _value.showBotAccounts
           : showBotAccounts // ignore: cast_nullable_to_non_nullable
               as bool,
-      showNewPostNotifs: showNewPostNotifs == freezed
+      showNewPostNotifs: null == showNewPostNotifs
           ? _value.showNewPostNotifs
           : showNewPostNotifs // ignore: cast_nullable_to_non_nullable
               as bool,
-      emailVerified: emailVerified == freezed
+      emailVerified: null == emailVerified
           ? _value.emailVerified
           : emailVerified // ignore: cast_nullable_to_non_nullable
               as bool,
-      acceptedApplication: acceptedApplication == freezed
+      acceptedApplication: null == acceptedApplication
           ? _value.acceptedApplication
           : acceptedApplication // ignore: cast_nullable_to_non_nullable
               as bool,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -909,60 +918,64 @@ class _$_LocalUserSettings extends _LocalUserSettings {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_LocalUserSettings &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.personId, personId) &&
-            const DeepCollectionEquality().equals(other.email, email) &&
-            const DeepCollectionEquality().equals(other.showNsfw, showNsfw) &&
-            const DeepCollectionEquality().equals(other.theme, theme) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultSortType, defaultSortType) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultListingType, defaultListingType) &&
-            const DeepCollectionEquality().equals(other.lang, lang) &&
-            const DeepCollectionEquality()
-                .equals(other.showAvatars, showAvatars) &&
-            const DeepCollectionEquality()
-                .equals(other.showScores, showScores) &&
-            const DeepCollectionEquality().equals(
-                other.sendNotificationsToEmail, sendNotificationsToEmail) &&
-            const DeepCollectionEquality()
-                .equals(other.showReadPosts, showReadPosts) &&
-            const DeepCollectionEquality()
-                .equals(other.showBotAccounts, showBotAccounts) &&
-            const DeepCollectionEquality()
-                .equals(other.showNewPostNotifs, showNewPostNotifs) &&
-            const DeepCollectionEquality()
-                .equals(other.emailVerified, emailVerified) &&
-            const DeepCollectionEquality()
-                .equals(other.acceptedApplication, acceptedApplication) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.personId, personId) ||
+                other.personId == personId) &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.showNsfw, showNsfw) ||
+                other.showNsfw == showNsfw) &&
+            (identical(other.theme, theme) || other.theme == theme) &&
+            (identical(other.defaultSortType, defaultSortType) ||
+                other.defaultSortType == defaultSortType) &&
+            (identical(other.defaultListingType, defaultListingType) ||
+                other.defaultListingType == defaultListingType) &&
+            (identical(other.lang, lang) || other.lang == lang) &&
+            (identical(other.showAvatars, showAvatars) ||
+                other.showAvatars == showAvatars) &&
+            (identical(other.showScores, showScores) ||
+                other.showScores == showScores) &&
+            (identical(
+                    other.sendNotificationsToEmail, sendNotificationsToEmail) ||
+                other.sendNotificationsToEmail == sendNotificationsToEmail) &&
+            (identical(other.showReadPosts, showReadPosts) ||
+                other.showReadPosts == showReadPosts) &&
+            (identical(other.showBotAccounts, showBotAccounts) ||
+                other.showBotAccounts == showBotAccounts) &&
+            (identical(other.showNewPostNotifs, showNewPostNotifs) ||
+                other.showNewPostNotifs == showNewPostNotifs) &&
+            (identical(other.emailVerified, emailVerified) ||
+                other.emailVerified == emailVerified) &&
+            (identical(other.acceptedApplication, acceptedApplication) ||
+                other.acceptedApplication == acceptedApplication) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(personId),
-      const DeepCollectionEquality().hash(email),
-      const DeepCollectionEquality().hash(showNsfw),
-      const DeepCollectionEquality().hash(theme),
-      const DeepCollectionEquality().hash(defaultSortType),
-      const DeepCollectionEquality().hash(defaultListingType),
-      const DeepCollectionEquality().hash(lang),
-      const DeepCollectionEquality().hash(showAvatars),
-      const DeepCollectionEquality().hash(showScores),
-      const DeepCollectionEquality().hash(sendNotificationsToEmail),
-      const DeepCollectionEquality().hash(showReadPosts),
-      const DeepCollectionEquality().hash(showBotAccounts),
-      const DeepCollectionEquality().hash(showNewPostNotifs),
-      const DeepCollectionEquality().hash(emailVerified),
-      const DeepCollectionEquality().hash(acceptedApplication),
-      const DeepCollectionEquality().hash(instanceHost));
+      id,
+      personId,
+      email,
+      showNsfw,
+      theme,
+      defaultSortType,
+      defaultListingType,
+      lang,
+      showAvatars,
+      showScores,
+      sendNotificationsToEmail,
+      showReadPosts,
+      showBotAccounts,
+      showNewPostNotifs,
+      emailVerified,
+      acceptedApplication,
+      instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_LocalUserSettingsCopyWith<_$_LocalUserSettings> get copyWith =>
       __$$_LocalUserSettingsCopyWithImpl<_$_LocalUserSettings>(
           this, _$identity);
@@ -1080,7 +1093,8 @@ mixin _$Site {
 /// @nodoc
 abstract class $SiteCopyWith<$Res> {
   factory $SiteCopyWith(Site value, $Res Function(Site) then) =
-      _$SiteCopyWithImpl<$Res>;
+      _$SiteCopyWithImpl<$Res, Site>;
+  @useResult
   $Res call(
       {int id,
       String name,
@@ -1107,128 +1121,131 @@ abstract class $SiteCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SiteCopyWithImpl<$Res> implements $SiteCopyWith<$Res> {
+class _$SiteCopyWithImpl<$Res, $Val extends Site>
+    implements $SiteCopyWith<$Res> {
   _$SiteCopyWithImpl(this._value, this._then);
 
-  final Site _value;
   // ignore: unused_field
-  final $Res Function(Site) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
+    Object? id = null,
+    Object? name = null,
     Object? sidebar = freezed,
     Object? description = freezed,
-    Object? published = freezed,
+    Object? published = null,
     Object? updated = freezed,
-    Object? enableDownvotes = freezed,
-    Object? openRegistration = freezed,
-    Object? enableNsfw = freezed,
-    Object? communityCreationAdminOnly = freezed,
+    Object? enableDownvotes = null,
+    Object? openRegistration = null,
+    Object? enableNsfw = null,
+    Object? communityCreationAdminOnly = null,
     Object? icon = freezed,
     Object? banner = freezed,
-    Object? requireEmailVerification = freezed,
-    Object? requireApplication = freezed,
+    Object? requireEmailVerification = null,
+    Object? requireApplication = null,
     Object? applicationQuestion = freezed,
-    Object? privateInstance = freezed,
-    Object? defaultTheme = freezed,
-    Object? actorId = freezed,
-    Object? lastRefreshedAt = freezed,
-    Object? inboxUrl = freezed,
-    Object? publicKey = freezed,
-    Object? instanceHost = freezed,
+    Object? privateInstance = null,
+    Object? defaultTheme = null,
+    Object? actorId = null,
+    Object? lastRefreshedAt = null,
+    Object? inboxUrl = null,
+    Object? publicKey = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      sidebar: sidebar == freezed
+      sidebar: freezed == sidebar
           ? _value.sidebar
           : sidebar // ignore: cast_nullable_to_non_nullable
               as String?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      published: published == freezed
+      published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      updated: updated == freezed
+      updated: freezed == updated
           ? _value.updated
           : updated // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      enableDownvotes: enableDownvotes == freezed
+      enableDownvotes: null == enableDownvotes
           ? _value.enableDownvotes
           : enableDownvotes // ignore: cast_nullable_to_non_nullable
               as bool,
-      openRegistration: openRegistration == freezed
+      openRegistration: null == openRegistration
           ? _value.openRegistration
           : openRegistration // ignore: cast_nullable_to_non_nullable
               as bool,
-      enableNsfw: enableNsfw == freezed
+      enableNsfw: null == enableNsfw
           ? _value.enableNsfw
           : enableNsfw // ignore: cast_nullable_to_non_nullable
               as bool,
-      communityCreationAdminOnly: communityCreationAdminOnly == freezed
+      communityCreationAdminOnly: null == communityCreationAdminOnly
           ? _value.communityCreationAdminOnly
           : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
               as bool,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as String?,
-      banner: banner == freezed
+      banner: freezed == banner
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
-      requireEmailVerification: requireEmailVerification == freezed
+      requireEmailVerification: null == requireEmailVerification
           ? _value.requireEmailVerification
           : requireEmailVerification // ignore: cast_nullable_to_non_nullable
               as bool,
-      requireApplication: requireApplication == freezed
+      requireApplication: null == requireApplication
           ? _value.requireApplication
           : requireApplication // ignore: cast_nullable_to_non_nullable
               as bool,
-      applicationQuestion: applicationQuestion == freezed
+      applicationQuestion: freezed == applicationQuestion
           ? _value.applicationQuestion
           : applicationQuestion // ignore: cast_nullable_to_non_nullable
               as String?,
-      privateInstance: privateInstance == freezed
+      privateInstance: null == privateInstance
           ? _value.privateInstance
           : privateInstance // ignore: cast_nullable_to_non_nullable
               as bool,
-      defaultTheme: defaultTheme == freezed
+      defaultTheme: null == defaultTheme
           ? _value.defaultTheme
           : defaultTheme // ignore: cast_nullable_to_non_nullable
               as String,
-      actorId: actorId == freezed
+      actorId: null == actorId
           ? _value.actorId
           : actorId // ignore: cast_nullable_to_non_nullable
               as String,
-      lastRefreshedAt: lastRefreshedAt == freezed
+      lastRefreshedAt: null == lastRefreshedAt
           ? _value.lastRefreshedAt
           : lastRefreshedAt // ignore: cast_nullable_to_non_nullable
               as String,
-      inboxUrl: inboxUrl == freezed
+      inboxUrl: null == inboxUrl
           ? _value.inboxUrl
           : inboxUrl // ignore: cast_nullable_to_non_nullable
               as String,
-      publicKey: publicKey == freezed
+      publicKey: null == publicKey
           ? _value.publicKey
           : publicKey // ignore: cast_nullable_to_non_nullable
               as String,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1237,6 +1254,7 @@ abstract class _$$_SiteCopyWith<$Res> implements $SiteCopyWith<$Res> {
   factory _$$_SiteCopyWith(_$_Site value, $Res Function(_$_Site) then) =
       __$$_SiteCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       String name,
@@ -1263,125 +1281,123 @@ abstract class _$$_SiteCopyWith<$Res> implements $SiteCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
+class __$$_SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res, _$_Site>
     implements _$$_SiteCopyWith<$Res> {
   __$$_SiteCopyWithImpl(_$_Site _value, $Res Function(_$_Site) _then)
-      : super(_value, (v) => _then(v as _$_Site));
+      : super(_value, _then);
 
-  @override
-  _$_Site get _value => super._value as _$_Site;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
+    Object? id = null,
+    Object? name = null,
     Object? sidebar = freezed,
     Object? description = freezed,
-    Object? published = freezed,
+    Object? published = null,
     Object? updated = freezed,
-    Object? enableDownvotes = freezed,
-    Object? openRegistration = freezed,
-    Object? enableNsfw = freezed,
-    Object? communityCreationAdminOnly = freezed,
+    Object? enableDownvotes = null,
+    Object? openRegistration = null,
+    Object? enableNsfw = null,
+    Object? communityCreationAdminOnly = null,
     Object? icon = freezed,
     Object? banner = freezed,
-    Object? requireEmailVerification = freezed,
-    Object? requireApplication = freezed,
+    Object? requireEmailVerification = null,
+    Object? requireApplication = null,
     Object? applicationQuestion = freezed,
-    Object? privateInstance = freezed,
-    Object? defaultTheme = freezed,
-    Object? actorId = freezed,
-    Object? lastRefreshedAt = freezed,
-    Object? inboxUrl = freezed,
-    Object? publicKey = freezed,
-    Object? instanceHost = freezed,
+    Object? privateInstance = null,
+    Object? defaultTheme = null,
+    Object? actorId = null,
+    Object? lastRefreshedAt = null,
+    Object? inboxUrl = null,
+    Object? publicKey = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_Site(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      sidebar: sidebar == freezed
+      sidebar: freezed == sidebar
           ? _value.sidebar
           : sidebar // ignore: cast_nullable_to_non_nullable
               as String?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      published: published == freezed
+      published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      updated: updated == freezed
+      updated: freezed == updated
           ? _value.updated
           : updated // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      enableDownvotes: enableDownvotes == freezed
+      enableDownvotes: null == enableDownvotes
           ? _value.enableDownvotes
           : enableDownvotes // ignore: cast_nullable_to_non_nullable
               as bool,
-      openRegistration: openRegistration == freezed
+      openRegistration: null == openRegistration
           ? _value.openRegistration
           : openRegistration // ignore: cast_nullable_to_non_nullable
               as bool,
-      enableNsfw: enableNsfw == freezed
+      enableNsfw: null == enableNsfw
           ? _value.enableNsfw
           : enableNsfw // ignore: cast_nullable_to_non_nullable
               as bool,
-      communityCreationAdminOnly: communityCreationAdminOnly == freezed
+      communityCreationAdminOnly: null == communityCreationAdminOnly
           ? _value.communityCreationAdminOnly
           : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
               as bool,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as String?,
-      banner: banner == freezed
+      banner: freezed == banner
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
-      requireEmailVerification: requireEmailVerification == freezed
+      requireEmailVerification: null == requireEmailVerification
           ? _value.requireEmailVerification
           : requireEmailVerification // ignore: cast_nullable_to_non_nullable
               as bool,
-      requireApplication: requireApplication == freezed
+      requireApplication: null == requireApplication
           ? _value.requireApplication
           : requireApplication // ignore: cast_nullable_to_non_nullable
               as bool,
-      applicationQuestion: applicationQuestion == freezed
+      applicationQuestion: freezed == applicationQuestion
           ? _value.applicationQuestion
           : applicationQuestion // ignore: cast_nullable_to_non_nullable
               as String?,
-      privateInstance: privateInstance == freezed
+      privateInstance: null == privateInstance
           ? _value.privateInstance
           : privateInstance // ignore: cast_nullable_to_non_nullable
               as bool,
-      defaultTheme: defaultTheme == freezed
+      defaultTheme: null == defaultTheme
           ? _value.defaultTheme
           : defaultTheme // ignore: cast_nullable_to_non_nullable
               as String,
-      actorId: actorId == freezed
+      actorId: null == actorId
           ? _value.actorId
           : actorId // ignore: cast_nullable_to_non_nullable
               as String,
-      lastRefreshedAt: lastRefreshedAt == freezed
+      lastRefreshedAt: null == lastRefreshedAt
           ? _value.lastRefreshedAt
           : lastRefreshedAt // ignore: cast_nullable_to_non_nullable
               as String,
-      inboxUrl: inboxUrl == freezed
+      inboxUrl: null == inboxUrl
           ? _value.inboxUrl
           : inboxUrl // ignore: cast_nullable_to_non_nullable
               as String,
-      publicKey: publicKey == freezed
+      publicKey: null == publicKey
           ? _value.publicKey
           : publicKey // ignore: cast_nullable_to_non_nullable
               as String,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1475,72 +1491,79 @@ class _$_Site extends _Site {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Site &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.sidebar, sidebar) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality().equals(other.published, published) &&
-            const DeepCollectionEquality().equals(other.updated, updated) &&
-            const DeepCollectionEquality()
-                .equals(other.enableDownvotes, enableDownvotes) &&
-            const DeepCollectionEquality()
-                .equals(other.openRegistration, openRegistration) &&
-            const DeepCollectionEquality()
-                .equals(other.enableNsfw, enableNsfw) &&
-            const DeepCollectionEquality().equals(
-                other.communityCreationAdminOnly, communityCreationAdminOnly) &&
-            const DeepCollectionEquality().equals(other.icon, icon) &&
-            const DeepCollectionEquality().equals(other.banner, banner) &&
-            const DeepCollectionEquality().equals(
-                other.requireEmailVerification, requireEmailVerification) &&
-            const DeepCollectionEquality()
-                .equals(other.requireApplication, requireApplication) &&
-            const DeepCollectionEquality()
-                .equals(other.applicationQuestion, applicationQuestion) &&
-            const DeepCollectionEquality()
-                .equals(other.privateInstance, privateInstance) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultTheme, defaultTheme) &&
-            const DeepCollectionEquality().equals(other.actorId, actorId) &&
-            const DeepCollectionEquality()
-                .equals(other.lastRefreshedAt, lastRefreshedAt) &&
-            const DeepCollectionEquality().equals(other.inboxUrl, inboxUrl) &&
-            const DeepCollectionEquality().equals(other.publicKey, publicKey) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.sidebar, sidebar) || other.sidebar == sidebar) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.published, published) ||
+                other.published == published) &&
+            (identical(other.updated, updated) || other.updated == updated) &&
+            (identical(other.enableDownvotes, enableDownvotes) ||
+                other.enableDownvotes == enableDownvotes) &&
+            (identical(other.openRegistration, openRegistration) ||
+                other.openRegistration == openRegistration) &&
+            (identical(other.enableNsfw, enableNsfw) ||
+                other.enableNsfw == enableNsfw) &&
+            (identical(other.communityCreationAdminOnly,
+                    communityCreationAdminOnly) ||
+                other.communityCreationAdminOnly ==
+                    communityCreationAdminOnly) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.banner, banner) || other.banner == banner) &&
+            (identical(
+                    other.requireEmailVerification, requireEmailVerification) ||
+                other.requireEmailVerification == requireEmailVerification) &&
+            (identical(other.requireApplication, requireApplication) ||
+                other.requireApplication == requireApplication) &&
+            (identical(other.applicationQuestion, applicationQuestion) ||
+                other.applicationQuestion == applicationQuestion) &&
+            (identical(other.privateInstance, privateInstance) ||
+                other.privateInstance == privateInstance) &&
+            (identical(other.defaultTheme, defaultTheme) ||
+                other.defaultTheme == defaultTheme) &&
+            (identical(other.actorId, actorId) || other.actorId == actorId) &&
+            (identical(other.lastRefreshedAt, lastRefreshedAt) ||
+                other.lastRefreshedAt == lastRefreshedAt) &&
+            (identical(other.inboxUrl, inboxUrl) ||
+                other.inboxUrl == inboxUrl) &&
+            (identical(other.publicKey, publicKey) ||
+                other.publicKey == publicKey) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(name),
-        const DeepCollectionEquality().hash(sidebar),
-        const DeepCollectionEquality().hash(description),
-        const DeepCollectionEquality().hash(published),
-        const DeepCollectionEquality().hash(updated),
-        const DeepCollectionEquality().hash(enableDownvotes),
-        const DeepCollectionEquality().hash(openRegistration),
-        const DeepCollectionEquality().hash(enableNsfw),
-        const DeepCollectionEquality().hash(communityCreationAdminOnly),
-        const DeepCollectionEquality().hash(icon),
-        const DeepCollectionEquality().hash(banner),
-        const DeepCollectionEquality().hash(requireEmailVerification),
-        const DeepCollectionEquality().hash(requireApplication),
-        const DeepCollectionEquality().hash(applicationQuestion),
-        const DeepCollectionEquality().hash(privateInstance),
-        const DeepCollectionEquality().hash(defaultTheme),
-        const DeepCollectionEquality().hash(actorId),
-        const DeepCollectionEquality().hash(lastRefreshedAt),
-        const DeepCollectionEquality().hash(inboxUrl),
-        const DeepCollectionEquality().hash(publicKey),
-        const DeepCollectionEquality().hash(instanceHost)
+        id,
+        name,
+        sidebar,
+        description,
+        published,
+        updated,
+        enableDownvotes,
+        openRegistration,
+        enableNsfw,
+        communityCreationAdminOnly,
+        icon,
+        banner,
+        requireEmailVerification,
+        requireApplication,
+        applicationQuestion,
+        privateInstance,
+        defaultTheme,
+        actorId,
+        lastRefreshedAt,
+        inboxUrl,
+        publicKey,
+        instanceHost
       ]);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SiteCopyWith<_$_Site> get copyWith =>
       __$$_SiteCopyWithImpl<_$_Site>(this, _$identity);
 
@@ -1657,7 +1680,8 @@ mixin _$PrivateMessage {
 abstract class $PrivateMessageCopyWith<$Res> {
   factory $PrivateMessageCopyWith(
           PrivateMessage value, $Res Function(PrivateMessage) then) =
-      _$PrivateMessageCopyWithImpl<$Res>;
+      _$PrivateMessageCopyWithImpl<$Res, PrivateMessage>;
+  @useResult
   $Res call(
       {int id,
       int creatorId,
@@ -1673,74 +1697,76 @@ abstract class $PrivateMessageCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PrivateMessageCopyWithImpl<$Res>
+class _$PrivateMessageCopyWithImpl<$Res, $Val extends PrivateMessage>
     implements $PrivateMessageCopyWith<$Res> {
   _$PrivateMessageCopyWithImpl(this._value, this._then);
 
-  final PrivateMessage _value;
   // ignore: unused_field
-  final $Res Function(PrivateMessage) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? creatorId = freezed,
-    Object? recipientId = freezed,
-    Object? content = freezed,
-    Object? deleted = freezed,
-    Object? read = freezed,
-    Object? published = freezed,
+    Object? id = null,
+    Object? creatorId = null,
+    Object? recipientId = null,
+    Object? content = null,
+    Object? deleted = null,
+    Object? read = null,
+    Object? published = null,
     Object? updated = freezed,
-    Object? apId = freezed,
-    Object? local = freezed,
-    Object? instanceHost = freezed,
+    Object? apId = null,
+    Object? local = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      creatorId: creatorId == freezed
+      creatorId: null == creatorId
           ? _value.creatorId
           : creatorId // ignore: cast_nullable_to_non_nullable
               as int,
-      recipientId: recipientId == freezed
+      recipientId: null == recipientId
           ? _value.recipientId
           : recipientId // ignore: cast_nullable_to_non_nullable
               as int,
-      content: content == freezed
+      content: null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as String,
-      deleted: deleted == freezed
+      deleted: null == deleted
           ? _value.deleted
           : deleted // ignore: cast_nullable_to_non_nullable
               as bool,
-      read: read == freezed
+      read: null == read
           ? _value.read
           : read // ignore: cast_nullable_to_non_nullable
               as bool,
-      published: published == freezed
+      published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      updated: updated == freezed
+      updated: freezed == updated
           ? _value.updated
           : updated // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      apId: apId == freezed
+      apId: null == apId
           ? _value.apId
           : apId // ignore: cast_nullable_to_non_nullable
               as String,
-      local: local == freezed
+      local: null == local
           ? _value.local
           : local // ignore: cast_nullable_to_non_nullable
               as bool,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1751,6 +1777,7 @@ abstract class _$$_PrivateMessageCopyWith<$Res>
           _$_PrivateMessage value, $Res Function(_$_PrivateMessage) then) =
       __$$_PrivateMessageCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       int creatorId,
@@ -1767,71 +1794,69 @@ abstract class _$$_PrivateMessageCopyWith<$Res>
 
 /// @nodoc
 class __$$_PrivateMessageCopyWithImpl<$Res>
-    extends _$PrivateMessageCopyWithImpl<$Res>
+    extends _$PrivateMessageCopyWithImpl<$Res, _$_PrivateMessage>
     implements _$$_PrivateMessageCopyWith<$Res> {
   __$$_PrivateMessageCopyWithImpl(
       _$_PrivateMessage _value, $Res Function(_$_PrivateMessage) _then)
-      : super(_value, (v) => _then(v as _$_PrivateMessage));
+      : super(_value, _then);
 
-  @override
-  _$_PrivateMessage get _value => super._value as _$_PrivateMessage;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? creatorId = freezed,
-    Object? recipientId = freezed,
-    Object? content = freezed,
-    Object? deleted = freezed,
-    Object? read = freezed,
-    Object? published = freezed,
+    Object? id = null,
+    Object? creatorId = null,
+    Object? recipientId = null,
+    Object? content = null,
+    Object? deleted = null,
+    Object? read = null,
+    Object? published = null,
     Object? updated = freezed,
-    Object? apId = freezed,
-    Object? local = freezed,
-    Object? instanceHost = freezed,
+    Object? apId = null,
+    Object? local = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_PrivateMessage(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      creatorId: creatorId == freezed
+      creatorId: null == creatorId
           ? _value.creatorId
           : creatorId // ignore: cast_nullable_to_non_nullable
               as int,
-      recipientId: recipientId == freezed
+      recipientId: null == recipientId
           ? _value.recipientId
           : recipientId // ignore: cast_nullable_to_non_nullable
               as int,
-      content: content == freezed
+      content: null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as String,
-      deleted: deleted == freezed
+      deleted: null == deleted
           ? _value.deleted
           : deleted // ignore: cast_nullable_to_non_nullable
               as bool,
-      read: read == freezed
+      read: null == read
           ? _value.read
           : read // ignore: cast_nullable_to_non_nullable
               as bool,
-      published: published == freezed
+      published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      updated: updated == freezed
+      updated: freezed == updated
           ? _value.updated
           : updated // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      apId: apId == freezed
+      apId: null == apId
           ? _value.apId
           : apId // ignore: cast_nullable_to_non_nullable
               as String,
-      local: local == freezed
+      local: null == local
           ? _value.local
           : local // ignore: cast_nullable_to_non_nullable
               as bool,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1893,39 +1918,31 @@ class _$_PrivateMessage extends _PrivateMessage {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PrivateMessage &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.creatorId, creatorId) &&
-            const DeepCollectionEquality()
-                .equals(other.recipientId, recipientId) &&
-            const DeepCollectionEquality().equals(other.content, content) &&
-            const DeepCollectionEquality().equals(other.deleted, deleted) &&
-            const DeepCollectionEquality().equals(other.read, read) &&
-            const DeepCollectionEquality().equals(other.published, published) &&
-            const DeepCollectionEquality().equals(other.updated, updated) &&
-            const DeepCollectionEquality().equals(other.apId, apId) &&
-            const DeepCollectionEquality().equals(other.local, local) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.creatorId, creatorId) ||
+                other.creatorId == creatorId) &&
+            (identical(other.recipientId, recipientId) ||
+                other.recipientId == recipientId) &&
+            (identical(other.content, content) || other.content == content) &&
+            (identical(other.deleted, deleted) || other.deleted == deleted) &&
+            (identical(other.read, read) || other.read == read) &&
+            (identical(other.published, published) ||
+                other.published == published) &&
+            (identical(other.updated, updated) || other.updated == updated) &&
+            (identical(other.apId, apId) || other.apId == apId) &&
+            (identical(other.local, local) || other.local == local) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(creatorId),
-      const DeepCollectionEquality().hash(recipientId),
-      const DeepCollectionEquality().hash(content),
-      const DeepCollectionEquality().hash(deleted),
-      const DeepCollectionEquality().hash(read),
-      const DeepCollectionEquality().hash(published),
-      const DeepCollectionEquality().hash(updated),
-      const DeepCollectionEquality().hash(apId),
-      const DeepCollectionEquality().hash(local),
-      const DeepCollectionEquality().hash(instanceHost));
+  int get hashCode => Object.hash(runtimeType, id, creatorId, recipientId,
+      content, deleted, read, published, updated, apId, local, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PrivateMessageCopyWith<_$_PrivateMessage> get copyWith =>
       __$$_PrivateMessageCopyWithImpl<_$_PrivateMessage>(this, _$identity);
 
@@ -2012,7 +2029,8 @@ mixin _$PostReport {
 abstract class $PostReportCopyWith<$Res> {
   factory $PostReportCopyWith(
           PostReport value, $Res Function(PostReport) then) =
-      _$PostReportCopyWithImpl<$Res>;
+      _$PostReportCopyWithImpl<$Res, PostReport>;
+  @useResult
   $Res call(
       {int id,
       int creatorId,
@@ -2029,78 +2047,81 @@ abstract class $PostReportCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PostReportCopyWithImpl<$Res> implements $PostReportCopyWith<$Res> {
+class _$PostReportCopyWithImpl<$Res, $Val extends PostReport>
+    implements $PostReportCopyWith<$Res> {
   _$PostReportCopyWithImpl(this._value, this._then);
 
-  final PostReport _value;
   // ignore: unused_field
-  final $Res Function(PostReport) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? creatorId = freezed,
-    Object? postId = freezed,
-    Object? originalPostName = freezed,
+    Object? id = null,
+    Object? creatorId = null,
+    Object? postId = null,
+    Object? originalPostName = null,
     Object? originalPostUrl = freezed,
     Object? originalPostBody = freezed,
-    Object? reason = freezed,
-    Object? resolved = freezed,
+    Object? reason = null,
+    Object? resolved = null,
     Object? resolverId = freezed,
-    Object? published = freezed,
+    Object? published = null,
     Object? updated = freezed,
-    Object? instanceHost = freezed,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      creatorId: creatorId == freezed
+      creatorId: null == creatorId
           ? _value.creatorId
           : creatorId // ignore: cast_nullable_to_non_nullable
               as int,
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      originalPostName: originalPostName == freezed
+      originalPostName: null == originalPostName
           ? _value.originalPostName
           : originalPostName // ignore: cast_nullable_to_non_nullable
               as String,
-      originalPostUrl: originalPostUrl == freezed
+      originalPostUrl: freezed == originalPostUrl
           ? _value.originalPostUrl
           : originalPostUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      originalPostBody: originalPostBody == freezed
+      originalPostBody: freezed == originalPostBody
           ? _value.originalPostBody
           : originalPostBody // ignore: cast_nullable_to_non_nullable
               as String?,
-      reason: reason == freezed
+      reason: null == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String,
-      resolved: resolved == freezed
+      resolved: null == resolved
           ? _value.resolved
           : resolved // ignore: cast_nullable_to_non_nullable
               as bool,
-      resolverId: resolverId == freezed
+      resolverId: freezed == resolverId
           ? _value.resolverId
           : resolverId // ignore: cast_nullable_to_non_nullable
               as int?,
-      published: published == freezed
+      published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      updated: updated == freezed
+      updated: freezed == updated
           ? _value.updated
           : updated // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -2111,6 +2132,7 @@ abstract class _$$_PostReportCopyWith<$Res>
           _$_PostReport value, $Res Function(_$_PostReport) then) =
       __$$_PostReportCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       int creatorId,
@@ -2127,76 +2149,75 @@ abstract class _$$_PostReportCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PostReportCopyWithImpl<$Res> extends _$PostReportCopyWithImpl<$Res>
+class __$$_PostReportCopyWithImpl<$Res>
+    extends _$PostReportCopyWithImpl<$Res, _$_PostReport>
     implements _$$_PostReportCopyWith<$Res> {
   __$$_PostReportCopyWithImpl(
       _$_PostReport _value, $Res Function(_$_PostReport) _then)
-      : super(_value, (v) => _then(v as _$_PostReport));
+      : super(_value, _then);
 
-  @override
-  _$_PostReport get _value => super._value as _$_PostReport;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? creatorId = freezed,
-    Object? postId = freezed,
-    Object? originalPostName = freezed,
+    Object? id = null,
+    Object? creatorId = null,
+    Object? postId = null,
+    Object? originalPostName = null,
     Object? originalPostUrl = freezed,
     Object? originalPostBody = freezed,
-    Object? reason = freezed,
-    Object? resolved = freezed,
+    Object? reason = null,
+    Object? resolved = null,
     Object? resolverId = freezed,
-    Object? published = freezed,
+    Object? published = null,
     Object? updated = freezed,
-    Object? instanceHost = freezed,
+    Object? instanceHost = null,
   }) {
     return _then(_$_PostReport(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      creatorId: creatorId == freezed
+      creatorId: null == creatorId
           ? _value.creatorId
           : creatorId // ignore: cast_nullable_to_non_nullable
               as int,
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      originalPostName: originalPostName == freezed
+      originalPostName: null == originalPostName
           ? _value.originalPostName
           : originalPostName // ignore: cast_nullable_to_non_nullable
               as String,
-      originalPostUrl: originalPostUrl == freezed
+      originalPostUrl: freezed == originalPostUrl
           ? _value.originalPostUrl
           : originalPostUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      originalPostBody: originalPostBody == freezed
+      originalPostBody: freezed == originalPostBody
           ? _value.originalPostBody
           : originalPostBody // ignore: cast_nullable_to_non_nullable
               as String?,
-      reason: reason == freezed
+      reason: null == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String,
-      resolved: resolved == freezed
+      resolved: null == resolved
           ? _value.resolved
           : resolved // ignore: cast_nullable_to_non_nullable
               as bool,
-      resolverId: resolverId == freezed
+      resolverId: freezed == resolverId
           ? _value.resolverId
           : resolverId // ignore: cast_nullable_to_non_nullable
               as int?,
-      published: published == freezed
+      published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      updated: updated == freezed
+      updated: freezed == updated
           ? _value.updated
           : updated // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -2261,44 +2282,48 @@ class _$_PostReport extends _PostReport {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PostReport &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.creatorId, creatorId) &&
-            const DeepCollectionEquality().equals(other.postId, postId) &&
-            const DeepCollectionEquality()
-                .equals(other.originalPostName, originalPostName) &&
-            const DeepCollectionEquality()
-                .equals(other.originalPostUrl, originalPostUrl) &&
-            const DeepCollectionEquality()
-                .equals(other.originalPostBody, originalPostBody) &&
-            const DeepCollectionEquality().equals(other.reason, reason) &&
-            const DeepCollectionEquality().equals(other.resolved, resolved) &&
-            const DeepCollectionEquality()
-                .equals(other.resolverId, resolverId) &&
-            const DeepCollectionEquality().equals(other.published, published) &&
-            const DeepCollectionEquality().equals(other.updated, updated) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.creatorId, creatorId) ||
+                other.creatorId == creatorId) &&
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.originalPostName, originalPostName) ||
+                other.originalPostName == originalPostName) &&
+            (identical(other.originalPostUrl, originalPostUrl) ||
+                other.originalPostUrl == originalPostUrl) &&
+            (identical(other.originalPostBody, originalPostBody) ||
+                other.originalPostBody == originalPostBody) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.resolved, resolved) ||
+                other.resolved == resolved) &&
+            (identical(other.resolverId, resolverId) ||
+                other.resolverId == resolverId) &&
+            (identical(other.published, published) ||
+                other.published == published) &&
+            (identical(other.updated, updated) || other.updated == updated) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(creatorId),
-      const DeepCollectionEquality().hash(postId),
-      const DeepCollectionEquality().hash(originalPostName),
-      const DeepCollectionEquality().hash(originalPostUrl),
-      const DeepCollectionEquality().hash(originalPostBody),
-      const DeepCollectionEquality().hash(reason),
-      const DeepCollectionEquality().hash(resolved),
-      const DeepCollectionEquality().hash(resolverId),
-      const DeepCollectionEquality().hash(published),
-      const DeepCollectionEquality().hash(updated),
-      const DeepCollectionEquality().hash(instanceHost));
+      id,
+      creatorId,
+      postId,
+      originalPostName,
+      originalPostUrl,
+      originalPostBody,
+      reason,
+      resolved,
+      resolverId,
+      published,
+      updated,
+      instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PostReportCopyWith<_$_PostReport> get copyWith =>
       __$$_PostReportCopyWithImpl<_$_PostReport>(this, _$identity);
 
@@ -2377,7 +2402,6 @@ mixin _$Post {
   DateTime? get updated => throw _privateConstructorUsedError;
   bool get deleted => throw _privateConstructorUsedError;
   bool get nsfw => throw _privateConstructorUsedError;
-  bool get stickied => throw _privateConstructorUsedError;
   String? get embedTitle => throw _privateConstructorUsedError;
   String? get embedDescription => throw _privateConstructorUsedError;
   String? get embedHtml => throw _privateConstructorUsedError;
@@ -2394,7 +2418,8 @@ mixin _$Post {
 /// @nodoc
 abstract class $PostCopyWith<$Res> {
   factory $PostCopyWith(Post value, $Res Function(Post) then) =
-      _$PostCopyWithImpl<$Res>;
+      _$PostCopyWithImpl<$Res, Post>;
+  @useResult
   $Res call(
       {int id,
       String name,
@@ -2408,7 +2433,6 @@ abstract class $PostCopyWith<$Res> {
       DateTime? updated,
       bool deleted,
       bool nsfw,
-      bool stickied,
       String? embedTitle,
       String? embedDescription,
       String? embedHtml,
@@ -2419,118 +2443,116 @@ abstract class $PostCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PostCopyWithImpl<$Res> implements $PostCopyWith<$Res> {
+class _$PostCopyWithImpl<$Res, $Val extends Post>
+    implements $PostCopyWith<$Res> {
   _$PostCopyWithImpl(this._value, this._then);
 
-  final Post _value;
   // ignore: unused_field
-  final $Res Function(Post) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
+    Object? id = null,
+    Object? name = null,
     Object? url = freezed,
     Object? body = freezed,
-    Object? creatorId = freezed,
-    Object? communityId = freezed,
-    Object? removed = freezed,
-    Object? locked = freezed,
-    Object? published = freezed,
+    Object? creatorId = null,
+    Object? communityId = null,
+    Object? removed = null,
+    Object? locked = null,
+    Object? published = null,
     Object? updated = freezed,
-    Object? deleted = freezed,
-    Object? nsfw = freezed,
-    Object? stickied = freezed,
+    Object? deleted = null,
+    Object? nsfw = null,
     Object? embedTitle = freezed,
     Object? embedDescription = freezed,
     Object? embedHtml = freezed,
     Object? thumbnailUrl = freezed,
-    Object? apId = freezed,
-    Object? local = freezed,
-    Object? instanceHost = freezed,
+    Object? apId = null,
+    Object? local = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      body: body == freezed
+      body: freezed == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
               as String?,
-      creatorId: creatorId == freezed
+      creatorId: null == creatorId
           ? _value.creatorId
           : creatorId // ignore: cast_nullable_to_non_nullable
               as int,
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      removed: removed == freezed
+      removed: null == removed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
               as bool,
-      locked: locked == freezed
+      locked: null == locked
           ? _value.locked
           : locked // ignore: cast_nullable_to_non_nullable
               as bool,
-      published: published == freezed
+      published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      updated: updated == freezed
+      updated: freezed == updated
           ? _value.updated
           : updated // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      deleted: deleted == freezed
+      deleted: null == deleted
           ? _value.deleted
           : deleted // ignore: cast_nullable_to_non_nullable
               as bool,
-      nsfw: nsfw == freezed
+      nsfw: null == nsfw
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
               as bool,
-      stickied: stickied == freezed
-          ? _value.stickied
-          : stickied // ignore: cast_nullable_to_non_nullable
-              as bool,
-      embedTitle: embedTitle == freezed
+      embedTitle: freezed == embedTitle
           ? _value.embedTitle
           : embedTitle // ignore: cast_nullable_to_non_nullable
               as String?,
-      embedDescription: embedDescription == freezed
+      embedDescription: freezed == embedDescription
           ? _value.embedDescription
           : embedDescription // ignore: cast_nullable_to_non_nullable
               as String?,
-      embedHtml: embedHtml == freezed
+      embedHtml: freezed == embedHtml
           ? _value.embedHtml
           : embedHtml // ignore: cast_nullable_to_non_nullable
               as String?,
-      thumbnailUrl: thumbnailUrl == freezed
+      thumbnailUrl: freezed == thumbnailUrl
           ? _value.thumbnailUrl
           : thumbnailUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      apId: apId == freezed
+      apId: null == apId
           ? _value.apId
           : apId // ignore: cast_nullable_to_non_nullable
               as String,
-      local: local == freezed
+      local: null == local
           ? _value.local
           : local // ignore: cast_nullable_to_non_nullable
               as bool,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -2539,6 +2561,7 @@ abstract class _$$_PostCopyWith<$Res> implements $PostCopyWith<$Res> {
   factory _$$_PostCopyWith(_$_Post value, $Res Function(_$_Post) then) =
       __$$_PostCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       String name,
@@ -2552,7 +2575,6 @@ abstract class _$$_PostCopyWith<$Res> implements $PostCopyWith<$Res> {
       DateTime? updated,
       bool deleted,
       bool nsfw,
-      bool stickied,
       String? embedTitle,
       String? embedDescription,
       String? embedHtml,
@@ -2563,115 +2585,108 @@ abstract class _$$_PostCopyWith<$Res> implements $PostCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res>
+class __$$_PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res, _$_Post>
     implements _$$_PostCopyWith<$Res> {
   __$$_PostCopyWithImpl(_$_Post _value, $Res Function(_$_Post) _then)
-      : super(_value, (v) => _then(v as _$_Post));
+      : super(_value, _then);
 
-  @override
-  _$_Post get _value => super._value as _$_Post;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
+    Object? id = null,
+    Object? name = null,
     Object? url = freezed,
     Object? body = freezed,
-    Object? creatorId = freezed,
-    Object? communityId = freezed,
-    Object? removed = freezed,
-    Object? locked = freezed,
-    Object? published = freezed,
+    Object? creatorId = null,
+    Object? communityId = null,
+    Object? removed = null,
+    Object? locked = null,
+    Object? published = null,
     Object? updated = freezed,
-    Object? deleted = freezed,
-    Object? nsfw = freezed,
-    Object? stickied = freezed,
+    Object? deleted = null,
+    Object? nsfw = null,
     Object? embedTitle = freezed,
     Object? embedDescription = freezed,
     Object? embedHtml = freezed,
     Object? thumbnailUrl = freezed,
-    Object? apId = freezed,
-    Object? local = freezed,
-    Object? instanceHost = freezed,
+    Object? apId = null,
+    Object? local = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_Post(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      body: body == freezed
+      body: freezed == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
               as String?,
-      creatorId: creatorId == freezed
+      creatorId: null == creatorId
           ? _value.creatorId
           : creatorId // ignore: cast_nullable_to_non_nullable
               as int,
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      removed: removed == freezed
+      removed: null == removed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
               as bool,
-      locked: locked == freezed
+      locked: null == locked
           ? _value.locked
           : locked // ignore: cast_nullable_to_non_nullable
               as bool,
-      published: published == freezed
+      published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      updated: updated == freezed
+      updated: freezed == updated
           ? _value.updated
           : updated // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      deleted: deleted == freezed
+      deleted: null == deleted
           ? _value.deleted
           : deleted // ignore: cast_nullable_to_non_nullable
               as bool,
-      nsfw: nsfw == freezed
+      nsfw: null == nsfw
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
               as bool,
-      stickied: stickied == freezed
-          ? _value.stickied
-          : stickied // ignore: cast_nullable_to_non_nullable
-              as bool,
-      embedTitle: embedTitle == freezed
+      embedTitle: freezed == embedTitle
           ? _value.embedTitle
           : embedTitle // ignore: cast_nullable_to_non_nullable
               as String?,
-      embedDescription: embedDescription == freezed
+      embedDescription: freezed == embedDescription
           ? _value.embedDescription
           : embedDescription // ignore: cast_nullable_to_non_nullable
               as String?,
-      embedHtml: embedHtml == freezed
+      embedHtml: freezed == embedHtml
           ? _value.embedHtml
           : embedHtml // ignore: cast_nullable_to_non_nullable
               as String?,
-      thumbnailUrl: thumbnailUrl == freezed
+      thumbnailUrl: freezed == thumbnailUrl
           ? _value.thumbnailUrl
           : thumbnailUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      apId: apId == freezed
+      apId: null == apId
           ? _value.apId
           : apId // ignore: cast_nullable_to_non_nullable
               as String,
-      local: local == freezed
+      local: null == local
           ? _value.local
           : local // ignore: cast_nullable_to_non_nullable
               as bool,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -2696,7 +2711,6 @@ class _$_Post extends _Post {
       this.updated,
       required this.deleted,
       required this.nsfw,
-      required this.stickied,
       this.embedTitle,
       this.embedDescription,
       this.embedHtml,
@@ -2733,8 +2747,6 @@ class _$_Post extends _Post {
   @override
   final bool nsfw;
   @override
-  final bool stickied;
-  @override
   final String? embedTitle;
   @override
   final String? embedDescription;
@@ -2751,7 +2763,7 @@ class _$_Post extends _Post {
 
   @override
   String toString() {
-    return 'Post(id: $id, name: $name, url: $url, body: $body, creatorId: $creatorId, communityId: $communityId, removed: $removed, locked: $locked, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, stickied: $stickied, embedTitle: $embedTitle, embedDescription: $embedDescription, embedHtml: $embedHtml, thumbnailUrl: $thumbnailUrl, apId: $apId, local: $local, instanceHost: $instanceHost)';
+    return 'Post(id: $id, name: $name, url: $url, body: $body, creatorId: $creatorId, communityId: $communityId, removed: $removed, locked: $locked, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, embedTitle: $embedTitle, embedDescription: $embedDescription, embedHtml: $embedHtml, thumbnailUrl: $thumbnailUrl, apId: $apId, local: $local, instanceHost: $instanceHost)';
   }
 
   @override
@@ -2759,61 +2771,63 @@ class _$_Post extends _Post {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Post &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.url, url) &&
-            const DeepCollectionEquality().equals(other.body, body) &&
-            const DeepCollectionEquality().equals(other.creatorId, creatorId) &&
-            const DeepCollectionEquality()
-                .equals(other.communityId, communityId) &&
-            const DeepCollectionEquality().equals(other.removed, removed) &&
-            const DeepCollectionEquality().equals(other.locked, locked) &&
-            const DeepCollectionEquality().equals(other.published, published) &&
-            const DeepCollectionEquality().equals(other.updated, updated) &&
-            const DeepCollectionEquality().equals(other.deleted, deleted) &&
-            const DeepCollectionEquality().equals(other.nsfw, nsfw) &&
-            const DeepCollectionEquality().equals(other.stickied, stickied) &&
-            const DeepCollectionEquality()
-                .equals(other.embedTitle, embedTitle) &&
-            const DeepCollectionEquality()
-                .equals(other.embedDescription, embedDescription) &&
-            const DeepCollectionEquality().equals(other.embedHtml, embedHtml) &&
-            const DeepCollectionEquality()
-                .equals(other.thumbnailUrl, thumbnailUrl) &&
-            const DeepCollectionEquality().equals(other.apId, apId) &&
-            const DeepCollectionEquality().equals(other.local, local) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.body, body) || other.body == body) &&
+            (identical(other.creatorId, creatorId) ||
+                other.creatorId == creatorId) &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.removed, removed) || other.removed == removed) &&
+            (identical(other.locked, locked) || other.locked == locked) &&
+            (identical(other.published, published) ||
+                other.published == published) &&
+            (identical(other.updated, updated) || other.updated == updated) &&
+            (identical(other.deleted, deleted) || other.deleted == deleted) &&
+            (identical(other.nsfw, nsfw) || other.nsfw == nsfw) &&
+            (identical(other.embedTitle, embedTitle) ||
+                other.embedTitle == embedTitle) &&
+            (identical(other.embedDescription, embedDescription) ||
+                other.embedDescription == embedDescription) &&
+            (identical(other.embedHtml, embedHtml) ||
+                other.embedHtml == embedHtml) &&
+            (identical(other.thumbnailUrl, thumbnailUrl) ||
+                other.thumbnailUrl == thumbnailUrl) &&
+            (identical(other.apId, apId) || other.apId == apId) &&
+            (identical(other.local, local) || other.local == local) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(name),
-        const DeepCollectionEquality().hash(url),
-        const DeepCollectionEquality().hash(body),
-        const DeepCollectionEquality().hash(creatorId),
-        const DeepCollectionEquality().hash(communityId),
-        const DeepCollectionEquality().hash(removed),
-        const DeepCollectionEquality().hash(locked),
-        const DeepCollectionEquality().hash(published),
-        const DeepCollectionEquality().hash(updated),
-        const DeepCollectionEquality().hash(deleted),
-        const DeepCollectionEquality().hash(nsfw),
-        const DeepCollectionEquality().hash(stickied),
-        const DeepCollectionEquality().hash(embedTitle),
-        const DeepCollectionEquality().hash(embedDescription),
-        const DeepCollectionEquality().hash(embedHtml),
-        const DeepCollectionEquality().hash(thumbnailUrl),
-        const DeepCollectionEquality().hash(apId),
-        const DeepCollectionEquality().hash(local),
-        const DeepCollectionEquality().hash(instanceHost)
+        id,
+        name,
+        url,
+        body,
+        creatorId,
+        communityId,
+        removed,
+        locked,
+        published,
+        updated,
+        deleted,
+        nsfw,
+        embedTitle,
+        embedDescription,
+        embedHtml,
+        thumbnailUrl,
+        apId,
+        local,
+        instanceHost
       ]);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PostCopyWith<_$_Post> get copyWith =>
       __$$_PostCopyWithImpl<_$_Post>(this, _$identity);
 
@@ -2839,7 +2853,6 @@ abstract class _Post extends Post {
       final DateTime? updated,
       required final bool deleted,
       required final bool nsfw,
-      required final bool stickied,
       final String? embedTitle,
       final String? embedDescription,
       final String? embedHtml,
@@ -2875,8 +2888,6 @@ abstract class _Post extends Post {
   bool get deleted;
   @override
   bool get nsfw;
-  @override
-  bool get stickied;
   @override
   String? get embedTitle;
   @override
@@ -2918,7 +2929,8 @@ mixin _$PasswordResetRequest {
 abstract class $PasswordResetRequestCopyWith<$Res> {
   factory $PasswordResetRequestCopyWith(PasswordResetRequest value,
           $Res Function(PasswordResetRequest) then) =
-      _$PasswordResetRequestCopyWithImpl<$Res>;
+      _$PasswordResetRequestCopyWithImpl<$Res, PasswordResetRequest>;
+  @useResult
   $Res call(
       {int id,
       int localUserId,
@@ -2928,44 +2940,47 @@ abstract class $PasswordResetRequestCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PasswordResetRequestCopyWithImpl<$Res>
+class _$PasswordResetRequestCopyWithImpl<$Res,
+        $Val extends PasswordResetRequest>
     implements $PasswordResetRequestCopyWith<$Res> {
   _$PasswordResetRequestCopyWithImpl(this._value, this._then);
 
-  final PasswordResetRequest _value;
   // ignore: unused_field
-  final $Res Function(PasswordResetRequest) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? localUserId = freezed,
-    Object? tokenEncrypted = freezed,
-    Object? published = freezed,
-    Object? instanceHost = freezed,
+    Object? id = null,
+    Object? localUserId = null,
+    Object? tokenEncrypted = null,
+    Object? published = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      localUserId: localUserId == freezed
+      localUserId: null == localUserId
           ? _value.localUserId
           : localUserId // ignore: cast_nullable_to_non_nullable
               as int,
-      tokenEncrypted: tokenEncrypted == freezed
+      tokenEncrypted: null == tokenEncrypted
           ? _value.tokenEncrypted
           : tokenEncrypted // ignore: cast_nullable_to_non_nullable
               as String,
-      published: published == freezed
+      published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -2976,6 +2991,7 @@ abstract class _$$_PasswordResetRequestCopyWith<$Res>
           $Res Function(_$_PasswordResetRequest) then) =
       __$$_PasswordResetRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       int localUserId,
@@ -2986,41 +3002,39 @@ abstract class _$$_PasswordResetRequestCopyWith<$Res>
 
 /// @nodoc
 class __$$_PasswordResetRequestCopyWithImpl<$Res>
-    extends _$PasswordResetRequestCopyWithImpl<$Res>
+    extends _$PasswordResetRequestCopyWithImpl<$Res, _$_PasswordResetRequest>
     implements _$$_PasswordResetRequestCopyWith<$Res> {
   __$$_PasswordResetRequestCopyWithImpl(_$_PasswordResetRequest _value,
       $Res Function(_$_PasswordResetRequest) _then)
-      : super(_value, (v) => _then(v as _$_PasswordResetRequest));
+      : super(_value, _then);
 
-  @override
-  _$_PasswordResetRequest get _value => super._value as _$_PasswordResetRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? localUserId = freezed,
-    Object? tokenEncrypted = freezed,
-    Object? published = freezed,
-    Object? instanceHost = freezed,
+    Object? id = null,
+    Object? localUserId = null,
+    Object? tokenEncrypted = null,
+    Object? published = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_PasswordResetRequest(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      localUserId: localUserId == freezed
+      localUserId: null == localUserId
           ? _value.localUserId
           : localUserId // ignore: cast_nullable_to_non_nullable
               as int,
-      tokenEncrypted: tokenEncrypted == freezed
+      tokenEncrypted: null == tokenEncrypted
           ? _value.tokenEncrypted
           : tokenEncrypted // ignore: cast_nullable_to_non_nullable
               as String,
-      published: published == freezed
+      published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -3064,28 +3078,25 @@ class _$_PasswordResetRequest extends _PasswordResetRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PasswordResetRequest &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other.localUserId, localUserId) &&
-            const DeepCollectionEquality()
-                .equals(other.tokenEncrypted, tokenEncrypted) &&
-            const DeepCollectionEquality().equals(other.published, published) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.localUserId, localUserId) ||
+                other.localUserId == localUserId) &&
+            (identical(other.tokenEncrypted, tokenEncrypted) ||
+                other.tokenEncrypted == tokenEncrypted) &&
+            (identical(other.published, published) ||
+                other.published == published) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(localUserId),
-      const DeepCollectionEquality().hash(tokenEncrypted),
-      const DeepCollectionEquality().hash(published),
-      const DeepCollectionEquality().hash(instanceHost));
+      runtimeType, id, localUserId, tokenEncrypted, published, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PasswordResetRequestCopyWith<_$_PasswordResetRequest> get copyWith =>
       __$$_PasswordResetRequestCopyWithImpl<_$_PasswordResetRequest>(
           this, _$identity);
@@ -3151,7 +3162,8 @@ mixin _$ModRemovePost {
 abstract class $ModRemovePostCopyWith<$Res> {
   factory $ModRemovePostCopyWith(
           ModRemovePost value, $Res Function(ModRemovePost) then) =
-      _$ModRemovePostCopyWithImpl<$Res>;
+      _$ModRemovePostCopyWithImpl<$Res, ModRemovePost>;
+  @useResult
   $Res call(
       {int id,
       int modPersonId,
@@ -3163,54 +3175,56 @@ abstract class $ModRemovePostCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ModRemovePostCopyWithImpl<$Res>
+class _$ModRemovePostCopyWithImpl<$Res, $Val extends ModRemovePost>
     implements $ModRemovePostCopyWith<$Res> {
   _$ModRemovePostCopyWithImpl(this._value, this._then);
 
-  final ModRemovePost _value;
   // ignore: unused_field
-  final $Res Function(ModRemovePost) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? modPersonId = freezed,
-    Object? postId = freezed,
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? postId = null,
     Object? reason = freezed,
     Object? removed = freezed,
-    Object? when = freezed,
-    Object? instanceHost = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modPersonId: modPersonId == freezed
+      modPersonId: null == modPersonId
           ? _value.modPersonId
           : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      reason: reason == freezed
+      reason: freezed == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String?,
-      removed: removed == freezed
+      removed: freezed == removed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
               as bool?,
-      when: when == freezed
+      when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -3221,6 +3235,7 @@ abstract class _$$_ModRemovePostCopyWith<$Res>
           _$_ModRemovePost value, $Res Function(_$_ModRemovePost) then) =
       __$$_ModRemovePostCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       int modPersonId,
@@ -3233,51 +3248,49 @@ abstract class _$$_ModRemovePostCopyWith<$Res>
 
 /// @nodoc
 class __$$_ModRemovePostCopyWithImpl<$Res>
-    extends _$ModRemovePostCopyWithImpl<$Res>
+    extends _$ModRemovePostCopyWithImpl<$Res, _$_ModRemovePost>
     implements _$$_ModRemovePostCopyWith<$Res> {
   __$$_ModRemovePostCopyWithImpl(
       _$_ModRemovePost _value, $Res Function(_$_ModRemovePost) _then)
-      : super(_value, (v) => _then(v as _$_ModRemovePost));
+      : super(_value, _then);
 
-  @override
-  _$_ModRemovePost get _value => super._value as _$_ModRemovePost;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? modPersonId = freezed,
-    Object? postId = freezed,
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? postId = null,
     Object? reason = freezed,
     Object? removed = freezed,
-    Object? when = freezed,
-    Object? instanceHost = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_ModRemovePost(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modPersonId: modPersonId == freezed
+      modPersonId: null == modPersonId
           ? _value.modPersonId
           : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      reason: reason == freezed
+      reason: freezed == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String?,
-      removed: removed == freezed
+      removed: freezed == removed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
               as bool?,
-      when: when == freezed
+      when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -3328,31 +3341,25 @@ class _$_ModRemovePost extends _ModRemovePost {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ModRemovePost &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other.modPersonId, modPersonId) &&
-            const DeepCollectionEquality().equals(other.postId, postId) &&
-            const DeepCollectionEquality().equals(other.reason, reason) &&
-            const DeepCollectionEquality().equals(other.removed, removed) &&
-            const DeepCollectionEquality().equals(other.when, when) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.modPersonId, modPersonId) ||
+                other.modPersonId == modPersonId) &&
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.removed, removed) || other.removed == removed) &&
+            (identical(other.when, when) || other.when == when) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(modPersonId),
-      const DeepCollectionEquality().hash(postId),
-      const DeepCollectionEquality().hash(reason),
-      const DeepCollectionEquality().hash(removed),
-      const DeepCollectionEquality().hash(when),
-      const DeepCollectionEquality().hash(instanceHost));
+  int get hashCode => Object.hash(runtimeType, id, modPersonId, postId, reason,
+      removed, when, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ModRemovePostCopyWith<_$_ModRemovePost> get copyWith =>
       __$$_ModRemovePostCopyWithImpl<_$_ModRemovePost>(this, _$identity);
 
@@ -3423,7 +3430,8 @@ mixin _$ModLockPost {
 abstract class $ModLockPostCopyWith<$Res> {
   factory $ModLockPostCopyWith(
           ModLockPost value, $Res Function(ModLockPost) then) =
-      _$ModLockPostCopyWithImpl<$Res>;
+      _$ModLockPostCopyWithImpl<$Res, ModLockPost>;
+  @useResult
   $Res call(
       {int id,
       int modPersonId,
@@ -3434,48 +3442,51 @@ abstract class $ModLockPostCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ModLockPostCopyWithImpl<$Res> implements $ModLockPostCopyWith<$Res> {
+class _$ModLockPostCopyWithImpl<$Res, $Val extends ModLockPost>
+    implements $ModLockPostCopyWith<$Res> {
   _$ModLockPostCopyWithImpl(this._value, this._then);
 
-  final ModLockPost _value;
   // ignore: unused_field
-  final $Res Function(ModLockPost) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? modPersonId = freezed,
-    Object? postId = freezed,
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? postId = null,
     Object? locked = freezed,
-    Object? when = freezed,
-    Object? instanceHost = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modPersonId: modPersonId == freezed
+      modPersonId: null == modPersonId
           ? _value.modPersonId
           : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      locked: locked == freezed
+      locked: freezed == locked
           ? _value.locked
           : locked // ignore: cast_nullable_to_non_nullable
               as bool?,
-      when: when == freezed
+      when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -3486,6 +3497,7 @@ abstract class _$$_ModLockPostCopyWith<$Res>
           _$_ModLockPost value, $Res Function(_$_ModLockPost) then) =
       __$$_ModLockPostCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       int modPersonId,
@@ -3496,46 +3508,45 @@ abstract class _$$_ModLockPostCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ModLockPostCopyWithImpl<$Res> extends _$ModLockPostCopyWithImpl<$Res>
+class __$$_ModLockPostCopyWithImpl<$Res>
+    extends _$ModLockPostCopyWithImpl<$Res, _$_ModLockPost>
     implements _$$_ModLockPostCopyWith<$Res> {
   __$$_ModLockPostCopyWithImpl(
       _$_ModLockPost _value, $Res Function(_$_ModLockPost) _then)
-      : super(_value, (v) => _then(v as _$_ModLockPost));
+      : super(_value, _then);
 
-  @override
-  _$_ModLockPost get _value => super._value as _$_ModLockPost;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? modPersonId = freezed,
-    Object? postId = freezed,
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? postId = null,
     Object? locked = freezed,
-    Object? when = freezed,
-    Object? instanceHost = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_ModLockPost(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modPersonId: modPersonId == freezed
+      modPersonId: null == modPersonId
           ? _value.modPersonId
           : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      locked: locked == freezed
+      locked: freezed == locked
           ? _value.locked
           : locked // ignore: cast_nullable_to_non_nullable
               as bool?,
-      when: when == freezed
+      when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -3583,29 +3594,24 @@ class _$_ModLockPost extends _ModLockPost {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ModLockPost &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other.modPersonId, modPersonId) &&
-            const DeepCollectionEquality().equals(other.postId, postId) &&
-            const DeepCollectionEquality().equals(other.locked, locked) &&
-            const DeepCollectionEquality().equals(other.when, when) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.modPersonId, modPersonId) ||
+                other.modPersonId == modPersonId) &&
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.locked, locked) || other.locked == locked) &&
+            (identical(other.when, when) || other.when == when) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(modPersonId),
-      const DeepCollectionEquality().hash(postId),
-      const DeepCollectionEquality().hash(locked),
-      const DeepCollectionEquality().hash(when),
-      const DeepCollectionEquality().hash(instanceHost));
+      runtimeType, id, modPersonId, postId, locked, when, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ModLockPostCopyWith<_$_ModLockPost> get copyWith =>
       __$$_ModLockPostCopyWithImpl<_$_ModLockPost>(this, _$identity);
 
@@ -3673,7 +3679,8 @@ mixin _$ModStickyPost {
 abstract class $ModStickyPostCopyWith<$Res> {
   factory $ModStickyPostCopyWith(
           ModStickyPost value, $Res Function(ModStickyPost) then) =
-      _$ModStickyPostCopyWithImpl<$Res>;
+      _$ModStickyPostCopyWithImpl<$Res, ModStickyPost>;
+  @useResult
   $Res call(
       {int id,
       int modPersonId,
@@ -3684,49 +3691,51 @@ abstract class $ModStickyPostCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ModStickyPostCopyWithImpl<$Res>
+class _$ModStickyPostCopyWithImpl<$Res, $Val extends ModStickyPost>
     implements $ModStickyPostCopyWith<$Res> {
   _$ModStickyPostCopyWithImpl(this._value, this._then);
 
-  final ModStickyPost _value;
   // ignore: unused_field
-  final $Res Function(ModStickyPost) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? modPersonId = freezed,
-    Object? postId = freezed,
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? postId = null,
     Object? stickied = freezed,
-    Object? when = freezed,
-    Object? instanceHost = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modPersonId: modPersonId == freezed
+      modPersonId: null == modPersonId
           ? _value.modPersonId
           : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      stickied: stickied == freezed
+      stickied: freezed == stickied
           ? _value.stickied
           : stickied // ignore: cast_nullable_to_non_nullable
               as bool?,
-      when: when == freezed
+      when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -3737,6 +3746,7 @@ abstract class _$$_ModStickyPostCopyWith<$Res>
           _$_ModStickyPost value, $Res Function(_$_ModStickyPost) then) =
       __$$_ModStickyPostCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       int modPersonId,
@@ -3748,46 +3758,44 @@ abstract class _$$_ModStickyPostCopyWith<$Res>
 
 /// @nodoc
 class __$$_ModStickyPostCopyWithImpl<$Res>
-    extends _$ModStickyPostCopyWithImpl<$Res>
+    extends _$ModStickyPostCopyWithImpl<$Res, _$_ModStickyPost>
     implements _$$_ModStickyPostCopyWith<$Res> {
   __$$_ModStickyPostCopyWithImpl(
       _$_ModStickyPost _value, $Res Function(_$_ModStickyPost) _then)
-      : super(_value, (v) => _then(v as _$_ModStickyPost));
+      : super(_value, _then);
 
-  @override
-  _$_ModStickyPost get _value => super._value as _$_ModStickyPost;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? modPersonId = freezed,
-    Object? postId = freezed,
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? postId = null,
     Object? stickied = freezed,
-    Object? when = freezed,
-    Object? instanceHost = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_ModStickyPost(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modPersonId: modPersonId == freezed
+      modPersonId: null == modPersonId
           ? _value.modPersonId
           : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      stickied: stickied == freezed
+      stickied: freezed == stickied
           ? _value.stickied
           : stickied // ignore: cast_nullable_to_non_nullable
               as bool?,
-      when: when == freezed
+      when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -3835,29 +3843,25 @@ class _$_ModStickyPost extends _ModStickyPost {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ModStickyPost &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other.modPersonId, modPersonId) &&
-            const DeepCollectionEquality().equals(other.postId, postId) &&
-            const DeepCollectionEquality().equals(other.stickied, stickied) &&
-            const DeepCollectionEquality().equals(other.when, when) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.modPersonId, modPersonId) ||
+                other.modPersonId == modPersonId) &&
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.stickied, stickied) ||
+                other.stickied == stickied) &&
+            (identical(other.when, when) || other.when == when) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(modPersonId),
-      const DeepCollectionEquality().hash(postId),
-      const DeepCollectionEquality().hash(stickied),
-      const DeepCollectionEquality().hash(when),
-      const DeepCollectionEquality().hash(instanceHost));
+      runtimeType, id, modPersonId, postId, stickied, when, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ModStickyPostCopyWith<_$_ModStickyPost> get copyWith =>
       __$$_ModStickyPostCopyWithImpl<_$_ModStickyPost>(this, _$identity);
 
@@ -3926,7 +3930,8 @@ mixin _$ModRemoveComment {
 abstract class $ModRemoveCommentCopyWith<$Res> {
   factory $ModRemoveCommentCopyWith(
           ModRemoveComment value, $Res Function(ModRemoveComment) then) =
-      _$ModRemoveCommentCopyWithImpl<$Res>;
+      _$ModRemoveCommentCopyWithImpl<$Res, ModRemoveComment>;
+  @useResult
   $Res call(
       {int id,
       int modPersonId,
@@ -3938,54 +3943,56 @@ abstract class $ModRemoveCommentCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ModRemoveCommentCopyWithImpl<$Res>
+class _$ModRemoveCommentCopyWithImpl<$Res, $Val extends ModRemoveComment>
     implements $ModRemoveCommentCopyWith<$Res> {
   _$ModRemoveCommentCopyWithImpl(this._value, this._then);
 
-  final ModRemoveComment _value;
   // ignore: unused_field
-  final $Res Function(ModRemoveComment) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? modPersonId = freezed,
-    Object? commentId = freezed,
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? commentId = null,
     Object? reason = freezed,
     Object? removed = freezed,
-    Object? when = freezed,
-    Object? instanceHost = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modPersonId: modPersonId == freezed
+      modPersonId: null == modPersonId
           ? _value.modPersonId
           : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      commentId: commentId == freezed
+      commentId: null == commentId
           ? _value.commentId
           : commentId // ignore: cast_nullable_to_non_nullable
               as int,
-      reason: reason == freezed
+      reason: freezed == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String?,
-      removed: removed == freezed
+      removed: freezed == removed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
               as bool?,
-      when: when == freezed
+      when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -3996,6 +4003,7 @@ abstract class _$$_ModRemoveCommentCopyWith<$Res>
           _$_ModRemoveComment value, $Res Function(_$_ModRemoveComment) then) =
       __$$_ModRemoveCommentCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       int modPersonId,
@@ -4008,51 +4016,49 @@ abstract class _$$_ModRemoveCommentCopyWith<$Res>
 
 /// @nodoc
 class __$$_ModRemoveCommentCopyWithImpl<$Res>
-    extends _$ModRemoveCommentCopyWithImpl<$Res>
+    extends _$ModRemoveCommentCopyWithImpl<$Res, _$_ModRemoveComment>
     implements _$$_ModRemoveCommentCopyWith<$Res> {
   __$$_ModRemoveCommentCopyWithImpl(
       _$_ModRemoveComment _value, $Res Function(_$_ModRemoveComment) _then)
-      : super(_value, (v) => _then(v as _$_ModRemoveComment));
+      : super(_value, _then);
 
-  @override
-  _$_ModRemoveComment get _value => super._value as _$_ModRemoveComment;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? modPersonId = freezed,
-    Object? commentId = freezed,
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? commentId = null,
     Object? reason = freezed,
     Object? removed = freezed,
-    Object? when = freezed,
-    Object? instanceHost = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_ModRemoveComment(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modPersonId: modPersonId == freezed
+      modPersonId: null == modPersonId
           ? _value.modPersonId
           : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      commentId: commentId == freezed
+      commentId: null == commentId
           ? _value.commentId
           : commentId // ignore: cast_nullable_to_non_nullable
               as int,
-      reason: reason == freezed
+      reason: freezed == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String?,
-      removed: removed == freezed
+      removed: freezed == removed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
               as bool?,
-      when: when == freezed
+      when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -4103,31 +4109,26 @@ class _$_ModRemoveComment extends _ModRemoveComment {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ModRemoveComment &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other.modPersonId, modPersonId) &&
-            const DeepCollectionEquality().equals(other.commentId, commentId) &&
-            const DeepCollectionEquality().equals(other.reason, reason) &&
-            const DeepCollectionEquality().equals(other.removed, removed) &&
-            const DeepCollectionEquality().equals(other.when, when) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.modPersonId, modPersonId) ||
+                other.modPersonId == modPersonId) &&
+            (identical(other.commentId, commentId) ||
+                other.commentId == commentId) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.removed, removed) || other.removed == removed) &&
+            (identical(other.when, when) || other.when == when) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(modPersonId),
-      const DeepCollectionEquality().hash(commentId),
-      const DeepCollectionEquality().hash(reason),
-      const DeepCollectionEquality().hash(removed),
-      const DeepCollectionEquality().hash(when),
-      const DeepCollectionEquality().hash(instanceHost));
+  int get hashCode => Object.hash(runtimeType, id, modPersonId, commentId,
+      reason, removed, when, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ModRemoveCommentCopyWith<_$_ModRemoveComment> get copyWith =>
       __$$_ModRemoveCommentCopyWithImpl<_$_ModRemoveComment>(this, _$identity);
 
@@ -4200,7 +4201,8 @@ mixin _$ModRemoveCommunity {
 abstract class $ModRemoveCommunityCopyWith<$Res> {
   factory $ModRemoveCommunityCopyWith(
           ModRemoveCommunity value, $Res Function(ModRemoveCommunity) then) =
-      _$ModRemoveCommunityCopyWithImpl<$Res>;
+      _$ModRemoveCommunityCopyWithImpl<$Res, ModRemoveCommunity>;
+  @useResult
   $Res call(
       {int id,
       int modPersonId,
@@ -4213,59 +4215,61 @@ abstract class $ModRemoveCommunityCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ModRemoveCommunityCopyWithImpl<$Res>
+class _$ModRemoveCommunityCopyWithImpl<$Res, $Val extends ModRemoveCommunity>
     implements $ModRemoveCommunityCopyWith<$Res> {
   _$ModRemoveCommunityCopyWithImpl(this._value, this._then);
 
-  final ModRemoveCommunity _value;
   // ignore: unused_field
-  final $Res Function(ModRemoveCommunity) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? modPersonId = freezed,
-    Object? communityId = freezed,
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? communityId = null,
     Object? reason = freezed,
     Object? removed = freezed,
     Object? expires = freezed,
-    Object? when = freezed,
-    Object? instanceHost = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modPersonId: modPersonId == freezed
+      modPersonId: null == modPersonId
           ? _value.modPersonId
           : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      reason: reason == freezed
+      reason: freezed == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String?,
-      removed: removed == freezed
+      removed: freezed == removed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
               as bool?,
-      expires: expires == freezed
+      expires: freezed == expires
           ? _value.expires
           : expires // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      when: when == freezed
+      when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -4276,6 +4280,7 @@ abstract class _$$_ModRemoveCommunityCopyWith<$Res>
           $Res Function(_$_ModRemoveCommunity) then) =
       __$$_ModRemoveCommunityCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       int modPersonId,
@@ -4289,56 +4294,54 @@ abstract class _$$_ModRemoveCommunityCopyWith<$Res>
 
 /// @nodoc
 class __$$_ModRemoveCommunityCopyWithImpl<$Res>
-    extends _$ModRemoveCommunityCopyWithImpl<$Res>
+    extends _$ModRemoveCommunityCopyWithImpl<$Res, _$_ModRemoveCommunity>
     implements _$$_ModRemoveCommunityCopyWith<$Res> {
   __$$_ModRemoveCommunityCopyWithImpl(
       _$_ModRemoveCommunity _value, $Res Function(_$_ModRemoveCommunity) _then)
-      : super(_value, (v) => _then(v as _$_ModRemoveCommunity));
+      : super(_value, _then);
 
-  @override
-  _$_ModRemoveCommunity get _value => super._value as _$_ModRemoveCommunity;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? modPersonId = freezed,
-    Object? communityId = freezed,
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? communityId = null,
     Object? reason = freezed,
     Object? removed = freezed,
     Object? expires = freezed,
-    Object? when = freezed,
-    Object? instanceHost = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_ModRemoveCommunity(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modPersonId: modPersonId == freezed
+      modPersonId: null == modPersonId
           ? _value.modPersonId
           : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      reason: reason == freezed
+      reason: freezed == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String?,
-      removed: removed == freezed
+      removed: freezed == removed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
               as bool?,
-      expires: expires == freezed
+      expires: freezed == expires
           ? _value.expires
           : expires // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      when: when == freezed
+      when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -4392,34 +4395,27 @@ class _$_ModRemoveCommunity extends _ModRemoveCommunity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ModRemoveCommunity &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other.modPersonId, modPersonId) &&
-            const DeepCollectionEquality()
-                .equals(other.communityId, communityId) &&
-            const DeepCollectionEquality().equals(other.reason, reason) &&
-            const DeepCollectionEquality().equals(other.removed, removed) &&
-            const DeepCollectionEquality().equals(other.expires, expires) &&
-            const DeepCollectionEquality().equals(other.when, when) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.modPersonId, modPersonId) ||
+                other.modPersonId == modPersonId) &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.removed, removed) || other.removed == removed) &&
+            (identical(other.expires, expires) || other.expires == expires) &&
+            (identical(other.when, when) || other.when == when) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(modPersonId),
-      const DeepCollectionEquality().hash(communityId),
-      const DeepCollectionEquality().hash(reason),
-      const DeepCollectionEquality().hash(removed),
-      const DeepCollectionEquality().hash(expires),
-      const DeepCollectionEquality().hash(when),
-      const DeepCollectionEquality().hash(instanceHost));
+  int get hashCode => Object.hash(runtimeType, id, modPersonId, communityId,
+      reason, removed, expires, when, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ModRemoveCommunityCopyWith<_$_ModRemoveCommunity> get copyWith =>
       __$$_ModRemoveCommunityCopyWithImpl<_$_ModRemoveCommunity>(
           this, _$identity);
@@ -4497,7 +4493,8 @@ mixin _$ModBanFromCommunity {
 abstract class $ModBanFromCommunityCopyWith<$Res> {
   factory $ModBanFromCommunityCopyWith(
           ModBanFromCommunity value, $Res Function(ModBanFromCommunity) then) =
-      _$ModBanFromCommunityCopyWithImpl<$Res>;
+      _$ModBanFromCommunityCopyWithImpl<$Res, ModBanFromCommunity>;
+  @useResult
   $Res call(
       {int id,
       int modPersonId,
@@ -4511,64 +4508,66 @@ abstract class $ModBanFromCommunityCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ModBanFromCommunityCopyWithImpl<$Res>
+class _$ModBanFromCommunityCopyWithImpl<$Res, $Val extends ModBanFromCommunity>
     implements $ModBanFromCommunityCopyWith<$Res> {
   _$ModBanFromCommunityCopyWithImpl(this._value, this._then);
 
-  final ModBanFromCommunity _value;
   // ignore: unused_field
-  final $Res Function(ModBanFromCommunity) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? modPersonId = freezed,
-    Object? otherPersonId = freezed,
-    Object? communityId = freezed,
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? otherPersonId = null,
+    Object? communityId = null,
     Object? reason = freezed,
     Object? banned = freezed,
     Object? expires = freezed,
-    Object? when = freezed,
-    Object? instanceHost = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modPersonId: modPersonId == freezed
+      modPersonId: null == modPersonId
           ? _value.modPersonId
           : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      otherPersonId: otherPersonId == freezed
+      otherPersonId: null == otherPersonId
           ? _value.otherPersonId
           : otherPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      reason: reason == freezed
+      reason: freezed == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String?,
-      banned: banned == freezed
+      banned: freezed == banned
           ? _value.banned
           : banned // ignore: cast_nullable_to_non_nullable
               as bool?,
-      expires: expires == freezed
+      expires: freezed == expires
           ? _value.expires
           : expires // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      when: when == freezed
+      when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -4579,6 +4578,7 @@ abstract class _$$_ModBanFromCommunityCopyWith<$Res>
           $Res Function(_$_ModBanFromCommunity) then) =
       __$$_ModBanFromCommunityCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       int modPersonId,
@@ -4593,61 +4593,59 @@ abstract class _$$_ModBanFromCommunityCopyWith<$Res>
 
 /// @nodoc
 class __$$_ModBanFromCommunityCopyWithImpl<$Res>
-    extends _$ModBanFromCommunityCopyWithImpl<$Res>
+    extends _$ModBanFromCommunityCopyWithImpl<$Res, _$_ModBanFromCommunity>
     implements _$$_ModBanFromCommunityCopyWith<$Res> {
   __$$_ModBanFromCommunityCopyWithImpl(_$_ModBanFromCommunity _value,
       $Res Function(_$_ModBanFromCommunity) _then)
-      : super(_value, (v) => _then(v as _$_ModBanFromCommunity));
+      : super(_value, _then);
 
-  @override
-  _$_ModBanFromCommunity get _value => super._value as _$_ModBanFromCommunity;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? modPersonId = freezed,
-    Object? otherPersonId = freezed,
-    Object? communityId = freezed,
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? otherPersonId = null,
+    Object? communityId = null,
     Object? reason = freezed,
     Object? banned = freezed,
     Object? expires = freezed,
-    Object? when = freezed,
-    Object? instanceHost = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_ModBanFromCommunity(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modPersonId: modPersonId == freezed
+      modPersonId: null == modPersonId
           ? _value.modPersonId
           : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      otherPersonId: otherPersonId == freezed
+      otherPersonId: null == otherPersonId
           ? _value.otherPersonId
           : otherPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      reason: reason == freezed
+      reason: freezed == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String?,
-      banned: banned == freezed
+      banned: freezed == banned
           ? _value.banned
           : banned // ignore: cast_nullable_to_non_nullable
               as bool?,
-      expires: expires == freezed
+      expires: freezed == expires
           ? _value.expires
           : expires // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      when: when == freezed
+      when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -4704,37 +4702,29 @@ class _$_ModBanFromCommunity extends _ModBanFromCommunity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ModBanFromCommunity &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other.modPersonId, modPersonId) &&
-            const DeepCollectionEquality()
-                .equals(other.otherPersonId, otherPersonId) &&
-            const DeepCollectionEquality()
-                .equals(other.communityId, communityId) &&
-            const DeepCollectionEquality().equals(other.reason, reason) &&
-            const DeepCollectionEquality().equals(other.banned, banned) &&
-            const DeepCollectionEquality().equals(other.expires, expires) &&
-            const DeepCollectionEquality().equals(other.when, when) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.modPersonId, modPersonId) ||
+                other.modPersonId == modPersonId) &&
+            (identical(other.otherPersonId, otherPersonId) ||
+                other.otherPersonId == otherPersonId) &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.banned, banned) || other.banned == banned) &&
+            (identical(other.expires, expires) || other.expires == expires) &&
+            (identical(other.when, when) || other.when == when) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(modPersonId),
-      const DeepCollectionEquality().hash(otherPersonId),
-      const DeepCollectionEquality().hash(communityId),
-      const DeepCollectionEquality().hash(reason),
-      const DeepCollectionEquality().hash(banned),
-      const DeepCollectionEquality().hash(expires),
-      const DeepCollectionEquality().hash(when),
-      const DeepCollectionEquality().hash(instanceHost));
+  int get hashCode => Object.hash(runtimeType, id, modPersonId, otherPersonId,
+      communityId, reason, banned, expires, when, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ModBanFromCommunityCopyWith<_$_ModBanFromCommunity> get copyWith =>
       __$$_ModBanFromCommunityCopyWithImpl<_$_ModBanFromCommunity>(
           this, _$identity);
@@ -4812,7 +4802,8 @@ mixin _$ModBan {
 /// @nodoc
 abstract class $ModBanCopyWith<$Res> {
   factory $ModBanCopyWith(ModBan value, $Res Function(ModBan) then) =
-      _$ModBanCopyWithImpl<$Res>;
+      _$ModBanCopyWithImpl<$Res, ModBan>;
+  @useResult
   $Res call(
       {int id,
       int modPersonId,
@@ -4825,58 +4816,61 @@ abstract class $ModBanCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ModBanCopyWithImpl<$Res> implements $ModBanCopyWith<$Res> {
+class _$ModBanCopyWithImpl<$Res, $Val extends ModBan>
+    implements $ModBanCopyWith<$Res> {
   _$ModBanCopyWithImpl(this._value, this._then);
 
-  final ModBan _value;
   // ignore: unused_field
-  final $Res Function(ModBan) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? modPersonId = freezed,
-    Object? otherPersonId = freezed,
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? otherPersonId = null,
     Object? reason = freezed,
     Object? banned = freezed,
     Object? expires = freezed,
-    Object? when = freezed,
-    Object? instanceHost = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modPersonId: modPersonId == freezed
+      modPersonId: null == modPersonId
           ? _value.modPersonId
           : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      otherPersonId: otherPersonId == freezed
+      otherPersonId: null == otherPersonId
           ? _value.otherPersonId
           : otherPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      reason: reason == freezed
+      reason: freezed == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String?,
-      banned: banned == freezed
+      banned: freezed == banned
           ? _value.banned
           : banned // ignore: cast_nullable_to_non_nullable
               as bool?,
-      expires: expires == freezed
+      expires: freezed == expires
           ? _value.expires
           : expires // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      when: when == freezed
+      when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -4885,6 +4879,7 @@ abstract class _$$_ModBanCopyWith<$Res> implements $ModBanCopyWith<$Res> {
   factory _$$_ModBanCopyWith(_$_ModBan value, $Res Function(_$_ModBan) then) =
       __$$_ModBanCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       int modPersonId,
@@ -4897,55 +4892,54 @@ abstract class _$$_ModBanCopyWith<$Res> implements $ModBanCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ModBanCopyWithImpl<$Res> extends _$ModBanCopyWithImpl<$Res>
+class __$$_ModBanCopyWithImpl<$Res>
+    extends _$ModBanCopyWithImpl<$Res, _$_ModBan>
     implements _$$_ModBanCopyWith<$Res> {
   __$$_ModBanCopyWithImpl(_$_ModBan _value, $Res Function(_$_ModBan) _then)
-      : super(_value, (v) => _then(v as _$_ModBan));
+      : super(_value, _then);
 
-  @override
-  _$_ModBan get _value => super._value as _$_ModBan;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? modPersonId = freezed,
-    Object? otherPersonId = freezed,
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? otherPersonId = null,
     Object? reason = freezed,
     Object? banned = freezed,
     Object? expires = freezed,
-    Object? when = freezed,
-    Object? instanceHost = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_ModBan(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modPersonId: modPersonId == freezed
+      modPersonId: null == modPersonId
           ? _value.modPersonId
           : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      otherPersonId: otherPersonId == freezed
+      otherPersonId: null == otherPersonId
           ? _value.otherPersonId
           : otherPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      reason: reason == freezed
+      reason: freezed == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String?,
-      banned: banned == freezed
+      banned: freezed == banned
           ? _value.banned
           : banned // ignore: cast_nullable_to_non_nullable
               as bool?,
-      expires: expires == freezed
+      expires: freezed == expires
           ? _value.expires
           : expires // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      when: when == freezed
+      when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -4999,34 +4993,27 @@ class _$_ModBan extends _ModBan {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ModBan &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other.modPersonId, modPersonId) &&
-            const DeepCollectionEquality()
-                .equals(other.otherPersonId, otherPersonId) &&
-            const DeepCollectionEquality().equals(other.reason, reason) &&
-            const DeepCollectionEquality().equals(other.banned, banned) &&
-            const DeepCollectionEquality().equals(other.expires, expires) &&
-            const DeepCollectionEquality().equals(other.when, when) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.modPersonId, modPersonId) ||
+                other.modPersonId == modPersonId) &&
+            (identical(other.otherPersonId, otherPersonId) ||
+                other.otherPersonId == otherPersonId) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.banned, banned) || other.banned == banned) &&
+            (identical(other.expires, expires) || other.expires == expires) &&
+            (identical(other.when, when) || other.when == when) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(modPersonId),
-      const DeepCollectionEquality().hash(otherPersonId),
-      const DeepCollectionEquality().hash(reason),
-      const DeepCollectionEquality().hash(banned),
-      const DeepCollectionEquality().hash(expires),
-      const DeepCollectionEquality().hash(when),
-      const DeepCollectionEquality().hash(instanceHost));
+  int get hashCode => Object.hash(runtimeType, id, modPersonId, otherPersonId,
+      reason, banned, expires, when, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ModBanCopyWith<_$_ModBan> get copyWith =>
       __$$_ModBanCopyWithImpl<_$_ModBan>(this, _$identity);
 
@@ -5100,7 +5087,8 @@ mixin _$ModAddCommunity {
 abstract class $ModAddCommunityCopyWith<$Res> {
   factory $ModAddCommunityCopyWith(
           ModAddCommunity value, $Res Function(ModAddCommunity) then) =
-      _$ModAddCommunityCopyWithImpl<$Res>;
+      _$ModAddCommunityCopyWithImpl<$Res, ModAddCommunity>;
+  @useResult
   $Res call(
       {int id,
       int modPersonId,
@@ -5112,54 +5100,56 @@ abstract class $ModAddCommunityCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ModAddCommunityCopyWithImpl<$Res>
+class _$ModAddCommunityCopyWithImpl<$Res, $Val extends ModAddCommunity>
     implements $ModAddCommunityCopyWith<$Res> {
   _$ModAddCommunityCopyWithImpl(this._value, this._then);
 
-  final ModAddCommunity _value;
   // ignore: unused_field
-  final $Res Function(ModAddCommunity) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? modPersonId = freezed,
-    Object? otherPersonId = freezed,
-    Object? communityId = freezed,
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? otherPersonId = null,
+    Object? communityId = null,
     Object? removed = freezed,
-    Object? when = freezed,
-    Object? instanceHost = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modPersonId: modPersonId == freezed
+      modPersonId: null == modPersonId
           ? _value.modPersonId
           : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      otherPersonId: otherPersonId == freezed
+      otherPersonId: null == otherPersonId
           ? _value.otherPersonId
           : otherPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      removed: removed == freezed
+      removed: freezed == removed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
               as bool?,
-      when: when == freezed
+      when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -5170,6 +5160,7 @@ abstract class _$$_ModAddCommunityCopyWith<$Res>
           _$_ModAddCommunity value, $Res Function(_$_ModAddCommunity) then) =
       __$$_ModAddCommunityCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       int modPersonId,
@@ -5182,51 +5173,49 @@ abstract class _$$_ModAddCommunityCopyWith<$Res>
 
 /// @nodoc
 class __$$_ModAddCommunityCopyWithImpl<$Res>
-    extends _$ModAddCommunityCopyWithImpl<$Res>
+    extends _$ModAddCommunityCopyWithImpl<$Res, _$_ModAddCommunity>
     implements _$$_ModAddCommunityCopyWith<$Res> {
   __$$_ModAddCommunityCopyWithImpl(
       _$_ModAddCommunity _value, $Res Function(_$_ModAddCommunity) _then)
-      : super(_value, (v) => _then(v as _$_ModAddCommunity));
+      : super(_value, _then);
 
-  @override
-  _$_ModAddCommunity get _value => super._value as _$_ModAddCommunity;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? modPersonId = freezed,
-    Object? otherPersonId = freezed,
-    Object? communityId = freezed,
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? otherPersonId = null,
+    Object? communityId = null,
     Object? removed = freezed,
-    Object? when = freezed,
-    Object? instanceHost = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_ModAddCommunity(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modPersonId: modPersonId == freezed
+      modPersonId: null == modPersonId
           ? _value.modPersonId
           : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      otherPersonId: otherPersonId == freezed
+      otherPersonId: null == otherPersonId
           ? _value.otherPersonId
           : otherPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      removed: removed == freezed
+      removed: freezed == removed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
               as bool?,
-      when: when == freezed
+      when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -5277,33 +5266,27 @@ class _$_ModAddCommunity extends _ModAddCommunity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ModAddCommunity &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other.modPersonId, modPersonId) &&
-            const DeepCollectionEquality()
-                .equals(other.otherPersonId, otherPersonId) &&
-            const DeepCollectionEquality()
-                .equals(other.communityId, communityId) &&
-            const DeepCollectionEquality().equals(other.removed, removed) &&
-            const DeepCollectionEquality().equals(other.when, when) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.modPersonId, modPersonId) ||
+                other.modPersonId == modPersonId) &&
+            (identical(other.otherPersonId, otherPersonId) ||
+                other.otherPersonId == otherPersonId) &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.removed, removed) || other.removed == removed) &&
+            (identical(other.when, when) || other.when == when) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(modPersonId),
-      const DeepCollectionEquality().hash(otherPersonId),
-      const DeepCollectionEquality().hash(communityId),
-      const DeepCollectionEquality().hash(removed),
-      const DeepCollectionEquality().hash(when),
-      const DeepCollectionEquality().hash(instanceHost));
+  int get hashCode => Object.hash(runtimeType, id, modPersonId, otherPersonId,
+      communityId, removed, when, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ModAddCommunityCopyWith<_$_ModAddCommunity> get copyWith =>
       __$$_ModAddCommunityCopyWithImpl<_$_ModAddCommunity>(this, _$identity);
 
@@ -5375,7 +5358,8 @@ mixin _$ModTransferCommunity {
 abstract class $ModTransferCommunityCopyWith<$Res> {
   factory $ModTransferCommunityCopyWith(ModTransferCommunity value,
           $Res Function(ModTransferCommunity) then) =
-      _$ModTransferCommunityCopyWithImpl<$Res>;
+      _$ModTransferCommunityCopyWithImpl<$Res, ModTransferCommunity>;
+  @useResult
   $Res call(
       {int id,
       int modPersonId,
@@ -5387,54 +5371,57 @@ abstract class $ModTransferCommunityCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ModTransferCommunityCopyWithImpl<$Res>
+class _$ModTransferCommunityCopyWithImpl<$Res,
+        $Val extends ModTransferCommunity>
     implements $ModTransferCommunityCopyWith<$Res> {
   _$ModTransferCommunityCopyWithImpl(this._value, this._then);
 
-  final ModTransferCommunity _value;
   // ignore: unused_field
-  final $Res Function(ModTransferCommunity) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? modPersonId = freezed,
-    Object? otherPersonId = freezed,
-    Object? communityId = freezed,
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? otherPersonId = null,
+    Object? communityId = null,
     Object? removed = freezed,
-    Object? when = freezed,
-    Object? instanceHost = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modPersonId: modPersonId == freezed
+      modPersonId: null == modPersonId
           ? _value.modPersonId
           : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      otherPersonId: otherPersonId == freezed
+      otherPersonId: null == otherPersonId
           ? _value.otherPersonId
           : otherPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      removed: removed == freezed
+      removed: freezed == removed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
               as bool?,
-      when: when == freezed
+      when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -5445,6 +5432,7 @@ abstract class _$$_ModTransferCommunityCopyWith<$Res>
           $Res Function(_$_ModTransferCommunity) then) =
       __$$_ModTransferCommunityCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       int modPersonId,
@@ -5457,51 +5445,49 @@ abstract class _$$_ModTransferCommunityCopyWith<$Res>
 
 /// @nodoc
 class __$$_ModTransferCommunityCopyWithImpl<$Res>
-    extends _$ModTransferCommunityCopyWithImpl<$Res>
+    extends _$ModTransferCommunityCopyWithImpl<$Res, _$_ModTransferCommunity>
     implements _$$_ModTransferCommunityCopyWith<$Res> {
   __$$_ModTransferCommunityCopyWithImpl(_$_ModTransferCommunity _value,
       $Res Function(_$_ModTransferCommunity) _then)
-      : super(_value, (v) => _then(v as _$_ModTransferCommunity));
+      : super(_value, _then);
 
-  @override
-  _$_ModTransferCommunity get _value => super._value as _$_ModTransferCommunity;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? modPersonId = freezed,
-    Object? otherPersonId = freezed,
-    Object? communityId = freezed,
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? otherPersonId = null,
+    Object? communityId = null,
     Object? removed = freezed,
-    Object? when = freezed,
-    Object? instanceHost = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_ModTransferCommunity(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modPersonId: modPersonId == freezed
+      modPersonId: null == modPersonId
           ? _value.modPersonId
           : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      otherPersonId: otherPersonId == freezed
+      otherPersonId: null == otherPersonId
           ? _value.otherPersonId
           : otherPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      removed: removed == freezed
+      removed: freezed == removed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
               as bool?,
-      when: when == freezed
+      when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -5552,33 +5538,27 @@ class _$_ModTransferCommunity extends _ModTransferCommunity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ModTransferCommunity &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other.modPersonId, modPersonId) &&
-            const DeepCollectionEquality()
-                .equals(other.otherPersonId, otherPersonId) &&
-            const DeepCollectionEquality()
-                .equals(other.communityId, communityId) &&
-            const DeepCollectionEquality().equals(other.removed, removed) &&
-            const DeepCollectionEquality().equals(other.when, when) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.modPersonId, modPersonId) ||
+                other.modPersonId == modPersonId) &&
+            (identical(other.otherPersonId, otherPersonId) ||
+                other.otherPersonId == otherPersonId) &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.removed, removed) || other.removed == removed) &&
+            (identical(other.when, when) || other.when == when) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(modPersonId),
-      const DeepCollectionEquality().hash(otherPersonId),
-      const DeepCollectionEquality().hash(communityId),
-      const DeepCollectionEquality().hash(removed),
-      const DeepCollectionEquality().hash(when),
-      const DeepCollectionEquality().hash(instanceHost));
+  int get hashCode => Object.hash(runtimeType, id, modPersonId, otherPersonId,
+      communityId, removed, when, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ModTransferCommunityCopyWith<_$_ModTransferCommunity> get copyWith =>
       __$$_ModTransferCommunityCopyWithImpl<_$_ModTransferCommunity>(
           this, _$identity);
@@ -5648,7 +5628,8 @@ mixin _$ModAdd {
 /// @nodoc
 abstract class $ModAddCopyWith<$Res> {
   factory $ModAddCopyWith(ModAdd value, $Res Function(ModAdd) then) =
-      _$ModAddCopyWithImpl<$Res>;
+      _$ModAddCopyWithImpl<$Res, ModAdd>;
+  @useResult
   $Res call(
       {int id,
       int modPersonId,
@@ -5659,48 +5640,51 @@ abstract class $ModAddCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ModAddCopyWithImpl<$Res> implements $ModAddCopyWith<$Res> {
+class _$ModAddCopyWithImpl<$Res, $Val extends ModAdd>
+    implements $ModAddCopyWith<$Res> {
   _$ModAddCopyWithImpl(this._value, this._then);
 
-  final ModAdd _value;
   // ignore: unused_field
-  final $Res Function(ModAdd) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? modPersonId = freezed,
-    Object? otherPersonId = freezed,
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? otherPersonId = null,
     Object? removed = freezed,
-    Object? when = freezed,
-    Object? instanceHost = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modPersonId: modPersonId == freezed
+      modPersonId: null == modPersonId
           ? _value.modPersonId
           : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      otherPersonId: otherPersonId == freezed
+      otherPersonId: null == otherPersonId
           ? _value.otherPersonId
           : otherPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      removed: removed == freezed
+      removed: freezed == removed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
               as bool?,
-      when: when == freezed
+      when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -5709,6 +5693,7 @@ abstract class _$$_ModAddCopyWith<$Res> implements $ModAddCopyWith<$Res> {
   factory _$$_ModAddCopyWith(_$_ModAdd value, $Res Function(_$_ModAdd) then) =
       __$$_ModAddCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       int modPersonId,
@@ -5719,45 +5704,44 @@ abstract class _$$_ModAddCopyWith<$Res> implements $ModAddCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ModAddCopyWithImpl<$Res> extends _$ModAddCopyWithImpl<$Res>
+class __$$_ModAddCopyWithImpl<$Res>
+    extends _$ModAddCopyWithImpl<$Res, _$_ModAdd>
     implements _$$_ModAddCopyWith<$Res> {
   __$$_ModAddCopyWithImpl(_$_ModAdd _value, $Res Function(_$_ModAdd) _then)
-      : super(_value, (v) => _then(v as _$_ModAdd));
+      : super(_value, _then);
 
-  @override
-  _$_ModAdd get _value => super._value as _$_ModAdd;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? modPersonId = freezed,
-    Object? otherPersonId = freezed,
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? otherPersonId = null,
     Object? removed = freezed,
-    Object? when = freezed,
-    Object? instanceHost = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_ModAdd(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modPersonId: modPersonId == freezed
+      modPersonId: null == modPersonId
           ? _value.modPersonId
           : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      otherPersonId: otherPersonId == freezed
+      otherPersonId: null == otherPersonId
           ? _value.otherPersonId
           : otherPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      removed: removed == freezed
+      removed: freezed == removed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
               as bool?,
-      when: when == freezed
+      when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -5805,30 +5789,25 @@ class _$_ModAdd extends _ModAdd {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ModAdd &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other.modPersonId, modPersonId) &&
-            const DeepCollectionEquality()
-                .equals(other.otherPersonId, otherPersonId) &&
-            const DeepCollectionEquality().equals(other.removed, removed) &&
-            const DeepCollectionEquality().equals(other.when, when) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.modPersonId, modPersonId) ||
+                other.modPersonId == modPersonId) &&
+            (identical(other.otherPersonId, otherPersonId) ||
+                other.otherPersonId == otherPersonId) &&
+            (identical(other.removed, removed) || other.removed == removed) &&
+            (identical(other.when, when) || other.when == when) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(modPersonId),
-      const DeepCollectionEquality().hash(otherPersonId),
-      const DeepCollectionEquality().hash(removed),
-      const DeepCollectionEquality().hash(when),
-      const DeepCollectionEquality().hash(instanceHost));
+      runtimeType, id, modPersonId, otherPersonId, removed, when, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ModAddCopyWith<_$_ModAdd> get copyWith =>
       __$$_ModAddCopyWithImpl<_$_ModAdd>(this, _$identity);
 
@@ -5902,7 +5881,8 @@ mixin _$CommunitySafe {
 abstract class $CommunitySafeCopyWith<$Res> {
   factory $CommunitySafeCopyWith(
           CommunitySafe value, $Res Function(CommunitySafe) then) =
-      _$CommunitySafeCopyWithImpl<$Res>;
+      _$CommunitySafeCopyWithImpl<$Res, CommunitySafe>;
+  @useResult
   $Res call(
       {int id,
       String name,
@@ -5921,89 +5901,91 @@ abstract class $CommunitySafeCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CommunitySafeCopyWithImpl<$Res>
+class _$CommunitySafeCopyWithImpl<$Res, $Val extends CommunitySafe>
     implements $CommunitySafeCopyWith<$Res> {
   _$CommunitySafeCopyWithImpl(this._value, this._then);
 
-  final CommunitySafe _value;
   // ignore: unused_field
-  final $Res Function(CommunitySafe) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
-    Object? title = freezed,
+    Object? id = null,
+    Object? name = null,
+    Object? title = null,
     Object? description = freezed,
-    Object? removed = freezed,
-    Object? published = freezed,
+    Object? removed = null,
+    Object? published = null,
     Object? updated = freezed,
-    Object? deleted = freezed,
-    Object? nsfw = freezed,
-    Object? actorId = freezed,
-    Object? local = freezed,
+    Object? deleted = null,
+    Object? nsfw = null,
+    Object? actorId = null,
+    Object? local = null,
     Object? icon = freezed,
     Object? banner = freezed,
-    Object? instanceHost = freezed,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      removed: removed == freezed
+      removed: null == removed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
               as bool,
-      published: published == freezed
+      published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      updated: updated == freezed
+      updated: freezed == updated
           ? _value.updated
           : updated // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      deleted: deleted == freezed
+      deleted: null == deleted
           ? _value.deleted
           : deleted // ignore: cast_nullable_to_non_nullable
               as bool,
-      nsfw: nsfw == freezed
+      nsfw: null == nsfw
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
               as bool,
-      actorId: actorId == freezed
+      actorId: null == actorId
           ? _value.actorId
           : actorId // ignore: cast_nullable_to_non_nullable
               as String,
-      local: local == freezed
+      local: null == local
           ? _value.local
           : local // ignore: cast_nullable_to_non_nullable
               as bool,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as String?,
-      banner: banner == freezed
+      banner: freezed == banner
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -6014,6 +5996,7 @@ abstract class _$$_CommunitySafeCopyWith<$Res>
           _$_CommunitySafe value, $Res Function(_$_CommunitySafe) then) =
       __$$_CommunitySafeCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       String name,
@@ -6033,86 +6016,84 @@ abstract class _$$_CommunitySafeCopyWith<$Res>
 
 /// @nodoc
 class __$$_CommunitySafeCopyWithImpl<$Res>
-    extends _$CommunitySafeCopyWithImpl<$Res>
+    extends _$CommunitySafeCopyWithImpl<$Res, _$_CommunitySafe>
     implements _$$_CommunitySafeCopyWith<$Res> {
   __$$_CommunitySafeCopyWithImpl(
       _$_CommunitySafe _value, $Res Function(_$_CommunitySafe) _then)
-      : super(_value, (v) => _then(v as _$_CommunitySafe));
+      : super(_value, _then);
 
-  @override
-  _$_CommunitySafe get _value => super._value as _$_CommunitySafe;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
-    Object? title = freezed,
+    Object? id = null,
+    Object? name = null,
+    Object? title = null,
     Object? description = freezed,
-    Object? removed = freezed,
-    Object? published = freezed,
+    Object? removed = null,
+    Object? published = null,
     Object? updated = freezed,
-    Object? deleted = freezed,
-    Object? nsfw = freezed,
-    Object? actorId = freezed,
-    Object? local = freezed,
+    Object? deleted = null,
+    Object? nsfw = null,
+    Object? actorId = null,
+    Object? local = null,
     Object? icon = freezed,
     Object? banner = freezed,
-    Object? instanceHost = freezed,
+    Object? instanceHost = null,
   }) {
     return _then(_$_CommunitySafe(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      removed: removed == freezed
+      removed: null == removed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
               as bool,
-      published: published == freezed
+      published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      updated: updated == freezed
+      updated: freezed == updated
           ? _value.updated
           : updated // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      deleted: deleted == freezed
+      deleted: null == deleted
           ? _value.deleted
           : deleted // ignore: cast_nullable_to_non_nullable
               as bool,
-      nsfw: nsfw == freezed
+      nsfw: null == nsfw
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
               as bool,
-      actorId: actorId == freezed
+      actorId: null == actorId
           ? _value.actorId
           : actorId // ignore: cast_nullable_to_non_nullable
               as String,
-      local: local == freezed
+      local: null == local
           ? _value.local
           : local // ignore: cast_nullable_to_non_nullable
               as bool,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as String?,
-      banner: banner == freezed
+      banner: freezed == banner
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -6183,45 +6164,47 @@ class _$_CommunitySafe extends _CommunitySafe {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CommunitySafe &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.title, title) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality().equals(other.removed, removed) &&
-            const DeepCollectionEquality().equals(other.published, published) &&
-            const DeepCollectionEquality().equals(other.updated, updated) &&
-            const DeepCollectionEquality().equals(other.deleted, deleted) &&
-            const DeepCollectionEquality().equals(other.nsfw, nsfw) &&
-            const DeepCollectionEquality().equals(other.actorId, actorId) &&
-            const DeepCollectionEquality().equals(other.local, local) &&
-            const DeepCollectionEquality().equals(other.icon, icon) &&
-            const DeepCollectionEquality().equals(other.banner, banner) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.removed, removed) || other.removed == removed) &&
+            (identical(other.published, published) ||
+                other.published == published) &&
+            (identical(other.updated, updated) || other.updated == updated) &&
+            (identical(other.deleted, deleted) || other.deleted == deleted) &&
+            (identical(other.nsfw, nsfw) || other.nsfw == nsfw) &&
+            (identical(other.actorId, actorId) || other.actorId == actorId) &&
+            (identical(other.local, local) || other.local == local) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.banner, banner) || other.banner == banner) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(title),
-      const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(removed),
-      const DeepCollectionEquality().hash(published),
-      const DeepCollectionEquality().hash(updated),
-      const DeepCollectionEquality().hash(deleted),
-      const DeepCollectionEquality().hash(nsfw),
-      const DeepCollectionEquality().hash(actorId),
-      const DeepCollectionEquality().hash(local),
-      const DeepCollectionEquality().hash(icon),
-      const DeepCollectionEquality().hash(banner),
-      const DeepCollectionEquality().hash(instanceHost));
+      id,
+      name,
+      title,
+      description,
+      removed,
+      published,
+      updated,
+      deleted,
+      nsfw,
+      actorId,
+      local,
+      icon,
+      banner,
+      instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CommunitySafeCopyWith<_$_CommunitySafe> get copyWith =>
       __$$_CommunitySafeCopyWithImpl<_$_CommunitySafe>(this, _$identity);
 
@@ -6315,7 +6298,8 @@ mixin _$CommentReport {
 abstract class $CommentReportCopyWith<$Res> {
   factory $CommentReportCopyWith(
           CommentReport value, $Res Function(CommentReport) then) =
-      _$CommentReportCopyWithImpl<$Res>;
+      _$CommentReportCopyWithImpl<$Res, CommentReport>;
+  @useResult
   $Res call(
       {int id,
       int creatorId,
@@ -6330,69 +6314,71 @@ abstract class $CommentReportCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CommentReportCopyWithImpl<$Res>
+class _$CommentReportCopyWithImpl<$Res, $Val extends CommentReport>
     implements $CommentReportCopyWith<$Res> {
   _$CommentReportCopyWithImpl(this._value, this._then);
 
-  final CommentReport _value;
   // ignore: unused_field
-  final $Res Function(CommentReport) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? creatorId = freezed,
-    Object? commentId = freezed,
-    Object? originalCommentText = freezed,
-    Object? reason = freezed,
-    Object? resolved = freezed,
+    Object? id = null,
+    Object? creatorId = null,
+    Object? commentId = null,
+    Object? originalCommentText = null,
+    Object? reason = null,
+    Object? resolved = null,
     Object? resolverId = freezed,
-    Object? published = freezed,
+    Object? published = null,
     Object? updated = freezed,
-    Object? instanceHost = freezed,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      creatorId: creatorId == freezed
+      creatorId: null == creatorId
           ? _value.creatorId
           : creatorId // ignore: cast_nullable_to_non_nullable
               as int,
-      commentId: commentId == freezed
+      commentId: null == commentId
           ? _value.commentId
           : commentId // ignore: cast_nullable_to_non_nullable
               as int,
-      originalCommentText: originalCommentText == freezed
+      originalCommentText: null == originalCommentText
           ? _value.originalCommentText
           : originalCommentText // ignore: cast_nullable_to_non_nullable
               as String,
-      reason: reason == freezed
+      reason: null == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String,
-      resolved: resolved == freezed
+      resolved: null == resolved
           ? _value.resolved
           : resolved // ignore: cast_nullable_to_non_nullable
               as bool,
-      resolverId: resolverId == freezed
+      resolverId: freezed == resolverId
           ? _value.resolverId
           : resolverId // ignore: cast_nullable_to_non_nullable
               as int?,
-      published: published == freezed
+      published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      updated: updated == freezed
+      updated: freezed == updated
           ? _value.updated
           : updated // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -6403,6 +6389,7 @@ abstract class _$$_CommentReportCopyWith<$Res>
           _$_CommentReport value, $Res Function(_$_CommentReport) then) =
       __$$_CommentReportCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       int creatorId,
@@ -6418,66 +6405,64 @@ abstract class _$$_CommentReportCopyWith<$Res>
 
 /// @nodoc
 class __$$_CommentReportCopyWithImpl<$Res>
-    extends _$CommentReportCopyWithImpl<$Res>
+    extends _$CommentReportCopyWithImpl<$Res, _$_CommentReport>
     implements _$$_CommentReportCopyWith<$Res> {
   __$$_CommentReportCopyWithImpl(
       _$_CommentReport _value, $Res Function(_$_CommentReport) _then)
-      : super(_value, (v) => _then(v as _$_CommentReport));
+      : super(_value, _then);
 
-  @override
-  _$_CommentReport get _value => super._value as _$_CommentReport;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? creatorId = freezed,
-    Object? commentId = freezed,
-    Object? originalCommentText = freezed,
-    Object? reason = freezed,
-    Object? resolved = freezed,
+    Object? id = null,
+    Object? creatorId = null,
+    Object? commentId = null,
+    Object? originalCommentText = null,
+    Object? reason = null,
+    Object? resolved = null,
     Object? resolverId = freezed,
-    Object? published = freezed,
+    Object? published = null,
     Object? updated = freezed,
-    Object? instanceHost = freezed,
+    Object? instanceHost = null,
   }) {
     return _then(_$_CommentReport(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      creatorId: creatorId == freezed
+      creatorId: null == creatorId
           ? _value.creatorId
           : creatorId // ignore: cast_nullable_to_non_nullable
               as int,
-      commentId: commentId == freezed
+      commentId: null == commentId
           ? _value.commentId
           : commentId // ignore: cast_nullable_to_non_nullable
               as int,
-      originalCommentText: originalCommentText == freezed
+      originalCommentText: null == originalCommentText
           ? _value.originalCommentText
           : originalCommentText // ignore: cast_nullable_to_non_nullable
               as String,
-      reason: reason == freezed
+      reason: null == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String,
-      resolved: resolved == freezed
+      resolved: null == resolved
           ? _value.resolved
           : resolved // ignore: cast_nullable_to_non_nullable
               as bool,
-      resolverId: resolverId == freezed
+      resolverId: freezed == resolverId
           ? _value.resolverId
           : resolverId // ignore: cast_nullable_to_non_nullable
               as int?,
-      published: published == freezed
+      published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      updated: updated == freezed
+      updated: freezed == updated
           ? _value.updated
           : updated // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -6536,38 +6521,43 @@ class _$_CommentReport extends _CommentReport {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CommentReport &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.creatorId, creatorId) &&
-            const DeepCollectionEquality().equals(other.commentId, commentId) &&
-            const DeepCollectionEquality()
-                .equals(other.originalCommentText, originalCommentText) &&
-            const DeepCollectionEquality().equals(other.reason, reason) &&
-            const DeepCollectionEquality().equals(other.resolved, resolved) &&
-            const DeepCollectionEquality()
-                .equals(other.resolverId, resolverId) &&
-            const DeepCollectionEquality().equals(other.published, published) &&
-            const DeepCollectionEquality().equals(other.updated, updated) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.creatorId, creatorId) ||
+                other.creatorId == creatorId) &&
+            (identical(other.commentId, commentId) ||
+                other.commentId == commentId) &&
+            (identical(other.originalCommentText, originalCommentText) ||
+                other.originalCommentText == originalCommentText) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.resolved, resolved) ||
+                other.resolved == resolved) &&
+            (identical(other.resolverId, resolverId) ||
+                other.resolverId == resolverId) &&
+            (identical(other.published, published) ||
+                other.published == published) &&
+            (identical(other.updated, updated) || other.updated == updated) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(creatorId),
-      const DeepCollectionEquality().hash(commentId),
-      const DeepCollectionEquality().hash(originalCommentText),
-      const DeepCollectionEquality().hash(reason),
-      const DeepCollectionEquality().hash(resolved),
-      const DeepCollectionEquality().hash(resolverId),
-      const DeepCollectionEquality().hash(published),
-      const DeepCollectionEquality().hash(updated),
-      const DeepCollectionEquality().hash(instanceHost));
+      id,
+      creatorId,
+      commentId,
+      originalCommentText,
+      reason,
+      resolved,
+      resolverId,
+      published,
+      updated,
+      instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CommentReportCopyWith<_$_CommentReport> get copyWith =>
       __$$_CommentReportCopyWithImpl<_$_CommentReport>(this, _$identity);
 
@@ -6650,7 +6640,8 @@ mixin _$Comment {
 /// @nodoc
 abstract class $CommentCopyWith<$Res> {
   factory $CommentCopyWith(Comment value, $Res Function(Comment) then) =
-      _$CommentCopyWithImpl<$Res>;
+      _$CommentCopyWithImpl<$Res, Comment>;
+  @useResult
   $Res call(
       {int id,
       int creatorId,
@@ -6668,83 +6659,86 @@ abstract class $CommentCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CommentCopyWithImpl<$Res> implements $CommentCopyWith<$Res> {
+class _$CommentCopyWithImpl<$Res, $Val extends Comment>
+    implements $CommentCopyWith<$Res> {
   _$CommentCopyWithImpl(this._value, this._then);
 
-  final Comment _value;
   // ignore: unused_field
-  final $Res Function(Comment) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? creatorId = freezed,
-    Object? postId = freezed,
+    Object? id = null,
+    Object? creatorId = null,
+    Object? postId = null,
     Object? parentId = freezed,
-    Object? content = freezed,
-    Object? removed = freezed,
-    Object? read = freezed,
-    Object? published = freezed,
+    Object? content = null,
+    Object? removed = null,
+    Object? read = null,
+    Object? published = null,
     Object? updated = freezed,
-    Object? deleted = freezed,
-    Object? apId = freezed,
-    Object? local = freezed,
-    Object? instanceHost = freezed,
+    Object? deleted = null,
+    Object? apId = null,
+    Object? local = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      creatorId: creatorId == freezed
+      creatorId: null == creatorId
           ? _value.creatorId
           : creatorId // ignore: cast_nullable_to_non_nullable
               as int,
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      parentId: parentId == freezed
+      parentId: freezed == parentId
           ? _value.parentId
           : parentId // ignore: cast_nullable_to_non_nullable
               as int?,
-      content: content == freezed
+      content: null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as String,
-      removed: removed == freezed
+      removed: null == removed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
               as bool,
-      read: read == freezed
+      read: null == read
           ? _value.read
           : read // ignore: cast_nullable_to_non_nullable
               as bool,
-      published: published == freezed
+      published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      updated: updated == freezed
+      updated: freezed == updated
           ? _value.updated
           : updated // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      deleted: deleted == freezed
+      deleted: null == deleted
           ? _value.deleted
           : deleted // ignore: cast_nullable_to_non_nullable
               as bool,
-      apId: apId == freezed
+      apId: null == apId
           ? _value.apId
           : apId // ignore: cast_nullable_to_non_nullable
               as String,
-      local: local == freezed
+      local: null == local
           ? _value.local
           : local // ignore: cast_nullable_to_non_nullable
               as bool,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -6754,6 +6748,7 @@ abstract class _$$_CommentCopyWith<$Res> implements $CommentCopyWith<$Res> {
           _$_Comment value, $Res Function(_$_Comment) then) =
       __$$_CommentCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       int creatorId,
@@ -6771,80 +6766,79 @@ abstract class _$$_CommentCopyWith<$Res> implements $CommentCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_CommentCopyWithImpl<$Res> extends _$CommentCopyWithImpl<$Res>
+class __$$_CommentCopyWithImpl<$Res>
+    extends _$CommentCopyWithImpl<$Res, _$_Comment>
     implements _$$_CommentCopyWith<$Res> {
   __$$_CommentCopyWithImpl(_$_Comment _value, $Res Function(_$_Comment) _then)
-      : super(_value, (v) => _then(v as _$_Comment));
+      : super(_value, _then);
 
-  @override
-  _$_Comment get _value => super._value as _$_Comment;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? creatorId = freezed,
-    Object? postId = freezed,
+    Object? id = null,
+    Object? creatorId = null,
+    Object? postId = null,
     Object? parentId = freezed,
-    Object? content = freezed,
-    Object? removed = freezed,
-    Object? read = freezed,
-    Object? published = freezed,
+    Object? content = null,
+    Object? removed = null,
+    Object? read = null,
+    Object? published = null,
     Object? updated = freezed,
-    Object? deleted = freezed,
-    Object? apId = freezed,
-    Object? local = freezed,
-    Object? instanceHost = freezed,
+    Object? deleted = null,
+    Object? apId = null,
+    Object? local = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_Comment(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      creatorId: creatorId == freezed
+      creatorId: null == creatorId
           ? _value.creatorId
           : creatorId // ignore: cast_nullable_to_non_nullable
               as int,
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      parentId: parentId == freezed
+      parentId: freezed == parentId
           ? _value.parentId
           : parentId // ignore: cast_nullable_to_non_nullable
               as int?,
-      content: content == freezed
+      content: null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as String,
-      removed: removed == freezed
+      removed: null == removed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
               as bool,
-      read: read == freezed
+      read: null == read
           ? _value.read
           : read // ignore: cast_nullable_to_non_nullable
               as bool,
-      published: published == freezed
+      published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      updated: updated == freezed
+      updated: freezed == updated
           ? _value.updated
           : updated // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      deleted: deleted == freezed
+      deleted: null == deleted
           ? _value.deleted
           : deleted // ignore: cast_nullable_to_non_nullable
               as bool,
-      apId: apId == freezed
+      apId: null == apId
           ? _value.apId
           : apId // ignore: cast_nullable_to_non_nullable
               as String,
-      local: local == freezed
+      local: null == local
           ? _value.local
           : local // ignore: cast_nullable_to_non_nullable
               as bool,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -6912,42 +6906,46 @@ class _$_Comment extends _Comment {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Comment &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.creatorId, creatorId) &&
-            const DeepCollectionEquality().equals(other.postId, postId) &&
-            const DeepCollectionEquality().equals(other.parentId, parentId) &&
-            const DeepCollectionEquality().equals(other.content, content) &&
-            const DeepCollectionEquality().equals(other.removed, removed) &&
-            const DeepCollectionEquality().equals(other.read, read) &&
-            const DeepCollectionEquality().equals(other.published, published) &&
-            const DeepCollectionEquality().equals(other.updated, updated) &&
-            const DeepCollectionEquality().equals(other.deleted, deleted) &&
-            const DeepCollectionEquality().equals(other.apId, apId) &&
-            const DeepCollectionEquality().equals(other.local, local) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.creatorId, creatorId) ||
+                other.creatorId == creatorId) &&
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.parentId, parentId) ||
+                other.parentId == parentId) &&
+            (identical(other.content, content) || other.content == content) &&
+            (identical(other.removed, removed) || other.removed == removed) &&
+            (identical(other.read, read) || other.read == read) &&
+            (identical(other.published, published) ||
+                other.published == published) &&
+            (identical(other.updated, updated) || other.updated == updated) &&
+            (identical(other.deleted, deleted) || other.deleted == deleted) &&
+            (identical(other.apId, apId) || other.apId == apId) &&
+            (identical(other.local, local) || other.local == local) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(creatorId),
-      const DeepCollectionEquality().hash(postId),
-      const DeepCollectionEquality().hash(parentId),
-      const DeepCollectionEquality().hash(content),
-      const DeepCollectionEquality().hash(removed),
-      const DeepCollectionEquality().hash(read),
-      const DeepCollectionEquality().hash(published),
-      const DeepCollectionEquality().hash(updated),
-      const DeepCollectionEquality().hash(deleted),
-      const DeepCollectionEquality().hash(apId),
-      const DeepCollectionEquality().hash(local),
-      const DeepCollectionEquality().hash(instanceHost));
+      id,
+      creatorId,
+      postId,
+      parentId,
+      content,
+      removed,
+      read,
+      published,
+      updated,
+      deleted,
+      apId,
+      local,
+      instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CommentCopyWith<_$_Comment> get copyWith =>
       __$$_CommentCopyWithImpl<_$_Comment>(this, _$identity);
 
@@ -7033,7 +7031,8 @@ mixin _$PersonMention {
 abstract class $PersonMentionCopyWith<$Res> {
   factory $PersonMentionCopyWith(
           PersonMention value, $Res Function(PersonMention) then) =
-      _$PersonMentionCopyWithImpl<$Res>;
+      _$PersonMentionCopyWithImpl<$Res, PersonMention>;
+  @useResult
   $Res call(
       {int id,
       int recipientId,
@@ -7044,49 +7043,51 @@ abstract class $PersonMentionCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PersonMentionCopyWithImpl<$Res>
+class _$PersonMentionCopyWithImpl<$Res, $Val extends PersonMention>
     implements $PersonMentionCopyWith<$Res> {
   _$PersonMentionCopyWithImpl(this._value, this._then);
 
-  final PersonMention _value;
   // ignore: unused_field
-  final $Res Function(PersonMention) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? recipientId = freezed,
-    Object? commentId = freezed,
-    Object? read = freezed,
-    Object? published = freezed,
-    Object? instanceHost = freezed,
+    Object? id = null,
+    Object? recipientId = null,
+    Object? commentId = null,
+    Object? read = null,
+    Object? published = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      recipientId: recipientId == freezed
+      recipientId: null == recipientId
           ? _value.recipientId
           : recipientId // ignore: cast_nullable_to_non_nullable
               as int,
-      commentId: commentId == freezed
+      commentId: null == commentId
           ? _value.commentId
           : commentId // ignore: cast_nullable_to_non_nullable
               as int,
-      read: read == freezed
+      read: null == read
           ? _value.read
           : read // ignore: cast_nullable_to_non_nullable
               as bool,
-      published: published == freezed
+      published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -7097,6 +7098,7 @@ abstract class _$$_PersonMentionCopyWith<$Res>
           _$_PersonMention value, $Res Function(_$_PersonMention) then) =
       __$$_PersonMentionCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       int recipientId,
@@ -7108,46 +7110,44 @@ abstract class _$$_PersonMentionCopyWith<$Res>
 
 /// @nodoc
 class __$$_PersonMentionCopyWithImpl<$Res>
-    extends _$PersonMentionCopyWithImpl<$Res>
+    extends _$PersonMentionCopyWithImpl<$Res, _$_PersonMention>
     implements _$$_PersonMentionCopyWith<$Res> {
   __$$_PersonMentionCopyWithImpl(
       _$_PersonMention _value, $Res Function(_$_PersonMention) _then)
-      : super(_value, (v) => _then(v as _$_PersonMention));
+      : super(_value, _then);
 
-  @override
-  _$_PersonMention get _value => super._value as _$_PersonMention;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? recipientId = freezed,
-    Object? commentId = freezed,
-    Object? read = freezed,
-    Object? published = freezed,
-    Object? instanceHost = freezed,
+    Object? id = null,
+    Object? recipientId = null,
+    Object? commentId = null,
+    Object? read = null,
+    Object? published = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_PersonMention(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      recipientId: recipientId == freezed
+      recipientId: null == recipientId
           ? _value.recipientId
           : recipientId // ignore: cast_nullable_to_non_nullable
               as int,
-      commentId: commentId == freezed
+      commentId: null == commentId
           ? _value.commentId
           : commentId // ignore: cast_nullable_to_non_nullable
               as int,
-      read: read == freezed
+      read: null == read
           ? _value.read
           : read // ignore: cast_nullable_to_non_nullable
               as bool,
-      published: published == freezed
+      published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -7194,29 +7194,26 @@ class _$_PersonMention extends _PersonMention {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PersonMention &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other.recipientId, recipientId) &&
-            const DeepCollectionEquality().equals(other.commentId, commentId) &&
-            const DeepCollectionEquality().equals(other.read, read) &&
-            const DeepCollectionEquality().equals(other.published, published) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.recipientId, recipientId) ||
+                other.recipientId == recipientId) &&
+            (identical(other.commentId, commentId) ||
+                other.commentId == commentId) &&
+            (identical(other.read, read) || other.read == read) &&
+            (identical(other.published, published) ||
+                other.published == published) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(recipientId),
-      const DeepCollectionEquality().hash(commentId),
-      const DeepCollectionEquality().hash(read),
-      const DeepCollectionEquality().hash(published),
-      const DeepCollectionEquality().hash(instanceHost));
+      runtimeType, id, recipientId, commentId, read, published, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PersonMentionCopyWith<_$_PersonMention> get copyWith =>
       __$$_PersonMentionCopyWithImpl<_$_PersonMention>(this, _$identity);
 
@@ -7284,7 +7281,8 @@ mixin _$RegistrationApplication {
 abstract class $RegistrationApplicationCopyWith<$Res> {
   factory $RegistrationApplicationCopyWith(RegistrationApplication value,
           $Res Function(RegistrationApplication) then) =
-      _$RegistrationApplicationCopyWithImpl<$Res>;
+      _$RegistrationApplicationCopyWithImpl<$Res, RegistrationApplication>;
+  @useResult
   $Res call(
       {int id,
       int localUserId,
@@ -7296,54 +7294,57 @@ abstract class $RegistrationApplicationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$RegistrationApplicationCopyWithImpl<$Res>
+class _$RegistrationApplicationCopyWithImpl<$Res,
+        $Val extends RegistrationApplication>
     implements $RegistrationApplicationCopyWith<$Res> {
   _$RegistrationApplicationCopyWithImpl(this._value, this._then);
 
-  final RegistrationApplication _value;
   // ignore: unused_field
-  final $Res Function(RegistrationApplication) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? localUserId = freezed,
-    Object? answer = freezed,
+    Object? id = null,
+    Object? localUserId = null,
+    Object? answer = null,
     Object? adminId = freezed,
     Object? denyReason = freezed,
-    Object? published = freezed,
-    Object? instanceHost = freezed,
+    Object? published = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      localUserId: localUserId == freezed
+      localUserId: null == localUserId
           ? _value.localUserId
           : localUserId // ignore: cast_nullable_to_non_nullable
               as int,
-      answer: answer == freezed
+      answer: null == answer
           ? _value.answer
           : answer // ignore: cast_nullable_to_non_nullable
               as String,
-      adminId: adminId == freezed
+      adminId: freezed == adminId
           ? _value.adminId
           : adminId // ignore: cast_nullable_to_non_nullable
               as int?,
-      denyReason: denyReason == freezed
+      denyReason: freezed == denyReason
           ? _value.denyReason
           : denyReason // ignore: cast_nullable_to_non_nullable
               as String?,
-      published: published == freezed
+      published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -7354,6 +7355,7 @@ abstract class _$$_RegistrationApplicationCopyWith<$Res>
           $Res Function(_$_RegistrationApplication) then) =
       __$$_RegistrationApplicationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       int localUserId,
@@ -7366,52 +7368,50 @@ abstract class _$$_RegistrationApplicationCopyWith<$Res>
 
 /// @nodoc
 class __$$_RegistrationApplicationCopyWithImpl<$Res>
-    extends _$RegistrationApplicationCopyWithImpl<$Res>
+    extends _$RegistrationApplicationCopyWithImpl<$Res,
+        _$_RegistrationApplication>
     implements _$$_RegistrationApplicationCopyWith<$Res> {
   __$$_RegistrationApplicationCopyWithImpl(_$_RegistrationApplication _value,
       $Res Function(_$_RegistrationApplication) _then)
-      : super(_value, (v) => _then(v as _$_RegistrationApplication));
+      : super(_value, _then);
 
-  @override
-  _$_RegistrationApplication get _value =>
-      super._value as _$_RegistrationApplication;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? localUserId = freezed,
-    Object? answer = freezed,
+    Object? id = null,
+    Object? localUserId = null,
+    Object? answer = null,
     Object? adminId = freezed,
     Object? denyReason = freezed,
-    Object? published = freezed,
-    Object? instanceHost = freezed,
+    Object? published = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_RegistrationApplication(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      localUserId: localUserId == freezed
+      localUserId: null == localUserId
           ? _value.localUserId
           : localUserId // ignore: cast_nullable_to_non_nullable
               as int,
-      answer: answer == freezed
+      answer: null == answer
           ? _value.answer
           : answer // ignore: cast_nullable_to_non_nullable
               as String,
-      adminId: adminId == freezed
+      adminId: freezed == adminId
           ? _value.adminId
           : adminId // ignore: cast_nullable_to_non_nullable
               as int?,
-      denyReason: denyReason == freezed
+      denyReason: freezed == denyReason
           ? _value.denyReason
           : denyReason // ignore: cast_nullable_to_non_nullable
               as String?,
-      published: published == freezed
+      published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -7461,32 +7461,27 @@ class _$_RegistrationApplication extends _RegistrationApplication {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_RegistrationApplication &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other.localUserId, localUserId) &&
-            const DeepCollectionEquality().equals(other.answer, answer) &&
-            const DeepCollectionEquality().equals(other.adminId, adminId) &&
-            const DeepCollectionEquality()
-                .equals(other.denyReason, denyReason) &&
-            const DeepCollectionEquality().equals(other.published, published) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.localUserId, localUserId) ||
+                other.localUserId == localUserId) &&
+            (identical(other.answer, answer) || other.answer == answer) &&
+            (identical(other.adminId, adminId) || other.adminId == adminId) &&
+            (identical(other.denyReason, denyReason) ||
+                other.denyReason == denyReason) &&
+            (identical(other.published, published) ||
+                other.published == published) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(localUserId),
-      const DeepCollectionEquality().hash(answer),
-      const DeepCollectionEquality().hash(adminId),
-      const DeepCollectionEquality().hash(denyReason),
-      const DeepCollectionEquality().hash(published),
-      const DeepCollectionEquality().hash(instanceHost));
+  int get hashCode => Object.hash(runtimeType, id, localUserId, answer, adminId,
+      denyReason, published, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_RegistrationApplicationCopyWith<_$_RegistrationApplication>
       get copyWith =>
           __$$_RegistrationApplicationCopyWithImpl<_$_RegistrationApplication>(

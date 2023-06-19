@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'community.dart';
 
@@ -34,18 +34,22 @@ mixin _$GetCommunity {
 abstract class $GetCommunityCopyWith<$Res> {
   factory $GetCommunityCopyWith(
           GetCommunity value, $Res Function(GetCommunity) then) =
-      _$GetCommunityCopyWithImpl<$Res>;
+      _$GetCommunityCopyWithImpl<$Res, GetCommunity>;
+  @useResult
   $Res call({int? id, String? name, String? auth});
 }
 
 /// @nodoc
-class _$GetCommunityCopyWithImpl<$Res> implements $GetCommunityCopyWith<$Res> {
+class _$GetCommunityCopyWithImpl<$Res, $Val extends GetCommunity>
+    implements $GetCommunityCopyWith<$Res> {
   _$GetCommunityCopyWithImpl(this._value, this._then);
 
-  final GetCommunity _value;
   // ignore: unused_field
-  final $Res Function(GetCommunity) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -53,19 +57,19 @@ class _$GetCommunityCopyWithImpl<$Res> implements $GetCommunityCopyWith<$Res> {
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      auth: auth == freezed
+      auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -76,20 +80,19 @@ abstract class _$$_GetCommunityCopyWith<$Res>
           _$_GetCommunity value, $Res Function(_$_GetCommunity) then) =
       __$$_GetCommunityCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int? id, String? name, String? auth});
 }
 
 /// @nodoc
 class __$$_GetCommunityCopyWithImpl<$Res>
-    extends _$GetCommunityCopyWithImpl<$Res>
+    extends _$GetCommunityCopyWithImpl<$Res, _$_GetCommunity>
     implements _$$_GetCommunityCopyWith<$Res> {
   __$$_GetCommunityCopyWithImpl(
       _$_GetCommunity _value, $Res Function(_$_GetCommunity) _then)
-      : super(_value, (v) => _then(v as _$_GetCommunity));
+      : super(_value, _then);
 
-  @override
-  _$_GetCommunity get _value => super._value as _$_GetCommunity;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -97,15 +100,15 @@ class __$$_GetCommunityCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_$_GetCommunity(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      auth: auth == freezed
+      auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -139,21 +142,18 @@ class _$_GetCommunity extends _GetCommunity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_GetCommunity &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, id, name, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_GetCommunityCopyWith<_$_GetCommunity> get copyWith =>
       __$$_GetCommunityCopyWithImpl<_$_GetCommunity>(this, _$identity);
 
@@ -211,7 +211,8 @@ mixin _$CreateCommunity {
 abstract class $CreateCommunityCopyWith<$Res> {
   factory $CreateCommunityCopyWith(
           CreateCommunity value, $Res Function(CreateCommunity) then) =
-      _$CreateCommunityCopyWithImpl<$Res>;
+      _$CreateCommunityCopyWithImpl<$Res, CreateCommunity>;
+  @useResult
   $Res call(
       {String name,
       String title,
@@ -223,54 +224,56 @@ abstract class $CreateCommunityCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CreateCommunityCopyWithImpl<$Res>
+class _$CreateCommunityCopyWithImpl<$Res, $Val extends CreateCommunity>
     implements $CreateCommunityCopyWith<$Res> {
   _$CreateCommunityCopyWithImpl(this._value, this._then);
 
-  final CreateCommunity _value;
   // ignore: unused_field
-  final $Res Function(CreateCommunity) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? title = freezed,
+    Object? name = null,
+    Object? title = null,
     Object? description = freezed,
     Object? icon = freezed,
     Object? banner = freezed,
     Object? nsfw = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as String?,
-      banner: banner == freezed
+      banner: freezed == banner
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
-      nsfw: nsfw == freezed
+      nsfw: freezed == nsfw
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -281,6 +284,7 @@ abstract class _$$_CreateCommunityCopyWith<$Res>
           _$_CreateCommunity value, $Res Function(_$_CreateCommunity) then) =
       __$$_CreateCommunityCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String name,
       String title,
@@ -293,51 +297,49 @@ abstract class _$$_CreateCommunityCopyWith<$Res>
 
 /// @nodoc
 class __$$_CreateCommunityCopyWithImpl<$Res>
-    extends _$CreateCommunityCopyWithImpl<$Res>
+    extends _$CreateCommunityCopyWithImpl<$Res, _$_CreateCommunity>
     implements _$$_CreateCommunityCopyWith<$Res> {
   __$$_CreateCommunityCopyWithImpl(
       _$_CreateCommunity _value, $Res Function(_$_CreateCommunity) _then)
-      : super(_value, (v) => _then(v as _$_CreateCommunity));
+      : super(_value, _then);
 
-  @override
-  _$_CreateCommunity get _value => super._value as _$_CreateCommunity;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? title = freezed,
+    Object? name = null,
+    Object? title = null,
     Object? description = freezed,
     Object? icon = freezed,
     Object? banner = freezed,
     Object? nsfw = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_$_CreateCommunity(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as String?,
-      banner: banner == freezed
+      banner: freezed == banner
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
-      nsfw: nsfw == freezed
+      nsfw: freezed == nsfw
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -387,30 +389,24 @@ class _$_CreateCommunity extends _CreateCommunity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CreateCommunity &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.title, title) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality().equals(other.icon, icon) &&
-            const DeepCollectionEquality().equals(other.banner, banner) &&
-            const DeepCollectionEquality().equals(other.nsfw, nsfw) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.banner, banner) || other.banner == banner) &&
+            (identical(other.nsfw, nsfw) || other.nsfw == nsfw) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(title),
-      const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(icon),
-      const DeepCollectionEquality().hash(banner),
-      const DeepCollectionEquality().hash(nsfw),
-      const DeepCollectionEquality().hash(auth));
+      runtimeType, name, title, description, icon, banner, nsfw, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CreateCommunityCopyWith<_$_CreateCommunity> get copyWith =>
       __$$_CreateCommunityCopyWithImpl<_$_CreateCommunity>(this, _$identity);
 
@@ -479,7 +475,8 @@ mixin _$ListCommunities {
 abstract class $ListCommunitiesCopyWith<$Res> {
   factory $ListCommunitiesCopyWith(
           ListCommunities value, $Res Function(ListCommunities) then) =
-      _$ListCommunitiesCopyWithImpl<$Res>;
+      _$ListCommunitiesCopyWithImpl<$Res, ListCommunities>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'type_') PostListingType? type,
       SortType? sort,
@@ -489,14 +486,16 @@ abstract class $ListCommunitiesCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ListCommunitiesCopyWithImpl<$Res>
+class _$ListCommunitiesCopyWithImpl<$Res, $Val extends ListCommunities>
     implements $ListCommunitiesCopyWith<$Res> {
   _$ListCommunitiesCopyWithImpl(this._value, this._then);
 
-  final ListCommunities _value;
   // ignore: unused_field
-  final $Res Function(ListCommunities) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? type = freezed,
@@ -506,27 +505,27 @@ class _$ListCommunitiesCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as PostListingType?,
-      sort: sort == freezed
+      sort: freezed == sort
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
               as SortType?,
-      page: page == freezed
+      page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as int?,
-      limit: limit == freezed
+      limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      auth: auth == freezed
+      auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -537,6 +536,7 @@ abstract class _$$_ListCommunitiesCopyWith<$Res>
           _$_ListCommunities value, $Res Function(_$_ListCommunities) then) =
       __$$_ListCommunitiesCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'type_') PostListingType? type,
       SortType? sort,
@@ -547,15 +547,13 @@ abstract class _$$_ListCommunitiesCopyWith<$Res>
 
 /// @nodoc
 class __$$_ListCommunitiesCopyWithImpl<$Res>
-    extends _$ListCommunitiesCopyWithImpl<$Res>
+    extends _$ListCommunitiesCopyWithImpl<$Res, _$_ListCommunities>
     implements _$$_ListCommunitiesCopyWith<$Res> {
   __$$_ListCommunitiesCopyWithImpl(
       _$_ListCommunities _value, $Res Function(_$_ListCommunities) _then)
-      : super(_value, (v) => _then(v as _$_ListCommunities));
+      : super(_value, _then);
 
-  @override
-  _$_ListCommunities get _value => super._value as _$_ListCommunities;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? type = freezed,
@@ -565,23 +563,23 @@ class __$$_ListCommunitiesCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_$_ListCommunities(
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as PostListingType?,
-      sort: sort == freezed
+      sort: freezed == sort
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
               as SortType?,
-      page: page == freezed
+      page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as int?,
-      limit: limit == freezed
+      limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      auth: auth == freezed
+      auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -626,25 +624,20 @@ class _$_ListCommunities extends _ListCommunities {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ListCommunities &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.sort, sort) &&
-            const DeepCollectionEquality().equals(other.page, page) &&
-            const DeepCollectionEquality().equals(other.limit, limit) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.sort, sort) || other.sort == sort) &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(sort),
-      const DeepCollectionEquality().hash(page),
-      const DeepCollectionEquality().hash(limit),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, type, sort, page, limit, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ListCommunitiesCopyWith<_$_ListCommunities> get copyWith =>
       __$$_ListCommunitiesCopyWithImpl<_$_ListCommunities>(this, _$identity);
 
@@ -709,7 +702,8 @@ mixin _$BanFromCommunity {
 abstract class $BanFromCommunityCopyWith<$Res> {
   factory $BanFromCommunityCopyWith(
           BanFromCommunity value, $Res Function(BanFromCommunity) then) =
-      _$BanFromCommunityCopyWithImpl<$Res>;
+      _$BanFromCommunityCopyWithImpl<$Res, BanFromCommunity>;
+  @useResult
   $Res call(
       {int communityId,
       int personId,
@@ -721,54 +715,56 @@ abstract class $BanFromCommunityCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$BanFromCommunityCopyWithImpl<$Res>
+class _$BanFromCommunityCopyWithImpl<$Res, $Val extends BanFromCommunity>
     implements $BanFromCommunityCopyWith<$Res> {
   _$BanFromCommunityCopyWithImpl(this._value, this._then);
 
-  final BanFromCommunity _value;
   // ignore: unused_field
-  final $Res Function(BanFromCommunity) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? communityId = freezed,
-    Object? personId = freezed,
-    Object? ban = freezed,
+    Object? communityId = null,
+    Object? personId = null,
+    Object? ban = null,
     Object? removeData = freezed,
     Object? reason = freezed,
     Object? expires = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      personId: personId == freezed
+      personId: null == personId
           ? _value.personId
           : personId // ignore: cast_nullable_to_non_nullable
               as int,
-      ban: ban == freezed
+      ban: null == ban
           ? _value.ban
           : ban // ignore: cast_nullable_to_non_nullable
               as bool,
-      removeData: removeData == freezed
+      removeData: freezed == removeData
           ? _value.removeData
           : removeData // ignore: cast_nullable_to_non_nullable
               as bool?,
-      reason: reason == freezed
+      reason: freezed == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String?,
-      expires: expires == freezed
+      expires: freezed == expires
           ? _value.expires
           : expires // ignore: cast_nullable_to_non_nullable
               as int?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -779,6 +775,7 @@ abstract class _$$_BanFromCommunityCopyWith<$Res>
           _$_BanFromCommunity value, $Res Function(_$_BanFromCommunity) then) =
       __$$_BanFromCommunityCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int communityId,
       int personId,
@@ -791,51 +788,49 @@ abstract class _$$_BanFromCommunityCopyWith<$Res>
 
 /// @nodoc
 class __$$_BanFromCommunityCopyWithImpl<$Res>
-    extends _$BanFromCommunityCopyWithImpl<$Res>
+    extends _$BanFromCommunityCopyWithImpl<$Res, _$_BanFromCommunity>
     implements _$$_BanFromCommunityCopyWith<$Res> {
   __$$_BanFromCommunityCopyWithImpl(
       _$_BanFromCommunity _value, $Res Function(_$_BanFromCommunity) _then)
-      : super(_value, (v) => _then(v as _$_BanFromCommunity));
+      : super(_value, _then);
 
-  @override
-  _$_BanFromCommunity get _value => super._value as _$_BanFromCommunity;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? communityId = freezed,
-    Object? personId = freezed,
-    Object? ban = freezed,
+    Object? communityId = null,
+    Object? personId = null,
+    Object? ban = null,
     Object? removeData = freezed,
     Object? reason = freezed,
     Object? expires = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_$_BanFromCommunity(
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      personId: personId == freezed
+      personId: null == personId
           ? _value.personId
           : personId // ignore: cast_nullable_to_non_nullable
               as int,
-      ban: ban == freezed
+      ban: null == ban
           ? _value.ban
           : ban // ignore: cast_nullable_to_non_nullable
               as bool,
-      removeData: removeData == freezed
+      removeData: freezed == removeData
           ? _value.removeData
           : removeData // ignore: cast_nullable_to_non_nullable
               as bool?,
-      reason: reason == freezed
+      reason: freezed == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String?,
-      expires: expires == freezed
+      expires: freezed == expires
           ? _value.expires
           : expires // ignore: cast_nullable_to_non_nullable
               as int?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -885,31 +880,26 @@ class _$_BanFromCommunity extends _BanFromCommunity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_BanFromCommunity &&
-            const DeepCollectionEquality()
-                .equals(other.communityId, communityId) &&
-            const DeepCollectionEquality().equals(other.personId, personId) &&
-            const DeepCollectionEquality().equals(other.ban, ban) &&
-            const DeepCollectionEquality()
-                .equals(other.removeData, removeData) &&
-            const DeepCollectionEquality().equals(other.reason, reason) &&
-            const DeepCollectionEquality().equals(other.expires, expires) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.personId, personId) ||
+                other.personId == personId) &&
+            (identical(other.ban, ban) || other.ban == ban) &&
+            (identical(other.removeData, removeData) ||
+                other.removeData == removeData) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.expires, expires) || other.expires == expires) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(communityId),
-      const DeepCollectionEquality().hash(personId),
-      const DeepCollectionEquality().hash(ban),
-      const DeepCollectionEquality().hash(removeData),
-      const DeepCollectionEquality().hash(reason),
-      const DeepCollectionEquality().hash(expires),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, communityId, personId, ban,
+      removeData, reason, expires, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_BanFromCommunityCopyWith<_$_BanFromCommunity> get copyWith =>
       __$$_BanFromCommunityCopyWithImpl<_$_BanFromCommunity>(this, _$identity);
 
@@ -976,44 +966,47 @@ mixin _$AddModToCommunity {
 abstract class $AddModToCommunityCopyWith<$Res> {
   factory $AddModToCommunityCopyWith(
           AddModToCommunity value, $Res Function(AddModToCommunity) then) =
-      _$AddModToCommunityCopyWithImpl<$Res>;
+      _$AddModToCommunityCopyWithImpl<$Res, AddModToCommunity>;
+  @useResult
   $Res call({int communityId, int personId, bool added, String auth});
 }
 
 /// @nodoc
-class _$AddModToCommunityCopyWithImpl<$Res>
+class _$AddModToCommunityCopyWithImpl<$Res, $Val extends AddModToCommunity>
     implements $AddModToCommunityCopyWith<$Res> {
   _$AddModToCommunityCopyWithImpl(this._value, this._then);
 
-  final AddModToCommunity _value;
   // ignore: unused_field
-  final $Res Function(AddModToCommunity) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? communityId = freezed,
-    Object? personId = freezed,
-    Object? added = freezed,
-    Object? auth = freezed,
+    Object? communityId = null,
+    Object? personId = null,
+    Object? added = null,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      personId: personId == freezed
+      personId: null == personId
           ? _value.personId
           : personId // ignore: cast_nullable_to_non_nullable
               as int,
-      added: added == freezed
+      added: null == added
           ? _value.added
           : added // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1024,41 +1017,40 @@ abstract class _$$_AddModToCommunityCopyWith<$Res>
           $Res Function(_$_AddModToCommunity) then) =
       __$$_AddModToCommunityCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int communityId, int personId, bool added, String auth});
 }
 
 /// @nodoc
 class __$$_AddModToCommunityCopyWithImpl<$Res>
-    extends _$AddModToCommunityCopyWithImpl<$Res>
+    extends _$AddModToCommunityCopyWithImpl<$Res, _$_AddModToCommunity>
     implements _$$_AddModToCommunityCopyWith<$Res> {
   __$$_AddModToCommunityCopyWithImpl(
       _$_AddModToCommunity _value, $Res Function(_$_AddModToCommunity) _then)
-      : super(_value, (v) => _then(v as _$_AddModToCommunity));
+      : super(_value, _then);
 
-  @override
-  _$_AddModToCommunity get _value => super._value as _$_AddModToCommunity;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? communityId = freezed,
-    Object? personId = freezed,
-    Object? added = freezed,
-    Object? auth = freezed,
+    Object? communityId = null,
+    Object? personId = null,
+    Object? added = null,
+    Object? auth = null,
   }) {
     return _then(_$_AddModToCommunity(
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      personId: personId == freezed
+      personId: null == personId
           ? _value.personId
           : personId // ignore: cast_nullable_to_non_nullable
               as int,
-      added: added == freezed
+      added: null == added
           ? _value.added
           : added // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1099,24 +1091,22 @@ class _$_AddModToCommunity extends _AddModToCommunity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_AddModToCommunity &&
-            const DeepCollectionEquality()
-                .equals(other.communityId, communityId) &&
-            const DeepCollectionEquality().equals(other.personId, personId) &&
-            const DeepCollectionEquality().equals(other.added, added) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.personId, personId) ||
+                other.personId == personId) &&
+            (identical(other.added, added) || other.added == added) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(communityId),
-      const DeepCollectionEquality().hash(personId),
-      const DeepCollectionEquality().hash(added),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode =>
+      Object.hash(runtimeType, communityId, personId, added, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_AddModToCommunityCopyWith<_$_AddModToCommunity> get copyWith =>
       __$$_AddModToCommunityCopyWithImpl<_$_AddModToCommunity>(
           this, _$identity);
@@ -1178,7 +1168,8 @@ mixin _$EditCommunity {
 abstract class $EditCommunityCopyWith<$Res> {
   factory $EditCommunityCopyWith(
           EditCommunity value, $Res Function(EditCommunity) then) =
-      _$EditCommunityCopyWithImpl<$Res>;
+      _$EditCommunityCopyWithImpl<$Res, EditCommunity>;
+  @useResult
   $Res call(
       {int communityId,
       String? title,
@@ -1190,54 +1181,56 @@ abstract class $EditCommunityCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$EditCommunityCopyWithImpl<$Res>
+class _$EditCommunityCopyWithImpl<$Res, $Val extends EditCommunity>
     implements $EditCommunityCopyWith<$Res> {
   _$EditCommunityCopyWithImpl(this._value, this._then);
 
-  final EditCommunity _value;
   // ignore: unused_field
-  final $Res Function(EditCommunity) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? communityId = freezed,
+    Object? communityId = null,
     Object? title = freezed,
     Object? description = freezed,
     Object? icon = freezed,
     Object? banner = freezed,
     Object? nsfw = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as String?,
-      banner: banner == freezed
+      banner: freezed == banner
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
-      nsfw: nsfw == freezed
+      nsfw: freezed == nsfw
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1248,6 +1241,7 @@ abstract class _$$_EditCommunityCopyWith<$Res>
           _$_EditCommunity value, $Res Function(_$_EditCommunity) then) =
       __$$_EditCommunityCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int communityId,
       String? title,
@@ -1260,51 +1254,49 @@ abstract class _$$_EditCommunityCopyWith<$Res>
 
 /// @nodoc
 class __$$_EditCommunityCopyWithImpl<$Res>
-    extends _$EditCommunityCopyWithImpl<$Res>
+    extends _$EditCommunityCopyWithImpl<$Res, _$_EditCommunity>
     implements _$$_EditCommunityCopyWith<$Res> {
   __$$_EditCommunityCopyWithImpl(
       _$_EditCommunity _value, $Res Function(_$_EditCommunity) _then)
-      : super(_value, (v) => _then(v as _$_EditCommunity));
+      : super(_value, _then);
 
-  @override
-  _$_EditCommunity get _value => super._value as _$_EditCommunity;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? communityId = freezed,
+    Object? communityId = null,
     Object? title = freezed,
     Object? description = freezed,
     Object? icon = freezed,
     Object? banner = freezed,
     Object? nsfw = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_$_EditCommunity(
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as String?,
-      banner: banner == freezed
+      banner: freezed == banner
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
-      nsfw: nsfw == freezed
+      nsfw: freezed == nsfw
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1354,31 +1346,25 @@ class _$_EditCommunity extends _EditCommunity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_EditCommunity &&
-            const DeepCollectionEquality()
-                .equals(other.communityId, communityId) &&
-            const DeepCollectionEquality().equals(other.title, title) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality().equals(other.icon, icon) &&
-            const DeepCollectionEquality().equals(other.banner, banner) &&
-            const DeepCollectionEquality().equals(other.nsfw, nsfw) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.banner, banner) || other.banner == banner) &&
+            (identical(other.nsfw, nsfw) || other.nsfw == nsfw) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(communityId),
-      const DeepCollectionEquality().hash(title),
-      const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(icon),
-      const DeepCollectionEquality().hash(banner),
-      const DeepCollectionEquality().hash(nsfw),
-      const DeepCollectionEquality().hash(auth));
+      runtimeType, communityId, title, description, icon, banner, nsfw, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_EditCommunityCopyWith<_$_EditCommunity> get copyWith =>
       __$$_EditCommunityCopyWithImpl<_$_EditCommunity>(this, _$identity);
 
@@ -1444,39 +1430,42 @@ mixin _$DeleteCommunity {
 abstract class $DeleteCommunityCopyWith<$Res> {
   factory $DeleteCommunityCopyWith(
           DeleteCommunity value, $Res Function(DeleteCommunity) then) =
-      _$DeleteCommunityCopyWithImpl<$Res>;
+      _$DeleteCommunityCopyWithImpl<$Res, DeleteCommunity>;
+  @useResult
   $Res call({int communityId, bool deleted, String auth});
 }
 
 /// @nodoc
-class _$DeleteCommunityCopyWithImpl<$Res>
+class _$DeleteCommunityCopyWithImpl<$Res, $Val extends DeleteCommunity>
     implements $DeleteCommunityCopyWith<$Res> {
   _$DeleteCommunityCopyWithImpl(this._value, this._then);
 
-  final DeleteCommunity _value;
   // ignore: unused_field
-  final $Res Function(DeleteCommunity) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? communityId = freezed,
-    Object? deleted = freezed,
-    Object? auth = freezed,
+    Object? communityId = null,
+    Object? deleted = null,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      deleted: deleted == freezed
+      deleted: null == deleted
           ? _value.deleted
           : deleted // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1487,36 +1476,35 @@ abstract class _$$_DeleteCommunityCopyWith<$Res>
           _$_DeleteCommunity value, $Res Function(_$_DeleteCommunity) then) =
       __$$_DeleteCommunityCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int communityId, bool deleted, String auth});
 }
 
 /// @nodoc
 class __$$_DeleteCommunityCopyWithImpl<$Res>
-    extends _$DeleteCommunityCopyWithImpl<$Res>
+    extends _$DeleteCommunityCopyWithImpl<$Res, _$_DeleteCommunity>
     implements _$$_DeleteCommunityCopyWith<$Res> {
   __$$_DeleteCommunityCopyWithImpl(
       _$_DeleteCommunity _value, $Res Function(_$_DeleteCommunity) _then)
-      : super(_value, (v) => _then(v as _$_DeleteCommunity));
+      : super(_value, _then);
 
-  @override
-  _$_DeleteCommunity get _value => super._value as _$_DeleteCommunity;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? communityId = freezed,
-    Object? deleted = freezed,
-    Object? auth = freezed,
+    Object? communityId = null,
+    Object? deleted = null,
+    Object? auth = null,
   }) {
     return _then(_$_DeleteCommunity(
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      deleted: deleted == freezed
+      deleted: null == deleted
           ? _value.deleted
           : deleted // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1552,22 +1540,19 @@ class _$_DeleteCommunity extends _DeleteCommunity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_DeleteCommunity &&
-            const DeepCollectionEquality()
-                .equals(other.communityId, communityId) &&
-            const DeepCollectionEquality().equals(other.deleted, deleted) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.deleted, deleted) || other.deleted == deleted) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(communityId),
-      const DeepCollectionEquality().hash(deleted),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, communityId, deleted, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_DeleteCommunityCopyWith<_$_DeleteCommunity> get copyWith =>
       __$$_DeleteCommunityCopyWithImpl<_$_DeleteCommunity>(this, _$identity);
 
@@ -1623,7 +1608,8 @@ mixin _$RemoveCommunity {
 abstract class $RemoveCommunityCopyWith<$Res> {
   factory $RemoveCommunityCopyWith(
           RemoveCommunity value, $Res Function(RemoveCommunity) then) =
-      _$RemoveCommunityCopyWithImpl<$Res>;
+      _$RemoveCommunityCopyWithImpl<$Res, RemoveCommunity>;
+  @useResult
   $Res call(
       {int communityId,
       bool removed,
@@ -1633,44 +1619,46 @@ abstract class $RemoveCommunityCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$RemoveCommunityCopyWithImpl<$Res>
+class _$RemoveCommunityCopyWithImpl<$Res, $Val extends RemoveCommunity>
     implements $RemoveCommunityCopyWith<$Res> {
   _$RemoveCommunityCopyWithImpl(this._value, this._then);
 
-  final RemoveCommunity _value;
   // ignore: unused_field
-  final $Res Function(RemoveCommunity) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? communityId = freezed,
-    Object? removed = freezed,
+    Object? communityId = null,
+    Object? removed = null,
     Object? reason = freezed,
     Object? expires = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      removed: removed == freezed
+      removed: null == removed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
               as bool,
-      reason: reason == freezed
+      reason: freezed == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String?,
-      expires: expires == freezed
+      expires: freezed == expires
           ? _value.expires
           : expires // ignore: cast_nullable_to_non_nullable
               as int?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1681,6 +1669,7 @@ abstract class _$$_RemoveCommunityCopyWith<$Res>
           _$_RemoveCommunity value, $Res Function(_$_RemoveCommunity) then) =
       __$$_RemoveCommunityCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int communityId,
       bool removed,
@@ -1691,41 +1680,39 @@ abstract class _$$_RemoveCommunityCopyWith<$Res>
 
 /// @nodoc
 class __$$_RemoveCommunityCopyWithImpl<$Res>
-    extends _$RemoveCommunityCopyWithImpl<$Res>
+    extends _$RemoveCommunityCopyWithImpl<$Res, _$_RemoveCommunity>
     implements _$$_RemoveCommunityCopyWith<$Res> {
   __$$_RemoveCommunityCopyWithImpl(
       _$_RemoveCommunity _value, $Res Function(_$_RemoveCommunity) _then)
-      : super(_value, (v) => _then(v as _$_RemoveCommunity));
+      : super(_value, _then);
 
-  @override
-  _$_RemoveCommunity get _value => super._value as _$_RemoveCommunity;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? communityId = freezed,
-    Object? removed = freezed,
+    Object? communityId = null,
+    Object? removed = null,
     Object? reason = freezed,
     Object? expires = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_$_RemoveCommunity(
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      removed: removed == freezed
+      removed: null == removed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
               as bool,
-      reason: reason == freezed
+      reason: freezed == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String?,
-      expires: expires == freezed
+      expires: freezed == expires
           ? _value.expires
           : expires // ignore: cast_nullable_to_non_nullable
               as int?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1769,26 +1756,22 @@ class _$_RemoveCommunity extends _RemoveCommunity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_RemoveCommunity &&
-            const DeepCollectionEquality()
-                .equals(other.communityId, communityId) &&
-            const DeepCollectionEquality().equals(other.removed, removed) &&
-            const DeepCollectionEquality().equals(other.reason, reason) &&
-            const DeepCollectionEquality().equals(other.expires, expires) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.removed, removed) || other.removed == removed) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.expires, expires) || other.expires == expires) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(communityId),
-      const DeepCollectionEquality().hash(removed),
-      const DeepCollectionEquality().hash(reason),
-      const DeepCollectionEquality().hash(expires),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode =>
+      Object.hash(runtimeType, communityId, removed, reason, expires, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_RemoveCommunityCopyWith<_$_RemoveCommunity> get copyWith =>
       __$$_RemoveCommunityCopyWithImpl<_$_RemoveCommunity>(this, _$identity);
 
@@ -1848,39 +1831,42 @@ mixin _$FollowCommunity {
 abstract class $FollowCommunityCopyWith<$Res> {
   factory $FollowCommunityCopyWith(
           FollowCommunity value, $Res Function(FollowCommunity) then) =
-      _$FollowCommunityCopyWithImpl<$Res>;
+      _$FollowCommunityCopyWithImpl<$Res, FollowCommunity>;
+  @useResult
   $Res call({int communityId, bool follow, String auth});
 }
 
 /// @nodoc
-class _$FollowCommunityCopyWithImpl<$Res>
+class _$FollowCommunityCopyWithImpl<$Res, $Val extends FollowCommunity>
     implements $FollowCommunityCopyWith<$Res> {
   _$FollowCommunityCopyWithImpl(this._value, this._then);
 
-  final FollowCommunity _value;
   // ignore: unused_field
-  final $Res Function(FollowCommunity) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? communityId = freezed,
-    Object? follow = freezed,
-    Object? auth = freezed,
+    Object? communityId = null,
+    Object? follow = null,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      follow: follow == freezed
+      follow: null == follow
           ? _value.follow
           : follow // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1891,36 +1877,35 @@ abstract class _$$_FollowCommunityCopyWith<$Res>
           _$_FollowCommunity value, $Res Function(_$_FollowCommunity) then) =
       __$$_FollowCommunityCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int communityId, bool follow, String auth});
 }
 
 /// @nodoc
 class __$$_FollowCommunityCopyWithImpl<$Res>
-    extends _$FollowCommunityCopyWithImpl<$Res>
+    extends _$FollowCommunityCopyWithImpl<$Res, _$_FollowCommunity>
     implements _$$_FollowCommunityCopyWith<$Res> {
   __$$_FollowCommunityCopyWithImpl(
       _$_FollowCommunity _value, $Res Function(_$_FollowCommunity) _then)
-      : super(_value, (v) => _then(v as _$_FollowCommunity));
+      : super(_value, _then);
 
-  @override
-  _$_FollowCommunity get _value => super._value as _$_FollowCommunity;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? communityId = freezed,
-    Object? follow = freezed,
-    Object? auth = freezed,
+    Object? communityId = null,
+    Object? follow = null,
+    Object? auth = null,
   }) {
     return _then(_$_FollowCommunity(
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      follow: follow == freezed
+      follow: null == follow
           ? _value.follow
           : follow // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1956,22 +1941,19 @@ class _$_FollowCommunity extends _FollowCommunity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_FollowCommunity &&
-            const DeepCollectionEquality()
-                .equals(other.communityId, communityId) &&
-            const DeepCollectionEquality().equals(other.follow, follow) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.follow, follow) || other.follow == follow) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(communityId),
-      const DeepCollectionEquality().hash(follow),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, communityId, follow, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_FollowCommunityCopyWith<_$_FollowCommunity> get copyWith =>
       __$$_FollowCommunityCopyWithImpl<_$_FollowCommunity>(this, _$identity);
 
@@ -2025,39 +2007,42 @@ mixin _$TransferCommunity {
 abstract class $TransferCommunityCopyWith<$Res> {
   factory $TransferCommunityCopyWith(
           TransferCommunity value, $Res Function(TransferCommunity) then) =
-      _$TransferCommunityCopyWithImpl<$Res>;
+      _$TransferCommunityCopyWithImpl<$Res, TransferCommunity>;
+  @useResult
   $Res call({int communityId, int personId, String auth});
 }
 
 /// @nodoc
-class _$TransferCommunityCopyWithImpl<$Res>
+class _$TransferCommunityCopyWithImpl<$Res, $Val extends TransferCommunity>
     implements $TransferCommunityCopyWith<$Res> {
   _$TransferCommunityCopyWithImpl(this._value, this._then);
 
-  final TransferCommunity _value;
   // ignore: unused_field
-  final $Res Function(TransferCommunity) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? communityId = freezed,
-    Object? personId = freezed,
-    Object? auth = freezed,
+    Object? communityId = null,
+    Object? personId = null,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      personId: personId == freezed
+      personId: null == personId
           ? _value.personId
           : personId // ignore: cast_nullable_to_non_nullable
               as int,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -2068,36 +2053,35 @@ abstract class _$$_TransferCommunityCopyWith<$Res>
           $Res Function(_$_TransferCommunity) then) =
       __$$_TransferCommunityCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int communityId, int personId, String auth});
 }
 
 /// @nodoc
 class __$$_TransferCommunityCopyWithImpl<$Res>
-    extends _$TransferCommunityCopyWithImpl<$Res>
+    extends _$TransferCommunityCopyWithImpl<$Res, _$_TransferCommunity>
     implements _$$_TransferCommunityCopyWith<$Res> {
   __$$_TransferCommunityCopyWithImpl(
       _$_TransferCommunity _value, $Res Function(_$_TransferCommunity) _then)
-      : super(_value, (v) => _then(v as _$_TransferCommunity));
+      : super(_value, _then);
 
-  @override
-  _$_TransferCommunity get _value => super._value as _$_TransferCommunity;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? communityId = freezed,
-    Object? personId = freezed,
-    Object? auth = freezed,
+    Object? communityId = null,
+    Object? personId = null,
+    Object? auth = null,
   }) {
     return _then(_$_TransferCommunity(
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      personId: personId == freezed
+      personId: null == personId
           ? _value.personId
           : personId // ignore: cast_nullable_to_non_nullable
               as int,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -2133,22 +2117,20 @@ class _$_TransferCommunity extends _TransferCommunity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_TransferCommunity &&
-            const DeepCollectionEquality()
-                .equals(other.communityId, communityId) &&
-            const DeepCollectionEquality().equals(other.personId, personId) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.personId, personId) ||
+                other.personId == personId) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(communityId),
-      const DeepCollectionEquality().hash(personId),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, communityId, personId, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_TransferCommunityCopyWith<_$_TransferCommunity> get copyWith =>
       __$$_TransferCommunityCopyWithImpl<_$_TransferCommunity>(
           this, _$identity);
@@ -2203,39 +2185,42 @@ mixin _$BlockCommunity {
 abstract class $BlockCommunityCopyWith<$Res> {
   factory $BlockCommunityCopyWith(
           BlockCommunity value, $Res Function(BlockCommunity) then) =
-      _$BlockCommunityCopyWithImpl<$Res>;
+      _$BlockCommunityCopyWithImpl<$Res, BlockCommunity>;
+  @useResult
   $Res call({int communityId, bool block, String auth});
 }
 
 /// @nodoc
-class _$BlockCommunityCopyWithImpl<$Res>
+class _$BlockCommunityCopyWithImpl<$Res, $Val extends BlockCommunity>
     implements $BlockCommunityCopyWith<$Res> {
   _$BlockCommunityCopyWithImpl(this._value, this._then);
 
-  final BlockCommunity _value;
   // ignore: unused_field
-  final $Res Function(BlockCommunity) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? communityId = freezed,
-    Object? block = freezed,
-    Object? auth = freezed,
+    Object? communityId = null,
+    Object? block = null,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      block: block == freezed
+      block: null == block
           ? _value.block
           : block // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -2246,36 +2231,35 @@ abstract class _$$_BlockCommunityCopyWith<$Res>
           _$_BlockCommunity value, $Res Function(_$_BlockCommunity) then) =
       __$$_BlockCommunityCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int communityId, bool block, String auth});
 }
 
 /// @nodoc
 class __$$_BlockCommunityCopyWithImpl<$Res>
-    extends _$BlockCommunityCopyWithImpl<$Res>
+    extends _$BlockCommunityCopyWithImpl<$Res, _$_BlockCommunity>
     implements _$$_BlockCommunityCopyWith<$Res> {
   __$$_BlockCommunityCopyWithImpl(
       _$_BlockCommunity _value, $Res Function(_$_BlockCommunity) _then)
-      : super(_value, (v) => _then(v as _$_BlockCommunity));
+      : super(_value, _then);
 
-  @override
-  _$_BlockCommunity get _value => super._value as _$_BlockCommunity;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? communityId = freezed,
-    Object? block = freezed,
-    Object? auth = freezed,
+    Object? communityId = null,
+    Object? block = null,
+    Object? auth = null,
   }) {
     return _then(_$_BlockCommunity(
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      block: block == freezed
+      block: null == block
           ? _value.block
           : block // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -2311,22 +2295,19 @@ class _$_BlockCommunity extends _BlockCommunity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_BlockCommunity &&
-            const DeepCollectionEquality()
-                .equals(other.communityId, communityId) &&
-            const DeepCollectionEquality().equals(other.block, block) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.block, block) || other.block == block) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(communityId),
-      const DeepCollectionEquality().hash(block),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, communityId, block, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_BlockCommunityCopyWith<_$_BlockCommunity> get copyWith =>
       __$$_BlockCommunityCopyWithImpl<_$_BlockCommunity>(this, _$identity);
 

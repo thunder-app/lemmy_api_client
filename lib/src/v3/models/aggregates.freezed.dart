@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'aggregates.dart';
 
@@ -37,7 +37,8 @@ mixin _$PersonAggregates {
 abstract class $PersonAggregatesCopyWith<$Res> {
   factory $PersonAggregatesCopyWith(
           PersonAggregates value, $Res Function(PersonAggregates) then) =
-      _$PersonAggregatesCopyWithImpl<$Res>;
+      _$PersonAggregatesCopyWithImpl<$Res, PersonAggregates>;
+  @useResult
   $Res call(
       {int id,
       int personId,
@@ -48,49 +49,51 @@ abstract class $PersonAggregatesCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PersonAggregatesCopyWithImpl<$Res>
+class _$PersonAggregatesCopyWithImpl<$Res, $Val extends PersonAggregates>
     implements $PersonAggregatesCopyWith<$Res> {
   _$PersonAggregatesCopyWithImpl(this._value, this._then);
 
-  final PersonAggregates _value;
   // ignore: unused_field
-  final $Res Function(PersonAggregates) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? personId = freezed,
-    Object? postCount = freezed,
-    Object? postScore = freezed,
-    Object? commentCount = freezed,
-    Object? commentScore = freezed,
+    Object? id = null,
+    Object? personId = null,
+    Object? postCount = null,
+    Object? postScore = null,
+    Object? commentCount = null,
+    Object? commentScore = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      personId: personId == freezed
+      personId: null == personId
           ? _value.personId
           : personId // ignore: cast_nullable_to_non_nullable
               as int,
-      postCount: postCount == freezed
+      postCount: null == postCount
           ? _value.postCount
           : postCount // ignore: cast_nullable_to_non_nullable
               as int,
-      postScore: postScore == freezed
+      postScore: null == postScore
           ? _value.postScore
           : postScore // ignore: cast_nullable_to_non_nullable
               as int,
-      commentCount: commentCount == freezed
+      commentCount: null == commentCount
           ? _value.commentCount
           : commentCount // ignore: cast_nullable_to_non_nullable
               as int,
-      commentScore: commentScore == freezed
+      commentScore: null == commentScore
           ? _value.commentScore
           : commentScore // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 }
 
@@ -101,6 +104,7 @@ abstract class _$$_PersonAggregatesCopyWith<$Res>
           _$_PersonAggregates value, $Res Function(_$_PersonAggregates) then) =
       __$$_PersonAggregatesCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       int personId,
@@ -112,46 +116,44 @@ abstract class _$$_PersonAggregatesCopyWith<$Res>
 
 /// @nodoc
 class __$$_PersonAggregatesCopyWithImpl<$Res>
-    extends _$PersonAggregatesCopyWithImpl<$Res>
+    extends _$PersonAggregatesCopyWithImpl<$Res, _$_PersonAggregates>
     implements _$$_PersonAggregatesCopyWith<$Res> {
   __$$_PersonAggregatesCopyWithImpl(
       _$_PersonAggregates _value, $Res Function(_$_PersonAggregates) _then)
-      : super(_value, (v) => _then(v as _$_PersonAggregates));
+      : super(_value, _then);
 
-  @override
-  _$_PersonAggregates get _value => super._value as _$_PersonAggregates;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? personId = freezed,
-    Object? postCount = freezed,
-    Object? postScore = freezed,
-    Object? commentCount = freezed,
-    Object? commentScore = freezed,
+    Object? id = null,
+    Object? personId = null,
+    Object? postCount = null,
+    Object? postScore = null,
+    Object? commentCount = null,
+    Object? commentScore = null,
   }) {
     return _then(_$_PersonAggregates(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      personId: personId == freezed
+      personId: null == personId
           ? _value.personId
           : personId // ignore: cast_nullable_to_non_nullable
               as int,
-      postCount: postCount == freezed
+      postCount: null == postCount
           ? _value.postCount
           : postCount // ignore: cast_nullable_to_non_nullable
               as int,
-      postScore: postScore == freezed
+      postScore: null == postScore
           ? _value.postScore
           : postScore // ignore: cast_nullable_to_non_nullable
               as int,
-      commentCount: commentCount == freezed
+      commentCount: null == commentCount
           ? _value.commentCount
           : commentCount // ignore: cast_nullable_to_non_nullable
               as int,
-      commentScore: commentScore == freezed
+      commentScore: null == commentScore
           ? _value.commentScore
           : commentScore // ignore: cast_nullable_to_non_nullable
               as int,
@@ -198,29 +200,27 @@ class _$_PersonAggregates extends _PersonAggregates {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PersonAggregates &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.personId, personId) &&
-            const DeepCollectionEquality().equals(other.postCount, postCount) &&
-            const DeepCollectionEquality().equals(other.postScore, postScore) &&
-            const DeepCollectionEquality()
-                .equals(other.commentCount, commentCount) &&
-            const DeepCollectionEquality()
-                .equals(other.commentScore, commentScore));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.personId, personId) ||
+                other.personId == personId) &&
+            (identical(other.postCount, postCount) ||
+                other.postCount == postCount) &&
+            (identical(other.postScore, postScore) ||
+                other.postScore == postScore) &&
+            (identical(other.commentCount, commentCount) ||
+                other.commentCount == commentCount) &&
+            (identical(other.commentScore, commentScore) ||
+                other.commentScore == commentScore));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(personId),
-      const DeepCollectionEquality().hash(postCount),
-      const DeepCollectionEquality().hash(postScore),
-      const DeepCollectionEquality().hash(commentCount),
-      const DeepCollectionEquality().hash(commentScore));
+  int get hashCode => Object.hash(runtimeType, id, personId, postCount,
+      postScore, commentCount, commentScore);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PersonAggregatesCopyWith<_$_PersonAggregates> get copyWith =>
       __$$_PersonAggregatesCopyWithImpl<_$_PersonAggregates>(this, _$identity);
 
@@ -290,7 +290,8 @@ mixin _$SiteAggregates {
 abstract class $SiteAggregatesCopyWith<$Res> {
   factory $SiteAggregatesCopyWith(
           SiteAggregates value, $Res Function(SiteAggregates) then) =
-      _$SiteAggregatesCopyWithImpl<$Res>;
+      _$SiteAggregatesCopyWithImpl<$Res, SiteAggregates>;
+  @useResult
   $Res call(
       {int id,
       int siteId,
@@ -305,69 +306,71 @@ abstract class $SiteAggregatesCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SiteAggregatesCopyWithImpl<$Res>
+class _$SiteAggregatesCopyWithImpl<$Res, $Val extends SiteAggregates>
     implements $SiteAggregatesCopyWith<$Res> {
   _$SiteAggregatesCopyWithImpl(this._value, this._then);
 
-  final SiteAggregates _value;
   // ignore: unused_field
-  final $Res Function(SiteAggregates) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? siteId = freezed,
-    Object? users = freezed,
-    Object? posts = freezed,
-    Object? comments = freezed,
-    Object? communities = freezed,
-    Object? usersActiveDay = freezed,
-    Object? usersActiveWeek = freezed,
-    Object? usersActiveMonth = freezed,
-    Object? usersActiveHalfYear = freezed,
+    Object? id = null,
+    Object? siteId = null,
+    Object? users = null,
+    Object? posts = null,
+    Object? comments = null,
+    Object? communities = null,
+    Object? usersActiveDay = null,
+    Object? usersActiveWeek = null,
+    Object? usersActiveMonth = null,
+    Object? usersActiveHalfYear = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      siteId: siteId == freezed
+      siteId: null == siteId
           ? _value.siteId
           : siteId // ignore: cast_nullable_to_non_nullable
               as int,
-      users: users == freezed
+      users: null == users
           ? _value.users
           : users // ignore: cast_nullable_to_non_nullable
               as int,
-      posts: posts == freezed
+      posts: null == posts
           ? _value.posts
           : posts // ignore: cast_nullable_to_non_nullable
               as int,
-      comments: comments == freezed
+      comments: null == comments
           ? _value.comments
           : comments // ignore: cast_nullable_to_non_nullable
               as int,
-      communities: communities == freezed
+      communities: null == communities
           ? _value.communities
           : communities // ignore: cast_nullable_to_non_nullable
               as int,
-      usersActiveDay: usersActiveDay == freezed
+      usersActiveDay: null == usersActiveDay
           ? _value.usersActiveDay
           : usersActiveDay // ignore: cast_nullable_to_non_nullable
               as int,
-      usersActiveWeek: usersActiveWeek == freezed
+      usersActiveWeek: null == usersActiveWeek
           ? _value.usersActiveWeek
           : usersActiveWeek // ignore: cast_nullable_to_non_nullable
               as int,
-      usersActiveMonth: usersActiveMonth == freezed
+      usersActiveMonth: null == usersActiveMonth
           ? _value.usersActiveMonth
           : usersActiveMonth // ignore: cast_nullable_to_non_nullable
               as int,
-      usersActiveHalfYear: usersActiveHalfYear == freezed
+      usersActiveHalfYear: null == usersActiveHalfYear
           ? _value.usersActiveHalfYear
           : usersActiveHalfYear // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 }
 
@@ -378,6 +381,7 @@ abstract class _$$_SiteAggregatesCopyWith<$Res>
           _$_SiteAggregates value, $Res Function(_$_SiteAggregates) then) =
       __$$_SiteAggregatesCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       int siteId,
@@ -393,66 +397,64 @@ abstract class _$$_SiteAggregatesCopyWith<$Res>
 
 /// @nodoc
 class __$$_SiteAggregatesCopyWithImpl<$Res>
-    extends _$SiteAggregatesCopyWithImpl<$Res>
+    extends _$SiteAggregatesCopyWithImpl<$Res, _$_SiteAggregates>
     implements _$$_SiteAggregatesCopyWith<$Res> {
   __$$_SiteAggregatesCopyWithImpl(
       _$_SiteAggregates _value, $Res Function(_$_SiteAggregates) _then)
-      : super(_value, (v) => _then(v as _$_SiteAggregates));
+      : super(_value, _then);
 
-  @override
-  _$_SiteAggregates get _value => super._value as _$_SiteAggregates;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? siteId = freezed,
-    Object? users = freezed,
-    Object? posts = freezed,
-    Object? comments = freezed,
-    Object? communities = freezed,
-    Object? usersActiveDay = freezed,
-    Object? usersActiveWeek = freezed,
-    Object? usersActiveMonth = freezed,
-    Object? usersActiveHalfYear = freezed,
+    Object? id = null,
+    Object? siteId = null,
+    Object? users = null,
+    Object? posts = null,
+    Object? comments = null,
+    Object? communities = null,
+    Object? usersActiveDay = null,
+    Object? usersActiveWeek = null,
+    Object? usersActiveMonth = null,
+    Object? usersActiveHalfYear = null,
   }) {
     return _then(_$_SiteAggregates(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      siteId: siteId == freezed
+      siteId: null == siteId
           ? _value.siteId
           : siteId // ignore: cast_nullable_to_non_nullable
               as int,
-      users: users == freezed
+      users: null == users
           ? _value.users
           : users // ignore: cast_nullable_to_non_nullable
               as int,
-      posts: posts == freezed
+      posts: null == posts
           ? _value.posts
           : posts // ignore: cast_nullable_to_non_nullable
               as int,
-      comments: comments == freezed
+      comments: null == comments
           ? _value.comments
           : comments // ignore: cast_nullable_to_non_nullable
               as int,
-      communities: communities == freezed
+      communities: null == communities
           ? _value.communities
           : communities // ignore: cast_nullable_to_non_nullable
               as int,
-      usersActiveDay: usersActiveDay == freezed
+      usersActiveDay: null == usersActiveDay
           ? _value.usersActiveDay
           : usersActiveDay // ignore: cast_nullable_to_non_nullable
               as int,
-      usersActiveWeek: usersActiveWeek == freezed
+      usersActiveWeek: null == usersActiveWeek
           ? _value.usersActiveWeek
           : usersActiveWeek // ignore: cast_nullable_to_non_nullable
               as int,
-      usersActiveMonth: usersActiveMonth == freezed
+      usersActiveMonth: null == usersActiveMonth
           ? _value.usersActiveMonth
           : usersActiveMonth // ignore: cast_nullable_to_non_nullable
               as int,
-      usersActiveHalfYear: usersActiveHalfYear == freezed
+      usersActiveHalfYear: null == usersActiveHalfYear
           ? _value.usersActiveHalfYear
           : usersActiveHalfYear // ignore: cast_nullable_to_non_nullable
               as int,
@@ -511,40 +513,42 @@ class _$_SiteAggregates extends _SiteAggregates {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SiteAggregates &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.siteId, siteId) &&
-            const DeepCollectionEquality().equals(other.users, users) &&
-            const DeepCollectionEquality().equals(other.posts, posts) &&
-            const DeepCollectionEquality().equals(other.comments, comments) &&
-            const DeepCollectionEquality()
-                .equals(other.communities, communities) &&
-            const DeepCollectionEquality()
-                .equals(other.usersActiveDay, usersActiveDay) &&
-            const DeepCollectionEquality()
-                .equals(other.usersActiveWeek, usersActiveWeek) &&
-            const DeepCollectionEquality()
-                .equals(other.usersActiveMonth, usersActiveMonth) &&
-            const DeepCollectionEquality()
-                .equals(other.usersActiveHalfYear, usersActiveHalfYear));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.siteId, siteId) || other.siteId == siteId) &&
+            (identical(other.users, users) || other.users == users) &&
+            (identical(other.posts, posts) || other.posts == posts) &&
+            (identical(other.comments, comments) ||
+                other.comments == comments) &&
+            (identical(other.communities, communities) ||
+                other.communities == communities) &&
+            (identical(other.usersActiveDay, usersActiveDay) ||
+                other.usersActiveDay == usersActiveDay) &&
+            (identical(other.usersActiveWeek, usersActiveWeek) ||
+                other.usersActiveWeek == usersActiveWeek) &&
+            (identical(other.usersActiveMonth, usersActiveMonth) ||
+                other.usersActiveMonth == usersActiveMonth) &&
+            (identical(other.usersActiveHalfYear, usersActiveHalfYear) ||
+                other.usersActiveHalfYear == usersActiveHalfYear));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(siteId),
-      const DeepCollectionEquality().hash(users),
-      const DeepCollectionEquality().hash(posts),
-      const DeepCollectionEquality().hash(comments),
-      const DeepCollectionEquality().hash(communities),
-      const DeepCollectionEquality().hash(usersActiveDay),
-      const DeepCollectionEquality().hash(usersActiveWeek),
-      const DeepCollectionEquality().hash(usersActiveMonth),
-      const DeepCollectionEquality().hash(usersActiveHalfYear));
+      id,
+      siteId,
+      users,
+      posts,
+      comments,
+      communities,
+      usersActiveDay,
+      usersActiveWeek,
+      usersActiveMonth,
+      usersActiveHalfYear);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SiteAggregatesCopyWith<_$_SiteAggregates> get copyWith =>
       __$$_SiteAggregatesCopyWithImpl<_$_SiteAggregates>(this, _$identity);
 
@@ -624,7 +628,8 @@ mixin _$PostAggregates {
 abstract class $PostAggregatesCopyWith<$Res> {
   factory $PostAggregatesCopyWith(
           PostAggregates value, $Res Function(PostAggregates) then) =
-      _$PostAggregatesCopyWithImpl<$Res>;
+      _$PostAggregatesCopyWithImpl<$Res, PostAggregates>;
+  @useResult
   $Res call(
       {int id,
       int postId,
@@ -637,59 +642,61 @@ abstract class $PostAggregatesCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PostAggregatesCopyWithImpl<$Res>
+class _$PostAggregatesCopyWithImpl<$Res, $Val extends PostAggregates>
     implements $PostAggregatesCopyWith<$Res> {
   _$PostAggregatesCopyWithImpl(this._value, this._then);
 
-  final PostAggregates _value;
   // ignore: unused_field
-  final $Res Function(PostAggregates) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? postId = freezed,
-    Object? comments = freezed,
-    Object? score = freezed,
-    Object? upvotes = freezed,
-    Object? downvotes = freezed,
-    Object? newestCommentTime = freezed,
-    Object? newestCommentTimeNecro = freezed,
+    Object? id = null,
+    Object? postId = null,
+    Object? comments = null,
+    Object? score = null,
+    Object? upvotes = null,
+    Object? downvotes = null,
+    Object? newestCommentTime = null,
+    Object? newestCommentTimeNecro = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      comments: comments == freezed
+      comments: null == comments
           ? _value.comments
           : comments // ignore: cast_nullable_to_non_nullable
               as int,
-      score: score == freezed
+      score: null == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
               as int,
-      upvotes: upvotes == freezed
+      upvotes: null == upvotes
           ? _value.upvotes
           : upvotes // ignore: cast_nullable_to_non_nullable
               as int,
-      downvotes: downvotes == freezed
+      downvotes: null == downvotes
           ? _value.downvotes
           : downvotes // ignore: cast_nullable_to_non_nullable
               as int,
-      newestCommentTime: newestCommentTime == freezed
+      newestCommentTime: null == newestCommentTime
           ? _value.newestCommentTime
           : newestCommentTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      newestCommentTimeNecro: newestCommentTimeNecro == freezed
+      newestCommentTimeNecro: null == newestCommentTimeNecro
           ? _value.newestCommentTimeNecro
           : newestCommentTimeNecro // ignore: cast_nullable_to_non_nullable
               as DateTime,
-    ));
+    ) as $Val);
   }
 }
 
@@ -700,6 +707,7 @@ abstract class _$$_PostAggregatesCopyWith<$Res>
           _$_PostAggregates value, $Res Function(_$_PostAggregates) then) =
       __$$_PostAggregatesCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       int postId,
@@ -713,56 +721,54 @@ abstract class _$$_PostAggregatesCopyWith<$Res>
 
 /// @nodoc
 class __$$_PostAggregatesCopyWithImpl<$Res>
-    extends _$PostAggregatesCopyWithImpl<$Res>
+    extends _$PostAggregatesCopyWithImpl<$Res, _$_PostAggregates>
     implements _$$_PostAggregatesCopyWith<$Res> {
   __$$_PostAggregatesCopyWithImpl(
       _$_PostAggregates _value, $Res Function(_$_PostAggregates) _then)
-      : super(_value, (v) => _then(v as _$_PostAggregates));
+      : super(_value, _then);
 
-  @override
-  _$_PostAggregates get _value => super._value as _$_PostAggregates;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? postId = freezed,
-    Object? comments = freezed,
-    Object? score = freezed,
-    Object? upvotes = freezed,
-    Object? downvotes = freezed,
-    Object? newestCommentTime = freezed,
-    Object? newestCommentTimeNecro = freezed,
+    Object? id = null,
+    Object? postId = null,
+    Object? comments = null,
+    Object? score = null,
+    Object? upvotes = null,
+    Object? downvotes = null,
+    Object? newestCommentTime = null,
+    Object? newestCommentTimeNecro = null,
   }) {
     return _then(_$_PostAggregates(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      comments: comments == freezed
+      comments: null == comments
           ? _value.comments
           : comments // ignore: cast_nullable_to_non_nullable
               as int,
-      score: score == freezed
+      score: null == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
               as int,
-      upvotes: upvotes == freezed
+      upvotes: null == upvotes
           ? _value.upvotes
           : upvotes // ignore: cast_nullable_to_non_nullable
               as int,
-      downvotes: downvotes == freezed
+      downvotes: null == downvotes
           ? _value.downvotes
           : downvotes // ignore: cast_nullable_to_non_nullable
               as int,
-      newestCommentTime: newestCommentTime == freezed
+      newestCommentTime: null == newestCommentTime
           ? _value.newestCommentTime
           : newestCommentTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      newestCommentTimeNecro: newestCommentTimeNecro == freezed
+      newestCommentTimeNecro: null == newestCommentTimeNecro
           ? _value.newestCommentTimeNecro
           : newestCommentTimeNecro // ignore: cast_nullable_to_non_nullable
               as DateTime,
@@ -815,33 +821,28 @@ class _$_PostAggregates extends _PostAggregates {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PostAggregates &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.postId, postId) &&
-            const DeepCollectionEquality().equals(other.comments, comments) &&
-            const DeepCollectionEquality().equals(other.score, score) &&
-            const DeepCollectionEquality().equals(other.upvotes, upvotes) &&
-            const DeepCollectionEquality().equals(other.downvotes, downvotes) &&
-            const DeepCollectionEquality()
-                .equals(other.newestCommentTime, newestCommentTime) &&
-            const DeepCollectionEquality()
-                .equals(other.newestCommentTimeNecro, newestCommentTimeNecro));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.comments, comments) ||
+                other.comments == comments) &&
+            (identical(other.score, score) || other.score == score) &&
+            (identical(other.upvotes, upvotes) || other.upvotes == upvotes) &&
+            (identical(other.downvotes, downvotes) ||
+                other.downvotes == downvotes) &&
+            (identical(other.newestCommentTime, newestCommentTime) ||
+                other.newestCommentTime == newestCommentTime) &&
+            (identical(other.newestCommentTimeNecro, newestCommentTimeNecro) ||
+                other.newestCommentTimeNecro == newestCommentTimeNecro));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(postId),
-      const DeepCollectionEquality().hash(comments),
-      const DeepCollectionEquality().hash(score),
-      const DeepCollectionEquality().hash(upvotes),
-      const DeepCollectionEquality().hash(downvotes),
-      const DeepCollectionEquality().hash(newestCommentTime),
-      const DeepCollectionEquality().hash(newestCommentTimeNecro));
+  int get hashCode => Object.hash(runtimeType, id, postId, comments, score,
+      upvotes, downvotes, newestCommentTime, newestCommentTimeNecro);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PostAggregatesCopyWith<_$_PostAggregates> get copyWith =>
       __$$_PostAggregatesCopyWithImpl<_$_PostAggregates>(this, _$identity);
 
@@ -916,7 +917,8 @@ mixin _$CommunityAggregates {
 abstract class $CommunityAggregatesCopyWith<$Res> {
   factory $CommunityAggregatesCopyWith(
           CommunityAggregates value, $Res Function(CommunityAggregates) then) =
-      _$CommunityAggregatesCopyWithImpl<$Res>;
+      _$CommunityAggregatesCopyWithImpl<$Res, CommunityAggregates>;
+  @useResult
   $Res call(
       {int id,
       int communityId,
@@ -930,64 +932,66 @@ abstract class $CommunityAggregatesCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CommunityAggregatesCopyWithImpl<$Res>
+class _$CommunityAggregatesCopyWithImpl<$Res, $Val extends CommunityAggregates>
     implements $CommunityAggregatesCopyWith<$Res> {
   _$CommunityAggregatesCopyWithImpl(this._value, this._then);
 
-  final CommunityAggregates _value;
   // ignore: unused_field
-  final $Res Function(CommunityAggregates) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? communityId = freezed,
-    Object? subscribers = freezed,
-    Object? posts = freezed,
-    Object? comments = freezed,
-    Object? usersActiveDay = freezed,
-    Object? usersActiveWeek = freezed,
-    Object? usersActiveMonth = freezed,
-    Object? usersActiveHalfYear = freezed,
+    Object? id = null,
+    Object? communityId = null,
+    Object? subscribers = null,
+    Object? posts = null,
+    Object? comments = null,
+    Object? usersActiveDay = null,
+    Object? usersActiveWeek = null,
+    Object? usersActiveMonth = null,
+    Object? usersActiveHalfYear = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      subscribers: subscribers == freezed
+      subscribers: null == subscribers
           ? _value.subscribers
           : subscribers // ignore: cast_nullable_to_non_nullable
               as int,
-      posts: posts == freezed
+      posts: null == posts
           ? _value.posts
           : posts // ignore: cast_nullable_to_non_nullable
               as int,
-      comments: comments == freezed
+      comments: null == comments
           ? _value.comments
           : comments // ignore: cast_nullable_to_non_nullable
               as int,
-      usersActiveDay: usersActiveDay == freezed
+      usersActiveDay: null == usersActiveDay
           ? _value.usersActiveDay
           : usersActiveDay // ignore: cast_nullable_to_non_nullable
               as int,
-      usersActiveWeek: usersActiveWeek == freezed
+      usersActiveWeek: null == usersActiveWeek
           ? _value.usersActiveWeek
           : usersActiveWeek // ignore: cast_nullable_to_non_nullable
               as int,
-      usersActiveMonth: usersActiveMonth == freezed
+      usersActiveMonth: null == usersActiveMonth
           ? _value.usersActiveMonth
           : usersActiveMonth // ignore: cast_nullable_to_non_nullable
               as int,
-      usersActiveHalfYear: usersActiveHalfYear == freezed
+      usersActiveHalfYear: null == usersActiveHalfYear
           ? _value.usersActiveHalfYear
           : usersActiveHalfYear // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 }
 
@@ -998,6 +1002,7 @@ abstract class _$$_CommunityAggregatesCopyWith<$Res>
           $Res Function(_$_CommunityAggregates) then) =
       __$$_CommunityAggregatesCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       int communityId,
@@ -1012,61 +1017,59 @@ abstract class _$$_CommunityAggregatesCopyWith<$Res>
 
 /// @nodoc
 class __$$_CommunityAggregatesCopyWithImpl<$Res>
-    extends _$CommunityAggregatesCopyWithImpl<$Res>
+    extends _$CommunityAggregatesCopyWithImpl<$Res, _$_CommunityAggregates>
     implements _$$_CommunityAggregatesCopyWith<$Res> {
   __$$_CommunityAggregatesCopyWithImpl(_$_CommunityAggregates _value,
       $Res Function(_$_CommunityAggregates) _then)
-      : super(_value, (v) => _then(v as _$_CommunityAggregates));
+      : super(_value, _then);
 
-  @override
-  _$_CommunityAggregates get _value => super._value as _$_CommunityAggregates;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? communityId = freezed,
-    Object? subscribers = freezed,
-    Object? posts = freezed,
-    Object? comments = freezed,
-    Object? usersActiveDay = freezed,
-    Object? usersActiveWeek = freezed,
-    Object? usersActiveMonth = freezed,
-    Object? usersActiveHalfYear = freezed,
+    Object? id = null,
+    Object? communityId = null,
+    Object? subscribers = null,
+    Object? posts = null,
+    Object? comments = null,
+    Object? usersActiveDay = null,
+    Object? usersActiveWeek = null,
+    Object? usersActiveMonth = null,
+    Object? usersActiveHalfYear = null,
   }) {
     return _then(_$_CommunityAggregates(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      subscribers: subscribers == freezed
+      subscribers: null == subscribers
           ? _value.subscribers
           : subscribers // ignore: cast_nullable_to_non_nullable
               as int,
-      posts: posts == freezed
+      posts: null == posts
           ? _value.posts
           : posts // ignore: cast_nullable_to_non_nullable
               as int,
-      comments: comments == freezed
+      comments: null == comments
           ? _value.comments
           : comments // ignore: cast_nullable_to_non_nullable
               as int,
-      usersActiveDay: usersActiveDay == freezed
+      usersActiveDay: null == usersActiveDay
           ? _value.usersActiveDay
           : usersActiveDay // ignore: cast_nullable_to_non_nullable
               as int,
-      usersActiveWeek: usersActiveWeek == freezed
+      usersActiveWeek: null == usersActiveWeek
           ? _value.usersActiveWeek
           : usersActiveWeek // ignore: cast_nullable_to_non_nullable
               as int,
-      usersActiveMonth: usersActiveMonth == freezed
+      usersActiveMonth: null == usersActiveMonth
           ? _value.usersActiveMonth
           : usersActiveMonth // ignore: cast_nullable_to_non_nullable
               as int,
-      usersActiveHalfYear: usersActiveHalfYear == freezed
+      usersActiveHalfYear: null == usersActiveHalfYear
           ? _value.usersActiveHalfYear
           : usersActiveHalfYear // ignore: cast_nullable_to_non_nullable
               as int,
@@ -1122,39 +1125,41 @@ class _$_CommunityAggregates extends _CommunityAggregates {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CommunityAggregates &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other.communityId, communityId) &&
-            const DeepCollectionEquality()
-                .equals(other.subscribers, subscribers) &&
-            const DeepCollectionEquality().equals(other.posts, posts) &&
-            const DeepCollectionEquality().equals(other.comments, comments) &&
-            const DeepCollectionEquality()
-                .equals(other.usersActiveDay, usersActiveDay) &&
-            const DeepCollectionEquality()
-                .equals(other.usersActiveWeek, usersActiveWeek) &&
-            const DeepCollectionEquality()
-                .equals(other.usersActiveMonth, usersActiveMonth) &&
-            const DeepCollectionEquality()
-                .equals(other.usersActiveHalfYear, usersActiveHalfYear));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.subscribers, subscribers) ||
+                other.subscribers == subscribers) &&
+            (identical(other.posts, posts) || other.posts == posts) &&
+            (identical(other.comments, comments) ||
+                other.comments == comments) &&
+            (identical(other.usersActiveDay, usersActiveDay) ||
+                other.usersActiveDay == usersActiveDay) &&
+            (identical(other.usersActiveWeek, usersActiveWeek) ||
+                other.usersActiveWeek == usersActiveWeek) &&
+            (identical(other.usersActiveMonth, usersActiveMonth) ||
+                other.usersActiveMonth == usersActiveMonth) &&
+            (identical(other.usersActiveHalfYear, usersActiveHalfYear) ||
+                other.usersActiveHalfYear == usersActiveHalfYear));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(communityId),
-      const DeepCollectionEquality().hash(subscribers),
-      const DeepCollectionEquality().hash(posts),
-      const DeepCollectionEquality().hash(comments),
-      const DeepCollectionEquality().hash(usersActiveDay),
-      const DeepCollectionEquality().hash(usersActiveWeek),
-      const DeepCollectionEquality().hash(usersActiveMonth),
-      const DeepCollectionEquality().hash(usersActiveHalfYear));
+      id,
+      communityId,
+      subscribers,
+      posts,
+      comments,
+      usersActiveDay,
+      usersActiveWeek,
+      usersActiveMonth,
+      usersActiveHalfYear);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CommunityAggregatesCopyWith<_$_CommunityAggregates> get copyWith =>
       __$$_CommunityAggregatesCopyWithImpl<_$_CommunityAggregates>(
           this, _$identity);
@@ -1229,49 +1234,52 @@ mixin _$CommentAggregates {
 abstract class $CommentAggregatesCopyWith<$Res> {
   factory $CommentAggregatesCopyWith(
           CommentAggregates value, $Res Function(CommentAggregates) then) =
-      _$CommentAggregatesCopyWithImpl<$Res>;
+      _$CommentAggregatesCopyWithImpl<$Res, CommentAggregates>;
+  @useResult
   $Res call({int id, int commentId, int score, int upvotes, int downvotes});
 }
 
 /// @nodoc
-class _$CommentAggregatesCopyWithImpl<$Res>
+class _$CommentAggregatesCopyWithImpl<$Res, $Val extends CommentAggregates>
     implements $CommentAggregatesCopyWith<$Res> {
   _$CommentAggregatesCopyWithImpl(this._value, this._then);
 
-  final CommentAggregates _value;
   // ignore: unused_field
-  final $Res Function(CommentAggregates) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? commentId = freezed,
-    Object? score = freezed,
-    Object? upvotes = freezed,
-    Object? downvotes = freezed,
+    Object? id = null,
+    Object? commentId = null,
+    Object? score = null,
+    Object? upvotes = null,
+    Object? downvotes = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      commentId: commentId == freezed
+      commentId: null == commentId
           ? _value.commentId
           : commentId // ignore: cast_nullable_to_non_nullable
               as int,
-      score: score == freezed
+      score: null == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
               as int,
-      upvotes: upvotes == freezed
+      upvotes: null == upvotes
           ? _value.upvotes
           : upvotes // ignore: cast_nullable_to_non_nullable
               as int,
-      downvotes: downvotes == freezed
+      downvotes: null == downvotes
           ? _value.downvotes
           : downvotes // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1282,46 +1290,45 @@ abstract class _$$_CommentAggregatesCopyWith<$Res>
           $Res Function(_$_CommentAggregates) then) =
       __$$_CommentAggregatesCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int id, int commentId, int score, int upvotes, int downvotes});
 }
 
 /// @nodoc
 class __$$_CommentAggregatesCopyWithImpl<$Res>
-    extends _$CommentAggregatesCopyWithImpl<$Res>
+    extends _$CommentAggregatesCopyWithImpl<$Res, _$_CommentAggregates>
     implements _$$_CommentAggregatesCopyWith<$Res> {
   __$$_CommentAggregatesCopyWithImpl(
       _$_CommentAggregates _value, $Res Function(_$_CommentAggregates) _then)
-      : super(_value, (v) => _then(v as _$_CommentAggregates));
+      : super(_value, _then);
 
-  @override
-  _$_CommentAggregates get _value => super._value as _$_CommentAggregates;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? commentId = freezed,
-    Object? score = freezed,
-    Object? upvotes = freezed,
-    Object? downvotes = freezed,
+    Object? id = null,
+    Object? commentId = null,
+    Object? score = null,
+    Object? upvotes = null,
+    Object? downvotes = null,
   }) {
     return _then(_$_CommentAggregates(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      commentId: commentId == freezed
+      commentId: null == commentId
           ? _value.commentId
           : commentId // ignore: cast_nullable_to_non_nullable
               as int,
-      score: score == freezed
+      score: null == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
               as int,
-      upvotes: upvotes == freezed
+      upvotes: null == upvotes
           ? _value.upvotes
           : upvotes // ignore: cast_nullable_to_non_nullable
               as int,
-      downvotes: downvotes == freezed
+      downvotes: null == downvotes
           ? _value.downvotes
           : downvotes // ignore: cast_nullable_to_non_nullable
               as int,
@@ -1365,25 +1372,23 @@ class _$_CommentAggregates extends _CommentAggregates {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CommentAggregates &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.commentId, commentId) &&
-            const DeepCollectionEquality().equals(other.score, score) &&
-            const DeepCollectionEquality().equals(other.upvotes, upvotes) &&
-            const DeepCollectionEquality().equals(other.downvotes, downvotes));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.commentId, commentId) ||
+                other.commentId == commentId) &&
+            (identical(other.score, score) || other.score == score) &&
+            (identical(other.upvotes, upvotes) || other.upvotes == upvotes) &&
+            (identical(other.downvotes, downvotes) ||
+                other.downvotes == downvotes));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(commentId),
-      const DeepCollectionEquality().hash(score),
-      const DeepCollectionEquality().hash(upvotes),
-      const DeepCollectionEquality().hash(downvotes));
+  int get hashCode =>
+      Object.hash(runtimeType, id, commentId, score, upvotes, downvotes);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CommentAggregatesCopyWith<_$_CommentAggregates> get copyWith =>
       __$$_CommentAggregatesCopyWithImpl<_$_CommentAggregates>(
           this, _$identity);

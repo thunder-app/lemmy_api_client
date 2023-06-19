@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'jwt.dart';
 
@@ -34,38 +34,42 @@ mixin _$JwtPayload {
 abstract class $JwtPayloadCopyWith<$Res> {
   factory $JwtPayloadCopyWith(
           JwtPayload value, $Res Function(JwtPayload) then) =
-      _$JwtPayloadCopyWithImpl<$Res>;
+      _$JwtPayloadCopyWithImpl<$Res, JwtPayload>;
+  @useResult
   $Res call({int iat, String iss, int sub});
 }
 
 /// @nodoc
-class _$JwtPayloadCopyWithImpl<$Res> implements $JwtPayloadCopyWith<$Res> {
+class _$JwtPayloadCopyWithImpl<$Res, $Val extends JwtPayload>
+    implements $JwtPayloadCopyWith<$Res> {
   _$JwtPayloadCopyWithImpl(this._value, this._then);
 
-  final JwtPayload _value;
   // ignore: unused_field
-  final $Res Function(JwtPayload) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? iat = freezed,
-    Object? iss = freezed,
-    Object? sub = freezed,
+    Object? iat = null,
+    Object? iss = null,
+    Object? sub = null,
   }) {
     return _then(_value.copyWith(
-      iat: iat == freezed
+      iat: null == iat
           ? _value.iat
           : iat // ignore: cast_nullable_to_non_nullable
               as int,
-      iss: iss == freezed
+      iss: null == iss
           ? _value.iss
           : iss // ignore: cast_nullable_to_non_nullable
               as String,
-      sub: sub == freezed
+      sub: null == sub
           ? _value.sub
           : sub // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 }
 
@@ -76,35 +80,35 @@ abstract class _$$_JwtPayloadCopyWith<$Res>
           _$_JwtPayload value, $Res Function(_$_JwtPayload) then) =
       __$$_JwtPayloadCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int iat, String iss, int sub});
 }
 
 /// @nodoc
-class __$$_JwtPayloadCopyWithImpl<$Res> extends _$JwtPayloadCopyWithImpl<$Res>
+class __$$_JwtPayloadCopyWithImpl<$Res>
+    extends _$JwtPayloadCopyWithImpl<$Res, _$_JwtPayload>
     implements _$$_JwtPayloadCopyWith<$Res> {
   __$$_JwtPayloadCopyWithImpl(
       _$_JwtPayload _value, $Res Function(_$_JwtPayload) _then)
-      : super(_value, (v) => _then(v as _$_JwtPayload));
+      : super(_value, _then);
 
-  @override
-  _$_JwtPayload get _value => super._value as _$_JwtPayload;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? iat = freezed,
-    Object? iss = freezed,
-    Object? sub = freezed,
+    Object? iat = null,
+    Object? iss = null,
+    Object? sub = null,
   }) {
     return _then(_$_JwtPayload(
-      iat: iat == freezed
+      iat: null == iat
           ? _value.iat
           : iat // ignore: cast_nullable_to_non_nullable
               as int,
-      iss: iss == freezed
+      iss: null == iss
           ? _value.iss
           : iss // ignore: cast_nullable_to_non_nullable
               as String,
-      sub: sub == freezed
+      sub: null == sub
           ? _value.sub
           : sub // ignore: cast_nullable_to_non_nullable
               as int,
@@ -139,21 +143,18 @@ class _$_JwtPayload extends _JwtPayload {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_JwtPayload &&
-            const DeepCollectionEquality().equals(other.iat, iat) &&
-            const DeepCollectionEquality().equals(other.iss, iss) &&
-            const DeepCollectionEquality().equals(other.sub, sub));
+            (identical(other.iat, iat) || other.iat == iat) &&
+            (identical(other.iss, iss) || other.iss == iss) &&
+            (identical(other.sub, sub) || other.sub == sub));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(iat),
-      const DeepCollectionEquality().hash(iss),
-      const DeepCollectionEquality().hash(sub));
+  int get hashCode => Object.hash(runtimeType, iat, iss, sub);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_JwtPayloadCopyWith<_$_JwtPayload> get copyWith =>
       __$$_JwtPayloadCopyWithImpl<_$_JwtPayload>(this, _$identity);
 

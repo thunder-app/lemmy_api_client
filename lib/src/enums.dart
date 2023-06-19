@@ -102,3 +102,18 @@ enum CommentListingType {
 
   String toString() => value;
 }
+
+enum SubscribedType {
+  subscribed('Subscribed'),
+  notSubscribed('NotSubscribed');
+
+  final String value;
+  const SubscribedType(this.value);
+
+  factory SubscribedType.fromJson(String value) =>
+      values.firstWhere((e) => e.value == value);
+
+  String toJson() => value;
+
+  String toString() => value;
+}

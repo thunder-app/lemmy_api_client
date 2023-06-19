@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'person.dart';
 
@@ -31,33 +31,37 @@ mixin _$Login {
 /// @nodoc
 abstract class $LoginCopyWith<$Res> {
   factory $LoginCopyWith(Login value, $Res Function(Login) then) =
-      _$LoginCopyWithImpl<$Res>;
+      _$LoginCopyWithImpl<$Res, Login>;
+  @useResult
   $Res call({String usernameOrEmail, String password});
 }
 
 /// @nodoc
-class _$LoginCopyWithImpl<$Res> implements $LoginCopyWith<$Res> {
+class _$LoginCopyWithImpl<$Res, $Val extends Login>
+    implements $LoginCopyWith<$Res> {
   _$LoginCopyWithImpl(this._value, this._then);
 
-  final Login _value;
   // ignore: unused_field
-  final $Res Function(Login) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? usernameOrEmail = freezed,
-    Object? password = freezed,
+    Object? usernameOrEmail = null,
+    Object? password = null,
   }) {
     return _then(_value.copyWith(
-      usernameOrEmail: usernameOrEmail == freezed
+      usernameOrEmail: null == usernameOrEmail
           ? _value.usernameOrEmail
           : usernameOrEmail // ignore: cast_nullable_to_non_nullable
               as String,
-      password: password == freezed
+      password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -66,29 +70,28 @@ abstract class _$$_LoginCopyWith<$Res> implements $LoginCopyWith<$Res> {
   factory _$$_LoginCopyWith(_$_Login value, $Res Function(_$_Login) then) =
       __$$_LoginCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String usernameOrEmail, String password});
 }
 
 /// @nodoc
-class __$$_LoginCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res>
+class __$$_LoginCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res, _$_Login>
     implements _$$_LoginCopyWith<$Res> {
   __$$_LoginCopyWithImpl(_$_Login _value, $Res Function(_$_Login) _then)
-      : super(_value, (v) => _then(v as _$_Login));
+      : super(_value, _then);
 
-  @override
-  _$_Login get _value => super._value as _$_Login;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? usernameOrEmail = freezed,
-    Object? password = freezed,
+    Object? usernameOrEmail = null,
+    Object? password = null,
   }) {
     return _then(_$_Login(
-      usernameOrEmail: usernameOrEmail == freezed
+      usernameOrEmail: null == usernameOrEmail
           ? _value.usernameOrEmail
           : usernameOrEmail // ignore: cast_nullable_to_non_nullable
               as String,
-      password: password == freezed
+      password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
@@ -121,20 +124,19 @@ class _$_Login extends _Login {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Login &&
-            const DeepCollectionEquality()
-                .equals(other.usernameOrEmail, usernameOrEmail) &&
-            const DeepCollectionEquality().equals(other.password, password));
+            (identical(other.usernameOrEmail, usernameOrEmail) ||
+                other.usernameOrEmail == usernameOrEmail) &&
+            (identical(other.password, password) ||
+                other.password == password));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(usernameOrEmail),
-      const DeepCollectionEquality().hash(password));
+  int get hashCode => Object.hash(runtimeType, usernameOrEmail, password);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_LoginCopyWith<_$_Login> get copyWith =>
       __$$_LoginCopyWithImpl<_$_Login>(this, _$identity);
 
@@ -189,7 +191,8 @@ mixin _$Register {
 /// @nodoc
 abstract class $RegisterCopyWith<$Res> {
   factory $RegisterCopyWith(Register value, $Res Function(Register) then) =
-      _$RegisterCopyWithImpl<$Res>;
+      _$RegisterCopyWithImpl<$Res, Register>;
+  @useResult
   $Res call(
       {String username,
       String? email,
@@ -203,63 +206,66 @@ abstract class $RegisterCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$RegisterCopyWithImpl<$Res> implements $RegisterCopyWith<$Res> {
+class _$RegisterCopyWithImpl<$Res, $Val extends Register>
+    implements $RegisterCopyWith<$Res> {
   _$RegisterCopyWithImpl(this._value, this._then);
 
-  final Register _value;
   // ignore: unused_field
-  final $Res Function(Register) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? username = freezed,
+    Object? username = null,
     Object? email = freezed,
-    Object? password = freezed,
-    Object? passwordVerify = freezed,
-    Object? showNsfw = freezed,
+    Object? password = null,
+    Object? passwordVerify = null,
+    Object? showNsfw = null,
     Object? captchaUuid = freezed,
     Object? captchaAnswer = freezed,
     Object? honeypot = freezed,
     Object? answer = freezed,
   }) {
     return _then(_value.copyWith(
-      username: username == freezed
+      username: null == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String,
-      email: email == freezed
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
-      password: password == freezed
+      password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
-      passwordVerify: passwordVerify == freezed
+      passwordVerify: null == passwordVerify
           ? _value.passwordVerify
           : passwordVerify // ignore: cast_nullable_to_non_nullable
               as String,
-      showNsfw: showNsfw == freezed
+      showNsfw: null == showNsfw
           ? _value.showNsfw
           : showNsfw // ignore: cast_nullable_to_non_nullable
               as bool,
-      captchaUuid: captchaUuid == freezed
+      captchaUuid: freezed == captchaUuid
           ? _value.captchaUuid
           : captchaUuid // ignore: cast_nullable_to_non_nullable
               as String?,
-      captchaAnswer: captchaAnswer == freezed
+      captchaAnswer: freezed == captchaAnswer
           ? _value.captchaAnswer
           : captchaAnswer // ignore: cast_nullable_to_non_nullable
               as String?,
-      honeypot: honeypot == freezed
+      honeypot: freezed == honeypot
           ? _value.honeypot
           : honeypot // ignore: cast_nullable_to_non_nullable
               as String?,
-      answer: answer == freezed
+      answer: freezed == answer
           ? _value.answer
           : answer // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -269,6 +275,7 @@ abstract class _$$_RegisterCopyWith<$Res> implements $RegisterCopyWith<$Res> {
           _$_Register value, $Res Function(_$_Register) then) =
       __$$_RegisterCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String username,
       String? email,
@@ -282,61 +289,60 @@ abstract class _$$_RegisterCopyWith<$Res> implements $RegisterCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_RegisterCopyWithImpl<$Res> extends _$RegisterCopyWithImpl<$Res>
+class __$$_RegisterCopyWithImpl<$Res>
+    extends _$RegisterCopyWithImpl<$Res, _$_Register>
     implements _$$_RegisterCopyWith<$Res> {
   __$$_RegisterCopyWithImpl(
       _$_Register _value, $Res Function(_$_Register) _then)
-      : super(_value, (v) => _then(v as _$_Register));
+      : super(_value, _then);
 
-  @override
-  _$_Register get _value => super._value as _$_Register;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? username = freezed,
+    Object? username = null,
     Object? email = freezed,
-    Object? password = freezed,
-    Object? passwordVerify = freezed,
-    Object? showNsfw = freezed,
+    Object? password = null,
+    Object? passwordVerify = null,
+    Object? showNsfw = null,
     Object? captchaUuid = freezed,
     Object? captchaAnswer = freezed,
     Object? honeypot = freezed,
     Object? answer = freezed,
   }) {
     return _then(_$_Register(
-      username: username == freezed
+      username: null == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String,
-      email: email == freezed
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
-      password: password == freezed
+      password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
-      passwordVerify: passwordVerify == freezed
+      passwordVerify: null == passwordVerify
           ? _value.passwordVerify
           : passwordVerify // ignore: cast_nullable_to_non_nullable
               as String,
-      showNsfw: showNsfw == freezed
+      showNsfw: null == showNsfw
           ? _value.showNsfw
           : showNsfw // ignore: cast_nullable_to_non_nullable
               as bool,
-      captchaUuid: captchaUuid == freezed
+      captchaUuid: freezed == captchaUuid
           ? _value.captchaUuid
           : captchaUuid // ignore: cast_nullable_to_non_nullable
               as String?,
-      captchaAnswer: captchaAnswer == freezed
+      captchaAnswer: freezed == captchaAnswer
           ? _value.captchaAnswer
           : captchaAnswer // ignore: cast_nullable_to_non_nullable
               as String?,
-      honeypot: honeypot == freezed
+      honeypot: freezed == honeypot
           ? _value.honeypot
           : honeypot // ignore: cast_nullable_to_non_nullable
               as String?,
-      answer: answer == freezed
+      answer: freezed == answer
           ? _value.answer
           : answer // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -392,36 +398,32 @@ class _$_Register extends _Register {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Register &&
-            const DeepCollectionEquality().equals(other.username, username) &&
-            const DeepCollectionEquality().equals(other.email, email) &&
-            const DeepCollectionEquality().equals(other.password, password) &&
-            const DeepCollectionEquality()
-                .equals(other.passwordVerify, passwordVerify) &&
-            const DeepCollectionEquality().equals(other.showNsfw, showNsfw) &&
-            const DeepCollectionEquality()
-                .equals(other.captchaUuid, captchaUuid) &&
-            const DeepCollectionEquality()
-                .equals(other.captchaAnswer, captchaAnswer) &&
-            const DeepCollectionEquality().equals(other.honeypot, honeypot) &&
-            const DeepCollectionEquality().equals(other.answer, answer));
+            (identical(other.username, username) ||
+                other.username == username) &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.password, password) ||
+                other.password == password) &&
+            (identical(other.passwordVerify, passwordVerify) ||
+                other.passwordVerify == passwordVerify) &&
+            (identical(other.showNsfw, showNsfw) ||
+                other.showNsfw == showNsfw) &&
+            (identical(other.captchaUuid, captchaUuid) ||
+                other.captchaUuid == captchaUuid) &&
+            (identical(other.captchaAnswer, captchaAnswer) ||
+                other.captchaAnswer == captchaAnswer) &&
+            (identical(other.honeypot, honeypot) ||
+                other.honeypot == honeypot) &&
+            (identical(other.answer, answer) || other.answer == answer));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(username),
-      const DeepCollectionEquality().hash(email),
-      const DeepCollectionEquality().hash(password),
-      const DeepCollectionEquality().hash(passwordVerify),
-      const DeepCollectionEquality().hash(showNsfw),
-      const DeepCollectionEquality().hash(captchaUuid),
-      const DeepCollectionEquality().hash(captchaAnswer),
-      const DeepCollectionEquality().hash(honeypot),
-      const DeepCollectionEquality().hash(answer));
+  int get hashCode => Object.hash(runtimeType, username, email, password,
+      passwordVerify, showNsfw, captchaUuid, captchaAnswer, honeypot, answer);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_RegisterCopyWith<_$_Register> get copyWith =>
       __$$_RegisterCopyWithImpl<_$_Register>(this, _$identity);
 
@@ -485,16 +487,18 @@ mixin _$GetCaptcha {
 abstract class $GetCaptchaCopyWith<$Res> {
   factory $GetCaptchaCopyWith(
           GetCaptcha value, $Res Function(GetCaptcha) then) =
-      _$GetCaptchaCopyWithImpl<$Res>;
+      _$GetCaptchaCopyWithImpl<$Res, GetCaptcha>;
 }
 
 /// @nodoc
-class _$GetCaptchaCopyWithImpl<$Res> implements $GetCaptchaCopyWith<$Res> {
+class _$GetCaptchaCopyWithImpl<$Res, $Val extends GetCaptcha>
+    implements $GetCaptchaCopyWith<$Res> {
   _$GetCaptchaCopyWithImpl(this._value, this._then);
 
-  final GetCaptcha _value;
   // ignore: unused_field
-  final $Res Function(GetCaptcha) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
@@ -505,14 +509,12 @@ abstract class _$$_GetCaptchaCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_GetCaptchaCopyWithImpl<$Res> extends _$GetCaptchaCopyWithImpl<$Res>
+class __$$_GetCaptchaCopyWithImpl<$Res>
+    extends _$GetCaptchaCopyWithImpl<$Res, _$_GetCaptcha>
     implements _$$_GetCaptchaCopyWith<$Res> {
   __$$_GetCaptchaCopyWithImpl(
       _$_GetCaptcha _value, $Res Function(_$_GetCaptcha) _then)
-      : super(_value, (v) => _then(v as _$_GetCaptcha));
-
-  @override
-  _$_GetCaptcha get _value => super._value as _$_GetCaptcha;
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -593,7 +595,8 @@ mixin _$SaveUserSettings {
 abstract class $SaveUserSettingsCopyWith<$Res> {
   factory $SaveUserSettingsCopyWith(
           SaveUserSettings value, $Res Function(SaveUserSettings) then) =
-      _$SaveUserSettingsCopyWithImpl<$Res>;
+      _$SaveUserSettingsCopyWithImpl<$Res, SaveUserSettings>;
+  @useResult
   $Res call(
       {bool? showNsfw,
       String? theme,
@@ -619,14 +622,16 @@ abstract class $SaveUserSettingsCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SaveUserSettingsCopyWithImpl<$Res>
+class _$SaveUserSettingsCopyWithImpl<$Res, $Val extends SaveUserSettings>
     implements $SaveUserSettingsCopyWith<$Res> {
   _$SaveUserSettingsCopyWithImpl(this._value, this._then);
 
-  final SaveUserSettings _value;
   // ignore: unused_field
-  final $Res Function(SaveUserSettings) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? showNsfw = freezed,
@@ -647,86 +652,86 @@ class _$SaveUserSettingsCopyWithImpl<$Res>
     Object? botAccount = freezed,
     Object? showBotAccounts = freezed,
     Object? showNewPostNotifs = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      showNsfw: showNsfw == freezed
+      showNsfw: freezed == showNsfw
           ? _value.showNsfw
           : showNsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
-      theme: theme == freezed
+      theme: freezed == theme
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
               as String?,
-      defaultSortType: defaultSortType == freezed
+      defaultSortType: freezed == defaultSortType
           ? _value.defaultSortType
           : defaultSortType // ignore: cast_nullable_to_non_nullable
               as SortType?,
-      defaultListingType: defaultListingType == freezed
+      defaultListingType: freezed == defaultListingType
           ? _value.defaultListingType
           : defaultListingType // ignore: cast_nullable_to_non_nullable
               as PostListingType?,
-      lang: lang == freezed
+      lang: freezed == lang
           ? _value.lang
           : lang // ignore: cast_nullable_to_non_nullable
               as String?,
-      avatar: avatar == freezed
+      avatar: freezed == avatar
           ? _value.avatar
           : avatar // ignore: cast_nullable_to_non_nullable
               as String?,
-      banner: banner == freezed
+      banner: freezed == banner
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
-      displayName: displayName == freezed
+      displayName: freezed == displayName
           ? _value.displayName
           : displayName // ignore: cast_nullable_to_non_nullable
               as String?,
-      email: email == freezed
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
-      bio: bio == freezed
+      bio: freezed == bio
           ? _value.bio
           : bio // ignore: cast_nullable_to_non_nullable
               as String?,
-      matrixUserId: matrixUserId == freezed
+      matrixUserId: freezed == matrixUserId
           ? _value.matrixUserId
           : matrixUserId // ignore: cast_nullable_to_non_nullable
               as String?,
-      showAvatars: showAvatars == freezed
+      showAvatars: freezed == showAvatars
           ? _value.showAvatars
           : showAvatars // ignore: cast_nullable_to_non_nullable
               as bool?,
-      showScores: showScores == freezed
+      showScores: freezed == showScores
           ? _value.showScores
           : showScores // ignore: cast_nullable_to_non_nullable
               as bool?,
-      sendNotificationsToEmail: sendNotificationsToEmail == freezed
+      sendNotificationsToEmail: freezed == sendNotificationsToEmail
           ? _value.sendNotificationsToEmail
           : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
               as bool?,
-      showReadPosts: showReadPosts == freezed
+      showReadPosts: freezed == showReadPosts
           ? _value.showReadPosts
           : showReadPosts // ignore: cast_nullable_to_non_nullable
               as bool?,
-      botAccount: botAccount == freezed
+      botAccount: freezed == botAccount
           ? _value.botAccount
           : botAccount // ignore: cast_nullable_to_non_nullable
               as bool?,
-      showBotAccounts: showBotAccounts == freezed
+      showBotAccounts: freezed == showBotAccounts
           ? _value.showBotAccounts
           : showBotAccounts // ignore: cast_nullable_to_non_nullable
               as bool?,
-      showNewPostNotifs: showNewPostNotifs == freezed
+      showNewPostNotifs: freezed == showNewPostNotifs
           ? _value.showNewPostNotifs
           : showNewPostNotifs // ignore: cast_nullable_to_non_nullable
               as bool?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -737,6 +742,7 @@ abstract class _$$_SaveUserSettingsCopyWith<$Res>
           _$_SaveUserSettings value, $Res Function(_$_SaveUserSettings) then) =
       __$$_SaveUserSettingsCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {bool? showNsfw,
       String? theme,
@@ -763,15 +769,13 @@ abstract class _$$_SaveUserSettingsCopyWith<$Res>
 
 /// @nodoc
 class __$$_SaveUserSettingsCopyWithImpl<$Res>
-    extends _$SaveUserSettingsCopyWithImpl<$Res>
+    extends _$SaveUserSettingsCopyWithImpl<$Res, _$_SaveUserSettings>
     implements _$$_SaveUserSettingsCopyWith<$Res> {
   __$$_SaveUserSettingsCopyWithImpl(
       _$_SaveUserSettings _value, $Res Function(_$_SaveUserSettings) _then)
-      : super(_value, (v) => _then(v as _$_SaveUserSettings));
+      : super(_value, _then);
 
-  @override
-  _$_SaveUserSettings get _value => super._value as _$_SaveUserSettings;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? showNsfw = freezed,
@@ -792,82 +796,82 @@ class __$$_SaveUserSettingsCopyWithImpl<$Res>
     Object? botAccount = freezed,
     Object? showBotAccounts = freezed,
     Object? showNewPostNotifs = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_$_SaveUserSettings(
-      showNsfw: showNsfw == freezed
+      showNsfw: freezed == showNsfw
           ? _value.showNsfw
           : showNsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
-      theme: theme == freezed
+      theme: freezed == theme
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
               as String?,
-      defaultSortType: defaultSortType == freezed
+      defaultSortType: freezed == defaultSortType
           ? _value.defaultSortType
           : defaultSortType // ignore: cast_nullable_to_non_nullable
               as SortType?,
-      defaultListingType: defaultListingType == freezed
+      defaultListingType: freezed == defaultListingType
           ? _value.defaultListingType
           : defaultListingType // ignore: cast_nullable_to_non_nullable
               as PostListingType?,
-      lang: lang == freezed
+      lang: freezed == lang
           ? _value.lang
           : lang // ignore: cast_nullable_to_non_nullable
               as String?,
-      avatar: avatar == freezed
+      avatar: freezed == avatar
           ? _value.avatar
           : avatar // ignore: cast_nullable_to_non_nullable
               as String?,
-      banner: banner == freezed
+      banner: freezed == banner
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
-      displayName: displayName == freezed
+      displayName: freezed == displayName
           ? _value.displayName
           : displayName // ignore: cast_nullable_to_non_nullable
               as String?,
-      email: email == freezed
+      email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
-      bio: bio == freezed
+      bio: freezed == bio
           ? _value.bio
           : bio // ignore: cast_nullable_to_non_nullable
               as String?,
-      matrixUserId: matrixUserId == freezed
+      matrixUserId: freezed == matrixUserId
           ? _value.matrixUserId
           : matrixUserId // ignore: cast_nullable_to_non_nullable
               as String?,
-      showAvatars: showAvatars == freezed
+      showAvatars: freezed == showAvatars
           ? _value.showAvatars
           : showAvatars // ignore: cast_nullable_to_non_nullable
               as bool?,
-      showScores: showScores == freezed
+      showScores: freezed == showScores
           ? _value.showScores
           : showScores // ignore: cast_nullable_to_non_nullable
               as bool?,
-      sendNotificationsToEmail: sendNotificationsToEmail == freezed
+      sendNotificationsToEmail: freezed == sendNotificationsToEmail
           ? _value.sendNotificationsToEmail
           : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
               as bool?,
-      showReadPosts: showReadPosts == freezed
+      showReadPosts: freezed == showReadPosts
           ? _value.showReadPosts
           : showReadPosts // ignore: cast_nullable_to_non_nullable
               as bool?,
-      botAccount: botAccount == freezed
+      botAccount: freezed == botAccount
           ? _value.botAccount
           : botAccount // ignore: cast_nullable_to_non_nullable
               as bool?,
-      showBotAccounts: showBotAccounts == freezed
+      showBotAccounts: freezed == showBotAccounts
           ? _value.showBotAccounts
           : showBotAccounts // ignore: cast_nullable_to_non_nullable
               as bool?,
-      showNewPostNotifs: showNewPostNotifs == freezed
+      showNewPostNotifs: freezed == showNewPostNotifs
           ? _value.showNewPostNotifs
           : showNewPostNotifs // ignore: cast_nullable_to_non_nullable
               as bool?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -957,65 +961,68 @@ class _$_SaveUserSettings extends _SaveUserSettings {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SaveUserSettings &&
-            const DeepCollectionEquality().equals(other.showNsfw, showNsfw) &&
-            const DeepCollectionEquality().equals(other.theme, theme) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultSortType, defaultSortType) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultListingType, defaultListingType) &&
-            const DeepCollectionEquality().equals(other.lang, lang) &&
-            const DeepCollectionEquality().equals(other.avatar, avatar) &&
-            const DeepCollectionEquality().equals(other.banner, banner) &&
-            const DeepCollectionEquality()
-                .equals(other.displayName, displayName) &&
-            const DeepCollectionEquality().equals(other.email, email) &&
-            const DeepCollectionEquality().equals(other.bio, bio) &&
-            const DeepCollectionEquality()
-                .equals(other.matrixUserId, matrixUserId) &&
-            const DeepCollectionEquality()
-                .equals(other.showAvatars, showAvatars) &&
-            const DeepCollectionEquality()
-                .equals(other.showScores, showScores) &&
-            const DeepCollectionEquality().equals(
-                other.sendNotificationsToEmail, sendNotificationsToEmail) &&
-            const DeepCollectionEquality()
-                .equals(other.showReadPosts, showReadPosts) &&
-            const DeepCollectionEquality()
-                .equals(other.botAccount, botAccount) &&
-            const DeepCollectionEquality()
-                .equals(other.showBotAccounts, showBotAccounts) &&
-            const DeepCollectionEquality()
-                .equals(other.showNewPostNotifs, showNewPostNotifs) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.showNsfw, showNsfw) ||
+                other.showNsfw == showNsfw) &&
+            (identical(other.theme, theme) || other.theme == theme) &&
+            (identical(other.defaultSortType, defaultSortType) ||
+                other.defaultSortType == defaultSortType) &&
+            (identical(other.defaultListingType, defaultListingType) ||
+                other.defaultListingType == defaultListingType) &&
+            (identical(other.lang, lang) || other.lang == lang) &&
+            (identical(other.avatar, avatar) || other.avatar == avatar) &&
+            (identical(other.banner, banner) || other.banner == banner) &&
+            (identical(other.displayName, displayName) ||
+                other.displayName == displayName) &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.bio, bio) || other.bio == bio) &&
+            (identical(other.matrixUserId, matrixUserId) ||
+                other.matrixUserId == matrixUserId) &&
+            (identical(other.showAvatars, showAvatars) ||
+                other.showAvatars == showAvatars) &&
+            (identical(other.showScores, showScores) ||
+                other.showScores == showScores) &&
+            (identical(
+                    other.sendNotificationsToEmail, sendNotificationsToEmail) ||
+                other.sendNotificationsToEmail == sendNotificationsToEmail) &&
+            (identical(other.showReadPosts, showReadPosts) ||
+                other.showReadPosts == showReadPosts) &&
+            (identical(other.botAccount, botAccount) ||
+                other.botAccount == botAccount) &&
+            (identical(other.showBotAccounts, showBotAccounts) ||
+                other.showBotAccounts == showBotAccounts) &&
+            (identical(other.showNewPostNotifs, showNewPostNotifs) ||
+                other.showNewPostNotifs == showNewPostNotifs) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(showNsfw),
-        const DeepCollectionEquality().hash(theme),
-        const DeepCollectionEquality().hash(defaultSortType),
-        const DeepCollectionEquality().hash(defaultListingType),
-        const DeepCollectionEquality().hash(lang),
-        const DeepCollectionEquality().hash(avatar),
-        const DeepCollectionEquality().hash(banner),
-        const DeepCollectionEquality().hash(displayName),
-        const DeepCollectionEquality().hash(email),
-        const DeepCollectionEquality().hash(bio),
-        const DeepCollectionEquality().hash(matrixUserId),
-        const DeepCollectionEquality().hash(showAvatars),
-        const DeepCollectionEquality().hash(showScores),
-        const DeepCollectionEquality().hash(sendNotificationsToEmail),
-        const DeepCollectionEquality().hash(showReadPosts),
-        const DeepCollectionEquality().hash(botAccount),
-        const DeepCollectionEquality().hash(showBotAccounts),
-        const DeepCollectionEquality().hash(showNewPostNotifs),
-        const DeepCollectionEquality().hash(auth)
+        showNsfw,
+        theme,
+        defaultSortType,
+        defaultListingType,
+        lang,
+        avatar,
+        banner,
+        displayName,
+        email,
+        bio,
+        matrixUserId,
+        showAvatars,
+        showScores,
+        sendNotificationsToEmail,
+        showReadPosts,
+        botAccount,
+        showBotAccounts,
+        showNewPostNotifs,
+        auth
       ]);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SaveUserSettingsCopyWith<_$_SaveUserSettings> get copyWith =>
       __$$_SaveUserSettingsCopyWithImpl<_$_SaveUserSettings>(this, _$identity);
 
@@ -1122,7 +1129,8 @@ mixin _$ChangePassword {
 abstract class $ChangePasswordCopyWith<$Res> {
   factory $ChangePasswordCopyWith(
           ChangePassword value, $Res Function(ChangePassword) then) =
-      _$ChangePasswordCopyWithImpl<$Res>;
+      _$ChangePasswordCopyWithImpl<$Res, ChangePassword>;
+  @useResult
   $Res call(
       {String newPassword,
       String newPasswordVerify,
@@ -1131,39 +1139,41 @@ abstract class $ChangePasswordCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ChangePasswordCopyWithImpl<$Res>
+class _$ChangePasswordCopyWithImpl<$Res, $Val extends ChangePassword>
     implements $ChangePasswordCopyWith<$Res> {
   _$ChangePasswordCopyWithImpl(this._value, this._then);
 
-  final ChangePassword _value;
   // ignore: unused_field
-  final $Res Function(ChangePassword) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? newPassword = freezed,
-    Object? newPasswordVerify = freezed,
-    Object? oldPassword = freezed,
-    Object? auth = freezed,
+    Object? newPassword = null,
+    Object? newPasswordVerify = null,
+    Object? oldPassword = null,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      newPassword: newPassword == freezed
+      newPassword: null == newPassword
           ? _value.newPassword
           : newPassword // ignore: cast_nullable_to_non_nullable
               as String,
-      newPasswordVerify: newPasswordVerify == freezed
+      newPasswordVerify: null == newPasswordVerify
           ? _value.newPasswordVerify
           : newPasswordVerify // ignore: cast_nullable_to_non_nullable
               as String,
-      oldPassword: oldPassword == freezed
+      oldPassword: null == oldPassword
           ? _value.oldPassword
           : oldPassword // ignore: cast_nullable_to_non_nullable
               as String,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1174,6 +1184,7 @@ abstract class _$$_ChangePasswordCopyWith<$Res>
           _$_ChangePassword value, $Res Function(_$_ChangePassword) then) =
       __$$_ChangePasswordCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String newPassword,
       String newPasswordVerify,
@@ -1183,36 +1194,34 @@ abstract class _$$_ChangePasswordCopyWith<$Res>
 
 /// @nodoc
 class __$$_ChangePasswordCopyWithImpl<$Res>
-    extends _$ChangePasswordCopyWithImpl<$Res>
+    extends _$ChangePasswordCopyWithImpl<$Res, _$_ChangePassword>
     implements _$$_ChangePasswordCopyWith<$Res> {
   __$$_ChangePasswordCopyWithImpl(
       _$_ChangePassword _value, $Res Function(_$_ChangePassword) _then)
-      : super(_value, (v) => _then(v as _$_ChangePassword));
+      : super(_value, _then);
 
-  @override
-  _$_ChangePassword get _value => super._value as _$_ChangePassword;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? newPassword = freezed,
-    Object? newPasswordVerify = freezed,
-    Object? oldPassword = freezed,
-    Object? auth = freezed,
+    Object? newPassword = null,
+    Object? newPasswordVerify = null,
+    Object? oldPassword = null,
+    Object? auth = null,
   }) {
     return _then(_$_ChangePassword(
-      newPassword: newPassword == freezed
+      newPassword: null == newPassword
           ? _value.newPassword
           : newPassword // ignore: cast_nullable_to_non_nullable
               as String,
-      newPasswordVerify: newPasswordVerify == freezed
+      newPasswordVerify: null == newPasswordVerify
           ? _value.newPasswordVerify
           : newPasswordVerify // ignore: cast_nullable_to_non_nullable
               as String,
-      oldPassword: oldPassword == freezed
+      oldPassword: null == oldPassword
           ? _value.oldPassword
           : oldPassword // ignore: cast_nullable_to_non_nullable
               as String,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1253,26 +1262,23 @@ class _$_ChangePassword extends _ChangePassword {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ChangePassword &&
-            const DeepCollectionEquality()
-                .equals(other.newPassword, newPassword) &&
-            const DeepCollectionEquality()
-                .equals(other.newPasswordVerify, newPasswordVerify) &&
-            const DeepCollectionEquality()
-                .equals(other.oldPassword, oldPassword) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.newPassword, newPassword) ||
+                other.newPassword == newPassword) &&
+            (identical(other.newPasswordVerify, newPasswordVerify) ||
+                other.newPasswordVerify == newPasswordVerify) &&
+            (identical(other.oldPassword, oldPassword) ||
+                other.oldPassword == oldPassword) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(newPassword),
-      const DeepCollectionEquality().hash(newPasswordVerify),
-      const DeepCollectionEquality().hash(oldPassword),
-      const DeepCollectionEquality().hash(auth));
+      runtimeType, newPassword, newPasswordVerify, oldPassword, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ChangePasswordCopyWith<_$_ChangePassword> get copyWith =>
       __$$_ChangePasswordCopyWithImpl<_$_ChangePassword>(this, _$identity);
 
@@ -1334,7 +1340,8 @@ mixin _$GetPersonDetails {
 abstract class $GetPersonDetailsCopyWith<$Res> {
   factory $GetPersonDetailsCopyWith(
           GetPersonDetails value, $Res Function(GetPersonDetails) then) =
-      _$GetPersonDetailsCopyWithImpl<$Res>;
+      _$GetPersonDetailsCopyWithImpl<$Res, GetPersonDetails>;
+  @useResult
   $Res call(
       {int? personId,
       String? username,
@@ -1347,14 +1354,16 @@ abstract class $GetPersonDetailsCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$GetPersonDetailsCopyWithImpl<$Res>
+class _$GetPersonDetailsCopyWithImpl<$Res, $Val extends GetPersonDetails>
     implements $GetPersonDetailsCopyWith<$Res> {
   _$GetPersonDetailsCopyWithImpl(this._value, this._then);
 
-  final GetPersonDetails _value;
   // ignore: unused_field
-  final $Res Function(GetPersonDetails) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? personId = freezed,
@@ -1367,39 +1376,39 @@ class _$GetPersonDetailsCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      personId: personId == freezed
+      personId: freezed == personId
           ? _value.personId
           : personId // ignore: cast_nullable_to_non_nullable
               as int?,
-      username: username == freezed
+      username: freezed == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String?,
-      sort: sort == freezed
+      sort: freezed == sort
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
               as SortType?,
-      page: page == freezed
+      page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as int?,
-      limit: limit == freezed
+      limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      communityId: communityId == freezed
+      communityId: freezed == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int?,
-      savedOnly: savedOnly == freezed
+      savedOnly: freezed == savedOnly
           ? _value.savedOnly
           : savedOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
-      auth: auth == freezed
+      auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1410,6 +1419,7 @@ abstract class _$$_GetPersonDetailsCopyWith<$Res>
           _$_GetPersonDetails value, $Res Function(_$_GetPersonDetails) then) =
       __$$_GetPersonDetailsCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int? personId,
       String? username,
@@ -1423,15 +1433,13 @@ abstract class _$$_GetPersonDetailsCopyWith<$Res>
 
 /// @nodoc
 class __$$_GetPersonDetailsCopyWithImpl<$Res>
-    extends _$GetPersonDetailsCopyWithImpl<$Res>
+    extends _$GetPersonDetailsCopyWithImpl<$Res, _$_GetPersonDetails>
     implements _$$_GetPersonDetailsCopyWith<$Res> {
   __$$_GetPersonDetailsCopyWithImpl(
       _$_GetPersonDetails _value, $Res Function(_$_GetPersonDetails) _then)
-      : super(_value, (v) => _then(v as _$_GetPersonDetails));
+      : super(_value, _then);
 
-  @override
-  _$_GetPersonDetails get _value => super._value as _$_GetPersonDetails;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? personId = freezed,
@@ -1444,35 +1452,35 @@ class __$$_GetPersonDetailsCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_$_GetPersonDetails(
-      personId: personId == freezed
+      personId: freezed == personId
           ? _value.personId
           : personId // ignore: cast_nullable_to_non_nullable
               as int?,
-      username: username == freezed
+      username: freezed == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String?,
-      sort: sort == freezed
+      sort: freezed == sort
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
               as SortType?,
-      page: page == freezed
+      page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as int?,
-      limit: limit == freezed
+      limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      communityId: communityId == freezed
+      communityId: freezed == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int?,
-      savedOnly: savedOnly == freezed
+      savedOnly: freezed == savedOnly
           ? _value.savedOnly
           : savedOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
-      auth: auth == freezed
+      auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -1525,32 +1533,28 @@ class _$_GetPersonDetails extends _GetPersonDetails {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_GetPersonDetails &&
-            const DeepCollectionEquality().equals(other.personId, personId) &&
-            const DeepCollectionEquality().equals(other.username, username) &&
-            const DeepCollectionEquality().equals(other.sort, sort) &&
-            const DeepCollectionEquality().equals(other.page, page) &&
-            const DeepCollectionEquality().equals(other.limit, limit) &&
-            const DeepCollectionEquality()
-                .equals(other.communityId, communityId) &&
-            const DeepCollectionEquality().equals(other.savedOnly, savedOnly) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.personId, personId) ||
+                other.personId == personId) &&
+            (identical(other.username, username) ||
+                other.username == username) &&
+            (identical(other.sort, sort) || other.sort == sort) &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.savedOnly, savedOnly) ||
+                other.savedOnly == savedOnly) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(personId),
-      const DeepCollectionEquality().hash(username),
-      const DeepCollectionEquality().hash(sort),
-      const DeepCollectionEquality().hash(page),
-      const DeepCollectionEquality().hash(limit),
-      const DeepCollectionEquality().hash(communityId),
-      const DeepCollectionEquality().hash(savedOnly),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, personId, username, sort, page,
+      limit, communityId, savedOnly, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_GetPersonDetailsCopyWith<_$_GetPersonDetails> get copyWith =>
       __$$_GetPersonDetailsCopyWithImpl<_$_GetPersonDetails>(this, _$identity);
 
@@ -1617,29 +1621,32 @@ mixin _$MarkAllAsRead {
 abstract class $MarkAllAsReadCopyWith<$Res> {
   factory $MarkAllAsReadCopyWith(
           MarkAllAsRead value, $Res Function(MarkAllAsRead) then) =
-      _$MarkAllAsReadCopyWithImpl<$Res>;
+      _$MarkAllAsReadCopyWithImpl<$Res, MarkAllAsRead>;
+  @useResult
   $Res call({String auth});
 }
 
 /// @nodoc
-class _$MarkAllAsReadCopyWithImpl<$Res>
+class _$MarkAllAsReadCopyWithImpl<$Res, $Val extends MarkAllAsRead>
     implements $MarkAllAsReadCopyWith<$Res> {
   _$MarkAllAsReadCopyWithImpl(this._value, this._then);
 
-  final MarkAllAsRead _value;
   // ignore: unused_field
-  final $Res Function(MarkAllAsRead) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1650,26 +1657,25 @@ abstract class _$$_MarkAllAsReadCopyWith<$Res>
           _$_MarkAllAsRead value, $Res Function(_$_MarkAllAsRead) then) =
       __$$_MarkAllAsReadCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String auth});
 }
 
 /// @nodoc
 class __$$_MarkAllAsReadCopyWithImpl<$Res>
-    extends _$MarkAllAsReadCopyWithImpl<$Res>
+    extends _$MarkAllAsReadCopyWithImpl<$Res, _$_MarkAllAsRead>
     implements _$$_MarkAllAsReadCopyWith<$Res> {
   __$$_MarkAllAsReadCopyWithImpl(
       _$_MarkAllAsRead _value, $Res Function(_$_MarkAllAsRead) _then)
-      : super(_value, (v) => _then(v as _$_MarkAllAsRead));
+      : super(_value, _then);
 
-  @override
-  _$_MarkAllAsRead get _value => super._value as _$_MarkAllAsRead;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_$_MarkAllAsRead(
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1699,16 +1705,16 @@ class _$_MarkAllAsRead extends _MarkAllAsRead {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MarkAllAsRead &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_MarkAllAsReadCopyWith<_$_MarkAllAsRead> get copyWith =>
       __$$_MarkAllAsReadCopyWithImpl<_$_MarkAllAsRead>(this, _$identity);
 
@@ -1754,38 +1760,42 @@ mixin _$AddAdmin {
 /// @nodoc
 abstract class $AddAdminCopyWith<$Res> {
   factory $AddAdminCopyWith(AddAdmin value, $Res Function(AddAdmin) then) =
-      _$AddAdminCopyWithImpl<$Res>;
+      _$AddAdminCopyWithImpl<$Res, AddAdmin>;
+  @useResult
   $Res call({int personId, bool added, String auth});
 }
 
 /// @nodoc
-class _$AddAdminCopyWithImpl<$Res> implements $AddAdminCopyWith<$Res> {
+class _$AddAdminCopyWithImpl<$Res, $Val extends AddAdmin>
+    implements $AddAdminCopyWith<$Res> {
   _$AddAdminCopyWithImpl(this._value, this._then);
 
-  final AddAdmin _value;
   // ignore: unused_field
-  final $Res Function(AddAdmin) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? personId = freezed,
-    Object? added = freezed,
-    Object? auth = freezed,
+    Object? personId = null,
+    Object? added = null,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      personId: personId == freezed
+      personId: null == personId
           ? _value.personId
           : personId // ignore: cast_nullable_to_non_nullable
               as int,
-      added: added == freezed
+      added: null == added
           ? _value.added
           : added // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1795,35 +1805,35 @@ abstract class _$$_AddAdminCopyWith<$Res> implements $AddAdminCopyWith<$Res> {
           _$_AddAdmin value, $Res Function(_$_AddAdmin) then) =
       __$$_AddAdminCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int personId, bool added, String auth});
 }
 
 /// @nodoc
-class __$$_AddAdminCopyWithImpl<$Res> extends _$AddAdminCopyWithImpl<$Res>
+class __$$_AddAdminCopyWithImpl<$Res>
+    extends _$AddAdminCopyWithImpl<$Res, _$_AddAdmin>
     implements _$$_AddAdminCopyWith<$Res> {
   __$$_AddAdminCopyWithImpl(
       _$_AddAdmin _value, $Res Function(_$_AddAdmin) _then)
-      : super(_value, (v) => _then(v as _$_AddAdmin));
+      : super(_value, _then);
 
-  @override
-  _$_AddAdmin get _value => super._value as _$_AddAdmin;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? personId = freezed,
-    Object? added = freezed,
-    Object? auth = freezed,
+    Object? personId = null,
+    Object? added = null,
+    Object? auth = null,
   }) {
     return _then(_$_AddAdmin(
-      personId: personId == freezed
+      personId: null == personId
           ? _value.personId
           : personId // ignore: cast_nullable_to_non_nullable
               as int,
-      added: added == freezed
+      added: null == added
           ? _value.added
           : added // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1859,21 +1869,19 @@ class _$_AddAdmin extends _AddAdmin {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_AddAdmin &&
-            const DeepCollectionEquality().equals(other.personId, personId) &&
-            const DeepCollectionEquality().equals(other.added, added) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.personId, personId) ||
+                other.personId == personId) &&
+            (identical(other.added, added) || other.added == added) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(personId),
-      const DeepCollectionEquality().hash(added),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, personId, added, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_AddAdminCopyWith<_$_AddAdmin> get copyWith =>
       __$$_AddAdminCopyWithImpl<_$_AddAdmin>(this, _$identity);
 
@@ -1928,7 +1936,8 @@ mixin _$BanPerson {
 /// @nodoc
 abstract class $BanPersonCopyWith<$Res> {
   factory $BanPersonCopyWith(BanPerson value, $Res Function(BanPerson) then) =
-      _$BanPersonCopyWithImpl<$Res>;
+      _$BanPersonCopyWithImpl<$Res, BanPerson>;
+  @useResult
   $Res call(
       {int personId,
       bool ban,
@@ -1939,48 +1948,51 @@ abstract class $BanPersonCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$BanPersonCopyWithImpl<$Res> implements $BanPersonCopyWith<$Res> {
+class _$BanPersonCopyWithImpl<$Res, $Val extends BanPerson>
+    implements $BanPersonCopyWith<$Res> {
   _$BanPersonCopyWithImpl(this._value, this._then);
 
-  final BanPerson _value;
   // ignore: unused_field
-  final $Res Function(BanPerson) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? personId = freezed,
-    Object? ban = freezed,
+    Object? personId = null,
+    Object? ban = null,
     Object? removeData = freezed,
     Object? reason = freezed,
     Object? expires = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      personId: personId == freezed
+      personId: null == personId
           ? _value.personId
           : personId // ignore: cast_nullable_to_non_nullable
               as int,
-      ban: ban == freezed
+      ban: null == ban
           ? _value.ban
           : ban // ignore: cast_nullable_to_non_nullable
               as bool,
-      removeData: removeData == freezed
+      removeData: freezed == removeData
           ? _value.removeData
           : removeData // ignore: cast_nullable_to_non_nullable
               as bool?,
-      reason: reason == freezed
+      reason: freezed == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String?,
-      expires: expires == freezed
+      expires: freezed == expires
           ? _value.expires
           : expires // ignore: cast_nullable_to_non_nullable
               as int?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1990,6 +2002,7 @@ abstract class _$$_BanPersonCopyWith<$Res> implements $BanPersonCopyWith<$Res> {
           _$_BanPerson value, $Res Function(_$_BanPerson) then) =
       __$$_BanPersonCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int personId,
       bool ban,
@@ -2000,46 +2013,45 @@ abstract class _$$_BanPersonCopyWith<$Res> implements $BanPersonCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_BanPersonCopyWithImpl<$Res> extends _$BanPersonCopyWithImpl<$Res>
+class __$$_BanPersonCopyWithImpl<$Res>
+    extends _$BanPersonCopyWithImpl<$Res, _$_BanPerson>
     implements _$$_BanPersonCopyWith<$Res> {
   __$$_BanPersonCopyWithImpl(
       _$_BanPerson _value, $Res Function(_$_BanPerson) _then)
-      : super(_value, (v) => _then(v as _$_BanPerson));
+      : super(_value, _then);
 
-  @override
-  _$_BanPerson get _value => super._value as _$_BanPerson;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? personId = freezed,
-    Object? ban = freezed,
+    Object? personId = null,
+    Object? ban = null,
     Object? removeData = freezed,
     Object? reason = freezed,
     Object? expires = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_$_BanPerson(
-      personId: personId == freezed
+      personId: null == personId
           ? _value.personId
           : personId // ignore: cast_nullable_to_non_nullable
               as int,
-      ban: ban == freezed
+      ban: null == ban
           ? _value.ban
           : ban // ignore: cast_nullable_to_non_nullable
               as bool,
-      removeData: removeData == freezed
+      removeData: freezed == removeData
           ? _value.removeData
           : removeData // ignore: cast_nullable_to_non_nullable
               as bool?,
-      reason: reason == freezed
+      reason: freezed == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String?,
-      expires: expires == freezed
+      expires: freezed == expires
           ? _value.expires
           : expires // ignore: cast_nullable_to_non_nullable
               as int?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -2086,28 +2098,24 @@ class _$_BanPerson extends _BanPerson {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_BanPerson &&
-            const DeepCollectionEquality().equals(other.personId, personId) &&
-            const DeepCollectionEquality().equals(other.ban, ban) &&
-            const DeepCollectionEquality()
-                .equals(other.removeData, removeData) &&
-            const DeepCollectionEquality().equals(other.reason, reason) &&
-            const DeepCollectionEquality().equals(other.expires, expires) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.personId, personId) ||
+                other.personId == personId) &&
+            (identical(other.ban, ban) || other.ban == ban) &&
+            (identical(other.removeData, removeData) ||
+                other.removeData == removeData) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.expires, expires) || other.expires == expires) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(personId),
-      const DeepCollectionEquality().hash(ban),
-      const DeepCollectionEquality().hash(removeData),
-      const DeepCollectionEquality().hash(reason),
-      const DeepCollectionEquality().hash(expires),
-      const DeepCollectionEquality().hash(auth));
+      runtimeType, personId, ban, removeData, reason, expires, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_BanPersonCopyWith<_$_BanPerson> get copyWith =>
       __$$_BanPersonCopyWithImpl<_$_BanPerson>(this, _$identity);
 
@@ -2172,49 +2180,53 @@ mixin _$GetReplies {
 abstract class $GetRepliesCopyWith<$Res> {
   factory $GetRepliesCopyWith(
           GetReplies value, $Res Function(GetReplies) then) =
-      _$GetRepliesCopyWithImpl<$Res>;
+      _$GetRepliesCopyWithImpl<$Res, GetReplies>;
+  @useResult
   $Res call(
       {SortType? sort, int? page, int? limit, bool? unreadOnly, String auth});
 }
 
 /// @nodoc
-class _$GetRepliesCopyWithImpl<$Res> implements $GetRepliesCopyWith<$Res> {
+class _$GetRepliesCopyWithImpl<$Res, $Val extends GetReplies>
+    implements $GetRepliesCopyWith<$Res> {
   _$GetRepliesCopyWithImpl(this._value, this._then);
 
-  final GetReplies _value;
   // ignore: unused_field
-  final $Res Function(GetReplies) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? sort = freezed,
     Object? page = freezed,
     Object? limit = freezed,
     Object? unreadOnly = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      sort: sort == freezed
+      sort: freezed == sort
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
               as SortType?,
-      page: page == freezed
+      page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as int?,
-      limit: limit == freezed
+      limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      unreadOnly: unreadOnly == freezed
+      unreadOnly: freezed == unreadOnly
           ? _value.unreadOnly
           : unreadOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -2225,46 +2237,46 @@ abstract class _$$_GetRepliesCopyWith<$Res>
           _$_GetReplies value, $Res Function(_$_GetReplies) then) =
       __$$_GetRepliesCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {SortType? sort, int? page, int? limit, bool? unreadOnly, String auth});
 }
 
 /// @nodoc
-class __$$_GetRepliesCopyWithImpl<$Res> extends _$GetRepliesCopyWithImpl<$Res>
+class __$$_GetRepliesCopyWithImpl<$Res>
+    extends _$GetRepliesCopyWithImpl<$Res, _$_GetReplies>
     implements _$$_GetRepliesCopyWith<$Res> {
   __$$_GetRepliesCopyWithImpl(
       _$_GetReplies _value, $Res Function(_$_GetReplies) _then)
-      : super(_value, (v) => _then(v as _$_GetReplies));
+      : super(_value, _then);
 
-  @override
-  _$_GetReplies get _value => super._value as _$_GetReplies;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? sort = freezed,
     Object? page = freezed,
     Object? limit = freezed,
     Object? unreadOnly = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_$_GetReplies(
-      sort: sort == freezed
+      sort: freezed == sort
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
               as SortType?,
-      page: page == freezed
+      page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as int?,
-      limit: limit == freezed
+      limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      unreadOnly: unreadOnly == freezed
+      unreadOnly: freezed == unreadOnly
           ? _value.unreadOnly
           : unreadOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -2304,26 +2316,22 @@ class _$_GetReplies extends _GetReplies {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_GetReplies &&
-            const DeepCollectionEquality().equals(other.sort, sort) &&
-            const DeepCollectionEquality().equals(other.page, page) &&
-            const DeepCollectionEquality().equals(other.limit, limit) &&
-            const DeepCollectionEquality()
-                .equals(other.unreadOnly, unreadOnly) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.sort, sort) || other.sort == sort) &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.unreadOnly, unreadOnly) ||
+                other.unreadOnly == unreadOnly) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(sort),
-      const DeepCollectionEquality().hash(page),
-      const DeepCollectionEquality().hash(limit),
-      const DeepCollectionEquality().hash(unreadOnly),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode =>
+      Object.hash(runtimeType, sort, page, limit, unreadOnly, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_GetRepliesCopyWith<_$_GetReplies> get copyWith =>
       __$$_GetRepliesCopyWithImpl<_$_GetReplies>(this, _$identity);
 
@@ -2385,50 +2393,53 @@ mixin _$GetPersonMentions {
 abstract class $GetPersonMentionsCopyWith<$Res> {
   factory $GetPersonMentionsCopyWith(
           GetPersonMentions value, $Res Function(GetPersonMentions) then) =
-      _$GetPersonMentionsCopyWithImpl<$Res>;
+      _$GetPersonMentionsCopyWithImpl<$Res, GetPersonMentions>;
+  @useResult
   $Res call(
       {SortType? sort, int? page, int? limit, bool? unreadOnly, String auth});
 }
 
 /// @nodoc
-class _$GetPersonMentionsCopyWithImpl<$Res>
+class _$GetPersonMentionsCopyWithImpl<$Res, $Val extends GetPersonMentions>
     implements $GetPersonMentionsCopyWith<$Res> {
   _$GetPersonMentionsCopyWithImpl(this._value, this._then);
 
-  final GetPersonMentions _value;
   // ignore: unused_field
-  final $Res Function(GetPersonMentions) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? sort = freezed,
     Object? page = freezed,
     Object? limit = freezed,
     Object? unreadOnly = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      sort: sort == freezed
+      sort: freezed == sort
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
               as SortType?,
-      page: page == freezed
+      page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as int?,
-      limit: limit == freezed
+      limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      unreadOnly: unreadOnly == freezed
+      unreadOnly: freezed == unreadOnly
           ? _value.unreadOnly
           : unreadOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -2439,47 +2450,46 @@ abstract class _$$_GetPersonMentionsCopyWith<$Res>
           $Res Function(_$_GetPersonMentions) then) =
       __$$_GetPersonMentionsCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {SortType? sort, int? page, int? limit, bool? unreadOnly, String auth});
 }
 
 /// @nodoc
 class __$$_GetPersonMentionsCopyWithImpl<$Res>
-    extends _$GetPersonMentionsCopyWithImpl<$Res>
+    extends _$GetPersonMentionsCopyWithImpl<$Res, _$_GetPersonMentions>
     implements _$$_GetPersonMentionsCopyWith<$Res> {
   __$$_GetPersonMentionsCopyWithImpl(
       _$_GetPersonMentions _value, $Res Function(_$_GetPersonMentions) _then)
-      : super(_value, (v) => _then(v as _$_GetPersonMentions));
+      : super(_value, _then);
 
-  @override
-  _$_GetPersonMentions get _value => super._value as _$_GetPersonMentions;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? sort = freezed,
     Object? page = freezed,
     Object? limit = freezed,
     Object? unreadOnly = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_$_GetPersonMentions(
-      sort: sort == freezed
+      sort: freezed == sort
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
               as SortType?,
-      page: page == freezed
+      page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as int?,
-      limit: limit == freezed
+      limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      unreadOnly: unreadOnly == freezed
+      unreadOnly: freezed == unreadOnly
           ? _value.unreadOnly
           : unreadOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -2519,26 +2529,22 @@ class _$_GetPersonMentions extends _GetPersonMentions {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_GetPersonMentions &&
-            const DeepCollectionEquality().equals(other.sort, sort) &&
-            const DeepCollectionEquality().equals(other.page, page) &&
-            const DeepCollectionEquality().equals(other.limit, limit) &&
-            const DeepCollectionEquality()
-                .equals(other.unreadOnly, unreadOnly) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.sort, sort) || other.sort == sort) &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.unreadOnly, unreadOnly) ||
+                other.unreadOnly == unreadOnly) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(sort),
-      const DeepCollectionEquality().hash(page),
-      const DeepCollectionEquality().hash(limit),
-      const DeepCollectionEquality().hash(unreadOnly),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode =>
+      Object.hash(runtimeType, sort, page, limit, unreadOnly, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_GetPersonMentionsCopyWith<_$_GetPersonMentions> get copyWith =>
       __$$_GetPersonMentionsCopyWithImpl<_$_GetPersonMentions>(
           this, _$identity);
@@ -2600,39 +2606,43 @@ mixin _$MarkPersonMentionAsRead {
 abstract class $MarkPersonMentionAsReadCopyWith<$Res> {
   factory $MarkPersonMentionAsReadCopyWith(MarkPersonMentionAsRead value,
           $Res Function(MarkPersonMentionAsRead) then) =
-      _$MarkPersonMentionAsReadCopyWithImpl<$Res>;
+      _$MarkPersonMentionAsReadCopyWithImpl<$Res, MarkPersonMentionAsRead>;
+  @useResult
   $Res call({int personMentionId, bool read, String auth});
 }
 
 /// @nodoc
-class _$MarkPersonMentionAsReadCopyWithImpl<$Res>
+class _$MarkPersonMentionAsReadCopyWithImpl<$Res,
+        $Val extends MarkPersonMentionAsRead>
     implements $MarkPersonMentionAsReadCopyWith<$Res> {
   _$MarkPersonMentionAsReadCopyWithImpl(this._value, this._then);
 
-  final MarkPersonMentionAsRead _value;
   // ignore: unused_field
-  final $Res Function(MarkPersonMentionAsRead) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? personMentionId = freezed,
-    Object? read = freezed,
-    Object? auth = freezed,
+    Object? personMentionId = null,
+    Object? read = null,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      personMentionId: personMentionId == freezed
+      personMentionId: null == personMentionId
           ? _value.personMentionId
           : personMentionId // ignore: cast_nullable_to_non_nullable
               as int,
-      read: read == freezed
+      read: null == read
           ? _value.read
           : read // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -2643,37 +2653,36 @@ abstract class _$$_MarkPersonMentionAsReadCopyWith<$Res>
           $Res Function(_$_MarkPersonMentionAsRead) then) =
       __$$_MarkPersonMentionAsReadCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int personMentionId, bool read, String auth});
 }
 
 /// @nodoc
 class __$$_MarkPersonMentionAsReadCopyWithImpl<$Res>
-    extends _$MarkPersonMentionAsReadCopyWithImpl<$Res>
+    extends _$MarkPersonMentionAsReadCopyWithImpl<$Res,
+        _$_MarkPersonMentionAsRead>
     implements _$$_MarkPersonMentionAsReadCopyWith<$Res> {
   __$$_MarkPersonMentionAsReadCopyWithImpl(_$_MarkPersonMentionAsRead _value,
       $Res Function(_$_MarkPersonMentionAsRead) _then)
-      : super(_value, (v) => _then(v as _$_MarkPersonMentionAsRead));
+      : super(_value, _then);
 
-  @override
-  _$_MarkPersonMentionAsRead get _value =>
-      super._value as _$_MarkPersonMentionAsRead;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? personMentionId = freezed,
-    Object? read = freezed,
-    Object? auth = freezed,
+    Object? personMentionId = null,
+    Object? read = null,
+    Object? auth = null,
   }) {
     return _then(_$_MarkPersonMentionAsRead(
-      personMentionId: personMentionId == freezed
+      personMentionId: null == personMentionId
           ? _value.personMentionId
           : personMentionId // ignore: cast_nullable_to_non_nullable
               as int,
-      read: read == freezed
+      read: null == read
           ? _value.read
           : read // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -2709,22 +2718,19 @@ class _$_MarkPersonMentionAsRead extends _MarkPersonMentionAsRead {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MarkPersonMentionAsRead &&
-            const DeepCollectionEquality()
-                .equals(other.personMentionId, personMentionId) &&
-            const DeepCollectionEquality().equals(other.read, read) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.personMentionId, personMentionId) ||
+                other.personMentionId == personMentionId) &&
+            (identical(other.read, read) || other.read == read) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(personMentionId),
-      const DeepCollectionEquality().hash(read),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, personMentionId, read, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_MarkPersonMentionAsReadCopyWith<_$_MarkPersonMentionAsRead>
       get copyWith =>
           __$$_MarkPersonMentionAsReadCopyWithImpl<_$_MarkPersonMentionAsRead>(
@@ -2779,34 +2785,37 @@ mixin _$DeleteAccount {
 abstract class $DeleteAccountCopyWith<$Res> {
   factory $DeleteAccountCopyWith(
           DeleteAccount value, $Res Function(DeleteAccount) then) =
-      _$DeleteAccountCopyWithImpl<$Res>;
+      _$DeleteAccountCopyWithImpl<$Res, DeleteAccount>;
+  @useResult
   $Res call({String password, String auth});
 }
 
 /// @nodoc
-class _$DeleteAccountCopyWithImpl<$Res>
+class _$DeleteAccountCopyWithImpl<$Res, $Val extends DeleteAccount>
     implements $DeleteAccountCopyWith<$Res> {
   _$DeleteAccountCopyWithImpl(this._value, this._then);
 
-  final DeleteAccount _value;
   // ignore: unused_field
-  final $Res Function(DeleteAccount) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? password = freezed,
-    Object? auth = freezed,
+    Object? password = null,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      password: password == freezed
+      password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -2817,31 +2826,30 @@ abstract class _$$_DeleteAccountCopyWith<$Res>
           _$_DeleteAccount value, $Res Function(_$_DeleteAccount) then) =
       __$$_DeleteAccountCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String password, String auth});
 }
 
 /// @nodoc
 class __$$_DeleteAccountCopyWithImpl<$Res>
-    extends _$DeleteAccountCopyWithImpl<$Res>
+    extends _$DeleteAccountCopyWithImpl<$Res, _$_DeleteAccount>
     implements _$$_DeleteAccountCopyWith<$Res> {
   __$$_DeleteAccountCopyWithImpl(
       _$_DeleteAccount _value, $Res Function(_$_DeleteAccount) _then)
-      : super(_value, (v) => _then(v as _$_DeleteAccount));
+      : super(_value, _then);
 
-  @override
-  _$_DeleteAccount get _value => super._value as _$_DeleteAccount;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? password = freezed,
-    Object? auth = freezed,
+    Object? password = null,
+    Object? auth = null,
   }) {
     return _then(_$_DeleteAccount(
-      password: password == freezed
+      password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -2874,19 +2882,18 @@ class _$_DeleteAccount extends _DeleteAccount {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_DeleteAccount &&
-            const DeepCollectionEquality().equals(other.password, password) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.password, password) ||
+                other.password == password) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(password),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, password, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_DeleteAccountCopyWith<_$_DeleteAccount> get copyWith =>
       __$$_DeleteAccountCopyWithImpl<_$_DeleteAccount>(this, _$identity);
 
@@ -2935,29 +2942,32 @@ mixin _$PasswordReset {
 abstract class $PasswordResetCopyWith<$Res> {
   factory $PasswordResetCopyWith(
           PasswordReset value, $Res Function(PasswordReset) then) =
-      _$PasswordResetCopyWithImpl<$Res>;
+      _$PasswordResetCopyWithImpl<$Res, PasswordReset>;
+  @useResult
   $Res call({String email});
 }
 
 /// @nodoc
-class _$PasswordResetCopyWithImpl<$Res>
+class _$PasswordResetCopyWithImpl<$Res, $Val extends PasswordReset>
     implements $PasswordResetCopyWith<$Res> {
   _$PasswordResetCopyWithImpl(this._value, this._then);
 
-  final PasswordReset _value;
   // ignore: unused_field
-  final $Res Function(PasswordReset) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? email = freezed,
+    Object? email = null,
   }) {
     return _then(_value.copyWith(
-      email: email == freezed
+      email: null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -2968,26 +2978,25 @@ abstract class _$$_PasswordResetCopyWith<$Res>
           _$_PasswordReset value, $Res Function(_$_PasswordReset) then) =
       __$$_PasswordResetCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String email});
 }
 
 /// @nodoc
 class __$$_PasswordResetCopyWithImpl<$Res>
-    extends _$PasswordResetCopyWithImpl<$Res>
+    extends _$PasswordResetCopyWithImpl<$Res, _$_PasswordReset>
     implements _$$_PasswordResetCopyWith<$Res> {
   __$$_PasswordResetCopyWithImpl(
       _$_PasswordReset _value, $Res Function(_$_PasswordReset) _then)
-      : super(_value, (v) => _then(v as _$_PasswordReset));
+      : super(_value, _then);
 
-  @override
-  _$_PasswordReset get _value => super._value as _$_PasswordReset;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? email = freezed,
+    Object? email = null,
   }) {
     return _then(_$_PasswordReset(
-      email: email == freezed
+      email: null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String,
@@ -3017,16 +3026,16 @@ class _$_PasswordReset extends _PasswordReset {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PasswordReset &&
-            const DeepCollectionEquality().equals(other.email, email));
+            (identical(other.email, email) || other.email == email));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(email));
+  int get hashCode => Object.hash(runtimeType, email);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PasswordResetCopyWith<_$_PasswordReset> get copyWith =>
       __$$_PasswordResetCopyWithImpl<_$_PasswordReset>(this, _$identity);
 
@@ -3074,39 +3083,42 @@ mixin _$PasswordChange {
 abstract class $PasswordChangeCopyWith<$Res> {
   factory $PasswordChangeCopyWith(
           PasswordChange value, $Res Function(PasswordChange) then) =
-      _$PasswordChangeCopyWithImpl<$Res>;
+      _$PasswordChangeCopyWithImpl<$Res, PasswordChange>;
+  @useResult
   $Res call({String token, String password, String passwordVerify});
 }
 
 /// @nodoc
-class _$PasswordChangeCopyWithImpl<$Res>
+class _$PasswordChangeCopyWithImpl<$Res, $Val extends PasswordChange>
     implements $PasswordChangeCopyWith<$Res> {
   _$PasswordChangeCopyWithImpl(this._value, this._then);
 
-  final PasswordChange _value;
   // ignore: unused_field
-  final $Res Function(PasswordChange) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? token = freezed,
-    Object? password = freezed,
-    Object? passwordVerify = freezed,
+    Object? token = null,
+    Object? password = null,
+    Object? passwordVerify = null,
   }) {
     return _then(_value.copyWith(
-      token: token == freezed
+      token: null == token
           ? _value.token
           : token // ignore: cast_nullable_to_non_nullable
               as String,
-      password: password == freezed
+      password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
-      passwordVerify: passwordVerify == freezed
+      passwordVerify: null == passwordVerify
           ? _value.passwordVerify
           : passwordVerify // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -3117,36 +3129,35 @@ abstract class _$$_PasswordChangeCopyWith<$Res>
           _$_PasswordChange value, $Res Function(_$_PasswordChange) then) =
       __$$_PasswordChangeCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String token, String password, String passwordVerify});
 }
 
 /// @nodoc
 class __$$_PasswordChangeCopyWithImpl<$Res>
-    extends _$PasswordChangeCopyWithImpl<$Res>
+    extends _$PasswordChangeCopyWithImpl<$Res, _$_PasswordChange>
     implements _$$_PasswordChangeCopyWith<$Res> {
   __$$_PasswordChangeCopyWithImpl(
       _$_PasswordChange _value, $Res Function(_$_PasswordChange) _then)
-      : super(_value, (v) => _then(v as _$_PasswordChange));
+      : super(_value, _then);
 
-  @override
-  _$_PasswordChange get _value => super._value as _$_PasswordChange;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? token = freezed,
-    Object? password = freezed,
-    Object? passwordVerify = freezed,
+    Object? token = null,
+    Object? password = null,
+    Object? passwordVerify = null,
   }) {
     return _then(_$_PasswordChange(
-      token: token == freezed
+      token: null == token
           ? _value.token
           : token // ignore: cast_nullable_to_non_nullable
               as String,
-      password: password == freezed
+      password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
-      passwordVerify: passwordVerify == freezed
+      passwordVerify: null == passwordVerify
           ? _value.passwordVerify
           : passwordVerify // ignore: cast_nullable_to_non_nullable
               as String,
@@ -3184,22 +3195,20 @@ class _$_PasswordChange extends _PasswordChange {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PasswordChange &&
-            const DeepCollectionEquality().equals(other.token, token) &&
-            const DeepCollectionEquality().equals(other.password, password) &&
-            const DeepCollectionEquality()
-                .equals(other.passwordVerify, passwordVerify));
+            (identical(other.token, token) || other.token == token) &&
+            (identical(other.password, password) ||
+                other.password == password) &&
+            (identical(other.passwordVerify, passwordVerify) ||
+                other.passwordVerify == passwordVerify));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(token),
-      const DeepCollectionEquality().hash(password),
-      const DeepCollectionEquality().hash(passwordVerify));
+  int get hashCode => Object.hash(runtimeType, token, password, passwordVerify);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PasswordChangeCopyWith<_$_PasswordChange> get copyWith =>
       __$$_PasswordChangeCopyWithImpl<_$_PasswordChange>(this, _$identity);
 
@@ -3253,39 +3262,43 @@ mixin _$CreatePrivateMessage {
 abstract class $CreatePrivateMessageCopyWith<$Res> {
   factory $CreatePrivateMessageCopyWith(CreatePrivateMessage value,
           $Res Function(CreatePrivateMessage) then) =
-      _$CreatePrivateMessageCopyWithImpl<$Res>;
+      _$CreatePrivateMessageCopyWithImpl<$Res, CreatePrivateMessage>;
+  @useResult
   $Res call({String content, int recipientId, String auth});
 }
 
 /// @nodoc
-class _$CreatePrivateMessageCopyWithImpl<$Res>
+class _$CreatePrivateMessageCopyWithImpl<$Res,
+        $Val extends CreatePrivateMessage>
     implements $CreatePrivateMessageCopyWith<$Res> {
   _$CreatePrivateMessageCopyWithImpl(this._value, this._then);
 
-  final CreatePrivateMessage _value;
   // ignore: unused_field
-  final $Res Function(CreatePrivateMessage) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? content = freezed,
-    Object? recipientId = freezed,
-    Object? auth = freezed,
+    Object? content = null,
+    Object? recipientId = null,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      content: content == freezed
+      content: null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as String,
-      recipientId: recipientId == freezed
+      recipientId: null == recipientId
           ? _value.recipientId
           : recipientId // ignore: cast_nullable_to_non_nullable
               as int,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -3296,36 +3309,35 @@ abstract class _$$_CreatePrivateMessageCopyWith<$Res>
           $Res Function(_$_CreatePrivateMessage) then) =
       __$$_CreatePrivateMessageCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String content, int recipientId, String auth});
 }
 
 /// @nodoc
 class __$$_CreatePrivateMessageCopyWithImpl<$Res>
-    extends _$CreatePrivateMessageCopyWithImpl<$Res>
+    extends _$CreatePrivateMessageCopyWithImpl<$Res, _$_CreatePrivateMessage>
     implements _$$_CreatePrivateMessageCopyWith<$Res> {
   __$$_CreatePrivateMessageCopyWithImpl(_$_CreatePrivateMessage _value,
       $Res Function(_$_CreatePrivateMessage) _then)
-      : super(_value, (v) => _then(v as _$_CreatePrivateMessage));
+      : super(_value, _then);
 
-  @override
-  _$_CreatePrivateMessage get _value => super._value as _$_CreatePrivateMessage;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? content = freezed,
-    Object? recipientId = freezed,
-    Object? auth = freezed,
+    Object? content = null,
+    Object? recipientId = null,
+    Object? auth = null,
   }) {
     return _then(_$_CreatePrivateMessage(
-      content: content == freezed
+      content: null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as String,
-      recipientId: recipientId == freezed
+      recipientId: null == recipientId
           ? _value.recipientId
           : recipientId // ignore: cast_nullable_to_non_nullable
               as int,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -3361,22 +3373,19 @@ class _$_CreatePrivateMessage extends _CreatePrivateMessage {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CreatePrivateMessage &&
-            const DeepCollectionEquality().equals(other.content, content) &&
-            const DeepCollectionEquality()
-                .equals(other.recipientId, recipientId) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.content, content) || other.content == content) &&
+            (identical(other.recipientId, recipientId) ||
+                other.recipientId == recipientId) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(content),
-      const DeepCollectionEquality().hash(recipientId),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, content, recipientId, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CreatePrivateMessageCopyWith<_$_CreatePrivateMessage> get copyWith =>
       __$$_CreatePrivateMessageCopyWithImpl<_$_CreatePrivateMessage>(
           this, _$identity);
@@ -3431,39 +3440,42 @@ mixin _$EditPrivateMessage {
 abstract class $EditPrivateMessageCopyWith<$Res> {
   factory $EditPrivateMessageCopyWith(
           EditPrivateMessage value, $Res Function(EditPrivateMessage) then) =
-      _$EditPrivateMessageCopyWithImpl<$Res>;
+      _$EditPrivateMessageCopyWithImpl<$Res, EditPrivateMessage>;
+  @useResult
   $Res call({int privateMessageId, String content, String auth});
 }
 
 /// @nodoc
-class _$EditPrivateMessageCopyWithImpl<$Res>
+class _$EditPrivateMessageCopyWithImpl<$Res, $Val extends EditPrivateMessage>
     implements $EditPrivateMessageCopyWith<$Res> {
   _$EditPrivateMessageCopyWithImpl(this._value, this._then);
 
-  final EditPrivateMessage _value;
   // ignore: unused_field
-  final $Res Function(EditPrivateMessage) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? privateMessageId = freezed,
-    Object? content = freezed,
-    Object? auth = freezed,
+    Object? privateMessageId = null,
+    Object? content = null,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      privateMessageId: privateMessageId == freezed
+      privateMessageId: null == privateMessageId
           ? _value.privateMessageId
           : privateMessageId // ignore: cast_nullable_to_non_nullable
               as int,
-      content: content == freezed
+      content: null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as String,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -3474,36 +3486,35 @@ abstract class _$$_EditPrivateMessageCopyWith<$Res>
           $Res Function(_$_EditPrivateMessage) then) =
       __$$_EditPrivateMessageCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int privateMessageId, String content, String auth});
 }
 
 /// @nodoc
 class __$$_EditPrivateMessageCopyWithImpl<$Res>
-    extends _$EditPrivateMessageCopyWithImpl<$Res>
+    extends _$EditPrivateMessageCopyWithImpl<$Res, _$_EditPrivateMessage>
     implements _$$_EditPrivateMessageCopyWith<$Res> {
   __$$_EditPrivateMessageCopyWithImpl(
       _$_EditPrivateMessage _value, $Res Function(_$_EditPrivateMessage) _then)
-      : super(_value, (v) => _then(v as _$_EditPrivateMessage));
+      : super(_value, _then);
 
-  @override
-  _$_EditPrivateMessage get _value => super._value as _$_EditPrivateMessage;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? privateMessageId = freezed,
-    Object? content = freezed,
-    Object? auth = freezed,
+    Object? privateMessageId = null,
+    Object? content = null,
+    Object? auth = null,
   }) {
     return _then(_$_EditPrivateMessage(
-      privateMessageId: privateMessageId == freezed
+      privateMessageId: null == privateMessageId
           ? _value.privateMessageId
           : privateMessageId // ignore: cast_nullable_to_non_nullable
               as int,
-      content: content == freezed
+      content: null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as String,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -3541,22 +3552,19 @@ class _$_EditPrivateMessage extends _EditPrivateMessage {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_EditPrivateMessage &&
-            const DeepCollectionEquality()
-                .equals(other.privateMessageId, privateMessageId) &&
-            const DeepCollectionEquality().equals(other.content, content) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.privateMessageId, privateMessageId) ||
+                other.privateMessageId == privateMessageId) &&
+            (identical(other.content, content) || other.content == content) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(privateMessageId),
-      const DeepCollectionEquality().hash(content),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, privateMessageId, content, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_EditPrivateMessageCopyWith<_$_EditPrivateMessage> get copyWith =>
       __$$_EditPrivateMessageCopyWithImpl<_$_EditPrivateMessage>(
           this, _$identity);
@@ -3611,39 +3619,43 @@ mixin _$DeletePrivateMessage {
 abstract class $DeletePrivateMessageCopyWith<$Res> {
   factory $DeletePrivateMessageCopyWith(DeletePrivateMessage value,
           $Res Function(DeletePrivateMessage) then) =
-      _$DeletePrivateMessageCopyWithImpl<$Res>;
+      _$DeletePrivateMessageCopyWithImpl<$Res, DeletePrivateMessage>;
+  @useResult
   $Res call({int privateMessageId, bool deleted, String auth});
 }
 
 /// @nodoc
-class _$DeletePrivateMessageCopyWithImpl<$Res>
+class _$DeletePrivateMessageCopyWithImpl<$Res,
+        $Val extends DeletePrivateMessage>
     implements $DeletePrivateMessageCopyWith<$Res> {
   _$DeletePrivateMessageCopyWithImpl(this._value, this._then);
 
-  final DeletePrivateMessage _value;
   // ignore: unused_field
-  final $Res Function(DeletePrivateMessage) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? privateMessageId = freezed,
-    Object? deleted = freezed,
-    Object? auth = freezed,
+    Object? privateMessageId = null,
+    Object? deleted = null,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      privateMessageId: privateMessageId == freezed
+      privateMessageId: null == privateMessageId
           ? _value.privateMessageId
           : privateMessageId // ignore: cast_nullable_to_non_nullable
               as int,
-      deleted: deleted == freezed
+      deleted: null == deleted
           ? _value.deleted
           : deleted // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -3654,36 +3666,35 @@ abstract class _$$_DeletePrivateMessageCopyWith<$Res>
           $Res Function(_$_DeletePrivateMessage) then) =
       __$$_DeletePrivateMessageCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int privateMessageId, bool deleted, String auth});
 }
 
 /// @nodoc
 class __$$_DeletePrivateMessageCopyWithImpl<$Res>
-    extends _$DeletePrivateMessageCopyWithImpl<$Res>
+    extends _$DeletePrivateMessageCopyWithImpl<$Res, _$_DeletePrivateMessage>
     implements _$$_DeletePrivateMessageCopyWith<$Res> {
   __$$_DeletePrivateMessageCopyWithImpl(_$_DeletePrivateMessage _value,
       $Res Function(_$_DeletePrivateMessage) _then)
-      : super(_value, (v) => _then(v as _$_DeletePrivateMessage));
+      : super(_value, _then);
 
-  @override
-  _$_DeletePrivateMessage get _value => super._value as _$_DeletePrivateMessage;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? privateMessageId = freezed,
-    Object? deleted = freezed,
-    Object? auth = freezed,
+    Object? privateMessageId = null,
+    Object? deleted = null,
+    Object? auth = null,
   }) {
     return _then(_$_DeletePrivateMessage(
-      privateMessageId: privateMessageId == freezed
+      privateMessageId: null == privateMessageId
           ? _value.privateMessageId
           : privateMessageId // ignore: cast_nullable_to_non_nullable
               as int,
-      deleted: deleted == freezed
+      deleted: null == deleted
           ? _value.deleted
           : deleted // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -3721,22 +3732,19 @@ class _$_DeletePrivateMessage extends _DeletePrivateMessage {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_DeletePrivateMessage &&
-            const DeepCollectionEquality()
-                .equals(other.privateMessageId, privateMessageId) &&
-            const DeepCollectionEquality().equals(other.deleted, deleted) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.privateMessageId, privateMessageId) ||
+                other.privateMessageId == privateMessageId) &&
+            (identical(other.deleted, deleted) || other.deleted == deleted) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(privateMessageId),
-      const DeepCollectionEquality().hash(deleted),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, privateMessageId, deleted, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_DeletePrivateMessageCopyWith<_$_DeletePrivateMessage> get copyWith =>
       __$$_DeletePrivateMessageCopyWithImpl<_$_DeletePrivateMessage>(
           this, _$identity);
@@ -3792,39 +3800,43 @@ mixin _$MarkPrivateMessageAsRead {
 abstract class $MarkPrivateMessageAsReadCopyWith<$Res> {
   factory $MarkPrivateMessageAsReadCopyWith(MarkPrivateMessageAsRead value,
           $Res Function(MarkPrivateMessageAsRead) then) =
-      _$MarkPrivateMessageAsReadCopyWithImpl<$Res>;
+      _$MarkPrivateMessageAsReadCopyWithImpl<$Res, MarkPrivateMessageAsRead>;
+  @useResult
   $Res call({int privateMessageId, bool read, String auth});
 }
 
 /// @nodoc
-class _$MarkPrivateMessageAsReadCopyWithImpl<$Res>
+class _$MarkPrivateMessageAsReadCopyWithImpl<$Res,
+        $Val extends MarkPrivateMessageAsRead>
     implements $MarkPrivateMessageAsReadCopyWith<$Res> {
   _$MarkPrivateMessageAsReadCopyWithImpl(this._value, this._then);
 
-  final MarkPrivateMessageAsRead _value;
   // ignore: unused_field
-  final $Res Function(MarkPrivateMessageAsRead) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? privateMessageId = freezed,
-    Object? read = freezed,
-    Object? auth = freezed,
+    Object? privateMessageId = null,
+    Object? read = null,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      privateMessageId: privateMessageId == freezed
+      privateMessageId: null == privateMessageId
           ? _value.privateMessageId
           : privateMessageId // ignore: cast_nullable_to_non_nullable
               as int,
-      read: read == freezed
+      read: null == read
           ? _value.read
           : read // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -3836,37 +3848,36 @@ abstract class _$$_MarkPrivateMessageAsReadCopyWith<$Res>
           $Res Function(_$_MarkPrivateMessageAsRead) then) =
       __$$_MarkPrivateMessageAsReadCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int privateMessageId, bool read, String auth});
 }
 
 /// @nodoc
 class __$$_MarkPrivateMessageAsReadCopyWithImpl<$Res>
-    extends _$MarkPrivateMessageAsReadCopyWithImpl<$Res>
+    extends _$MarkPrivateMessageAsReadCopyWithImpl<$Res,
+        _$_MarkPrivateMessageAsRead>
     implements _$$_MarkPrivateMessageAsReadCopyWith<$Res> {
   __$$_MarkPrivateMessageAsReadCopyWithImpl(_$_MarkPrivateMessageAsRead _value,
       $Res Function(_$_MarkPrivateMessageAsRead) _then)
-      : super(_value, (v) => _then(v as _$_MarkPrivateMessageAsRead));
+      : super(_value, _then);
 
-  @override
-  _$_MarkPrivateMessageAsRead get _value =>
-      super._value as _$_MarkPrivateMessageAsRead;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? privateMessageId = freezed,
-    Object? read = freezed,
-    Object? auth = freezed,
+    Object? privateMessageId = null,
+    Object? read = null,
+    Object? auth = null,
   }) {
     return _then(_$_MarkPrivateMessageAsRead(
-      privateMessageId: privateMessageId == freezed
+      privateMessageId: null == privateMessageId
           ? _value.privateMessageId
           : privateMessageId // ignore: cast_nullable_to_non_nullable
               as int,
-      read: read == freezed
+      read: null == read
           ? _value.read
           : read // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -3902,22 +3913,19 @@ class _$_MarkPrivateMessageAsRead extends _MarkPrivateMessageAsRead {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MarkPrivateMessageAsRead &&
-            const DeepCollectionEquality()
-                .equals(other.privateMessageId, privateMessageId) &&
-            const DeepCollectionEquality().equals(other.read, read) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.privateMessageId, privateMessageId) ||
+                other.privateMessageId == privateMessageId) &&
+            (identical(other.read, read) || other.read == read) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(privateMessageId),
-      const DeepCollectionEquality().hash(read),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, privateMessageId, read, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_MarkPrivateMessageAsReadCopyWith<_$_MarkPrivateMessageAsRead>
       get copyWith => __$$_MarkPrivateMessageAsReadCopyWithImpl<
           _$_MarkPrivateMessageAsRead>(this, _$identity);
@@ -3973,44 +3981,47 @@ mixin _$GetPrivateMessages {
 abstract class $GetPrivateMessagesCopyWith<$Res> {
   factory $GetPrivateMessagesCopyWith(
           GetPrivateMessages value, $Res Function(GetPrivateMessages) then) =
-      _$GetPrivateMessagesCopyWithImpl<$Res>;
+      _$GetPrivateMessagesCopyWithImpl<$Res, GetPrivateMessages>;
+  @useResult
   $Res call({bool? unreadOnly, int? page, int? limit, String auth});
 }
 
 /// @nodoc
-class _$GetPrivateMessagesCopyWithImpl<$Res>
+class _$GetPrivateMessagesCopyWithImpl<$Res, $Val extends GetPrivateMessages>
     implements $GetPrivateMessagesCopyWith<$Res> {
   _$GetPrivateMessagesCopyWithImpl(this._value, this._then);
 
-  final GetPrivateMessages _value;
   // ignore: unused_field
-  final $Res Function(GetPrivateMessages) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? unreadOnly = freezed,
     Object? page = freezed,
     Object? limit = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      unreadOnly: unreadOnly == freezed
+      unreadOnly: freezed == unreadOnly
           ? _value.unreadOnly
           : unreadOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
-      page: page == freezed
+      page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as int?,
-      limit: limit == freezed
+      limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -4021,41 +4032,40 @@ abstract class _$$_GetPrivateMessagesCopyWith<$Res>
           $Res Function(_$_GetPrivateMessages) then) =
       __$$_GetPrivateMessagesCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({bool? unreadOnly, int? page, int? limit, String auth});
 }
 
 /// @nodoc
 class __$$_GetPrivateMessagesCopyWithImpl<$Res>
-    extends _$GetPrivateMessagesCopyWithImpl<$Res>
+    extends _$GetPrivateMessagesCopyWithImpl<$Res, _$_GetPrivateMessages>
     implements _$$_GetPrivateMessagesCopyWith<$Res> {
   __$$_GetPrivateMessagesCopyWithImpl(
       _$_GetPrivateMessages _value, $Res Function(_$_GetPrivateMessages) _then)
-      : super(_value, (v) => _then(v as _$_GetPrivateMessages));
+      : super(_value, _then);
 
-  @override
-  _$_GetPrivateMessages get _value => super._value as _$_GetPrivateMessages;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? unreadOnly = freezed,
     Object? page = freezed,
     Object? limit = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_$_GetPrivateMessages(
-      unreadOnly: unreadOnly == freezed
+      unreadOnly: freezed == unreadOnly
           ? _value.unreadOnly
           : unreadOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
-      page: page == freezed
+      page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as int?,
-      limit: limit == freezed
+      limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -4093,24 +4103,20 @@ class _$_GetPrivateMessages extends _GetPrivateMessages {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_GetPrivateMessages &&
-            const DeepCollectionEquality()
-                .equals(other.unreadOnly, unreadOnly) &&
-            const DeepCollectionEquality().equals(other.page, page) &&
-            const DeepCollectionEquality().equals(other.limit, limit) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.unreadOnly, unreadOnly) ||
+                other.unreadOnly == unreadOnly) &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(unreadOnly),
-      const DeepCollectionEquality().hash(page),
-      const DeepCollectionEquality().hash(limit),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, unreadOnly, page, limit, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_GetPrivateMessagesCopyWith<_$_GetPrivateMessages> get copyWith =>
       __$$_GetPrivateMessagesCopyWithImpl<_$_GetPrivateMessages>(
           this, _$identity);
@@ -4168,38 +4174,42 @@ mixin _$BlockPerson {
 abstract class $BlockPersonCopyWith<$Res> {
   factory $BlockPersonCopyWith(
           BlockPerson value, $Res Function(BlockPerson) then) =
-      _$BlockPersonCopyWithImpl<$Res>;
+      _$BlockPersonCopyWithImpl<$Res, BlockPerson>;
+  @useResult
   $Res call({int personId, bool block, String auth});
 }
 
 /// @nodoc
-class _$BlockPersonCopyWithImpl<$Res> implements $BlockPersonCopyWith<$Res> {
+class _$BlockPersonCopyWithImpl<$Res, $Val extends BlockPerson>
+    implements $BlockPersonCopyWith<$Res> {
   _$BlockPersonCopyWithImpl(this._value, this._then);
 
-  final BlockPerson _value;
   // ignore: unused_field
-  final $Res Function(BlockPerson) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? personId = freezed,
-    Object? block = freezed,
-    Object? auth = freezed,
+    Object? personId = null,
+    Object? block = null,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      personId: personId == freezed
+      personId: null == personId
           ? _value.personId
           : personId // ignore: cast_nullable_to_non_nullable
               as int,
-      block: block == freezed
+      block: null == block
           ? _value.block
           : block // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -4210,35 +4220,35 @@ abstract class _$$_BlockPersonCopyWith<$Res>
           _$_BlockPerson value, $Res Function(_$_BlockPerson) then) =
       __$$_BlockPersonCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int personId, bool block, String auth});
 }
 
 /// @nodoc
-class __$$_BlockPersonCopyWithImpl<$Res> extends _$BlockPersonCopyWithImpl<$Res>
+class __$$_BlockPersonCopyWithImpl<$Res>
+    extends _$BlockPersonCopyWithImpl<$Res, _$_BlockPerson>
     implements _$$_BlockPersonCopyWith<$Res> {
   __$$_BlockPersonCopyWithImpl(
       _$_BlockPerson _value, $Res Function(_$_BlockPerson) _then)
-      : super(_value, (v) => _then(v as _$_BlockPerson));
+      : super(_value, _then);
 
-  @override
-  _$_BlockPerson get _value => super._value as _$_BlockPerson;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? personId = freezed,
-    Object? block = freezed,
-    Object? auth = freezed,
+    Object? personId = null,
+    Object? block = null,
+    Object? auth = null,
   }) {
     return _then(_$_BlockPerson(
-      personId: personId == freezed
+      personId: null == personId
           ? _value.personId
           : personId // ignore: cast_nullable_to_non_nullable
               as int,
-      block: block == freezed
+      block: null == block
           ? _value.block
           : block // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -4274,21 +4284,19 @@ class _$_BlockPerson extends _BlockPerson {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_BlockPerson &&
-            const DeepCollectionEquality().equals(other.personId, personId) &&
-            const DeepCollectionEquality().equals(other.block, block) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.personId, personId) ||
+                other.personId == personId) &&
+            (identical(other.block, block) || other.block == block) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(personId),
-      const DeepCollectionEquality().hash(block),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, personId, block, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_BlockPersonCopyWith<_$_BlockPerson> get copyWith =>
       __$$_BlockPersonCopyWithImpl<_$_BlockPerson>(this, _$identity);
 
@@ -4340,29 +4348,32 @@ mixin _$GetUnreadCount {
 abstract class $GetUnreadCountCopyWith<$Res> {
   factory $GetUnreadCountCopyWith(
           GetUnreadCount value, $Res Function(GetUnreadCount) then) =
-      _$GetUnreadCountCopyWithImpl<$Res>;
+      _$GetUnreadCountCopyWithImpl<$Res, GetUnreadCount>;
+  @useResult
   $Res call({String auth});
 }
 
 /// @nodoc
-class _$GetUnreadCountCopyWithImpl<$Res>
+class _$GetUnreadCountCopyWithImpl<$Res, $Val extends GetUnreadCount>
     implements $GetUnreadCountCopyWith<$Res> {
   _$GetUnreadCountCopyWithImpl(this._value, this._then);
 
-  final GetUnreadCount _value;
   // ignore: unused_field
-  final $Res Function(GetUnreadCount) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -4373,26 +4384,25 @@ abstract class _$$_GetUnreadCountCopyWith<$Res>
           _$_GetUnreadCount value, $Res Function(_$_GetUnreadCount) then) =
       __$$_GetUnreadCountCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String auth});
 }
 
 /// @nodoc
 class __$$_GetUnreadCountCopyWithImpl<$Res>
-    extends _$GetUnreadCountCopyWithImpl<$Res>
+    extends _$GetUnreadCountCopyWithImpl<$Res, _$_GetUnreadCount>
     implements _$$_GetUnreadCountCopyWith<$Res> {
   __$$_GetUnreadCountCopyWithImpl(
       _$_GetUnreadCount _value, $Res Function(_$_GetUnreadCount) _then)
-      : super(_value, (v) => _then(v as _$_GetUnreadCount));
+      : super(_value, _then);
 
-  @override
-  _$_GetUnreadCount get _value => super._value as _$_GetUnreadCount;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_$_GetUnreadCount(
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -4422,16 +4432,16 @@ class _$_GetUnreadCount extends _GetUnreadCount {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_GetUnreadCount &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_GetUnreadCountCopyWith<_$_GetUnreadCount> get copyWith =>
       __$$_GetUnreadCountCopyWithImpl<_$_GetUnreadCount>(this, _$identity);
 
@@ -4478,34 +4488,37 @@ mixin _$GetReportCount {
 abstract class $GetReportCountCopyWith<$Res> {
   factory $GetReportCountCopyWith(
           GetReportCount value, $Res Function(GetReportCount) then) =
-      _$GetReportCountCopyWithImpl<$Res>;
+      _$GetReportCountCopyWithImpl<$Res, GetReportCount>;
+  @useResult
   $Res call({int? communityId, String auth});
 }
 
 /// @nodoc
-class _$GetReportCountCopyWithImpl<$Res>
+class _$GetReportCountCopyWithImpl<$Res, $Val extends GetReportCount>
     implements $GetReportCountCopyWith<$Res> {
   _$GetReportCountCopyWithImpl(this._value, this._then);
 
-  final GetReportCount _value;
   // ignore: unused_field
-  final $Res Function(GetReportCount) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? communityId = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      communityId: communityId == freezed
+      communityId: freezed == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -4516,31 +4529,30 @@ abstract class _$$_GetReportCountCopyWith<$Res>
           _$_GetReportCount value, $Res Function(_$_GetReportCount) then) =
       __$$_GetReportCountCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int? communityId, String auth});
 }
 
 /// @nodoc
 class __$$_GetReportCountCopyWithImpl<$Res>
-    extends _$GetReportCountCopyWithImpl<$Res>
+    extends _$GetReportCountCopyWithImpl<$Res, _$_GetReportCount>
     implements _$$_GetReportCountCopyWith<$Res> {
   __$$_GetReportCountCopyWithImpl(
       _$_GetReportCount _value, $Res Function(_$_GetReportCount) _then)
-      : super(_value, (v) => _then(v as _$_GetReportCount));
+      : super(_value, _then);
 
-  @override
-  _$_GetReportCount get _value => super._value as _$_GetReportCount;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? communityId = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_$_GetReportCount(
-      communityId: communityId == freezed
+      communityId: freezed == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -4572,20 +4584,18 @@ class _$_GetReportCount extends _GetReportCount {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_GetReportCount &&
-            const DeepCollectionEquality()
-                .equals(other.communityId, communityId) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(communityId),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, communityId, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_GetReportCountCopyWith<_$_GetReportCount> get copyWith =>
       __$$_GetReportCountCopyWithImpl<_$_GetReportCount>(this, _$identity);
 
@@ -4633,29 +4643,32 @@ mixin _$GetBannedPersons {
 abstract class $GetBannedPersonsCopyWith<$Res> {
   factory $GetBannedPersonsCopyWith(
           GetBannedPersons value, $Res Function(GetBannedPersons) then) =
-      _$GetBannedPersonsCopyWithImpl<$Res>;
+      _$GetBannedPersonsCopyWithImpl<$Res, GetBannedPersons>;
+  @useResult
   $Res call({String auth});
 }
 
 /// @nodoc
-class _$GetBannedPersonsCopyWithImpl<$Res>
+class _$GetBannedPersonsCopyWithImpl<$Res, $Val extends GetBannedPersons>
     implements $GetBannedPersonsCopyWith<$Res> {
   _$GetBannedPersonsCopyWithImpl(this._value, this._then);
 
-  final GetBannedPersons _value;
   // ignore: unused_field
-  final $Res Function(GetBannedPersons) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -4666,26 +4679,25 @@ abstract class _$$_GetBannedPersonsCopyWith<$Res>
           _$_GetBannedPersons value, $Res Function(_$_GetBannedPersons) then) =
       __$$_GetBannedPersonsCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String auth});
 }
 
 /// @nodoc
 class __$$_GetBannedPersonsCopyWithImpl<$Res>
-    extends _$GetBannedPersonsCopyWithImpl<$Res>
+    extends _$GetBannedPersonsCopyWithImpl<$Res, _$_GetBannedPersons>
     implements _$$_GetBannedPersonsCopyWith<$Res> {
   __$$_GetBannedPersonsCopyWithImpl(
       _$_GetBannedPersons _value, $Res Function(_$_GetBannedPersons) _then)
-      : super(_value, (v) => _then(v as _$_GetBannedPersons));
+      : super(_value, _then);
 
-  @override
-  _$_GetBannedPersons get _value => super._value as _$_GetBannedPersons;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_$_GetBannedPersons(
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -4715,16 +4727,16 @@ class _$_GetBannedPersons extends _GetBannedPersons {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_GetBannedPersons &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_GetBannedPersonsCopyWith<_$_GetBannedPersons> get copyWith =>
       __$$_GetBannedPersonsCopyWithImpl<_$_GetBannedPersons>(this, _$identity);
 
@@ -4770,28 +4782,32 @@ mixin _$VerifyEmail {
 abstract class $VerifyEmailCopyWith<$Res> {
   factory $VerifyEmailCopyWith(
           VerifyEmail value, $Res Function(VerifyEmail) then) =
-      _$VerifyEmailCopyWithImpl<$Res>;
+      _$VerifyEmailCopyWithImpl<$Res, VerifyEmail>;
+  @useResult
   $Res call({String token});
 }
 
 /// @nodoc
-class _$VerifyEmailCopyWithImpl<$Res> implements $VerifyEmailCopyWith<$Res> {
+class _$VerifyEmailCopyWithImpl<$Res, $Val extends VerifyEmail>
+    implements $VerifyEmailCopyWith<$Res> {
   _$VerifyEmailCopyWithImpl(this._value, this._then);
 
-  final VerifyEmail _value;
   // ignore: unused_field
-  final $Res Function(VerifyEmail) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? token = freezed,
+    Object? token = null,
   }) {
     return _then(_value.copyWith(
-      token: token == freezed
+      token: null == token
           ? _value.token
           : token // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -4802,25 +4818,25 @@ abstract class _$$_VerifyEmailCopyWith<$Res>
           _$_VerifyEmail value, $Res Function(_$_VerifyEmail) then) =
       __$$_VerifyEmailCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String token});
 }
 
 /// @nodoc
-class __$$_VerifyEmailCopyWithImpl<$Res> extends _$VerifyEmailCopyWithImpl<$Res>
+class __$$_VerifyEmailCopyWithImpl<$Res>
+    extends _$VerifyEmailCopyWithImpl<$Res, _$_VerifyEmail>
     implements _$$_VerifyEmailCopyWith<$Res> {
   __$$_VerifyEmailCopyWithImpl(
       _$_VerifyEmail _value, $Res Function(_$_VerifyEmail) _then)
-      : super(_value, (v) => _then(v as _$_VerifyEmail));
+      : super(_value, _then);
 
-  @override
-  _$_VerifyEmail get _value => super._value as _$_VerifyEmail;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? token = freezed,
+    Object? token = null,
   }) {
     return _then(_$_VerifyEmail(
-      token: token == freezed
+      token: null == token
           ? _value.token
           : token // ignore: cast_nullable_to_non_nullable
               as String,
@@ -4850,16 +4866,16 @@ class _$_VerifyEmail extends _VerifyEmail {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_VerifyEmail &&
-            const DeepCollectionEquality().equals(other.token, token));
+            (identical(other.token, token) || other.token == token));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(token));
+  int get hashCode => Object.hash(runtimeType, token);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_VerifyEmailCopyWith<_$_VerifyEmail> get copyWith =>
       __$$_VerifyEmailCopyWithImpl<_$_VerifyEmail>(this, _$identity);
 
