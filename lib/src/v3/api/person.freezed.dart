@@ -569,7 +569,7 @@ mixin _$SaveUserSettings {
   SortType? get defaultSortType => throw _privateConstructorUsedError;
   @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
   PostListingType? get defaultListingType => throw _privateConstructorUsedError;
-  String? get lang => throw _privateConstructorUsedError;
+  String? get interfaceLanguage => throw _privateConstructorUsedError;
   String? get avatar => throw _privateConstructorUsedError;
   String? get banner => throw _privateConstructorUsedError;
   String? get displayName => throw _privateConstructorUsedError;
@@ -583,6 +583,7 @@ mixin _$SaveUserSettings {
   bool? get botAccount => throw _privateConstructorUsedError;
   bool? get showBotAccounts => throw _privateConstructorUsedError;
   bool? get showNewPostNotifs => throw _privateConstructorUsedError;
+  List<int>? get discussionLanguages => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -604,7 +605,7 @@ abstract class $SaveUserSettingsCopyWith<$Res> {
           SortType? defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
           PostListingType? defaultListingType,
-      String? lang,
+      String? interfaceLanguage,
       String? avatar,
       String? banner,
       String? displayName,
@@ -618,6 +619,7 @@ abstract class $SaveUserSettingsCopyWith<$Res> {
       bool? botAccount,
       bool? showBotAccounts,
       bool? showNewPostNotifs,
+      List<int>? discussionLanguages,
       String auth});
 }
 
@@ -638,7 +640,7 @@ class _$SaveUserSettingsCopyWithImpl<$Res, $Val extends SaveUserSettings>
     Object? theme = freezed,
     Object? defaultSortType = freezed,
     Object? defaultListingType = freezed,
-    Object? lang = freezed,
+    Object? interfaceLanguage = freezed,
     Object? avatar = freezed,
     Object? banner = freezed,
     Object? displayName = freezed,
@@ -652,6 +654,7 @@ class _$SaveUserSettingsCopyWithImpl<$Res, $Val extends SaveUserSettings>
     Object? botAccount = freezed,
     Object? showBotAccounts = freezed,
     Object? showNewPostNotifs = freezed,
+    Object? discussionLanguages = freezed,
     Object? auth = null,
   }) {
     return _then(_value.copyWith(
@@ -671,9 +674,9 @@ class _$SaveUserSettingsCopyWithImpl<$Res, $Val extends SaveUserSettings>
           ? _value.defaultListingType
           : defaultListingType // ignore: cast_nullable_to_non_nullable
               as PostListingType?,
-      lang: freezed == lang
-          ? _value.lang
-          : lang // ignore: cast_nullable_to_non_nullable
+      interfaceLanguage: freezed == interfaceLanguage
+          ? _value.interfaceLanguage
+          : interfaceLanguage // ignore: cast_nullable_to_non_nullable
               as String?,
       avatar: freezed == avatar
           ? _value.avatar
@@ -727,6 +730,10 @@ class _$SaveUserSettingsCopyWithImpl<$Res, $Val extends SaveUserSettings>
           ? _value.showNewPostNotifs
           : showNewPostNotifs // ignore: cast_nullable_to_non_nullable
               as bool?,
+      discussionLanguages: freezed == discussionLanguages
+          ? _value.discussionLanguages
+          : discussionLanguages // ignore: cast_nullable_to_non_nullable
+              as List<int>?,
       auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -750,7 +757,7 @@ abstract class _$$_SaveUserSettingsCopyWith<$Res>
           SortType? defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
           PostListingType? defaultListingType,
-      String? lang,
+      String? interfaceLanguage,
       String? avatar,
       String? banner,
       String? displayName,
@@ -764,6 +771,7 @@ abstract class _$$_SaveUserSettingsCopyWith<$Res>
       bool? botAccount,
       bool? showBotAccounts,
       bool? showNewPostNotifs,
+      List<int>? discussionLanguages,
       String auth});
 }
 
@@ -782,7 +790,7 @@ class __$$_SaveUserSettingsCopyWithImpl<$Res>
     Object? theme = freezed,
     Object? defaultSortType = freezed,
     Object? defaultListingType = freezed,
-    Object? lang = freezed,
+    Object? interfaceLanguage = freezed,
     Object? avatar = freezed,
     Object? banner = freezed,
     Object? displayName = freezed,
@@ -796,6 +804,7 @@ class __$$_SaveUserSettingsCopyWithImpl<$Res>
     Object? botAccount = freezed,
     Object? showBotAccounts = freezed,
     Object? showNewPostNotifs = freezed,
+    Object? discussionLanguages = freezed,
     Object? auth = null,
   }) {
     return _then(_$_SaveUserSettings(
@@ -815,9 +824,9 @@ class __$$_SaveUserSettingsCopyWithImpl<$Res>
           ? _value.defaultListingType
           : defaultListingType // ignore: cast_nullable_to_non_nullable
               as PostListingType?,
-      lang: freezed == lang
-          ? _value.lang
-          : lang // ignore: cast_nullable_to_non_nullable
+      interfaceLanguage: freezed == interfaceLanguage
+          ? _value.interfaceLanguage
+          : interfaceLanguage // ignore: cast_nullable_to_non_nullable
               as String?,
       avatar: freezed == avatar
           ? _value.avatar
@@ -871,6 +880,10 @@ class __$$_SaveUserSettingsCopyWithImpl<$Res>
           ? _value.showNewPostNotifs
           : showNewPostNotifs // ignore: cast_nullable_to_non_nullable
               as bool?,
+      discussionLanguages: freezed == discussionLanguages
+          ? _value._discussionLanguages
+          : discussionLanguages // ignore: cast_nullable_to_non_nullable
+              as List<int>?,
       auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -890,7 +903,7 @@ class _$_SaveUserSettings extends _SaveUserSettings {
           this.defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
           this.defaultListingType,
-      this.lang,
+      this.interfaceLanguage,
       this.avatar,
       this.banner,
       this.displayName,
@@ -904,8 +917,10 @@ class _$_SaveUserSettings extends _SaveUserSettings {
       this.botAccount,
       this.showBotAccounts,
       this.showNewPostNotifs,
+      final List<int>? discussionLanguages,
       required this.auth})
-      : super._();
+      : _discussionLanguages = discussionLanguages,
+        super._();
 
   factory _$_SaveUserSettings.fromJson(Map<String, dynamic> json) =>
       _$$_SaveUserSettingsFromJson(json);
@@ -921,7 +936,7 @@ class _$_SaveUserSettings extends _SaveUserSettings {
   @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
   final PostListingType? defaultListingType;
   @override
-  final String? lang;
+  final String? interfaceLanguage;
   @override
   final String? avatar;
   @override
@@ -948,12 +963,23 @@ class _$_SaveUserSettings extends _SaveUserSettings {
   final bool? showBotAccounts;
   @override
   final bool? showNewPostNotifs;
+  final List<int>? _discussionLanguages;
+  @override
+  List<int>? get discussionLanguages {
+    final value = _discussionLanguages;
+    if (value == null) return null;
+    if (_discussionLanguages is EqualUnmodifiableListView)
+      return _discussionLanguages;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String auth;
 
   @override
   String toString() {
-    return 'SaveUserSettings(showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, lang: $lang, avatar: $avatar, banner: $banner, displayName: $displayName, email: $email, bio: $bio, matrixUserId: $matrixUserId, showAvatars: $showAvatars, showScores: $showScores, sendNotificationsToEmail: $sendNotificationsToEmail, showReadPosts: $showReadPosts, botAccount: $botAccount, showBotAccounts: $showBotAccounts, showNewPostNotifs: $showNewPostNotifs, auth: $auth)';
+    return 'SaveUserSettings(showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, interfaceLanguage: $interfaceLanguage, avatar: $avatar, banner: $banner, displayName: $displayName, email: $email, bio: $bio, matrixUserId: $matrixUserId, showAvatars: $showAvatars, showScores: $showScores, sendNotificationsToEmail: $sendNotificationsToEmail, showReadPosts: $showReadPosts, botAccount: $botAccount, showBotAccounts: $showBotAccounts, showNewPostNotifs: $showNewPostNotifs, discussionLanguages: $discussionLanguages, auth: $auth)';
   }
 
   @override
@@ -968,7 +994,8 @@ class _$_SaveUserSettings extends _SaveUserSettings {
                 other.defaultSortType == defaultSortType) &&
             (identical(other.defaultListingType, defaultListingType) ||
                 other.defaultListingType == defaultListingType) &&
-            (identical(other.lang, lang) || other.lang == lang) &&
+            (identical(other.interfaceLanguage, interfaceLanguage) ||
+                other.interfaceLanguage == interfaceLanguage) &&
             (identical(other.avatar, avatar) || other.avatar == avatar) &&
             (identical(other.banner, banner) || other.banner == banner) &&
             (identical(other.displayName, displayName) ||
@@ -992,6 +1019,8 @@ class _$_SaveUserSettings extends _SaveUserSettings {
                 other.showBotAccounts == showBotAccounts) &&
             (identical(other.showNewPostNotifs, showNewPostNotifs) ||
                 other.showNewPostNotifs == showNewPostNotifs) &&
+            const DeepCollectionEquality()
+                .equals(other._discussionLanguages, _discussionLanguages) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
@@ -1003,7 +1032,7 @@ class _$_SaveUserSettings extends _SaveUserSettings {
         theme,
         defaultSortType,
         defaultListingType,
-        lang,
+        interfaceLanguage,
         avatar,
         banner,
         displayName,
@@ -1017,6 +1046,7 @@ class _$_SaveUserSettings extends _SaveUserSettings {
         botAccount,
         showBotAccounts,
         showNewPostNotifs,
+        const DeepCollectionEquality().hash(_discussionLanguages),
         auth
       ]);
 
@@ -1042,7 +1072,7 @@ abstract class _SaveUserSettings extends SaveUserSettings {
           final SortType? defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
           final PostListingType? defaultListingType,
-      final String? lang,
+      final String? interfaceLanguage,
       final String? avatar,
       final String? banner,
       final String? displayName,
@@ -1056,6 +1086,7 @@ abstract class _SaveUserSettings extends SaveUserSettings {
       final bool? botAccount,
       final bool? showBotAccounts,
       final bool? showNewPostNotifs,
+      final List<int>? discussionLanguages,
       required final String auth}) = _$_SaveUserSettings;
   const _SaveUserSettings._() : super._();
 
@@ -1073,7 +1104,7 @@ abstract class _SaveUserSettings extends SaveUserSettings {
   @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
   PostListingType? get defaultListingType;
   @override
-  String? get lang;
+  String? get interfaceLanguage;
   @override
   String? get avatar;
   @override
@@ -1100,6 +1131,8 @@ abstract class _SaveUserSettings extends SaveUserSettings {
   bool? get showBotAccounts;
   @override
   bool? get showNewPostNotifs;
+  @override
+  List<int>? get discussionLanguages;
   @override
   String get auth;
   @override

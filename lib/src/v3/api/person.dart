@@ -88,7 +88,7 @@ class SaveUserSettings with _$SaveUserSettings implements LemmyApiQuery<Jwt> {
         SortType? defaultSortType,
     @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
         PostListingType? defaultListingType,
-    String? lang,
+    String? interfaceLanguage,
     String? avatar,
     String? banner,
     String? displayName,
@@ -102,6 +102,7 @@ class SaveUserSettings with _$SaveUserSettings implements LemmyApiQuery<Jwt> {
     bool? botAccount,
     bool? showBotAccounts,
     bool? showNewPostNotifs,
+    List<int>? discussionLanguages,
     required String auth,
   }) = _SaveUserSettings;
 

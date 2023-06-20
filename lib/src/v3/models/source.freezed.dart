@@ -561,7 +561,7 @@ mixin _$LocalUserSettings {
   SortType get defaultSortType => throw _privateConstructorUsedError;
   @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
   PostListingType get defaultListingType => throw _privateConstructorUsedError;
-  String get lang => throw _privateConstructorUsedError;
+  String get interfaceLanguage => throw _privateConstructorUsedError;
   bool get showAvatars => throw _privateConstructorUsedError;
   bool get showScores => throw _privateConstructorUsedError;
   bool get sendNotificationsToEmail => throw _privateConstructorUsedError;
@@ -594,7 +594,7 @@ abstract class $LocalUserSettingsCopyWith<$Res> {
           SortType defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
           PostListingType defaultListingType,
-      String lang,
+      String interfaceLanguage,
       bool showAvatars,
       bool showScores,
       bool sendNotificationsToEmail,
@@ -626,7 +626,7 @@ class _$LocalUserSettingsCopyWithImpl<$Res, $Val extends LocalUserSettings>
     Object? theme = null,
     Object? defaultSortType = null,
     Object? defaultListingType = null,
-    Object? lang = null,
+    Object? interfaceLanguage = null,
     Object? showAvatars = null,
     Object? showScores = null,
     Object? sendNotificationsToEmail = null,
@@ -666,9 +666,9 @@ class _$LocalUserSettingsCopyWithImpl<$Res, $Val extends LocalUserSettings>
           ? _value.defaultListingType
           : defaultListingType // ignore: cast_nullable_to_non_nullable
               as PostListingType,
-      lang: null == lang
-          ? _value.lang
-          : lang // ignore: cast_nullable_to_non_nullable
+      interfaceLanguage: null == interfaceLanguage
+          ? _value.interfaceLanguage
+          : interfaceLanguage // ignore: cast_nullable_to_non_nullable
               as String,
       showAvatars: null == showAvatars
           ? _value.showAvatars
@@ -728,7 +728,7 @@ abstract class _$$_LocalUserSettingsCopyWith<$Res>
           SortType defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
           PostListingType defaultListingType,
-      String lang,
+      String interfaceLanguage,
       bool showAvatars,
       bool showScores,
       bool sendNotificationsToEmail,
@@ -758,7 +758,7 @@ class __$$_LocalUserSettingsCopyWithImpl<$Res>
     Object? theme = null,
     Object? defaultSortType = null,
     Object? defaultListingType = null,
-    Object? lang = null,
+    Object? interfaceLanguage = null,
     Object? showAvatars = null,
     Object? showScores = null,
     Object? sendNotificationsToEmail = null,
@@ -798,9 +798,9 @@ class __$$_LocalUserSettingsCopyWithImpl<$Res>
           ? _value.defaultListingType
           : defaultListingType // ignore: cast_nullable_to_non_nullable
               as PostListingType,
-      lang: null == lang
-          ? _value.lang
-          : lang // ignore: cast_nullable_to_non_nullable
+      interfaceLanguage: null == interfaceLanguage
+          ? _value.interfaceLanguage
+          : interfaceLanguage // ignore: cast_nullable_to_non_nullable
               as String,
       showAvatars: null == showAvatars
           ? _value.showAvatars
@@ -856,7 +856,7 @@ class _$_LocalUserSettings extends _LocalUserSettings {
           required this.defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
           required this.defaultListingType,
-      required this.lang,
+      required this.interfaceLanguage,
       required this.showAvatars,
       required this.showScores,
       required this.sendNotificationsToEmail,
@@ -888,7 +888,7 @@ class _$_LocalUserSettings extends _LocalUserSettings {
   @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
   final PostListingType defaultListingType;
   @override
-  final String lang;
+  final String interfaceLanguage;
   @override
   final bool showAvatars;
   @override
@@ -910,7 +910,7 @@ class _$_LocalUserSettings extends _LocalUserSettings {
 
   @override
   String toString() {
-    return 'LocalUserSettings(id: $id, personId: $personId, email: $email, showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, lang: $lang, showAvatars: $showAvatars, showScores: $showScores, sendNotificationsToEmail: $sendNotificationsToEmail, showReadPosts: $showReadPosts, showBotAccounts: $showBotAccounts, showNewPostNotifs: $showNewPostNotifs, emailVerified: $emailVerified, acceptedApplication: $acceptedApplication, instanceHost: $instanceHost)';
+    return 'LocalUserSettings(id: $id, personId: $personId, email: $email, showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, interfaceLanguage: $interfaceLanguage, showAvatars: $showAvatars, showScores: $showScores, sendNotificationsToEmail: $sendNotificationsToEmail, showReadPosts: $showReadPosts, showBotAccounts: $showBotAccounts, showNewPostNotifs: $showNewPostNotifs, emailVerified: $emailVerified, acceptedApplication: $acceptedApplication, instanceHost: $instanceHost)';
   }
 
   @override
@@ -929,7 +929,8 @@ class _$_LocalUserSettings extends _LocalUserSettings {
                 other.defaultSortType == defaultSortType) &&
             (identical(other.defaultListingType, defaultListingType) ||
                 other.defaultListingType == defaultListingType) &&
-            (identical(other.lang, lang) || other.lang == lang) &&
+            (identical(other.interfaceLanguage, interfaceLanguage) ||
+                other.interfaceLanguage == interfaceLanguage) &&
             (identical(other.showAvatars, showAvatars) ||
                 other.showAvatars == showAvatars) &&
             (identical(other.showScores, showScores) ||
@@ -962,7 +963,7 @@ class _$_LocalUserSettings extends _LocalUserSettings {
       theme,
       defaultSortType,
       defaultListingType,
-      lang,
+      interfaceLanguage,
       showAvatars,
       showScores,
       sendNotificationsToEmail,
@@ -999,7 +1000,7 @@ abstract class _LocalUserSettings extends LocalUserSettings {
           required final SortType defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
           required final PostListingType defaultListingType,
-      required final String lang,
+      required final String interfaceLanguage,
       required final bool showAvatars,
       required final bool showScores,
       required final bool sendNotificationsToEmail,
@@ -1031,7 +1032,7 @@ abstract class _LocalUserSettings extends LocalUserSettings {
   @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
   PostListingType get defaultListingType;
   @override
-  String get lang;
+  String get interfaceLanguage;
   @override
   bool get showAvatars;
   @override
@@ -1065,24 +1066,16 @@ mixin _$Site {
   int get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String? get sidebar => throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
   DateTime get published => throw _privateConstructorUsedError;
   DateTime? get updated => throw _privateConstructorUsedError;
-  bool get enableDownvotes => throw _privateConstructorUsedError;
-  bool get openRegistration => throw _privateConstructorUsedError;
-  bool get enableNsfw => throw _privateConstructorUsedError;
-  bool get communityCreationAdminOnly => throw _privateConstructorUsedError;
   String? get icon => throw _privateConstructorUsedError;
   String? get banner => throw _privateConstructorUsedError;
-  bool get requireEmailVerification => throw _privateConstructorUsedError;
-  bool get requireApplication => throw _privateConstructorUsedError;
-  String? get applicationQuestion => throw _privateConstructorUsedError;
-  bool get privateInstance => throw _privateConstructorUsedError;
-  String get defaultTheme => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
   String get actorId => throw _privateConstructorUsedError;
   String get lastRefreshedAt => throw _privateConstructorUsedError;
   String get inboxUrl => throw _privateConstructorUsedError;
   String get publicKey => throw _privateConstructorUsedError;
+  int get instanceId => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1099,24 +1092,16 @@ abstract class $SiteCopyWith<$Res> {
       {int id,
       String name,
       String? sidebar,
-      String? description,
       DateTime published,
       DateTime? updated,
-      bool enableDownvotes,
-      bool openRegistration,
-      bool enableNsfw,
-      bool communityCreationAdminOnly,
       String? icon,
       String? banner,
-      bool requireEmailVerification,
-      bool requireApplication,
-      String? applicationQuestion,
-      bool privateInstance,
-      String defaultTheme,
+      String? description,
       String actorId,
       String lastRefreshedAt,
       String inboxUrl,
       String publicKey,
+      int instanceId,
       String instanceHost});
 }
 
@@ -1136,24 +1121,16 @@ class _$SiteCopyWithImpl<$Res, $Val extends Site>
     Object? id = null,
     Object? name = null,
     Object? sidebar = freezed,
-    Object? description = freezed,
     Object? published = null,
     Object? updated = freezed,
-    Object? enableDownvotes = null,
-    Object? openRegistration = null,
-    Object? enableNsfw = null,
-    Object? communityCreationAdminOnly = null,
     Object? icon = freezed,
     Object? banner = freezed,
-    Object? requireEmailVerification = null,
-    Object? requireApplication = null,
-    Object? applicationQuestion = freezed,
-    Object? privateInstance = null,
-    Object? defaultTheme = null,
+    Object? description = freezed,
     Object? actorId = null,
     Object? lastRefreshedAt = null,
     Object? inboxUrl = null,
     Object? publicKey = null,
+    Object? instanceId = null,
     Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
@@ -1169,10 +1146,6 @@ class _$SiteCopyWithImpl<$Res, $Val extends Site>
           ? _value.sidebar
           : sidebar // ignore: cast_nullable_to_non_nullable
               as String?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
       published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
@@ -1181,22 +1154,6 @@ class _$SiteCopyWithImpl<$Res, $Val extends Site>
           ? _value.updated
           : updated // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      enableDownvotes: null == enableDownvotes
-          ? _value.enableDownvotes
-          : enableDownvotes // ignore: cast_nullable_to_non_nullable
-              as bool,
-      openRegistration: null == openRegistration
-          ? _value.openRegistration
-          : openRegistration // ignore: cast_nullable_to_non_nullable
-              as bool,
-      enableNsfw: null == enableNsfw
-          ? _value.enableNsfw
-          : enableNsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
-      communityCreationAdminOnly: null == communityCreationAdminOnly
-          ? _value.communityCreationAdminOnly
-          : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
       icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
@@ -1205,26 +1162,10 @@ class _$SiteCopyWithImpl<$Res, $Val extends Site>
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
-      requireEmailVerification: null == requireEmailVerification
-          ? _value.requireEmailVerification
-          : requireEmailVerification // ignore: cast_nullable_to_non_nullable
-              as bool,
-      requireApplication: null == requireApplication
-          ? _value.requireApplication
-          : requireApplication // ignore: cast_nullable_to_non_nullable
-              as bool,
-      applicationQuestion: freezed == applicationQuestion
-          ? _value.applicationQuestion
-          : applicationQuestion // ignore: cast_nullable_to_non_nullable
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      privateInstance: null == privateInstance
-          ? _value.privateInstance
-          : privateInstance // ignore: cast_nullable_to_non_nullable
-              as bool,
-      defaultTheme: null == defaultTheme
-          ? _value.defaultTheme
-          : defaultTheme // ignore: cast_nullable_to_non_nullable
-              as String,
       actorId: null == actorId
           ? _value.actorId
           : actorId // ignore: cast_nullable_to_non_nullable
@@ -1241,6 +1182,10 @@ class _$SiteCopyWithImpl<$Res, $Val extends Site>
           ? _value.publicKey
           : publicKey // ignore: cast_nullable_to_non_nullable
               as String,
+      instanceId: null == instanceId
+          ? _value.instanceId
+          : instanceId // ignore: cast_nullable_to_non_nullable
+              as int,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -1259,24 +1204,16 @@ abstract class _$$_SiteCopyWith<$Res> implements $SiteCopyWith<$Res> {
       {int id,
       String name,
       String? sidebar,
-      String? description,
       DateTime published,
       DateTime? updated,
-      bool enableDownvotes,
-      bool openRegistration,
-      bool enableNsfw,
-      bool communityCreationAdminOnly,
       String? icon,
       String? banner,
-      bool requireEmailVerification,
-      bool requireApplication,
-      String? applicationQuestion,
-      bool privateInstance,
-      String defaultTheme,
+      String? description,
       String actorId,
       String lastRefreshedAt,
       String inboxUrl,
       String publicKey,
+      int instanceId,
       String instanceHost});
 }
 
@@ -1292,24 +1229,16 @@ class __$$_SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res, _$_Site>
     Object? id = null,
     Object? name = null,
     Object? sidebar = freezed,
-    Object? description = freezed,
     Object? published = null,
     Object? updated = freezed,
-    Object? enableDownvotes = null,
-    Object? openRegistration = null,
-    Object? enableNsfw = null,
-    Object? communityCreationAdminOnly = null,
     Object? icon = freezed,
     Object? banner = freezed,
-    Object? requireEmailVerification = null,
-    Object? requireApplication = null,
-    Object? applicationQuestion = freezed,
-    Object? privateInstance = null,
-    Object? defaultTheme = null,
+    Object? description = freezed,
     Object? actorId = null,
     Object? lastRefreshedAt = null,
     Object? inboxUrl = null,
     Object? publicKey = null,
+    Object? instanceId = null,
     Object? instanceHost = null,
   }) {
     return _then(_$_Site(
@@ -1325,10 +1254,6 @@ class __$$_SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res, _$_Site>
           ? _value.sidebar
           : sidebar // ignore: cast_nullable_to_non_nullable
               as String?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
       published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
@@ -1337,22 +1262,6 @@ class __$$_SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res, _$_Site>
           ? _value.updated
           : updated // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      enableDownvotes: null == enableDownvotes
-          ? _value.enableDownvotes
-          : enableDownvotes // ignore: cast_nullable_to_non_nullable
-              as bool,
-      openRegistration: null == openRegistration
-          ? _value.openRegistration
-          : openRegistration // ignore: cast_nullable_to_non_nullable
-              as bool,
-      enableNsfw: null == enableNsfw
-          ? _value.enableNsfw
-          : enableNsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
-      communityCreationAdminOnly: null == communityCreationAdminOnly
-          ? _value.communityCreationAdminOnly
-          : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
       icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
@@ -1361,26 +1270,10 @@ class __$$_SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res, _$_Site>
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
-      requireEmailVerification: null == requireEmailVerification
-          ? _value.requireEmailVerification
-          : requireEmailVerification // ignore: cast_nullable_to_non_nullable
-              as bool,
-      requireApplication: null == requireApplication
-          ? _value.requireApplication
-          : requireApplication // ignore: cast_nullable_to_non_nullable
-              as bool,
-      applicationQuestion: freezed == applicationQuestion
-          ? _value.applicationQuestion
-          : applicationQuestion // ignore: cast_nullable_to_non_nullable
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      privateInstance: null == privateInstance
-          ? _value.privateInstance
-          : privateInstance // ignore: cast_nullable_to_non_nullable
-              as bool,
-      defaultTheme: null == defaultTheme
-          ? _value.defaultTheme
-          : defaultTheme // ignore: cast_nullable_to_non_nullable
-              as String,
       actorId: null == actorId
           ? _value.actorId
           : actorId // ignore: cast_nullable_to_non_nullable
@@ -1397,6 +1290,10 @@ class __$$_SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res, _$_Site>
           ? _value.publicKey
           : publicKey // ignore: cast_nullable_to_non_nullable
               as String,
+      instanceId: null == instanceId
+          ? _value.instanceId
+          : instanceId // ignore: cast_nullable_to_non_nullable
+              as int,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -1413,24 +1310,16 @@ class _$_Site extends _Site {
       {required this.id,
       required this.name,
       this.sidebar,
-      this.description,
       required this.published,
       this.updated,
-      required this.enableDownvotes,
-      required this.openRegistration,
-      required this.enableNsfw,
-      required this.communityCreationAdminOnly,
       this.icon,
       this.banner,
-      required this.requireEmailVerification,
-      required this.requireApplication,
-      this.applicationQuestion,
-      required this.privateInstance,
-      required this.defaultTheme,
+      this.description,
       required this.actorId,
       required this.lastRefreshedAt,
       required this.inboxUrl,
       required this.publicKey,
+      required this.instanceId,
       required this.instanceHost})
       : super._();
 
@@ -1443,33 +1332,15 @@ class _$_Site extends _Site {
   @override
   final String? sidebar;
   @override
-  final String? description;
-  @override
   final DateTime published;
   @override
   final DateTime? updated;
-  @override
-  final bool enableDownvotes;
-  @override
-  final bool openRegistration;
-  @override
-  final bool enableNsfw;
-  @override
-  final bool communityCreationAdminOnly;
   @override
   final String? icon;
   @override
   final String? banner;
   @override
-  final bool requireEmailVerification;
-  @override
-  final bool requireApplication;
-  @override
-  final String? applicationQuestion;
-  @override
-  final bool privateInstance;
-  @override
-  final String defaultTheme;
+  final String? description;
   @override
   final String actorId;
   @override
@@ -1479,11 +1350,13 @@ class _$_Site extends _Site {
   @override
   final String publicKey;
   @override
+  final int instanceId;
+  @override
   final String instanceHost;
 
   @override
   String toString() {
-    return 'Site(id: $id, name: $name, sidebar: $sidebar, description: $description, published: $published, updated: $updated, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, icon: $icon, banner: $banner, requireEmailVerification: $requireEmailVerification, requireApplication: $requireApplication, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, defaultTheme: $defaultTheme, actorId: $actorId, lastRefreshedAt: $lastRefreshedAt, inboxUrl: $inboxUrl, publicKey: $publicKey, instanceHost: $instanceHost)';
+    return 'Site(id: $id, name: $name, sidebar: $sidebar, published: $published, updated: $updated, icon: $icon, banner: $banner, description: $description, actorId: $actorId, lastRefreshedAt: $lastRefreshedAt, inboxUrl: $inboxUrl, publicKey: $publicKey, instanceId: $instanceId, instanceHost: $instanceHost)';
   }
 
   @override
@@ -1494,34 +1367,13 @@ class _$_Site extends _Site {
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.sidebar, sidebar) || other.sidebar == sidebar) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
             (identical(other.published, published) ||
                 other.published == published) &&
             (identical(other.updated, updated) || other.updated == updated) &&
-            (identical(other.enableDownvotes, enableDownvotes) ||
-                other.enableDownvotes == enableDownvotes) &&
-            (identical(other.openRegistration, openRegistration) ||
-                other.openRegistration == openRegistration) &&
-            (identical(other.enableNsfw, enableNsfw) ||
-                other.enableNsfw == enableNsfw) &&
-            (identical(other.communityCreationAdminOnly,
-                    communityCreationAdminOnly) ||
-                other.communityCreationAdminOnly ==
-                    communityCreationAdminOnly) &&
             (identical(other.icon, icon) || other.icon == icon) &&
             (identical(other.banner, banner) || other.banner == banner) &&
-            (identical(
-                    other.requireEmailVerification, requireEmailVerification) ||
-                other.requireEmailVerification == requireEmailVerification) &&
-            (identical(other.requireApplication, requireApplication) ||
-                other.requireApplication == requireApplication) &&
-            (identical(other.applicationQuestion, applicationQuestion) ||
-                other.applicationQuestion == applicationQuestion) &&
-            (identical(other.privateInstance, privateInstance) ||
-                other.privateInstance == privateInstance) &&
-            (identical(other.defaultTheme, defaultTheme) ||
-                other.defaultTheme == defaultTheme) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
             (identical(other.actorId, actorId) || other.actorId == actorId) &&
             (identical(other.lastRefreshedAt, lastRefreshedAt) ||
                 other.lastRefreshedAt == lastRefreshedAt) &&
@@ -1529,37 +1381,30 @@ class _$_Site extends _Site {
                 other.inboxUrl == inboxUrl) &&
             (identical(other.publicKey, publicKey) ||
                 other.publicKey == publicKey) &&
+            (identical(other.instanceId, instanceId) ||
+                other.instanceId == instanceId) &&
             (identical(other.instanceHost, instanceHost) ||
                 other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hashAll([
-        runtimeType,
-        id,
-        name,
-        sidebar,
-        description,
-        published,
-        updated,
-        enableDownvotes,
-        openRegistration,
-        enableNsfw,
-        communityCreationAdminOnly,
-        icon,
-        banner,
-        requireEmailVerification,
-        requireApplication,
-        applicationQuestion,
-        privateInstance,
-        defaultTheme,
-        actorId,
-        lastRefreshedAt,
-        inboxUrl,
-        publicKey,
-        instanceHost
-      ]);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      name,
+      sidebar,
+      published,
+      updated,
+      icon,
+      banner,
+      description,
+      actorId,
+      lastRefreshedAt,
+      inboxUrl,
+      publicKey,
+      instanceId,
+      instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -1580,24 +1425,16 @@ abstract class _Site extends Site {
       {required final int id,
       required final String name,
       final String? sidebar,
-      final String? description,
       required final DateTime published,
       final DateTime? updated,
-      required final bool enableDownvotes,
-      required final bool openRegistration,
-      required final bool enableNsfw,
-      required final bool communityCreationAdminOnly,
       final String? icon,
       final String? banner,
-      required final bool requireEmailVerification,
-      required final bool requireApplication,
-      final String? applicationQuestion,
-      required final bool privateInstance,
-      required final String defaultTheme,
+      final String? description,
       required final String actorId,
       required final String lastRefreshedAt,
       required final String inboxUrl,
       required final String publicKey,
+      required final int instanceId,
       required final String instanceHost}) = _$_Site;
   const _Site._() : super._();
 
@@ -1610,33 +1447,15 @@ abstract class _Site extends Site {
   @override
   String? get sidebar;
   @override
-  String? get description;
-  @override
   DateTime get published;
   @override
   DateTime? get updated;
-  @override
-  bool get enableDownvotes;
-  @override
-  bool get openRegistration;
-  @override
-  bool get enableNsfw;
-  @override
-  bool get communityCreationAdminOnly;
   @override
   String? get icon;
   @override
   String? get banner;
   @override
-  bool get requireEmailVerification;
-  @override
-  bool get requireApplication;
-  @override
-  String? get applicationQuestion;
-  @override
-  bool get privateInstance;
-  @override
-  String get defaultTheme;
+  String? get description;
   @override
   String get actorId;
   @override
@@ -1646,10 +1465,664 @@ abstract class _Site extends Site {
   @override
   String get publicKey;
   @override
+  int get instanceId;
+  @override
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_SiteCopyWith<_$_Site> get copyWith => throw _privateConstructorUsedError;
+}
+
+LocalSite _$LocalSiteFromJson(Map<String, dynamic> json) {
+  return _LocalSite.fromJson(json);
+}
+
+/// @nodoc
+mixin _$LocalSite {
+  int get id => throw _privateConstructorUsedError;
+  int get siteId => throw _privateConstructorUsedError;
+  bool get siteSetup => throw _privateConstructorUsedError;
+  bool get enableDownvotes => throw _privateConstructorUsedError;
+  bool get enableNsfw => throw _privateConstructorUsedError;
+  bool get communityCreationAdminOnly => throw _privateConstructorUsedError;
+  bool get requireEmailVerification => throw _privateConstructorUsedError;
+  String get applicationQuestion => throw _privateConstructorUsedError;
+  bool get privateInstance => throw _privateConstructorUsedError;
+  String get defaultTheme => throw _privateConstructorUsedError;
+  PostListingType get defaultPostListingType =>
+      throw _privateConstructorUsedError;
+  String? get legalInformation => throw _privateConstructorUsedError;
+  bool get hideModlogModNames => throw _privateConstructorUsedError;
+  bool get applicationEmailAdmins => throw _privateConstructorUsedError;
+  String? get slurFilterRegex => throw _privateConstructorUsedError;
+  int get actorNameMaxLength => throw _privateConstructorUsedError;
+  bool get federationEnabled => throw _privateConstructorUsedError;
+  int get federationWorkerCount => throw _privateConstructorUsedError;
+  bool get captchaEnabled => throw _privateConstructorUsedError;
+  String get captchaDifficulty => throw _privateConstructorUsedError;
+  String get published => throw _privateConstructorUsedError;
+  DateTime? get updated => throw _privateConstructorUsedError;
+  String get registrationMode => throw _privateConstructorUsedError;
+  bool get reportsEmailAdmins => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $LocalSiteCopyWith<LocalSite> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $LocalSiteCopyWith<$Res> {
+  factory $LocalSiteCopyWith(LocalSite value, $Res Function(LocalSite) then) =
+      _$LocalSiteCopyWithImpl<$Res, LocalSite>;
+  @useResult
+  $Res call(
+      {int id,
+      int siteId,
+      bool siteSetup,
+      bool enableDownvotes,
+      bool enableNsfw,
+      bool communityCreationAdminOnly,
+      bool requireEmailVerification,
+      String applicationQuestion,
+      bool privateInstance,
+      String defaultTheme,
+      PostListingType defaultPostListingType,
+      String? legalInformation,
+      bool hideModlogModNames,
+      bool applicationEmailAdmins,
+      String? slurFilterRegex,
+      int actorNameMaxLength,
+      bool federationEnabled,
+      int federationWorkerCount,
+      bool captchaEnabled,
+      String captchaDifficulty,
+      String published,
+      DateTime? updated,
+      String registrationMode,
+      bool reportsEmailAdmins});
+}
+
+/// @nodoc
+class _$LocalSiteCopyWithImpl<$Res, $Val extends LocalSite>
+    implements $LocalSiteCopyWith<$Res> {
+  _$LocalSiteCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? siteId = null,
+    Object? siteSetup = null,
+    Object? enableDownvotes = null,
+    Object? enableNsfw = null,
+    Object? communityCreationAdminOnly = null,
+    Object? requireEmailVerification = null,
+    Object? applicationQuestion = null,
+    Object? privateInstance = null,
+    Object? defaultTheme = null,
+    Object? defaultPostListingType = null,
+    Object? legalInformation = freezed,
+    Object? hideModlogModNames = null,
+    Object? applicationEmailAdmins = null,
+    Object? slurFilterRegex = freezed,
+    Object? actorNameMaxLength = null,
+    Object? federationEnabled = null,
+    Object? federationWorkerCount = null,
+    Object? captchaEnabled = null,
+    Object? captchaDifficulty = null,
+    Object? published = null,
+    Object? updated = freezed,
+    Object? registrationMode = null,
+    Object? reportsEmailAdmins = null,
+  }) {
+    return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      siteId: null == siteId
+          ? _value.siteId
+          : siteId // ignore: cast_nullable_to_non_nullable
+              as int,
+      siteSetup: null == siteSetup
+          ? _value.siteSetup
+          : siteSetup // ignore: cast_nullable_to_non_nullable
+              as bool,
+      enableDownvotes: null == enableDownvotes
+          ? _value.enableDownvotes
+          : enableDownvotes // ignore: cast_nullable_to_non_nullable
+              as bool,
+      enableNsfw: null == enableNsfw
+          ? _value.enableNsfw
+          : enableNsfw // ignore: cast_nullable_to_non_nullable
+              as bool,
+      communityCreationAdminOnly: null == communityCreationAdminOnly
+          ? _value.communityCreationAdminOnly
+          : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
+              as bool,
+      requireEmailVerification: null == requireEmailVerification
+          ? _value.requireEmailVerification
+          : requireEmailVerification // ignore: cast_nullable_to_non_nullable
+              as bool,
+      applicationQuestion: null == applicationQuestion
+          ? _value.applicationQuestion
+          : applicationQuestion // ignore: cast_nullable_to_non_nullable
+              as String,
+      privateInstance: null == privateInstance
+          ? _value.privateInstance
+          : privateInstance // ignore: cast_nullable_to_non_nullable
+              as bool,
+      defaultTheme: null == defaultTheme
+          ? _value.defaultTheme
+          : defaultTheme // ignore: cast_nullable_to_non_nullable
+              as String,
+      defaultPostListingType: null == defaultPostListingType
+          ? _value.defaultPostListingType
+          : defaultPostListingType // ignore: cast_nullable_to_non_nullable
+              as PostListingType,
+      legalInformation: freezed == legalInformation
+          ? _value.legalInformation
+          : legalInformation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      hideModlogModNames: null == hideModlogModNames
+          ? _value.hideModlogModNames
+          : hideModlogModNames // ignore: cast_nullable_to_non_nullable
+              as bool,
+      applicationEmailAdmins: null == applicationEmailAdmins
+          ? _value.applicationEmailAdmins
+          : applicationEmailAdmins // ignore: cast_nullable_to_non_nullable
+              as bool,
+      slurFilterRegex: freezed == slurFilterRegex
+          ? _value.slurFilterRegex
+          : slurFilterRegex // ignore: cast_nullable_to_non_nullable
+              as String?,
+      actorNameMaxLength: null == actorNameMaxLength
+          ? _value.actorNameMaxLength
+          : actorNameMaxLength // ignore: cast_nullable_to_non_nullable
+              as int,
+      federationEnabled: null == federationEnabled
+          ? _value.federationEnabled
+          : federationEnabled // ignore: cast_nullable_to_non_nullable
+              as bool,
+      federationWorkerCount: null == federationWorkerCount
+          ? _value.federationWorkerCount
+          : federationWorkerCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      captchaEnabled: null == captchaEnabled
+          ? _value.captchaEnabled
+          : captchaEnabled // ignore: cast_nullable_to_non_nullable
+              as bool,
+      captchaDifficulty: null == captchaDifficulty
+          ? _value.captchaDifficulty
+          : captchaDifficulty // ignore: cast_nullable_to_non_nullable
+              as String,
+      published: null == published
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as String,
+      updated: freezed == updated
+          ? _value.updated
+          : updated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      registrationMode: null == registrationMode
+          ? _value.registrationMode
+          : registrationMode // ignore: cast_nullable_to_non_nullable
+              as String,
+      reportsEmailAdmins: null == reportsEmailAdmins
+          ? _value.reportsEmailAdmins
+          : reportsEmailAdmins // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_LocalSiteCopyWith<$Res> implements $LocalSiteCopyWith<$Res> {
+  factory _$$_LocalSiteCopyWith(
+          _$_LocalSite value, $Res Function(_$_LocalSite) then) =
+      __$$_LocalSiteCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {int id,
+      int siteId,
+      bool siteSetup,
+      bool enableDownvotes,
+      bool enableNsfw,
+      bool communityCreationAdminOnly,
+      bool requireEmailVerification,
+      String applicationQuestion,
+      bool privateInstance,
+      String defaultTheme,
+      PostListingType defaultPostListingType,
+      String? legalInformation,
+      bool hideModlogModNames,
+      bool applicationEmailAdmins,
+      String? slurFilterRegex,
+      int actorNameMaxLength,
+      bool federationEnabled,
+      int federationWorkerCount,
+      bool captchaEnabled,
+      String captchaDifficulty,
+      String published,
+      DateTime? updated,
+      String registrationMode,
+      bool reportsEmailAdmins});
+}
+
+/// @nodoc
+class __$$_LocalSiteCopyWithImpl<$Res>
+    extends _$LocalSiteCopyWithImpl<$Res, _$_LocalSite>
+    implements _$$_LocalSiteCopyWith<$Res> {
+  __$$_LocalSiteCopyWithImpl(
+      _$_LocalSite _value, $Res Function(_$_LocalSite) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? siteId = null,
+    Object? siteSetup = null,
+    Object? enableDownvotes = null,
+    Object? enableNsfw = null,
+    Object? communityCreationAdminOnly = null,
+    Object? requireEmailVerification = null,
+    Object? applicationQuestion = null,
+    Object? privateInstance = null,
+    Object? defaultTheme = null,
+    Object? defaultPostListingType = null,
+    Object? legalInformation = freezed,
+    Object? hideModlogModNames = null,
+    Object? applicationEmailAdmins = null,
+    Object? slurFilterRegex = freezed,
+    Object? actorNameMaxLength = null,
+    Object? federationEnabled = null,
+    Object? federationWorkerCount = null,
+    Object? captchaEnabled = null,
+    Object? captchaDifficulty = null,
+    Object? published = null,
+    Object? updated = freezed,
+    Object? registrationMode = null,
+    Object? reportsEmailAdmins = null,
+  }) {
+    return _then(_$_LocalSite(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      siteId: null == siteId
+          ? _value.siteId
+          : siteId // ignore: cast_nullable_to_non_nullable
+              as int,
+      siteSetup: null == siteSetup
+          ? _value.siteSetup
+          : siteSetup // ignore: cast_nullable_to_non_nullable
+              as bool,
+      enableDownvotes: null == enableDownvotes
+          ? _value.enableDownvotes
+          : enableDownvotes // ignore: cast_nullable_to_non_nullable
+              as bool,
+      enableNsfw: null == enableNsfw
+          ? _value.enableNsfw
+          : enableNsfw // ignore: cast_nullable_to_non_nullable
+              as bool,
+      communityCreationAdminOnly: null == communityCreationAdminOnly
+          ? _value.communityCreationAdminOnly
+          : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
+              as bool,
+      requireEmailVerification: null == requireEmailVerification
+          ? _value.requireEmailVerification
+          : requireEmailVerification // ignore: cast_nullable_to_non_nullable
+              as bool,
+      applicationQuestion: null == applicationQuestion
+          ? _value.applicationQuestion
+          : applicationQuestion // ignore: cast_nullable_to_non_nullable
+              as String,
+      privateInstance: null == privateInstance
+          ? _value.privateInstance
+          : privateInstance // ignore: cast_nullable_to_non_nullable
+              as bool,
+      defaultTheme: null == defaultTheme
+          ? _value.defaultTheme
+          : defaultTheme // ignore: cast_nullable_to_non_nullable
+              as String,
+      defaultPostListingType: null == defaultPostListingType
+          ? _value.defaultPostListingType
+          : defaultPostListingType // ignore: cast_nullable_to_non_nullable
+              as PostListingType,
+      legalInformation: freezed == legalInformation
+          ? _value.legalInformation
+          : legalInformation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      hideModlogModNames: null == hideModlogModNames
+          ? _value.hideModlogModNames
+          : hideModlogModNames // ignore: cast_nullable_to_non_nullable
+              as bool,
+      applicationEmailAdmins: null == applicationEmailAdmins
+          ? _value.applicationEmailAdmins
+          : applicationEmailAdmins // ignore: cast_nullable_to_non_nullable
+              as bool,
+      slurFilterRegex: freezed == slurFilterRegex
+          ? _value.slurFilterRegex
+          : slurFilterRegex // ignore: cast_nullable_to_non_nullable
+              as String?,
+      actorNameMaxLength: null == actorNameMaxLength
+          ? _value.actorNameMaxLength
+          : actorNameMaxLength // ignore: cast_nullable_to_non_nullable
+              as int,
+      federationEnabled: null == federationEnabled
+          ? _value.federationEnabled
+          : federationEnabled // ignore: cast_nullable_to_non_nullable
+              as bool,
+      federationWorkerCount: null == federationWorkerCount
+          ? _value.federationWorkerCount
+          : federationWorkerCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      captchaEnabled: null == captchaEnabled
+          ? _value.captchaEnabled
+          : captchaEnabled // ignore: cast_nullable_to_non_nullable
+              as bool,
+      captchaDifficulty: null == captchaDifficulty
+          ? _value.captchaDifficulty
+          : captchaDifficulty // ignore: cast_nullable_to_non_nullable
+              as String,
+      published: null == published
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as String,
+      updated: freezed == updated
+          ? _value.updated
+          : updated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      registrationMode: null == registrationMode
+          ? _value.registrationMode
+          : registrationMode // ignore: cast_nullable_to_non_nullable
+              as String,
+      reportsEmailAdmins: null == reportsEmailAdmins
+          ? _value.reportsEmailAdmins
+          : reportsEmailAdmins // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+@modelSerde
+class _$_LocalSite extends _LocalSite {
+  const _$_LocalSite(
+      {required this.id,
+      required this.siteId,
+      required this.siteSetup,
+      required this.enableDownvotes,
+      required this.enableNsfw,
+      required this.communityCreationAdminOnly,
+      required this.requireEmailVerification,
+      required this.applicationQuestion,
+      required this.privateInstance,
+      required this.defaultTheme,
+      required this.defaultPostListingType,
+      this.legalInformation,
+      required this.hideModlogModNames,
+      required this.applicationEmailAdmins,
+      this.slurFilterRegex,
+      required this.actorNameMaxLength,
+      required this.federationEnabled,
+      required this.federationWorkerCount,
+      required this.captchaEnabled,
+      required this.captchaDifficulty,
+      required this.published,
+      this.updated,
+      required this.registrationMode,
+      required this.reportsEmailAdmins})
+      : super._();
+
+  factory _$_LocalSite.fromJson(Map<String, dynamic> json) =>
+      _$$_LocalSiteFromJson(json);
+
+  @override
+  final int id;
+  @override
+  final int siteId;
+  @override
+  final bool siteSetup;
+  @override
+  final bool enableDownvotes;
+  @override
+  final bool enableNsfw;
+  @override
+  final bool communityCreationAdminOnly;
+  @override
+  final bool requireEmailVerification;
+  @override
+  final String applicationQuestion;
+  @override
+  final bool privateInstance;
+  @override
+  final String defaultTheme;
+  @override
+  final PostListingType defaultPostListingType;
+  @override
+  final String? legalInformation;
+  @override
+  final bool hideModlogModNames;
+  @override
+  final bool applicationEmailAdmins;
+  @override
+  final String? slurFilterRegex;
+  @override
+  final int actorNameMaxLength;
+  @override
+  final bool federationEnabled;
+  @override
+  final int federationWorkerCount;
+  @override
+  final bool captchaEnabled;
+  @override
+  final String captchaDifficulty;
+  @override
+  final String published;
+  @override
+  final DateTime? updated;
+  @override
+  final String registrationMode;
+  @override
+  final bool reportsEmailAdmins;
+
+  @override
+  String toString() {
+    return 'LocalSite(id: $id, siteId: $siteId, siteSetup: $siteSetup, enableDownvotes: $enableDownvotes, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, requireEmailVerification: $requireEmailVerification, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, defaultTheme: $defaultTheme, defaultPostListingType: $defaultPostListingType, legalInformation: $legalInformation, hideModlogModNames: $hideModlogModNames, applicationEmailAdmins: $applicationEmailAdmins, slurFilterRegex: $slurFilterRegex, actorNameMaxLength: $actorNameMaxLength, federationEnabled: $federationEnabled, federationWorkerCount: $federationWorkerCount, captchaEnabled: $captchaEnabled, captchaDifficulty: $captchaDifficulty, published: $published, updated: $updated, registrationMode: $registrationMode, reportsEmailAdmins: $reportsEmailAdmins)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_LocalSite &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.siteId, siteId) || other.siteId == siteId) &&
+            (identical(other.siteSetup, siteSetup) ||
+                other.siteSetup == siteSetup) &&
+            (identical(other.enableDownvotes, enableDownvotes) ||
+                other.enableDownvotes == enableDownvotes) &&
+            (identical(other.enableNsfw, enableNsfw) ||
+                other.enableNsfw == enableNsfw) &&
+            (identical(other.communityCreationAdminOnly,
+                    communityCreationAdminOnly) ||
+                other.communityCreationAdminOnly ==
+                    communityCreationAdminOnly) &&
+            (identical(
+                    other.requireEmailVerification, requireEmailVerification) ||
+                other.requireEmailVerification == requireEmailVerification) &&
+            (identical(other.applicationQuestion, applicationQuestion) ||
+                other.applicationQuestion == applicationQuestion) &&
+            (identical(other.privateInstance, privateInstance) ||
+                other.privateInstance == privateInstance) &&
+            (identical(other.defaultTheme, defaultTheme) ||
+                other.defaultTheme == defaultTheme) &&
+            (identical(other.defaultPostListingType, defaultPostListingType) ||
+                other.defaultPostListingType == defaultPostListingType) &&
+            (identical(other.legalInformation, legalInformation) ||
+                other.legalInformation == legalInformation) &&
+            (identical(other.hideModlogModNames, hideModlogModNames) ||
+                other.hideModlogModNames == hideModlogModNames) &&
+            (identical(other.applicationEmailAdmins, applicationEmailAdmins) ||
+                other.applicationEmailAdmins == applicationEmailAdmins) &&
+            (identical(other.slurFilterRegex, slurFilterRegex) ||
+                other.slurFilterRegex == slurFilterRegex) &&
+            (identical(other.actorNameMaxLength, actorNameMaxLength) ||
+                other.actorNameMaxLength == actorNameMaxLength) &&
+            (identical(other.federationEnabled, federationEnabled) ||
+                other.federationEnabled == federationEnabled) &&
+            (identical(other.federationWorkerCount, federationWorkerCount) ||
+                other.federationWorkerCount == federationWorkerCount) &&
+            (identical(other.captchaEnabled, captchaEnabled) ||
+                other.captchaEnabled == captchaEnabled) &&
+            (identical(other.captchaDifficulty, captchaDifficulty) ||
+                other.captchaDifficulty == captchaDifficulty) &&
+            (identical(other.published, published) ||
+                other.published == published) &&
+            (identical(other.updated, updated) || other.updated == updated) &&
+            (identical(other.registrationMode, registrationMode) ||
+                other.registrationMode == registrationMode) &&
+            (identical(other.reportsEmailAdmins, reportsEmailAdmins) ||
+                other.reportsEmailAdmins == reportsEmailAdmins));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        id,
+        siteId,
+        siteSetup,
+        enableDownvotes,
+        enableNsfw,
+        communityCreationAdminOnly,
+        requireEmailVerification,
+        applicationQuestion,
+        privateInstance,
+        defaultTheme,
+        defaultPostListingType,
+        legalInformation,
+        hideModlogModNames,
+        applicationEmailAdmins,
+        slurFilterRegex,
+        actorNameMaxLength,
+        federationEnabled,
+        federationWorkerCount,
+        captchaEnabled,
+        captchaDifficulty,
+        published,
+        updated,
+        registrationMode,
+        reportsEmailAdmins
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_LocalSiteCopyWith<_$_LocalSite> get copyWith =>
+      __$$_LocalSiteCopyWithImpl<_$_LocalSite>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_LocalSiteToJson(
+      this,
+    );
+  }
+}
+
+abstract class _LocalSite extends LocalSite {
+  const factory _LocalSite(
+      {required final int id,
+      required final int siteId,
+      required final bool siteSetup,
+      required final bool enableDownvotes,
+      required final bool enableNsfw,
+      required final bool communityCreationAdminOnly,
+      required final bool requireEmailVerification,
+      required final String applicationQuestion,
+      required final bool privateInstance,
+      required final String defaultTheme,
+      required final PostListingType defaultPostListingType,
+      final String? legalInformation,
+      required final bool hideModlogModNames,
+      required final bool applicationEmailAdmins,
+      final String? slurFilterRegex,
+      required final int actorNameMaxLength,
+      required final bool federationEnabled,
+      required final int federationWorkerCount,
+      required final bool captchaEnabled,
+      required final String captchaDifficulty,
+      required final String published,
+      final DateTime? updated,
+      required final String registrationMode,
+      required final bool reportsEmailAdmins}) = _$_LocalSite;
+  const _LocalSite._() : super._();
+
+  factory _LocalSite.fromJson(Map<String, dynamic> json) =
+      _$_LocalSite.fromJson;
+
+  @override
+  int get id;
+  @override
+  int get siteId;
+  @override
+  bool get siteSetup;
+  @override
+  bool get enableDownvotes;
+  @override
+  bool get enableNsfw;
+  @override
+  bool get communityCreationAdminOnly;
+  @override
+  bool get requireEmailVerification;
+  @override
+  String get applicationQuestion;
+  @override
+  bool get privateInstance;
+  @override
+  String get defaultTheme;
+  @override
+  PostListingType get defaultPostListingType;
+  @override
+  String? get legalInformation;
+  @override
+  bool get hideModlogModNames;
+  @override
+  bool get applicationEmailAdmins;
+  @override
+  String? get slurFilterRegex;
+  @override
+  int get actorNameMaxLength;
+  @override
+  bool get federationEnabled;
+  @override
+  int get federationWorkerCount;
+  @override
+  bool get captchaEnabled;
+  @override
+  String get captchaDifficulty;
+  @override
+  String get published;
+  @override
+  DateTime? get updated;
+  @override
+  String get registrationMode;
+  @override
+  bool get reportsEmailAdmins;
+  @override
+  @JsonKey(ignore: true)
+  _$$_LocalSiteCopyWith<_$_LocalSite> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 PrivateMessage _$PrivateMessageFromJson(Map<String, dynamic> json) {
@@ -6624,12 +7097,13 @@ mixin _$Comment {
   int? get parentId => throw _privateConstructorUsedError;
   String get content => throw _privateConstructorUsedError;
   bool get removed => throw _privateConstructorUsedError;
-  bool get read => throw _privateConstructorUsedError;
+  bool get distinguished => throw _privateConstructorUsedError;
   DateTime get published => throw _privateConstructorUsedError;
   DateTime? get updated => throw _privateConstructorUsedError;
   bool get deleted => throw _privateConstructorUsedError;
   String get apId => throw _privateConstructorUsedError;
   bool get local => throw _privateConstructorUsedError;
+  int get languageId => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -6649,12 +7123,13 @@ abstract class $CommentCopyWith<$Res> {
       int? parentId,
       String content,
       bool removed,
-      bool read,
+      bool distinguished,
       DateTime published,
       DateTime? updated,
       bool deleted,
       String apId,
       bool local,
+      int languageId,
       String instanceHost});
 }
 
@@ -6677,12 +7152,13 @@ class _$CommentCopyWithImpl<$Res, $Val extends Comment>
     Object? parentId = freezed,
     Object? content = null,
     Object? removed = null,
-    Object? read = null,
+    Object? distinguished = null,
     Object? published = null,
     Object? updated = freezed,
     Object? deleted = null,
     Object? apId = null,
     Object? local = null,
+    Object? languageId = null,
     Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
@@ -6710,9 +7186,9 @@ class _$CommentCopyWithImpl<$Res, $Val extends Comment>
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
               as bool,
-      read: null == read
-          ? _value.read
-          : read // ignore: cast_nullable_to_non_nullable
+      distinguished: null == distinguished
+          ? _value.distinguished
+          : distinguished // ignore: cast_nullable_to_non_nullable
               as bool,
       published: null == published
           ? _value.published
@@ -6734,6 +7210,10 @@ class _$CommentCopyWithImpl<$Res, $Val extends Comment>
           ? _value.local
           : local // ignore: cast_nullable_to_non_nullable
               as bool,
+      languageId: null == languageId
+          ? _value.languageId
+          : languageId // ignore: cast_nullable_to_non_nullable
+              as int,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -6756,12 +7236,13 @@ abstract class _$$_CommentCopyWith<$Res> implements $CommentCopyWith<$Res> {
       int? parentId,
       String content,
       bool removed,
-      bool read,
+      bool distinguished,
       DateTime published,
       DateTime? updated,
       bool deleted,
       String apId,
       bool local,
+      int languageId,
       String instanceHost});
 }
 
@@ -6781,12 +7262,13 @@ class __$$_CommentCopyWithImpl<$Res>
     Object? parentId = freezed,
     Object? content = null,
     Object? removed = null,
-    Object? read = null,
+    Object? distinguished = null,
     Object? published = null,
     Object? updated = freezed,
     Object? deleted = null,
     Object? apId = null,
     Object? local = null,
+    Object? languageId = null,
     Object? instanceHost = null,
   }) {
     return _then(_$_Comment(
@@ -6814,9 +7296,9 @@ class __$$_CommentCopyWithImpl<$Res>
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
               as bool,
-      read: null == read
-          ? _value.read
-          : read // ignore: cast_nullable_to_non_nullable
+      distinguished: null == distinguished
+          ? _value.distinguished
+          : distinguished // ignore: cast_nullable_to_non_nullable
               as bool,
       published: null == published
           ? _value.published
@@ -6838,6 +7320,10 @@ class __$$_CommentCopyWithImpl<$Res>
           ? _value.local
           : local // ignore: cast_nullable_to_non_nullable
               as bool,
+      languageId: null == languageId
+          ? _value.languageId
+          : languageId // ignore: cast_nullable_to_non_nullable
+              as int,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -6857,12 +7343,13 @@ class _$_Comment extends _Comment {
       this.parentId,
       required this.content,
       required this.removed,
-      required this.read,
+      required this.distinguished,
       required this.published,
       this.updated,
       required this.deleted,
       required this.apId,
       required this.local,
+      required this.languageId,
       required this.instanceHost})
       : super._();
 
@@ -6882,7 +7369,7 @@ class _$_Comment extends _Comment {
   @override
   final bool removed;
   @override
-  final bool read;
+  final bool distinguished;
   @override
   final DateTime published;
   @override
@@ -6894,11 +7381,13 @@ class _$_Comment extends _Comment {
   @override
   final bool local;
   @override
+  final int languageId;
+  @override
   final String instanceHost;
 
   @override
   String toString() {
-    return 'Comment(id: $id, creatorId: $creatorId, postId: $postId, parentId: $parentId, content: $content, removed: $removed, read: $read, published: $published, updated: $updated, deleted: $deleted, apId: $apId, local: $local, instanceHost: $instanceHost)';
+    return 'Comment(id: $id, creatorId: $creatorId, postId: $postId, parentId: $parentId, content: $content, removed: $removed, distinguished: $distinguished, published: $published, updated: $updated, deleted: $deleted, apId: $apId, local: $local, languageId: $languageId, instanceHost: $instanceHost)';
   }
 
   @override
@@ -6914,13 +7403,16 @@ class _$_Comment extends _Comment {
                 other.parentId == parentId) &&
             (identical(other.content, content) || other.content == content) &&
             (identical(other.removed, removed) || other.removed == removed) &&
-            (identical(other.read, read) || other.read == read) &&
+            (identical(other.distinguished, distinguished) ||
+                other.distinguished == distinguished) &&
             (identical(other.published, published) ||
                 other.published == published) &&
             (identical(other.updated, updated) || other.updated == updated) &&
             (identical(other.deleted, deleted) || other.deleted == deleted) &&
             (identical(other.apId, apId) || other.apId == apId) &&
             (identical(other.local, local) || other.local == local) &&
+            (identical(other.languageId, languageId) ||
+                other.languageId == languageId) &&
             (identical(other.instanceHost, instanceHost) ||
                 other.instanceHost == instanceHost));
   }
@@ -6935,12 +7427,13 @@ class _$_Comment extends _Comment {
       parentId,
       content,
       removed,
-      read,
+      distinguished,
       published,
       updated,
       deleted,
       apId,
       local,
+      languageId,
       instanceHost);
 
   @JsonKey(ignore: true)
@@ -6965,12 +7458,13 @@ abstract class _Comment extends Comment {
       final int? parentId,
       required final String content,
       required final bool removed,
-      required final bool read,
+      required final bool distinguished,
       required final DateTime published,
       final DateTime? updated,
       required final bool deleted,
       required final String apId,
       required final bool local,
+      required final int languageId,
       required final String instanceHost}) = _$_Comment;
   const _Comment._() : super._();
 
@@ -6989,7 +7483,7 @@ abstract class _Comment extends Comment {
   @override
   bool get removed;
   @override
-  bool get read;
+  bool get distinguished;
   @override
   DateTime get published;
   @override
@@ -7000,6 +7494,8 @@ abstract class _Comment extends Comment {
   String get apId;
   @override
   bool get local;
+  @override
+  int get languageId;
   @override
   String get instanceHost;
   @override

@@ -29,7 +29,6 @@ class FullPostView with _$FullPostView {
   const factory FullPostView({
     required PostView postView,
     required CommunityView communityView,
-    required List<CommentView> comments,
     required List<CommunityModeratorView> moderators,
     required int online,
     required String instanceHost,

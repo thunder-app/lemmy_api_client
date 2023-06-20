@@ -66,6 +66,7 @@ class SiteView with _$SiteView {
   @modelSerde
   const factory SiteView({
     required Site site,
+    required LocalSite localSite,
     required SiteAggregates counts,
     required String instanceHost,
   }) = _SiteView;

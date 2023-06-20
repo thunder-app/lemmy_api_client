@@ -286,7 +286,6 @@ FullPostView _$FullPostViewFromJson(Map<String, dynamic> json) {
 mixin _$FullPostView {
   PostView get postView => throw _privateConstructorUsedError;
   CommunityView get communityView => throw _privateConstructorUsedError;
-  List<CommentView> get comments => throw _privateConstructorUsedError;
   List<CommunityModeratorView> get moderators =>
       throw _privateConstructorUsedError;
   int get online => throw _privateConstructorUsedError;
@@ -307,7 +306,6 @@ abstract class $FullPostViewCopyWith<$Res> {
   $Res call(
       {PostView postView,
       CommunityView communityView,
-      List<CommentView> comments,
       List<CommunityModeratorView> moderators,
       int online,
       String instanceHost});
@@ -331,7 +329,6 @@ class _$FullPostViewCopyWithImpl<$Res, $Val extends FullPostView>
   $Res call({
     Object? postView = null,
     Object? communityView = null,
-    Object? comments = null,
     Object? moderators = null,
     Object? online = null,
     Object? instanceHost = null,
@@ -345,10 +342,6 @@ class _$FullPostViewCopyWithImpl<$Res, $Val extends FullPostView>
           ? _value.communityView
           : communityView // ignore: cast_nullable_to_non_nullable
               as CommunityView,
-      comments: null == comments
-          ? _value.comments
-          : comments // ignore: cast_nullable_to_non_nullable
-              as List<CommentView>,
       moderators: null == moderators
           ? _value.moderators
           : moderators // ignore: cast_nullable_to_non_nullable
@@ -392,7 +385,6 @@ abstract class _$$_FullPostViewCopyWith<$Res>
   $Res call(
       {PostView postView,
       CommunityView communityView,
-      List<CommentView> comments,
       List<CommunityModeratorView> moderators,
       int online,
       String instanceHost});
@@ -416,7 +408,6 @@ class __$$_FullPostViewCopyWithImpl<$Res>
   $Res call({
     Object? postView = null,
     Object? communityView = null,
-    Object? comments = null,
     Object? moderators = null,
     Object? online = null,
     Object? instanceHost = null,
@@ -430,10 +421,6 @@ class __$$_FullPostViewCopyWithImpl<$Res>
           ? _value.communityView
           : communityView // ignore: cast_nullable_to_non_nullable
               as CommunityView,
-      comments: null == comments
-          ? _value._comments
-          : comments // ignore: cast_nullable_to_non_nullable
-              as List<CommentView>,
       moderators: null == moderators
           ? _value._moderators
           : moderators // ignore: cast_nullable_to_non_nullable
@@ -457,12 +444,10 @@ class _$_FullPostView extends _FullPostView {
   const _$_FullPostView(
       {required this.postView,
       required this.communityView,
-      required final List<CommentView> comments,
       required final List<CommunityModeratorView> moderators,
       required this.online,
       required this.instanceHost})
-      : _comments = comments,
-        _moderators = moderators,
+      : _moderators = moderators,
         super._();
 
   factory _$_FullPostView.fromJson(Map<String, dynamic> json) =>
@@ -472,14 +457,6 @@ class _$_FullPostView extends _FullPostView {
   final PostView postView;
   @override
   final CommunityView communityView;
-  final List<CommentView> _comments;
-  @override
-  List<CommentView> get comments {
-    if (_comments is EqualUnmodifiableListView) return _comments;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_comments);
-  }
-
   final List<CommunityModeratorView> _moderators;
   @override
   List<CommunityModeratorView> get moderators {
@@ -495,7 +472,7 @@ class _$_FullPostView extends _FullPostView {
 
   @override
   String toString() {
-    return 'FullPostView(postView: $postView, communityView: $communityView, comments: $comments, moderators: $moderators, online: $online, instanceHost: $instanceHost)';
+    return 'FullPostView(postView: $postView, communityView: $communityView, moderators: $moderators, online: $online, instanceHost: $instanceHost)';
   }
 
   @override
@@ -507,7 +484,6 @@ class _$_FullPostView extends _FullPostView {
                 other.postView == postView) &&
             (identical(other.communityView, communityView) ||
                 other.communityView == communityView) &&
-            const DeepCollectionEquality().equals(other._comments, _comments) &&
             const DeepCollectionEquality()
                 .equals(other._moderators, _moderators) &&
             (identical(other.online, online) || other.online == online) &&
@@ -517,14 +493,8 @@ class _$_FullPostView extends _FullPostView {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      postView,
-      communityView,
-      const DeepCollectionEquality().hash(_comments),
-      const DeepCollectionEquality().hash(_moderators),
-      online,
-      instanceHost);
+  int get hashCode => Object.hash(runtimeType, postView, communityView,
+      const DeepCollectionEquality().hash(_moderators), online, instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -544,7 +514,6 @@ abstract class _FullPostView extends FullPostView {
   const factory _FullPostView(
       {required final PostView postView,
       required final CommunityView communityView,
-      required final List<CommentView> comments,
       required final List<CommunityModeratorView> moderators,
       required final int online,
       required final String instanceHost}) = _$_FullPostView;
@@ -557,8 +526,6 @@ abstract class _FullPostView extends FullPostView {
   PostView get postView;
   @override
   CommunityView get communityView;
-  @override
-  List<CommentView> get comments;
   @override
   List<CommunityModeratorView> get moderators;
   @override

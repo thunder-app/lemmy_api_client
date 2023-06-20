@@ -51,7 +51,7 @@ class LocalUserSettings with _$LocalUserSettings {
         required SortType defaultSortType,
     @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
         required PostListingType defaultListingType,
-    required String lang,
+    required String interfaceLanguage,
     required bool showAvatars,
     required bool showScores,
     required bool sendNotificationsToEmail,
@@ -75,29 +75,56 @@ class Site with _$Site {
     required int id,
     required String name,
     String? sidebar,
-    String? description,
     required DateTime published,
     DateTime? updated,
-    required bool enableDownvotes,
-    required bool openRegistration,
-    required bool enableNsfw,
-    required bool communityCreationAdminOnly,
     String? icon,
     String? banner,
-    required bool requireEmailVerification,
-    required bool requireApplication,
-    String? applicationQuestion,
-    required bool privateInstance,
-    required String defaultTheme,
+    String? description,
     required String actorId,
     required String lastRefreshedAt,
     required String inboxUrl,
     required String publicKey,
+    required int instanceId,
     required String instanceHost,
   }) = _Site;
 
   const Site._();
   factory Site.fromJson(Map<String, dynamic> json) => _$SiteFromJson(json);
+}
+
+@freezed
+class LocalSite with _$LocalSite {
+  @modelSerde
+  const factory LocalSite({
+    required int id,
+    required int siteId,
+    required bool siteSetup,
+    required bool enableDownvotes,
+    required bool enableNsfw,
+    required bool communityCreationAdminOnly,
+    required bool requireEmailVerification,
+    required String applicationQuestion,
+    required bool privateInstance,
+    required String defaultTheme,
+    required PostListingType defaultPostListingType,
+    String? legalInformation,
+    required bool hideModlogModNames,
+    required bool applicationEmailAdmins,
+    String? slurFilterRegex,
+    required int actorNameMaxLength,
+    required bool federationEnabled,
+    required int federationWorkerCount,
+    required bool captchaEnabled,
+    required String captchaDifficulty,
+    required String published,
+    DateTime? updated,
+    required String registrationMode,
+    required bool reportsEmailAdmins,
+  }) = _LocalSite;
+
+  const LocalSite._();
+  factory LocalSite.fromJson(Map<String, dynamic> json) =>
+      _$LocalSiteFromJson(json);
 }
 
 @freezed
@@ -425,12 +452,13 @@ class Comment with _$Comment {
     int? parentId,
     required String content,
     required bool removed,
-    required bool read,
+    required bool distinguished,
     required DateTime published,
     DateTime? updated,
     required bool deleted,
     required String apId,
     required bool local,
+    required int languageId,
     required String instanceHost,
   }) = _Comment;
 

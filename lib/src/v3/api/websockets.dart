@@ -218,7 +218,7 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
           theme: '',
           defaultSortType: SortType.hot,
           defaultListingType: PostListingType.all,
-          lang: '',
+          interfaceLanguage: '',
           showAvatars: true,
           sendNotificationsToEmail: true,
           auth: '',

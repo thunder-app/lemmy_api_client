@@ -952,6 +952,7 @@ SiteView _$SiteViewFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$SiteView {
   Site get site => throw _privateConstructorUsedError;
+  LocalSite get localSite => throw _privateConstructorUsedError;
   SiteAggregates get counts => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
@@ -966,9 +967,14 @@ abstract class $SiteViewCopyWith<$Res> {
   factory $SiteViewCopyWith(SiteView value, $Res Function(SiteView) then) =
       _$SiteViewCopyWithImpl<$Res, SiteView>;
   @useResult
-  $Res call({Site site, SiteAggregates counts, String instanceHost});
+  $Res call(
+      {Site site,
+      LocalSite localSite,
+      SiteAggregates counts,
+      String instanceHost});
 
   $SiteCopyWith<$Res> get site;
+  $LocalSiteCopyWith<$Res> get localSite;
   $SiteAggregatesCopyWith<$Res> get counts;
 }
 
@@ -986,6 +992,7 @@ class _$SiteViewCopyWithImpl<$Res, $Val extends SiteView>
   @override
   $Res call({
     Object? site = null,
+    Object? localSite = null,
     Object? counts = null,
     Object? instanceHost = null,
   }) {
@@ -994,6 +1001,10 @@ class _$SiteViewCopyWithImpl<$Res, $Val extends SiteView>
           ? _value.site
           : site // ignore: cast_nullable_to_non_nullable
               as Site,
+      localSite: null == localSite
+          ? _value.localSite
+          : localSite // ignore: cast_nullable_to_non_nullable
+              as LocalSite,
       counts: null == counts
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
@@ -1015,6 +1026,14 @@ class _$SiteViewCopyWithImpl<$Res, $Val extends SiteView>
 
   @override
   @pragma('vm:prefer-inline')
+  $LocalSiteCopyWith<$Res> get localSite {
+    return $LocalSiteCopyWith<$Res>(_value.localSite, (value) {
+      return _then(_value.copyWith(localSite: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $SiteAggregatesCopyWith<$Res> get counts {
     return $SiteAggregatesCopyWith<$Res>(_value.counts, (value) {
       return _then(_value.copyWith(counts: value) as $Val);
@@ -1029,10 +1048,16 @@ abstract class _$$_SiteViewCopyWith<$Res> implements $SiteViewCopyWith<$Res> {
       __$$_SiteViewCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Site site, SiteAggregates counts, String instanceHost});
+  $Res call(
+      {Site site,
+      LocalSite localSite,
+      SiteAggregates counts,
+      String instanceHost});
 
   @override
   $SiteCopyWith<$Res> get site;
+  @override
+  $LocalSiteCopyWith<$Res> get localSite;
   @override
   $SiteAggregatesCopyWith<$Res> get counts;
 }
@@ -1049,6 +1074,7 @@ class __$$_SiteViewCopyWithImpl<$Res>
   @override
   $Res call({
     Object? site = null,
+    Object? localSite = null,
     Object? counts = null,
     Object? instanceHost = null,
   }) {
@@ -1057,6 +1083,10 @@ class __$$_SiteViewCopyWithImpl<$Res>
           ? _value.site
           : site // ignore: cast_nullable_to_non_nullable
               as Site,
+      localSite: null == localSite
+          ? _value.localSite
+          : localSite // ignore: cast_nullable_to_non_nullable
+              as LocalSite,
       counts: null == counts
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
@@ -1074,7 +1104,10 @@ class __$$_SiteViewCopyWithImpl<$Res>
 @modelSerde
 class _$_SiteView extends _SiteView {
   const _$_SiteView(
-      {required this.site, required this.counts, required this.instanceHost})
+      {required this.site,
+      required this.localSite,
+      required this.counts,
+      required this.instanceHost})
       : super._();
 
   factory _$_SiteView.fromJson(Map<String, dynamic> json) =>
@@ -1083,13 +1116,15 @@ class _$_SiteView extends _SiteView {
   @override
   final Site site;
   @override
+  final LocalSite localSite;
+  @override
   final SiteAggregates counts;
   @override
   final String instanceHost;
 
   @override
   String toString() {
-    return 'SiteView(site: $site, counts: $counts, instanceHost: $instanceHost)';
+    return 'SiteView(site: $site, localSite: $localSite, counts: $counts, instanceHost: $instanceHost)';
   }
 
   @override
@@ -1098,6 +1133,8 @@ class _$_SiteView extends _SiteView {
         (other.runtimeType == runtimeType &&
             other is _$_SiteView &&
             (identical(other.site, site) || other.site == site) &&
+            (identical(other.localSite, localSite) ||
+                other.localSite == localSite) &&
             (identical(other.counts, counts) || other.counts == counts) &&
             (identical(other.instanceHost, instanceHost) ||
                 other.instanceHost == instanceHost));
@@ -1105,7 +1142,8 @@ class _$_SiteView extends _SiteView {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, site, counts, instanceHost);
+  int get hashCode =>
+      Object.hash(runtimeType, site, localSite, counts, instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -1124,6 +1162,7 @@ class _$_SiteView extends _SiteView {
 abstract class _SiteView extends SiteView {
   const factory _SiteView(
       {required final Site site,
+      required final LocalSite localSite,
       required final SiteAggregates counts,
       required final String instanceHost}) = _$_SiteView;
   const _SiteView._() : super._();
@@ -1132,6 +1171,8 @@ abstract class _SiteView extends SiteView {
 
   @override
   Site get site;
+  @override
+  LocalSite get localSite;
   @override
   SiteAggregates get counts;
   @override

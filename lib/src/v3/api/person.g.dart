@@ -63,7 +63,7 @@ _$_SaveUserSettings _$$_SaveUserSettingsFromJson(Map<String, dynamic> json) =>
       defaultSortType: sortTypeFromIndex(json['default_sort_type'] as int),
       defaultListingType:
           postListingTypeFromIndex(json['default_listing_type'] as int),
-      lang: json['lang'] as String?,
+      interfaceLanguage: json['interface_language'] as String?,
       avatar: json['avatar'] as String?,
       banner: json['banner'] as String?,
       displayName: json['display_name'] as String?,
@@ -77,6 +77,9 @@ _$_SaveUserSettings _$$_SaveUserSettingsFromJson(Map<String, dynamic> json) =>
       botAccount: json['bot_account'] as bool?,
       showBotAccounts: json['show_bot_accounts'] as bool?,
       showNewPostNotifs: json['show_new_post_notifs'] as bool?,
+      discussionLanguages: (json['discussion_languages'] as List<dynamic>?)
+          ?.map((e) => e as int)
+          .toList(),
       auth: json['auth'] as String,
     );
 
@@ -94,7 +97,7 @@ Map<String, dynamic> _$$_SaveUserSettingsToJson(_$_SaveUserSettings instance) {
   writeNotNull('default_sort_type', sortTypeToIndex(instance.defaultSortType));
   writeNotNull('default_listing_type',
       postListingTypeToIndex(instance.defaultListingType));
-  writeNotNull('lang', instance.lang);
+  writeNotNull('interface_language', instance.interfaceLanguage);
   writeNotNull('avatar', instance.avatar);
   writeNotNull('banner', instance.banner);
   writeNotNull('display_name', instance.displayName);
@@ -109,6 +112,7 @@ Map<String, dynamic> _$$_SaveUserSettingsToJson(_$_SaveUserSettings instance) {
   writeNotNull('bot_account', instance.botAccount);
   writeNotNull('show_bot_accounts', instance.showBotAccounts);
   writeNotNull('show_new_post_notifs', instance.showNewPostNotifs);
+  writeNotNull('discussion_languages', instance.discussionLanguages);
   val['auth'] = instance.auth;
   return val;
 }
