@@ -36,9 +36,6 @@ _$_FullPostView _$$_FullPostViewFromJson(Map<String, dynamic> json) =>
       postView: PostView.fromJson(json['post_view'] as Map<String, dynamic>),
       communityView: CommunityView.fromJson(
           json['community_view'] as Map<String, dynamic>),
-      comments: (json['comments'] as List<dynamic>)
-          .map((e) => CommentView.fromJson(e as Map<String, dynamic>))
-          .toList(),
       moderators: (json['moderators'] as List<dynamic>)
           .map(
               (e) => CommunityModeratorView.fromJson(e as Map<String, dynamic>))
@@ -51,7 +48,6 @@ Map<String, dynamic> _$$_FullPostViewToJson(_$_FullPostView instance) =>
     <String, dynamic>{
       'post_view': instance.postView.toJson(),
       'community_view': instance.communityView.toJson(),
-      'comments': instance.comments.map((e) => e.toJson()).toList(),
       'moderators': instance.moderators.map((e) => e.toJson()).toList(),
       'online': instance.online,
       'instance_host': instance.instanceHost,

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'api.dart';
 
@@ -37,7 +37,8 @@ mixin _$FullCommunityView {
 abstract class $FullCommunityViewCopyWith<$Res> {
   factory $FullCommunityViewCopyWith(
           FullCommunityView value, $Res Function(FullCommunityView) then) =
-      _$FullCommunityViewCopyWithImpl<$Res>;
+      _$FullCommunityViewCopyWithImpl<$Res, FullCommunityView>;
+  @useResult
   $Res call(
       {CommunityView communityView,
       Site? site,
@@ -50,61 +51,65 @@ abstract class $FullCommunityViewCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$FullCommunityViewCopyWithImpl<$Res>
+class _$FullCommunityViewCopyWithImpl<$Res, $Val extends FullCommunityView>
     implements $FullCommunityViewCopyWith<$Res> {
   _$FullCommunityViewCopyWithImpl(this._value, this._then);
 
-  final FullCommunityView _value;
   // ignore: unused_field
-  final $Res Function(FullCommunityView) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? communityView = freezed,
+    Object? communityView = null,
     Object? site = freezed,
-    Object? moderators = freezed,
-    Object? online = freezed,
-    Object? instanceHost = freezed,
+    Object? moderators = null,
+    Object? online = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      communityView: communityView == freezed
+      communityView: null == communityView
           ? _value.communityView
           : communityView // ignore: cast_nullable_to_non_nullable
               as CommunityView,
-      site: site == freezed
+      site: freezed == site
           ? _value.site
           : site // ignore: cast_nullable_to_non_nullable
               as Site?,
-      moderators: moderators == freezed
+      moderators: null == moderators
           ? _value.moderators
           : moderators // ignore: cast_nullable_to_non_nullable
               as List<CommunityModeratorView>,
-      online: online == freezed
+      online: null == online
           ? _value.online
           : online // ignore: cast_nullable_to_non_nullable
               as int,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CommunityViewCopyWith<$Res> get communityView {
     return $CommunityViewCopyWith<$Res>(_value.communityView, (value) {
-      return _then(_value.copyWith(communityView: value));
+      return _then(_value.copyWith(communityView: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SiteCopyWith<$Res>? get site {
     if (_value.site == null) {
       return null;
     }
 
     return $SiteCopyWith<$Res>(_value.site!, (value) {
-      return _then(_value.copyWith(site: value));
+      return _then(_value.copyWith(site: value) as $Val);
     });
   }
 }
@@ -116,6 +121,7 @@ abstract class _$$_FullCommunityViewCopyWith<$Res>
           $Res Function(_$_FullCommunityView) then) =
       __$$_FullCommunityViewCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {CommunityView communityView,
       Site? site,
@@ -131,41 +137,39 @@ abstract class _$$_FullCommunityViewCopyWith<$Res>
 
 /// @nodoc
 class __$$_FullCommunityViewCopyWithImpl<$Res>
-    extends _$FullCommunityViewCopyWithImpl<$Res>
+    extends _$FullCommunityViewCopyWithImpl<$Res, _$_FullCommunityView>
     implements _$$_FullCommunityViewCopyWith<$Res> {
   __$$_FullCommunityViewCopyWithImpl(
       _$_FullCommunityView _value, $Res Function(_$_FullCommunityView) _then)
-      : super(_value, (v) => _then(v as _$_FullCommunityView));
+      : super(_value, _then);
 
-  @override
-  _$_FullCommunityView get _value => super._value as _$_FullCommunityView;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? communityView = freezed,
+    Object? communityView = null,
     Object? site = freezed,
-    Object? moderators = freezed,
-    Object? online = freezed,
-    Object? instanceHost = freezed,
+    Object? moderators = null,
+    Object? online = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_FullCommunityView(
-      communityView: communityView == freezed
+      communityView: null == communityView
           ? _value.communityView
           : communityView // ignore: cast_nullable_to_non_nullable
               as CommunityView,
-      site: site == freezed
+      site: freezed == site
           ? _value.site
           : site // ignore: cast_nullable_to_non_nullable
               as Site?,
-      moderators: moderators == freezed
+      moderators: null == moderators
           ? _value._moderators
           : moderators // ignore: cast_nullable_to_non_nullable
               as List<CommunityModeratorView>,
-      online: online == freezed
+      online: null == online
           ? _value.online
           : online // ignore: cast_nullable_to_non_nullable
               as int,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -196,6 +200,7 @@ class _$_FullCommunityView extends _FullCommunityView {
   final List<CommunityModeratorView> _moderators;
   @override
   List<CommunityModeratorView> get moderators {
+    if (_moderators is EqualUnmodifiableListView) return _moderators;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_moderators);
   }
@@ -215,28 +220,24 @@ class _$_FullCommunityView extends _FullCommunityView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_FullCommunityView &&
-            const DeepCollectionEquality()
-                .equals(other.communityView, communityView) &&
-            const DeepCollectionEquality().equals(other.site, site) &&
+            (identical(other.communityView, communityView) ||
+                other.communityView == communityView) &&
+            (identical(other.site, site) || other.site == site) &&
             const DeepCollectionEquality()
                 .equals(other._moderators, _moderators) &&
-            const DeepCollectionEquality().equals(other.online, online) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.online, online) || other.online == online) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(communityView),
-      const DeepCollectionEquality().hash(site),
-      const DeepCollectionEquality().hash(_moderators),
-      const DeepCollectionEquality().hash(online),
-      const DeepCollectionEquality().hash(instanceHost));
+  int get hashCode => Object.hash(runtimeType, communityView, site,
+      const DeepCollectionEquality().hash(_moderators), online, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_FullCommunityViewCopyWith<_$_FullCommunityView> get copyWith =>
       __$$_FullCommunityViewCopyWithImpl<_$_FullCommunityView>(
           this, _$identity);
@@ -285,7 +286,6 @@ FullPostView _$FullPostViewFromJson(Map<String, dynamic> json) {
 mixin _$FullPostView {
   PostView get postView => throw _privateConstructorUsedError;
   CommunityView get communityView => throw _privateConstructorUsedError;
-  List<CommentView> get comments => throw _privateConstructorUsedError;
   List<CommunityModeratorView> get moderators =>
       throw _privateConstructorUsedError;
   int get online => throw _privateConstructorUsedError;
@@ -301,11 +301,11 @@ mixin _$FullPostView {
 abstract class $FullPostViewCopyWith<$Res> {
   factory $FullPostViewCopyWith(
           FullPostView value, $Res Function(FullPostView) then) =
-      _$FullPostViewCopyWithImpl<$Res>;
+      _$FullPostViewCopyWithImpl<$Res, FullPostView>;
+  @useResult
   $Res call(
       {PostView postView,
       CommunityView communityView,
-      List<CommentView> comments,
       List<CommunityModeratorView> moderators,
       int online,
       String instanceHost});
@@ -315,61 +315,61 @@ abstract class $FullPostViewCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$FullPostViewCopyWithImpl<$Res> implements $FullPostViewCopyWith<$Res> {
+class _$FullPostViewCopyWithImpl<$Res, $Val extends FullPostView>
+    implements $FullPostViewCopyWith<$Res> {
   _$FullPostViewCopyWithImpl(this._value, this._then);
 
-  final FullPostView _value;
   // ignore: unused_field
-  final $Res Function(FullPostView) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? postView = freezed,
-    Object? communityView = freezed,
-    Object? comments = freezed,
-    Object? moderators = freezed,
-    Object? online = freezed,
-    Object? instanceHost = freezed,
+    Object? postView = null,
+    Object? communityView = null,
+    Object? moderators = null,
+    Object? online = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      postView: postView == freezed
+      postView: null == postView
           ? _value.postView
           : postView // ignore: cast_nullable_to_non_nullable
               as PostView,
-      communityView: communityView == freezed
+      communityView: null == communityView
           ? _value.communityView
           : communityView // ignore: cast_nullable_to_non_nullable
               as CommunityView,
-      comments: comments == freezed
-          ? _value.comments
-          : comments // ignore: cast_nullable_to_non_nullable
-              as List<CommentView>,
-      moderators: moderators == freezed
+      moderators: null == moderators
           ? _value.moderators
           : moderators // ignore: cast_nullable_to_non_nullable
               as List<CommunityModeratorView>,
-      online: online == freezed
+      online: null == online
           ? _value.online
           : online // ignore: cast_nullable_to_non_nullable
               as int,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PostViewCopyWith<$Res> get postView {
     return $PostViewCopyWith<$Res>(_value.postView, (value) {
-      return _then(_value.copyWith(postView: value));
+      return _then(_value.copyWith(postView: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CommunityViewCopyWith<$Res> get communityView {
     return $CommunityViewCopyWith<$Res>(_value.communityView, (value) {
-      return _then(_value.copyWith(communityView: value));
+      return _then(_value.copyWith(communityView: value) as $Val);
     });
   }
 }
@@ -381,10 +381,10 @@ abstract class _$$_FullPostViewCopyWith<$Res>
           _$_FullPostView value, $Res Function(_$_FullPostView) then) =
       __$$_FullPostViewCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {PostView postView,
       CommunityView communityView,
-      List<CommentView> comments,
       List<CommunityModeratorView> moderators,
       int online,
       String instanceHost});
@@ -397,46 +397,39 @@ abstract class _$$_FullPostViewCopyWith<$Res>
 
 /// @nodoc
 class __$$_FullPostViewCopyWithImpl<$Res>
-    extends _$FullPostViewCopyWithImpl<$Res>
+    extends _$FullPostViewCopyWithImpl<$Res, _$_FullPostView>
     implements _$$_FullPostViewCopyWith<$Res> {
   __$$_FullPostViewCopyWithImpl(
       _$_FullPostView _value, $Res Function(_$_FullPostView) _then)
-      : super(_value, (v) => _then(v as _$_FullPostView));
+      : super(_value, _then);
 
-  @override
-  _$_FullPostView get _value => super._value as _$_FullPostView;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? postView = freezed,
-    Object? communityView = freezed,
-    Object? comments = freezed,
-    Object? moderators = freezed,
-    Object? online = freezed,
-    Object? instanceHost = freezed,
+    Object? postView = null,
+    Object? communityView = null,
+    Object? moderators = null,
+    Object? online = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_FullPostView(
-      postView: postView == freezed
+      postView: null == postView
           ? _value.postView
           : postView // ignore: cast_nullable_to_non_nullable
               as PostView,
-      communityView: communityView == freezed
+      communityView: null == communityView
           ? _value.communityView
           : communityView // ignore: cast_nullable_to_non_nullable
               as CommunityView,
-      comments: comments == freezed
-          ? _value._comments
-          : comments // ignore: cast_nullable_to_non_nullable
-              as List<CommentView>,
-      moderators: moderators == freezed
+      moderators: null == moderators
           ? _value._moderators
           : moderators // ignore: cast_nullable_to_non_nullable
               as List<CommunityModeratorView>,
-      online: online == freezed
+      online: null == online
           ? _value.online
           : online // ignore: cast_nullable_to_non_nullable
               as int,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -451,12 +444,10 @@ class _$_FullPostView extends _FullPostView {
   const _$_FullPostView(
       {required this.postView,
       required this.communityView,
-      required final List<CommentView> comments,
       required final List<CommunityModeratorView> moderators,
       required this.online,
       required this.instanceHost})
-      : _comments = comments,
-        _moderators = moderators,
+      : _moderators = moderators,
         super._();
 
   factory _$_FullPostView.fromJson(Map<String, dynamic> json) =>
@@ -466,16 +457,10 @@ class _$_FullPostView extends _FullPostView {
   final PostView postView;
   @override
   final CommunityView communityView;
-  final List<CommentView> _comments;
-  @override
-  List<CommentView> get comments {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_comments);
-  }
-
   final List<CommunityModeratorView> _moderators;
   @override
   List<CommunityModeratorView> get moderators {
+    if (_moderators is EqualUnmodifiableListView) return _moderators;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_moderators);
   }
@@ -487,7 +472,7 @@ class _$_FullPostView extends _FullPostView {
 
   @override
   String toString() {
-    return 'FullPostView(postView: $postView, communityView: $communityView, comments: $comments, moderators: $moderators, online: $online, instanceHost: $instanceHost)';
+    return 'FullPostView(postView: $postView, communityView: $communityView, moderators: $moderators, online: $online, instanceHost: $instanceHost)';
   }
 
   @override
@@ -495,30 +480,25 @@ class _$_FullPostView extends _FullPostView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_FullPostView &&
-            const DeepCollectionEquality().equals(other.postView, postView) &&
-            const DeepCollectionEquality()
-                .equals(other.communityView, communityView) &&
-            const DeepCollectionEquality().equals(other._comments, _comments) &&
+            (identical(other.postView, postView) ||
+                other.postView == postView) &&
+            (identical(other.communityView, communityView) ||
+                other.communityView == communityView) &&
             const DeepCollectionEquality()
                 .equals(other._moderators, _moderators) &&
-            const DeepCollectionEquality().equals(other.online, online) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.online, online) || other.online == online) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(postView),
-      const DeepCollectionEquality().hash(communityView),
-      const DeepCollectionEquality().hash(_comments),
-      const DeepCollectionEquality().hash(_moderators),
-      const DeepCollectionEquality().hash(online),
-      const DeepCollectionEquality().hash(instanceHost));
+  int get hashCode => Object.hash(runtimeType, postView, communityView,
+      const DeepCollectionEquality().hash(_moderators), online, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_FullPostViewCopyWith<_$_FullPostView> get copyWith =>
       __$$_FullPostViewCopyWithImpl<_$_FullPostView>(this, _$identity);
 
@@ -534,7 +514,6 @@ abstract class _FullPostView extends FullPostView {
   const factory _FullPostView(
       {required final PostView postView,
       required final CommunityView communityView,
-      required final List<CommentView> comments,
       required final List<CommunityModeratorView> moderators,
       required final int online,
       required final String instanceHost}) = _$_FullPostView;
@@ -547,8 +526,6 @@ abstract class _FullPostView extends FullPostView {
   PostView get postView;
   @override
   CommunityView get communityView;
-  @override
-  List<CommentView> get comments;
   @override
   List<CommunityModeratorView> get moderators;
   @override
@@ -585,7 +562,8 @@ mixin _$SearchResults {
 abstract class $SearchResultsCopyWith<$Res> {
   factory $SearchResultsCopyWith(
           SearchResults value, $Res Function(SearchResults) then) =
-      _$SearchResultsCopyWithImpl<$Res>;
+      _$SearchResultsCopyWithImpl<$Res, SearchResults>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'type_') SearchType type,
       List<CommentView> comments,
@@ -596,49 +574,51 @@ abstract class $SearchResultsCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SearchResultsCopyWithImpl<$Res>
+class _$SearchResultsCopyWithImpl<$Res, $Val extends SearchResults>
     implements $SearchResultsCopyWith<$Res> {
   _$SearchResultsCopyWithImpl(this._value, this._then);
 
-  final SearchResults _value;
   // ignore: unused_field
-  final $Res Function(SearchResults) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = freezed,
-    Object? comments = freezed,
-    Object? posts = freezed,
-    Object? communities = freezed,
-    Object? users = freezed,
-    Object? instanceHost = freezed,
+    Object? type = null,
+    Object? comments = null,
+    Object? posts = null,
+    Object? communities = null,
+    Object? users = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as SearchType,
-      comments: comments == freezed
+      comments: null == comments
           ? _value.comments
           : comments // ignore: cast_nullable_to_non_nullable
               as List<CommentView>,
-      posts: posts == freezed
+      posts: null == posts
           ? _value.posts
           : posts // ignore: cast_nullable_to_non_nullable
               as List<PostView>,
-      communities: communities == freezed
+      communities: null == communities
           ? _value.communities
           : communities // ignore: cast_nullable_to_non_nullable
               as List<CommunityView>,
-      users: users == freezed
+      users: null == users
           ? _value.users
           : users // ignore: cast_nullable_to_non_nullable
               as List<PersonViewSafe>,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -649,6 +629,7 @@ abstract class _$$_SearchResultsCopyWith<$Res>
           _$_SearchResults value, $Res Function(_$_SearchResults) then) =
       __$$_SearchResultsCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'type_') SearchType type,
       List<CommentView> comments,
@@ -660,46 +641,44 @@ abstract class _$$_SearchResultsCopyWith<$Res>
 
 /// @nodoc
 class __$$_SearchResultsCopyWithImpl<$Res>
-    extends _$SearchResultsCopyWithImpl<$Res>
+    extends _$SearchResultsCopyWithImpl<$Res, _$_SearchResults>
     implements _$$_SearchResultsCopyWith<$Res> {
   __$$_SearchResultsCopyWithImpl(
       _$_SearchResults _value, $Res Function(_$_SearchResults) _then)
-      : super(_value, (v) => _then(v as _$_SearchResults));
+      : super(_value, _then);
 
-  @override
-  _$_SearchResults get _value => super._value as _$_SearchResults;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = freezed,
-    Object? comments = freezed,
-    Object? posts = freezed,
-    Object? communities = freezed,
-    Object? users = freezed,
-    Object? instanceHost = freezed,
+    Object? type = null,
+    Object? comments = null,
+    Object? posts = null,
+    Object? communities = null,
+    Object? users = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_SearchResults(
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as SearchType,
-      comments: comments == freezed
+      comments: null == comments
           ? _value._comments
           : comments // ignore: cast_nullable_to_non_nullable
               as List<CommentView>,
-      posts: posts == freezed
+      posts: null == posts
           ? _value._posts
           : posts // ignore: cast_nullable_to_non_nullable
               as List<PostView>,
-      communities: communities == freezed
+      communities: null == communities
           ? _value._communities
           : communities // ignore: cast_nullable_to_non_nullable
               as List<CommunityView>,
-      users: users == freezed
+      users: null == users
           ? _value._users
           : users // ignore: cast_nullable_to_non_nullable
               as List<PersonViewSafe>,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -733,6 +712,7 @@ class _$_SearchResults extends _SearchResults {
   final List<CommentView> _comments;
   @override
   List<CommentView> get comments {
+    if (_comments is EqualUnmodifiableListView) return _comments;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_comments);
   }
@@ -740,6 +720,7 @@ class _$_SearchResults extends _SearchResults {
   final List<PostView> _posts;
   @override
   List<PostView> get posts {
+    if (_posts is EqualUnmodifiableListView) return _posts;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_posts);
   }
@@ -747,6 +728,7 @@ class _$_SearchResults extends _SearchResults {
   final List<CommunityView> _communities;
   @override
   List<CommunityView> get communities {
+    if (_communities is EqualUnmodifiableListView) return _communities;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_communities);
   }
@@ -754,6 +736,7 @@ class _$_SearchResults extends _SearchResults {
   final List<PersonViewSafe> _users;
   @override
   List<PersonViewSafe> get users {
+    if (_users is EqualUnmodifiableListView) return _users;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_users);
   }
@@ -771,29 +754,30 @@ class _$_SearchResults extends _SearchResults {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SearchResults &&
-            const DeepCollectionEquality().equals(other.type, type) &&
+            (identical(other.type, type) || other.type == type) &&
             const DeepCollectionEquality().equals(other._comments, _comments) &&
             const DeepCollectionEquality().equals(other._posts, _posts) &&
             const DeepCollectionEquality()
                 .equals(other._communities, _communities) &&
             const DeepCollectionEquality().equals(other._users, _users) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(type),
+      type,
       const DeepCollectionEquality().hash(_comments),
       const DeepCollectionEquality().hash(_posts),
       const DeepCollectionEquality().hash(_communities),
       const DeepCollectionEquality().hash(_users),
-      const DeepCollectionEquality().hash(instanceHost));
+      instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SearchResultsCopyWith<_$_SearchResults> get copyWith =>
       __$$_SearchResultsCopyWithImpl<_$_SearchResults>(this, _$identity);
 
@@ -870,7 +854,8 @@ mixin _$Modlog {
 /// @nodoc
 abstract class $ModlogCopyWith<$Res> {
   factory $ModlogCopyWith(Modlog value, $Res Function(Modlog) then) =
-      _$ModlogCopyWithImpl<$Res>;
+      _$ModlogCopyWithImpl<$Res, Modlog>;
+  @useResult
   $Res call(
       {List<ModRemovePostView> removedPosts,
       List<ModLockPostView> lockedPosts,
@@ -886,73 +871,76 @@ abstract class $ModlogCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ModlogCopyWithImpl<$Res> implements $ModlogCopyWith<$Res> {
+class _$ModlogCopyWithImpl<$Res, $Val extends Modlog>
+    implements $ModlogCopyWith<$Res> {
   _$ModlogCopyWithImpl(this._value, this._then);
 
-  final Modlog _value;
   // ignore: unused_field
-  final $Res Function(Modlog) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? removedPosts = freezed,
-    Object? lockedPosts = freezed,
-    Object? stickiedPosts = freezed,
-    Object? removedComments = freezed,
-    Object? removedCommunities = freezed,
-    Object? bannedFromCommunity = freezed,
-    Object? banned = freezed,
-    Object? addedToCommunity = freezed,
-    Object? transferredToCommunity = freezed,
-    Object? added = freezed,
-    Object? instanceHost = freezed,
+    Object? removedPosts = null,
+    Object? lockedPosts = null,
+    Object? stickiedPosts = null,
+    Object? removedComments = null,
+    Object? removedCommunities = null,
+    Object? bannedFromCommunity = null,
+    Object? banned = null,
+    Object? addedToCommunity = null,
+    Object? transferredToCommunity = null,
+    Object? added = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      removedPosts: removedPosts == freezed
+      removedPosts: null == removedPosts
           ? _value.removedPosts
           : removedPosts // ignore: cast_nullable_to_non_nullable
               as List<ModRemovePostView>,
-      lockedPosts: lockedPosts == freezed
+      lockedPosts: null == lockedPosts
           ? _value.lockedPosts
           : lockedPosts // ignore: cast_nullable_to_non_nullable
               as List<ModLockPostView>,
-      stickiedPosts: stickiedPosts == freezed
+      stickiedPosts: null == stickiedPosts
           ? _value.stickiedPosts
           : stickiedPosts // ignore: cast_nullable_to_non_nullable
               as List<ModStickyPostView>,
-      removedComments: removedComments == freezed
+      removedComments: null == removedComments
           ? _value.removedComments
           : removedComments // ignore: cast_nullable_to_non_nullable
               as List<ModRemoveCommentView>,
-      removedCommunities: removedCommunities == freezed
+      removedCommunities: null == removedCommunities
           ? _value.removedCommunities
           : removedCommunities // ignore: cast_nullable_to_non_nullable
               as List<ModRemoveCommunityView>,
-      bannedFromCommunity: bannedFromCommunity == freezed
+      bannedFromCommunity: null == bannedFromCommunity
           ? _value.bannedFromCommunity
           : bannedFromCommunity // ignore: cast_nullable_to_non_nullable
               as List<ModBanFromCommunityView>,
-      banned: banned == freezed
+      banned: null == banned
           ? _value.banned
           : banned // ignore: cast_nullable_to_non_nullable
               as List<ModBanView>,
-      addedToCommunity: addedToCommunity == freezed
+      addedToCommunity: null == addedToCommunity
           ? _value.addedToCommunity
           : addedToCommunity // ignore: cast_nullable_to_non_nullable
               as List<ModAddCommunityView>,
-      transferredToCommunity: transferredToCommunity == freezed
+      transferredToCommunity: null == transferredToCommunity
           ? _value.transferredToCommunity
           : transferredToCommunity // ignore: cast_nullable_to_non_nullable
               as List<ModTransferCommunityView>,
-      added: added == freezed
+      added: null == added
           ? _value.added
           : added // ignore: cast_nullable_to_non_nullable
               as List<ModAddView>,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -961,6 +949,7 @@ abstract class _$$_ModlogCopyWith<$Res> implements $ModlogCopyWith<$Res> {
   factory _$$_ModlogCopyWith(_$_Modlog value, $Res Function(_$_Modlog) then) =
       __$$_ModlogCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {List<ModRemovePostView> removedPosts,
       List<ModLockPostView> lockedPosts,
@@ -976,70 +965,69 @@ abstract class _$$_ModlogCopyWith<$Res> implements $ModlogCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ModlogCopyWithImpl<$Res> extends _$ModlogCopyWithImpl<$Res>
+class __$$_ModlogCopyWithImpl<$Res>
+    extends _$ModlogCopyWithImpl<$Res, _$_Modlog>
     implements _$$_ModlogCopyWith<$Res> {
   __$$_ModlogCopyWithImpl(_$_Modlog _value, $Res Function(_$_Modlog) _then)
-      : super(_value, (v) => _then(v as _$_Modlog));
+      : super(_value, _then);
 
-  @override
-  _$_Modlog get _value => super._value as _$_Modlog;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? removedPosts = freezed,
-    Object? lockedPosts = freezed,
-    Object? stickiedPosts = freezed,
-    Object? removedComments = freezed,
-    Object? removedCommunities = freezed,
-    Object? bannedFromCommunity = freezed,
-    Object? banned = freezed,
-    Object? addedToCommunity = freezed,
-    Object? transferredToCommunity = freezed,
-    Object? added = freezed,
-    Object? instanceHost = freezed,
+    Object? removedPosts = null,
+    Object? lockedPosts = null,
+    Object? stickiedPosts = null,
+    Object? removedComments = null,
+    Object? removedCommunities = null,
+    Object? bannedFromCommunity = null,
+    Object? banned = null,
+    Object? addedToCommunity = null,
+    Object? transferredToCommunity = null,
+    Object? added = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_Modlog(
-      removedPosts: removedPosts == freezed
+      removedPosts: null == removedPosts
           ? _value._removedPosts
           : removedPosts // ignore: cast_nullable_to_non_nullable
               as List<ModRemovePostView>,
-      lockedPosts: lockedPosts == freezed
+      lockedPosts: null == lockedPosts
           ? _value._lockedPosts
           : lockedPosts // ignore: cast_nullable_to_non_nullable
               as List<ModLockPostView>,
-      stickiedPosts: stickiedPosts == freezed
+      stickiedPosts: null == stickiedPosts
           ? _value._stickiedPosts
           : stickiedPosts // ignore: cast_nullable_to_non_nullable
               as List<ModStickyPostView>,
-      removedComments: removedComments == freezed
+      removedComments: null == removedComments
           ? _value._removedComments
           : removedComments // ignore: cast_nullable_to_non_nullable
               as List<ModRemoveCommentView>,
-      removedCommunities: removedCommunities == freezed
+      removedCommunities: null == removedCommunities
           ? _value._removedCommunities
           : removedCommunities // ignore: cast_nullable_to_non_nullable
               as List<ModRemoveCommunityView>,
-      bannedFromCommunity: bannedFromCommunity == freezed
+      bannedFromCommunity: null == bannedFromCommunity
           ? _value._bannedFromCommunity
           : bannedFromCommunity // ignore: cast_nullable_to_non_nullable
               as List<ModBanFromCommunityView>,
-      banned: banned == freezed
+      banned: null == banned
           ? _value._banned
           : banned // ignore: cast_nullable_to_non_nullable
               as List<ModBanView>,
-      addedToCommunity: addedToCommunity == freezed
+      addedToCommunity: null == addedToCommunity
           ? _value._addedToCommunity
           : addedToCommunity // ignore: cast_nullable_to_non_nullable
               as List<ModAddCommunityView>,
-      transferredToCommunity: transferredToCommunity == freezed
+      transferredToCommunity: null == transferredToCommunity
           ? _value._transferredToCommunity
           : transferredToCommunity // ignore: cast_nullable_to_non_nullable
               as List<ModTransferCommunityView>,
-      added: added == freezed
+      added: null == added
           ? _value._added
           : added // ignore: cast_nullable_to_non_nullable
               as List<ModAddView>,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1081,6 +1069,7 @@ class _$_Modlog extends _Modlog {
   final List<ModRemovePostView> _removedPosts;
   @override
   List<ModRemovePostView> get removedPosts {
+    if (_removedPosts is EqualUnmodifiableListView) return _removedPosts;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_removedPosts);
   }
@@ -1088,6 +1077,7 @@ class _$_Modlog extends _Modlog {
   final List<ModLockPostView> _lockedPosts;
   @override
   List<ModLockPostView> get lockedPosts {
+    if (_lockedPosts is EqualUnmodifiableListView) return _lockedPosts;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_lockedPosts);
   }
@@ -1095,6 +1085,7 @@ class _$_Modlog extends _Modlog {
   final List<ModStickyPostView> _stickiedPosts;
   @override
   List<ModStickyPostView> get stickiedPosts {
+    if (_stickiedPosts is EqualUnmodifiableListView) return _stickiedPosts;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_stickiedPosts);
   }
@@ -1102,6 +1093,7 @@ class _$_Modlog extends _Modlog {
   final List<ModRemoveCommentView> _removedComments;
   @override
   List<ModRemoveCommentView> get removedComments {
+    if (_removedComments is EqualUnmodifiableListView) return _removedComments;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_removedComments);
   }
@@ -1109,6 +1101,8 @@ class _$_Modlog extends _Modlog {
   final List<ModRemoveCommunityView> _removedCommunities;
   @override
   List<ModRemoveCommunityView> get removedCommunities {
+    if (_removedCommunities is EqualUnmodifiableListView)
+      return _removedCommunities;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_removedCommunities);
   }
@@ -1116,6 +1110,8 @@ class _$_Modlog extends _Modlog {
   final List<ModBanFromCommunityView> _bannedFromCommunity;
   @override
   List<ModBanFromCommunityView> get bannedFromCommunity {
+    if (_bannedFromCommunity is EqualUnmodifiableListView)
+      return _bannedFromCommunity;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_bannedFromCommunity);
   }
@@ -1123,6 +1119,7 @@ class _$_Modlog extends _Modlog {
   final List<ModBanView> _banned;
   @override
   List<ModBanView> get banned {
+    if (_banned is EqualUnmodifiableListView) return _banned;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_banned);
   }
@@ -1130,6 +1127,8 @@ class _$_Modlog extends _Modlog {
   final List<ModAddCommunityView> _addedToCommunity;
   @override
   List<ModAddCommunityView> get addedToCommunity {
+    if (_addedToCommunity is EqualUnmodifiableListView)
+      return _addedToCommunity;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_addedToCommunity);
   }
@@ -1137,6 +1136,8 @@ class _$_Modlog extends _Modlog {
   final List<ModTransferCommunityView> _transferredToCommunity;
   @override
   List<ModTransferCommunityView> get transferredToCommunity {
+    if (_transferredToCommunity is EqualUnmodifiableListView)
+      return _transferredToCommunity;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_transferredToCommunity);
   }
@@ -1144,6 +1145,7 @@ class _$_Modlog extends _Modlog {
   final List<ModAddView> _added;
   @override
   List<ModAddView> get added {
+    if (_added is EqualUnmodifiableListView) return _added;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_added);
   }
@@ -1179,8 +1181,8 @@ class _$_Modlog extends _Modlog {
             const DeepCollectionEquality().equals(
                 other._transferredToCommunity, _transferredToCommunity) &&
             const DeepCollectionEquality().equals(other._added, _added) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
@@ -1197,10 +1199,11 @@ class _$_Modlog extends _Modlog {
       const DeepCollectionEquality().hash(_addedToCommunity),
       const DeepCollectionEquality().hash(_transferredToCommunity),
       const DeepCollectionEquality().hash(_added),
-      const DeepCollectionEquality().hash(instanceHost));
+      instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ModlogCopyWith<_$_Modlog> get copyWith =>
       __$$_ModlogCopyWithImpl<_$_Modlog>(this, _$identity);
 
@@ -1278,7 +1281,8 @@ mixin _$FullCommentView {
 abstract class $FullCommentViewCopyWith<$Res> {
   factory $FullCommentViewCopyWith(
           FullCommentView value, $Res Function(FullCommentView) then) =
-      _$FullCommentViewCopyWithImpl<$Res>;
+      _$FullCommentViewCopyWithImpl<$Res, FullCommentView>;
+  @useResult
   $Res call(
       {CommentView commentView,
       List<int> recipientIds,
@@ -1289,45 +1293,48 @@ abstract class $FullCommentViewCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$FullCommentViewCopyWithImpl<$Res>
+class _$FullCommentViewCopyWithImpl<$Res, $Val extends FullCommentView>
     implements $FullCommentViewCopyWith<$Res> {
   _$FullCommentViewCopyWithImpl(this._value, this._then);
 
-  final FullCommentView _value;
   // ignore: unused_field
-  final $Res Function(FullCommentView) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? commentView = freezed,
-    Object? recipientIds = freezed,
+    Object? commentView = null,
+    Object? recipientIds = null,
     Object? formId = freezed,
-    Object? instanceHost = freezed,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      commentView: commentView == freezed
+      commentView: null == commentView
           ? _value.commentView
           : commentView // ignore: cast_nullable_to_non_nullable
               as CommentView,
-      recipientIds: recipientIds == freezed
+      recipientIds: null == recipientIds
           ? _value.recipientIds
           : recipientIds // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      formId: formId == freezed
+      formId: freezed == formId
           ? _value.formId
           : formId // ignore: cast_nullable_to_non_nullable
               as String?,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CommentViewCopyWith<$Res> get commentView {
     return $CommentViewCopyWith<$Res>(_value.commentView, (value) {
-      return _then(_value.copyWith(commentView: value));
+      return _then(_value.copyWith(commentView: value) as $Val);
     });
   }
 }
@@ -1339,6 +1346,7 @@ abstract class _$$_FullCommentViewCopyWith<$Res>
           _$_FullCommentView value, $Res Function(_$_FullCommentView) then) =
       __$$_FullCommentViewCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {CommentView commentView,
       List<int> recipientIds,
@@ -1351,36 +1359,34 @@ abstract class _$$_FullCommentViewCopyWith<$Res>
 
 /// @nodoc
 class __$$_FullCommentViewCopyWithImpl<$Res>
-    extends _$FullCommentViewCopyWithImpl<$Res>
+    extends _$FullCommentViewCopyWithImpl<$Res, _$_FullCommentView>
     implements _$$_FullCommentViewCopyWith<$Res> {
   __$$_FullCommentViewCopyWithImpl(
       _$_FullCommentView _value, $Res Function(_$_FullCommentView) _then)
-      : super(_value, (v) => _then(v as _$_FullCommentView));
+      : super(_value, _then);
 
-  @override
-  _$_FullCommentView get _value => super._value as _$_FullCommentView;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? commentView = freezed,
-    Object? recipientIds = freezed,
+    Object? commentView = null,
+    Object? recipientIds = null,
     Object? formId = freezed,
-    Object? instanceHost = freezed,
+    Object? instanceHost = null,
   }) {
     return _then(_$_FullCommentView(
-      commentView: commentView == freezed
+      commentView: null == commentView
           ? _value.commentView
           : commentView // ignore: cast_nullable_to_non_nullable
               as CommentView,
-      recipientIds: recipientIds == freezed
+      recipientIds: null == recipientIds
           ? _value._recipientIds
           : recipientIds // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      formId: formId == freezed
+      formId: freezed == formId
           ? _value.formId
           : formId // ignore: cast_nullable_to_non_nullable
               as String?,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1408,6 +1414,7 @@ class _$_FullCommentView extends _FullCommentView {
   final List<int> _recipientIds;
   @override
   List<int> get recipientIds {
+    if (_recipientIds is EqualUnmodifiableListView) return _recipientIds;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_recipientIds);
   }
@@ -1427,26 +1434,23 @@ class _$_FullCommentView extends _FullCommentView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_FullCommentView &&
-            const DeepCollectionEquality()
-                .equals(other.commentView, commentView) &&
+            (identical(other.commentView, commentView) ||
+                other.commentView == commentView) &&
             const DeepCollectionEquality()
                 .equals(other._recipientIds, _recipientIds) &&
-            const DeepCollectionEquality().equals(other.formId, formId) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.formId, formId) || other.formId == formId) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(commentView),
-      const DeepCollectionEquality().hash(_recipientIds),
-      const DeepCollectionEquality().hash(formId),
-      const DeepCollectionEquality().hash(instanceHost));
+  int get hashCode => Object.hash(runtimeType, commentView,
+      const DeepCollectionEquality().hash(_recipientIds), formId, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_FullCommentViewCopyWith<_$_FullCommentView> get copyWith =>
       __$$_FullCommentViewCopyWithImpl<_$_FullCommentView>(this, _$identity);
 
@@ -1508,7 +1512,8 @@ mixin _$FullSiteView {
 abstract class $FullSiteViewCopyWith<$Res> {
   factory $FullSiteViewCopyWith(
           FullSiteView value, $Res Function(FullSiteView) then) =
-      _$FullSiteViewCopyWithImpl<$Res>;
+      _$FullSiteViewCopyWithImpl<$Res, FullSiteView>;
+  @useResult
   $Res call(
       {SiteView? siteView,
       List<PersonViewSafe> admins,
@@ -1524,78 +1529,84 @@ abstract class $FullSiteViewCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$FullSiteViewCopyWithImpl<$Res> implements $FullSiteViewCopyWith<$Res> {
+class _$FullSiteViewCopyWithImpl<$Res, $Val extends FullSiteView>
+    implements $FullSiteViewCopyWith<$Res> {
   _$FullSiteViewCopyWithImpl(this._value, this._then);
 
-  final FullSiteView _value;
   // ignore: unused_field
-  final $Res Function(FullSiteView) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? siteView = freezed,
-    Object? admins = freezed,
-    Object? online = freezed,
-    Object? version = freezed,
+    Object? admins = null,
+    Object? online = null,
+    Object? version = null,
     Object? myUser = freezed,
     Object? federatedInstances = freezed,
-    Object? instanceHost = freezed,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      siteView: siteView == freezed
+      siteView: freezed == siteView
           ? _value.siteView
           : siteView // ignore: cast_nullable_to_non_nullable
               as SiteView?,
-      admins: admins == freezed
+      admins: null == admins
           ? _value.admins
           : admins // ignore: cast_nullable_to_non_nullable
               as List<PersonViewSafe>,
-      online: online == freezed
+      online: null == online
           ? _value.online
           : online // ignore: cast_nullable_to_non_nullable
               as int,
-      version: version == freezed
+      version: null == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
               as String,
-      myUser: myUser == freezed
+      myUser: freezed == myUser
           ? _value.myUser
           : myUser // ignore: cast_nullable_to_non_nullable
               as MyUserInfo?,
-      federatedInstances: federatedInstances == freezed
+      federatedInstances: freezed == federatedInstances
           ? _value.federatedInstances
           : federatedInstances // ignore: cast_nullable_to_non_nullable
               as FederatedInstances?,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SiteViewCopyWith<$Res>? get siteView {
     if (_value.siteView == null) {
       return null;
     }
 
     return $SiteViewCopyWith<$Res>(_value.siteView!, (value) {
-      return _then(_value.copyWith(siteView: value));
+      return _then(_value.copyWith(siteView: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MyUserInfoCopyWith<$Res>? get myUser {
     if (_value.myUser == null) {
       return null;
     }
 
     return $MyUserInfoCopyWith<$Res>(_value.myUser!, (value) {
-      return _then(_value.copyWith(myUser: value));
+      return _then(_value.copyWith(myUser: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $FederatedInstancesCopyWith<$Res>? get federatedInstances {
     if (_value.federatedInstances == null) {
       return null;
@@ -1603,7 +1614,7 @@ class _$FullSiteViewCopyWithImpl<$Res> implements $FullSiteViewCopyWith<$Res> {
 
     return $FederatedInstancesCopyWith<$Res>(_value.federatedInstances!,
         (value) {
-      return _then(_value.copyWith(federatedInstances: value));
+      return _then(_value.copyWith(federatedInstances: value) as $Val);
     });
   }
 }
@@ -1615,6 +1626,7 @@ abstract class _$$_FullSiteViewCopyWith<$Res>
           _$_FullSiteView value, $Res Function(_$_FullSiteView) then) =
       __$$_FullSiteViewCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {SiteView? siteView,
       List<PersonViewSafe> admins,
@@ -1634,51 +1646,49 @@ abstract class _$$_FullSiteViewCopyWith<$Res>
 
 /// @nodoc
 class __$$_FullSiteViewCopyWithImpl<$Res>
-    extends _$FullSiteViewCopyWithImpl<$Res>
+    extends _$FullSiteViewCopyWithImpl<$Res, _$_FullSiteView>
     implements _$$_FullSiteViewCopyWith<$Res> {
   __$$_FullSiteViewCopyWithImpl(
       _$_FullSiteView _value, $Res Function(_$_FullSiteView) _then)
-      : super(_value, (v) => _then(v as _$_FullSiteView));
+      : super(_value, _then);
 
-  @override
-  _$_FullSiteView get _value => super._value as _$_FullSiteView;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? siteView = freezed,
-    Object? admins = freezed,
-    Object? online = freezed,
-    Object? version = freezed,
+    Object? admins = null,
+    Object? online = null,
+    Object? version = null,
     Object? myUser = freezed,
     Object? federatedInstances = freezed,
-    Object? instanceHost = freezed,
+    Object? instanceHost = null,
   }) {
     return _then(_$_FullSiteView(
-      siteView: siteView == freezed
+      siteView: freezed == siteView
           ? _value.siteView
           : siteView // ignore: cast_nullable_to_non_nullable
               as SiteView?,
-      admins: admins == freezed
+      admins: null == admins
           ? _value._admins
           : admins // ignore: cast_nullable_to_non_nullable
               as List<PersonViewSafe>,
-      online: online == freezed
+      online: null == online
           ? _value.online
           : online // ignore: cast_nullable_to_non_nullable
               as int,
-      version: version == freezed
+      version: null == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
               as String,
-      myUser: myUser == freezed
+      myUser: freezed == myUser
           ? _value.myUser
           : myUser // ignore: cast_nullable_to_non_nullable
               as MyUserInfo?,
-      federatedInstances: federatedInstances == freezed
+      federatedInstances: freezed == federatedInstances
           ? _value.federatedInstances
           : federatedInstances // ignore: cast_nullable_to_non_nullable
               as FederatedInstances?,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1709,6 +1719,7 @@ class _$_FullSiteView extends _FullSiteView {
   final List<PersonViewSafe> _admins;
   @override
   List<PersonViewSafe> get admins {
+    if (_admins is EqualUnmodifiableListView) return _admins;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_admins);
   }
@@ -1734,31 +1745,33 @@ class _$_FullSiteView extends _FullSiteView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_FullSiteView &&
-            const DeepCollectionEquality().equals(other.siteView, siteView) &&
+            (identical(other.siteView, siteView) ||
+                other.siteView == siteView) &&
             const DeepCollectionEquality().equals(other._admins, _admins) &&
-            const DeepCollectionEquality().equals(other.online, online) &&
-            const DeepCollectionEquality().equals(other.version, version) &&
-            const DeepCollectionEquality().equals(other.myUser, myUser) &&
-            const DeepCollectionEquality()
-                .equals(other.federatedInstances, federatedInstances) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.online, online) || other.online == online) &&
+            (identical(other.version, version) || other.version == version) &&
+            (identical(other.myUser, myUser) || other.myUser == myUser) &&
+            (identical(other.federatedInstances, federatedInstances) ||
+                other.federatedInstances == federatedInstances) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(siteView),
+      siteView,
       const DeepCollectionEquality().hash(_admins),
-      const DeepCollectionEquality().hash(online),
-      const DeepCollectionEquality().hash(version),
-      const DeepCollectionEquality().hash(myUser),
-      const DeepCollectionEquality().hash(federatedInstances),
-      const DeepCollectionEquality().hash(instanceHost));
+      online,
+      version,
+      myUser,
+      federatedInstances,
+      instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_FullSiteViewCopyWith<_$_FullSiteView> get copyWith =>
       __$$_FullSiteViewCopyWithImpl<_$_FullSiteView>(this, _$identity);
 
@@ -1829,7 +1842,8 @@ mixin _$MyUserInfo {
 abstract class $MyUserInfoCopyWith<$Res> {
   factory $MyUserInfoCopyWith(
           MyUserInfo value, $Res Function(MyUserInfo) then) =
-      _$MyUserInfoCopyWithImpl<$Res>;
+      _$MyUserInfoCopyWithImpl<$Res, MyUserInfo>;
+  @useResult
   $Res call(
       {LocalUserSettingsView localUserView,
       List<CommunityFollowerView> follows,
@@ -1842,54 +1856,58 @@ abstract class $MyUserInfoCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MyUserInfoCopyWithImpl<$Res> implements $MyUserInfoCopyWith<$Res> {
+class _$MyUserInfoCopyWithImpl<$Res, $Val extends MyUserInfo>
+    implements $MyUserInfoCopyWith<$Res> {
   _$MyUserInfoCopyWithImpl(this._value, this._then);
 
-  final MyUserInfo _value;
   // ignore: unused_field
-  final $Res Function(MyUserInfo) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? localUserView = freezed,
-    Object? follows = freezed,
-    Object? moderates = freezed,
-    Object? communityBlocks = freezed,
-    Object? personBlocks = freezed,
-    Object? instanceHost = freezed,
+    Object? localUserView = null,
+    Object? follows = null,
+    Object? moderates = null,
+    Object? communityBlocks = null,
+    Object? personBlocks = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      localUserView: localUserView == freezed
+      localUserView: null == localUserView
           ? _value.localUserView
           : localUserView // ignore: cast_nullable_to_non_nullable
               as LocalUserSettingsView,
-      follows: follows == freezed
+      follows: null == follows
           ? _value.follows
           : follows // ignore: cast_nullable_to_non_nullable
               as List<CommunityFollowerView>,
-      moderates: moderates == freezed
+      moderates: null == moderates
           ? _value.moderates
           : moderates // ignore: cast_nullable_to_non_nullable
               as List<CommunityModeratorView>,
-      communityBlocks: communityBlocks == freezed
+      communityBlocks: null == communityBlocks
           ? _value.communityBlocks
           : communityBlocks // ignore: cast_nullable_to_non_nullable
               as List<CommunityBlockView>,
-      personBlocks: personBlocks == freezed
+      personBlocks: null == personBlocks
           ? _value.personBlocks
           : personBlocks // ignore: cast_nullable_to_non_nullable
               as List<PersonBlockView>,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $LocalUserSettingsViewCopyWith<$Res> get localUserView {
     return $LocalUserSettingsViewCopyWith<$Res>(_value.localUserView, (value) {
-      return _then(_value.copyWith(localUserView: value));
+      return _then(_value.copyWith(localUserView: value) as $Val);
     });
   }
 }
@@ -1901,6 +1919,7 @@ abstract class _$$_MyUserInfoCopyWith<$Res>
           _$_MyUserInfo value, $Res Function(_$_MyUserInfo) then) =
       __$$_MyUserInfoCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {LocalUserSettingsView localUserView,
       List<CommunityFollowerView> follows,
@@ -1914,46 +1933,45 @@ abstract class _$$_MyUserInfoCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MyUserInfoCopyWithImpl<$Res> extends _$MyUserInfoCopyWithImpl<$Res>
+class __$$_MyUserInfoCopyWithImpl<$Res>
+    extends _$MyUserInfoCopyWithImpl<$Res, _$_MyUserInfo>
     implements _$$_MyUserInfoCopyWith<$Res> {
   __$$_MyUserInfoCopyWithImpl(
       _$_MyUserInfo _value, $Res Function(_$_MyUserInfo) _then)
-      : super(_value, (v) => _then(v as _$_MyUserInfo));
+      : super(_value, _then);
 
-  @override
-  _$_MyUserInfo get _value => super._value as _$_MyUserInfo;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? localUserView = freezed,
-    Object? follows = freezed,
-    Object? moderates = freezed,
-    Object? communityBlocks = freezed,
-    Object? personBlocks = freezed,
-    Object? instanceHost = freezed,
+    Object? localUserView = null,
+    Object? follows = null,
+    Object? moderates = null,
+    Object? communityBlocks = null,
+    Object? personBlocks = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_MyUserInfo(
-      localUserView: localUserView == freezed
+      localUserView: null == localUserView
           ? _value.localUserView
           : localUserView // ignore: cast_nullable_to_non_nullable
               as LocalUserSettingsView,
-      follows: follows == freezed
+      follows: null == follows
           ? _value._follows
           : follows // ignore: cast_nullable_to_non_nullable
               as List<CommunityFollowerView>,
-      moderates: moderates == freezed
+      moderates: null == moderates
           ? _value._moderates
           : moderates // ignore: cast_nullable_to_non_nullable
               as List<CommunityModeratorView>,
-      communityBlocks: communityBlocks == freezed
+      communityBlocks: null == communityBlocks
           ? _value._communityBlocks
           : communityBlocks // ignore: cast_nullable_to_non_nullable
               as List<CommunityBlockView>,
-      personBlocks: personBlocks == freezed
+      personBlocks: null == personBlocks
           ? _value._personBlocks
           : personBlocks // ignore: cast_nullable_to_non_nullable
               as List<PersonBlockView>,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1986,6 +2004,7 @@ class _$_MyUserInfo extends _MyUserInfo {
   final List<CommunityFollowerView> _follows;
   @override
   List<CommunityFollowerView> get follows {
+    if (_follows is EqualUnmodifiableListView) return _follows;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_follows);
   }
@@ -1993,6 +2012,7 @@ class _$_MyUserInfo extends _MyUserInfo {
   final List<CommunityModeratorView> _moderates;
   @override
   List<CommunityModeratorView> get moderates {
+    if (_moderates is EqualUnmodifiableListView) return _moderates;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_moderates);
   }
@@ -2000,6 +2020,7 @@ class _$_MyUserInfo extends _MyUserInfo {
   final List<CommunityBlockView> _communityBlocks;
   @override
   List<CommunityBlockView> get communityBlocks {
+    if (_communityBlocks is EqualUnmodifiableListView) return _communityBlocks;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_communityBlocks);
   }
@@ -2007,6 +2028,7 @@ class _$_MyUserInfo extends _MyUserInfo {
   final List<PersonBlockView> _personBlocks;
   @override
   List<PersonBlockView> get personBlocks {
+    if (_personBlocks is EqualUnmodifiableListView) return _personBlocks;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_personBlocks);
   }
@@ -2024,8 +2046,8 @@ class _$_MyUserInfo extends _MyUserInfo {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MyUserInfo &&
-            const DeepCollectionEquality()
-                .equals(other.localUserView, localUserView) &&
+            (identical(other.localUserView, localUserView) ||
+                other.localUserView == localUserView) &&
             const DeepCollectionEquality().equals(other._follows, _follows) &&
             const DeepCollectionEquality()
                 .equals(other._moderates, _moderates) &&
@@ -2033,23 +2055,24 @@ class _$_MyUserInfo extends _MyUserInfo {
                 .equals(other._communityBlocks, _communityBlocks) &&
             const DeepCollectionEquality()
                 .equals(other._personBlocks, _personBlocks) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(localUserView),
+      localUserView,
       const DeepCollectionEquality().hash(_follows),
       const DeepCollectionEquality().hash(_moderates),
       const DeepCollectionEquality().hash(_communityBlocks),
       const DeepCollectionEquality().hash(_personBlocks),
-      const DeepCollectionEquality().hash(instanceHost));
+      instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_MyUserInfoCopyWith<_$_MyUserInfo> get copyWith =>
       __$$_MyUserInfoCopyWithImpl<_$_MyUserInfo>(this, _$identity);
 
@@ -2113,7 +2136,8 @@ mixin _$FederatedInstances {
 abstract class $FederatedInstancesCopyWith<$Res> {
   factory $FederatedInstancesCopyWith(
           FederatedInstances value, $Res Function(FederatedInstances) then) =
-      _$FederatedInstancesCopyWithImpl<$Res>;
+      _$FederatedInstancesCopyWithImpl<$Res, FederatedInstances>;
+  @useResult
   $Res call(
       {List<String> linked,
       List<String>? allowed,
@@ -2122,39 +2146,41 @@ abstract class $FederatedInstancesCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$FederatedInstancesCopyWithImpl<$Res>
+class _$FederatedInstancesCopyWithImpl<$Res, $Val extends FederatedInstances>
     implements $FederatedInstancesCopyWith<$Res> {
   _$FederatedInstancesCopyWithImpl(this._value, this._then);
 
-  final FederatedInstances _value;
   // ignore: unused_field
-  final $Res Function(FederatedInstances) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? linked = freezed,
+    Object? linked = null,
     Object? allowed = freezed,
     Object? blocked = freezed,
-    Object? instanceHost = freezed,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      linked: linked == freezed
+      linked: null == linked
           ? _value.linked
           : linked // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      allowed: allowed == freezed
+      allowed: freezed == allowed
           ? _value.allowed
           : allowed // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      blocked: blocked == freezed
+      blocked: freezed == blocked
           ? _value.blocked
           : blocked // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -2165,6 +2191,7 @@ abstract class _$$_FederatedInstancesCopyWith<$Res>
           $Res Function(_$_FederatedInstances) then) =
       __$$_FederatedInstancesCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {List<String> linked,
       List<String>? allowed,
@@ -2174,36 +2201,34 @@ abstract class _$$_FederatedInstancesCopyWith<$Res>
 
 /// @nodoc
 class __$$_FederatedInstancesCopyWithImpl<$Res>
-    extends _$FederatedInstancesCopyWithImpl<$Res>
+    extends _$FederatedInstancesCopyWithImpl<$Res, _$_FederatedInstances>
     implements _$$_FederatedInstancesCopyWith<$Res> {
   __$$_FederatedInstancesCopyWithImpl(
       _$_FederatedInstances _value, $Res Function(_$_FederatedInstances) _then)
-      : super(_value, (v) => _then(v as _$_FederatedInstances));
+      : super(_value, _then);
 
-  @override
-  _$_FederatedInstances get _value => super._value as _$_FederatedInstances;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? linked = freezed,
+    Object? linked = null,
     Object? allowed = freezed,
     Object? blocked = freezed,
-    Object? instanceHost = freezed,
+    Object? instanceHost = null,
   }) {
     return _then(_$_FederatedInstances(
-      linked: linked == freezed
+      linked: null == linked
           ? _value._linked
           : linked // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      allowed: allowed == freezed
+      allowed: freezed == allowed
           ? _value._allowed
           : allowed // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      blocked: blocked == freezed
+      blocked: freezed == blocked
           ? _value._blocked
           : blocked // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -2231,6 +2256,7 @@ class _$_FederatedInstances extends _FederatedInstances {
   final List<String> _linked;
   @override
   List<String> get linked {
+    if (_linked is EqualUnmodifiableListView) return _linked;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_linked);
   }
@@ -2240,6 +2266,7 @@ class _$_FederatedInstances extends _FederatedInstances {
   List<String>? get allowed {
     final value = _allowed;
     if (value == null) return null;
+    if (_allowed is EqualUnmodifiableListView) return _allowed;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2249,6 +2276,7 @@ class _$_FederatedInstances extends _FederatedInstances {
   List<String>? get blocked {
     final value = _blocked;
     if (value == null) return null;
+    if (_blocked is EqualUnmodifiableListView) return _blocked;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2269,8 +2297,8 @@ class _$_FederatedInstances extends _FederatedInstances {
             const DeepCollectionEquality().equals(other._linked, _linked) &&
             const DeepCollectionEquality().equals(other._allowed, _allowed) &&
             const DeepCollectionEquality().equals(other._blocked, _blocked) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
@@ -2280,10 +2308,11 @@ class _$_FederatedInstances extends _FederatedInstances {
       const DeepCollectionEquality().hash(_linked),
       const DeepCollectionEquality().hash(_allowed),
       const DeepCollectionEquality().hash(_blocked),
-      const DeepCollectionEquality().hash(instanceHost));
+      instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_FederatedInstancesCopyWith<_$_FederatedInstances> get copyWith =>
       __$$_FederatedInstancesCopyWithImpl<_$_FederatedInstances>(
           this, _$identity);
@@ -2342,38 +2371,42 @@ mixin _$Captcha {
 /// @nodoc
 abstract class $CaptchaCopyWith<$Res> {
   factory $CaptchaCopyWith(Captcha value, $Res Function(Captcha) then) =
-      _$CaptchaCopyWithImpl<$Res>;
+      _$CaptchaCopyWithImpl<$Res, Captcha>;
+  @useResult
   $Res call({String png, String? wav, String uuid});
 }
 
 /// @nodoc
-class _$CaptchaCopyWithImpl<$Res> implements $CaptchaCopyWith<$Res> {
+class _$CaptchaCopyWithImpl<$Res, $Val extends Captcha>
+    implements $CaptchaCopyWith<$Res> {
   _$CaptchaCopyWithImpl(this._value, this._then);
 
-  final Captcha _value;
   // ignore: unused_field
-  final $Res Function(Captcha) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? png = freezed,
+    Object? png = null,
     Object? wav = freezed,
-    Object? uuid = freezed,
+    Object? uuid = null,
   }) {
     return _then(_value.copyWith(
-      png: png == freezed
+      png: null == png
           ? _value.png
           : png // ignore: cast_nullable_to_non_nullable
               as String,
-      wav: wav == freezed
+      wav: freezed == wav
           ? _value.wav
           : wav // ignore: cast_nullable_to_non_nullable
               as String?,
-      uuid: uuid == freezed
+      uuid: null == uuid
           ? _value.uuid
           : uuid // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -2383,34 +2416,34 @@ abstract class _$$_CaptchaCopyWith<$Res> implements $CaptchaCopyWith<$Res> {
           _$_Captcha value, $Res Function(_$_Captcha) then) =
       __$$_CaptchaCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String png, String? wav, String uuid});
 }
 
 /// @nodoc
-class __$$_CaptchaCopyWithImpl<$Res> extends _$CaptchaCopyWithImpl<$Res>
+class __$$_CaptchaCopyWithImpl<$Res>
+    extends _$CaptchaCopyWithImpl<$Res, _$_Captcha>
     implements _$$_CaptchaCopyWith<$Res> {
   __$$_CaptchaCopyWithImpl(_$_Captcha _value, $Res Function(_$_Captcha) _then)
-      : super(_value, (v) => _then(v as _$_Captcha));
+      : super(_value, _then);
 
-  @override
-  _$_Captcha get _value => super._value as _$_Captcha;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? png = freezed,
+    Object? png = null,
     Object? wav = freezed,
-    Object? uuid = freezed,
+    Object? uuid = null,
   }) {
     return _then(_$_Captcha(
-      png: png == freezed
+      png: null == png
           ? _value.png
           : png // ignore: cast_nullable_to_non_nullable
               as String,
-      wav: wav == freezed
+      wav: freezed == wav
           ? _value.wav
           : wav // ignore: cast_nullable_to_non_nullable
               as String?,
-      uuid: uuid == freezed
+      uuid: null == uuid
           ? _value.uuid
           : uuid // ignore: cast_nullable_to_non_nullable
               as String,
@@ -2448,21 +2481,18 @@ class _$_Captcha extends _Captcha {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Captcha &&
-            const DeepCollectionEquality().equals(other.png, png) &&
-            const DeepCollectionEquality().equals(other.wav, wav) &&
-            const DeepCollectionEquality().equals(other.uuid, uuid));
+            (identical(other.png, png) || other.png == png) &&
+            (identical(other.wav, wav) || other.wav == wav) &&
+            (identical(other.uuid, uuid) || other.uuid == uuid));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(png),
-      const DeepCollectionEquality().hash(wav),
-      const DeepCollectionEquality().hash(uuid));
+  int get hashCode => Object.hash(runtimeType, png, wav, uuid);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CaptchaCopyWith<_$_Captcha> get copyWith =>
       __$$_CaptchaCopyWithImpl<_$_Captcha>(this, _$identity);
 
@@ -2522,7 +2552,8 @@ mixin _$FullPersonView {
 abstract class $FullPersonViewCopyWith<$Res> {
   factory $FullPersonViewCopyWith(
           FullPersonView value, $Res Function(FullPersonView) then) =
-      _$FullPersonViewCopyWithImpl<$Res>;
+      _$FullPersonViewCopyWithImpl<$Res, FullPersonView>;
+  @useResult
   $Res call(
       {PersonViewSafe personView,
       List<CommunityModeratorView> moderates,
@@ -2534,50 +2565,53 @@ abstract class $FullPersonViewCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$FullPersonViewCopyWithImpl<$Res>
+class _$FullPersonViewCopyWithImpl<$Res, $Val extends FullPersonView>
     implements $FullPersonViewCopyWith<$Res> {
   _$FullPersonViewCopyWithImpl(this._value, this._then);
 
-  final FullPersonView _value;
   // ignore: unused_field
-  final $Res Function(FullPersonView) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? personView = freezed,
-    Object? moderates = freezed,
-    Object? comments = freezed,
-    Object? posts = freezed,
-    Object? instanceHost = freezed,
+    Object? personView = null,
+    Object? moderates = null,
+    Object? comments = null,
+    Object? posts = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      personView: personView == freezed
+      personView: null == personView
           ? _value.personView
           : personView // ignore: cast_nullable_to_non_nullable
               as PersonViewSafe,
-      moderates: moderates == freezed
+      moderates: null == moderates
           ? _value.moderates
           : moderates // ignore: cast_nullable_to_non_nullable
               as List<CommunityModeratorView>,
-      comments: comments == freezed
+      comments: null == comments
           ? _value.comments
           : comments // ignore: cast_nullable_to_non_nullable
               as List<CommentView>,
-      posts: posts == freezed
+      posts: null == posts
           ? _value.posts
           : posts // ignore: cast_nullable_to_non_nullable
               as List<PostView>,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PersonViewSafeCopyWith<$Res> get personView {
     return $PersonViewSafeCopyWith<$Res>(_value.personView, (value) {
-      return _then(_value.copyWith(personView: value));
+      return _then(_value.copyWith(personView: value) as $Val);
     });
   }
 }
@@ -2589,6 +2623,7 @@ abstract class _$$_FullPersonViewCopyWith<$Res>
           _$_FullPersonView value, $Res Function(_$_FullPersonView) then) =
       __$$_FullPersonViewCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {PersonViewSafe personView,
       List<CommunityModeratorView> moderates,
@@ -2602,41 +2637,39 @@ abstract class _$$_FullPersonViewCopyWith<$Res>
 
 /// @nodoc
 class __$$_FullPersonViewCopyWithImpl<$Res>
-    extends _$FullPersonViewCopyWithImpl<$Res>
+    extends _$FullPersonViewCopyWithImpl<$Res, _$_FullPersonView>
     implements _$$_FullPersonViewCopyWith<$Res> {
   __$$_FullPersonViewCopyWithImpl(
       _$_FullPersonView _value, $Res Function(_$_FullPersonView) _then)
-      : super(_value, (v) => _then(v as _$_FullPersonView));
+      : super(_value, _then);
 
-  @override
-  _$_FullPersonView get _value => super._value as _$_FullPersonView;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? personView = freezed,
-    Object? moderates = freezed,
-    Object? comments = freezed,
-    Object? posts = freezed,
-    Object? instanceHost = freezed,
+    Object? personView = null,
+    Object? moderates = null,
+    Object? comments = null,
+    Object? posts = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_FullPersonView(
-      personView: personView == freezed
+      personView: null == personView
           ? _value.personView
           : personView // ignore: cast_nullable_to_non_nullable
               as PersonViewSafe,
-      moderates: moderates == freezed
+      moderates: null == moderates
           ? _value._moderates
           : moderates // ignore: cast_nullable_to_non_nullable
               as List<CommunityModeratorView>,
-      comments: comments == freezed
+      comments: null == comments
           ? _value._comments
           : comments // ignore: cast_nullable_to_non_nullable
               as List<CommentView>,
-      posts: posts == freezed
+      posts: null == posts
           ? _value._posts
           : posts // ignore: cast_nullable_to_non_nullable
               as List<PostView>,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -2667,6 +2700,7 @@ class _$_FullPersonView extends _FullPersonView {
   final List<CommunityModeratorView> _moderates;
   @override
   List<CommunityModeratorView> get moderates {
+    if (_moderates is EqualUnmodifiableListView) return _moderates;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_moderates);
   }
@@ -2674,6 +2708,7 @@ class _$_FullPersonView extends _FullPersonView {
   final List<CommentView> _comments;
   @override
   List<CommentView> get comments {
+    if (_comments is EqualUnmodifiableListView) return _comments;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_comments);
   }
@@ -2681,6 +2716,7 @@ class _$_FullPersonView extends _FullPersonView {
   final List<PostView> _posts;
   @override
   List<PostView> get posts {
+    if (_posts is EqualUnmodifiableListView) return _posts;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_posts);
   }
@@ -2698,28 +2734,29 @@ class _$_FullPersonView extends _FullPersonView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_FullPersonView &&
-            const DeepCollectionEquality()
-                .equals(other.personView, personView) &&
+            (identical(other.personView, personView) ||
+                other.personView == personView) &&
             const DeepCollectionEquality()
                 .equals(other._moderates, _moderates) &&
             const DeepCollectionEquality().equals(other._comments, _comments) &&
             const DeepCollectionEquality().equals(other._posts, _posts) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(personView),
+      personView,
       const DeepCollectionEquality().hash(_moderates),
       const DeepCollectionEquality().hash(_comments),
       const DeepCollectionEquality().hash(_posts),
-      const DeepCollectionEquality().hash(instanceHost));
+      instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_FullPersonViewCopyWith<_$_FullPersonView> get copyWith =>
       __$$_FullPersonViewCopyWithImpl<_$_FullPersonView>(this, _$identity);
 
@@ -2779,47 +2816,51 @@ mixin _$BannedCommunityUser {
 abstract class $BannedCommunityUserCopyWith<$Res> {
   factory $BannedCommunityUserCopyWith(
           BannedCommunityUser value, $Res Function(BannedCommunityUser) then) =
-      _$BannedCommunityUserCopyWithImpl<$Res>;
+      _$BannedCommunityUserCopyWithImpl<$Res, BannedCommunityUser>;
+  @useResult
   $Res call({PersonViewSafe personView, bool banned, String instanceHost});
 
   $PersonViewSafeCopyWith<$Res> get personView;
 }
 
 /// @nodoc
-class _$BannedCommunityUserCopyWithImpl<$Res>
+class _$BannedCommunityUserCopyWithImpl<$Res, $Val extends BannedCommunityUser>
     implements $BannedCommunityUserCopyWith<$Res> {
   _$BannedCommunityUserCopyWithImpl(this._value, this._then);
 
-  final BannedCommunityUser _value;
   // ignore: unused_field
-  final $Res Function(BannedCommunityUser) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? personView = freezed,
-    Object? banned = freezed,
-    Object? instanceHost = freezed,
+    Object? personView = null,
+    Object? banned = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      personView: personView == freezed
+      personView: null == personView
           ? _value.personView
           : personView // ignore: cast_nullable_to_non_nullable
               as PersonViewSafe,
-      banned: banned == freezed
+      banned: null == banned
           ? _value.banned
           : banned // ignore: cast_nullable_to_non_nullable
               as bool,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PersonViewSafeCopyWith<$Res> get personView {
     return $PersonViewSafeCopyWith<$Res>(_value.personView, (value) {
-      return _then(_value.copyWith(personView: value));
+      return _then(_value.copyWith(personView: value) as $Val);
     });
   }
 }
@@ -2831,6 +2872,7 @@ abstract class _$$_BannedCommunityUserCopyWith<$Res>
           $Res Function(_$_BannedCommunityUser) then) =
       __$$_BannedCommunityUserCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({PersonViewSafe personView, bool banned, String instanceHost});
 
   @override
@@ -2839,31 +2881,29 @@ abstract class _$$_BannedCommunityUserCopyWith<$Res>
 
 /// @nodoc
 class __$$_BannedCommunityUserCopyWithImpl<$Res>
-    extends _$BannedCommunityUserCopyWithImpl<$Res>
+    extends _$BannedCommunityUserCopyWithImpl<$Res, _$_BannedCommunityUser>
     implements _$$_BannedCommunityUserCopyWith<$Res> {
   __$$_BannedCommunityUserCopyWithImpl(_$_BannedCommunityUser _value,
       $Res Function(_$_BannedCommunityUser) _then)
-      : super(_value, (v) => _then(v as _$_BannedCommunityUser));
+      : super(_value, _then);
 
-  @override
-  _$_BannedCommunityUser get _value => super._value as _$_BannedCommunityUser;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? personView = freezed,
-    Object? banned = freezed,
-    Object? instanceHost = freezed,
+    Object? personView = null,
+    Object? banned = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_BannedCommunityUser(
-      personView: personView == freezed
+      personView: null == personView
           ? _value.personView
           : personView // ignore: cast_nullable_to_non_nullable
               as PersonViewSafe,
-      banned: banned == freezed
+      banned: null == banned
           ? _value.banned
           : banned // ignore: cast_nullable_to_non_nullable
               as bool,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -2901,23 +2941,21 @@ class _$_BannedCommunityUser extends _BannedCommunityUser {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_BannedCommunityUser &&
-            const DeepCollectionEquality()
-                .equals(other.personView, personView) &&
-            const DeepCollectionEquality().equals(other.banned, banned) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.personView, personView) ||
+                other.personView == personView) &&
+            (identical(other.banned, banned) || other.banned == banned) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(personView),
-      const DeepCollectionEquality().hash(banned),
-      const DeepCollectionEquality().hash(instanceHost));
+  int get hashCode =>
+      Object.hash(runtimeType, personView, banned, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_BannedCommunityUserCopyWith<_$_BannedCommunityUser> get copyWith =>
       __$$_BannedCommunityUserCopyWithImpl<_$_BannedCommunityUser>(
           this, _$identity);
@@ -2972,46 +3010,51 @@ mixin _$BannedPerson {
 abstract class $BannedPersonCopyWith<$Res> {
   factory $BannedPersonCopyWith(
           BannedPerson value, $Res Function(BannedPerson) then) =
-      _$BannedPersonCopyWithImpl<$Res>;
+      _$BannedPersonCopyWithImpl<$Res, BannedPerson>;
+  @useResult
   $Res call({PersonViewSafe personView, bool banned, String instanceHost});
 
   $PersonViewSafeCopyWith<$Res> get personView;
 }
 
 /// @nodoc
-class _$BannedPersonCopyWithImpl<$Res> implements $BannedPersonCopyWith<$Res> {
+class _$BannedPersonCopyWithImpl<$Res, $Val extends BannedPerson>
+    implements $BannedPersonCopyWith<$Res> {
   _$BannedPersonCopyWithImpl(this._value, this._then);
 
-  final BannedPerson _value;
   // ignore: unused_field
-  final $Res Function(BannedPerson) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? personView = freezed,
-    Object? banned = freezed,
-    Object? instanceHost = freezed,
+    Object? personView = null,
+    Object? banned = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      personView: personView == freezed
+      personView: null == personView
           ? _value.personView
           : personView // ignore: cast_nullable_to_non_nullable
               as PersonViewSafe,
-      banned: banned == freezed
+      banned: null == banned
           ? _value.banned
           : banned // ignore: cast_nullable_to_non_nullable
               as bool,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PersonViewSafeCopyWith<$Res> get personView {
     return $PersonViewSafeCopyWith<$Res>(_value.personView, (value) {
-      return _then(_value.copyWith(personView: value));
+      return _then(_value.copyWith(personView: value) as $Val);
     });
   }
 }
@@ -3023,6 +3066,7 @@ abstract class _$$_BannedPersonCopyWith<$Res>
           _$_BannedPerson value, $Res Function(_$_BannedPerson) then) =
       __$$_BannedPersonCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({PersonViewSafe personView, bool banned, String instanceHost});
 
   @override
@@ -3031,31 +3075,29 @@ abstract class _$$_BannedPersonCopyWith<$Res>
 
 /// @nodoc
 class __$$_BannedPersonCopyWithImpl<$Res>
-    extends _$BannedPersonCopyWithImpl<$Res>
+    extends _$BannedPersonCopyWithImpl<$Res, _$_BannedPerson>
     implements _$$_BannedPersonCopyWith<$Res> {
   __$$_BannedPersonCopyWithImpl(
       _$_BannedPerson _value, $Res Function(_$_BannedPerson) _then)
-      : super(_value, (v) => _then(v as _$_BannedPerson));
+      : super(_value, _then);
 
-  @override
-  _$_BannedPerson get _value => super._value as _$_BannedPerson;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? personView = freezed,
-    Object? banned = freezed,
-    Object? instanceHost = freezed,
+    Object? personView = null,
+    Object? banned = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_BannedPerson(
-      personView: personView == freezed
+      personView: null == personView
           ? _value.personView
           : personView // ignore: cast_nullable_to_non_nullable
               as PersonViewSafe,
-      banned: banned == freezed
+      banned: null == banned
           ? _value.banned
           : banned // ignore: cast_nullable_to_non_nullable
               as bool,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -3093,23 +3135,21 @@ class _$_BannedPerson extends _BannedPerson {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_BannedPerson &&
-            const DeepCollectionEquality()
-                .equals(other.personView, personView) &&
-            const DeepCollectionEquality().equals(other.banned, banned) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.personView, personView) ||
+                other.personView == personView) &&
+            (identical(other.banned, banned) || other.banned == banned) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(personView),
-      const DeepCollectionEquality().hash(banned),
-      const DeepCollectionEquality().hash(instanceHost));
+  int get hashCode =>
+      Object.hash(runtimeType, personView, banned, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_BannedPersonCopyWith<_$_BannedPerson> get copyWith =>
       __$$_BannedPersonCopyWithImpl<_$_BannedPerson>(this, _$identity);
 
@@ -3166,7 +3206,8 @@ mixin _$ResolveObjectResponse {
 abstract class $ResolveObjectResponseCopyWith<$Res> {
   factory $ResolveObjectResponseCopyWith(ResolveObjectResponse value,
           $Res Function(ResolveObjectResponse) then) =
-      _$ResolveObjectResponseCopyWithImpl<$Res>;
+      _$ResolveObjectResponseCopyWithImpl<$Res, ResolveObjectResponse>;
+  @useResult
   $Res call(
       {CommentView? comment,
       PostView? post,
@@ -3181,87 +3222,94 @@ abstract class $ResolveObjectResponseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ResolveObjectResponseCopyWithImpl<$Res>
+class _$ResolveObjectResponseCopyWithImpl<$Res,
+        $Val extends ResolveObjectResponse>
     implements $ResolveObjectResponseCopyWith<$Res> {
   _$ResolveObjectResponseCopyWithImpl(this._value, this._then);
 
-  final ResolveObjectResponse _value;
   // ignore: unused_field
-  final $Res Function(ResolveObjectResponse) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? comment = freezed,
     Object? post = freezed,
     Object? community = freezed,
     Object? person = freezed,
-    Object? instanceHost = freezed,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      comment: comment == freezed
+      comment: freezed == comment
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
               as CommentView?,
-      post: post == freezed
+      post: freezed == post
           ? _value.post
           : post // ignore: cast_nullable_to_non_nullable
               as PostView?,
-      community: community == freezed
+      community: freezed == community
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
               as CommunityView?,
-      person: person == freezed
+      person: freezed == person
           ? _value.person
           : person // ignore: cast_nullable_to_non_nullable
               as PersonViewSafe?,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CommentViewCopyWith<$Res>? get comment {
     if (_value.comment == null) {
       return null;
     }
 
     return $CommentViewCopyWith<$Res>(_value.comment!, (value) {
-      return _then(_value.copyWith(comment: value));
+      return _then(_value.copyWith(comment: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PostViewCopyWith<$Res>? get post {
     if (_value.post == null) {
       return null;
     }
 
     return $PostViewCopyWith<$Res>(_value.post!, (value) {
-      return _then(_value.copyWith(post: value));
+      return _then(_value.copyWith(post: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CommunityViewCopyWith<$Res>? get community {
     if (_value.community == null) {
       return null;
     }
 
     return $CommunityViewCopyWith<$Res>(_value.community!, (value) {
-      return _then(_value.copyWith(community: value));
+      return _then(_value.copyWith(community: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PersonViewSafeCopyWith<$Res>? get person {
     if (_value.person == null) {
       return null;
     }
 
     return $PersonViewSafeCopyWith<$Res>(_value.person!, (value) {
-      return _then(_value.copyWith(person: value));
+      return _then(_value.copyWith(person: value) as $Val);
     });
   }
 }
@@ -3273,6 +3321,7 @@ abstract class _$$_ResolveObjectResponseCopyWith<$Res>
           $Res Function(_$_ResolveObjectResponse) then) =
       __$$_ResolveObjectResponseCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {CommentView? comment,
       PostView? post,
@@ -3292,42 +3341,39 @@ abstract class _$$_ResolveObjectResponseCopyWith<$Res>
 
 /// @nodoc
 class __$$_ResolveObjectResponseCopyWithImpl<$Res>
-    extends _$ResolveObjectResponseCopyWithImpl<$Res>
+    extends _$ResolveObjectResponseCopyWithImpl<$Res, _$_ResolveObjectResponse>
     implements _$$_ResolveObjectResponseCopyWith<$Res> {
   __$$_ResolveObjectResponseCopyWithImpl(_$_ResolveObjectResponse _value,
       $Res Function(_$_ResolveObjectResponse) _then)
-      : super(_value, (v) => _then(v as _$_ResolveObjectResponse));
+      : super(_value, _then);
 
-  @override
-  _$_ResolveObjectResponse get _value =>
-      super._value as _$_ResolveObjectResponse;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? comment = freezed,
     Object? post = freezed,
     Object? community = freezed,
     Object? person = freezed,
-    Object? instanceHost = freezed,
+    Object? instanceHost = null,
   }) {
     return _then(_$_ResolveObjectResponse(
-      comment: comment == freezed
+      comment: freezed == comment
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
               as CommentView?,
-      post: post == freezed
+      post: freezed == post
           ? _value.post
           : post // ignore: cast_nullable_to_non_nullable
               as PostView?,
-      community: community == freezed
+      community: freezed == community
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
               as CommunityView?,
-      person: person == freezed
+      person: freezed == person
           ? _value.person
           : person // ignore: cast_nullable_to_non_nullable
               as PersonViewSafe?,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -3371,26 +3417,23 @@ class _$_ResolveObjectResponse extends _ResolveObjectResponse {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ResolveObjectResponse &&
-            const DeepCollectionEquality().equals(other.comment, comment) &&
-            const DeepCollectionEquality().equals(other.post, post) &&
-            const DeepCollectionEquality().equals(other.community, community) &&
-            const DeepCollectionEquality().equals(other.person, person) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.comment, comment) || other.comment == comment) &&
+            (identical(other.post, post) || other.post == post) &&
+            (identical(other.community, community) ||
+                other.community == community) &&
+            (identical(other.person, person) || other.person == person) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(comment),
-      const DeepCollectionEquality().hash(post),
-      const DeepCollectionEquality().hash(community),
-      const DeepCollectionEquality().hash(person),
-      const DeepCollectionEquality().hash(instanceHost));
+  int get hashCode =>
+      Object.hash(runtimeType, comment, post, community, person, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ResolveObjectResponseCopyWith<_$_ResolveObjectResponse> get copyWith =>
       __$$_ResolveObjectResponseCopyWithImpl<_$_ResolveObjectResponse>(
           this, _$identity);
@@ -3453,7 +3496,8 @@ mixin _$SiteMetadata {
 abstract class $SiteMetadataCopyWith<$Res> {
   factory $SiteMetadataCopyWith(
           SiteMetadata value, $Res Function(SiteMetadata) then) =
-      _$SiteMetadataCopyWithImpl<$Res>;
+      _$SiteMetadataCopyWithImpl<$Res, SiteMetadata>;
+  @useResult
   $Res call(
       {String? title,
       String? description,
@@ -3463,43 +3507,46 @@ abstract class $SiteMetadataCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SiteMetadataCopyWithImpl<$Res> implements $SiteMetadataCopyWith<$Res> {
+class _$SiteMetadataCopyWithImpl<$Res, $Val extends SiteMetadata>
+    implements $SiteMetadataCopyWith<$Res> {
   _$SiteMetadataCopyWithImpl(this._value, this._then);
 
-  final SiteMetadata _value;
   // ignore: unused_field
-  final $Res Function(SiteMetadata) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? title = freezed,
     Object? description = freezed,
     Object? image = freezed,
     Object? html = freezed,
-    Object? instanceHost = freezed,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      image: image == freezed
+      image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String?,
-      html: html == freezed
+      html: freezed == html
           ? _value.html
           : html // ignore: cast_nullable_to_non_nullable
               as String?,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -3510,6 +3557,7 @@ abstract class _$$_SiteMetadataCopyWith<$Res>
           _$_SiteMetadata value, $Res Function(_$_SiteMetadata) then) =
       __$$_SiteMetadataCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? title,
       String? description,
@@ -3520,41 +3568,39 @@ abstract class _$$_SiteMetadataCopyWith<$Res>
 
 /// @nodoc
 class __$$_SiteMetadataCopyWithImpl<$Res>
-    extends _$SiteMetadataCopyWithImpl<$Res>
+    extends _$SiteMetadataCopyWithImpl<$Res, _$_SiteMetadata>
     implements _$$_SiteMetadataCopyWith<$Res> {
   __$$_SiteMetadataCopyWithImpl(
       _$_SiteMetadata _value, $Res Function(_$_SiteMetadata) _then)
-      : super(_value, (v) => _then(v as _$_SiteMetadata));
+      : super(_value, _then);
 
-  @override
-  _$_SiteMetadata get _value => super._value as _$_SiteMetadata;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? title = freezed,
     Object? description = freezed,
     Object? image = freezed,
     Object? html = freezed,
-    Object? instanceHost = freezed,
+    Object? instanceHost = null,
   }) {
     return _then(_$_SiteMetadata(
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      image: image == freezed
+      image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String?,
-      html: html == freezed
+      html: freezed == html
           ? _value.html
           : html // ignore: cast_nullable_to_non_nullable
               as String?,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -3598,27 +3644,23 @@ class _$_SiteMetadata extends _SiteMetadata {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SiteMetadata &&
-            const DeepCollectionEquality().equals(other.title, title) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality().equals(other.image, image) &&
-            const DeepCollectionEquality().equals(other.html, html) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.image, image) || other.image == image) &&
+            (identical(other.html, html) || other.html == html) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(title),
-      const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(image),
-      const DeepCollectionEquality().hash(html),
-      const DeepCollectionEquality().hash(instanceHost));
+  int get hashCode =>
+      Object.hash(runtimeType, title, description, image, html, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SiteMetadataCopyWith<_$_SiteMetadata> get copyWith =>
       __$$_SiteMetadataCopyWithImpl<_$_SiteMetadata>(this, _$identity);
 
@@ -3678,47 +3720,51 @@ mixin _$BlockedPerson {
 abstract class $BlockedPersonCopyWith<$Res> {
   factory $BlockedPersonCopyWith(
           BlockedPerson value, $Res Function(BlockedPerson) then) =
-      _$BlockedPersonCopyWithImpl<$Res>;
+      _$BlockedPersonCopyWithImpl<$Res, BlockedPerson>;
+  @useResult
   $Res call({PersonViewSafe personView, bool blocked, String instanceHost});
 
   $PersonViewSafeCopyWith<$Res> get personView;
 }
 
 /// @nodoc
-class _$BlockedPersonCopyWithImpl<$Res>
+class _$BlockedPersonCopyWithImpl<$Res, $Val extends BlockedPerson>
     implements $BlockedPersonCopyWith<$Res> {
   _$BlockedPersonCopyWithImpl(this._value, this._then);
 
-  final BlockedPerson _value;
   // ignore: unused_field
-  final $Res Function(BlockedPerson) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? personView = freezed,
-    Object? blocked = freezed,
-    Object? instanceHost = freezed,
+    Object? personView = null,
+    Object? blocked = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      personView: personView == freezed
+      personView: null == personView
           ? _value.personView
           : personView // ignore: cast_nullable_to_non_nullable
               as PersonViewSafe,
-      blocked: blocked == freezed
+      blocked: null == blocked
           ? _value.blocked
           : blocked // ignore: cast_nullable_to_non_nullable
               as bool,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PersonViewSafeCopyWith<$Res> get personView {
     return $PersonViewSafeCopyWith<$Res>(_value.personView, (value) {
-      return _then(_value.copyWith(personView: value));
+      return _then(_value.copyWith(personView: value) as $Val);
     });
   }
 }
@@ -3730,6 +3776,7 @@ abstract class _$$_BlockedPersonCopyWith<$Res>
           _$_BlockedPerson value, $Res Function(_$_BlockedPerson) then) =
       __$$_BlockedPersonCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({PersonViewSafe personView, bool blocked, String instanceHost});
 
   @override
@@ -3738,31 +3785,29 @@ abstract class _$$_BlockedPersonCopyWith<$Res>
 
 /// @nodoc
 class __$$_BlockedPersonCopyWithImpl<$Res>
-    extends _$BlockedPersonCopyWithImpl<$Res>
+    extends _$BlockedPersonCopyWithImpl<$Res, _$_BlockedPerson>
     implements _$$_BlockedPersonCopyWith<$Res> {
   __$$_BlockedPersonCopyWithImpl(
       _$_BlockedPerson _value, $Res Function(_$_BlockedPerson) _then)
-      : super(_value, (v) => _then(v as _$_BlockedPerson));
+      : super(_value, _then);
 
-  @override
-  _$_BlockedPerson get _value => super._value as _$_BlockedPerson;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? personView = freezed,
-    Object? blocked = freezed,
-    Object? instanceHost = freezed,
+    Object? personView = null,
+    Object? blocked = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_BlockedPerson(
-      personView: personView == freezed
+      personView: null == personView
           ? _value.personView
           : personView // ignore: cast_nullable_to_non_nullable
               as PersonViewSafe,
-      blocked: blocked == freezed
+      blocked: null == blocked
           ? _value.blocked
           : blocked // ignore: cast_nullable_to_non_nullable
               as bool,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -3800,23 +3845,21 @@ class _$_BlockedPerson extends _BlockedPerson {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_BlockedPerson &&
-            const DeepCollectionEquality()
-                .equals(other.personView, personView) &&
-            const DeepCollectionEquality().equals(other.blocked, blocked) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.personView, personView) ||
+                other.personView == personView) &&
+            (identical(other.blocked, blocked) || other.blocked == blocked) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(personView),
-      const DeepCollectionEquality().hash(blocked),
-      const DeepCollectionEquality().hash(instanceHost));
+  int get hashCode =>
+      Object.hash(runtimeType, personView, blocked, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_BlockedPersonCopyWith<_$_BlockedPerson> get copyWith =>
       __$$_BlockedPersonCopyWithImpl<_$_BlockedPerson>(this, _$identity);
 
@@ -3870,47 +3913,51 @@ mixin _$BlockedCommunity {
 abstract class $BlockedCommunityCopyWith<$Res> {
   factory $BlockedCommunityCopyWith(
           BlockedCommunity value, $Res Function(BlockedCommunity) then) =
-      _$BlockedCommunityCopyWithImpl<$Res>;
+      _$BlockedCommunityCopyWithImpl<$Res, BlockedCommunity>;
+  @useResult
   $Res call({CommunityView communityView, bool blocked, String instanceHost});
 
   $CommunityViewCopyWith<$Res> get communityView;
 }
 
 /// @nodoc
-class _$BlockedCommunityCopyWithImpl<$Res>
+class _$BlockedCommunityCopyWithImpl<$Res, $Val extends BlockedCommunity>
     implements $BlockedCommunityCopyWith<$Res> {
   _$BlockedCommunityCopyWithImpl(this._value, this._then);
 
-  final BlockedCommunity _value;
   // ignore: unused_field
-  final $Res Function(BlockedCommunity) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? communityView = freezed,
-    Object? blocked = freezed,
-    Object? instanceHost = freezed,
+    Object? communityView = null,
+    Object? blocked = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      communityView: communityView == freezed
+      communityView: null == communityView
           ? _value.communityView
           : communityView // ignore: cast_nullable_to_non_nullable
               as CommunityView,
-      blocked: blocked == freezed
+      blocked: null == blocked
           ? _value.blocked
           : blocked // ignore: cast_nullable_to_non_nullable
               as bool,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CommunityViewCopyWith<$Res> get communityView {
     return $CommunityViewCopyWith<$Res>(_value.communityView, (value) {
-      return _then(_value.copyWith(communityView: value));
+      return _then(_value.copyWith(communityView: value) as $Val);
     });
   }
 }
@@ -3922,6 +3969,7 @@ abstract class _$$_BlockedCommunityCopyWith<$Res>
           _$_BlockedCommunity value, $Res Function(_$_BlockedCommunity) then) =
       __$$_BlockedCommunityCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({CommunityView communityView, bool blocked, String instanceHost});
 
   @override
@@ -3930,31 +3978,29 @@ abstract class _$$_BlockedCommunityCopyWith<$Res>
 
 /// @nodoc
 class __$$_BlockedCommunityCopyWithImpl<$Res>
-    extends _$BlockedCommunityCopyWithImpl<$Res>
+    extends _$BlockedCommunityCopyWithImpl<$Res, _$_BlockedCommunity>
     implements _$$_BlockedCommunityCopyWith<$Res> {
   __$$_BlockedCommunityCopyWithImpl(
       _$_BlockedCommunity _value, $Res Function(_$_BlockedCommunity) _then)
-      : super(_value, (v) => _then(v as _$_BlockedCommunity));
+      : super(_value, _then);
 
-  @override
-  _$_BlockedCommunity get _value => super._value as _$_BlockedCommunity;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? communityView = freezed,
-    Object? blocked = freezed,
-    Object? instanceHost = freezed,
+    Object? communityView = null,
+    Object? blocked = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_BlockedCommunity(
-      communityView: communityView == freezed
+      communityView: null == communityView
           ? _value.communityView
           : communityView // ignore: cast_nullable_to_non_nullable
               as CommunityView,
-      blocked: blocked == freezed
+      blocked: null == blocked
           ? _value.blocked
           : blocked // ignore: cast_nullable_to_non_nullable
               as bool,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -3992,23 +4038,21 @@ class _$_BlockedCommunity extends _BlockedCommunity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_BlockedCommunity &&
-            const DeepCollectionEquality()
-                .equals(other.communityView, communityView) &&
-            const DeepCollectionEquality().equals(other.blocked, blocked) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.communityView, communityView) ||
+                other.communityView == communityView) &&
+            (identical(other.blocked, blocked) || other.blocked == blocked) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(communityView),
-      const DeepCollectionEquality().hash(blocked),
-      const DeepCollectionEquality().hash(instanceHost));
+  int get hashCode =>
+      Object.hash(runtimeType, communityView, blocked, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_BlockedCommunityCopyWith<_$_BlockedCommunity> get copyWith =>
       __$$_BlockedCommunityCopyWithImpl<_$_BlockedCommunity>(this, _$identity);
 
@@ -4063,7 +4107,8 @@ mixin _$ReportCount {
 abstract class $ReportCountCopyWith<$Res> {
   factory $ReportCountCopyWith(
           ReportCount value, $Res Function(ReportCount) then) =
-      _$ReportCountCopyWithImpl<$Res>;
+      _$ReportCountCopyWithImpl<$Res, ReportCount>;
+  @useResult
   $Res call(
       {int? communityId,
       int commentReports,
@@ -4072,38 +4117,41 @@ abstract class $ReportCountCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ReportCountCopyWithImpl<$Res> implements $ReportCountCopyWith<$Res> {
+class _$ReportCountCopyWithImpl<$Res, $Val extends ReportCount>
+    implements $ReportCountCopyWith<$Res> {
   _$ReportCountCopyWithImpl(this._value, this._then);
 
-  final ReportCount _value;
   // ignore: unused_field
-  final $Res Function(ReportCount) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? communityId = freezed,
-    Object? commentReports = freezed,
-    Object? postReports = freezed,
-    Object? instanceHost = freezed,
+    Object? commentReports = null,
+    Object? postReports = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      communityId: communityId == freezed
+      communityId: freezed == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int?,
-      commentReports: commentReports == freezed
+      commentReports: null == commentReports
           ? _value.commentReports
           : commentReports // ignore: cast_nullable_to_non_nullable
               as int,
-      postReports: postReports == freezed
+      postReports: null == postReports
           ? _value.postReports
           : postReports // ignore: cast_nullable_to_non_nullable
               as int,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -4114,6 +4162,7 @@ abstract class _$$_ReportCountCopyWith<$Res>
           _$_ReportCount value, $Res Function(_$_ReportCount) then) =
       __$$_ReportCountCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int? communityId,
       int commentReports,
@@ -4122,36 +4171,35 @@ abstract class _$$_ReportCountCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ReportCountCopyWithImpl<$Res> extends _$ReportCountCopyWithImpl<$Res>
+class __$$_ReportCountCopyWithImpl<$Res>
+    extends _$ReportCountCopyWithImpl<$Res, _$_ReportCount>
     implements _$$_ReportCountCopyWith<$Res> {
   __$$_ReportCountCopyWithImpl(
       _$_ReportCount _value, $Res Function(_$_ReportCount) _then)
-      : super(_value, (v) => _then(v as _$_ReportCount));
+      : super(_value, _then);
 
-  @override
-  _$_ReportCount get _value => super._value as _$_ReportCount;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? communityId = freezed,
-    Object? commentReports = freezed,
-    Object? postReports = freezed,
-    Object? instanceHost = freezed,
+    Object? commentReports = null,
+    Object? postReports = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_ReportCount(
-      communityId: communityId == freezed
+      communityId: freezed == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int?,
-      commentReports: commentReports == freezed
+      commentReports: null == commentReports
           ? _value.commentReports
           : commentReports // ignore: cast_nullable_to_non_nullable
               as int,
-      postReports: postReports == freezed
+      postReports: null == postReports
           ? _value.postReports
           : postReports // ignore: cast_nullable_to_non_nullable
               as int,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -4192,27 +4240,24 @@ class _$_ReportCount extends _ReportCount {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ReportCount &&
-            const DeepCollectionEquality()
-                .equals(other.communityId, communityId) &&
-            const DeepCollectionEquality()
-                .equals(other.commentReports, commentReports) &&
-            const DeepCollectionEquality()
-                .equals(other.postReports, postReports) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.commentReports, commentReports) ||
+                other.commentReports == commentReports) &&
+            (identical(other.postReports, postReports) ||
+                other.postReports == postReports) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(communityId),
-      const DeepCollectionEquality().hash(commentReports),
-      const DeepCollectionEquality().hash(postReports),
-      const DeepCollectionEquality().hash(instanceHost));
+      runtimeType, communityId, commentReports, postReports, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ReportCountCopyWith<_$_ReportCount> get copyWith =>
       __$$_ReportCountCopyWithImpl<_$_ReportCount>(this, _$identity);
 
@@ -4270,44 +4315,48 @@ mixin _$UnreadCount {
 abstract class $UnreadCountCopyWith<$Res> {
   factory $UnreadCountCopyWith(
           UnreadCount value, $Res Function(UnreadCount) then) =
-      _$UnreadCountCopyWithImpl<$Res>;
+      _$UnreadCountCopyWithImpl<$Res, UnreadCount>;
+  @useResult
   $Res call(
       {int replies, int mentions, int privateMessages, String instanceHost});
 }
 
 /// @nodoc
-class _$UnreadCountCopyWithImpl<$Res> implements $UnreadCountCopyWith<$Res> {
+class _$UnreadCountCopyWithImpl<$Res, $Val extends UnreadCount>
+    implements $UnreadCountCopyWith<$Res> {
   _$UnreadCountCopyWithImpl(this._value, this._then);
 
-  final UnreadCount _value;
   // ignore: unused_field
-  final $Res Function(UnreadCount) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? replies = freezed,
-    Object? mentions = freezed,
-    Object? privateMessages = freezed,
-    Object? instanceHost = freezed,
+    Object? replies = null,
+    Object? mentions = null,
+    Object? privateMessages = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      replies: replies == freezed
+      replies: null == replies
           ? _value.replies
           : replies // ignore: cast_nullable_to_non_nullable
               as int,
-      mentions: mentions == freezed
+      mentions: null == mentions
           ? _value.mentions
           : mentions // ignore: cast_nullable_to_non_nullable
               as int,
-      privateMessages: privateMessages == freezed
+      privateMessages: null == privateMessages
           ? _value.privateMessages
           : privateMessages // ignore: cast_nullable_to_non_nullable
               as int,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -4318,41 +4367,41 @@ abstract class _$$_UnreadCountCopyWith<$Res>
           _$_UnreadCount value, $Res Function(_$_UnreadCount) then) =
       __$$_UnreadCountCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int replies, int mentions, int privateMessages, String instanceHost});
 }
 
 /// @nodoc
-class __$$_UnreadCountCopyWithImpl<$Res> extends _$UnreadCountCopyWithImpl<$Res>
+class __$$_UnreadCountCopyWithImpl<$Res>
+    extends _$UnreadCountCopyWithImpl<$Res, _$_UnreadCount>
     implements _$$_UnreadCountCopyWith<$Res> {
   __$$_UnreadCountCopyWithImpl(
       _$_UnreadCount _value, $Res Function(_$_UnreadCount) _then)
-      : super(_value, (v) => _then(v as _$_UnreadCount));
+      : super(_value, _then);
 
-  @override
-  _$_UnreadCount get _value => super._value as _$_UnreadCount;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? replies = freezed,
-    Object? mentions = freezed,
-    Object? privateMessages = freezed,
-    Object? instanceHost = freezed,
+    Object? replies = null,
+    Object? mentions = null,
+    Object? privateMessages = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_UnreadCount(
-      replies: replies == freezed
+      replies: null == replies
           ? _value.replies
           : replies // ignore: cast_nullable_to_non_nullable
               as int,
-      mentions: mentions == freezed
+      mentions: null == mentions
           ? _value.mentions
           : mentions // ignore: cast_nullable_to_non_nullable
               as int,
-      privateMessages: privateMessages == freezed
+      privateMessages: null == privateMessages
           ? _value.privateMessages
           : privateMessages // ignore: cast_nullable_to_non_nullable
               as int,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -4393,25 +4442,23 @@ class _$_UnreadCount extends _UnreadCount {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_UnreadCount &&
-            const DeepCollectionEquality().equals(other.replies, replies) &&
-            const DeepCollectionEquality().equals(other.mentions, mentions) &&
-            const DeepCollectionEquality()
-                .equals(other.privateMessages, privateMessages) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.replies, replies) || other.replies == replies) &&
+            (identical(other.mentions, mentions) ||
+                other.mentions == mentions) &&
+            (identical(other.privateMessages, privateMessages) ||
+                other.privateMessages == privateMessages) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(replies),
-      const DeepCollectionEquality().hash(mentions),
-      const DeepCollectionEquality().hash(privateMessages),
-      const DeepCollectionEquality().hash(instanceHost));
+      runtimeType, replies, mentions, privateMessages, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_UnreadCountCopyWith<_$_UnreadCount> get copyWith =>
       __$$_UnreadCountCopyWithImpl<_$_UnreadCount>(this, _$identity);
 
@@ -4469,7 +4516,8 @@ mixin _$LoginResponse {
 abstract class $LoginResponseCopyWith<$Res> {
   factory $LoginResponseCopyWith(
           LoginResponse value, $Res Function(LoginResponse) then) =
-      _$LoginResponseCopyWithImpl<$Res>;
+      _$LoginResponseCopyWithImpl<$Res, LoginResponse>;
+  @useResult
   $Res call(
       {Jwt? jwt,
       bool verifyEmailSent,
@@ -4478,39 +4526,41 @@ abstract class $LoginResponseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$LoginResponseCopyWithImpl<$Res>
+class _$LoginResponseCopyWithImpl<$Res, $Val extends LoginResponse>
     implements $LoginResponseCopyWith<$Res> {
   _$LoginResponseCopyWithImpl(this._value, this._then);
 
-  final LoginResponse _value;
   // ignore: unused_field
-  final $Res Function(LoginResponse) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? jwt = freezed,
-    Object? verifyEmailSent = freezed,
-    Object? registrationCreated = freezed,
-    Object? instanceHost = freezed,
+    Object? verifyEmailSent = null,
+    Object? registrationCreated = null,
+    Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
-      jwt: jwt == freezed
+      jwt: freezed == jwt
           ? _value.jwt
           : jwt // ignore: cast_nullable_to_non_nullable
               as Jwt?,
-      verifyEmailSent: verifyEmailSent == freezed
+      verifyEmailSent: null == verifyEmailSent
           ? _value.verifyEmailSent
           : verifyEmailSent // ignore: cast_nullable_to_non_nullable
               as bool,
-      registrationCreated: registrationCreated == freezed
+      registrationCreated: null == registrationCreated
           ? _value.registrationCreated
           : registrationCreated // ignore: cast_nullable_to_non_nullable
               as bool,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -4521,6 +4571,7 @@ abstract class _$$_LoginResponseCopyWith<$Res>
           _$_LoginResponse value, $Res Function(_$_LoginResponse) then) =
       __$$_LoginResponseCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Jwt? jwt,
       bool verifyEmailSent,
@@ -4530,36 +4581,34 @@ abstract class _$$_LoginResponseCopyWith<$Res>
 
 /// @nodoc
 class __$$_LoginResponseCopyWithImpl<$Res>
-    extends _$LoginResponseCopyWithImpl<$Res>
+    extends _$LoginResponseCopyWithImpl<$Res, _$_LoginResponse>
     implements _$$_LoginResponseCopyWith<$Res> {
   __$$_LoginResponseCopyWithImpl(
       _$_LoginResponse _value, $Res Function(_$_LoginResponse) _then)
-      : super(_value, (v) => _then(v as _$_LoginResponse));
+      : super(_value, _then);
 
-  @override
-  _$_LoginResponse get _value => super._value as _$_LoginResponse;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? jwt = freezed,
-    Object? verifyEmailSent = freezed,
-    Object? registrationCreated = freezed,
-    Object? instanceHost = freezed,
+    Object? verifyEmailSent = null,
+    Object? registrationCreated = null,
+    Object? instanceHost = null,
   }) {
     return _then(_$_LoginResponse(
-      jwt: jwt == freezed
+      jwt: freezed == jwt
           ? _value.jwt
           : jwt // ignore: cast_nullable_to_non_nullable
               as Jwt?,
-      verifyEmailSent: verifyEmailSent == freezed
+      verifyEmailSent: null == verifyEmailSent
           ? _value.verifyEmailSent
           : verifyEmailSent // ignore: cast_nullable_to_non_nullable
               as bool,
-      registrationCreated: registrationCreated == freezed
+      registrationCreated: null == registrationCreated
           ? _value.registrationCreated
           : registrationCreated // ignore: cast_nullable_to_non_nullable
               as bool,
-      instanceHost: instanceHost == freezed
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
@@ -4600,26 +4649,23 @@ class _$_LoginResponse extends _LoginResponse {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_LoginResponse &&
-            const DeepCollectionEquality().equals(other.jwt, jwt) &&
-            const DeepCollectionEquality()
-                .equals(other.verifyEmailSent, verifyEmailSent) &&
-            const DeepCollectionEquality()
-                .equals(other.registrationCreated, registrationCreated) &&
-            const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+            (identical(other.jwt, jwt) || other.jwt == jwt) &&
+            (identical(other.verifyEmailSent, verifyEmailSent) ||
+                other.verifyEmailSent == verifyEmailSent) &&
+            (identical(other.registrationCreated, registrationCreated) ||
+                other.registrationCreated == registrationCreated) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(jwt),
-      const DeepCollectionEquality().hash(verifyEmailSent),
-      const DeepCollectionEquality().hash(registrationCreated),
-      const DeepCollectionEquality().hash(instanceHost));
+      runtimeType, jwt, verifyEmailSent, registrationCreated, instanceHost);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_LoginResponseCopyWith<_$_LoginResponse> get copyWith =>
       __$$_LoginResponseCopyWithImpl<_$_LoginResponse>(this, _$identity);
 

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'site.dart';
 
@@ -40,7 +40,8 @@ mixin _$Search {
 /// @nodoc
 abstract class $SearchCopyWith<$Res> {
   factory $SearchCopyWith(Search value, $Res Function(Search) then) =
-      _$SearchCopyWithImpl<$Res>;
+      _$SearchCopyWithImpl<$Res, Search>;
+  @useResult
   $Res call(
       {String q,
       @JsonKey(name: 'type_') SearchType? type,
@@ -55,16 +56,19 @@ abstract class $SearchCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SearchCopyWithImpl<$Res> implements $SearchCopyWith<$Res> {
+class _$SearchCopyWithImpl<$Res, $Val extends Search>
+    implements $SearchCopyWith<$Res> {
   _$SearchCopyWithImpl(this._value, this._then);
 
-  final Search _value;
   // ignore: unused_field
-  final $Res Function(Search) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? q = freezed,
+    Object? q = null,
     Object? type = freezed,
     Object? listingType = freezed,
     Object? communityId = freezed,
@@ -76,47 +80,47 @@ class _$SearchCopyWithImpl<$Res> implements $SearchCopyWith<$Res> {
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      q: q == freezed
+      q: null == q
           ? _value.q
           : q // ignore: cast_nullable_to_non_nullable
               as String,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as SearchType?,
-      listingType: listingType == freezed
+      listingType: freezed == listingType
           ? _value.listingType
           : listingType // ignore: cast_nullable_to_non_nullable
               as PostListingType?,
-      communityId: communityId == freezed
+      communityId: freezed == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int?,
-      communityName: communityName == freezed
+      communityName: freezed == communityName
           ? _value.communityName
           : communityName // ignore: cast_nullable_to_non_nullable
               as String?,
-      sort: sort == freezed
+      sort: freezed == sort
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
               as SortType?,
-      page: page == freezed
+      page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as int?,
-      limit: limit == freezed
+      limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      creatorId: creatorId == freezed
+      creatorId: freezed == creatorId
           ? _value.creatorId
           : creatorId // ignore: cast_nullable_to_non_nullable
               as int?,
-      auth: auth == freezed
+      auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -125,6 +129,7 @@ abstract class _$$_SearchCopyWith<$Res> implements $SearchCopyWith<$Res> {
   factory _$$_SearchCopyWith(_$_Search value, $Res Function(_$_Search) then) =
       __$$_SearchCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String q,
       @JsonKey(name: 'type_') SearchType? type,
@@ -139,17 +144,16 @@ abstract class _$$_SearchCopyWith<$Res> implements $SearchCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_SearchCopyWithImpl<$Res> extends _$SearchCopyWithImpl<$Res>
+class __$$_SearchCopyWithImpl<$Res>
+    extends _$SearchCopyWithImpl<$Res, _$_Search>
     implements _$$_SearchCopyWith<$Res> {
   __$$_SearchCopyWithImpl(_$_Search _value, $Res Function(_$_Search) _then)
-      : super(_value, (v) => _then(v as _$_Search));
+      : super(_value, _then);
 
-  @override
-  _$_Search get _value => super._value as _$_Search;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? q = freezed,
+    Object? q = null,
     Object? type = freezed,
     Object? listingType = freezed,
     Object? communityId = freezed,
@@ -161,43 +165,43 @@ class __$$_SearchCopyWithImpl<$Res> extends _$SearchCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_$_Search(
-      q: q == freezed
+      q: null == q
           ? _value.q
           : q // ignore: cast_nullable_to_non_nullable
               as String,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as SearchType?,
-      listingType: listingType == freezed
+      listingType: freezed == listingType
           ? _value.listingType
           : listingType // ignore: cast_nullable_to_non_nullable
               as PostListingType?,
-      communityId: communityId == freezed
+      communityId: freezed == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int?,
-      communityName: communityName == freezed
+      communityName: freezed == communityName
           ? _value.communityName
           : communityName // ignore: cast_nullable_to_non_nullable
               as String?,
-      sort: sort == freezed
+      sort: freezed == sort
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
               as SortType?,
-      page: page == freezed
+      page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as int?,
-      limit: limit == freezed
+      limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      creatorId: creatorId == freezed
+      creatorId: freezed == creatorId
           ? _value.creatorId
           : creatorId // ignore: cast_nullable_to_non_nullable
               as int?,
-      auth: auth == freezed
+      auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -257,38 +261,30 @@ class _$_Search extends _Search {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Search &&
-            const DeepCollectionEquality().equals(other.q, q) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.listingType, listingType) &&
-            const DeepCollectionEquality()
-                .equals(other.communityId, communityId) &&
-            const DeepCollectionEquality()
-                .equals(other.communityName, communityName) &&
-            const DeepCollectionEquality().equals(other.sort, sort) &&
-            const DeepCollectionEquality().equals(other.page, page) &&
-            const DeepCollectionEquality().equals(other.limit, limit) &&
-            const DeepCollectionEquality().equals(other.creatorId, creatorId) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.q, q) || other.q == q) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.listingType, listingType) ||
+                other.listingType == listingType) &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.communityName, communityName) ||
+                other.communityName == communityName) &&
+            (identical(other.sort, sort) || other.sort == sort) &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.creatorId, creatorId) ||
+                other.creatorId == creatorId) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(q),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(listingType),
-      const DeepCollectionEquality().hash(communityId),
-      const DeepCollectionEquality().hash(communityName),
-      const DeepCollectionEquality().hash(sort),
-      const DeepCollectionEquality().hash(page),
-      const DeepCollectionEquality().hash(limit),
-      const DeepCollectionEquality().hash(creatorId),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, q, type, listingType,
+      communityId, communityName, sort, page, limit, creatorId, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SearchCopyWith<_$_Search> get copyWith =>
       __$$_SearchCopyWithImpl<_$_Search>(this, _$identity);
 
@@ -364,7 +360,8 @@ mixin _$GetModlog {
 /// @nodoc
 abstract class $GetModlogCopyWith<$Res> {
   factory $GetModlogCopyWith(GetModlog value, $Res Function(GetModlog) then) =
-      _$GetModlogCopyWithImpl<$Res>;
+      _$GetModlogCopyWithImpl<$Res, GetModlog>;
+  @useResult
   $Res call(
       {int? modPersonId,
       int? communityId,
@@ -374,13 +371,16 @@ abstract class $GetModlogCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$GetModlogCopyWithImpl<$Res> implements $GetModlogCopyWith<$Res> {
+class _$GetModlogCopyWithImpl<$Res, $Val extends GetModlog>
+    implements $GetModlogCopyWith<$Res> {
   _$GetModlogCopyWithImpl(this._value, this._then);
 
-  final GetModlog _value;
   // ignore: unused_field
-  final $Res Function(GetModlog) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? modPersonId = freezed,
@@ -390,27 +390,27 @@ class _$GetModlogCopyWithImpl<$Res> implements $GetModlogCopyWith<$Res> {
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      modPersonId: modPersonId == freezed
+      modPersonId: freezed == modPersonId
           ? _value.modPersonId
           : modPersonId // ignore: cast_nullable_to_non_nullable
               as int?,
-      communityId: communityId == freezed
+      communityId: freezed == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int?,
-      page: page == freezed
+      page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as int?,
-      limit: limit == freezed
+      limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      auth: auth == freezed
+      auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -420,6 +420,7 @@ abstract class _$$_GetModlogCopyWith<$Res> implements $GetModlogCopyWith<$Res> {
           _$_GetModlog value, $Res Function(_$_GetModlog) then) =
       __$$_GetModlogCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int? modPersonId,
       int? communityId,
@@ -429,15 +430,14 @@ abstract class _$$_GetModlogCopyWith<$Res> implements $GetModlogCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_GetModlogCopyWithImpl<$Res> extends _$GetModlogCopyWithImpl<$Res>
+class __$$_GetModlogCopyWithImpl<$Res>
+    extends _$GetModlogCopyWithImpl<$Res, _$_GetModlog>
     implements _$$_GetModlogCopyWith<$Res> {
   __$$_GetModlogCopyWithImpl(
       _$_GetModlog _value, $Res Function(_$_GetModlog) _then)
-      : super(_value, (v) => _then(v as _$_GetModlog));
+      : super(_value, _then);
 
-  @override
-  _$_GetModlog get _value => super._value as _$_GetModlog;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? modPersonId = freezed,
@@ -447,23 +447,23 @@ class __$$_GetModlogCopyWithImpl<$Res> extends _$GetModlogCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_$_GetModlog(
-      modPersonId: modPersonId == freezed
+      modPersonId: freezed == modPersonId
           ? _value.modPersonId
           : modPersonId // ignore: cast_nullable_to_non_nullable
               as int?,
-      communityId: communityId == freezed
+      communityId: freezed == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int?,
-      page: page == freezed
+      page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as int?,
-      limit: limit == freezed
+      limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      auth: auth == freezed
+      auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -503,27 +503,23 @@ class _$_GetModlog extends _GetModlog {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_GetModlog &&
-            const DeepCollectionEquality()
-                .equals(other.modPersonId, modPersonId) &&
-            const DeepCollectionEquality()
-                .equals(other.communityId, communityId) &&
-            const DeepCollectionEquality().equals(other.page, page) &&
-            const DeepCollectionEquality().equals(other.limit, limit) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.modPersonId, modPersonId) ||
+                other.modPersonId == modPersonId) &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(modPersonId),
-      const DeepCollectionEquality().hash(communityId),
-      const DeepCollectionEquality().hash(page),
-      const DeepCollectionEquality().hash(limit),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode =>
+      Object.hash(runtimeType, modPersonId, communityId, page, limit, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_GetModlogCopyWith<_$_GetModlog> get copyWith =>
       __$$_GetModlogCopyWithImpl<_$_GetModlog>(this, _$identity);
 
@@ -595,7 +591,8 @@ mixin _$CreateSite {
 abstract class $CreateSiteCopyWith<$Res> {
   factory $CreateSiteCopyWith(
           CreateSite value, $Res Function(CreateSite) then) =
-      _$CreateSiteCopyWithImpl<$Res>;
+      _$CreateSiteCopyWithImpl<$Res, CreateSite>;
+  @useResult
   $Res call(
       {String name,
       String? sidebar,
@@ -615,16 +612,19 @@ abstract class $CreateSiteCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CreateSiteCopyWithImpl<$Res> implements $CreateSiteCopyWith<$Res> {
+class _$CreateSiteCopyWithImpl<$Res, $Val extends CreateSite>
+    implements $CreateSiteCopyWith<$Res> {
   _$CreateSiteCopyWithImpl(this._value, this._then);
 
-  final CreateSite _value;
   // ignore: unused_field
-  final $Res Function(CreateSite) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
+    Object? name = null,
     Object? sidebar = freezed,
     Object? description = freezed,
     Object? icon = freezed,
@@ -637,71 +637,71 @@ class _$CreateSiteCopyWithImpl<$Res> implements $CreateSiteCopyWith<$Res> {
     Object? requireApplication = freezed,
     Object? applicationQuestion = freezed,
     Object? privateInstance = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
     Object? defaultTheme = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      sidebar: sidebar == freezed
+      sidebar: freezed == sidebar
           ? _value.sidebar
           : sidebar // ignore: cast_nullable_to_non_nullable
               as String?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as String?,
-      banner: banner == freezed
+      banner: freezed == banner
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
-      enableDownvotes: enableDownvotes == freezed
+      enableDownvotes: freezed == enableDownvotes
           ? _value.enableDownvotes
           : enableDownvotes // ignore: cast_nullable_to_non_nullable
               as bool?,
-      openRegistration: openRegistration == freezed
+      openRegistration: freezed == openRegistration
           ? _value.openRegistration
           : openRegistration // ignore: cast_nullable_to_non_nullable
               as bool?,
-      enableNsfw: enableNsfw == freezed
+      enableNsfw: freezed == enableNsfw
           ? _value.enableNsfw
           : enableNsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
-      communityCreationAdminOnly: communityCreationAdminOnly == freezed
+      communityCreationAdminOnly: freezed == communityCreationAdminOnly
           ? _value.communityCreationAdminOnly
           : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
-      requireEmailVerification: requireEmailVerification == freezed
+      requireEmailVerification: freezed == requireEmailVerification
           ? _value.requireEmailVerification
           : requireEmailVerification // ignore: cast_nullable_to_non_nullable
               as bool?,
-      requireApplication: requireApplication == freezed
+      requireApplication: freezed == requireApplication
           ? _value.requireApplication
           : requireApplication // ignore: cast_nullable_to_non_nullable
               as bool?,
-      applicationQuestion: applicationQuestion == freezed
+      applicationQuestion: freezed == applicationQuestion
           ? _value.applicationQuestion
           : applicationQuestion // ignore: cast_nullable_to_non_nullable
               as String?,
-      privateInstance: privateInstance == freezed
+      privateInstance: freezed == privateInstance
           ? _value.privateInstance
           : privateInstance // ignore: cast_nullable_to_non_nullable
               as bool?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-      defaultTheme: defaultTheme == freezed
+      defaultTheme: freezed == defaultTheme
           ? _value.defaultTheme
           : defaultTheme // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -712,6 +712,7 @@ abstract class _$$_CreateSiteCopyWith<$Res>
           _$_CreateSite value, $Res Function(_$_CreateSite) then) =
       __$$_CreateSiteCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String name,
       String? sidebar,
@@ -731,18 +732,17 @@ abstract class _$$_CreateSiteCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CreateSiteCopyWithImpl<$Res> extends _$CreateSiteCopyWithImpl<$Res>
+class __$$_CreateSiteCopyWithImpl<$Res>
+    extends _$CreateSiteCopyWithImpl<$Res, _$_CreateSite>
     implements _$$_CreateSiteCopyWith<$Res> {
   __$$_CreateSiteCopyWithImpl(
       _$_CreateSite _value, $Res Function(_$_CreateSite) _then)
-      : super(_value, (v) => _then(v as _$_CreateSite));
+      : super(_value, _then);
 
-  @override
-  _$_CreateSite get _value => super._value as _$_CreateSite;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
+    Object? name = null,
     Object? sidebar = freezed,
     Object? description = freezed,
     Object? icon = freezed,
@@ -755,67 +755,67 @@ class __$$_CreateSiteCopyWithImpl<$Res> extends _$CreateSiteCopyWithImpl<$Res>
     Object? requireApplication = freezed,
     Object? applicationQuestion = freezed,
     Object? privateInstance = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
     Object? defaultTheme = freezed,
   }) {
     return _then(_$_CreateSite(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      sidebar: sidebar == freezed
+      sidebar: freezed == sidebar
           ? _value.sidebar
           : sidebar // ignore: cast_nullable_to_non_nullable
               as String?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as String?,
-      banner: banner == freezed
+      banner: freezed == banner
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
-      enableDownvotes: enableDownvotes == freezed
+      enableDownvotes: freezed == enableDownvotes
           ? _value.enableDownvotes
           : enableDownvotes // ignore: cast_nullable_to_non_nullable
               as bool?,
-      openRegistration: openRegistration == freezed
+      openRegistration: freezed == openRegistration
           ? _value.openRegistration
           : openRegistration // ignore: cast_nullable_to_non_nullable
               as bool?,
-      enableNsfw: enableNsfw == freezed
+      enableNsfw: freezed == enableNsfw
           ? _value.enableNsfw
           : enableNsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
-      communityCreationAdminOnly: communityCreationAdminOnly == freezed
+      communityCreationAdminOnly: freezed == communityCreationAdminOnly
           ? _value.communityCreationAdminOnly
           : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
-      requireEmailVerification: requireEmailVerification == freezed
+      requireEmailVerification: freezed == requireEmailVerification
           ? _value.requireEmailVerification
           : requireEmailVerification // ignore: cast_nullable_to_non_nullable
               as bool?,
-      requireApplication: requireApplication == freezed
+      requireApplication: freezed == requireApplication
           ? _value.requireApplication
           : requireApplication // ignore: cast_nullable_to_non_nullable
               as bool?,
-      applicationQuestion: applicationQuestion == freezed
+      applicationQuestion: freezed == applicationQuestion
           ? _value.applicationQuestion
           : applicationQuestion // ignore: cast_nullable_to_non_nullable
               as String?,
-      privateInstance: privateInstance == freezed
+      privateInstance: freezed == privateInstance
           ? _value.privateInstance
           : privateInstance // ignore: cast_nullable_to_non_nullable
               as bool?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-      defaultTheme: defaultTheme == freezed
+      defaultTheme: freezed == defaultTheme
           ? _value.defaultTheme
           : defaultTheme // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -889,55 +889,59 @@ class _$_CreateSite extends _CreateSite {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CreateSite &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.sidebar, sidebar) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality().equals(other.icon, icon) &&
-            const DeepCollectionEquality().equals(other.banner, banner) &&
-            const DeepCollectionEquality()
-                .equals(other.enableDownvotes, enableDownvotes) &&
-            const DeepCollectionEquality()
-                .equals(other.openRegistration, openRegistration) &&
-            const DeepCollectionEquality()
-                .equals(other.enableNsfw, enableNsfw) &&
-            const DeepCollectionEquality().equals(
-                other.communityCreationAdminOnly, communityCreationAdminOnly) &&
-            const DeepCollectionEquality().equals(
-                other.requireEmailVerification, requireEmailVerification) &&
-            const DeepCollectionEquality()
-                .equals(other.requireApplication, requireApplication) &&
-            const DeepCollectionEquality()
-                .equals(other.applicationQuestion, applicationQuestion) &&
-            const DeepCollectionEquality()
-                .equals(other.privateInstance, privateInstance) &&
-            const DeepCollectionEquality().equals(other.auth, auth) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultTheme, defaultTheme));
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.sidebar, sidebar) || other.sidebar == sidebar) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.banner, banner) || other.banner == banner) &&
+            (identical(other.enableDownvotes, enableDownvotes) ||
+                other.enableDownvotes == enableDownvotes) &&
+            (identical(other.openRegistration, openRegistration) ||
+                other.openRegistration == openRegistration) &&
+            (identical(other.enableNsfw, enableNsfw) ||
+                other.enableNsfw == enableNsfw) &&
+            (identical(other.communityCreationAdminOnly,
+                    communityCreationAdminOnly) ||
+                other.communityCreationAdminOnly ==
+                    communityCreationAdminOnly) &&
+            (identical(
+                    other.requireEmailVerification, requireEmailVerification) ||
+                other.requireEmailVerification == requireEmailVerification) &&
+            (identical(other.requireApplication, requireApplication) ||
+                other.requireApplication == requireApplication) &&
+            (identical(other.applicationQuestion, applicationQuestion) ||
+                other.applicationQuestion == applicationQuestion) &&
+            (identical(other.privateInstance, privateInstance) ||
+                other.privateInstance == privateInstance) &&
+            (identical(other.auth, auth) || other.auth == auth) &&
+            (identical(other.defaultTheme, defaultTheme) ||
+                other.defaultTheme == defaultTheme));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(sidebar),
-      const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(icon),
-      const DeepCollectionEquality().hash(banner),
-      const DeepCollectionEquality().hash(enableDownvotes),
-      const DeepCollectionEquality().hash(openRegistration),
-      const DeepCollectionEquality().hash(enableNsfw),
-      const DeepCollectionEquality().hash(communityCreationAdminOnly),
-      const DeepCollectionEquality().hash(requireEmailVerification),
-      const DeepCollectionEquality().hash(requireApplication),
-      const DeepCollectionEquality().hash(applicationQuestion),
-      const DeepCollectionEquality().hash(privateInstance),
-      const DeepCollectionEquality().hash(auth),
-      const DeepCollectionEquality().hash(defaultTheme));
+      name,
+      sidebar,
+      description,
+      icon,
+      banner,
+      enableDownvotes,
+      openRegistration,
+      enableNsfw,
+      communityCreationAdminOnly,
+      requireEmailVerification,
+      requireApplication,
+      applicationQuestion,
+      privateInstance,
+      auth,
+      defaultTheme);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CreateSiteCopyWith<_$_CreateSite> get copyWith =>
       __$$_CreateSiteCopyWithImpl<_$_CreateSite>(this, _$identity);
 
@@ -1038,7 +1042,8 @@ mixin _$EditSite {
 /// @nodoc
 abstract class $EditSiteCopyWith<$Res> {
   factory $EditSiteCopyWith(EditSite value, $Res Function(EditSite) then) =
-      _$EditSiteCopyWithImpl<$Res>;
+      _$EditSiteCopyWithImpl<$Res, EditSite>;
+  @useResult
   $Res call(
       {String? name,
       String? sidebar,
@@ -1058,13 +1063,16 @@ abstract class $EditSiteCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$EditSiteCopyWithImpl<$Res> implements $EditSiteCopyWith<$Res> {
+class _$EditSiteCopyWithImpl<$Res, $Val extends EditSite>
+    implements $EditSiteCopyWith<$Res> {
   _$EditSiteCopyWithImpl(this._value, this._then);
 
-  final EditSite _value;
   // ignore: unused_field
-  final $Res Function(EditSite) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? name = freezed,
@@ -1080,71 +1088,71 @@ class _$EditSiteCopyWithImpl<$Res> implements $EditSiteCopyWith<$Res> {
     Object? requireApplication = freezed,
     Object? applicationQuestion = freezed,
     Object? privateInstance = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
     Object? defaultTheme = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      sidebar: sidebar == freezed
+      sidebar: freezed == sidebar
           ? _value.sidebar
           : sidebar // ignore: cast_nullable_to_non_nullable
               as String?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as String?,
-      banner: banner == freezed
+      banner: freezed == banner
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
-      enableDownvotes: enableDownvotes == freezed
+      enableDownvotes: freezed == enableDownvotes
           ? _value.enableDownvotes
           : enableDownvotes // ignore: cast_nullable_to_non_nullable
               as bool?,
-      openRegistration: openRegistration == freezed
+      openRegistration: freezed == openRegistration
           ? _value.openRegistration
           : openRegistration // ignore: cast_nullable_to_non_nullable
               as bool?,
-      enableNsfw: enableNsfw == freezed
+      enableNsfw: freezed == enableNsfw
           ? _value.enableNsfw
           : enableNsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
-      communityCreationAdminOnly: communityCreationAdminOnly == freezed
+      communityCreationAdminOnly: freezed == communityCreationAdminOnly
           ? _value.communityCreationAdminOnly
           : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
-      requireEmailVerification: requireEmailVerification == freezed
+      requireEmailVerification: freezed == requireEmailVerification
           ? _value.requireEmailVerification
           : requireEmailVerification // ignore: cast_nullable_to_non_nullable
               as bool?,
-      requireApplication: requireApplication == freezed
+      requireApplication: freezed == requireApplication
           ? _value.requireApplication
           : requireApplication // ignore: cast_nullable_to_non_nullable
               as bool?,
-      applicationQuestion: applicationQuestion == freezed
+      applicationQuestion: freezed == applicationQuestion
           ? _value.applicationQuestion
           : applicationQuestion // ignore: cast_nullable_to_non_nullable
               as String?,
-      privateInstance: privateInstance == freezed
+      privateInstance: freezed == privateInstance
           ? _value.privateInstance
           : privateInstance // ignore: cast_nullable_to_non_nullable
               as bool?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-      defaultTheme: defaultTheme == freezed
+      defaultTheme: freezed == defaultTheme
           ? _value.defaultTheme
           : defaultTheme // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1154,6 +1162,7 @@ abstract class _$$_EditSiteCopyWith<$Res> implements $EditSiteCopyWith<$Res> {
           _$_EditSite value, $Res Function(_$_EditSite) then) =
       __$$_EditSiteCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? name,
       String? sidebar,
@@ -1173,15 +1182,14 @@ abstract class _$$_EditSiteCopyWith<$Res> implements $EditSiteCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_EditSiteCopyWithImpl<$Res> extends _$EditSiteCopyWithImpl<$Res>
+class __$$_EditSiteCopyWithImpl<$Res>
+    extends _$EditSiteCopyWithImpl<$Res, _$_EditSite>
     implements _$$_EditSiteCopyWith<$Res> {
   __$$_EditSiteCopyWithImpl(
       _$_EditSite _value, $Res Function(_$_EditSite) _then)
-      : super(_value, (v) => _then(v as _$_EditSite));
+      : super(_value, _then);
 
-  @override
-  _$_EditSite get _value => super._value as _$_EditSite;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? name = freezed,
@@ -1197,67 +1205,67 @@ class __$$_EditSiteCopyWithImpl<$Res> extends _$EditSiteCopyWithImpl<$Res>
     Object? requireApplication = freezed,
     Object? applicationQuestion = freezed,
     Object? privateInstance = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
     Object? defaultTheme = freezed,
   }) {
     return _then(_$_EditSite(
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      sidebar: sidebar == freezed
+      sidebar: freezed == sidebar
           ? _value.sidebar
           : sidebar // ignore: cast_nullable_to_non_nullable
               as String?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      icon: icon == freezed
+      icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as String?,
-      banner: banner == freezed
+      banner: freezed == banner
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
-      enableDownvotes: enableDownvotes == freezed
+      enableDownvotes: freezed == enableDownvotes
           ? _value.enableDownvotes
           : enableDownvotes // ignore: cast_nullable_to_non_nullable
               as bool?,
-      openRegistration: openRegistration == freezed
+      openRegistration: freezed == openRegistration
           ? _value.openRegistration
           : openRegistration // ignore: cast_nullable_to_non_nullable
               as bool?,
-      enableNsfw: enableNsfw == freezed
+      enableNsfw: freezed == enableNsfw
           ? _value.enableNsfw
           : enableNsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
-      communityCreationAdminOnly: communityCreationAdminOnly == freezed
+      communityCreationAdminOnly: freezed == communityCreationAdminOnly
           ? _value.communityCreationAdminOnly
           : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
-      requireEmailVerification: requireEmailVerification == freezed
+      requireEmailVerification: freezed == requireEmailVerification
           ? _value.requireEmailVerification
           : requireEmailVerification // ignore: cast_nullable_to_non_nullable
               as bool?,
-      requireApplication: requireApplication == freezed
+      requireApplication: freezed == requireApplication
           ? _value.requireApplication
           : requireApplication // ignore: cast_nullable_to_non_nullable
               as bool?,
-      applicationQuestion: applicationQuestion == freezed
+      applicationQuestion: freezed == applicationQuestion
           ? _value.applicationQuestion
           : applicationQuestion // ignore: cast_nullable_to_non_nullable
               as String?,
-      privateInstance: privateInstance == freezed
+      privateInstance: freezed == privateInstance
           ? _value.privateInstance
           : privateInstance // ignore: cast_nullable_to_non_nullable
               as bool?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-      defaultTheme: defaultTheme == freezed
+      defaultTheme: freezed == defaultTheme
           ? _value.defaultTheme
           : defaultTheme // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -1331,55 +1339,59 @@ class _$_EditSite extends _EditSite {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_EditSite &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.sidebar, sidebar) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality().equals(other.icon, icon) &&
-            const DeepCollectionEquality().equals(other.banner, banner) &&
-            const DeepCollectionEquality()
-                .equals(other.enableDownvotes, enableDownvotes) &&
-            const DeepCollectionEquality()
-                .equals(other.openRegistration, openRegistration) &&
-            const DeepCollectionEquality()
-                .equals(other.enableNsfw, enableNsfw) &&
-            const DeepCollectionEquality().equals(
-                other.communityCreationAdminOnly, communityCreationAdminOnly) &&
-            const DeepCollectionEquality().equals(
-                other.requireEmailVerification, requireEmailVerification) &&
-            const DeepCollectionEquality()
-                .equals(other.requireApplication, requireApplication) &&
-            const DeepCollectionEquality()
-                .equals(other.applicationQuestion, applicationQuestion) &&
-            const DeepCollectionEquality()
-                .equals(other.privateInstance, privateInstance) &&
-            const DeepCollectionEquality().equals(other.auth, auth) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultTheme, defaultTheme));
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.sidebar, sidebar) || other.sidebar == sidebar) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.banner, banner) || other.banner == banner) &&
+            (identical(other.enableDownvotes, enableDownvotes) ||
+                other.enableDownvotes == enableDownvotes) &&
+            (identical(other.openRegistration, openRegistration) ||
+                other.openRegistration == openRegistration) &&
+            (identical(other.enableNsfw, enableNsfw) ||
+                other.enableNsfw == enableNsfw) &&
+            (identical(other.communityCreationAdminOnly,
+                    communityCreationAdminOnly) ||
+                other.communityCreationAdminOnly ==
+                    communityCreationAdminOnly) &&
+            (identical(
+                    other.requireEmailVerification, requireEmailVerification) ||
+                other.requireEmailVerification == requireEmailVerification) &&
+            (identical(other.requireApplication, requireApplication) ||
+                other.requireApplication == requireApplication) &&
+            (identical(other.applicationQuestion, applicationQuestion) ||
+                other.applicationQuestion == applicationQuestion) &&
+            (identical(other.privateInstance, privateInstance) ||
+                other.privateInstance == privateInstance) &&
+            (identical(other.auth, auth) || other.auth == auth) &&
+            (identical(other.defaultTheme, defaultTheme) ||
+                other.defaultTheme == defaultTheme));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(sidebar),
-      const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(icon),
-      const DeepCollectionEquality().hash(banner),
-      const DeepCollectionEquality().hash(enableDownvotes),
-      const DeepCollectionEquality().hash(openRegistration),
-      const DeepCollectionEquality().hash(enableNsfw),
-      const DeepCollectionEquality().hash(communityCreationAdminOnly),
-      const DeepCollectionEquality().hash(requireEmailVerification),
-      const DeepCollectionEquality().hash(requireApplication),
-      const DeepCollectionEquality().hash(applicationQuestion),
-      const DeepCollectionEquality().hash(privateInstance),
-      const DeepCollectionEquality().hash(auth),
-      const DeepCollectionEquality().hash(defaultTheme));
+      name,
+      sidebar,
+      description,
+      icon,
+      banner,
+      enableDownvotes,
+      openRegistration,
+      enableNsfw,
+      communityCreationAdminOnly,
+      requireEmailVerification,
+      requireApplication,
+      applicationQuestion,
+      privateInstance,
+      auth,
+      defaultTheme);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_EditSiteCopyWith<_$_EditSite> get copyWith =>
       __$$_EditSiteCopyWithImpl<_$_EditSite>(this, _$identity);
 
@@ -1464,28 +1476,32 @@ mixin _$GetSite {
 /// @nodoc
 abstract class $GetSiteCopyWith<$Res> {
   factory $GetSiteCopyWith(GetSite value, $Res Function(GetSite) then) =
-      _$GetSiteCopyWithImpl<$Res>;
+      _$GetSiteCopyWithImpl<$Res, GetSite>;
+  @useResult
   $Res call({String? auth});
 }
 
 /// @nodoc
-class _$GetSiteCopyWithImpl<$Res> implements $GetSiteCopyWith<$Res> {
+class _$GetSiteCopyWithImpl<$Res, $Val extends GetSite>
+    implements $GetSiteCopyWith<$Res> {
   _$GetSiteCopyWithImpl(this._value, this._then);
 
-  final GetSite _value;
   // ignore: unused_field
-  final $Res Function(GetSite) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      auth: auth == freezed
+      auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1495,24 +1511,24 @@ abstract class _$$_GetSiteCopyWith<$Res> implements $GetSiteCopyWith<$Res> {
           _$_GetSite value, $Res Function(_$_GetSite) then) =
       __$$_GetSiteCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String? auth});
 }
 
 /// @nodoc
-class __$$_GetSiteCopyWithImpl<$Res> extends _$GetSiteCopyWithImpl<$Res>
+class __$$_GetSiteCopyWithImpl<$Res>
+    extends _$GetSiteCopyWithImpl<$Res, _$_GetSite>
     implements _$$_GetSiteCopyWith<$Res> {
   __$$_GetSiteCopyWithImpl(_$_GetSite _value, $Res Function(_$_GetSite) _then)
-      : super(_value, (v) => _then(v as _$_GetSite));
+      : super(_value, _then);
 
-  @override
-  _$_GetSite get _value => super._value as _$_GetSite;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? auth = freezed,
   }) {
     return _then(_$_GetSite(
-      auth: auth == freezed
+      auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -1542,16 +1558,16 @@ class _$_GetSite extends _GetSite {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_GetSite &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_GetSiteCopyWith<_$_GetSite> get copyWith =>
       __$$_GetSiteCopyWithImpl<_$_GetSite>(this, _$identity);
 
@@ -1595,28 +1611,32 @@ mixin _$LeaveAdmin {
 abstract class $LeaveAdminCopyWith<$Res> {
   factory $LeaveAdminCopyWith(
           LeaveAdmin value, $Res Function(LeaveAdmin) then) =
-      _$LeaveAdminCopyWithImpl<$Res>;
+      _$LeaveAdminCopyWithImpl<$Res, LeaveAdmin>;
+  @useResult
   $Res call({String auth});
 }
 
 /// @nodoc
-class _$LeaveAdminCopyWithImpl<$Res> implements $LeaveAdminCopyWith<$Res> {
+class _$LeaveAdminCopyWithImpl<$Res, $Val extends LeaveAdmin>
+    implements $LeaveAdminCopyWith<$Res> {
   _$LeaveAdminCopyWithImpl(this._value, this._then);
 
-  final LeaveAdmin _value;
   // ignore: unused_field
-  final $Res Function(LeaveAdmin) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1627,25 +1647,25 @@ abstract class _$$_LeaveAdminCopyWith<$Res>
           _$_LeaveAdmin value, $Res Function(_$_LeaveAdmin) then) =
       __$$_LeaveAdminCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String auth});
 }
 
 /// @nodoc
-class __$$_LeaveAdminCopyWithImpl<$Res> extends _$LeaveAdminCopyWithImpl<$Res>
+class __$$_LeaveAdminCopyWithImpl<$Res>
+    extends _$LeaveAdminCopyWithImpl<$Res, _$_LeaveAdmin>
     implements _$$_LeaveAdminCopyWith<$Res> {
   __$$_LeaveAdminCopyWithImpl(
       _$_LeaveAdmin _value, $Res Function(_$_LeaveAdmin) _then)
-      : super(_value, (v) => _then(v as _$_LeaveAdmin));
+      : super(_value, _then);
 
-  @override
-  _$_LeaveAdmin get _value => super._value as _$_LeaveAdmin;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_$_LeaveAdmin(
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1675,16 +1695,16 @@ class _$_LeaveAdmin extends _LeaveAdmin {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_LeaveAdmin &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_LeaveAdminCopyWith<_$_LeaveAdmin> get copyWith =>
       __$$_LeaveAdminCopyWithImpl<_$_LeaveAdmin>(this, _$identity);
 
@@ -1729,29 +1749,32 @@ mixin _$GetSiteConfig {
 abstract class $GetSiteConfigCopyWith<$Res> {
   factory $GetSiteConfigCopyWith(
           GetSiteConfig value, $Res Function(GetSiteConfig) then) =
-      _$GetSiteConfigCopyWithImpl<$Res>;
+      _$GetSiteConfigCopyWithImpl<$Res, GetSiteConfig>;
+  @useResult
   $Res call({String auth});
 }
 
 /// @nodoc
-class _$GetSiteConfigCopyWithImpl<$Res>
+class _$GetSiteConfigCopyWithImpl<$Res, $Val extends GetSiteConfig>
     implements $GetSiteConfigCopyWith<$Res> {
   _$GetSiteConfigCopyWithImpl(this._value, this._then);
 
-  final GetSiteConfig _value;
   // ignore: unused_field
-  final $Res Function(GetSiteConfig) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1762,26 +1785,25 @@ abstract class _$$_GetSiteConfigCopyWith<$Res>
           _$_GetSiteConfig value, $Res Function(_$_GetSiteConfig) then) =
       __$$_GetSiteConfigCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String auth});
 }
 
 /// @nodoc
 class __$$_GetSiteConfigCopyWithImpl<$Res>
-    extends _$GetSiteConfigCopyWithImpl<$Res>
+    extends _$GetSiteConfigCopyWithImpl<$Res, _$_GetSiteConfig>
     implements _$$_GetSiteConfigCopyWith<$Res> {
   __$$_GetSiteConfigCopyWithImpl(
       _$_GetSiteConfig _value, $Res Function(_$_GetSiteConfig) _then)
-      : super(_value, (v) => _then(v as _$_GetSiteConfig));
+      : super(_value, _then);
 
-  @override
-  _$_GetSiteConfig get _value => super._value as _$_GetSiteConfig;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_$_GetSiteConfig(
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1811,16 +1833,16 @@ class _$_GetSiteConfig extends _GetSiteConfig {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_GetSiteConfig &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_GetSiteConfigCopyWith<_$_GetSiteConfig> get copyWith =>
       __$$_GetSiteConfigCopyWithImpl<_$_GetSiteConfig>(this, _$identity);
 
@@ -1866,34 +1888,37 @@ mixin _$SaveSiteConfig {
 abstract class $SaveSiteConfigCopyWith<$Res> {
   factory $SaveSiteConfigCopyWith(
           SaveSiteConfig value, $Res Function(SaveSiteConfig) then) =
-      _$SaveSiteConfigCopyWithImpl<$Res>;
+      _$SaveSiteConfigCopyWithImpl<$Res, SaveSiteConfig>;
+  @useResult
   $Res call({String configHjson, String auth});
 }
 
 /// @nodoc
-class _$SaveSiteConfigCopyWithImpl<$Res>
+class _$SaveSiteConfigCopyWithImpl<$Res, $Val extends SaveSiteConfig>
     implements $SaveSiteConfigCopyWith<$Res> {
   _$SaveSiteConfigCopyWithImpl(this._value, this._then);
 
-  final SaveSiteConfig _value;
   // ignore: unused_field
-  final $Res Function(SaveSiteConfig) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? configHjson = freezed,
-    Object? auth = freezed,
+    Object? configHjson = null,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      configHjson: configHjson == freezed
+      configHjson: null == configHjson
           ? _value.configHjson
           : configHjson // ignore: cast_nullable_to_non_nullable
               as String,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1904,31 +1929,30 @@ abstract class _$$_SaveSiteConfigCopyWith<$Res>
           _$_SaveSiteConfig value, $Res Function(_$_SaveSiteConfig) then) =
       __$$_SaveSiteConfigCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String configHjson, String auth});
 }
 
 /// @nodoc
 class __$$_SaveSiteConfigCopyWithImpl<$Res>
-    extends _$SaveSiteConfigCopyWithImpl<$Res>
+    extends _$SaveSiteConfigCopyWithImpl<$Res, _$_SaveSiteConfig>
     implements _$$_SaveSiteConfigCopyWith<$Res> {
   __$$_SaveSiteConfigCopyWithImpl(
       _$_SaveSiteConfig _value, $Res Function(_$_SaveSiteConfig) _then)
-      : super(_value, (v) => _then(v as _$_SaveSiteConfig));
+      : super(_value, _then);
 
-  @override
-  _$_SaveSiteConfig get _value => super._value as _$_SaveSiteConfig;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? configHjson = freezed,
-    Object? auth = freezed,
+    Object? configHjson = null,
+    Object? auth = null,
   }) {
     return _then(_$_SaveSiteConfig(
-      configHjson: configHjson == freezed
+      configHjson: null == configHjson
           ? _value.configHjson
           : configHjson // ignore: cast_nullable_to_non_nullable
               as String,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1961,20 +1985,18 @@ class _$_SaveSiteConfig extends _SaveSiteConfig {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SaveSiteConfig &&
-            const DeepCollectionEquality()
-                .equals(other.configHjson, configHjson) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.configHjson, configHjson) ||
+                other.configHjson == configHjson) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(configHjson),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, configHjson, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SaveSiteConfigCopyWith<_$_SaveSiteConfig> get copyWith =>
       __$$_SaveSiteConfigCopyWithImpl<_$_SaveSiteConfig>(this, _$identity);
 
@@ -2024,34 +2046,37 @@ mixin _$ResolveObject {
 abstract class $ResolveObjectCopyWith<$Res> {
   factory $ResolveObjectCopyWith(
           ResolveObject value, $Res Function(ResolveObject) then) =
-      _$ResolveObjectCopyWithImpl<$Res>;
+      _$ResolveObjectCopyWithImpl<$Res, ResolveObject>;
+  @useResult
   $Res call({String q, String? auth});
 }
 
 /// @nodoc
-class _$ResolveObjectCopyWithImpl<$Res>
+class _$ResolveObjectCopyWithImpl<$Res, $Val extends ResolveObject>
     implements $ResolveObjectCopyWith<$Res> {
   _$ResolveObjectCopyWithImpl(this._value, this._then);
 
-  final ResolveObject _value;
   // ignore: unused_field
-  final $Res Function(ResolveObject) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? q = freezed,
+    Object? q = null,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      q: q == freezed
+      q: null == q
           ? _value.q
           : q // ignore: cast_nullable_to_non_nullable
               as String,
-      auth: auth == freezed
+      auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -2062,31 +2087,30 @@ abstract class _$$_ResolveObjectCopyWith<$Res>
           _$_ResolveObject value, $Res Function(_$_ResolveObject) then) =
       __$$_ResolveObjectCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String q, String? auth});
 }
 
 /// @nodoc
 class __$$_ResolveObjectCopyWithImpl<$Res>
-    extends _$ResolveObjectCopyWithImpl<$Res>
+    extends _$ResolveObjectCopyWithImpl<$Res, _$_ResolveObject>
     implements _$$_ResolveObjectCopyWith<$Res> {
   __$$_ResolveObjectCopyWithImpl(
       _$_ResolveObject _value, $Res Function(_$_ResolveObject) _then)
-      : super(_value, (v) => _then(v as _$_ResolveObject));
+      : super(_value, _then);
 
-  @override
-  _$_ResolveObject get _value => super._value as _$_ResolveObject;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? q = freezed,
+    Object? q = null,
     Object? auth = freezed,
   }) {
     return _then(_$_ResolveObject(
-      q: q == freezed
+      q: null == q
           ? _value.q
           : q // ignore: cast_nullable_to_non_nullable
               as String,
-      auth: auth == freezed
+      auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -2118,19 +2142,17 @@ class _$_ResolveObject extends _ResolveObject {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ResolveObject &&
-            const DeepCollectionEquality().equals(other.q, q) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.q, q) || other.q == q) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(q),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, q, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ResolveObjectCopyWith<_$_ResolveObject> get copyWith =>
       __$$_ResolveObjectCopyWithImpl<_$_ResolveObject>(this, _$identity);
 
@@ -2181,29 +2203,34 @@ abstract class $GetUnreadRegistrationApplicationCountCopyWith<$Res> {
   factory $GetUnreadRegistrationApplicationCountCopyWith(
           GetUnreadRegistrationApplicationCount value,
           $Res Function(GetUnreadRegistrationApplicationCount) then) =
-      _$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res>;
+      _$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res,
+          GetUnreadRegistrationApplicationCount>;
+  @useResult
   $Res call({String auth});
 }
 
 /// @nodoc
-class _$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res>
+class _$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res,
+        $Val extends GetUnreadRegistrationApplicationCount>
     implements $GetUnreadRegistrationApplicationCountCopyWith<$Res> {
   _$GetUnreadRegistrationApplicationCountCopyWithImpl(this._value, this._then);
 
-  final GetUnreadRegistrationApplicationCount _value;
   // ignore: unused_field
-  final $Res Function(GetUnreadRegistrationApplicationCount) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -2215,29 +2242,27 @@ abstract class _$$_GetUnreadRegistrationApplicationCountCopyWith<$Res>
           $Res Function(_$_GetUnreadRegistrationApplicationCount) then) =
       __$$_GetUnreadRegistrationApplicationCountCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String auth});
 }
 
 /// @nodoc
 class __$$_GetUnreadRegistrationApplicationCountCopyWithImpl<$Res>
-    extends _$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res>
+    extends _$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res,
+        _$_GetUnreadRegistrationApplicationCount>
     implements _$$_GetUnreadRegistrationApplicationCountCopyWith<$Res> {
   __$$_GetUnreadRegistrationApplicationCountCopyWithImpl(
       _$_GetUnreadRegistrationApplicationCount _value,
       $Res Function(_$_GetUnreadRegistrationApplicationCount) _then)
-      : super(_value,
-            (v) => _then(v as _$_GetUnreadRegistrationApplicationCount));
+      : super(_value, _then);
 
-  @override
-  _$_GetUnreadRegistrationApplicationCount get _value =>
-      super._value as _$_GetUnreadRegistrationApplicationCount;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_$_GetUnreadRegistrationApplicationCount(
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -2270,16 +2295,16 @@ class _$_GetUnreadRegistrationApplicationCount
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_GetUnreadRegistrationApplicationCount &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_GetUnreadRegistrationApplicationCountCopyWith<
           _$_GetUnreadRegistrationApplicationCount>
       get copyWith => __$$_GetUnreadRegistrationApplicationCountCopyWithImpl<
@@ -2335,44 +2360,49 @@ abstract class $ListRegistrationApplicationsCopyWith<$Res> {
   factory $ListRegistrationApplicationsCopyWith(
           ListRegistrationApplications value,
           $Res Function(ListRegistrationApplications) then) =
-      _$ListRegistrationApplicationsCopyWithImpl<$Res>;
+      _$ListRegistrationApplicationsCopyWithImpl<$Res,
+          ListRegistrationApplications>;
+  @useResult
   $Res call({bool? unreadOnly, int? page, int? limit, String auth});
 }
 
 /// @nodoc
-class _$ListRegistrationApplicationsCopyWithImpl<$Res>
+class _$ListRegistrationApplicationsCopyWithImpl<$Res,
+        $Val extends ListRegistrationApplications>
     implements $ListRegistrationApplicationsCopyWith<$Res> {
   _$ListRegistrationApplicationsCopyWithImpl(this._value, this._then);
 
-  final ListRegistrationApplications _value;
   // ignore: unused_field
-  final $Res Function(ListRegistrationApplications) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? unreadOnly = freezed,
     Object? page = freezed,
     Object? limit = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      unreadOnly: unreadOnly == freezed
+      unreadOnly: freezed == unreadOnly
           ? _value.unreadOnly
           : unreadOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
-      page: page == freezed
+      page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as int?,
-      limit: limit == freezed
+      limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -2384,43 +2414,42 @@ abstract class _$$_ListRegistrationApplicationsCopyWith<$Res>
           $Res Function(_$_ListRegistrationApplications) then) =
       __$$_ListRegistrationApplicationsCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({bool? unreadOnly, int? page, int? limit, String auth});
 }
 
 /// @nodoc
 class __$$_ListRegistrationApplicationsCopyWithImpl<$Res>
-    extends _$ListRegistrationApplicationsCopyWithImpl<$Res>
+    extends _$ListRegistrationApplicationsCopyWithImpl<$Res,
+        _$_ListRegistrationApplications>
     implements _$$_ListRegistrationApplicationsCopyWith<$Res> {
   __$$_ListRegistrationApplicationsCopyWithImpl(
       _$_ListRegistrationApplications _value,
       $Res Function(_$_ListRegistrationApplications) _then)
-      : super(_value, (v) => _then(v as _$_ListRegistrationApplications));
+      : super(_value, _then);
 
-  @override
-  _$_ListRegistrationApplications get _value =>
-      super._value as _$_ListRegistrationApplications;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? unreadOnly = freezed,
     Object? page = freezed,
     Object? limit = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_$_ListRegistrationApplications(
-      unreadOnly: unreadOnly == freezed
+      unreadOnly: freezed == unreadOnly
           ? _value.unreadOnly
           : unreadOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
-      page: page == freezed
+      page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as int?,
-      limit: limit == freezed
+      limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -2458,24 +2487,20 @@ class _$_ListRegistrationApplications extends _ListRegistrationApplications {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ListRegistrationApplications &&
-            const DeepCollectionEquality()
-                .equals(other.unreadOnly, unreadOnly) &&
-            const DeepCollectionEquality().equals(other.page, page) &&
-            const DeepCollectionEquality().equals(other.limit, limit) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.unreadOnly, unreadOnly) ||
+                other.unreadOnly == unreadOnly) &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(unreadOnly),
-      const DeepCollectionEquality().hash(page),
-      const DeepCollectionEquality().hash(limit),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, unreadOnly, page, limit, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ListRegistrationApplicationsCopyWith<_$_ListRegistrationApplications>
       get copyWith => __$$_ListRegistrationApplicationsCopyWithImpl<
           _$_ListRegistrationApplications>(this, _$identity);
@@ -2537,44 +2562,49 @@ abstract class $ApproveRegistrationApplicationCopyWith<$Res> {
   factory $ApproveRegistrationApplicationCopyWith(
           ApproveRegistrationApplication value,
           $Res Function(ApproveRegistrationApplication) then) =
-      _$ApproveRegistrationApplicationCopyWithImpl<$Res>;
+      _$ApproveRegistrationApplicationCopyWithImpl<$Res,
+          ApproveRegistrationApplication>;
+  @useResult
   $Res call({int id, bool approve, String? denyReason, String auth});
 }
 
 /// @nodoc
-class _$ApproveRegistrationApplicationCopyWithImpl<$Res>
+class _$ApproveRegistrationApplicationCopyWithImpl<$Res,
+        $Val extends ApproveRegistrationApplication>
     implements $ApproveRegistrationApplicationCopyWith<$Res> {
   _$ApproveRegistrationApplicationCopyWithImpl(this._value, this._then);
 
-  final ApproveRegistrationApplication _value;
   // ignore: unused_field
-  final $Res Function(ApproveRegistrationApplication) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? approve = freezed,
+    Object? id = null,
+    Object? approve = null,
     Object? denyReason = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      approve: approve == freezed
+      approve: null == approve
           ? _value.approve
           : approve // ignore: cast_nullable_to_non_nullable
               as bool,
-      denyReason: denyReason == freezed
+      denyReason: freezed == denyReason
           ? _value.denyReason
           : denyReason // ignore: cast_nullable_to_non_nullable
               as String?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -2586,43 +2616,42 @@ abstract class _$$_ApproveRegistrationApplicationCopyWith<$Res>
           $Res Function(_$_ApproveRegistrationApplication) then) =
       __$$_ApproveRegistrationApplicationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int id, bool approve, String? denyReason, String auth});
 }
 
 /// @nodoc
 class __$$_ApproveRegistrationApplicationCopyWithImpl<$Res>
-    extends _$ApproveRegistrationApplicationCopyWithImpl<$Res>
+    extends _$ApproveRegistrationApplicationCopyWithImpl<$Res,
+        _$_ApproveRegistrationApplication>
     implements _$$_ApproveRegistrationApplicationCopyWith<$Res> {
   __$$_ApproveRegistrationApplicationCopyWithImpl(
       _$_ApproveRegistrationApplication _value,
       $Res Function(_$_ApproveRegistrationApplication) _then)
-      : super(_value, (v) => _then(v as _$_ApproveRegistrationApplication));
+      : super(_value, _then);
 
-  @override
-  _$_ApproveRegistrationApplication get _value =>
-      super._value as _$_ApproveRegistrationApplication;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? approve = freezed,
+    Object? id = null,
+    Object? approve = null,
     Object? denyReason = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_$_ApproveRegistrationApplication(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      approve: approve == freezed
+      approve: null == approve
           ? _value.approve
           : approve // ignore: cast_nullable_to_non_nullable
               as bool,
-      denyReason: denyReason == freezed
+      denyReason: freezed == denyReason
           ? _value.denyReason
           : denyReason // ignore: cast_nullable_to_non_nullable
               as String?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -2665,24 +2694,20 @@ class _$_ApproveRegistrationApplication
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ApproveRegistrationApplication &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.approve, approve) &&
-            const DeepCollectionEquality()
-                .equals(other.denyReason, denyReason) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.approve, approve) || other.approve == approve) &&
+            (identical(other.denyReason, denyReason) ||
+                other.denyReason == denyReason) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(approve),
-      const DeepCollectionEquality().hash(denyReason),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, id, approve, denyReason, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ApproveRegistrationApplicationCopyWith<_$_ApproveRegistrationApplication>
       get copyWith => __$$_ApproveRegistrationApplicationCopyWithImpl<
           _$_ApproveRegistrationApplication>(this, _$identity);

@@ -30,8 +30,7 @@ enum VoteType {
 enum PostListingType {
   all('All'),
   local('Local'),
-  subscribed('Subscribed'),
-  community('Community');
+  subscribed('Subscribed');
 
   final String value;
   const PostListingType(this.value);
@@ -90,12 +89,44 @@ enum SearchType {
 enum CommentListingType {
   all('All'),
   subscribed('Subscribed'),
-  community('Community');
+  local('Local');
 
   final String value;
   const CommentListingType(this.value);
 
   factory CommentListingType.fromJson(String value) =>
+      values.firstWhere((e) => e.value == value);
+
+  String toJson() => value;
+
+  String toString() => value;
+}
+
+enum SubscribedType {
+  subscribed('Subscribed'),
+  notSubscribed('NotSubscribed'),
+  pending('Pending');
+
+  final String value;
+  const SubscribedType(this.value);
+
+  factory SubscribedType.fromJson(String value) =>
+      values.firstWhere((e) => e.value == value);
+
+  String toJson() => value;
+
+  String toString() => value;
+}
+
+enum RegistrationType {
+  closed('Closed'),
+  requireApplication('RequireApplication'),
+  open('Open');
+
+  final String value;
+  const RegistrationType(this.value);
+
+  factory RegistrationType.fromJson(String value) =>
       values.firstWhere((e) => e.value == value);
 
   String toJson() => value;

@@ -34,7 +34,7 @@ class PersonMentionView with _$PersonMentionView {
     required PersonSafe recipient,
     required CommentAggregates counts,
     required bool creatorBannedFromCommunity,
-    required bool subscribed,
+    @Default(SubscribedType.notSubscribed) SubscribedType subscribed,
     required bool saved,
     required bool creatorBlocked,
     VoteType? myVote,
@@ -66,6 +66,7 @@ class SiteView with _$SiteView {
   @modelSerde
   const factory SiteView({
     required Site site,
+    required LocalSite localSite,
     required SiteAggregates counts,
     required String instanceHost,
   }) = _SiteView;
@@ -99,10 +100,11 @@ class PostView with _$PostView {
     required CommunitySafe community,
     required bool creatorBannedFromCommunity,
     required PostAggregates counts,
-    required bool subscribed,
+    @Default(SubscribedType.notSubscribed) SubscribedType subscribed,
     required bool saved,
     required bool read,
     required bool creatorBlocked,
+    required int unreadComments,
     VoteType? myVote,
     required String instanceHost,
   }) = _PostView;
@@ -144,7 +146,7 @@ class CommentView with _$CommentView {
     required CommunitySafe community,
     required CommentAggregates counts,
     required bool creatorBannedFromCommunity,
-    required bool subscribed,
+    @Default(SubscribedType.notSubscribed) SubscribedType subscribed,
     required bool saved,
     required bool creatorBlocked,
     VoteType? myVote,
@@ -412,7 +414,7 @@ class CommunityView with _$CommunityView {
   @modelSerde
   const factory CommunityView({
     required CommunitySafe community,
-    required bool subscribed,
+    @Default(SubscribedType.notSubscribed) SubscribedType subscribed,
     required bool blocked,
     required CommunityAggregates counts,
     required String instanceHost,

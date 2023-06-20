@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'post.dart';
 
@@ -31,33 +31,37 @@ mixin _$GetPost {
 /// @nodoc
 abstract class $GetPostCopyWith<$Res> {
   factory $GetPostCopyWith(GetPost value, $Res Function(GetPost) then) =
-      _$GetPostCopyWithImpl<$Res>;
+      _$GetPostCopyWithImpl<$Res, GetPost>;
+  @useResult
   $Res call({int id, String? auth});
 }
 
 /// @nodoc
-class _$GetPostCopyWithImpl<$Res> implements $GetPostCopyWith<$Res> {
+class _$GetPostCopyWithImpl<$Res, $Val extends GetPost>
+    implements $GetPostCopyWith<$Res> {
   _$GetPostCopyWithImpl(this._value, this._then);
 
-  final GetPost _value;
   // ignore: unused_field
-  final $Res Function(GetPost) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? id = null,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      auth: auth == freezed
+      auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -67,29 +71,29 @@ abstract class _$$_GetPostCopyWith<$Res> implements $GetPostCopyWith<$Res> {
           _$_GetPost value, $Res Function(_$_GetPost) then) =
       __$$_GetPostCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int id, String? auth});
 }
 
 /// @nodoc
-class __$$_GetPostCopyWithImpl<$Res> extends _$GetPostCopyWithImpl<$Res>
+class __$$_GetPostCopyWithImpl<$Res>
+    extends _$GetPostCopyWithImpl<$Res, _$_GetPost>
     implements _$$_GetPostCopyWith<$Res> {
   __$$_GetPostCopyWithImpl(_$_GetPost _value, $Res Function(_$_GetPost) _then)
-      : super(_value, (v) => _then(v as _$_GetPost));
+      : super(_value, _then);
 
-  @override
-  _$_GetPost get _value => super._value as _$_GetPost;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? id = null,
     Object? auth = freezed,
   }) {
     return _then(_$_GetPost(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      auth: auth == freezed
+      auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -121,19 +125,17 @@ class _$_GetPost extends _GetPost {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_GetPost &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, id, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_GetPostCopyWith<_$_GetPost> get copyWith =>
       __$$_GetPostCopyWithImpl<_$_GetPost>(this, _$identity);
 
@@ -186,7 +188,8 @@ mixin _$CreatePost {
 abstract class $CreatePostCopyWith<$Res> {
   factory $CreatePostCopyWith(
           CreatePost value, $Res Function(CreatePost) then) =
-      _$CreatePostCopyWithImpl<$Res>;
+      _$CreatePostCopyWithImpl<$Res, CreatePost>;
+  @useResult
   $Res call(
       {String name,
       String? url,
@@ -198,53 +201,56 @@ abstract class $CreatePostCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CreatePostCopyWithImpl<$Res> implements $CreatePostCopyWith<$Res> {
+class _$CreatePostCopyWithImpl<$Res, $Val extends CreatePost>
+    implements $CreatePostCopyWith<$Res> {
   _$CreatePostCopyWithImpl(this._value, this._then);
 
-  final CreatePost _value;
   // ignore: unused_field
-  final $Res Function(CreatePost) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
+    Object? name = null,
     Object? url = freezed,
     Object? body = freezed,
     Object? nsfw = freezed,
-    Object? communityId = freezed,
-    Object? auth = freezed,
+    Object? communityId = null,
+    Object? auth = null,
     Object? honeypot = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      body: body == freezed
+      body: freezed == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
               as String?,
-      nsfw: nsfw == freezed
+      nsfw: freezed == nsfw
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-      honeypot: honeypot == freezed
+      honeypot: freezed == honeypot
           ? _value.honeypot
           : honeypot // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -255,6 +261,7 @@ abstract class _$$_CreatePostCopyWith<$Res>
           _$_CreatePost value, $Res Function(_$_CreatePost) then) =
       __$$_CreatePostCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String name,
       String? url,
@@ -266,51 +273,50 @@ abstract class _$$_CreatePostCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CreatePostCopyWithImpl<$Res> extends _$CreatePostCopyWithImpl<$Res>
+class __$$_CreatePostCopyWithImpl<$Res>
+    extends _$CreatePostCopyWithImpl<$Res, _$_CreatePost>
     implements _$$_CreatePostCopyWith<$Res> {
   __$$_CreatePostCopyWithImpl(
       _$_CreatePost _value, $Res Function(_$_CreatePost) _then)
-      : super(_value, (v) => _then(v as _$_CreatePost));
+      : super(_value, _then);
 
-  @override
-  _$_CreatePost get _value => super._value as _$_CreatePost;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
+    Object? name = null,
     Object? url = freezed,
     Object? body = freezed,
     Object? nsfw = freezed,
-    Object? communityId = freezed,
-    Object? auth = freezed,
+    Object? communityId = null,
+    Object? auth = null,
     Object? honeypot = freezed,
   }) {
     return _then(_$_CreatePost(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      body: body == freezed
+      body: freezed == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
               as String?,
-      nsfw: nsfw == freezed
+      nsfw: freezed == nsfw
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
-      communityId: communityId == freezed
+      communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-      honeypot: honeypot == freezed
+      honeypot: freezed == honeypot
           ? _value.honeypot
           : honeypot // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -360,30 +366,25 @@ class _$_CreatePost extends _CreatePost {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CreatePost &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.url, url) &&
-            const DeepCollectionEquality().equals(other.body, body) &&
-            const DeepCollectionEquality().equals(other.nsfw, nsfw) &&
-            const DeepCollectionEquality()
-                .equals(other.communityId, communityId) &&
-            const DeepCollectionEquality().equals(other.auth, auth) &&
-            const DeepCollectionEquality().equals(other.honeypot, honeypot));
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.body, body) || other.body == body) &&
+            (identical(other.nsfw, nsfw) || other.nsfw == nsfw) &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.auth, auth) || other.auth == auth) &&
+            (identical(other.honeypot, honeypot) ||
+                other.honeypot == honeypot));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(url),
-      const DeepCollectionEquality().hash(body),
-      const DeepCollectionEquality().hash(nsfw),
-      const DeepCollectionEquality().hash(communityId),
-      const DeepCollectionEquality().hash(auth),
-      const DeepCollectionEquality().hash(honeypot));
+      runtimeType, name, url, body, nsfw, communityId, auth, honeypot);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CreatePostCopyWith<_$_CreatePost> get copyWith =>
       __$$_CreatePostCopyWithImpl<_$_CreatePost>(this, _$identity);
 
@@ -454,7 +455,8 @@ mixin _$GetPosts {
 /// @nodoc
 abstract class $GetPostsCopyWith<$Res> {
   factory $GetPostsCopyWith(GetPosts value, $Res Function(GetPosts) then) =
-      _$GetPostsCopyWithImpl<$Res>;
+      _$GetPostsCopyWithImpl<$Res, GetPosts>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'type_') PostListingType? type,
       SortType? sort,
@@ -467,13 +469,16 @@ abstract class $GetPostsCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$GetPostsCopyWithImpl<$Res> implements $GetPostsCopyWith<$Res> {
+class _$GetPostsCopyWithImpl<$Res, $Val extends GetPosts>
+    implements $GetPostsCopyWith<$Res> {
   _$GetPostsCopyWithImpl(this._value, this._then);
 
-  final GetPosts _value;
   // ignore: unused_field
-  final $Res Function(GetPosts) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? type = freezed,
@@ -486,39 +491,39 @@ class _$GetPostsCopyWithImpl<$Res> implements $GetPostsCopyWith<$Res> {
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as PostListingType?,
-      sort: sort == freezed
+      sort: freezed == sort
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
               as SortType?,
-      page: page == freezed
+      page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as int?,
-      limit: limit == freezed
+      limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      communityId: communityId == freezed
+      communityId: freezed == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int?,
-      communityName: communityName == freezed
+      communityName: freezed == communityName
           ? _value.communityName
           : communityName // ignore: cast_nullable_to_non_nullable
               as String?,
-      savedOnly: savedOnly == freezed
+      savedOnly: freezed == savedOnly
           ? _value.savedOnly
           : savedOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
-      auth: auth == freezed
+      auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -528,6 +533,7 @@ abstract class _$$_GetPostsCopyWith<$Res> implements $GetPostsCopyWith<$Res> {
           _$_GetPosts value, $Res Function(_$_GetPosts) then) =
       __$$_GetPostsCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'type_') PostListingType? type,
       SortType? sort,
@@ -540,15 +546,14 @@ abstract class _$$_GetPostsCopyWith<$Res> implements $GetPostsCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_GetPostsCopyWithImpl<$Res> extends _$GetPostsCopyWithImpl<$Res>
+class __$$_GetPostsCopyWithImpl<$Res>
+    extends _$GetPostsCopyWithImpl<$Res, _$_GetPosts>
     implements _$$_GetPostsCopyWith<$Res> {
   __$$_GetPostsCopyWithImpl(
       _$_GetPosts _value, $Res Function(_$_GetPosts) _then)
-      : super(_value, (v) => _then(v as _$_GetPosts));
+      : super(_value, _then);
 
-  @override
-  _$_GetPosts get _value => super._value as _$_GetPosts;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? type = freezed,
@@ -561,35 +566,35 @@ class __$$_GetPostsCopyWithImpl<$Res> extends _$GetPostsCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_$_GetPosts(
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as PostListingType?,
-      sort: sort == freezed
+      sort: freezed == sort
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
               as SortType?,
-      page: page == freezed
+      page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as int?,
-      limit: limit == freezed
+      limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      communityId: communityId == freezed
+      communityId: freezed == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int?,
-      communityName: communityName == freezed
+      communityName: freezed == communityName
           ? _value.communityName
           : communityName // ignore: cast_nullable_to_non_nullable
               as String?,
-      savedOnly: savedOnly == freezed
+      savedOnly: freezed == savedOnly
           ? _value.savedOnly
           : savedOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
-      auth: auth == freezed
+      auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -643,33 +648,27 @@ class _$_GetPosts extends _GetPosts {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_GetPosts &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality().equals(other.sort, sort) &&
-            const DeepCollectionEquality().equals(other.page, page) &&
-            const DeepCollectionEquality().equals(other.limit, limit) &&
-            const DeepCollectionEquality()
-                .equals(other.communityId, communityId) &&
-            const DeepCollectionEquality()
-                .equals(other.communityName, communityName) &&
-            const DeepCollectionEquality().equals(other.savedOnly, savedOnly) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.sort, sort) || other.sort == sort) &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.communityName, communityName) ||
+                other.communityName == communityName) &&
+            (identical(other.savedOnly, savedOnly) ||
+                other.savedOnly == savedOnly) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(sort),
-      const DeepCollectionEquality().hash(page),
-      const DeepCollectionEquality().hash(limit),
-      const DeepCollectionEquality().hash(communityId),
-      const DeepCollectionEquality().hash(communityName),
-      const DeepCollectionEquality().hash(savedOnly),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, type, sort, page, limit,
+      communityId, communityName, savedOnly, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_GetPostsCopyWith<_$_GetPosts> get copyWith =>
       __$$_GetPostsCopyWithImpl<_$_GetPosts>(this, _$identity);
 
@@ -738,39 +737,42 @@ mixin _$CreatePostLike {
 abstract class $CreatePostLikeCopyWith<$Res> {
   factory $CreatePostLikeCopyWith(
           CreatePostLike value, $Res Function(CreatePostLike) then) =
-      _$CreatePostLikeCopyWithImpl<$Res>;
+      _$CreatePostLikeCopyWithImpl<$Res, CreatePostLike>;
+  @useResult
   $Res call({int postId, VoteType score, String auth});
 }
 
 /// @nodoc
-class _$CreatePostLikeCopyWithImpl<$Res>
+class _$CreatePostLikeCopyWithImpl<$Res, $Val extends CreatePostLike>
     implements $CreatePostLikeCopyWith<$Res> {
   _$CreatePostLikeCopyWithImpl(this._value, this._then);
 
-  final CreatePostLike _value;
   // ignore: unused_field
-  final $Res Function(CreatePostLike) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? postId = freezed,
-    Object? score = freezed,
-    Object? auth = freezed,
+    Object? postId = null,
+    Object? score = null,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      score: score == freezed
+      score: null == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
               as VoteType,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -781,36 +783,35 @@ abstract class _$$_CreatePostLikeCopyWith<$Res>
           _$_CreatePostLike value, $Res Function(_$_CreatePostLike) then) =
       __$$_CreatePostLikeCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int postId, VoteType score, String auth});
 }
 
 /// @nodoc
 class __$$_CreatePostLikeCopyWithImpl<$Res>
-    extends _$CreatePostLikeCopyWithImpl<$Res>
+    extends _$CreatePostLikeCopyWithImpl<$Res, _$_CreatePostLike>
     implements _$$_CreatePostLikeCopyWith<$Res> {
   __$$_CreatePostLikeCopyWithImpl(
       _$_CreatePostLike _value, $Res Function(_$_CreatePostLike) _then)
-      : super(_value, (v) => _then(v as _$_CreatePostLike));
+      : super(_value, _then);
 
-  @override
-  _$_CreatePostLike get _value => super._value as _$_CreatePostLike;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? postId = freezed,
-    Object? score = freezed,
-    Object? auth = freezed,
+    Object? postId = null,
+    Object? score = null,
+    Object? auth = null,
   }) {
     return _then(_$_CreatePostLike(
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      score: score == freezed
+      score: null == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
               as VoteType,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -846,21 +847,18 @@ class _$_CreatePostLike extends _CreatePostLike {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CreatePostLike &&
-            const DeepCollectionEquality().equals(other.postId, postId) &&
-            const DeepCollectionEquality().equals(other.score, score) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.score, score) || other.score == score) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(postId),
-      const DeepCollectionEquality().hash(score),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, postId, score, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CreatePostLikeCopyWith<_$_CreatePostLike> get copyWith =>
       __$$_CreatePostLikeCopyWithImpl<_$_CreatePostLike>(this, _$identity);
 
@@ -916,7 +914,8 @@ mixin _$EditPost {
 /// @nodoc
 abstract class $EditPostCopyWith<$Res> {
   factory $EditPostCopyWith(EditPost value, $Res Function(EditPost) then) =
-      _$EditPostCopyWithImpl<$Res>;
+      _$EditPostCopyWithImpl<$Res, EditPost>;
+  @useResult
   $Res call(
       {int postId,
       String? name,
@@ -927,48 +926,51 @@ abstract class $EditPostCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$EditPostCopyWithImpl<$Res> implements $EditPostCopyWith<$Res> {
+class _$EditPostCopyWithImpl<$Res, $Val extends EditPost>
+    implements $EditPostCopyWith<$Res> {
   _$EditPostCopyWithImpl(this._value, this._then);
 
-  final EditPost _value;
   // ignore: unused_field
-  final $Res Function(EditPost) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? postId = freezed,
+    Object? postId = null,
     Object? name = freezed,
     Object? url = freezed,
     Object? body = freezed,
     Object? nsfw = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      body: body == freezed
+      body: freezed == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
               as String?,
-      nsfw: nsfw == freezed
+      nsfw: freezed == nsfw
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -978,6 +980,7 @@ abstract class _$$_EditPostCopyWith<$Res> implements $EditPostCopyWith<$Res> {
           _$_EditPost value, $Res Function(_$_EditPost) then) =
       __$$_EditPostCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int postId,
       String? name,
@@ -988,46 +991,45 @@ abstract class _$$_EditPostCopyWith<$Res> implements $EditPostCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_EditPostCopyWithImpl<$Res> extends _$EditPostCopyWithImpl<$Res>
+class __$$_EditPostCopyWithImpl<$Res>
+    extends _$EditPostCopyWithImpl<$Res, _$_EditPost>
     implements _$$_EditPostCopyWith<$Res> {
   __$$_EditPostCopyWithImpl(
       _$_EditPost _value, $Res Function(_$_EditPost) _then)
-      : super(_value, (v) => _then(v as _$_EditPost));
+      : super(_value, _then);
 
-  @override
-  _$_EditPost get _value => super._value as _$_EditPost;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? postId = freezed,
+    Object? postId = null,
     Object? name = freezed,
     Object? url = freezed,
     Object? body = freezed,
     Object? nsfw = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_$_EditPost(
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      body: body == freezed
+      body: freezed == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
               as String?,
-      nsfw: nsfw == freezed
+      nsfw: freezed == nsfw
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1074,27 +1076,22 @@ class _$_EditPost extends _EditPost {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_EditPost &&
-            const DeepCollectionEquality().equals(other.postId, postId) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.url, url) &&
-            const DeepCollectionEquality().equals(other.body, body) &&
-            const DeepCollectionEquality().equals(other.nsfw, nsfw) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.body, body) || other.body == body) &&
+            (identical(other.nsfw, nsfw) || other.nsfw == nsfw) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(postId),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(url),
-      const DeepCollectionEquality().hash(body),
-      const DeepCollectionEquality().hash(nsfw),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode =>
+      Object.hash(runtimeType, postId, name, url, body, nsfw, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_EditPostCopyWith<_$_EditPost> get copyWith =>
       __$$_EditPostCopyWithImpl<_$_EditPost>(this, _$identity);
 
@@ -1156,38 +1153,42 @@ mixin _$DeletePost {
 abstract class $DeletePostCopyWith<$Res> {
   factory $DeletePostCopyWith(
           DeletePost value, $Res Function(DeletePost) then) =
-      _$DeletePostCopyWithImpl<$Res>;
+      _$DeletePostCopyWithImpl<$Res, DeletePost>;
+  @useResult
   $Res call({int postId, bool deleted, String auth});
 }
 
 /// @nodoc
-class _$DeletePostCopyWithImpl<$Res> implements $DeletePostCopyWith<$Res> {
+class _$DeletePostCopyWithImpl<$Res, $Val extends DeletePost>
+    implements $DeletePostCopyWith<$Res> {
   _$DeletePostCopyWithImpl(this._value, this._then);
 
-  final DeletePost _value;
   // ignore: unused_field
-  final $Res Function(DeletePost) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? postId = freezed,
-    Object? deleted = freezed,
-    Object? auth = freezed,
+    Object? postId = null,
+    Object? deleted = null,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      deleted: deleted == freezed
+      deleted: null == deleted
           ? _value.deleted
           : deleted // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1198,35 +1199,35 @@ abstract class _$$_DeletePostCopyWith<$Res>
           _$_DeletePost value, $Res Function(_$_DeletePost) then) =
       __$$_DeletePostCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int postId, bool deleted, String auth});
 }
 
 /// @nodoc
-class __$$_DeletePostCopyWithImpl<$Res> extends _$DeletePostCopyWithImpl<$Res>
+class __$$_DeletePostCopyWithImpl<$Res>
+    extends _$DeletePostCopyWithImpl<$Res, _$_DeletePost>
     implements _$$_DeletePostCopyWith<$Res> {
   __$$_DeletePostCopyWithImpl(
       _$_DeletePost _value, $Res Function(_$_DeletePost) _then)
-      : super(_value, (v) => _then(v as _$_DeletePost));
+      : super(_value, _then);
 
-  @override
-  _$_DeletePost get _value => super._value as _$_DeletePost;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? postId = freezed,
-    Object? deleted = freezed,
-    Object? auth = freezed,
+    Object? postId = null,
+    Object? deleted = null,
+    Object? auth = null,
   }) {
     return _then(_$_DeletePost(
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      deleted: deleted == freezed
+      deleted: null == deleted
           ? _value.deleted
           : deleted // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1262,21 +1263,18 @@ class _$_DeletePost extends _DeletePost {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_DeletePost &&
-            const DeepCollectionEquality().equals(other.postId, postId) &&
-            const DeepCollectionEquality().equals(other.deleted, deleted) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.deleted, deleted) || other.deleted == deleted) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(postId),
-      const DeepCollectionEquality().hash(deleted),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, postId, deleted, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_DeletePostCopyWith<_$_DeletePost> get copyWith =>
       __$$_DeletePostCopyWithImpl<_$_DeletePost>(this, _$identity);
 
@@ -1331,43 +1329,47 @@ mixin _$RemovePost {
 abstract class $RemovePostCopyWith<$Res> {
   factory $RemovePostCopyWith(
           RemovePost value, $Res Function(RemovePost) then) =
-      _$RemovePostCopyWithImpl<$Res>;
+      _$RemovePostCopyWithImpl<$Res, RemovePost>;
+  @useResult
   $Res call({int postId, bool removed, String? reason, String auth});
 }
 
 /// @nodoc
-class _$RemovePostCopyWithImpl<$Res> implements $RemovePostCopyWith<$Res> {
+class _$RemovePostCopyWithImpl<$Res, $Val extends RemovePost>
+    implements $RemovePostCopyWith<$Res> {
   _$RemovePostCopyWithImpl(this._value, this._then);
 
-  final RemovePost _value;
   // ignore: unused_field
-  final $Res Function(RemovePost) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? postId = freezed,
-    Object? removed = freezed,
+    Object? postId = null,
+    Object? removed = null,
     Object? reason = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      removed: removed == freezed
+      removed: null == removed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
               as bool,
-      reason: reason == freezed
+      reason: freezed == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1378,40 +1380,40 @@ abstract class _$$_RemovePostCopyWith<$Res>
           _$_RemovePost value, $Res Function(_$_RemovePost) then) =
       __$$_RemovePostCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int postId, bool removed, String? reason, String auth});
 }
 
 /// @nodoc
-class __$$_RemovePostCopyWithImpl<$Res> extends _$RemovePostCopyWithImpl<$Res>
+class __$$_RemovePostCopyWithImpl<$Res>
+    extends _$RemovePostCopyWithImpl<$Res, _$_RemovePost>
     implements _$$_RemovePostCopyWith<$Res> {
   __$$_RemovePostCopyWithImpl(
       _$_RemovePost _value, $Res Function(_$_RemovePost) _then)
-      : super(_value, (v) => _then(v as _$_RemovePost));
+      : super(_value, _then);
 
-  @override
-  _$_RemovePost get _value => super._value as _$_RemovePost;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? postId = freezed,
-    Object? removed = freezed,
+    Object? postId = null,
+    Object? removed = null,
     Object? reason = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_$_RemovePost(
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      removed: removed == freezed
+      removed: null == removed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
               as bool,
-      reason: reason == freezed
+      reason: freezed == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1452,23 +1454,19 @@ class _$_RemovePost extends _RemovePost {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_RemovePost &&
-            const DeepCollectionEquality().equals(other.postId, postId) &&
-            const DeepCollectionEquality().equals(other.removed, removed) &&
-            const DeepCollectionEquality().equals(other.reason, reason) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.removed, removed) || other.removed == removed) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(postId),
-      const DeepCollectionEquality().hash(removed),
-      const DeepCollectionEquality().hash(reason),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, postId, removed, reason, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_RemovePostCopyWith<_$_RemovePost> get copyWith =>
       __$$_RemovePostCopyWithImpl<_$_RemovePost>(this, _$identity);
 
@@ -1524,38 +1522,42 @@ mixin _$LockPost {
 /// @nodoc
 abstract class $LockPostCopyWith<$Res> {
   factory $LockPostCopyWith(LockPost value, $Res Function(LockPost) then) =
-      _$LockPostCopyWithImpl<$Res>;
+      _$LockPostCopyWithImpl<$Res, LockPost>;
+  @useResult
   $Res call({int postId, bool locked, String auth});
 }
 
 /// @nodoc
-class _$LockPostCopyWithImpl<$Res> implements $LockPostCopyWith<$Res> {
+class _$LockPostCopyWithImpl<$Res, $Val extends LockPost>
+    implements $LockPostCopyWith<$Res> {
   _$LockPostCopyWithImpl(this._value, this._then);
 
-  final LockPost _value;
   // ignore: unused_field
-  final $Res Function(LockPost) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? postId = freezed,
-    Object? locked = freezed,
-    Object? auth = freezed,
+    Object? postId = null,
+    Object? locked = null,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      locked: locked == freezed
+      locked: null == locked
           ? _value.locked
           : locked // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1565,35 +1567,35 @@ abstract class _$$_LockPostCopyWith<$Res> implements $LockPostCopyWith<$Res> {
           _$_LockPost value, $Res Function(_$_LockPost) then) =
       __$$_LockPostCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int postId, bool locked, String auth});
 }
 
 /// @nodoc
-class __$$_LockPostCopyWithImpl<$Res> extends _$LockPostCopyWithImpl<$Res>
+class __$$_LockPostCopyWithImpl<$Res>
+    extends _$LockPostCopyWithImpl<$Res, _$_LockPost>
     implements _$$_LockPostCopyWith<$Res> {
   __$$_LockPostCopyWithImpl(
       _$_LockPost _value, $Res Function(_$_LockPost) _then)
-      : super(_value, (v) => _then(v as _$_LockPost));
+      : super(_value, _then);
 
-  @override
-  _$_LockPost get _value => super._value as _$_LockPost;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? postId = freezed,
-    Object? locked = freezed,
-    Object? auth = freezed,
+    Object? postId = null,
+    Object? locked = null,
+    Object? auth = null,
   }) {
     return _then(_$_LockPost(
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      locked: locked == freezed
+      locked: null == locked
           ? _value.locked
           : locked // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1629,21 +1631,18 @@ class _$_LockPost extends _LockPost {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_LockPost &&
-            const DeepCollectionEquality().equals(other.postId, postId) &&
-            const DeepCollectionEquality().equals(other.locked, locked) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.locked, locked) || other.locked == locked) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(postId),
-      const DeepCollectionEquality().hash(locked),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, postId, locked, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_LockPostCopyWith<_$_LockPost> get copyWith =>
       __$$_LockPostCopyWithImpl<_$_LockPost>(this, _$identity);
 
@@ -1696,38 +1695,42 @@ mixin _$StickyPost {
 abstract class $StickyPostCopyWith<$Res> {
   factory $StickyPostCopyWith(
           StickyPost value, $Res Function(StickyPost) then) =
-      _$StickyPostCopyWithImpl<$Res>;
+      _$StickyPostCopyWithImpl<$Res, StickyPost>;
+  @useResult
   $Res call({int postId, bool stickied, String auth});
 }
 
 /// @nodoc
-class _$StickyPostCopyWithImpl<$Res> implements $StickyPostCopyWith<$Res> {
+class _$StickyPostCopyWithImpl<$Res, $Val extends StickyPost>
+    implements $StickyPostCopyWith<$Res> {
   _$StickyPostCopyWithImpl(this._value, this._then);
 
-  final StickyPost _value;
   // ignore: unused_field
-  final $Res Function(StickyPost) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? postId = freezed,
-    Object? stickied = freezed,
-    Object? auth = freezed,
+    Object? postId = null,
+    Object? stickied = null,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      stickied: stickied == freezed
+      stickied: null == stickied
           ? _value.stickied
           : stickied // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1738,35 +1741,35 @@ abstract class _$$_StickyPostCopyWith<$Res>
           _$_StickyPost value, $Res Function(_$_StickyPost) then) =
       __$$_StickyPostCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int postId, bool stickied, String auth});
 }
 
 /// @nodoc
-class __$$_StickyPostCopyWithImpl<$Res> extends _$StickyPostCopyWithImpl<$Res>
+class __$$_StickyPostCopyWithImpl<$Res>
+    extends _$StickyPostCopyWithImpl<$Res, _$_StickyPost>
     implements _$$_StickyPostCopyWith<$Res> {
   __$$_StickyPostCopyWithImpl(
       _$_StickyPost _value, $Res Function(_$_StickyPost) _then)
-      : super(_value, (v) => _then(v as _$_StickyPost));
+      : super(_value, _then);
 
-  @override
-  _$_StickyPost get _value => super._value as _$_StickyPost;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? postId = freezed,
-    Object? stickied = freezed,
-    Object? auth = freezed,
+    Object? postId = null,
+    Object? stickied = null,
+    Object? auth = null,
   }) {
     return _then(_$_StickyPost(
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      stickied: stickied == freezed
+      stickied: null == stickied
           ? _value.stickied
           : stickied // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1802,21 +1805,19 @@ class _$_StickyPost extends _StickyPost {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_StickyPost &&
-            const DeepCollectionEquality().equals(other.postId, postId) &&
-            const DeepCollectionEquality().equals(other.stickied, stickied) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.stickied, stickied) ||
+                other.stickied == stickied) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(postId),
-      const DeepCollectionEquality().hash(stickied),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, postId, stickied, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_StickyPostCopyWith<_$_StickyPost> get copyWith =>
       __$$_StickyPostCopyWithImpl<_$_StickyPost>(this, _$identity);
 
@@ -1869,38 +1870,42 @@ mixin _$SavePost {
 /// @nodoc
 abstract class $SavePostCopyWith<$Res> {
   factory $SavePostCopyWith(SavePost value, $Res Function(SavePost) then) =
-      _$SavePostCopyWithImpl<$Res>;
+      _$SavePostCopyWithImpl<$Res, SavePost>;
+  @useResult
   $Res call({int postId, bool save, String auth});
 }
 
 /// @nodoc
-class _$SavePostCopyWithImpl<$Res> implements $SavePostCopyWith<$Res> {
+class _$SavePostCopyWithImpl<$Res, $Val extends SavePost>
+    implements $SavePostCopyWith<$Res> {
   _$SavePostCopyWithImpl(this._value, this._then);
 
-  final SavePost _value;
   // ignore: unused_field
-  final $Res Function(SavePost) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? postId = freezed,
-    Object? save = freezed,
-    Object? auth = freezed,
+    Object? postId = null,
+    Object? save = null,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      save: save == freezed
+      save: null == save
           ? _value.save
           : save // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1910,35 +1915,35 @@ abstract class _$$_SavePostCopyWith<$Res> implements $SavePostCopyWith<$Res> {
           _$_SavePost value, $Res Function(_$_SavePost) then) =
       __$$_SavePostCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int postId, bool save, String auth});
 }
 
 /// @nodoc
-class __$$_SavePostCopyWithImpl<$Res> extends _$SavePostCopyWithImpl<$Res>
+class __$$_SavePostCopyWithImpl<$Res>
+    extends _$SavePostCopyWithImpl<$Res, _$_SavePost>
     implements _$$_SavePostCopyWith<$Res> {
   __$$_SavePostCopyWithImpl(
       _$_SavePost _value, $Res Function(_$_SavePost) _then)
-      : super(_value, (v) => _then(v as _$_SavePost));
+      : super(_value, _then);
 
-  @override
-  _$_SavePost get _value => super._value as _$_SavePost;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? postId = freezed,
-    Object? save = freezed,
-    Object? auth = freezed,
+    Object? postId = null,
+    Object? save = null,
+    Object? auth = null,
   }) {
     return _then(_$_SavePost(
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      save: save == freezed
+      save: null == save
           ? _value.save
           : save // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1974,21 +1979,18 @@ class _$_SavePost extends _SavePost {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SavePost &&
-            const DeepCollectionEquality().equals(other.postId, postId) &&
-            const DeepCollectionEquality().equals(other.save, save) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.save, save) || other.save == save) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(postId),
-      const DeepCollectionEquality().hash(save),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, postId, save, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SavePostCopyWith<_$_SavePost> get copyWith =>
       __$$_SavePostCopyWithImpl<_$_SavePost>(this, _$identity);
 
@@ -2039,29 +2041,32 @@ mixin _$GetSiteMetadata {
 abstract class $GetSiteMetadataCopyWith<$Res> {
   factory $GetSiteMetadataCopyWith(
           GetSiteMetadata value, $Res Function(GetSiteMetadata) then) =
-      _$GetSiteMetadataCopyWithImpl<$Res>;
+      _$GetSiteMetadataCopyWithImpl<$Res, GetSiteMetadata>;
+  @useResult
   $Res call({String url});
 }
 
 /// @nodoc
-class _$GetSiteMetadataCopyWithImpl<$Res>
+class _$GetSiteMetadataCopyWithImpl<$Res, $Val extends GetSiteMetadata>
     implements $GetSiteMetadataCopyWith<$Res> {
   _$GetSiteMetadataCopyWithImpl(this._value, this._then);
 
-  final GetSiteMetadata _value;
   // ignore: unused_field
-  final $Res Function(GetSiteMetadata) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? url = freezed,
+    Object? url = null,
   }) {
     return _then(_value.copyWith(
-      url: url == freezed
+      url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -2072,26 +2077,25 @@ abstract class _$$_GetSiteMetadataCopyWith<$Res>
           _$_GetSiteMetadata value, $Res Function(_$_GetSiteMetadata) then) =
       __$$_GetSiteMetadataCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String url});
 }
 
 /// @nodoc
 class __$$_GetSiteMetadataCopyWithImpl<$Res>
-    extends _$GetSiteMetadataCopyWithImpl<$Res>
+    extends _$GetSiteMetadataCopyWithImpl<$Res, _$_GetSiteMetadata>
     implements _$$_GetSiteMetadataCopyWith<$Res> {
   __$$_GetSiteMetadataCopyWithImpl(
       _$_GetSiteMetadata _value, $Res Function(_$_GetSiteMetadata) _then)
-      : super(_value, (v) => _then(v as _$_GetSiteMetadata));
+      : super(_value, _then);
 
-  @override
-  _$_GetSiteMetadata get _value => super._value as _$_GetSiteMetadata;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? url = freezed,
+    Object? url = null,
   }) {
     return _then(_$_GetSiteMetadata(
-      url: url == freezed
+      url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String,
@@ -2121,16 +2125,16 @@ class _$_GetSiteMetadata extends _GetSiteMetadata {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_GetSiteMetadata &&
-            const DeepCollectionEquality().equals(other.url, url));
+            (identical(other.url, url) || other.url == url));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(url));
+  int get hashCode => Object.hash(runtimeType, url);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_GetSiteMetadataCopyWith<_$_GetSiteMetadata> get copyWith =>
       __$$_GetSiteMetadataCopyWithImpl<_$_GetSiteMetadata>(this, _$identity);
 
@@ -2178,39 +2182,42 @@ mixin _$CreatePostReport {
 abstract class $CreatePostReportCopyWith<$Res> {
   factory $CreatePostReportCopyWith(
           CreatePostReport value, $Res Function(CreatePostReport) then) =
-      _$CreatePostReportCopyWithImpl<$Res>;
+      _$CreatePostReportCopyWithImpl<$Res, CreatePostReport>;
+  @useResult
   $Res call({int postId, String reason, String auth});
 }
 
 /// @nodoc
-class _$CreatePostReportCopyWithImpl<$Res>
+class _$CreatePostReportCopyWithImpl<$Res, $Val extends CreatePostReport>
     implements $CreatePostReportCopyWith<$Res> {
   _$CreatePostReportCopyWithImpl(this._value, this._then);
 
-  final CreatePostReport _value;
   // ignore: unused_field
-  final $Res Function(CreatePostReport) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? postId = freezed,
-    Object? reason = freezed,
-    Object? auth = freezed,
+    Object? postId = null,
+    Object? reason = null,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      reason: reason == freezed
+      reason: null == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -2221,36 +2228,35 @@ abstract class _$$_CreatePostReportCopyWith<$Res>
           _$_CreatePostReport value, $Res Function(_$_CreatePostReport) then) =
       __$$_CreatePostReportCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int postId, String reason, String auth});
 }
 
 /// @nodoc
 class __$$_CreatePostReportCopyWithImpl<$Res>
-    extends _$CreatePostReportCopyWithImpl<$Res>
+    extends _$CreatePostReportCopyWithImpl<$Res, _$_CreatePostReport>
     implements _$$_CreatePostReportCopyWith<$Res> {
   __$$_CreatePostReportCopyWithImpl(
       _$_CreatePostReport _value, $Res Function(_$_CreatePostReport) _then)
-      : super(_value, (v) => _then(v as _$_CreatePostReport));
+      : super(_value, _then);
 
-  @override
-  _$_CreatePostReport get _value => super._value as _$_CreatePostReport;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? postId = freezed,
-    Object? reason = freezed,
-    Object? auth = freezed,
+    Object? postId = null,
+    Object? reason = null,
+    Object? auth = null,
   }) {
     return _then(_$_CreatePostReport(
-      postId: postId == freezed
+      postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      reason: reason == freezed
+      reason: null == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -2286,21 +2292,18 @@ class _$_CreatePostReport extends _CreatePostReport {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CreatePostReport &&
-            const DeepCollectionEquality().equals(other.postId, postId) &&
-            const DeepCollectionEquality().equals(other.reason, reason) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(postId),
-      const DeepCollectionEquality().hash(reason),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, postId, reason, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CreatePostReportCopyWith<_$_CreatePostReport> get copyWith =>
       __$$_CreatePostReportCopyWithImpl<_$_CreatePostReport>(this, _$identity);
 
@@ -2354,39 +2357,42 @@ mixin _$ResolvePostReport {
 abstract class $ResolvePostReportCopyWith<$Res> {
   factory $ResolvePostReportCopyWith(
           ResolvePostReport value, $Res Function(ResolvePostReport) then) =
-      _$ResolvePostReportCopyWithImpl<$Res>;
+      _$ResolvePostReportCopyWithImpl<$Res, ResolvePostReport>;
+  @useResult
   $Res call({int reportId, bool resolved, String auth});
 }
 
 /// @nodoc
-class _$ResolvePostReportCopyWithImpl<$Res>
+class _$ResolvePostReportCopyWithImpl<$Res, $Val extends ResolvePostReport>
     implements $ResolvePostReportCopyWith<$Res> {
   _$ResolvePostReportCopyWithImpl(this._value, this._then);
 
-  final ResolvePostReport _value;
   // ignore: unused_field
-  final $Res Function(ResolvePostReport) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? reportId = freezed,
-    Object? resolved = freezed,
-    Object? auth = freezed,
+    Object? reportId = null,
+    Object? resolved = null,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      reportId: reportId == freezed
+      reportId: null == reportId
           ? _value.reportId
           : reportId // ignore: cast_nullable_to_non_nullable
               as int,
-      resolved: resolved == freezed
+      resolved: null == resolved
           ? _value.resolved
           : resolved // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -2397,36 +2403,35 @@ abstract class _$$_ResolvePostReportCopyWith<$Res>
           $Res Function(_$_ResolvePostReport) then) =
       __$$_ResolvePostReportCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int reportId, bool resolved, String auth});
 }
 
 /// @nodoc
 class __$$_ResolvePostReportCopyWithImpl<$Res>
-    extends _$ResolvePostReportCopyWithImpl<$Res>
+    extends _$ResolvePostReportCopyWithImpl<$Res, _$_ResolvePostReport>
     implements _$$_ResolvePostReportCopyWith<$Res> {
   __$$_ResolvePostReportCopyWithImpl(
       _$_ResolvePostReport _value, $Res Function(_$_ResolvePostReport) _then)
-      : super(_value, (v) => _then(v as _$_ResolvePostReport));
+      : super(_value, _then);
 
-  @override
-  _$_ResolvePostReport get _value => super._value as _$_ResolvePostReport;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? reportId = freezed,
-    Object? resolved = freezed,
-    Object? auth = freezed,
+    Object? reportId = null,
+    Object? resolved = null,
+    Object? auth = null,
   }) {
     return _then(_$_ResolvePostReport(
-      reportId: reportId == freezed
+      reportId: null == reportId
           ? _value.reportId
           : reportId // ignore: cast_nullable_to_non_nullable
               as int,
-      resolved: resolved == freezed
+      resolved: null == resolved
           ? _value.resolved
           : resolved // ignore: cast_nullable_to_non_nullable
               as bool,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -2462,21 +2467,20 @@ class _$_ResolvePostReport extends _ResolvePostReport {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ResolvePostReport &&
-            const DeepCollectionEquality().equals(other.reportId, reportId) &&
-            const DeepCollectionEquality().equals(other.resolved, resolved) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.reportId, reportId) ||
+                other.reportId == reportId) &&
+            (identical(other.resolved, resolved) ||
+                other.resolved == resolved) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(reportId),
-      const DeepCollectionEquality().hash(resolved),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode => Object.hash(runtimeType, reportId, resolved, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ResolvePostReportCopyWith<_$_ResolvePostReport> get copyWith =>
       __$$_ResolvePostReportCopyWithImpl<_$_ResolvePostReport>(
           this, _$identity);
@@ -2533,7 +2537,8 @@ mixin _$ListPostReports {
 abstract class $ListPostReportsCopyWith<$Res> {
   factory $ListPostReportsCopyWith(
           ListPostReports value, $Res Function(ListPostReports) then) =
-      _$ListPostReportsCopyWithImpl<$Res>;
+      _$ListPostReportsCopyWithImpl<$Res, ListPostReports>;
+  @useResult
   $Res call(
       {int? page,
       int? limit,
@@ -2543,44 +2548,46 @@ abstract class $ListPostReportsCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ListPostReportsCopyWithImpl<$Res>
+class _$ListPostReportsCopyWithImpl<$Res, $Val extends ListPostReports>
     implements $ListPostReportsCopyWith<$Res> {
   _$ListPostReportsCopyWithImpl(this._value, this._then);
 
-  final ListPostReports _value;
   // ignore: unused_field
-  final $Res Function(ListPostReports) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? page = freezed,
     Object? limit = freezed,
     Object? communityId = freezed,
     Object? unresolvedOnly = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_value.copyWith(
-      page: page == freezed
+      page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as int?,
-      limit: limit == freezed
+      limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      communityId: communityId == freezed
+      communityId: freezed == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int?,
-      unresolvedOnly: unresolvedOnly == freezed
+      unresolvedOnly: freezed == unresolvedOnly
           ? _value.unresolvedOnly
           : unresolvedOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -2591,6 +2598,7 @@ abstract class _$$_ListPostReportsCopyWith<$Res>
           _$_ListPostReports value, $Res Function(_$_ListPostReports) then) =
       __$$_ListPostReportsCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int? page,
       int? limit,
@@ -2601,41 +2609,39 @@ abstract class _$$_ListPostReportsCopyWith<$Res>
 
 /// @nodoc
 class __$$_ListPostReportsCopyWithImpl<$Res>
-    extends _$ListPostReportsCopyWithImpl<$Res>
+    extends _$ListPostReportsCopyWithImpl<$Res, _$_ListPostReports>
     implements _$$_ListPostReportsCopyWith<$Res> {
   __$$_ListPostReportsCopyWithImpl(
       _$_ListPostReports _value, $Res Function(_$_ListPostReports) _then)
-      : super(_value, (v) => _then(v as _$_ListPostReports));
+      : super(_value, _then);
 
-  @override
-  _$_ListPostReports get _value => super._value as _$_ListPostReports;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? page = freezed,
     Object? limit = freezed,
     Object? communityId = freezed,
     Object? unresolvedOnly = freezed,
-    Object? auth = freezed,
+    Object? auth = null,
   }) {
     return _then(_$_ListPostReports(
-      page: page == freezed
+      page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as int?,
-      limit: limit == freezed
+      limit: freezed == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      communityId: communityId == freezed
+      communityId: freezed == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int?,
-      unresolvedOnly: unresolvedOnly == freezed
+      unresolvedOnly: freezed == unresolvedOnly
           ? _value.unresolvedOnly
           : unresolvedOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
-      auth: auth == freezed
+      auth: null == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
@@ -2679,27 +2685,23 @@ class _$_ListPostReports extends _ListPostReports {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ListPostReports &&
-            const DeepCollectionEquality().equals(other.page, page) &&
-            const DeepCollectionEquality().equals(other.limit, limit) &&
-            const DeepCollectionEquality()
-                .equals(other.communityId, communityId) &&
-            const DeepCollectionEquality()
-                .equals(other.unresolvedOnly, unresolvedOnly) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.unresolvedOnly, unresolvedOnly) ||
+                other.unresolvedOnly == unresolvedOnly) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(page),
-      const DeepCollectionEquality().hash(limit),
-      const DeepCollectionEquality().hash(communityId),
-      const DeepCollectionEquality().hash(unresolvedOnly),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode =>
+      Object.hash(runtimeType, page, limit, communityId, unresolvedOnly, auth);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ListPostReportsCopyWith<_$_ListPostReports> get copyWith =>
       __$$_ListPostReportsCopyWithImpl<_$_ListPostReports>(this, _$identity);
 
