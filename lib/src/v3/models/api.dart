@@ -13,6 +13,7 @@ class FullCommunityView with _$FullCommunityView {
     required CommunityView communityView,
     required Site? site,
     required List<CommunityModeratorView> moderators,
+    int? online,
     required String instanceHost,
   }) = _FullCommunityView;
 
@@ -29,6 +30,7 @@ class FullPostView with _$FullPostView {
     required PostView postView,
     required CommunityView communityView,
     required List<CommunityModeratorView> moderators,
+    int? online,
     required String instanceHost,
   }) = _FullPostView;
 
@@ -98,6 +100,7 @@ class FullSiteView with _$FullSiteView {
   const factory FullSiteView({
     SiteView? siteView,
     required List<PersonViewSafe> admins,
+    int? online,
     required String version,
     MyUserInfo? myUser,
     FederatedInstances? federatedInstances,
