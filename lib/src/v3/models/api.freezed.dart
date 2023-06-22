@@ -24,7 +24,6 @@ mixin _$FullCommunityView {
   Site? get site => throw _privateConstructorUsedError;
   List<CommunityModeratorView> get moderators =>
       throw _privateConstructorUsedError;
-  int get online => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -43,7 +42,6 @@ abstract class $FullCommunityViewCopyWith<$Res> {
       {CommunityView communityView,
       Site? site,
       List<CommunityModeratorView> moderators,
-      int online,
       String instanceHost});
 
   $CommunityViewCopyWith<$Res> get communityView;
@@ -66,7 +64,6 @@ class _$FullCommunityViewCopyWithImpl<$Res, $Val extends FullCommunityView>
     Object? communityView = null,
     Object? site = freezed,
     Object? moderators = null,
-    Object? online = null,
     Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
@@ -82,10 +79,6 @@ class _$FullCommunityViewCopyWithImpl<$Res, $Val extends FullCommunityView>
           ? _value.moderators
           : moderators // ignore: cast_nullable_to_non_nullable
               as List<CommunityModeratorView>,
-      online: null == online
-          ? _value.online
-          : online // ignore: cast_nullable_to_non_nullable
-              as int,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -126,7 +119,6 @@ abstract class _$$_FullCommunityViewCopyWith<$Res>
       {CommunityView communityView,
       Site? site,
       List<CommunityModeratorView> moderators,
-      int online,
       String instanceHost});
 
   @override
@@ -149,7 +141,6 @@ class __$$_FullCommunityViewCopyWithImpl<$Res>
     Object? communityView = null,
     Object? site = freezed,
     Object? moderators = null,
-    Object? online = null,
     Object? instanceHost = null,
   }) {
     return _then(_$_FullCommunityView(
@@ -165,10 +156,6 @@ class __$$_FullCommunityViewCopyWithImpl<$Res>
           ? _value._moderators
           : moderators // ignore: cast_nullable_to_non_nullable
               as List<CommunityModeratorView>,
-      online: null == online
-          ? _value.online
-          : online // ignore: cast_nullable_to_non_nullable
-              as int,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -185,7 +172,6 @@ class _$_FullCommunityView extends _FullCommunityView {
       {required this.communityView,
       required this.site,
       required final List<CommunityModeratorView> moderators,
-      required this.online,
       required this.instanceHost})
       : _moderators = moderators,
         super._();
@@ -206,13 +192,11 @@ class _$_FullCommunityView extends _FullCommunityView {
   }
 
   @override
-  final int online;
-  @override
   final String instanceHost;
 
   @override
   String toString() {
-    return 'FullCommunityView(communityView: $communityView, site: $site, moderators: $moderators, online: $online, instanceHost: $instanceHost)';
+    return 'FullCommunityView(communityView: $communityView, site: $site, moderators: $moderators, instanceHost: $instanceHost)';
   }
 
   @override
@@ -225,7 +209,6 @@ class _$_FullCommunityView extends _FullCommunityView {
             (identical(other.site, site) || other.site == site) &&
             const DeepCollectionEquality()
                 .equals(other._moderators, _moderators) &&
-            (identical(other.online, online) || other.online == online) &&
             (identical(other.instanceHost, instanceHost) ||
                 other.instanceHost == instanceHost));
   }
@@ -233,7 +216,7 @@ class _$_FullCommunityView extends _FullCommunityView {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, communityView, site,
-      const DeepCollectionEquality().hash(_moderators), online, instanceHost);
+      const DeepCollectionEquality().hash(_moderators), instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -255,7 +238,6 @@ abstract class _FullCommunityView extends FullCommunityView {
       {required final CommunityView communityView,
       required final Site? site,
       required final List<CommunityModeratorView> moderators,
-      required final int online,
       required final String instanceHost}) = _$_FullCommunityView;
   const _FullCommunityView._() : super._();
 
@@ -268,8 +250,6 @@ abstract class _FullCommunityView extends FullCommunityView {
   Site? get site;
   @override
   List<CommunityModeratorView> get moderators;
-  @override
-  int get online;
   @override
   String get instanceHost;
   @override
@@ -288,7 +268,6 @@ mixin _$FullPostView {
   CommunityView get communityView => throw _privateConstructorUsedError;
   List<CommunityModeratorView> get moderators =>
       throw _privateConstructorUsedError;
-  int get online => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -307,7 +286,6 @@ abstract class $FullPostViewCopyWith<$Res> {
       {PostView postView,
       CommunityView communityView,
       List<CommunityModeratorView> moderators,
-      int online,
       String instanceHost});
 
   $PostViewCopyWith<$Res> get postView;
@@ -330,7 +308,6 @@ class _$FullPostViewCopyWithImpl<$Res, $Val extends FullPostView>
     Object? postView = null,
     Object? communityView = null,
     Object? moderators = null,
-    Object? online = null,
     Object? instanceHost = null,
   }) {
     return _then(_value.copyWith(
@@ -346,10 +323,6 @@ class _$FullPostViewCopyWithImpl<$Res, $Val extends FullPostView>
           ? _value.moderators
           : moderators // ignore: cast_nullable_to_non_nullable
               as List<CommunityModeratorView>,
-      online: null == online
-          ? _value.online
-          : online // ignore: cast_nullable_to_non_nullable
-              as int,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -386,7 +359,6 @@ abstract class _$$_FullPostViewCopyWith<$Res>
       {PostView postView,
       CommunityView communityView,
       List<CommunityModeratorView> moderators,
-      int online,
       String instanceHost});
 
   @override
@@ -409,7 +381,6 @@ class __$$_FullPostViewCopyWithImpl<$Res>
     Object? postView = null,
     Object? communityView = null,
     Object? moderators = null,
-    Object? online = null,
     Object? instanceHost = null,
   }) {
     return _then(_$_FullPostView(
@@ -425,10 +396,6 @@ class __$$_FullPostViewCopyWithImpl<$Res>
           ? _value._moderators
           : moderators // ignore: cast_nullable_to_non_nullable
               as List<CommunityModeratorView>,
-      online: null == online
-          ? _value.online
-          : online // ignore: cast_nullable_to_non_nullable
-              as int,
       instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -445,7 +412,6 @@ class _$_FullPostView extends _FullPostView {
       {required this.postView,
       required this.communityView,
       required final List<CommunityModeratorView> moderators,
-      required this.online,
       required this.instanceHost})
       : _moderators = moderators,
         super._();
@@ -466,13 +432,11 @@ class _$_FullPostView extends _FullPostView {
   }
 
   @override
-  final int online;
-  @override
   final String instanceHost;
 
   @override
   String toString() {
-    return 'FullPostView(postView: $postView, communityView: $communityView, moderators: $moderators, online: $online, instanceHost: $instanceHost)';
+    return 'FullPostView(postView: $postView, communityView: $communityView, moderators: $moderators, instanceHost: $instanceHost)';
   }
 
   @override
@@ -486,7 +450,6 @@ class _$_FullPostView extends _FullPostView {
                 other.communityView == communityView) &&
             const DeepCollectionEquality()
                 .equals(other._moderators, _moderators) &&
-            (identical(other.online, online) || other.online == online) &&
             (identical(other.instanceHost, instanceHost) ||
                 other.instanceHost == instanceHost));
   }
@@ -494,7 +457,7 @@ class _$_FullPostView extends _FullPostView {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, postView, communityView,
-      const DeepCollectionEquality().hash(_moderators), online, instanceHost);
+      const DeepCollectionEquality().hash(_moderators), instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -515,7 +478,6 @@ abstract class _FullPostView extends FullPostView {
       {required final PostView postView,
       required final CommunityView communityView,
       required final List<CommunityModeratorView> moderators,
-      required final int online,
       required final String instanceHost}) = _$_FullPostView;
   const _FullPostView._() : super._();
 
@@ -528,8 +490,6 @@ abstract class _FullPostView extends FullPostView {
   CommunityView get communityView;
   @override
   List<CommunityModeratorView> get moderators;
-  @override
-  int get online;
   @override
   String get instanceHost;
   @override
@@ -1495,7 +1455,6 @@ FullSiteView _$FullSiteViewFromJson(Map<String, dynamic> json) {
 mixin _$FullSiteView {
   SiteView? get siteView => throw _privateConstructorUsedError;
   List<PersonViewSafe> get admins => throw _privateConstructorUsedError;
-  int get online => throw _privateConstructorUsedError;
   String get version => throw _privateConstructorUsedError;
   MyUserInfo? get myUser => throw _privateConstructorUsedError;
   FederatedInstances? get federatedInstances =>
@@ -1517,7 +1476,6 @@ abstract class $FullSiteViewCopyWith<$Res> {
   $Res call(
       {SiteView? siteView,
       List<PersonViewSafe> admins,
-      int online,
       String version,
       MyUserInfo? myUser,
       FederatedInstances? federatedInstances,
@@ -1543,7 +1501,6 @@ class _$FullSiteViewCopyWithImpl<$Res, $Val extends FullSiteView>
   $Res call({
     Object? siteView = freezed,
     Object? admins = null,
-    Object? online = null,
     Object? version = null,
     Object? myUser = freezed,
     Object? federatedInstances = freezed,
@@ -1558,10 +1515,6 @@ class _$FullSiteViewCopyWithImpl<$Res, $Val extends FullSiteView>
           ? _value.admins
           : admins // ignore: cast_nullable_to_non_nullable
               as List<PersonViewSafe>,
-      online: null == online
-          ? _value.online
-          : online // ignore: cast_nullable_to_non_nullable
-              as int,
       version: null == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
@@ -1630,7 +1583,6 @@ abstract class _$$_FullSiteViewCopyWith<$Res>
   $Res call(
       {SiteView? siteView,
       List<PersonViewSafe> admins,
-      int online,
       String version,
       MyUserInfo? myUser,
       FederatedInstances? federatedInstances,
@@ -1657,7 +1609,6 @@ class __$$_FullSiteViewCopyWithImpl<$Res>
   $Res call({
     Object? siteView = freezed,
     Object? admins = null,
-    Object? online = null,
     Object? version = null,
     Object? myUser = freezed,
     Object? federatedInstances = freezed,
@@ -1672,10 +1623,6 @@ class __$$_FullSiteViewCopyWithImpl<$Res>
           ? _value._admins
           : admins // ignore: cast_nullable_to_non_nullable
               as List<PersonViewSafe>,
-      online: null == online
-          ? _value.online
-          : online // ignore: cast_nullable_to_non_nullable
-              as int,
       version: null == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
@@ -1703,7 +1650,6 @@ class _$_FullSiteView extends _FullSiteView {
   const _$_FullSiteView(
       {this.siteView,
       required final List<PersonViewSafe> admins,
-      required this.online,
       required this.version,
       this.myUser,
       this.federatedInstances,
@@ -1725,8 +1671,6 @@ class _$_FullSiteView extends _FullSiteView {
   }
 
   @override
-  final int online;
-  @override
   final String version;
   @override
   final MyUserInfo? myUser;
@@ -1737,7 +1681,7 @@ class _$_FullSiteView extends _FullSiteView {
 
   @override
   String toString() {
-    return 'FullSiteView(siteView: $siteView, admins: $admins, online: $online, version: $version, myUser: $myUser, federatedInstances: $federatedInstances, instanceHost: $instanceHost)';
+    return 'FullSiteView(siteView: $siteView, admins: $admins, version: $version, myUser: $myUser, federatedInstances: $federatedInstances, instanceHost: $instanceHost)';
   }
 
   @override
@@ -1748,7 +1692,6 @@ class _$_FullSiteView extends _FullSiteView {
             (identical(other.siteView, siteView) ||
                 other.siteView == siteView) &&
             const DeepCollectionEquality().equals(other._admins, _admins) &&
-            (identical(other.online, online) || other.online == online) &&
             (identical(other.version, version) || other.version == version) &&
             (identical(other.myUser, myUser) || other.myUser == myUser) &&
             (identical(other.federatedInstances, federatedInstances) ||
@@ -1763,7 +1706,6 @@ class _$_FullSiteView extends _FullSiteView {
       runtimeType,
       siteView,
       const DeepCollectionEquality().hash(_admins),
-      online,
       version,
       myUser,
       federatedInstances,
@@ -1787,7 +1729,6 @@ abstract class _FullSiteView extends FullSiteView {
   const factory _FullSiteView(
       {final SiteView? siteView,
       required final List<PersonViewSafe> admins,
-      required final int online,
       required final String version,
       final MyUserInfo? myUser,
       final FederatedInstances? federatedInstances,
@@ -1801,8 +1742,6 @@ abstract class _FullSiteView extends FullSiteView {
   SiteView? get siteView;
   @override
   List<PersonViewSafe> get admins;
-  @override
-  int get online;
   @override
   String get version;
   @override

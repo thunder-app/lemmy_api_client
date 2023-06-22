@@ -17,7 +17,6 @@ _$_FullCommunityView _$$_FullCommunityViewFromJson(Map<String, dynamic> json) =>
           .map(
               (e) => CommunityModeratorView.fromJson(e as Map<String, dynamic>))
           .toList(),
-      online: json['online'] as int,
       instanceHost: json['instance_host'] as String,
     );
 
@@ -27,7 +26,6 @@ Map<String, dynamic> _$$_FullCommunityViewToJson(
       'community_view': instance.communityView.toJson(),
       'site': instance.site?.toJson(),
       'moderators': instance.moderators.map((e) => e.toJson()).toList(),
-      'online': instance.online,
       'instance_host': instance.instanceHost,
     };
 
@@ -40,7 +38,6 @@ _$_FullPostView _$$_FullPostViewFromJson(Map<String, dynamic> json) =>
           .map(
               (e) => CommunityModeratorView.fromJson(e as Map<String, dynamic>))
           .toList(),
-      online: json['online'] as int,
       instanceHost: json['instance_host'] as String,
     );
 
@@ -49,7 +46,6 @@ Map<String, dynamic> _$$_FullPostViewToJson(_$_FullPostView instance) =>
       'post_view': instance.postView.toJson(),
       'community_view': instance.communityView.toJson(),
       'moderators': instance.moderators.map((e) => e.toJson()).toList(),
-      'online': instance.online,
       'instance_host': instance.instanceHost,
     };
 
@@ -165,7 +161,6 @@ _$_FullSiteView _$$_FullSiteViewFromJson(Map<String, dynamic> json) =>
       admins: (json['admins'] as List<dynamic>)
           .map((e) => PersonViewSafe.fromJson(e as Map<String, dynamic>))
           .toList(),
-      online: json['online'] as int,
       version: json['version'] as String,
       myUser: json['my_user'] == null
           ? null
@@ -181,7 +176,6 @@ Map<String, dynamic> _$$_FullSiteViewToJson(_$_FullSiteView instance) =>
     <String, dynamic>{
       'site_view': instance.siteView?.toJson(),
       'admins': instance.admins.map((e) => e.toJson()).toList(),
-      'online': instance.online,
       'version': instance.version,
       'my_user': instance.myUser?.toJson(),
       'federated_instances': instance.federatedInstances?.toJson(),
