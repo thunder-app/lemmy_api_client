@@ -48,9 +48,9 @@ class LocalUserSettings with _$LocalUserSettings {
     required bool showNsfw,
     required String theme,
     @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-        required SortType defaultSortType,
+    required SortType defaultSortType,
     @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-        required PostListingType defaultListingType,
+    required PostListingType defaultListingType,
     required String interfaceLanguage,
     required bool showAvatars,
     required bool showScores,
@@ -460,6 +460,7 @@ class Comment with _$Comment {
     required bool local,
     required int languageId,
     required String instanceHost,
+    required String path,
   }) = _Comment;
 
   const Comment._();
