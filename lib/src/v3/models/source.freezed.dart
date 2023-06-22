@@ -32,8 +32,6 @@ mixin _$PersonSafe {
   bool get local => throw _privateConstructorUsedError;
   String? get banner => throw _privateConstructorUsedError;
   bool get deleted => throw _privateConstructorUsedError;
-  String get inboxUrl => throw _privateConstructorUsedError;
-  String get sharedInboxUrl => throw _privateConstructorUsedError;
   String? get matrixUserId => throw _privateConstructorUsedError;
   bool get admin => throw _privateConstructorUsedError;
   bool get botAccount => throw _privateConstructorUsedError;
@@ -65,8 +63,6 @@ abstract class $PersonSafeCopyWith<$Res> {
       bool local,
       String? banner,
       bool deleted,
-      String inboxUrl,
-      String sharedInboxUrl,
       String? matrixUserId,
       bool admin,
       bool botAccount,
@@ -99,8 +95,6 @@ class _$PersonSafeCopyWithImpl<$Res, $Val extends PersonSafe>
     Object? local = null,
     Object? banner = freezed,
     Object? deleted = null,
-    Object? inboxUrl = null,
-    Object? sharedInboxUrl = null,
     Object? matrixUserId = freezed,
     Object? admin = null,
     Object? botAccount = null,
@@ -156,14 +150,6 @@ class _$PersonSafeCopyWithImpl<$Res, $Val extends PersonSafe>
           ? _value.deleted
           : deleted // ignore: cast_nullable_to_non_nullable
               as bool,
-      inboxUrl: null == inboxUrl
-          ? _value.inboxUrl
-          : inboxUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      sharedInboxUrl: null == sharedInboxUrl
-          ? _value.sharedInboxUrl
-          : sharedInboxUrl // ignore: cast_nullable_to_non_nullable
-              as String,
       matrixUserId: freezed == matrixUserId
           ? _value.matrixUserId
           : matrixUserId // ignore: cast_nullable_to_non_nullable
@@ -209,8 +195,6 @@ abstract class _$$_PersonSafeCopyWith<$Res>
       bool local,
       String? banner,
       bool deleted,
-      String inboxUrl,
-      String sharedInboxUrl,
       String? matrixUserId,
       bool admin,
       bool botAccount,
@@ -241,8 +225,6 @@ class __$$_PersonSafeCopyWithImpl<$Res>
     Object? local = null,
     Object? banner = freezed,
     Object? deleted = null,
-    Object? inboxUrl = null,
-    Object? sharedInboxUrl = null,
     Object? matrixUserId = freezed,
     Object? admin = null,
     Object? botAccount = null,
@@ -298,14 +280,6 @@ class __$$_PersonSafeCopyWithImpl<$Res>
           ? _value.deleted
           : deleted // ignore: cast_nullable_to_non_nullable
               as bool,
-      inboxUrl: null == inboxUrl
-          ? _value.inboxUrl
-          : inboxUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      sharedInboxUrl: null == sharedInboxUrl
-          ? _value.sharedInboxUrl
-          : sharedInboxUrl // ignore: cast_nullable_to_non_nullable
-              as String,
       matrixUserId: freezed == matrixUserId
           ? _value.matrixUserId
           : matrixUserId // ignore: cast_nullable_to_non_nullable
@@ -347,8 +321,6 @@ class _$_PersonSafe extends _PersonSafe {
       required this.local,
       this.banner,
       required this.deleted,
-      required this.inboxUrl,
-      required this.sharedInboxUrl,
       this.matrixUserId,
       required this.admin,
       required this.botAccount,
@@ -384,10 +356,6 @@ class _$_PersonSafe extends _PersonSafe {
   @override
   final bool deleted;
   @override
-  final String inboxUrl;
-  @override
-  final String sharedInboxUrl;
-  @override
   final String? matrixUserId;
   @override
   final bool admin;
@@ -400,7 +368,7 @@ class _$_PersonSafe extends _PersonSafe {
 
   @override
   String toString() {
-    return 'PersonSafe(id: $id, name: $name, displayName: $displayName, avatar: $avatar, banned: $banned, published: $published, updated: $updated, actorId: $actorId, bio: $bio, local: $local, banner: $banner, deleted: $deleted, inboxUrl: $inboxUrl, sharedInboxUrl: $sharedInboxUrl, matrixUserId: $matrixUserId, admin: $admin, botAccount: $botAccount, banExpires: $banExpires, instanceHost: $instanceHost)';
+    return 'PersonSafe(id: $id, name: $name, displayName: $displayName, avatar: $avatar, banned: $banned, published: $published, updated: $updated, actorId: $actorId, bio: $bio, local: $local, banner: $banner, deleted: $deleted, matrixUserId: $matrixUserId, admin: $admin, botAccount: $botAccount, banExpires: $banExpires, instanceHost: $instanceHost)';
   }
 
   @override
@@ -422,10 +390,6 @@ class _$_PersonSafe extends _PersonSafe {
             (identical(other.local, local) || other.local == local) &&
             (identical(other.banner, banner) || other.banner == banner) &&
             (identical(other.deleted, deleted) || other.deleted == deleted) &&
-            (identical(other.inboxUrl, inboxUrl) ||
-                other.inboxUrl == inboxUrl) &&
-            (identical(other.sharedInboxUrl, sharedInboxUrl) ||
-                other.sharedInboxUrl == sharedInboxUrl) &&
             (identical(other.matrixUserId, matrixUserId) ||
                 other.matrixUserId == matrixUserId) &&
             (identical(other.admin, admin) || other.admin == admin) &&
@@ -439,28 +403,25 @@ class _$_PersonSafe extends _PersonSafe {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hashAll([
-        runtimeType,
-        id,
-        name,
-        displayName,
-        avatar,
-        banned,
-        published,
-        updated,
-        actorId,
-        bio,
-        local,
-        banner,
-        deleted,
-        inboxUrl,
-        sharedInboxUrl,
-        matrixUserId,
-        admin,
-        botAccount,
-        banExpires,
-        instanceHost
-      ]);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      name,
+      displayName,
+      avatar,
+      banned,
+      published,
+      updated,
+      actorId,
+      bio,
+      local,
+      banner,
+      deleted,
+      matrixUserId,
+      admin,
+      botAccount,
+      banExpires,
+      instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -490,8 +451,6 @@ abstract class _PersonSafe extends PersonSafe {
       required final bool local,
       final String? banner,
       required final bool deleted,
-      required final String inboxUrl,
-      required final String sharedInboxUrl,
       final String? matrixUserId,
       required final bool admin,
       required final bool botAccount,
@@ -526,10 +485,6 @@ abstract class _PersonSafe extends PersonSafe {
   String? get banner;
   @override
   bool get deleted;
-  @override
-  String get inboxUrl;
-  @override
-  String get sharedInboxUrl;
   @override
   String? get matrixUserId;
   @override

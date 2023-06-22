@@ -24,8 +24,6 @@ class PersonSafe with _$PersonSafe {
     required bool local,
     String? banner,
     required bool deleted,
-    required String inboxUrl,
-    required String sharedInboxUrl,
     String? matrixUserId,
     required bool admin,
     required bool botAccount,
