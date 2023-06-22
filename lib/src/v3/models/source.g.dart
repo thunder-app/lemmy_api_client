@@ -653,6 +653,7 @@ _$_Comment _$$_CommentFromJson(Map<String, dynamic> json) => _$_Comment(
       local: json['local'] as bool,
       languageId: json['language_id'] as int,
       instanceHost: json['instance_host'] as String,
+      path: json['path'] as String,
     );
 
 Map<String, dynamic> _$$_CommentToJson(_$_Comment instance) =>
@@ -672,6 +673,7 @@ Map<String, dynamic> _$$_CommentToJson(_$_Comment instance) =>
       'local': instance.local,
       'language_id': instance.languageId,
       'instance_host': instance.instanceHost,
+      'path': instance.path,
     };
 
 _$_PersonMention _$$_PersonMentionFromJson(Map<String, dynamic> json) =>

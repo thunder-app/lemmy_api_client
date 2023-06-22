@@ -156,6 +156,7 @@ _$_GetComments _$$_GetCommentsFromJson(Map<String, dynamic> json) =>
       postId: json['post_id'] as int?,
       savedOnly: json['saved_only'] as bool?,
       auth: json['auth'] as String?,
+      maxDepth: json['max_depth'] as int?,
     );
 
 Map<String, dynamic> _$$_GetCommentsToJson(_$_GetComments instance) {
@@ -176,6 +177,7 @@ Map<String, dynamic> _$$_GetCommentsToJson(_$_GetComments instance) {
   writeNotNull('post_id', instance.postId);
   writeNotNull('saved_only', instance.savedOnly);
   writeNotNull('auth', instance.auth);
+  writeNotNull('max_depth', instance.maxDepth);
   return val;
 }
 

@@ -194,6 +194,7 @@ class GetComments
     int? postId,
     bool? savedOnly,
     String? auth,
+    int? maxDepth,
   }) = _GetComments;
 
   const GetComments._();

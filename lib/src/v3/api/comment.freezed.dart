@@ -1347,6 +1347,7 @@ mixin _$GetComments {
   int? get postId => throw _privateConstructorUsedError;
   bool? get savedOnly => throw _privateConstructorUsedError;
   String? get auth => throw _privateConstructorUsedError;
+  int? get maxDepth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1369,7 +1370,8 @@ abstract class $GetCommentsCopyWith<$Res> {
       String? communityName,
       int? postId,
       bool? savedOnly,
-      String? auth});
+      String? auth,
+      int? maxDepth});
 }
 
 /// @nodoc
@@ -1394,6 +1396,7 @@ class _$GetCommentsCopyWithImpl<$Res, $Val extends GetComments>
     Object? postId = freezed,
     Object? savedOnly = freezed,
     Object? auth = freezed,
+    Object? maxDepth = freezed,
   }) {
     return _then(_value.copyWith(
       type: freezed == type
@@ -1432,6 +1435,10 @@ class _$GetCommentsCopyWithImpl<$Res, $Val extends GetComments>
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
+      maxDepth: freezed == maxDepth
+          ? _value.maxDepth
+          : maxDepth // ignore: cast_nullable_to_non_nullable
+              as int?,
     ) as $Val);
   }
 }
@@ -1453,7 +1460,8 @@ abstract class _$$_GetCommentsCopyWith<$Res>
       String? communityName,
       int? postId,
       bool? savedOnly,
-      String? auth});
+      String? auth,
+      int? maxDepth});
 }
 
 /// @nodoc
@@ -1476,6 +1484,7 @@ class __$$_GetCommentsCopyWithImpl<$Res>
     Object? postId = freezed,
     Object? savedOnly = freezed,
     Object? auth = freezed,
+    Object? maxDepth = freezed,
   }) {
     return _then(_$_GetComments(
       type: freezed == type
@@ -1514,6 +1523,10 @@ class __$$_GetCommentsCopyWithImpl<$Res>
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
+      maxDepth: freezed == maxDepth
+          ? _value.maxDepth
+          : maxDepth // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -1531,7 +1544,8 @@ class _$_GetComments extends _GetComments {
       this.communityName,
       this.postId,
       this.savedOnly,
-      this.auth})
+      this.auth,
+      this.maxDepth})
       : super._();
 
   factory _$_GetComments.fromJson(Map<String, dynamic> json) =>
@@ -1556,10 +1570,12 @@ class _$_GetComments extends _GetComments {
   final bool? savedOnly;
   @override
   final String? auth;
+  @override
+  final int? maxDepth;
 
   @override
   String toString() {
-    return 'GetComments(type: $type, sort: $sort, page: $page, limit: $limit, communityId: $communityId, communityName: $communityName, postId: $postId, savedOnly: $savedOnly, auth: $auth)';
+    return 'GetComments(type: $type, sort: $sort, page: $page, limit: $limit, communityId: $communityId, communityName: $communityName, postId: $postId, savedOnly: $savedOnly, auth: $auth, maxDepth: $maxDepth)';
   }
 
   @override
@@ -1578,13 +1594,15 @@ class _$_GetComments extends _GetComments {
             (identical(other.postId, postId) || other.postId == postId) &&
             (identical(other.savedOnly, savedOnly) ||
                 other.savedOnly == savedOnly) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            (identical(other.auth, auth) || other.auth == auth) &&
+            (identical(other.maxDepth, maxDepth) ||
+                other.maxDepth == maxDepth));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, type, sort, page, limit,
-      communityId, communityName, postId, savedOnly, auth);
+      communityId, communityName, postId, savedOnly, auth, maxDepth);
 
   @JsonKey(ignore: true)
   @override
@@ -1610,7 +1628,8 @@ abstract class _GetComments extends GetComments {
       final String? communityName,
       final int? postId,
       final bool? savedOnly,
-      final String? auth}) = _$_GetComments;
+      final String? auth,
+      final int? maxDepth}) = _$_GetComments;
   const _GetComments._() : super._();
 
   factory _GetComments.fromJson(Map<String, dynamic> json) =
@@ -1635,6 +1654,8 @@ abstract class _GetComments extends GetComments {
   bool? get savedOnly;
   @override
   String? get auth;
+  @override
+  int? get maxDepth;
   @override
   @JsonKey(ignore: true)
   _$$_GetCommentsCopyWith<_$_GetComments> get copyWith =>

@@ -7105,6 +7105,7 @@ mixin _$Comment {
   bool get local => throw _privateConstructorUsedError;
   int get languageId => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
+  String get path => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -7130,7 +7131,8 @@ abstract class $CommentCopyWith<$Res> {
       String apId,
       bool local,
       int languageId,
-      String instanceHost});
+      String instanceHost,
+      String path});
 }
 
 /// @nodoc
@@ -7160,6 +7162,7 @@ class _$CommentCopyWithImpl<$Res, $Val extends Comment>
     Object? local = null,
     Object? languageId = null,
     Object? instanceHost = null,
+    Object? path = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -7218,6 +7221,10 @@ class _$CommentCopyWithImpl<$Res, $Val extends Comment>
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
+      path: null == path
+          ? _value.path
+          : path // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -7243,7 +7250,8 @@ abstract class _$$_CommentCopyWith<$Res> implements $CommentCopyWith<$Res> {
       String apId,
       bool local,
       int languageId,
-      String instanceHost});
+      String instanceHost,
+      String path});
 }
 
 /// @nodoc
@@ -7270,6 +7278,7 @@ class __$$_CommentCopyWithImpl<$Res>
     Object? local = null,
     Object? languageId = null,
     Object? instanceHost = null,
+    Object? path = null,
   }) {
     return _then(_$_Comment(
       id: null == id
@@ -7328,6 +7337,10 @@ class __$$_CommentCopyWithImpl<$Res>
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
+      path: null == path
+          ? _value.path
+          : path // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -7350,7 +7363,8 @@ class _$_Comment extends _Comment {
       required this.apId,
       required this.local,
       required this.languageId,
-      required this.instanceHost})
+      required this.instanceHost,
+      required this.path})
       : super._();
 
   factory _$_Comment.fromJson(Map<String, dynamic> json) =>
@@ -7384,10 +7398,12 @@ class _$_Comment extends _Comment {
   final int languageId;
   @override
   final String instanceHost;
+  @override
+  final String path;
 
   @override
   String toString() {
-    return 'Comment(id: $id, creatorId: $creatorId, postId: $postId, parentId: $parentId, content: $content, removed: $removed, distinguished: $distinguished, published: $published, updated: $updated, deleted: $deleted, apId: $apId, local: $local, languageId: $languageId, instanceHost: $instanceHost)';
+    return 'Comment(id: $id, creatorId: $creatorId, postId: $postId, parentId: $parentId, content: $content, removed: $removed, distinguished: $distinguished, published: $published, updated: $updated, deleted: $deleted, apId: $apId, local: $local, languageId: $languageId, instanceHost: $instanceHost, path: $path)';
   }
 
   @override
@@ -7414,7 +7430,8 @@ class _$_Comment extends _Comment {
             (identical(other.languageId, languageId) ||
                 other.languageId == languageId) &&
             (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+                other.instanceHost == instanceHost) &&
+            (identical(other.path, path) || other.path == path));
   }
 
   @JsonKey(ignore: true)
@@ -7434,7 +7451,8 @@ class _$_Comment extends _Comment {
       apId,
       local,
       languageId,
-      instanceHost);
+      instanceHost,
+      path);
 
   @JsonKey(ignore: true)
   @override
@@ -7465,7 +7483,8 @@ abstract class _Comment extends Comment {
       required final String apId,
       required final bool local,
       required final int languageId,
-      required final String instanceHost}) = _$_Comment;
+      required final String instanceHost,
+      required final String path}) = _$_Comment;
   const _Comment._() : super._();
 
   factory _Comment.fromJson(Map<String, dynamic> json) = _$_Comment.fromJson;
@@ -7498,6 +7517,8 @@ abstract class _Comment extends Comment {
   int get languageId;
   @override
   String get instanceHost;
+  @override
+  String get path;
   @override
   @JsonKey(ignore: true)
   _$$_CommentCopyWith<_$_Comment> get copyWith =>
