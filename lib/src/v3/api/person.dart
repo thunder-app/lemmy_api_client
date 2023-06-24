@@ -4,7 +4,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../enums.dart';
 import '../../utils/serde.dart';
-import '../../utils/workaround_settings_index.dart';
 import '../models/api.dart';
 import '../models/jwt.dart';
 import '../models/views.dart';
