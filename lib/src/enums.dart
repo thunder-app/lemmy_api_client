@@ -35,8 +35,11 @@ enum PostListingType {
   final String value;
   const PostListingType(this.value);
 
-  factory PostListingType.fromJson(String value) =>
-      values.firstWhere((e) => e.value == value);
+  factory PostListingType.fromJson(dynamic value) {
+    return value is int
+        ? values[value]
+        : values.firstWhere((e) => e.value == value);
+  }
 
   String toJson() => value;
 
@@ -58,8 +61,11 @@ enum SortType {
   final String value;
   const SortType(this.value);
 
-  factory SortType.fromJson(String value) =>
-      values.firstWhere((e) => e.value == value);
+  factory SortType.fromJson(dynamic value) {
+    return value is int
+        ? values[value]
+        : values.firstWhere((e) => e.value == value);
+  }
 
   String toJson() => value;
 

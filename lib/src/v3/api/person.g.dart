@@ -62,10 +62,10 @@ _$_SaveUserSettings _$$_SaveUserSettingsFromJson(Map<String, dynamic> json) =>
       theme: json['theme'] as String?,
       defaultSortType: json['default_sort_type'] == null
           ? null
-          : SortType.fromJson(json['default_sort_type'] as String),
+          : SortType.fromJson(json['default_sort_type']),
       defaultListingType: json['default_listing_type'] == null
           ? null
-          : PostListingType.fromJson(json['default_listing_type'] as String),
+          : PostListingType.fromJson(json['default_listing_type']),
       interfaceLanguage: json['interface_language'] as String?,
       avatar: json['avatar'] as String?,
       banner: json['banner'] as String?,
@@ -139,9 +139,7 @@ _$_GetPersonDetails _$$_GetPersonDetailsFromJson(Map<String, dynamic> json) =>
     _$_GetPersonDetails(
       personId: json['person_id'] as int?,
       username: json['username'] as String?,
-      sort: json['sort'] == null
-          ? null
-          : SortType.fromJson(json['sort'] as String),
+      sort: json['sort'] == null ? null : SortType.fromJson(json['sort']),
       page: json['page'] as int?,
       limit: json['limit'] as int?,
       communityId: json['community_id'] as int?,
@@ -222,9 +220,7 @@ Map<String, dynamic> _$$_BanPersonToJson(_$_BanPerson instance) {
 
 _$_GetReplies _$$_GetRepliesFromJson(Map<String, dynamic> json) =>
     _$_GetReplies(
-      sort: json['sort'] == null
-          ? null
-          : SortType.fromJson(json['sort'] as String),
+      sort: json['sort'] == null ? null : SortType.fromJson(json['sort']),
       page: json['page'] as int?,
       limit: json['limit'] as int?,
       unreadOnly: json['unread_only'] as bool?,
@@ -250,9 +246,7 @@ Map<String, dynamic> _$$_GetRepliesToJson(_$_GetReplies instance) {
 
 _$_GetPersonMentions _$$_GetPersonMentionsFromJson(Map<String, dynamic> json) =>
     _$_GetPersonMentions(
-      sort: json['sort'] == null
-          ? null
-          : SortType.fromJson(json['sort'] as String),
+      sort: json['sort'] == null ? null : SortType.fromJson(json['sort']),
       page: json['page'] as int?,
       limit: json['limit'] as int?,
       unreadOnly: json['unread_only'] as bool?,

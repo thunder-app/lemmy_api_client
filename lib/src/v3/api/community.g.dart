@@ -63,10 +63,8 @@ _$_ListCommunities _$$_ListCommunitiesFromJson(Map<String, dynamic> json) =>
     _$_ListCommunities(
       type: json['type_'] == null
           ? null
-          : PostListingType.fromJson(json['type_'] as String),
-      sort: json['sort'] == null
-          ? null
-          : SortType.fromJson(json['sort'] as String),
+          : PostListingType.fromJson(json['type_']),
+      sort: json['sort'] == null ? null : SortType.fromJson(json['sort']),
       page: json['page'] as int?,
       limit: json['limit'] as int?,
       auth: json['auth'] as String?,

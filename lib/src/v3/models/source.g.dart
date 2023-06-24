@@ -71,9 +71,12 @@ _$_LocalUserSettings _$$_LocalUserSettingsFromJson(Map<String, dynamic> json) =>
       email: json['email'] as String?,
       showNsfw: json['show_nsfw'] as bool,
       theme: json['theme'] as String,
-      defaultSortType: SortType.fromJson(json['default_sort_type'] as String),
-      defaultListingType:
-          PostListingType.fromJson(json['default_listing_type'] as String),
+      defaultSortType: json['default_sort_type'] == null
+          ? null
+          : SortType.fromJson(json['default_sort_type']),
+      defaultListingType: json['default_listing_type'] == null
+          ? null
+          : PostListingType.fromJson(json['default_listing_type']),
       interfaceLanguage: json['interface_language'] as String,
       showAvatars: json['show_avatars'] as bool,
       showScores: json['show_scores'] as bool,
@@ -94,8 +97,8 @@ Map<String, dynamic> _$$_LocalUserSettingsToJson(
       'email': instance.email,
       'show_nsfw': instance.showNsfw,
       'theme': instance.theme,
-      'default_sort_type': instance.defaultSortType.toJson(),
-      'default_listing_type': instance.defaultListingType.toJson(),
+      'default_sort_type': instance.defaultSortType?.toJson(),
+      'default_listing_type': instance.defaultListingType?.toJson(),
       'interface_language': instance.interfaceLanguage,
       'show_avatars': instance.showAvatars,
       'show_scores': instance.showScores,
@@ -156,7 +159,7 @@ _$_LocalSite _$$_LocalSiteFromJson(Map<String, dynamic> json) => _$_LocalSite(
       privateInstance: json['private_instance'] as bool,
       defaultTheme: json['default_theme'] as String,
       defaultPostListingType:
-          PostListingType.fromJson(json['default_post_listing_type'] as String),
+          PostListingType.fromJson(json['default_post_listing_type']),
       legalInformation: json['legal_information'] as String?,
       hideModlogModNames: json['hide_modlog_mod_names'] as bool,
       applicationEmailAdmins: json['application_email_admins'] as bool,

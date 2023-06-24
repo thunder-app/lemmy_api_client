@@ -13,12 +13,10 @@ _$_Search _$$_SearchFromJson(Map<String, dynamic> json) => _$_Search(
           : SearchType.fromJson(json['type_'] as String),
       listingType: json['listing_type'] == null
           ? null
-          : PostListingType.fromJson(json['listing_type'] as String),
+          : PostListingType.fromJson(json['listing_type']),
       communityId: json['community_id'] as int?,
       communityName: json['community_name'] as String?,
-      sort: json['sort'] == null
-          ? null
-          : SortType.fromJson(json['sort'] as String),
+      sort: json['sort'] == null ? null : SortType.fromJson(json['sort']),
       page: json['page'] as int?,
       limit: json['limit'] as int?,
       creatorId: json['creator_id'] as int?,

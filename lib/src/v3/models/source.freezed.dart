@@ -512,8 +512,8 @@ mixin _$LocalUserSettings {
   String? get email => throw _privateConstructorUsedError;
   bool get showNsfw => throw _privateConstructorUsedError;
   String get theme => throw _privateConstructorUsedError;
-  SortType get defaultSortType => throw _privateConstructorUsedError;
-  PostListingType get defaultListingType => throw _privateConstructorUsedError;
+  SortType? get defaultSortType => throw _privateConstructorUsedError;
+  PostListingType? get defaultListingType => throw _privateConstructorUsedError;
   String get interfaceLanguage => throw _privateConstructorUsedError;
   bool get showAvatars => throw _privateConstructorUsedError;
   bool get showScores => throw _privateConstructorUsedError;
@@ -543,8 +543,8 @@ abstract class $LocalUserSettingsCopyWith<$Res> {
       String? email,
       bool showNsfw,
       String theme,
-      SortType defaultSortType,
-      PostListingType defaultListingType,
+      SortType? defaultSortType,
+      PostListingType? defaultListingType,
       String interfaceLanguage,
       bool showAvatars,
       bool showScores,
@@ -575,8 +575,8 @@ class _$LocalUserSettingsCopyWithImpl<$Res, $Val extends LocalUserSettings>
     Object? email = freezed,
     Object? showNsfw = null,
     Object? theme = null,
-    Object? defaultSortType = null,
-    Object? defaultListingType = null,
+    Object? defaultSortType = freezed,
+    Object? defaultListingType = freezed,
     Object? interfaceLanguage = null,
     Object? showAvatars = null,
     Object? showScores = null,
@@ -609,14 +609,14 @@ class _$LocalUserSettingsCopyWithImpl<$Res, $Val extends LocalUserSettings>
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
               as String,
-      defaultSortType: null == defaultSortType
+      defaultSortType: freezed == defaultSortType
           ? _value.defaultSortType
           : defaultSortType // ignore: cast_nullable_to_non_nullable
-              as SortType,
-      defaultListingType: null == defaultListingType
+              as SortType?,
+      defaultListingType: freezed == defaultListingType
           ? _value.defaultListingType
           : defaultListingType // ignore: cast_nullable_to_non_nullable
-              as PostListingType,
+              as PostListingType?,
       interfaceLanguage: null == interfaceLanguage
           ? _value.interfaceLanguage
           : interfaceLanguage // ignore: cast_nullable_to_non_nullable
@@ -675,8 +675,8 @@ abstract class _$$_LocalUserSettingsCopyWith<$Res>
       String? email,
       bool showNsfw,
       String theme,
-      SortType defaultSortType,
-      PostListingType defaultListingType,
+      SortType? defaultSortType,
+      PostListingType? defaultListingType,
       String interfaceLanguage,
       bool showAvatars,
       bool showScores,
@@ -705,8 +705,8 @@ class __$$_LocalUserSettingsCopyWithImpl<$Res>
     Object? email = freezed,
     Object? showNsfw = null,
     Object? theme = null,
-    Object? defaultSortType = null,
-    Object? defaultListingType = null,
+    Object? defaultSortType = freezed,
+    Object? defaultListingType = freezed,
     Object? interfaceLanguage = null,
     Object? showAvatars = null,
     Object? showScores = null,
@@ -739,14 +739,14 @@ class __$$_LocalUserSettingsCopyWithImpl<$Res>
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
               as String,
-      defaultSortType: null == defaultSortType
+      defaultSortType: freezed == defaultSortType
           ? _value.defaultSortType
           : defaultSortType // ignore: cast_nullable_to_non_nullable
-              as SortType,
-      defaultListingType: null == defaultListingType
+              as SortType?,
+      defaultListingType: freezed == defaultListingType
           ? _value.defaultListingType
           : defaultListingType // ignore: cast_nullable_to_non_nullable
-              as PostListingType,
+              as PostListingType?,
       interfaceLanguage: null == interfaceLanguage
           ? _value.interfaceLanguage
           : interfaceLanguage // ignore: cast_nullable_to_non_nullable
@@ -801,8 +801,8 @@ class _$_LocalUserSettings extends _LocalUserSettings {
       this.email,
       required this.showNsfw,
       required this.theme,
-      required this.defaultSortType,
-      required this.defaultListingType,
+      this.defaultSortType,
+      this.defaultListingType,
       required this.interfaceLanguage,
       required this.showAvatars,
       required this.showScores,
@@ -829,9 +829,9 @@ class _$_LocalUserSettings extends _LocalUserSettings {
   @override
   final String theme;
   @override
-  final SortType defaultSortType;
+  final SortType? defaultSortType;
   @override
-  final PostListingType defaultListingType;
+  final PostListingType? defaultListingType;
   @override
   final String interfaceLanguage;
   @override
@@ -941,8 +941,8 @@ abstract class _LocalUserSettings extends LocalUserSettings {
       final String? email,
       required final bool showNsfw,
       required final String theme,
-      required final SortType defaultSortType,
-      required final PostListingType defaultListingType,
+      final SortType? defaultSortType,
+      final PostListingType? defaultListingType,
       required final String interfaceLanguage,
       required final bool showAvatars,
       required final bool showScores,
@@ -969,9 +969,9 @@ abstract class _LocalUserSettings extends LocalUserSettings {
   @override
   String get theme;
   @override
-  SortType get defaultSortType;
+  SortType? get defaultSortType;
   @override
-  PostListingType get defaultListingType;
+  PostListingType? get defaultListingType;
   @override
   String get interfaceLanguage;
   @override
