@@ -71,9 +71,9 @@ _$_LocalUserSettings _$$_LocalUserSettingsFromJson(Map<String, dynamic> json) =>
       email: json['email'] as String?,
       showNsfw: json['show_nsfw'] as bool,
       theme: json['theme'] as String,
-      defaultSortType: sortTypeFromIndex(json['default_sort_type'] as int),
+      defaultSortType: SortType.fromJson(json['default_sort_type'] as String),
       defaultListingType:
-          postListingTypeFromIndex(json['default_listing_type'] as int),
+          PostListingType.fromJson(json['default_listing_type'] as String),
       interfaceLanguage: json['interface_language'] as String,
       showAvatars: json['show_avatars'] as bool,
       showScores: json['show_scores'] as bool,
@@ -94,9 +94,8 @@ Map<String, dynamic> _$$_LocalUserSettingsToJson(
       'email': instance.email,
       'show_nsfw': instance.showNsfw,
       'theme': instance.theme,
-      'default_sort_type': sortTypeToIndex(instance.defaultSortType),
-      'default_listing_type':
-          postListingTypeToIndex(instance.defaultListingType),
+      'default_sort_type': instance.defaultSortType.toJson(),
+      'default_listing_type': instance.defaultListingType.toJson(),
       'interface_language': instance.interfaceLanguage,
       'show_avatars': instance.showAvatars,
       'show_scores': instance.showScores,

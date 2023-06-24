@@ -512,9 +512,7 @@ mixin _$LocalUserSettings {
   String? get email => throw _privateConstructorUsedError;
   bool get showNsfw => throw _privateConstructorUsedError;
   String get theme => throw _privateConstructorUsedError;
-  @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
   SortType get defaultSortType => throw _privateConstructorUsedError;
-  @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
   PostListingType get defaultListingType => throw _privateConstructorUsedError;
   String get interfaceLanguage => throw _privateConstructorUsedError;
   bool get showAvatars => throw _privateConstructorUsedError;
@@ -545,10 +543,8 @@ abstract class $LocalUserSettingsCopyWith<$Res> {
       String? email,
       bool showNsfw,
       String theme,
-      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          SortType defaultSortType,
-      @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          PostListingType defaultListingType,
+      SortType defaultSortType,
+      PostListingType defaultListingType,
       String interfaceLanguage,
       bool showAvatars,
       bool showScores,
@@ -679,10 +675,8 @@ abstract class _$$_LocalUserSettingsCopyWith<$Res>
       String? email,
       bool showNsfw,
       String theme,
-      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          SortType defaultSortType,
-      @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          PostListingType defaultListingType,
+      SortType defaultSortType,
+      PostListingType defaultListingType,
       String interfaceLanguage,
       bool showAvatars,
       bool showScores,
@@ -807,10 +801,8 @@ class _$_LocalUserSettings extends _LocalUserSettings {
       this.email,
       required this.showNsfw,
       required this.theme,
-      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          required this.defaultSortType,
-      @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          required this.defaultListingType,
+      required this.defaultSortType,
+      required this.defaultListingType,
       required this.interfaceLanguage,
       required this.showAvatars,
       required this.showScores,
@@ -837,10 +829,8 @@ class _$_LocalUserSettings extends _LocalUserSettings {
   @override
   final String theme;
   @override
-  @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
   final SortType defaultSortType;
   @override
-  @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
   final PostListingType defaultListingType;
   @override
   final String interfaceLanguage;
@@ -951,10 +941,8 @@ abstract class _LocalUserSettings extends LocalUserSettings {
       final String? email,
       required final bool showNsfw,
       required final String theme,
-      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          required final SortType defaultSortType,
-      @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          required final PostListingType defaultListingType,
+      required final SortType defaultSortType,
+      required final PostListingType defaultListingType,
       required final String interfaceLanguage,
       required final bool showAvatars,
       required final bool showScores,
@@ -981,10 +969,8 @@ abstract class _LocalUserSettings extends LocalUserSettings {
   @override
   String get theme;
   @override
-  @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
   SortType get defaultSortType;
   @override
-  @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
   PostListingType get defaultListingType;
   @override
   String get interfaceLanguage;

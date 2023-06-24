@@ -84,10 +84,8 @@ class SaveUserSettings with _$SaveUserSettings implements LemmyApiQuery<Jwt> {
   const factory SaveUserSettings({
     bool? showNsfw,
     String? theme,
-    @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-        SortType? defaultSortType,
-    @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-        PostListingType? defaultListingType,
+    SortType? defaultSortType,
+    PostListingType? defaultListingType,
     String? interfaceLanguage,
     String? avatar,
     String? banner,

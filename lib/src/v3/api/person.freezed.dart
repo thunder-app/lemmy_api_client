@@ -565,9 +565,7 @@ SaveUserSettings _$SaveUserSettingsFromJson(Map<String, dynamic> json) {
 mixin _$SaveUserSettings {
   bool? get showNsfw => throw _privateConstructorUsedError;
   String? get theme => throw _privateConstructorUsedError;
-  @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
   SortType? get defaultSortType => throw _privateConstructorUsedError;
-  @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
   PostListingType? get defaultListingType => throw _privateConstructorUsedError;
   String? get interfaceLanguage => throw _privateConstructorUsedError;
   String? get avatar => throw _privateConstructorUsedError;
@@ -601,10 +599,8 @@ abstract class $SaveUserSettingsCopyWith<$Res> {
   $Res call(
       {bool? showNsfw,
       String? theme,
-      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          SortType? defaultSortType,
-      @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          PostListingType? defaultListingType,
+      SortType? defaultSortType,
+      PostListingType? defaultListingType,
       String? interfaceLanguage,
       String? avatar,
       String? banner,
@@ -753,10 +749,8 @@ abstract class _$$_SaveUserSettingsCopyWith<$Res>
   $Res call(
       {bool? showNsfw,
       String? theme,
-      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          SortType? defaultSortType,
-      @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          PostListingType? defaultListingType,
+      SortType? defaultSortType,
+      PostListingType? defaultListingType,
       String? interfaceLanguage,
       String? avatar,
       String? banner,
@@ -899,10 +893,8 @@ class _$_SaveUserSettings extends _SaveUserSettings {
   const _$_SaveUserSettings(
       {this.showNsfw,
       this.theme,
-      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          this.defaultSortType,
-      @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          this.defaultListingType,
+      this.defaultSortType,
+      this.defaultListingType,
       this.interfaceLanguage,
       this.avatar,
       this.banner,
@@ -930,10 +922,8 @@ class _$_SaveUserSettings extends _SaveUserSettings {
   @override
   final String? theme;
   @override
-  @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
   final SortType? defaultSortType;
   @override
-  @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
   final PostListingType? defaultListingType;
   @override
   final String? interfaceLanguage;
@@ -1068,10 +1058,8 @@ abstract class _SaveUserSettings extends SaveUserSettings {
   const factory _SaveUserSettings(
       {final bool? showNsfw,
       final String? theme,
-      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          final SortType? defaultSortType,
-      @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          final PostListingType? defaultListingType,
+      final SortType? defaultSortType,
+      final PostListingType? defaultListingType,
       final String? interfaceLanguage,
       final String? avatar,
       final String? banner,
@@ -1098,10 +1086,8 @@ abstract class _SaveUserSettings extends SaveUserSettings {
   @override
   String? get theme;
   @override
-  @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
   SortType? get defaultSortType;
   @override
-  @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
   PostListingType? get defaultListingType;
   @override
   String? get interfaceLanguage;

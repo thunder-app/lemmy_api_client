@@ -60,9 +60,12 @@ _$_SaveUserSettings _$$_SaveUserSettingsFromJson(Map<String, dynamic> json) =>
     _$_SaveUserSettings(
       showNsfw: json['show_nsfw'] as bool?,
       theme: json['theme'] as String?,
-      defaultSortType: sortTypeFromIndex(json['default_sort_type'] as int),
-      defaultListingType:
-          postListingTypeFromIndex(json['default_listing_type'] as int),
+      defaultSortType: json['default_sort_type'] == null
+          ? null
+          : SortType.fromJson(json['default_sort_type'] as String),
+      defaultListingType: json['default_listing_type'] == null
+          ? null
+          : PostListingType.fromJson(json['default_listing_type'] as String),
       interfaceLanguage: json['interface_language'] as String?,
       avatar: json['avatar'] as String?,
       banner: json['banner'] as String?,
@@ -94,9 +97,8 @@ Map<String, dynamic> _$$_SaveUserSettingsToJson(_$_SaveUserSettings instance) {
 
   writeNotNull('show_nsfw', instance.showNsfw);
   writeNotNull('theme', instance.theme);
-  writeNotNull('default_sort_type', sortTypeToIndex(instance.defaultSortType));
-  writeNotNull('default_listing_type',
-      postListingTypeToIndex(instance.defaultListingType));
+  writeNotNull('default_sort_type', instance.defaultSortType?.toJson());
+  writeNotNull('default_listing_type', instance.defaultListingType?.toJson());
   writeNotNull('interface_language', instance.interfaceLanguage);
   writeNotNull('avatar', instance.avatar);
   writeNotNull('banner', instance.banner);

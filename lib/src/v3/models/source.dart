@@ -3,7 +3,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../enums.dart';
 import '../../utils/force_utc_datetime.dart';
 import '../../utils/serde.dart';
-import '../../utils/workaround_settings_index.dart';
 
 part 'source.freezed.dart';
 part 'source.g.dart';
@@ -45,9 +44,7 @@ class LocalUserSettings with _$LocalUserSettings {
     String? email,
     required bool showNsfw,
     required String theme,
-    @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
     required SortType defaultSortType,
-    @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
     required PostListingType defaultListingType,
     required String interfaceLanguage,
     required bool showAvatars,
