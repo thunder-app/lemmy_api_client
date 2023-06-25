@@ -6,5 +6,5 @@ class LemmyApiException implements Exception {
   String get message => _message;
 
   @override
-  String toString() => '$runtimeType: $message';
+  String toString() => '${runtimeType.toString()}: $message';
 }
