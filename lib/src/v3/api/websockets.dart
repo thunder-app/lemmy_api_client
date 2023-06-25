@@ -29,7 +29,7 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
             .responseFactory(json),
       ),
   'MarkCommentAsRead': (json) => WsEventMarkCommentAsRead(
-        const MarkCommentAsRead(commentId: 0, read: true, auth: '')
+        const MarkCommentAsRead(commentReplyId: 0, read: true, auth: '')
             .responseFactory(json),
       ),
   'SaveComment': (json) => WsEventSaveComment(
@@ -355,7 +355,7 @@ class WsEventRemoveComment extends WsEvent<FullCommentView> {
   const WsEventRemoveComment(super.data);
 }
 
-class WsEventMarkCommentAsRead extends WsEvent<FullCommentView> {
+class WsEventMarkCommentAsRead extends WsEvent<FullCommentReplyView> {
   const WsEventMarkCommentAsRead(super.data);
 }
 

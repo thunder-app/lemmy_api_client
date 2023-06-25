@@ -157,6 +157,21 @@ Map<String, dynamic> _$$_FullCommentViewToJson(_$_FullCommentView instance) =>
       'instance_host': instance.instanceHost,
     };
 
+_$_FullCommentReplyView _$$_FullCommentReplyViewFromJson(
+        Map<String, dynamic> json) =>
+    _$_FullCommentReplyView(
+      commentReplyView: CommentReplyView.fromJson(
+          json['comment_reply_view'] as Map<String, dynamic>),
+      instanceHost: json['instance_host'] as String,
+    );
+
+Map<String, dynamic> _$$_FullCommentReplyViewToJson(
+        _$_FullCommentReplyView instance) =>
+    <String, dynamic>{
+      'comment_reply_view': instance.commentReplyView.toJson(),
+      'instance_host': instance.instanceHost,
+    };
+
 _$_FullSiteView _$$_FullSiteViewFromJson(Map<String, dynamic> json) =>
     _$_FullSiteView(
       siteView: json['site_view'] == null

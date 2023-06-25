@@ -95,6 +95,19 @@ class FullCommentView with _$FullCommentView {
 }
 
 @freezed
+class FullCommentReplyView with _$FullCommentReplyView {
+  @modelSerde
+  const factory FullCommentReplyView({
+    required CommentReplyView commentReplyView,
+    required String instanceHost,
+  }) = _FullCommentReplyView;
+
+  const FullCommentReplyView._();
+  factory FullCommentReplyView.fromJson(Map<String, dynamic> json) =>
+      _$FullCommentReplyViewFromJson(json);
+}
+
+@freezed
 class FullSiteView with _$FullSiteView {
   @modelSerde
   const factory FullSiteView({

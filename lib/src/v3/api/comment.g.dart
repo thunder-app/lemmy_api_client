@@ -99,7 +99,7 @@ Map<String, dynamic> _$$_RemoveCommentToJson(_$_RemoveComment instance) {
 
 _$_MarkCommentAsRead _$$_MarkCommentAsReadFromJson(Map<String, dynamic> json) =>
     _$_MarkCommentAsRead(
-      commentId: json['comment_id'] as int,
+      commentReplyId: json['comment_reply_id'] as int,
       read: json['read'] as bool,
       auth: json['auth'] as String,
     );
@@ -107,7 +107,7 @@ _$_MarkCommentAsRead _$$_MarkCommentAsReadFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$_MarkCommentAsReadToJson(
         _$_MarkCommentAsRead instance) =>
     <String, dynamic>{
-      'comment_id': instance.commentId,
+      'comment_reply_id': instance.commentReplyId,
       'read': instance.read,
       'auth': instance.auth,
     };

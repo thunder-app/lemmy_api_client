@@ -464,6 +464,23 @@ class Comment with _$Comment {
 }
 
 @freezed
+class CommentReply with _$CommentReply {
+  @modelSerde
+  const factory CommentReply({
+    required int id,
+    required int recipientId,
+    required int commentId,
+    required bool read,
+    required DateTime published,
+    required String instanceHost,
+  }) = _CommentReply;
+
+  const CommentReply._();
+  factory CommentReply.fromJson(Map<String, dynamic> json) =>
+      _$CommentReplyFromJson(json);
+}
+
+@freezed
 class PersonMention with _$PersonMention {
   @modelSerde
   const factory PersonMention({

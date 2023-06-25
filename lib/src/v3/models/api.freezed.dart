@@ -1487,6 +1487,181 @@ abstract class _FullCommentView extends FullCommentView {
       throw _privateConstructorUsedError;
 }
 
+FullCommentReplyView _$FullCommentReplyViewFromJson(Map<String, dynamic> json) {
+  return _FullCommentReplyView.fromJson(json);
+}
+
+/// @nodoc
+mixin _$FullCommentReplyView {
+  CommentReplyView get commentReplyView => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $FullCommentReplyViewCopyWith<FullCommentReplyView> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $FullCommentReplyViewCopyWith<$Res> {
+  factory $FullCommentReplyViewCopyWith(FullCommentReplyView value,
+          $Res Function(FullCommentReplyView) then) =
+      _$FullCommentReplyViewCopyWithImpl<$Res, FullCommentReplyView>;
+  @useResult
+  $Res call({CommentReplyView commentReplyView, String instanceHost});
+
+  $CommentReplyViewCopyWith<$Res> get commentReplyView;
+}
+
+/// @nodoc
+class _$FullCommentReplyViewCopyWithImpl<$Res,
+        $Val extends FullCommentReplyView>
+    implements $FullCommentReplyViewCopyWith<$Res> {
+  _$FullCommentReplyViewCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? commentReplyView = null,
+    Object? instanceHost = null,
+  }) {
+    return _then(_value.copyWith(
+      commentReplyView: null == commentReplyView
+          ? _value.commentReplyView
+          : commentReplyView // ignore: cast_nullable_to_non_nullable
+              as CommentReplyView,
+      instanceHost: null == instanceHost
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CommentReplyViewCopyWith<$Res> get commentReplyView {
+    return $CommentReplyViewCopyWith<$Res>(_value.commentReplyView, (value) {
+      return _then(_value.copyWith(commentReplyView: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_FullCommentReplyViewCopyWith<$Res>
+    implements $FullCommentReplyViewCopyWith<$Res> {
+  factory _$$_FullCommentReplyViewCopyWith(_$_FullCommentReplyView value,
+          $Res Function(_$_FullCommentReplyView) then) =
+      __$$_FullCommentReplyViewCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({CommentReplyView commentReplyView, String instanceHost});
+
+  @override
+  $CommentReplyViewCopyWith<$Res> get commentReplyView;
+}
+
+/// @nodoc
+class __$$_FullCommentReplyViewCopyWithImpl<$Res>
+    extends _$FullCommentReplyViewCopyWithImpl<$Res, _$_FullCommentReplyView>
+    implements _$$_FullCommentReplyViewCopyWith<$Res> {
+  __$$_FullCommentReplyViewCopyWithImpl(_$_FullCommentReplyView _value,
+      $Res Function(_$_FullCommentReplyView) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? commentReplyView = null,
+    Object? instanceHost = null,
+  }) {
+    return _then(_$_FullCommentReplyView(
+      commentReplyView: null == commentReplyView
+          ? _value.commentReplyView
+          : commentReplyView // ignore: cast_nullable_to_non_nullable
+              as CommentReplyView,
+      instanceHost: null == instanceHost
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+@modelSerde
+class _$_FullCommentReplyView extends _FullCommentReplyView {
+  const _$_FullCommentReplyView(
+      {required this.commentReplyView, required this.instanceHost})
+      : super._();
+
+  factory _$_FullCommentReplyView.fromJson(Map<String, dynamic> json) =>
+      _$$_FullCommentReplyViewFromJson(json);
+
+  @override
+  final CommentReplyView commentReplyView;
+  @override
+  final String instanceHost;
+
+  @override
+  String toString() {
+    return 'FullCommentReplyView(commentReplyView: $commentReplyView, instanceHost: $instanceHost)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_FullCommentReplyView &&
+            (identical(other.commentReplyView, commentReplyView) ||
+                other.commentReplyView == commentReplyView) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, commentReplyView, instanceHost);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_FullCommentReplyViewCopyWith<_$_FullCommentReplyView> get copyWith =>
+      __$$_FullCommentReplyViewCopyWithImpl<_$_FullCommentReplyView>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_FullCommentReplyViewToJson(
+      this,
+    );
+  }
+}
+
+abstract class _FullCommentReplyView extends FullCommentReplyView {
+  const factory _FullCommentReplyView(
+      {required final CommentReplyView commentReplyView,
+      required final String instanceHost}) = _$_FullCommentReplyView;
+  const _FullCommentReplyView._() : super._();
+
+  factory _FullCommentReplyView.fromJson(Map<String, dynamic> json) =
+      _$_FullCommentReplyView.fromJson;
+
+  @override
+  CommentReplyView get commentReplyView;
+  @override
+  String get instanceHost;
+  @override
+  @JsonKey(ignore: true)
+  _$$_FullCommentReplyViewCopyWith<_$_FullCommentReplyView> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 FullSiteView _$FullSiteViewFromJson(Map<String, dynamic> json) {
   return _FullSiteView.fromJson(json);
 }

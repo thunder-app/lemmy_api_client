@@ -7466,6 +7466,254 @@ abstract class _Comment extends Comment {
       throw _privateConstructorUsedError;
 }
 
+CommentReply _$CommentReplyFromJson(Map<String, dynamic> json) {
+  return _CommentReply.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CommentReply {
+  int get id => throw _privateConstructorUsedError;
+  int get recipientId => throw _privateConstructorUsedError;
+  int get commentId => throw _privateConstructorUsedError;
+  bool get read => throw _privateConstructorUsedError;
+  DateTime get published => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CommentReplyCopyWith<CommentReply> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CommentReplyCopyWith<$Res> {
+  factory $CommentReplyCopyWith(
+          CommentReply value, $Res Function(CommentReply) then) =
+      _$CommentReplyCopyWithImpl<$Res, CommentReply>;
+  @useResult
+  $Res call(
+      {int id,
+      int recipientId,
+      int commentId,
+      bool read,
+      DateTime published,
+      String instanceHost});
+}
+
+/// @nodoc
+class _$CommentReplyCopyWithImpl<$Res, $Val extends CommentReply>
+    implements $CommentReplyCopyWith<$Res> {
+  _$CommentReplyCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? recipientId = null,
+    Object? commentId = null,
+    Object? read = null,
+    Object? published = null,
+    Object? instanceHost = null,
+  }) {
+    return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      recipientId: null == recipientId
+          ? _value.recipientId
+          : recipientId // ignore: cast_nullable_to_non_nullable
+              as int,
+      commentId: null == commentId
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      read: null == read
+          ? _value.read
+          : read // ignore: cast_nullable_to_non_nullable
+              as bool,
+      published: null == published
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      instanceHost: null == instanceHost
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_CommentReplyCopyWith<$Res>
+    implements $CommentReplyCopyWith<$Res> {
+  factory _$$_CommentReplyCopyWith(
+          _$_CommentReply value, $Res Function(_$_CommentReply) then) =
+      __$$_CommentReplyCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {int id,
+      int recipientId,
+      int commentId,
+      bool read,
+      DateTime published,
+      String instanceHost});
+}
+
+/// @nodoc
+class __$$_CommentReplyCopyWithImpl<$Res>
+    extends _$CommentReplyCopyWithImpl<$Res, _$_CommentReply>
+    implements _$$_CommentReplyCopyWith<$Res> {
+  __$$_CommentReplyCopyWithImpl(
+      _$_CommentReply _value, $Res Function(_$_CommentReply) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? recipientId = null,
+    Object? commentId = null,
+    Object? read = null,
+    Object? published = null,
+    Object? instanceHost = null,
+  }) {
+    return _then(_$_CommentReply(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      recipientId: null == recipientId
+          ? _value.recipientId
+          : recipientId // ignore: cast_nullable_to_non_nullable
+              as int,
+      commentId: null == commentId
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      read: null == read
+          ? _value.read
+          : read // ignore: cast_nullable_to_non_nullable
+              as bool,
+      published: null == published
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      instanceHost: null == instanceHost
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+@modelSerde
+class _$_CommentReply extends _CommentReply {
+  const _$_CommentReply(
+      {required this.id,
+      required this.recipientId,
+      required this.commentId,
+      required this.read,
+      required this.published,
+      required this.instanceHost})
+      : super._();
+
+  factory _$_CommentReply.fromJson(Map<String, dynamic> json) =>
+      _$$_CommentReplyFromJson(json);
+
+  @override
+  final int id;
+  @override
+  final int recipientId;
+  @override
+  final int commentId;
+  @override
+  final bool read;
+  @override
+  final DateTime published;
+  @override
+  final String instanceHost;
+
+  @override
+  String toString() {
+    return 'CommentReply(id: $id, recipientId: $recipientId, commentId: $commentId, read: $read, published: $published, instanceHost: $instanceHost)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CommentReply &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.recipientId, recipientId) ||
+                other.recipientId == recipientId) &&
+            (identical(other.commentId, commentId) ||
+                other.commentId == commentId) &&
+            (identical(other.read, read) || other.read == read) &&
+            (identical(other.published, published) ||
+                other.published == published) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, id, recipientId, commentId, read, published, instanceHost);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_CommentReplyCopyWith<_$_CommentReply> get copyWith =>
+      __$$_CommentReplyCopyWithImpl<_$_CommentReply>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CommentReplyToJson(
+      this,
+    );
+  }
+}
+
+abstract class _CommentReply extends CommentReply {
+  const factory _CommentReply(
+      {required final int id,
+      required final int recipientId,
+      required final int commentId,
+      required final bool read,
+      required final DateTime published,
+      required final String instanceHost}) = _$_CommentReply;
+  const _CommentReply._() : super._();
+
+  factory _CommentReply.fromJson(Map<String, dynamic> json) =
+      _$_CommentReply.fromJson;
+
+  @override
+  int get id;
+  @override
+  int get recipientId;
+  @override
+  int get commentId;
+  @override
+  bool get read;
+  @override
+  DateTime get published;
+  @override
+  String get instanceHost;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CommentReplyCopyWith<_$_CommentReply> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 PersonMention _$PersonMentionFromJson(Map<String, dynamic> json) {
   return _PersonMention.fromJson(json);
 }
