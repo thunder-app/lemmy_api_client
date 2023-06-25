@@ -18,6 +18,7 @@ class Login with _$Login implements LemmyApiQuery<LoginResponse> {
   const factory Login({
     required String usernameOrEmail,
     required String password,
+    required String totp2faToken,
   }) = _Login;
 
   const Login._();

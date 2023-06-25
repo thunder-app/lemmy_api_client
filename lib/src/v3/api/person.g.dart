@@ -9,11 +9,13 @@ part of 'person.dart';
 _$_Login _$$_LoginFromJson(Map<String, dynamic> json) => _$_Login(
       usernameOrEmail: json['username_or_email'] as String,
       password: json['password'] as String,
+      totp2faToken: json['totp2fa_token'] as String,
     );
 
 Map<String, dynamic> _$$_LoginToJson(_$_Login instance) => <String, dynamic>{
       'username_or_email': instance.usernameOrEmail,
       'password': instance.password,
+      'totp2fa_token': instance.totp2faToken,
     };
 
 _$_Register _$$_RegisterFromJson(Map<String, dynamic> json) => _$_Register(
