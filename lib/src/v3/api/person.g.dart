@@ -9,7 +9,7 @@ part of 'person.dart';
 _$_Login _$$_LoginFromJson(Map<String, dynamic> json) => _$_Login(
       usernameOrEmail: json['username_or_email'] as String,
       password: json['password'] as String,
-      totp_2faToken: json['totp_2fa_token'] as String?,
+      totp2faToken: json['totp_2fa_token'] as String?,
     );
 
 Map<String, dynamic> _$$_LoginToJson(_$_Login instance) {
@@ -24,7 +24,7 @@ Map<String, dynamic> _$$_LoginToJson(_$_Login instance) {
     }
   }
 
-  writeNotNull('totp_2fa_token', instance.totp_2faToken);
+  writeNotNull('totp_2fa_token', instance.totp2faToken);
   return val;
 }
 
