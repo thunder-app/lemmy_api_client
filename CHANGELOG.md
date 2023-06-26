@@ -1,3 +1,6 @@
+## Unreleased
+- Add TOTP Login support
+
 ## v0.21.0 - 2022-05-12
 
 ### Changed
