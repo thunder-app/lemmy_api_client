@@ -200,7 +200,7 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
       ),
   'Login': (json) => WsEventLogin(
         const Login(usernameOrEmail: '', password: '',
-            totp2faToken: '').responseFactory(json),
+            totp_2faToken: '').responseFactory(json),
       ),
   'Register': (json) => WsEventRegister(
         const Register(

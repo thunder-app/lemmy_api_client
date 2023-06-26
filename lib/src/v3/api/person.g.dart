@@ -9,14 +9,24 @@ part of 'person.dart';
 _$_Login _$$_LoginFromJson(Map<String, dynamic> json) => _$_Login(
       usernameOrEmail: json['username_or_email'] as String,
       password: json['password'] as String,
-      totp2faToken: json['totp_2fa_token'] as String,
+      totp_2faToken: json['totp_2fa_token'] as String?,
     );
 
-Map<String, dynamic> _$$_LoginToJson(_$_Login instance) => <String, dynamic>{
-      'username_or_email': instance.usernameOrEmail,
-      'password': instance.password,
-      'totp_2fa_token': instance.totp2faToken,
-    };
+Map<String, dynamic> _$$_LoginToJson(_$_Login instance) {
+  final val = <String, dynamic>{
+    'username_or_email': instance.usernameOrEmail,
+    'password': instance.password,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('totp_2fa_token', instance.totp_2faToken);
+  return val;
+}
 
 _$_Register _$$_RegisterFromJson(Map<String, dynamic> json) => _$_Register(
       username: json['username'] as String,
