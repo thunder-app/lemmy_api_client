@@ -22,6 +22,8 @@ Login _$LoginFromJson(Map<String, dynamic> json) {
 mixin _$Login {
   String get usernameOrEmail => throw _privateConstructorUsedError;
   String get password => throw _privateConstructorUsedError;
+  @JsonKey(name: 'totp_2fa_token')
+  String? get totp2faToken => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -33,7 +35,10 @@ abstract class $LoginCopyWith<$Res> {
   factory $LoginCopyWith(Login value, $Res Function(Login) then) =
       _$LoginCopyWithImpl<$Res, Login>;
   @useResult
-  $Res call({String usernameOrEmail, String password});
+  $Res call(
+      {String usernameOrEmail,
+      String password,
+      @JsonKey(name: 'totp_2fa_token') String? totp2faToken});
 }
 
 /// @nodoc
@@ -51,6 +56,7 @@ class _$LoginCopyWithImpl<$Res, $Val extends Login>
   $Res call({
     Object? usernameOrEmail = null,
     Object? password = null,
+    Object? totp2faToken = freezed,
   }) {
     return _then(_value.copyWith(
       usernameOrEmail: null == usernameOrEmail
@@ -61,6 +67,10 @@ class _$LoginCopyWithImpl<$Res, $Val extends Login>
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
+      totp2faToken: freezed == totp2faToken
+          ? _value.totp2faToken
+          : totp2faToken // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -71,7 +81,10 @@ abstract class _$$_LoginCopyWith<$Res> implements $LoginCopyWith<$Res> {
       __$$_LoginCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String usernameOrEmail, String password});
+  $Res call(
+      {String usernameOrEmail,
+      String password,
+      @JsonKey(name: 'totp_2fa_token') String? totp2faToken});
 }
 
 /// @nodoc
@@ -85,6 +98,7 @@ class __$$_LoginCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res, _$_Login>
   $Res call({
     Object? usernameOrEmail = null,
     Object? password = null,
+    Object? totp2faToken = freezed,
   }) {
     return _then(_$_Login(
       usernameOrEmail: null == usernameOrEmail
@@ -95,6 +109,10 @@ class __$$_LoginCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res, _$_Login>
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
+      totp2faToken: freezed == totp2faToken
+          ? _value.totp2faToken
+          : totp2faToken // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -103,7 +121,10 @@ class __$$_LoginCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res, _$_Login>
 
 @apiSerde
 class _$_Login extends _Login {
-  const _$_Login({required this.usernameOrEmail, required this.password})
+  const _$_Login(
+      {required this.usernameOrEmail,
+      required this.password,
+      @JsonKey(name: 'totp_2fa_token') this.totp2faToken})
       : super._();
 
   factory _$_Login.fromJson(Map<String, dynamic> json) =>
@@ -113,10 +134,13 @@ class _$_Login extends _Login {
   final String usernameOrEmail;
   @override
   final String password;
+  @override
+  @JsonKey(name: 'totp_2fa_token')
+  final String? totp2faToken;
 
   @override
   String toString() {
-    return 'Login(usernameOrEmail: $usernameOrEmail, password: $password)';
+    return 'Login(usernameOrEmail: $usernameOrEmail, password: $password, totp2faToken: $totp2faToken)';
   }
 
   @override
@@ -127,12 +151,15 @@ class _$_Login extends _Login {
             (identical(other.usernameOrEmail, usernameOrEmail) ||
                 other.usernameOrEmail == usernameOrEmail) &&
             (identical(other.password, password) ||
-                other.password == password));
+                other.password == password) &&
+            (identical(other.totp2faToken, totp2faToken) ||
+                other.totp2faToken == totp2faToken));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, usernameOrEmail, password);
+  int get hashCode =>
+      Object.hash(runtimeType, usernameOrEmail, password, totp2faToken);
 
   @JsonKey(ignore: true)
   @override
@@ -151,7 +178,8 @@ class _$_Login extends _Login {
 abstract class _Login extends Login {
   const factory _Login(
       {required final String usernameOrEmail,
-      required final String password}) = _$_Login;
+      required final String password,
+      @JsonKey(name: 'totp_2fa_token') final String? totp2faToken}) = _$_Login;
   const _Login._() : super._();
 
   factory _Login.fromJson(Map<String, dynamic> json) = _$_Login.fromJson;
@@ -160,6 +188,9 @@ abstract class _Login extends Login {
   String get usernameOrEmail;
   @override
   String get password;
+  @override
+  @JsonKey(name: 'totp_2fa_token')
+  String? get totp2faToken;
   @override
   @JsonKey(ignore: true)
   _$$_LoginCopyWith<_$_Login> get copyWith =>
