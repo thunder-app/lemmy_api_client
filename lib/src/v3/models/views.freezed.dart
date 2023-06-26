@@ -2287,6 +2287,7 @@ CommentView _$CommentViewFromJson(Map<String, dynamic> json) {
 mixin _$CommentView {
   Comment get comment => throw _privateConstructorUsedError;
   PersonSafe get creator => throw _privateConstructorUsedError;
+  CommentReply? get commentReply => throw _privateConstructorUsedError;
   PersonSafe? get recipient => throw _privateConstructorUsedError;
   Post get post => throw _privateConstructorUsedError;
   CommunitySafe get community => throw _privateConstructorUsedError;
@@ -2313,6 +2314,7 @@ abstract class $CommentViewCopyWith<$Res> {
   $Res call(
       {Comment comment,
       PersonSafe creator,
+      CommentReply? commentReply,
       PersonSafe? recipient,
       Post post,
       CommunitySafe community,
@@ -2326,6 +2328,7 @@ abstract class $CommentViewCopyWith<$Res> {
 
   $CommentCopyWith<$Res> get comment;
   $PersonSafeCopyWith<$Res> get creator;
+  $CommentReplyCopyWith<$Res>? get commentReply;
   $PersonSafeCopyWith<$Res>? get recipient;
   $PostCopyWith<$Res> get post;
   $CommunitySafeCopyWith<$Res> get community;
@@ -2347,6 +2350,7 @@ class _$CommentViewCopyWithImpl<$Res, $Val extends CommentView>
   $Res call({
     Object? comment = null,
     Object? creator = null,
+    Object? commentReply = freezed,
     Object? recipient = freezed,
     Object? post = null,
     Object? community = null,
@@ -2367,6 +2371,10 @@ class _$CommentViewCopyWithImpl<$Res, $Val extends CommentView>
           ? _value.creator
           : creator // ignore: cast_nullable_to_non_nullable
               as PersonSafe,
+      commentReply: freezed == commentReply
+          ? _value.commentReply
+          : commentReply // ignore: cast_nullable_to_non_nullable
+              as CommentReply?,
       recipient: freezed == recipient
           ? _value.recipient
           : recipient // ignore: cast_nullable_to_non_nullable
@@ -2428,6 +2436,18 @@ class _$CommentViewCopyWithImpl<$Res, $Val extends CommentView>
 
   @override
   @pragma('vm:prefer-inline')
+  $CommentReplyCopyWith<$Res>? get commentReply {
+    if (_value.commentReply == null) {
+      return null;
+    }
+
+    return $CommentReplyCopyWith<$Res>(_value.commentReply!, (value) {
+      return _then(_value.copyWith(commentReply: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $PersonSafeCopyWith<$Res>? get recipient {
     if (_value.recipient == null) {
       return null;
@@ -2474,6 +2494,7 @@ abstract class _$$_CommentViewCopyWith<$Res>
   $Res call(
       {Comment comment,
       PersonSafe creator,
+      CommentReply? commentReply,
       PersonSafe? recipient,
       Post post,
       CommunitySafe community,
@@ -2489,6 +2510,8 @@ abstract class _$$_CommentViewCopyWith<$Res>
   $CommentCopyWith<$Res> get comment;
   @override
   $PersonSafeCopyWith<$Res> get creator;
+  @override
+  $CommentReplyCopyWith<$Res>? get commentReply;
   @override
   $PersonSafeCopyWith<$Res>? get recipient;
   @override
@@ -2512,6 +2535,7 @@ class __$$_CommentViewCopyWithImpl<$Res>
   $Res call({
     Object? comment = null,
     Object? creator = null,
+    Object? commentReply = freezed,
     Object? recipient = freezed,
     Object? post = null,
     Object? community = null,
@@ -2532,6 +2556,10 @@ class __$$_CommentViewCopyWithImpl<$Res>
           ? _value.creator
           : creator // ignore: cast_nullable_to_non_nullable
               as PersonSafe,
+      commentReply: freezed == commentReply
+          ? _value.commentReply
+          : commentReply // ignore: cast_nullable_to_non_nullable
+              as CommentReply?,
       recipient: freezed == recipient
           ? _value.recipient
           : recipient // ignore: cast_nullable_to_non_nullable
@@ -2583,6 +2611,7 @@ class _$_CommentView extends _CommentView {
   const _$_CommentView(
       {required this.comment,
       required this.creator,
+      this.commentReply,
       this.recipient,
       required this.post,
       required this.community,
@@ -2602,6 +2631,8 @@ class _$_CommentView extends _CommentView {
   final Comment comment;
   @override
   final PersonSafe creator;
+  @override
+  final CommentReply? commentReply;
   @override
   final PersonSafe? recipient;
   @override
@@ -2626,7 +2657,7 @@ class _$_CommentView extends _CommentView {
 
   @override
   String toString() {
-    return 'CommentView(comment: $comment, creator: $creator, recipient: $recipient, post: $post, community: $community, counts: $counts, creatorBannedFromCommunity: $creatorBannedFromCommunity, subscribed: $subscribed, saved: $saved, creatorBlocked: $creatorBlocked, myVote: $myVote, instanceHost: $instanceHost)';
+    return 'CommentView(comment: $comment, creator: $creator, commentReply: $commentReply, recipient: $recipient, post: $post, community: $community, counts: $counts, creatorBannedFromCommunity: $creatorBannedFromCommunity, subscribed: $subscribed, saved: $saved, creatorBlocked: $creatorBlocked, myVote: $myVote, instanceHost: $instanceHost)';
   }
 
   @override
@@ -2636,6 +2667,8 @@ class _$_CommentView extends _CommentView {
             other is _$_CommentView &&
             (identical(other.comment, comment) || other.comment == comment) &&
             (identical(other.creator, creator) || other.creator == creator) &&
+            (identical(other.commentReply, commentReply) ||
+                other.commentReply == commentReply) &&
             (identical(other.recipient, recipient) ||
                 other.recipient == recipient) &&
             (identical(other.post, post) || other.post == post) &&
@@ -2662,6 +2695,7 @@ class _$_CommentView extends _CommentView {
       runtimeType,
       comment,
       creator,
+      commentReply,
       recipient,
       post,
       community,
@@ -2691,6 +2725,7 @@ abstract class _CommentView extends CommentView {
   const factory _CommentView(
       {required final Comment comment,
       required final PersonSafe creator,
+      final CommentReply? commentReply,
       final PersonSafe? recipient,
       required final Post post,
       required final CommunitySafe community,
@@ -2710,6 +2745,8 @@ abstract class _CommentView extends CommentView {
   Comment get comment;
   @override
   PersonSafe get creator;
+  @override
+  CommentReply? get commentReply;
   @override
   PersonSafe? get recipient;
   @override
@@ -2733,6 +2770,496 @@ abstract class _CommentView extends CommentView {
   @override
   @JsonKey(ignore: true)
   _$$_CommentViewCopyWith<_$_CommentView> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+CommentReplyView _$CommentReplyViewFromJson(Map<String, dynamic> json) {
+  return _CommentReplyView.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CommentReplyView {
+  CommentReply get commentReply => throw _privateConstructorUsedError;
+  Comment get comment => throw _privateConstructorUsedError;
+  PersonSafe get creator => throw _privateConstructorUsedError;
+  Post get post => throw _privateConstructorUsedError;
+  CommunitySafe get community => throw _privateConstructorUsedError;
+  PersonSafe? get recipient => throw _privateConstructorUsedError;
+  CommentAggregates get counts => throw _privateConstructorUsedError;
+  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
+  SubscribedType get subscribed => throw _privateConstructorUsedError;
+  bool get saved => throw _privateConstructorUsedError;
+  bool get creatorBlocked => throw _privateConstructorUsedError;
+  VoteType? get myVote => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CommentReplyViewCopyWith<CommentReplyView> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CommentReplyViewCopyWith<$Res> {
+  factory $CommentReplyViewCopyWith(
+          CommentReplyView value, $Res Function(CommentReplyView) then) =
+      _$CommentReplyViewCopyWithImpl<$Res, CommentReplyView>;
+  @useResult
+  $Res call(
+      {CommentReply commentReply,
+      Comment comment,
+      PersonSafe creator,
+      Post post,
+      CommunitySafe community,
+      PersonSafe? recipient,
+      CommentAggregates counts,
+      bool creatorBannedFromCommunity,
+      SubscribedType subscribed,
+      bool saved,
+      bool creatorBlocked,
+      VoteType? myVote,
+      String instanceHost});
+
+  $CommentReplyCopyWith<$Res> get commentReply;
+  $CommentCopyWith<$Res> get comment;
+  $PersonSafeCopyWith<$Res> get creator;
+  $PostCopyWith<$Res> get post;
+  $CommunitySafeCopyWith<$Res> get community;
+  $PersonSafeCopyWith<$Res>? get recipient;
+  $CommentAggregatesCopyWith<$Res> get counts;
+}
+
+/// @nodoc
+class _$CommentReplyViewCopyWithImpl<$Res, $Val extends CommentReplyView>
+    implements $CommentReplyViewCopyWith<$Res> {
+  _$CommentReplyViewCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? commentReply = null,
+    Object? comment = null,
+    Object? creator = null,
+    Object? post = null,
+    Object? community = null,
+    Object? recipient = freezed,
+    Object? counts = null,
+    Object? creatorBannedFromCommunity = null,
+    Object? subscribed = null,
+    Object? saved = null,
+    Object? creatorBlocked = null,
+    Object? myVote = freezed,
+    Object? instanceHost = null,
+  }) {
+    return _then(_value.copyWith(
+      commentReply: null == commentReply
+          ? _value.commentReply
+          : commentReply // ignore: cast_nullable_to_non_nullable
+              as CommentReply,
+      comment: null == comment
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as Comment,
+      creator: null == creator
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as PersonSafe,
+      post: null == post
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: null == community
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      recipient: freezed == recipient
+          ? _value.recipient
+          : recipient // ignore: cast_nullable_to_non_nullable
+              as PersonSafe?,
+      counts: null == counts
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as CommentAggregates,
+      creatorBannedFromCommunity: null == creatorBannedFromCommunity
+          ? _value.creatorBannedFromCommunity
+          : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+      subscribed: null == subscribed
+          ? _value.subscribed
+          : subscribed // ignore: cast_nullable_to_non_nullable
+              as SubscribedType,
+      saved: null == saved
+          ? _value.saved
+          : saved // ignore: cast_nullable_to_non_nullable
+              as bool,
+      creatorBlocked: null == creatorBlocked
+          ? _value.creatorBlocked
+          : creatorBlocked // ignore: cast_nullable_to_non_nullable
+              as bool,
+      myVote: freezed == myVote
+          ? _value.myVote
+          : myVote // ignore: cast_nullable_to_non_nullable
+              as VoteType?,
+      instanceHost: null == instanceHost
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CommentReplyCopyWith<$Res> get commentReply {
+    return $CommentReplyCopyWith<$Res>(_value.commentReply, (value) {
+      return _then(_value.copyWith(commentReply: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CommentCopyWith<$Res> get comment {
+    return $CommentCopyWith<$Res>(_value.comment, (value) {
+      return _then(_value.copyWith(comment: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PersonSafeCopyWith<$Res> get creator {
+    return $PersonSafeCopyWith<$Res>(_value.creator, (value) {
+      return _then(_value.copyWith(creator: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PostCopyWith<$Res> get post {
+    return $PostCopyWith<$Res>(_value.post, (value) {
+      return _then(_value.copyWith(post: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CommunitySafeCopyWith<$Res> get community {
+    return $CommunitySafeCopyWith<$Res>(_value.community, (value) {
+      return _then(_value.copyWith(community: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PersonSafeCopyWith<$Res>? get recipient {
+    if (_value.recipient == null) {
+      return null;
+    }
+
+    return $PersonSafeCopyWith<$Res>(_value.recipient!, (value) {
+      return _then(_value.copyWith(recipient: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CommentAggregatesCopyWith<$Res> get counts {
+    return $CommentAggregatesCopyWith<$Res>(_value.counts, (value) {
+      return _then(_value.copyWith(counts: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CommentReplyViewCopyWith<$Res>
+    implements $CommentReplyViewCopyWith<$Res> {
+  factory _$$_CommentReplyViewCopyWith(
+          _$_CommentReplyView value, $Res Function(_$_CommentReplyView) then) =
+      __$$_CommentReplyViewCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {CommentReply commentReply,
+      Comment comment,
+      PersonSafe creator,
+      Post post,
+      CommunitySafe community,
+      PersonSafe? recipient,
+      CommentAggregates counts,
+      bool creatorBannedFromCommunity,
+      SubscribedType subscribed,
+      bool saved,
+      bool creatorBlocked,
+      VoteType? myVote,
+      String instanceHost});
+
+  @override
+  $CommentReplyCopyWith<$Res> get commentReply;
+  @override
+  $CommentCopyWith<$Res> get comment;
+  @override
+  $PersonSafeCopyWith<$Res> get creator;
+  @override
+  $PostCopyWith<$Res> get post;
+  @override
+  $CommunitySafeCopyWith<$Res> get community;
+  @override
+  $PersonSafeCopyWith<$Res>? get recipient;
+  @override
+  $CommentAggregatesCopyWith<$Res> get counts;
+}
+
+/// @nodoc
+class __$$_CommentReplyViewCopyWithImpl<$Res>
+    extends _$CommentReplyViewCopyWithImpl<$Res, _$_CommentReplyView>
+    implements _$$_CommentReplyViewCopyWith<$Res> {
+  __$$_CommentReplyViewCopyWithImpl(
+      _$_CommentReplyView _value, $Res Function(_$_CommentReplyView) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? commentReply = null,
+    Object? comment = null,
+    Object? creator = null,
+    Object? post = null,
+    Object? community = null,
+    Object? recipient = freezed,
+    Object? counts = null,
+    Object? creatorBannedFromCommunity = null,
+    Object? subscribed = null,
+    Object? saved = null,
+    Object? creatorBlocked = null,
+    Object? myVote = freezed,
+    Object? instanceHost = null,
+  }) {
+    return _then(_$_CommentReplyView(
+      commentReply: null == commentReply
+          ? _value.commentReply
+          : commentReply // ignore: cast_nullable_to_non_nullable
+              as CommentReply,
+      comment: null == comment
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as Comment,
+      creator: null == creator
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as PersonSafe,
+      post: null == post
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: null == community
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      recipient: freezed == recipient
+          ? _value.recipient
+          : recipient // ignore: cast_nullable_to_non_nullable
+              as PersonSafe?,
+      counts: null == counts
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as CommentAggregates,
+      creatorBannedFromCommunity: null == creatorBannedFromCommunity
+          ? _value.creatorBannedFromCommunity
+          : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+      subscribed: null == subscribed
+          ? _value.subscribed
+          : subscribed // ignore: cast_nullable_to_non_nullable
+              as SubscribedType,
+      saved: null == saved
+          ? _value.saved
+          : saved // ignore: cast_nullable_to_non_nullable
+              as bool,
+      creatorBlocked: null == creatorBlocked
+          ? _value.creatorBlocked
+          : creatorBlocked // ignore: cast_nullable_to_non_nullable
+              as bool,
+      myVote: freezed == myVote
+          ? _value.myVote
+          : myVote // ignore: cast_nullable_to_non_nullable
+              as VoteType?,
+      instanceHost: null == instanceHost
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+@modelSerde
+class _$_CommentReplyView extends _CommentReplyView {
+  const _$_CommentReplyView(
+      {required this.commentReply,
+      required this.comment,
+      required this.creator,
+      required this.post,
+      required this.community,
+      this.recipient,
+      required this.counts,
+      required this.creatorBannedFromCommunity,
+      this.subscribed = SubscribedType.notSubscribed,
+      required this.saved,
+      required this.creatorBlocked,
+      this.myVote,
+      required this.instanceHost})
+      : super._();
+
+  factory _$_CommentReplyView.fromJson(Map<String, dynamic> json) =>
+      _$$_CommentReplyViewFromJson(json);
+
+  @override
+  final CommentReply commentReply;
+  @override
+  final Comment comment;
+  @override
+  final PersonSafe creator;
+  @override
+  final Post post;
+  @override
+  final CommunitySafe community;
+  @override
+  final PersonSafe? recipient;
+  @override
+  final CommentAggregates counts;
+  @override
+  final bool creatorBannedFromCommunity;
+  @override
+  @JsonKey()
+  final SubscribedType subscribed;
+  @override
+  final bool saved;
+  @override
+  final bool creatorBlocked;
+  @override
+  final VoteType? myVote;
+  @override
+  final String instanceHost;
+
+  @override
+  String toString() {
+    return 'CommentReplyView(commentReply: $commentReply, comment: $comment, creator: $creator, post: $post, community: $community, recipient: $recipient, counts: $counts, creatorBannedFromCommunity: $creatorBannedFromCommunity, subscribed: $subscribed, saved: $saved, creatorBlocked: $creatorBlocked, myVote: $myVote, instanceHost: $instanceHost)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CommentReplyView &&
+            (identical(other.commentReply, commentReply) ||
+                other.commentReply == commentReply) &&
+            (identical(other.comment, comment) || other.comment == comment) &&
+            (identical(other.creator, creator) || other.creator == creator) &&
+            (identical(other.post, post) || other.post == post) &&
+            (identical(other.community, community) ||
+                other.community == community) &&
+            (identical(other.recipient, recipient) ||
+                other.recipient == recipient) &&
+            (identical(other.counts, counts) || other.counts == counts) &&
+            (identical(other.creatorBannedFromCommunity,
+                    creatorBannedFromCommunity) ||
+                other.creatorBannedFromCommunity ==
+                    creatorBannedFromCommunity) &&
+            (identical(other.subscribed, subscribed) ||
+                other.subscribed == subscribed) &&
+            (identical(other.saved, saved) || other.saved == saved) &&
+            (identical(other.creatorBlocked, creatorBlocked) ||
+                other.creatorBlocked == creatorBlocked) &&
+            (identical(other.myVote, myVote) || other.myVote == myVote) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      commentReply,
+      comment,
+      creator,
+      post,
+      community,
+      recipient,
+      counts,
+      creatorBannedFromCommunity,
+      subscribed,
+      saved,
+      creatorBlocked,
+      myVote,
+      instanceHost);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_CommentReplyViewCopyWith<_$_CommentReplyView> get copyWith =>
+      __$$_CommentReplyViewCopyWithImpl<_$_CommentReplyView>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CommentReplyViewToJson(
+      this,
+    );
+  }
+}
+
+abstract class _CommentReplyView extends CommentReplyView {
+  const factory _CommentReplyView(
+      {required final CommentReply commentReply,
+      required final Comment comment,
+      required final PersonSafe creator,
+      required final Post post,
+      required final CommunitySafe community,
+      final PersonSafe? recipient,
+      required final CommentAggregates counts,
+      required final bool creatorBannedFromCommunity,
+      final SubscribedType subscribed,
+      required final bool saved,
+      required final bool creatorBlocked,
+      final VoteType? myVote,
+      required final String instanceHost}) = _$_CommentReplyView;
+  const _CommentReplyView._() : super._();
+
+  factory _CommentReplyView.fromJson(Map<String, dynamic> json) =
+      _$_CommentReplyView.fromJson;
+
+  @override
+  CommentReply get commentReply;
+  @override
+  Comment get comment;
+  @override
+  PersonSafe get creator;
+  @override
+  Post get post;
+  @override
+  CommunitySafe get community;
+  @override
+  PersonSafe? get recipient;
+  @override
+  CommentAggregates get counts;
+  @override
+  bool get creatorBannedFromCommunity;
+  @override
+  SubscribedType get subscribed;
+  @override
+  bool get saved;
+  @override
+  bool get creatorBlocked;
+  @override
+  VoteType? get myVote;
+  @override
+  String get instanceHost;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CommentReplyViewCopyWith<_$_CommentReplyView> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
