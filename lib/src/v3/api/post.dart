@@ -20,16 +20,14 @@ class GetPost with _$GetPost implements LemmyApiQuery<FullPostView> {
   }) = _GetPost;
 
   const GetPost._();
-  factory GetPost.fromJson(Map<String, dynamic> json) =>
-      _$GetPostFromJson(json);
+  factory GetPost.fromJson(Map<String, dynamic> json) => _$GetPostFromJson(json);
 
   final path = '/post';
 
   final httpMethod = HttpMethod.get;
 
   @override
-  FullPostView responseFactory(Map<String, dynamic> json) =>
-      FullPostView.fromJson(json);
+  FullPostView responseFactory(Map<String, dynamic> json) => FullPostView.fromJson(json);
 }
 
 @freezed
@@ -46,16 +44,14 @@ class CreatePost with _$CreatePost implements LemmyApiQuery<PostView> {
   }) = _CreatePost;
 
   const CreatePost._();
-  factory CreatePost.fromJson(Map<String, dynamic> json) =>
-      _$CreatePostFromJson(json);
+  factory CreatePost.fromJson(Map<String, dynamic> json) => _$CreatePostFromJson(json);
 
   final path = '/post';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  PostView responseFactory(Map<String, dynamic> json) =>
-      PostView.fromJson(json['post_view']);
+  PostView responseFactory(Map<String, dynamic> json) => PostView.fromJson(json['post_view']);
 }
 
 @freezed
@@ -73,16 +69,14 @@ class GetPosts with _$GetPosts implements LemmyApiQuery<List<PostView>> {
   }) = _GetPosts;
 
   const GetPosts._();
-  factory GetPosts.fromJson(Map<String, dynamic> json) =>
-      _$GetPostsFromJson(json);
+  factory GetPosts.fromJson(Map<String, dynamic> json) => _$GetPostsFromJson(json);
 
   final path = '/post/list';
 
   final httpMethod = HttpMethod.get;
 
   @override
-  List<PostView> responseFactory(Map<String, dynamic> json) =>
-      (json['posts'] as List).map((dynamic e) => PostView.fromJson(e)).toList();
+  List<PostView> responseFactory(Map<String, dynamic> json) => (json['posts'] as List).map((dynamic e) => PostView.fromJson(e)).toList();
 }
 
 @freezed
@@ -95,16 +89,14 @@ class CreatePostLike with _$CreatePostLike implements LemmyApiQuery<PostView> {
   }) = _CreatePostLike;
 
   const CreatePostLike._();
-  factory CreatePostLike.fromJson(Map<String, dynamic> json) =>
-      _$CreatePostLikeFromJson(json);
+  factory CreatePostLike.fromJson(Map<String, dynamic> json) => _$CreatePostLikeFromJson(json);
 
   final path = '/post/like';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  PostView responseFactory(Map<String, dynamic> json) =>
-      PostView.fromJson(json['post_view']);
+  PostView responseFactory(Map<String, dynamic> json) => PostView.fromJson(json['post_view']);
 }
 
 @freezed
@@ -120,16 +112,14 @@ class EditPost with _$EditPost implements LemmyApiQuery<PostView> {
   }) = _EditPost;
 
   const EditPost._();
-  factory EditPost.fromJson(Map<String, dynamic> json) =>
-      _$EditPostFromJson(json);
+  factory EditPost.fromJson(Map<String, dynamic> json) => _$EditPostFromJson(json);
 
   final path = '/post';
 
   final httpMethod = HttpMethod.put;
 
   @override
-  PostView responseFactory(Map<String, dynamic> json) =>
-      PostView.fromJson(json['post_view']);
+  PostView responseFactory(Map<String, dynamic> json) => PostView.fromJson(json['post_view']);
 }
 
 @freezed
@@ -142,16 +132,14 @@ class DeletePost with _$DeletePost implements LemmyApiQuery<PostView> {
   }) = _DeletePost;
 
   const DeletePost._();
-  factory DeletePost.fromJson(Map<String, dynamic> json) =>
-      _$DeletePostFromJson(json);
+  factory DeletePost.fromJson(Map<String, dynamic> json) => _$DeletePostFromJson(json);
 
   final path = '/post/delete';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  PostView responseFactory(Map<String, dynamic> json) =>
-      PostView.fromJson(json['post_view']);
+  PostView responseFactory(Map<String, dynamic> json) => PostView.fromJson(json['post_view']);
 }
 
 @freezed
@@ -165,16 +153,14 @@ class RemovePost with _$RemovePost implements LemmyApiQuery<PostView> {
   }) = _RemovePost;
 
   const RemovePost._();
-  factory RemovePost.fromJson(Map<String, dynamic> json) =>
-      _$RemovePostFromJson(json);
+  factory RemovePost.fromJson(Map<String, dynamic> json) => _$RemovePostFromJson(json);
 
   final path = '/post/remove';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  PostView responseFactory(Map<String, dynamic> json) =>
-      PostView.fromJson(json['post_view']);
+  PostView responseFactory(Map<String, dynamic> json) => PostView.fromJson(json['post_view']);
 }
 
 @freezed
@@ -187,16 +173,14 @@ class LockPost with _$LockPost implements LemmyApiQuery<PostView> {
   }) = _LockPost;
 
   const LockPost._();
-  factory LockPost.fromJson(Map<String, dynamic> json) =>
-      _$LockPostFromJson(json);
+  factory LockPost.fromJson(Map<String, dynamic> json) => _$LockPostFromJson(json);
 
   final path = '/post/lock';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  PostView responseFactory(Map<String, dynamic> json) =>
-      PostView.fromJson(json['post_view']);
+  PostView responseFactory(Map<String, dynamic> json) => PostView.fromJson(json['post_view']);
 }
 
 @freezed
@@ -209,16 +193,14 @@ class StickyPost with _$StickyPost implements LemmyApiQuery<PostView> {
   }) = _StickyPost;
 
   const StickyPost._();
-  factory StickyPost.fromJson(Map<String, dynamic> json) =>
-      _$StickyPostFromJson(json);
+  factory StickyPost.fromJson(Map<String, dynamic> json) => _$StickyPostFromJson(json);
 
   final path = '/post/sticky';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  PostView responseFactory(Map<String, dynamic> json) =>
-      PostView.fromJson(json['post_view']);
+  PostView responseFactory(Map<String, dynamic> json) => PostView.fromJson(json['post_view']);
 }
 
 @freezed
@@ -231,44 +213,36 @@ class SavePost with _$SavePost implements LemmyApiQuery<PostView> {
   }) = _SavePost;
 
   const SavePost._();
-  factory SavePost.fromJson(Map<String, dynamic> json) =>
-      _$SavePostFromJson(json);
+  factory SavePost.fromJson(Map<String, dynamic> json) => _$SavePostFromJson(json);
 
   final path = '/post/save';
 
   final httpMethod = HttpMethod.put;
 
   @override
-  PostView responseFactory(Map<String, dynamic> json) =>
-      PostView.fromJson(json['post_view']);
+  PostView responseFactory(Map<String, dynamic> json) => PostView.fromJson(json['post_view']);
 }
 
 @freezed
-class GetSiteMetadata
-    with _$GetSiteMetadata
-    implements LemmyApiQuery<SiteMetadata> {
+class GetSiteMetadata with _$GetSiteMetadata implements LemmyApiQuery<SiteMetadata> {
   @apiSerde
   const factory GetSiteMetadata({
     required String url,
   }) = _GetSiteMetadata;
 
   const GetSiteMetadata._();
-  factory GetSiteMetadata.fromJson(Map<String, dynamic> json) =>
-      _$GetSiteMetadataFromJson(json);
+  factory GetSiteMetadata.fromJson(Map<String, dynamic> json) => _$GetSiteMetadataFromJson(json);
 
   final path = '/post/site_metadata';
 
   final httpMethod = HttpMethod.get;
 
   @override
-  SiteMetadata responseFactory(Map<String, dynamic> json) =>
-      SiteMetadata.fromJson(json['metadata']);
+  SiteMetadata responseFactory(Map<String, dynamic> json) => SiteMetadata.fromJson(json['metadata']);
 }
 
 @freezed
-class CreatePostReport
-    with _$CreatePostReport
-    implements LemmyApiQuery<PostReportView> {
+class CreatePostReport with _$CreatePostReport implements LemmyApiQuery<PostReportView> {
   @apiSerde
   const factory CreatePostReport({
     required int postId,
@@ -277,22 +251,18 @@ class CreatePostReport
   }) = _CreatePostReport;
 
   const CreatePostReport._();
-  factory CreatePostReport.fromJson(Map<String, dynamic> json) =>
-      _$CreatePostReportFromJson(json);
+  factory CreatePostReport.fromJson(Map<String, dynamic> json) => _$CreatePostReportFromJson(json);
 
   final path = '/post/report';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  PostReportView responseFactory(Map<String, dynamic> json) =>
-      PostReportView.fromJson(json['post_report_view']);
+  PostReportView responseFactory(Map<String, dynamic> json) => PostReportView.fromJson(json['post_report_view']);
 }
 
 @freezed
-class ResolvePostReport
-    with _$ResolvePostReport
-    implements LemmyApiQuery<PostReportView> {
+class ResolvePostReport with _$ResolvePostReport implements LemmyApiQuery<PostReportView> {
   @apiSerde
   const factory ResolvePostReport({
     required int reportId,
@@ -301,22 +271,18 @@ class ResolvePostReport
   }) = _ResolvePostReport;
 
   const ResolvePostReport._();
-  factory ResolvePostReport.fromJson(Map<String, dynamic> json) =>
-      _$ResolvePostReportFromJson(json);
+  factory ResolvePostReport.fromJson(Map<String, dynamic> json) => _$ResolvePostReportFromJson(json);
 
   final path = '/post/report/resolve';
 
   final httpMethod = HttpMethod.put;
 
   @override
-  PostReportView responseFactory(Map<String, dynamic> json) =>
-      PostReportView.fromJson(json['post_report_view']);
+  PostReportView responseFactory(Map<String, dynamic> json) => PostReportView.fromJson(json['post_report_view']);
 }
 
 @freezed
-class ListPostReports
-    with _$ListPostReports
-    implements LemmyApiQuery<List<PostReportView>> {
+class ListPostReports with _$ListPostReports implements LemmyApiQuery<List<PostReportView>> {
   @apiSerde
   const factory ListPostReports({
     int? page,
@@ -327,16 +293,32 @@ class ListPostReports
   }) = _ListPostReports;
 
   const ListPostReports._();
-  factory ListPostReports.fromJson(Map<String, dynamic> json) =>
-      _$ListPostReportsFromJson(json);
+  factory ListPostReports.fromJson(Map<String, dynamic> json) => _$ListPostReportsFromJson(json);
 
   final path = '/post/report/list';
 
   final httpMethod = HttpMethod.get;
 
   @override
-  List<PostReportView> responseFactory(Map<String, dynamic> json) =>
-      (json['post_reports'] as List)
-          .map((dynamic e) => PostReportView.fromJson(e))
-          .toList();
+  List<PostReportView> responseFactory(Map<String, dynamic> json) => (json['post_reports'] as List).map((dynamic e) => PostReportView.fromJson(e)).toList();
+}
+
+@freezed
+class MarkPostAsRead with _$MarkPostAsRead implements LemmyApiQuery<PostView> {
+  @apiSerde
+  const factory MarkPostAsRead({
+    required int postId,
+    required bool read,
+    required String auth,
+  }) = _MarkPostAsRead;
+
+  const MarkPostAsRead._();
+  factory MarkPostAsRead.fromJson(Map<String, dynamic> json) => _$MarkPostAsReadFromJson(json);
+
+  final path = '/post/mark_as_read';
+
+  final httpMethod = HttpMethod.post;
+
+  @override
+  PostView responseFactory(Map<String, dynamic> json) => PostView.fromJson(json['post_view']);
 }
