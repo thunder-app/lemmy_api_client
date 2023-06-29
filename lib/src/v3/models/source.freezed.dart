@@ -1438,7 +1438,7 @@ mixin _$LocalSite {
   String? get slurFilterRegex => throw _privateConstructorUsedError;
   int get actorNameMaxLength => throw _privateConstructorUsedError;
   bool get federationEnabled => throw _privateConstructorUsedError;
-  int get federationWorkerCount => throw _privateConstructorUsedError;
+  int? get federationWorkerCount => throw _privateConstructorUsedError;
   bool get captchaEnabled => throw _privateConstructorUsedError;
   String get captchaDifficulty => throw _privateConstructorUsedError;
   String get published => throw _privateConstructorUsedError;
@@ -1475,7 +1475,7 @@ abstract class $LocalSiteCopyWith<$Res> {
       String? slurFilterRegex,
       int actorNameMaxLength,
       bool federationEnabled,
-      int federationWorkerCount,
+      int? federationWorkerCount,
       bool captchaEnabled,
       String captchaDifficulty,
       String published,
@@ -1514,7 +1514,7 @@ class _$LocalSiteCopyWithImpl<$Res, $Val extends LocalSite>
     Object? slurFilterRegex = freezed,
     Object? actorNameMaxLength = null,
     Object? federationEnabled = null,
-    Object? federationWorkerCount = null,
+    Object? federationWorkerCount = freezed,
     Object? captchaEnabled = null,
     Object? captchaDifficulty = null,
     Object? published = null,
@@ -1591,10 +1591,10 @@ class _$LocalSiteCopyWithImpl<$Res, $Val extends LocalSite>
           ? _value.federationEnabled
           : federationEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
-      federationWorkerCount: null == federationWorkerCount
+      federationWorkerCount: freezed == federationWorkerCount
           ? _value.federationWorkerCount
           : federationWorkerCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       captchaEnabled: null == captchaEnabled
           ? _value.captchaEnabled
           : captchaEnabled // ignore: cast_nullable_to_non_nullable
@@ -1648,7 +1648,7 @@ abstract class _$$_LocalSiteCopyWith<$Res> implements $LocalSiteCopyWith<$Res> {
       String? slurFilterRegex,
       int actorNameMaxLength,
       bool federationEnabled,
-      int federationWorkerCount,
+      int? federationWorkerCount,
       bool captchaEnabled,
       String captchaDifficulty,
       String published,
@@ -1685,7 +1685,7 @@ class __$$_LocalSiteCopyWithImpl<$Res>
     Object? slurFilterRegex = freezed,
     Object? actorNameMaxLength = null,
     Object? federationEnabled = null,
-    Object? federationWorkerCount = null,
+    Object? federationWorkerCount = freezed,
     Object? captchaEnabled = null,
     Object? captchaDifficulty = null,
     Object? published = null,
@@ -1762,10 +1762,10 @@ class __$$_LocalSiteCopyWithImpl<$Res>
           ? _value.federationEnabled
           : federationEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
-      federationWorkerCount: null == federationWorkerCount
+      federationWorkerCount: freezed == federationWorkerCount
           ? _value.federationWorkerCount
           : federationWorkerCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       captchaEnabled: null == captchaEnabled
           ? _value.captchaEnabled
           : captchaEnabled // ignore: cast_nullable_to_non_nullable
@@ -1816,7 +1816,7 @@ class _$_LocalSite extends _LocalSite {
       this.slurFilterRegex,
       required this.actorNameMaxLength,
       required this.federationEnabled,
-      required this.federationWorkerCount,
+      this.federationWorkerCount,
       required this.captchaEnabled,
       required this.captchaDifficulty,
       required this.published,
@@ -1863,7 +1863,7 @@ class _$_LocalSite extends _LocalSite {
   @override
   final bool federationEnabled;
   @override
-  final int federationWorkerCount;
+  final int? federationWorkerCount;
   @override
   final bool captchaEnabled;
   @override
@@ -2000,7 +2000,7 @@ abstract class _LocalSite extends LocalSite {
       final String? slurFilterRegex,
       required final int actorNameMaxLength,
       required final bool federationEnabled,
-      required final int federationWorkerCount,
+      final int? federationWorkerCount,
       required final bool captchaEnabled,
       required final String captchaDifficulty,
       required final String published,
@@ -2047,7 +2047,7 @@ abstract class _LocalSite extends LocalSite {
   @override
   bool get federationEnabled;
   @override
-  int get federationWorkerCount;
+  int? get federationWorkerCount;
   @override
   bool get captchaEnabled;
   @override
