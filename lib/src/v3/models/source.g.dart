@@ -166,7 +166,7 @@ _$_LocalSite _$$_LocalSiteFromJson(Map<String, dynamic> json) => _$_LocalSite(
       slurFilterRegex: json['slur_filter_regex'] as String?,
       actorNameMaxLength: json['actor_name_max_length'] as int,
       federationEnabled: json['federation_enabled'] as bool,
-      federationWorkerCount: json['federation_worker_count'] as int,
+      federationWorkerCount: json['federation_worker_count'] as int?,
       captchaEnabled: json['captcha_enabled'] as bool,
       captchaDifficulty: json['captcha_difficulty'] as String,
       published: json['published'] as String,

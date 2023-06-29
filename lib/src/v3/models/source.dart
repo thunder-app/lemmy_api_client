@@ -108,7 +108,7 @@ class LocalSite with _$LocalSite {
     String? slurFilterRegex,
     required int actorNameMaxLength,
     required bool federationEnabled,
-    required int federationWorkerCount,
+    int? federationWorkerCount,
     required bool captchaEnabled,
     required String captchaDifficulty,
     required String published,
