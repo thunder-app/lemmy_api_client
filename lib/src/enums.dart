@@ -56,7 +56,9 @@ enum SortType {
   topYear('TopYear'),
   topAll('TopAll'),
   mostComments('MostComments'),
-  newComments('NewComments');
+  newComments('NewComments'),
+  top('Top'),
+  old('Old');
 
   final String value;
   const SortType(this.value);
