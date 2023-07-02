@@ -183,6 +183,8 @@ class Post with _$Post {
     DateTime? updated,
     required bool deleted,
     required bool nsfw,
+    required bool featuredCommunity,
+    required bool featuredLocal,
     String? embedTitle,
     String? embedDescription,
     String? embedHtml,

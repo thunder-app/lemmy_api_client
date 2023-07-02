@@ -72,6 +72,27 @@ enum SortType {
   String toString() => value;
 }
 
+enum CommentSortType {
+  hot('Hot'),
+  top('Top'),
+  new_('New'),
+  old('Old'),
+  chat('Chat');
+
+  final String value;
+  const CommentSortType(this.value);
+
+  factory CommentSortType.fromJson(dynamic value) {
+    return value is int
+        ? values[value]
+        : values.firstWhere((e) => e.value == value);
+  }
+
+  String toJson() => value;
+
+  String toString() => value;
+}
+
 enum SearchType {
   all('All'),
   comments('Comments'),

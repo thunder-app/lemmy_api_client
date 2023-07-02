@@ -2816,6 +2816,8 @@ mixin _$Post {
   DateTime? get updated => throw _privateConstructorUsedError;
   bool get deleted => throw _privateConstructorUsedError;
   bool get nsfw => throw _privateConstructorUsedError;
+  bool get featuredCommunity => throw _privateConstructorUsedError;
+  bool get featuredLocal => throw _privateConstructorUsedError;
   String? get embedTitle => throw _privateConstructorUsedError;
   String? get embedDescription => throw _privateConstructorUsedError;
   String? get embedHtml => throw _privateConstructorUsedError;
@@ -2847,6 +2849,8 @@ abstract class $PostCopyWith<$Res> {
       DateTime? updated,
       bool deleted,
       bool nsfw,
+      bool featuredCommunity,
+      bool featuredLocal,
       String? embedTitle,
       String? embedDescription,
       String? embedHtml,
@@ -2881,6 +2885,8 @@ class _$PostCopyWithImpl<$Res, $Val extends Post>
     Object? updated = freezed,
     Object? deleted = null,
     Object? nsfw = null,
+    Object? featuredCommunity = null,
+    Object? featuredLocal = null,
     Object? embedTitle = freezed,
     Object? embedDescription = freezed,
     Object? embedHtml = freezed,
@@ -2938,6 +2944,14 @@ class _$PostCopyWithImpl<$Res, $Val extends Post>
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
               as bool,
+      featuredCommunity: null == featuredCommunity
+          ? _value.featuredCommunity
+          : featuredCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+      featuredLocal: null == featuredLocal
+          ? _value.featuredLocal
+          : featuredLocal // ignore: cast_nullable_to_non_nullable
+              as bool,
       embedTitle: freezed == embedTitle
           ? _value.embedTitle
           : embedTitle // ignore: cast_nullable_to_non_nullable
@@ -2989,6 +3003,8 @@ abstract class _$$_PostCopyWith<$Res> implements $PostCopyWith<$Res> {
       DateTime? updated,
       bool deleted,
       bool nsfw,
+      bool featuredCommunity,
+      bool featuredLocal,
       String? embedTitle,
       String? embedDescription,
       String? embedHtml,
@@ -3019,6 +3035,8 @@ class __$$_PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res, _$_Post>
     Object? updated = freezed,
     Object? deleted = null,
     Object? nsfw = null,
+    Object? featuredCommunity = null,
+    Object? featuredLocal = null,
     Object? embedTitle = freezed,
     Object? embedDescription = freezed,
     Object? embedHtml = freezed,
@@ -3076,6 +3094,14 @@ class __$$_PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res, _$_Post>
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
               as bool,
+      featuredCommunity: null == featuredCommunity
+          ? _value.featuredCommunity
+          : featuredCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+      featuredLocal: null == featuredLocal
+          ? _value.featuredLocal
+          : featuredLocal // ignore: cast_nullable_to_non_nullable
+              as bool,
       embedTitle: freezed == embedTitle
           ? _value.embedTitle
           : embedTitle // ignore: cast_nullable_to_non_nullable
@@ -3125,6 +3151,8 @@ class _$_Post extends _Post {
       this.updated,
       required this.deleted,
       required this.nsfw,
+      required this.featuredCommunity,
+      required this.featuredLocal,
       this.embedTitle,
       this.embedDescription,
       this.embedHtml,
@@ -3161,6 +3189,10 @@ class _$_Post extends _Post {
   @override
   final bool nsfw;
   @override
+  final bool featuredCommunity;
+  @override
+  final bool featuredLocal;
+  @override
   final String? embedTitle;
   @override
   final String? embedDescription;
@@ -3177,7 +3209,7 @@ class _$_Post extends _Post {
 
   @override
   String toString() {
-    return 'Post(id: $id, name: $name, url: $url, body: $body, creatorId: $creatorId, communityId: $communityId, removed: $removed, locked: $locked, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, embedTitle: $embedTitle, embedDescription: $embedDescription, embedHtml: $embedHtml, thumbnailUrl: $thumbnailUrl, apId: $apId, local: $local, instanceHost: $instanceHost)';
+    return 'Post(id: $id, name: $name, url: $url, body: $body, creatorId: $creatorId, communityId: $communityId, removed: $removed, locked: $locked, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, featuredCommunity: $featuredCommunity, featuredLocal: $featuredLocal, embedTitle: $embedTitle, embedDescription: $embedDescription, embedHtml: $embedHtml, thumbnailUrl: $thumbnailUrl, apId: $apId, local: $local, instanceHost: $instanceHost)';
   }
 
   @override
@@ -3200,6 +3232,10 @@ class _$_Post extends _Post {
             (identical(other.updated, updated) || other.updated == updated) &&
             (identical(other.deleted, deleted) || other.deleted == deleted) &&
             (identical(other.nsfw, nsfw) || other.nsfw == nsfw) &&
+            (identical(other.featuredCommunity, featuredCommunity) ||
+                other.featuredCommunity == featuredCommunity) &&
+            (identical(other.featuredLocal, featuredLocal) ||
+                other.featuredLocal == featuredLocal) &&
             (identical(other.embedTitle, embedTitle) ||
                 other.embedTitle == embedTitle) &&
             (identical(other.embedDescription, embedDescription) ||
@@ -3230,6 +3266,8 @@ class _$_Post extends _Post {
         updated,
         deleted,
         nsfw,
+        featuredCommunity,
+        featuredLocal,
         embedTitle,
         embedDescription,
         embedHtml,
@@ -3267,6 +3305,8 @@ abstract class _Post extends Post {
       final DateTime? updated,
       required final bool deleted,
       required final bool nsfw,
+      required final bool featuredCommunity,
+      required final bool featuredLocal,
       final String? embedTitle,
       final String? embedDescription,
       final String? embedHtml,
@@ -3302,6 +3342,10 @@ abstract class _Post extends Post {
   bool get deleted;
   @override
   bool get nsfw;
+  @override
+  bool get featuredCommunity;
+  @override
+  bool get featuredLocal;
   @override
   String? get embedTitle;
   @override

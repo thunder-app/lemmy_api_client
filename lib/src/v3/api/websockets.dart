@@ -43,7 +43,7 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
   'GetComments': (json) => WsEventGetComments(
         const GetComments(
           type: CommentListingType.all,
-          sort: SortType.hot,
+          sort: CommentSortType.hot,
           savedOnly: false,
         ).responseFactory(json),
       ),

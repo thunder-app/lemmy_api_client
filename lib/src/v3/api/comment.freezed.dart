@@ -1339,7 +1339,7 @@ GetComments _$GetCommentsFromJson(Map<String, dynamic> json) {
 mixin _$GetComments {
   @JsonKey(name: 'type_')
   CommentListingType? get type => throw _privateConstructorUsedError;
-  SortType? get sort => throw _privateConstructorUsedError;
+  CommentSortType? get sort => throw _privateConstructorUsedError;
   int? get page => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
   int? get communityId => throw _privateConstructorUsedError;
@@ -1363,7 +1363,7 @@ abstract class $GetCommentsCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'type_') CommentListingType? type,
-      SortType? sort,
+      CommentSortType? sort,
       int? page,
       int? limit,
       int? communityId,
@@ -1406,7 +1406,7 @@ class _$GetCommentsCopyWithImpl<$Res, $Val extends GetComments>
       sort: freezed == sort
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
-              as SortType?,
+              as CommentSortType?,
       page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -1453,7 +1453,7 @@ abstract class _$$_GetCommentsCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'type_') CommentListingType? type,
-      SortType? sort,
+      CommentSortType? sort,
       int? page,
       int? limit,
       int? communityId,
@@ -1494,7 +1494,7 @@ class __$$_GetCommentsCopyWithImpl<$Res>
       sort: freezed == sort
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
-              as SortType?,
+              as CommentSortType?,
       page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -1555,7 +1555,7 @@ class _$_GetComments extends _GetComments {
   @JsonKey(name: 'type_')
   final CommentListingType? type;
   @override
-  final SortType? sort;
+  final CommentSortType? sort;
   @override
   final int? page;
   @override
@@ -1621,7 +1621,7 @@ class _$_GetComments extends _GetComments {
 abstract class _GetComments extends GetComments {
   const factory _GetComments(
       {@JsonKey(name: 'type_') final CommentListingType? type,
-      final SortType? sort,
+      final CommentSortType? sort,
       final int? page,
       final int? limit,
       final int? communityId,
@@ -1639,7 +1639,7 @@ abstract class _GetComments extends GetComments {
   @JsonKey(name: 'type_')
   CommentListingType? get type;
   @override
-  SortType? get sort;
+  CommentSortType? get sort;
   @override
   int? get page;
   @override
