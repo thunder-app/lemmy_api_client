@@ -155,7 +155,7 @@ _$_LocalSite _$$_LocalSiteFromJson(Map<String, dynamic> json) => _$_LocalSite(
       enableNsfw: json['enable_nsfw'] as bool,
       communityCreationAdminOnly: json['community_creation_admin_only'] as bool,
       requireEmailVerification: json['require_email_verification'] as bool,
-      applicationQuestion: json['application_question'] as String,
+      applicationQuestion: json['application_question'] as String?,
       privateInstance: json['private_instance'] as bool,
       defaultTheme: json['default_theme'] as String,
       defaultPostListingType:

@@ -1427,7 +1427,7 @@ mixin _$LocalSite {
   bool get enableNsfw => throw _privateConstructorUsedError;
   bool get communityCreationAdminOnly => throw _privateConstructorUsedError;
   bool get requireEmailVerification => throw _privateConstructorUsedError;
-  String get applicationQuestion => throw _privateConstructorUsedError;
+  String? get applicationQuestion => throw _privateConstructorUsedError;
   bool get privateInstance => throw _privateConstructorUsedError;
   String get defaultTheme => throw _privateConstructorUsedError;
   PostListingType get defaultPostListingType =>
@@ -1465,7 +1465,7 @@ abstract class $LocalSiteCopyWith<$Res> {
       bool enableNsfw,
       bool communityCreationAdminOnly,
       bool requireEmailVerification,
-      String applicationQuestion,
+      String? applicationQuestion,
       bool privateInstance,
       String defaultTheme,
       PostListingType defaultPostListingType,
@@ -1504,7 +1504,7 @@ class _$LocalSiteCopyWithImpl<$Res, $Val extends LocalSite>
     Object? enableNsfw = null,
     Object? communityCreationAdminOnly = null,
     Object? requireEmailVerification = null,
-    Object? applicationQuestion = null,
+    Object? applicationQuestion = freezed,
     Object? privateInstance = null,
     Object? defaultTheme = null,
     Object? defaultPostListingType = null,
@@ -1551,10 +1551,10 @@ class _$LocalSiteCopyWithImpl<$Res, $Val extends LocalSite>
           ? _value.requireEmailVerification
           : requireEmailVerification // ignore: cast_nullable_to_non_nullable
               as bool,
-      applicationQuestion: null == applicationQuestion
+      applicationQuestion: freezed == applicationQuestion
           ? _value.applicationQuestion
           : applicationQuestion // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       privateInstance: null == privateInstance
           ? _value.privateInstance
           : privateInstance // ignore: cast_nullable_to_non_nullable
@@ -1638,7 +1638,7 @@ abstract class _$$_LocalSiteCopyWith<$Res> implements $LocalSiteCopyWith<$Res> {
       bool enableNsfw,
       bool communityCreationAdminOnly,
       bool requireEmailVerification,
-      String applicationQuestion,
+      String? applicationQuestion,
       bool privateInstance,
       String defaultTheme,
       PostListingType defaultPostListingType,
@@ -1675,7 +1675,7 @@ class __$$_LocalSiteCopyWithImpl<$Res>
     Object? enableNsfw = null,
     Object? communityCreationAdminOnly = null,
     Object? requireEmailVerification = null,
-    Object? applicationQuestion = null,
+    Object? applicationQuestion = freezed,
     Object? privateInstance = null,
     Object? defaultTheme = null,
     Object? defaultPostListingType = null,
@@ -1722,10 +1722,10 @@ class __$$_LocalSiteCopyWithImpl<$Res>
           ? _value.requireEmailVerification
           : requireEmailVerification // ignore: cast_nullable_to_non_nullable
               as bool,
-      applicationQuestion: null == applicationQuestion
+      applicationQuestion: freezed == applicationQuestion
           ? _value.applicationQuestion
           : applicationQuestion // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       privateInstance: null == privateInstance
           ? _value.privateInstance
           : privateInstance // ignore: cast_nullable_to_non_nullable
@@ -1806,7 +1806,7 @@ class _$_LocalSite extends _LocalSite {
       required this.enableNsfw,
       required this.communityCreationAdminOnly,
       required this.requireEmailVerification,
-      required this.applicationQuestion,
+      this.applicationQuestion,
       required this.privateInstance,
       required this.defaultTheme,
       required this.defaultPostListingType,
@@ -1843,7 +1843,7 @@ class _$_LocalSite extends _LocalSite {
   @override
   final bool requireEmailVerification;
   @override
-  final String applicationQuestion;
+  final String? applicationQuestion;
   @override
   final bool privateInstance;
   @override
@@ -1990,7 +1990,7 @@ abstract class _LocalSite extends LocalSite {
       required final bool enableNsfw,
       required final bool communityCreationAdminOnly,
       required final bool requireEmailVerification,
-      required final String applicationQuestion,
+      final String? applicationQuestion,
       required final bool privateInstance,
       required final String defaultTheme,
       required final PostListingType defaultPostListingType,
@@ -2027,7 +2027,7 @@ abstract class _LocalSite extends LocalSite {
   @override
   bool get requireEmailVerification;
   @override
-  String get applicationQuestion;
+  String? get applicationQuestion;
   @override
   bool get privateInstance;
   @override
