@@ -98,7 +98,7 @@ class LocalSite with _$LocalSite {
     required bool enableNsfw,
     required bool communityCreationAdminOnly,
     required bool requireEmailVerification,
-    required String applicationQuestion,
+    String? applicationQuestion,
     required bool privateInstance,
     required String defaultTheme,
     required PostListingType defaultPostListingType,
