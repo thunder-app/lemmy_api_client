@@ -186,7 +186,7 @@ class GetComments
   @apiSerde
   const factory GetComments({
     @JsonKey(name: 'type_') CommentListingType? type,
-    SortType? sort,
+    CommentSortType? sort,
     int? page,
     int? limit,
     int? communityId,

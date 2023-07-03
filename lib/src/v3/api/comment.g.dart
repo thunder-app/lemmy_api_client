@@ -146,7 +146,8 @@ _$_GetComments _$$_GetCommentsFromJson(Map<String, dynamic> json) =>
       type: json['type_'] == null
           ? null
           : CommentListingType.fromJson(json['type_'] as String),
-      sort: json['sort'] == null ? null : SortType.fromJson(json['sort']),
+      sort:
+          json['sort'] == null ? null : CommentSortType.fromJson(json['sort']),
       page: json['page'] as int?,
       limit: json['limit'] as int?,
       communityId: json['community_id'] as int?,

@@ -50,6 +50,10 @@ enum SortType {
   active('Active'),
   hot('Hot'),
   new_('New'),
+  old('Old'),
+  topHour('TopHour'),
+  topSixHour('TopSixHour'),
+  topTwelveHour('TopTwelveHour'),
   topDay('TopDay'),
   topWeek('TopWeek'),
   topMonth('TopMonth'),
@@ -62,6 +66,27 @@ enum SortType {
   const SortType(this.value);
 
   factory SortType.fromJson(dynamic value) {
+    return value is int
+        ? values[value]
+        : values.firstWhere((e) => e.value == value);
+  }
+
+  String toJson() => value;
+
+  String toString() => value;
+}
+
+enum CommentSortType {
+  hot('Hot'),
+  top('Top'),
+  new_('New'),
+  old('Old'),
+  chat('Chat');
+
+  final String value;
+  const CommentSortType(this.value);
+
+  factory CommentSortType.fromJson(dynamic value) {
     return value is int
         ? values[value]
         : values.firstWhere((e) => e.value == value);

@@ -43,7 +43,7 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
   'GetComments': (json) => WsEventGetComments(
         const GetComments(
           type: CommentListingType.all,
-          sort: SortType.hot,
+          sort: CommentSortType.hot,
           savedOnly: false,
         ).responseFactory(json),
       ),
@@ -199,8 +199,8 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
         const SaveSiteConfig(configHjson: '', auth: '').responseFactory(json),
       ),
   'Login': (json) => WsEventLogin(
-        const Login(usernameOrEmail: '', password: '',
-            totp2faToken: '').responseFactory(json),
+        const Login(usernameOrEmail: '', password: '', totp2faToken: '')
+            .responseFactory(json),
       ),
   'Register': (json) => WsEventRegister(
         const Register(

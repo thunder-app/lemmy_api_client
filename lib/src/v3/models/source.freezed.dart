@@ -1427,7 +1427,7 @@ mixin _$LocalSite {
   bool get enableNsfw => throw _privateConstructorUsedError;
   bool get communityCreationAdminOnly => throw _privateConstructorUsedError;
   bool get requireEmailVerification => throw _privateConstructorUsedError;
-  String get applicationQuestion => throw _privateConstructorUsedError;
+  String? get applicationQuestion => throw _privateConstructorUsedError;
   bool get privateInstance => throw _privateConstructorUsedError;
   String get defaultTheme => throw _privateConstructorUsedError;
   PostListingType get defaultPostListingType =>
@@ -1438,7 +1438,7 @@ mixin _$LocalSite {
   String? get slurFilterRegex => throw _privateConstructorUsedError;
   int get actorNameMaxLength => throw _privateConstructorUsedError;
   bool get federationEnabled => throw _privateConstructorUsedError;
-  int get federationWorkerCount => throw _privateConstructorUsedError;
+  int? get federationWorkerCount => throw _privateConstructorUsedError;
   bool get captchaEnabled => throw _privateConstructorUsedError;
   String get captchaDifficulty => throw _privateConstructorUsedError;
   String get published => throw _privateConstructorUsedError;
@@ -1465,7 +1465,7 @@ abstract class $LocalSiteCopyWith<$Res> {
       bool enableNsfw,
       bool communityCreationAdminOnly,
       bool requireEmailVerification,
-      String applicationQuestion,
+      String? applicationQuestion,
       bool privateInstance,
       String defaultTheme,
       PostListingType defaultPostListingType,
@@ -1475,7 +1475,7 @@ abstract class $LocalSiteCopyWith<$Res> {
       String? slurFilterRegex,
       int actorNameMaxLength,
       bool federationEnabled,
-      int federationWorkerCount,
+      int? federationWorkerCount,
       bool captchaEnabled,
       String captchaDifficulty,
       String published,
@@ -1504,7 +1504,7 @@ class _$LocalSiteCopyWithImpl<$Res, $Val extends LocalSite>
     Object? enableNsfw = null,
     Object? communityCreationAdminOnly = null,
     Object? requireEmailVerification = null,
-    Object? applicationQuestion = null,
+    Object? applicationQuestion = freezed,
     Object? privateInstance = null,
     Object? defaultTheme = null,
     Object? defaultPostListingType = null,
@@ -1514,7 +1514,7 @@ class _$LocalSiteCopyWithImpl<$Res, $Val extends LocalSite>
     Object? slurFilterRegex = freezed,
     Object? actorNameMaxLength = null,
     Object? federationEnabled = null,
-    Object? federationWorkerCount = null,
+    Object? federationWorkerCount = freezed,
     Object? captchaEnabled = null,
     Object? captchaDifficulty = null,
     Object? published = null,
@@ -1551,10 +1551,10 @@ class _$LocalSiteCopyWithImpl<$Res, $Val extends LocalSite>
           ? _value.requireEmailVerification
           : requireEmailVerification // ignore: cast_nullable_to_non_nullable
               as bool,
-      applicationQuestion: null == applicationQuestion
+      applicationQuestion: freezed == applicationQuestion
           ? _value.applicationQuestion
           : applicationQuestion // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       privateInstance: null == privateInstance
           ? _value.privateInstance
           : privateInstance // ignore: cast_nullable_to_non_nullable
@@ -1591,10 +1591,10 @@ class _$LocalSiteCopyWithImpl<$Res, $Val extends LocalSite>
           ? _value.federationEnabled
           : federationEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
-      federationWorkerCount: null == federationWorkerCount
+      federationWorkerCount: freezed == federationWorkerCount
           ? _value.federationWorkerCount
           : federationWorkerCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       captchaEnabled: null == captchaEnabled
           ? _value.captchaEnabled
           : captchaEnabled // ignore: cast_nullable_to_non_nullable
@@ -1638,7 +1638,7 @@ abstract class _$$_LocalSiteCopyWith<$Res> implements $LocalSiteCopyWith<$Res> {
       bool enableNsfw,
       bool communityCreationAdminOnly,
       bool requireEmailVerification,
-      String applicationQuestion,
+      String? applicationQuestion,
       bool privateInstance,
       String defaultTheme,
       PostListingType defaultPostListingType,
@@ -1648,7 +1648,7 @@ abstract class _$$_LocalSiteCopyWith<$Res> implements $LocalSiteCopyWith<$Res> {
       String? slurFilterRegex,
       int actorNameMaxLength,
       bool federationEnabled,
-      int federationWorkerCount,
+      int? federationWorkerCount,
       bool captchaEnabled,
       String captchaDifficulty,
       String published,
@@ -1675,7 +1675,7 @@ class __$$_LocalSiteCopyWithImpl<$Res>
     Object? enableNsfw = null,
     Object? communityCreationAdminOnly = null,
     Object? requireEmailVerification = null,
-    Object? applicationQuestion = null,
+    Object? applicationQuestion = freezed,
     Object? privateInstance = null,
     Object? defaultTheme = null,
     Object? defaultPostListingType = null,
@@ -1685,7 +1685,7 @@ class __$$_LocalSiteCopyWithImpl<$Res>
     Object? slurFilterRegex = freezed,
     Object? actorNameMaxLength = null,
     Object? federationEnabled = null,
-    Object? federationWorkerCount = null,
+    Object? federationWorkerCount = freezed,
     Object? captchaEnabled = null,
     Object? captchaDifficulty = null,
     Object? published = null,
@@ -1722,10 +1722,10 @@ class __$$_LocalSiteCopyWithImpl<$Res>
           ? _value.requireEmailVerification
           : requireEmailVerification // ignore: cast_nullable_to_non_nullable
               as bool,
-      applicationQuestion: null == applicationQuestion
+      applicationQuestion: freezed == applicationQuestion
           ? _value.applicationQuestion
           : applicationQuestion // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       privateInstance: null == privateInstance
           ? _value.privateInstance
           : privateInstance // ignore: cast_nullable_to_non_nullable
@@ -1762,10 +1762,10 @@ class __$$_LocalSiteCopyWithImpl<$Res>
           ? _value.federationEnabled
           : federationEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
-      federationWorkerCount: null == federationWorkerCount
+      federationWorkerCount: freezed == federationWorkerCount
           ? _value.federationWorkerCount
           : federationWorkerCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       captchaEnabled: null == captchaEnabled
           ? _value.captchaEnabled
           : captchaEnabled // ignore: cast_nullable_to_non_nullable
@@ -1806,7 +1806,7 @@ class _$_LocalSite extends _LocalSite {
       required this.enableNsfw,
       required this.communityCreationAdminOnly,
       required this.requireEmailVerification,
-      required this.applicationQuestion,
+      this.applicationQuestion,
       required this.privateInstance,
       required this.defaultTheme,
       required this.defaultPostListingType,
@@ -1816,7 +1816,7 @@ class _$_LocalSite extends _LocalSite {
       this.slurFilterRegex,
       required this.actorNameMaxLength,
       required this.federationEnabled,
-      required this.federationWorkerCount,
+      this.federationWorkerCount,
       required this.captchaEnabled,
       required this.captchaDifficulty,
       required this.published,
@@ -1843,7 +1843,7 @@ class _$_LocalSite extends _LocalSite {
   @override
   final bool requireEmailVerification;
   @override
-  final String applicationQuestion;
+  final String? applicationQuestion;
   @override
   final bool privateInstance;
   @override
@@ -1863,7 +1863,7 @@ class _$_LocalSite extends _LocalSite {
   @override
   final bool federationEnabled;
   @override
-  final int federationWorkerCount;
+  final int? federationWorkerCount;
   @override
   final bool captchaEnabled;
   @override
@@ -1990,7 +1990,7 @@ abstract class _LocalSite extends LocalSite {
       required final bool enableNsfw,
       required final bool communityCreationAdminOnly,
       required final bool requireEmailVerification,
-      required final String applicationQuestion,
+      final String? applicationQuestion,
       required final bool privateInstance,
       required final String defaultTheme,
       required final PostListingType defaultPostListingType,
@@ -2000,7 +2000,7 @@ abstract class _LocalSite extends LocalSite {
       final String? slurFilterRegex,
       required final int actorNameMaxLength,
       required final bool federationEnabled,
-      required final int federationWorkerCount,
+      final int? federationWorkerCount,
       required final bool captchaEnabled,
       required final String captchaDifficulty,
       required final String published,
@@ -2027,7 +2027,7 @@ abstract class _LocalSite extends LocalSite {
   @override
   bool get requireEmailVerification;
   @override
-  String get applicationQuestion;
+  String? get applicationQuestion;
   @override
   bool get privateInstance;
   @override
@@ -2047,7 +2047,7 @@ abstract class _LocalSite extends LocalSite {
   @override
   bool get federationEnabled;
   @override
-  int get federationWorkerCount;
+  int? get federationWorkerCount;
   @override
   bool get captchaEnabled;
   @override
@@ -2816,6 +2816,8 @@ mixin _$Post {
   DateTime? get updated => throw _privateConstructorUsedError;
   bool get deleted => throw _privateConstructorUsedError;
   bool get nsfw => throw _privateConstructorUsedError;
+  bool get featuredCommunity => throw _privateConstructorUsedError;
+  bool get featuredLocal => throw _privateConstructorUsedError;
   String? get embedTitle => throw _privateConstructorUsedError;
   String? get embedDescription => throw _privateConstructorUsedError;
   String? get embedHtml => throw _privateConstructorUsedError;
@@ -2847,6 +2849,8 @@ abstract class $PostCopyWith<$Res> {
       DateTime? updated,
       bool deleted,
       bool nsfw,
+      bool featuredCommunity,
+      bool featuredLocal,
       String? embedTitle,
       String? embedDescription,
       String? embedHtml,
@@ -2881,6 +2885,8 @@ class _$PostCopyWithImpl<$Res, $Val extends Post>
     Object? updated = freezed,
     Object? deleted = null,
     Object? nsfw = null,
+    Object? featuredCommunity = null,
+    Object? featuredLocal = null,
     Object? embedTitle = freezed,
     Object? embedDescription = freezed,
     Object? embedHtml = freezed,
@@ -2938,6 +2944,14 @@ class _$PostCopyWithImpl<$Res, $Val extends Post>
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
               as bool,
+      featuredCommunity: null == featuredCommunity
+          ? _value.featuredCommunity
+          : featuredCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+      featuredLocal: null == featuredLocal
+          ? _value.featuredLocal
+          : featuredLocal // ignore: cast_nullable_to_non_nullable
+              as bool,
       embedTitle: freezed == embedTitle
           ? _value.embedTitle
           : embedTitle // ignore: cast_nullable_to_non_nullable
@@ -2989,6 +3003,8 @@ abstract class _$$_PostCopyWith<$Res> implements $PostCopyWith<$Res> {
       DateTime? updated,
       bool deleted,
       bool nsfw,
+      bool featuredCommunity,
+      bool featuredLocal,
       String? embedTitle,
       String? embedDescription,
       String? embedHtml,
@@ -3019,6 +3035,8 @@ class __$$_PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res, _$_Post>
     Object? updated = freezed,
     Object? deleted = null,
     Object? nsfw = null,
+    Object? featuredCommunity = null,
+    Object? featuredLocal = null,
     Object? embedTitle = freezed,
     Object? embedDescription = freezed,
     Object? embedHtml = freezed,
@@ -3076,6 +3094,14 @@ class __$$_PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res, _$_Post>
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
               as bool,
+      featuredCommunity: null == featuredCommunity
+          ? _value.featuredCommunity
+          : featuredCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+      featuredLocal: null == featuredLocal
+          ? _value.featuredLocal
+          : featuredLocal // ignore: cast_nullable_to_non_nullable
+              as bool,
       embedTitle: freezed == embedTitle
           ? _value.embedTitle
           : embedTitle // ignore: cast_nullable_to_non_nullable
@@ -3125,6 +3151,8 @@ class _$_Post extends _Post {
       this.updated,
       required this.deleted,
       required this.nsfw,
+      required this.featuredCommunity,
+      required this.featuredLocal,
       this.embedTitle,
       this.embedDescription,
       this.embedHtml,
@@ -3161,6 +3189,10 @@ class _$_Post extends _Post {
   @override
   final bool nsfw;
   @override
+  final bool featuredCommunity;
+  @override
+  final bool featuredLocal;
+  @override
   final String? embedTitle;
   @override
   final String? embedDescription;
@@ -3177,7 +3209,7 @@ class _$_Post extends _Post {
 
   @override
   String toString() {
-    return 'Post(id: $id, name: $name, url: $url, body: $body, creatorId: $creatorId, communityId: $communityId, removed: $removed, locked: $locked, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, embedTitle: $embedTitle, embedDescription: $embedDescription, embedHtml: $embedHtml, thumbnailUrl: $thumbnailUrl, apId: $apId, local: $local, instanceHost: $instanceHost)';
+    return 'Post(id: $id, name: $name, url: $url, body: $body, creatorId: $creatorId, communityId: $communityId, removed: $removed, locked: $locked, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, featuredCommunity: $featuredCommunity, featuredLocal: $featuredLocal, embedTitle: $embedTitle, embedDescription: $embedDescription, embedHtml: $embedHtml, thumbnailUrl: $thumbnailUrl, apId: $apId, local: $local, instanceHost: $instanceHost)';
   }
 
   @override
@@ -3200,6 +3232,10 @@ class _$_Post extends _Post {
             (identical(other.updated, updated) || other.updated == updated) &&
             (identical(other.deleted, deleted) || other.deleted == deleted) &&
             (identical(other.nsfw, nsfw) || other.nsfw == nsfw) &&
+            (identical(other.featuredCommunity, featuredCommunity) ||
+                other.featuredCommunity == featuredCommunity) &&
+            (identical(other.featuredLocal, featuredLocal) ||
+                other.featuredLocal == featuredLocal) &&
             (identical(other.embedTitle, embedTitle) ||
                 other.embedTitle == embedTitle) &&
             (identical(other.embedDescription, embedDescription) ||
@@ -3230,6 +3266,8 @@ class _$_Post extends _Post {
         updated,
         deleted,
         nsfw,
+        featuredCommunity,
+        featuredLocal,
         embedTitle,
         embedDescription,
         embedHtml,
@@ -3267,6 +3305,8 @@ abstract class _Post extends Post {
       final DateTime? updated,
       required final bool deleted,
       required final bool nsfw,
+      required final bool featuredCommunity,
+      required final bool featuredLocal,
       final String? embedTitle,
       final String? embedDescription,
       final String? embedHtml,
@@ -3302,6 +3342,10 @@ abstract class _Post extends Post {
   bool get deleted;
   @override
   bool get nsfw;
+  @override
+  bool get featuredCommunity;
+  @override
+  bool get featuredLocal;
   @override
   String? get embedTitle;
   @override
