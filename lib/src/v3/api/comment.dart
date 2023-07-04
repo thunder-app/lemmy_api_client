@@ -192,6 +192,7 @@ class GetComments
     int? communityId,
     String? communityName,
     int? postId,
+    int? parentId,
     bool? savedOnly,
     String? auth,
     int? maxDepth,
