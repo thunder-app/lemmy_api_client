@@ -49,9 +49,13 @@ Map<String, dynamic> _$$_SearchToJson(_$_Search instance) {
 _$_GetModlog _$$_GetModlogFromJson(Map<String, dynamic> json) => _$_GetModlog(
       modPersonId: json['mod_person_id'] as int?,
       communityId: json['community_id'] as int?,
+      otherPersonId: json['other_person_id'] as int?,
       page: json['page'] as int?,
       limit: json['limit'] as int?,
       auth: json['auth'] as String?,
+      type: json['type_'] == null
+          ? null
+          : ModlogActionType.fromJson(json['type_'] as String),
     );
 
 Map<String, dynamic> _$$_GetModlogToJson(_$_GetModlog instance) {
@@ -65,9 +69,11 @@ Map<String, dynamic> _$$_GetModlogToJson(_$_GetModlog instance) {
 
   writeNotNull('mod_person_id', instance.modPersonId);
   writeNotNull('community_id', instance.communityId);
+  writeNotNull('other_person_id', instance.otherPersonId);
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
   writeNotNull('auth', instance.auth);
+  writeNotNull('type_', instance.type?.toJson());
   return val;
 }
 

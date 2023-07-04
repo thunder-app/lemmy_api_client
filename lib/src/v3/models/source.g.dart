@@ -403,6 +403,28 @@ Map<String, dynamic> _$$_ModStickyPostToJson(_$_ModStickyPost instance) =>
       'instance_host': instance.instanceHost,
     };
 
+_$_ModFeaturePost _$$_ModFeaturePostFromJson(Map<String, dynamic> json) =>
+    _$_ModFeaturePost(
+      id: json['id'] as int,
+      modPersonId: json['mod_person_id'] as int,
+      postId: json['post_id'] as int,
+      featured: json['featured'] as bool,
+      isFeaturedCommunity: json['is_featured_community'] as bool,
+      when: const ForceUtcDateTime().fromJson(json['when_'] as String),
+      instanceHost: json['instance_host'] as String,
+    );
+
+Map<String, dynamic> _$$_ModFeaturePostToJson(_$_ModFeaturePost instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'mod_person_id': instance.modPersonId,
+      'post_id': instance.postId,
+      'featured': instance.featured,
+      'is_featured_community': instance.isFeaturedCommunity,
+      'when_': const ForceUtcDateTime().toJson(instance.when),
+      'instance_host': instance.instanceHost,
+    };
+
 _$_ModRemoveComment _$$_ModRemoveCommentFromJson(Map<String, dynamic> json) =>
     _$_ModRemoveComment(
       id: json['id'] as int,
@@ -449,6 +471,28 @@ Map<String, dynamic> _$$_ModRemoveCommunityToJson(
       'removed': instance.removed,
       'expires': _$JsonConverterToJson<String, DateTime>(
           instance.expires, const ForceUtcDateTime().toJson),
+      'when_': const ForceUtcDateTime().toJson(instance.when),
+      'instance_host': instance.instanceHost,
+    };
+
+_$_ModHideCommunity _$$_ModHideCommunityFromJson(Map<String, dynamic> json) =>
+    _$_ModHideCommunity(
+      id: json['id'] as int,
+      modPersonId: json['mod_person_id'] as int,
+      communityId: json['community_id'] as int,
+      reason: json['reason'] as String?,
+      hidden: json['hidden'] as bool,
+      when: const ForceUtcDateTime().fromJson(json['when_'] as String),
+      instanceHost: json['instance_host'] as String,
+    );
+
+Map<String, dynamic> _$$_ModHideCommunityToJson(_$_ModHideCommunity instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'mod_person_id': instance.modPersonId,
+      'community_id': instance.communityId,
+      'reason': instance.reason,
+      'hidden': instance.hidden,
       'when_': const ForceUtcDateTime().toJson(instance.when),
       'instance_host': instance.instanceHost,
     };
@@ -567,6 +611,85 @@ Map<String, dynamic> _$$_ModAddToJson(_$_ModAdd instance) => <String, dynamic>{
       'mod_person_id': instance.modPersonId,
       'other_person_id': instance.otherPersonId,
       'removed': instance.removed,
+      'when_': const ForceUtcDateTime().toJson(instance.when),
+      'instance_host': instance.instanceHost,
+    };
+
+_$_AdminPurgeComment _$$_AdminPurgeCommentFromJson(Map<String, dynamic> json) =>
+    _$_AdminPurgeComment(
+      id: json['id'] as int,
+      adminPersonId: json['admin_person_id'] as int,
+      postId: json['post_id'] as int,
+      reason: json['reason'] as String?,
+      when: const ForceUtcDateTime().fromJson(json['when_'] as String),
+      instanceHost: json['instance_host'] as String,
+    );
+
+Map<String, dynamic> _$$_AdminPurgeCommentToJson(
+        _$_AdminPurgeComment instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'admin_person_id': instance.adminPersonId,
+      'post_id': instance.postId,
+      'reason': instance.reason,
+      'when_': const ForceUtcDateTime().toJson(instance.when),
+      'instance_host': instance.instanceHost,
+    };
+
+_$_AdminPurgePost _$$_AdminPurgePostFromJson(Map<String, dynamic> json) =>
+    _$_AdminPurgePost(
+      id: json['id'] as int,
+      adminPersonId: json['admin_person_id'] as int,
+      communityId: json['community_id'] as int,
+      reason: json['reason'] as String?,
+      when: const ForceUtcDateTime().fromJson(json['when_'] as String),
+      instanceHost: json['instance_host'] as String,
+    );
+
+Map<String, dynamic> _$$_AdminPurgePostToJson(_$_AdminPurgePost instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'admin_person_id': instance.adminPersonId,
+      'community_id': instance.communityId,
+      'reason': instance.reason,
+      'when_': const ForceUtcDateTime().toJson(instance.when),
+      'instance_host': instance.instanceHost,
+    };
+
+_$_AdminPurgePerson _$$_AdminPurgePersonFromJson(Map<String, dynamic> json) =>
+    _$_AdminPurgePerson(
+      id: json['id'] as int,
+      adminPersonId: json['admin_person_id'] as int,
+      reason: json['reason'] as String?,
+      when: const ForceUtcDateTime().fromJson(json['when_'] as String),
+      instanceHost: json['instance_host'] as String,
+    );
+
+Map<String, dynamic> _$$_AdminPurgePersonToJson(_$_AdminPurgePerson instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'admin_person_id': instance.adminPersonId,
+      'reason': instance.reason,
+      'when_': const ForceUtcDateTime().toJson(instance.when),
+      'instance_host': instance.instanceHost,
+    };
+
+_$_AdminPurgeCommunity _$$_AdminPurgeCommunityFromJson(
+        Map<String, dynamic> json) =>
+    _$_AdminPurgeCommunity(
+      id: json['id'] as int,
+      adminPersonId: json['admin_person_id'] as int,
+      reason: json['reason'] as String?,
+      when: const ForceUtcDateTime().fromJson(json['when_'] as String),
+      instanceHost: json['instance_host'] as String,
+    );
+
+Map<String, dynamic> _$$_AdminPurgeCommunityToJson(
+        _$_AdminPurgeCommunity instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'admin_person_id': instance.adminPersonId,
+      'reason': instance.reason,
       'when_': const ForceUtcDateTime().toJson(instance.when),
       'instance_host': instance.instanceHost,
     };

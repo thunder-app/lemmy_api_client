@@ -4363,6 +4363,277 @@ abstract class _ModStickyPost extends ModStickyPost {
       throw _privateConstructorUsedError;
 }
 
+ModFeaturePost _$ModFeaturePostFromJson(Map<String, dynamic> json) {
+  return _ModFeaturePost.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ModFeaturePost {
+  int get id => throw _privateConstructorUsedError;
+  int get modPersonId => throw _privateConstructorUsedError;
+  int get postId => throw _privateConstructorUsedError;
+  bool get featured => throw _privateConstructorUsedError;
+  bool get isFeaturedCommunity => throw _privateConstructorUsedError;
+  @JsonKey(name: 'when_')
+  DateTime get when => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ModFeaturePostCopyWith<ModFeaturePost> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ModFeaturePostCopyWith<$Res> {
+  factory $ModFeaturePostCopyWith(
+          ModFeaturePost value, $Res Function(ModFeaturePost) then) =
+      _$ModFeaturePostCopyWithImpl<$Res, ModFeaturePost>;
+  @useResult
+  $Res call(
+      {int id,
+      int modPersonId,
+      int postId,
+      bool featured,
+      bool isFeaturedCommunity,
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
+}
+
+/// @nodoc
+class _$ModFeaturePostCopyWithImpl<$Res, $Val extends ModFeaturePost>
+    implements $ModFeaturePostCopyWith<$Res> {
+  _$ModFeaturePostCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? postId = null,
+    Object? featured = null,
+    Object? isFeaturedCommunity = null,
+    Object? when = null,
+    Object? instanceHost = null,
+  }) {
+    return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modPersonId: null == modPersonId
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
+              as int,
+      postId: null == postId
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      featured: null == featured
+          ? _value.featured
+          : featured // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isFeaturedCommunity: null == isFeaturedCommunity
+          ? _value.isFeaturedCommunity
+          : isFeaturedCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+      when: null == when
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      instanceHost: null == instanceHost
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_ModFeaturePostCopyWith<$Res>
+    implements $ModFeaturePostCopyWith<$Res> {
+  factory _$$_ModFeaturePostCopyWith(
+          _$_ModFeaturePost value, $Res Function(_$_ModFeaturePost) then) =
+      __$$_ModFeaturePostCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {int id,
+      int modPersonId,
+      int postId,
+      bool featured,
+      bool isFeaturedCommunity,
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
+}
+
+/// @nodoc
+class __$$_ModFeaturePostCopyWithImpl<$Res>
+    extends _$ModFeaturePostCopyWithImpl<$Res, _$_ModFeaturePost>
+    implements _$$_ModFeaturePostCopyWith<$Res> {
+  __$$_ModFeaturePostCopyWithImpl(
+      _$_ModFeaturePost _value, $Res Function(_$_ModFeaturePost) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? postId = null,
+    Object? featured = null,
+    Object? isFeaturedCommunity = null,
+    Object? when = null,
+    Object? instanceHost = null,
+  }) {
+    return _then(_$_ModFeaturePost(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modPersonId: null == modPersonId
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
+              as int,
+      postId: null == postId
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      featured: null == featured
+          ? _value.featured
+          : featured // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isFeaturedCommunity: null == isFeaturedCommunity
+          ? _value.isFeaturedCommunity
+          : isFeaturedCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+      when: null == when
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      instanceHost: null == instanceHost
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+@modelSerde
+class _$_ModFeaturePost extends _ModFeaturePost {
+  const _$_ModFeaturePost(
+      {required this.id,
+      required this.modPersonId,
+      required this.postId,
+      required this.featured,
+      required this.isFeaturedCommunity,
+      @JsonKey(name: 'when_') required this.when,
+      required this.instanceHost})
+      : super._();
+
+  factory _$_ModFeaturePost.fromJson(Map<String, dynamic> json) =>
+      _$$_ModFeaturePostFromJson(json);
+
+  @override
+  final int id;
+  @override
+  final int modPersonId;
+  @override
+  final int postId;
+  @override
+  final bool featured;
+  @override
+  final bool isFeaturedCommunity;
+  @override
+  @JsonKey(name: 'when_')
+  final DateTime when;
+  @override
+  final String instanceHost;
+
+  @override
+  String toString() {
+    return 'ModFeaturePost(id: $id, modPersonId: $modPersonId, postId: $postId, featured: $featured, isFeaturedCommunity: $isFeaturedCommunity, when: $when, instanceHost: $instanceHost)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ModFeaturePost &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.modPersonId, modPersonId) ||
+                other.modPersonId == modPersonId) &&
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.featured, featured) ||
+                other.featured == featured) &&
+            (identical(other.isFeaturedCommunity, isFeaturedCommunity) ||
+                other.isFeaturedCommunity == isFeaturedCommunity) &&
+            (identical(other.when, when) || other.when == when) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, id, modPersonId, postId,
+      featured, isFeaturedCommunity, when, instanceHost);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ModFeaturePostCopyWith<_$_ModFeaturePost> get copyWith =>
+      __$$_ModFeaturePostCopyWithImpl<_$_ModFeaturePost>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ModFeaturePostToJson(
+      this,
+    );
+  }
+}
+
+abstract class _ModFeaturePost extends ModFeaturePost {
+  const factory _ModFeaturePost(
+      {required final int id,
+      required final int modPersonId,
+      required final int postId,
+      required final bool featured,
+      required final bool isFeaturedCommunity,
+      @JsonKey(name: 'when_') required final DateTime when,
+      required final String instanceHost}) = _$_ModFeaturePost;
+  const _ModFeaturePost._() : super._();
+
+  factory _ModFeaturePost.fromJson(Map<String, dynamic> json) =
+      _$_ModFeaturePost.fromJson;
+
+  @override
+  int get id;
+  @override
+  int get modPersonId;
+  @override
+  int get postId;
+  @override
+  bool get featured;
+  @override
+  bool get isFeaturedCommunity;
+  @override
+  @JsonKey(name: 'when_')
+  DateTime get when;
+  @override
+  String get instanceHost;
+  @override
+  @JsonKey(ignore: true)
+  _$$_ModFeaturePostCopyWith<_$_ModFeaturePost> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 ModRemoveComment _$ModRemoveCommentFromJson(Map<String, dynamic> json) {
   return _ModRemoveComment.fromJson(json);
 }
@@ -4921,6 +5192,276 @@ abstract class _ModRemoveCommunity extends ModRemoveCommunity {
   @override
   @JsonKey(ignore: true)
   _$$_ModRemoveCommunityCopyWith<_$_ModRemoveCommunity> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ModHideCommunity _$ModHideCommunityFromJson(Map<String, dynamic> json) {
+  return _ModHideCommunity.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ModHideCommunity {
+  int get id => throw _privateConstructorUsedError;
+  int get modPersonId => throw _privateConstructorUsedError;
+  int get communityId => throw _privateConstructorUsedError;
+  String? get reason => throw _privateConstructorUsedError;
+  bool get hidden => throw _privateConstructorUsedError;
+  @JsonKey(name: 'when_')
+  DateTime get when => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ModHideCommunityCopyWith<ModHideCommunity> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ModHideCommunityCopyWith<$Res> {
+  factory $ModHideCommunityCopyWith(
+          ModHideCommunity value, $Res Function(ModHideCommunity) then) =
+      _$ModHideCommunityCopyWithImpl<$Res, ModHideCommunity>;
+  @useResult
+  $Res call(
+      {int id,
+      int modPersonId,
+      int communityId,
+      String? reason,
+      bool hidden,
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
+}
+
+/// @nodoc
+class _$ModHideCommunityCopyWithImpl<$Res, $Val extends ModHideCommunity>
+    implements $ModHideCommunityCopyWith<$Res> {
+  _$ModHideCommunityCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? communityId = null,
+    Object? reason = freezed,
+    Object? hidden = null,
+    Object? when = null,
+    Object? instanceHost = null,
+  }) {
+    return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modPersonId: null == modPersonId
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
+              as int,
+      communityId: null == communityId
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int,
+      reason: freezed == reason
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      hidden: null == hidden
+          ? _value.hidden
+          : hidden // ignore: cast_nullable_to_non_nullable
+              as bool,
+      when: null == when
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      instanceHost: null == instanceHost
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_ModHideCommunityCopyWith<$Res>
+    implements $ModHideCommunityCopyWith<$Res> {
+  factory _$$_ModHideCommunityCopyWith(
+          _$_ModHideCommunity value, $Res Function(_$_ModHideCommunity) then) =
+      __$$_ModHideCommunityCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {int id,
+      int modPersonId,
+      int communityId,
+      String? reason,
+      bool hidden,
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
+}
+
+/// @nodoc
+class __$$_ModHideCommunityCopyWithImpl<$Res>
+    extends _$ModHideCommunityCopyWithImpl<$Res, _$_ModHideCommunity>
+    implements _$$_ModHideCommunityCopyWith<$Res> {
+  __$$_ModHideCommunityCopyWithImpl(
+      _$_ModHideCommunity _value, $Res Function(_$_ModHideCommunity) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? modPersonId = null,
+    Object? communityId = null,
+    Object? reason = freezed,
+    Object? hidden = null,
+    Object? when = null,
+    Object? instanceHost = null,
+  }) {
+    return _then(_$_ModHideCommunity(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modPersonId: null == modPersonId
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
+              as int,
+      communityId: null == communityId
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int,
+      reason: freezed == reason
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      hidden: null == hidden
+          ? _value.hidden
+          : hidden // ignore: cast_nullable_to_non_nullable
+              as bool,
+      when: null == when
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      instanceHost: null == instanceHost
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+@modelSerde
+class _$_ModHideCommunity extends _ModHideCommunity {
+  const _$_ModHideCommunity(
+      {required this.id,
+      required this.modPersonId,
+      required this.communityId,
+      this.reason,
+      required this.hidden,
+      @JsonKey(name: 'when_') required this.when,
+      required this.instanceHost})
+      : super._();
+
+  factory _$_ModHideCommunity.fromJson(Map<String, dynamic> json) =>
+      _$$_ModHideCommunityFromJson(json);
+
+  @override
+  final int id;
+  @override
+  final int modPersonId;
+  @override
+  final int communityId;
+  @override
+  final String? reason;
+  @override
+  final bool hidden;
+  @override
+  @JsonKey(name: 'when_')
+  final DateTime when;
+  @override
+  final String instanceHost;
+
+  @override
+  String toString() {
+    return 'ModHideCommunity(id: $id, modPersonId: $modPersonId, communityId: $communityId, reason: $reason, hidden: $hidden, when: $when, instanceHost: $instanceHost)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ModHideCommunity &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.modPersonId, modPersonId) ||
+                other.modPersonId == modPersonId) &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.hidden, hidden) || other.hidden == hidden) &&
+            (identical(other.when, when) || other.when == when) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, id, modPersonId, communityId,
+      reason, hidden, when, instanceHost);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ModHideCommunityCopyWith<_$_ModHideCommunity> get copyWith =>
+      __$$_ModHideCommunityCopyWithImpl<_$_ModHideCommunity>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ModHideCommunityToJson(
+      this,
+    );
+  }
+}
+
+abstract class _ModHideCommunity extends ModHideCommunity {
+  const factory _ModHideCommunity(
+      {required final int id,
+      required final int modPersonId,
+      required final int communityId,
+      final String? reason,
+      required final bool hidden,
+      @JsonKey(name: 'when_') required final DateTime when,
+      required final String instanceHost}) = _$_ModHideCommunity;
+  const _ModHideCommunity._() : super._();
+
+  factory _ModHideCommunity.fromJson(Map<String, dynamic> json) =
+      _$_ModHideCommunity.fromJson;
+
+  @override
+  int get id;
+  @override
+  int get modPersonId;
+  @override
+  int get communityId;
+  @override
+  String? get reason;
+  @override
+  bool get hidden;
+  @override
+  @JsonKey(name: 'when_')
+  DateTime get when;
+  @override
+  String get instanceHost;
+  @override
+  @JsonKey(ignore: true)
+  _$$_ModHideCommunityCopyWith<_$_ModHideCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -6305,6 +6846,965 @@ abstract class _ModAdd extends ModAdd {
   @override
   @JsonKey(ignore: true)
   _$$_ModAddCopyWith<_$_ModAdd> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+AdminPurgeComment _$AdminPurgeCommentFromJson(Map<String, dynamic> json) {
+  return _AdminPurgeComment.fromJson(json);
+}
+
+/// @nodoc
+mixin _$AdminPurgeComment {
+  int get id => throw _privateConstructorUsedError;
+  int get adminPersonId => throw _privateConstructorUsedError;
+  int get postId => throw _privateConstructorUsedError;
+  String? get reason => throw _privateConstructorUsedError;
+  @JsonKey(name: 'when_')
+  DateTime get when => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $AdminPurgeCommentCopyWith<AdminPurgeComment> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $AdminPurgeCommentCopyWith<$Res> {
+  factory $AdminPurgeCommentCopyWith(
+          AdminPurgeComment value, $Res Function(AdminPurgeComment) then) =
+      _$AdminPurgeCommentCopyWithImpl<$Res, AdminPurgeComment>;
+  @useResult
+  $Res call(
+      {int id,
+      int adminPersonId,
+      int postId,
+      String? reason,
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
+}
+
+/// @nodoc
+class _$AdminPurgeCommentCopyWithImpl<$Res, $Val extends AdminPurgeComment>
+    implements $AdminPurgeCommentCopyWith<$Res> {
+  _$AdminPurgeCommentCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? adminPersonId = null,
+    Object? postId = null,
+    Object? reason = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
+  }) {
+    return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      adminPersonId: null == adminPersonId
+          ? _value.adminPersonId
+          : adminPersonId // ignore: cast_nullable_to_non_nullable
+              as int,
+      postId: null == postId
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      reason: freezed == reason
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      when: null == when
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      instanceHost: null == instanceHost
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_AdminPurgeCommentCopyWith<$Res>
+    implements $AdminPurgeCommentCopyWith<$Res> {
+  factory _$$_AdminPurgeCommentCopyWith(_$_AdminPurgeComment value,
+          $Res Function(_$_AdminPurgeComment) then) =
+      __$$_AdminPurgeCommentCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {int id,
+      int adminPersonId,
+      int postId,
+      String? reason,
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
+}
+
+/// @nodoc
+class __$$_AdminPurgeCommentCopyWithImpl<$Res>
+    extends _$AdminPurgeCommentCopyWithImpl<$Res, _$_AdminPurgeComment>
+    implements _$$_AdminPurgeCommentCopyWith<$Res> {
+  __$$_AdminPurgeCommentCopyWithImpl(
+      _$_AdminPurgeComment _value, $Res Function(_$_AdminPurgeComment) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? adminPersonId = null,
+    Object? postId = null,
+    Object? reason = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
+  }) {
+    return _then(_$_AdminPurgeComment(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      adminPersonId: null == adminPersonId
+          ? _value.adminPersonId
+          : adminPersonId // ignore: cast_nullable_to_non_nullable
+              as int,
+      postId: null == postId
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      reason: freezed == reason
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      when: null == when
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      instanceHost: null == instanceHost
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+@modelSerde
+class _$_AdminPurgeComment extends _AdminPurgeComment {
+  const _$_AdminPurgeComment(
+      {required this.id,
+      required this.adminPersonId,
+      required this.postId,
+      this.reason,
+      @JsonKey(name: 'when_') required this.when,
+      required this.instanceHost})
+      : super._();
+
+  factory _$_AdminPurgeComment.fromJson(Map<String, dynamic> json) =>
+      _$$_AdminPurgeCommentFromJson(json);
+
+  @override
+  final int id;
+  @override
+  final int adminPersonId;
+  @override
+  final int postId;
+  @override
+  final String? reason;
+  @override
+  @JsonKey(name: 'when_')
+  final DateTime when;
+  @override
+  final String instanceHost;
+
+  @override
+  String toString() {
+    return 'AdminPurgeComment(id: $id, adminPersonId: $adminPersonId, postId: $postId, reason: $reason, when: $when, instanceHost: $instanceHost)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_AdminPurgeComment &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.adminPersonId, adminPersonId) ||
+                other.adminPersonId == adminPersonId) &&
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.when, when) || other.when == when) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, id, adminPersonId, postId, reason, when, instanceHost);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_AdminPurgeCommentCopyWith<_$_AdminPurgeComment> get copyWith =>
+      __$$_AdminPurgeCommentCopyWithImpl<_$_AdminPurgeComment>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_AdminPurgeCommentToJson(
+      this,
+    );
+  }
+}
+
+abstract class _AdminPurgeComment extends AdminPurgeComment {
+  const factory _AdminPurgeComment(
+      {required final int id,
+      required final int adminPersonId,
+      required final int postId,
+      final String? reason,
+      @JsonKey(name: 'when_') required final DateTime when,
+      required final String instanceHost}) = _$_AdminPurgeComment;
+  const _AdminPurgeComment._() : super._();
+
+  factory _AdminPurgeComment.fromJson(Map<String, dynamic> json) =
+      _$_AdminPurgeComment.fromJson;
+
+  @override
+  int get id;
+  @override
+  int get adminPersonId;
+  @override
+  int get postId;
+  @override
+  String? get reason;
+  @override
+  @JsonKey(name: 'when_')
+  DateTime get when;
+  @override
+  String get instanceHost;
+  @override
+  @JsonKey(ignore: true)
+  _$$_AdminPurgeCommentCopyWith<_$_AdminPurgeComment> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+AdminPurgePost _$AdminPurgePostFromJson(Map<String, dynamic> json) {
+  return _AdminPurgePost.fromJson(json);
+}
+
+/// @nodoc
+mixin _$AdminPurgePost {
+  int get id => throw _privateConstructorUsedError;
+  int get adminPersonId => throw _privateConstructorUsedError;
+  int get communityId => throw _privateConstructorUsedError;
+  String? get reason => throw _privateConstructorUsedError;
+  @JsonKey(name: 'when_')
+  DateTime get when => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $AdminPurgePostCopyWith<AdminPurgePost> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $AdminPurgePostCopyWith<$Res> {
+  factory $AdminPurgePostCopyWith(
+          AdminPurgePost value, $Res Function(AdminPurgePost) then) =
+      _$AdminPurgePostCopyWithImpl<$Res, AdminPurgePost>;
+  @useResult
+  $Res call(
+      {int id,
+      int adminPersonId,
+      int communityId,
+      String? reason,
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
+}
+
+/// @nodoc
+class _$AdminPurgePostCopyWithImpl<$Res, $Val extends AdminPurgePost>
+    implements $AdminPurgePostCopyWith<$Res> {
+  _$AdminPurgePostCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? adminPersonId = null,
+    Object? communityId = null,
+    Object? reason = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
+  }) {
+    return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      adminPersonId: null == adminPersonId
+          ? _value.adminPersonId
+          : adminPersonId // ignore: cast_nullable_to_non_nullable
+              as int,
+      communityId: null == communityId
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int,
+      reason: freezed == reason
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      when: null == when
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      instanceHost: null == instanceHost
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_AdminPurgePostCopyWith<$Res>
+    implements $AdminPurgePostCopyWith<$Res> {
+  factory _$$_AdminPurgePostCopyWith(
+          _$_AdminPurgePost value, $Res Function(_$_AdminPurgePost) then) =
+      __$$_AdminPurgePostCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {int id,
+      int adminPersonId,
+      int communityId,
+      String? reason,
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
+}
+
+/// @nodoc
+class __$$_AdminPurgePostCopyWithImpl<$Res>
+    extends _$AdminPurgePostCopyWithImpl<$Res, _$_AdminPurgePost>
+    implements _$$_AdminPurgePostCopyWith<$Res> {
+  __$$_AdminPurgePostCopyWithImpl(
+      _$_AdminPurgePost _value, $Res Function(_$_AdminPurgePost) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? adminPersonId = null,
+    Object? communityId = null,
+    Object? reason = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
+  }) {
+    return _then(_$_AdminPurgePost(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      adminPersonId: null == adminPersonId
+          ? _value.adminPersonId
+          : adminPersonId // ignore: cast_nullable_to_non_nullable
+              as int,
+      communityId: null == communityId
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int,
+      reason: freezed == reason
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      when: null == when
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      instanceHost: null == instanceHost
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+@modelSerde
+class _$_AdminPurgePost extends _AdminPurgePost {
+  const _$_AdminPurgePost(
+      {required this.id,
+      required this.adminPersonId,
+      required this.communityId,
+      this.reason,
+      @JsonKey(name: 'when_') required this.when,
+      required this.instanceHost})
+      : super._();
+
+  factory _$_AdminPurgePost.fromJson(Map<String, dynamic> json) =>
+      _$$_AdminPurgePostFromJson(json);
+
+  @override
+  final int id;
+  @override
+  final int adminPersonId;
+  @override
+  final int communityId;
+  @override
+  final String? reason;
+  @override
+  @JsonKey(name: 'when_')
+  final DateTime when;
+  @override
+  final String instanceHost;
+
+  @override
+  String toString() {
+    return 'AdminPurgePost(id: $id, adminPersonId: $adminPersonId, communityId: $communityId, reason: $reason, when: $when, instanceHost: $instanceHost)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_AdminPurgePost &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.adminPersonId, adminPersonId) ||
+                other.adminPersonId == adminPersonId) &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.when, when) || other.when == when) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, id, adminPersonId, communityId, reason, when, instanceHost);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_AdminPurgePostCopyWith<_$_AdminPurgePost> get copyWith =>
+      __$$_AdminPurgePostCopyWithImpl<_$_AdminPurgePost>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_AdminPurgePostToJson(
+      this,
+    );
+  }
+}
+
+abstract class _AdminPurgePost extends AdminPurgePost {
+  const factory _AdminPurgePost(
+      {required final int id,
+      required final int adminPersonId,
+      required final int communityId,
+      final String? reason,
+      @JsonKey(name: 'when_') required final DateTime when,
+      required final String instanceHost}) = _$_AdminPurgePost;
+  const _AdminPurgePost._() : super._();
+
+  factory _AdminPurgePost.fromJson(Map<String, dynamic> json) =
+      _$_AdminPurgePost.fromJson;
+
+  @override
+  int get id;
+  @override
+  int get adminPersonId;
+  @override
+  int get communityId;
+  @override
+  String? get reason;
+  @override
+  @JsonKey(name: 'when_')
+  DateTime get when;
+  @override
+  String get instanceHost;
+  @override
+  @JsonKey(ignore: true)
+  _$$_AdminPurgePostCopyWith<_$_AdminPurgePost> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+AdminPurgePerson _$AdminPurgePersonFromJson(Map<String, dynamic> json) {
+  return _AdminPurgePerson.fromJson(json);
+}
+
+/// @nodoc
+mixin _$AdminPurgePerson {
+  int get id => throw _privateConstructorUsedError;
+  int get adminPersonId => throw _privateConstructorUsedError;
+  String? get reason => throw _privateConstructorUsedError;
+  @JsonKey(name: 'when_')
+  DateTime get when => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $AdminPurgePersonCopyWith<AdminPurgePerson> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $AdminPurgePersonCopyWith<$Res> {
+  factory $AdminPurgePersonCopyWith(
+          AdminPurgePerson value, $Res Function(AdminPurgePerson) then) =
+      _$AdminPurgePersonCopyWithImpl<$Res, AdminPurgePerson>;
+  @useResult
+  $Res call(
+      {int id,
+      int adminPersonId,
+      String? reason,
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
+}
+
+/// @nodoc
+class _$AdminPurgePersonCopyWithImpl<$Res, $Val extends AdminPurgePerson>
+    implements $AdminPurgePersonCopyWith<$Res> {
+  _$AdminPurgePersonCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? adminPersonId = null,
+    Object? reason = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
+  }) {
+    return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      adminPersonId: null == adminPersonId
+          ? _value.adminPersonId
+          : adminPersonId // ignore: cast_nullable_to_non_nullable
+              as int,
+      reason: freezed == reason
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      when: null == when
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      instanceHost: null == instanceHost
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_AdminPurgePersonCopyWith<$Res>
+    implements $AdminPurgePersonCopyWith<$Res> {
+  factory _$$_AdminPurgePersonCopyWith(
+          _$_AdminPurgePerson value, $Res Function(_$_AdminPurgePerson) then) =
+      __$$_AdminPurgePersonCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {int id,
+      int adminPersonId,
+      String? reason,
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
+}
+
+/// @nodoc
+class __$$_AdminPurgePersonCopyWithImpl<$Res>
+    extends _$AdminPurgePersonCopyWithImpl<$Res, _$_AdminPurgePerson>
+    implements _$$_AdminPurgePersonCopyWith<$Res> {
+  __$$_AdminPurgePersonCopyWithImpl(
+      _$_AdminPurgePerson _value, $Res Function(_$_AdminPurgePerson) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? adminPersonId = null,
+    Object? reason = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
+  }) {
+    return _then(_$_AdminPurgePerson(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      adminPersonId: null == adminPersonId
+          ? _value.adminPersonId
+          : adminPersonId // ignore: cast_nullable_to_non_nullable
+              as int,
+      reason: freezed == reason
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      when: null == when
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      instanceHost: null == instanceHost
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+@modelSerde
+class _$_AdminPurgePerson extends _AdminPurgePerson {
+  const _$_AdminPurgePerson(
+      {required this.id,
+      required this.adminPersonId,
+      this.reason,
+      @JsonKey(name: 'when_') required this.when,
+      required this.instanceHost})
+      : super._();
+
+  factory _$_AdminPurgePerson.fromJson(Map<String, dynamic> json) =>
+      _$$_AdminPurgePersonFromJson(json);
+
+  @override
+  final int id;
+  @override
+  final int adminPersonId;
+  @override
+  final String? reason;
+  @override
+  @JsonKey(name: 'when_')
+  final DateTime when;
+  @override
+  final String instanceHost;
+
+  @override
+  String toString() {
+    return 'AdminPurgePerson(id: $id, adminPersonId: $adminPersonId, reason: $reason, when: $when, instanceHost: $instanceHost)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_AdminPurgePerson &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.adminPersonId, adminPersonId) ||
+                other.adminPersonId == adminPersonId) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.when, when) || other.when == when) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, id, adminPersonId, reason, when, instanceHost);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_AdminPurgePersonCopyWith<_$_AdminPurgePerson> get copyWith =>
+      __$$_AdminPurgePersonCopyWithImpl<_$_AdminPurgePerson>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_AdminPurgePersonToJson(
+      this,
+    );
+  }
+}
+
+abstract class _AdminPurgePerson extends AdminPurgePerson {
+  const factory _AdminPurgePerson(
+      {required final int id,
+      required final int adminPersonId,
+      final String? reason,
+      @JsonKey(name: 'when_') required final DateTime when,
+      required final String instanceHost}) = _$_AdminPurgePerson;
+  const _AdminPurgePerson._() : super._();
+
+  factory _AdminPurgePerson.fromJson(Map<String, dynamic> json) =
+      _$_AdminPurgePerson.fromJson;
+
+  @override
+  int get id;
+  @override
+  int get adminPersonId;
+  @override
+  String? get reason;
+  @override
+  @JsonKey(name: 'when_')
+  DateTime get when;
+  @override
+  String get instanceHost;
+  @override
+  @JsonKey(ignore: true)
+  _$$_AdminPurgePersonCopyWith<_$_AdminPurgePerson> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+AdminPurgeCommunity _$AdminPurgeCommunityFromJson(Map<String, dynamic> json) {
+  return _AdminPurgeCommunity.fromJson(json);
+}
+
+/// @nodoc
+mixin _$AdminPurgeCommunity {
+  int get id => throw _privateConstructorUsedError;
+  int get adminPersonId => throw _privateConstructorUsedError;
+  String? get reason => throw _privateConstructorUsedError;
+  @JsonKey(name: 'when_')
+  DateTime get when => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $AdminPurgeCommunityCopyWith<AdminPurgeCommunity> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $AdminPurgeCommunityCopyWith<$Res> {
+  factory $AdminPurgeCommunityCopyWith(
+          AdminPurgeCommunity value, $Res Function(AdminPurgeCommunity) then) =
+      _$AdminPurgeCommunityCopyWithImpl<$Res, AdminPurgeCommunity>;
+  @useResult
+  $Res call(
+      {int id,
+      int adminPersonId,
+      String? reason,
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
+}
+
+/// @nodoc
+class _$AdminPurgeCommunityCopyWithImpl<$Res, $Val extends AdminPurgeCommunity>
+    implements $AdminPurgeCommunityCopyWith<$Res> {
+  _$AdminPurgeCommunityCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? adminPersonId = null,
+    Object? reason = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
+  }) {
+    return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      adminPersonId: null == adminPersonId
+          ? _value.adminPersonId
+          : adminPersonId // ignore: cast_nullable_to_non_nullable
+              as int,
+      reason: freezed == reason
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      when: null == when
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      instanceHost: null == instanceHost
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_AdminPurgeCommunityCopyWith<$Res>
+    implements $AdminPurgeCommunityCopyWith<$Res> {
+  factory _$$_AdminPurgeCommunityCopyWith(_$_AdminPurgeCommunity value,
+          $Res Function(_$_AdminPurgeCommunity) then) =
+      __$$_AdminPurgeCommunityCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {int id,
+      int adminPersonId,
+      String? reason,
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
+}
+
+/// @nodoc
+class __$$_AdminPurgeCommunityCopyWithImpl<$Res>
+    extends _$AdminPurgeCommunityCopyWithImpl<$Res, _$_AdminPurgeCommunity>
+    implements _$$_AdminPurgeCommunityCopyWith<$Res> {
+  __$$_AdminPurgeCommunityCopyWithImpl(_$_AdminPurgeCommunity _value,
+      $Res Function(_$_AdminPurgeCommunity) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? adminPersonId = null,
+    Object? reason = freezed,
+    Object? when = null,
+    Object? instanceHost = null,
+  }) {
+    return _then(_$_AdminPurgeCommunity(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      adminPersonId: null == adminPersonId
+          ? _value.adminPersonId
+          : adminPersonId // ignore: cast_nullable_to_non_nullable
+              as int,
+      reason: freezed == reason
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      when: null == when
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      instanceHost: null == instanceHost
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+@modelSerde
+class _$_AdminPurgeCommunity extends _AdminPurgeCommunity {
+  const _$_AdminPurgeCommunity(
+      {required this.id,
+      required this.adminPersonId,
+      this.reason,
+      @JsonKey(name: 'when_') required this.when,
+      required this.instanceHost})
+      : super._();
+
+  factory _$_AdminPurgeCommunity.fromJson(Map<String, dynamic> json) =>
+      _$$_AdminPurgeCommunityFromJson(json);
+
+  @override
+  final int id;
+  @override
+  final int adminPersonId;
+  @override
+  final String? reason;
+  @override
+  @JsonKey(name: 'when_')
+  final DateTime when;
+  @override
+  final String instanceHost;
+
+  @override
+  String toString() {
+    return 'AdminPurgeCommunity(id: $id, adminPersonId: $adminPersonId, reason: $reason, when: $when, instanceHost: $instanceHost)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_AdminPurgeCommunity &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.adminPersonId, adminPersonId) ||
+                other.adminPersonId == adminPersonId) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.when, when) || other.when == when) &&
+            (identical(other.instanceHost, instanceHost) ||
+                other.instanceHost == instanceHost));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, id, adminPersonId, reason, when, instanceHost);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_AdminPurgeCommunityCopyWith<_$_AdminPurgeCommunity> get copyWith =>
+      __$$_AdminPurgeCommunityCopyWithImpl<_$_AdminPurgeCommunity>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_AdminPurgeCommunityToJson(
+      this,
+    );
+  }
+}
+
+abstract class _AdminPurgeCommunity extends AdminPurgeCommunity {
+  const factory _AdminPurgeCommunity(
+      {required final int id,
+      required final int adminPersonId,
+      final String? reason,
+      @JsonKey(name: 'when_') required final DateTime when,
+      required final String instanceHost}) = _$_AdminPurgeCommunity;
+  const _AdminPurgeCommunity._() : super._();
+
+  factory _AdminPurgeCommunity.fromJson(Map<String, dynamic> json) =
+      _$_AdminPurgeCommunity.fromJson;
+
+  @override
+  int get id;
+  @override
+  int get adminPersonId;
+  @override
+  String? get reason;
+  @override
+  @JsonKey(name: 'when_')
+  DateTime get when;
+  @override
+  String get instanceHost;
+  @override
+  @JsonKey(ignore: true)
+  _$$_AdminPurgeCommunityCopyWith<_$_AdminPurgeCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

@@ -267,6 +267,24 @@ class ModStickyPost with _$ModStickyPost {
 }
 
 @freezed
+class ModFeaturePost with _$ModFeaturePost {
+  @modelSerde
+  const factory ModFeaturePost({
+    required int id,
+    required int modPersonId,
+    required int postId,
+    required bool featured,
+    required bool isFeaturedCommunity,
+    @JsonKey(name: 'when_') required DateTime when,
+    required String instanceHost,
+  }) = _ModFeaturePost;
+
+  const ModFeaturePost._();
+  factory ModFeaturePost.fromJson(Map<String, dynamic> json) =>
+      _$ModFeaturePostFromJson(json);
+}
+
+@freezed
 class ModRemoveComment with _$ModRemoveComment {
   @modelSerde
   const factory ModRemoveComment({
@@ -301,6 +319,24 @@ class ModRemoveCommunity with _$ModRemoveCommunity {
   const ModRemoveCommunity._();
   factory ModRemoveCommunity.fromJson(Map<String, dynamic> json) =>
       _$ModRemoveCommunityFromJson(json);
+}
+
+@freezed
+class ModHideCommunity with _$ModHideCommunity {
+  @modelSerde
+  const factory ModHideCommunity({
+    required int id,
+    required int modPersonId,
+    required int communityId,
+    String? reason,
+    required bool hidden,
+    @JsonKey(name: 'when_') required DateTime when,
+    required String instanceHost,
+  }) = _ModHideCommunity;
+
+  const ModHideCommunity._();
+  factory ModHideCommunity.fromJson(Map<String, dynamic> json) =>
+      _$ModHideCommunityFromJson(json);
 }
 
 @freezed
@@ -391,6 +427,72 @@ class ModAdd with _$ModAdd {
 
   const ModAdd._();
   factory ModAdd.fromJson(Map<String, dynamic> json) => _$ModAddFromJson(json);
+}
+
+@freezed
+class AdminPurgeComment with _$AdminPurgeComment {
+  @modelSerde
+  const factory AdminPurgeComment({
+    required int id,
+    required int adminPersonId,
+    required int postId,
+    String? reason,
+    @JsonKey(name: 'when_') required DateTime when,
+    required String instanceHost,
+  }) = _AdminPurgeComment;
+
+  const AdminPurgeComment._();
+  factory AdminPurgeComment.fromJson(Map<String, dynamic> json) =>
+      _$AdminPurgeCommentFromJson(json);
+}
+
+@freezed
+class AdminPurgePost with _$AdminPurgePost {
+  @modelSerde
+  const factory AdminPurgePost({
+    required int id,
+    required int adminPersonId,
+    required int communityId,
+    String? reason,
+    @JsonKey(name: 'when_') required DateTime when,
+    required String instanceHost,
+  }) = _AdminPurgePost;
+
+  const AdminPurgePost._();
+  factory AdminPurgePost.fromJson(Map<String, dynamic> json) =>
+      _$AdminPurgePostFromJson(json);
+}
+
+@freezed
+class AdminPurgePerson with _$AdminPurgePerson {
+  @modelSerde
+  const factory AdminPurgePerson({
+    required int id,
+    required int adminPersonId,
+    String? reason,
+    @JsonKey(name: 'when_') required DateTime when,
+    required String instanceHost,
+  }) = _AdminPurgePerson;
+
+  const AdminPurgePerson._();
+  factory AdminPurgePerson.fromJson(Map<String, dynamic> json) =>
+      _$AdminPurgePersonFromJson(json);
+}
+
+@freezed
+class AdminPurgeCommunity with _$AdminPurgeCommunity {
+  @modelSerde
+  const factory AdminPurgeCommunity({
+    required int id,
+    required int adminPersonId,
+    String? reason,
+    @JsonKey(name: 'when_') required DateTime when,
+    required String instanceHost,
+  }) = _AdminPurgeCommunity;
+
+  const AdminPurgeCommunity._();
+  factory AdminPurgeCommunity.fromJson(Map<String, dynamic> json) =>
+      _$AdminPurgeCommunityFromJson(json);
 }
 
 @freezed

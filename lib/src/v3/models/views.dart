@@ -210,7 +210,7 @@ class ModAddCommunityView with _$ModAddCommunityView {
   @modelSerde
   const factory ModAddCommunityView({
     required ModAddCommunity modAddCommunity,
-    required PersonSafe moderator,
+    PersonSafe? moderator,
     required CommunitySafe community,
     required PersonSafe moddedPerson,
     required String instanceHost,
@@ -226,7 +226,7 @@ class ModTransferCommunityView with _$ModTransferCommunityView {
   @modelSerde
   const factory ModTransferCommunityView({
     required ModTransferCommunity modTransferCommunity,
-    required PersonSafe moderator,
+    required PersonSafe? moderator,
     required CommunitySafe community,
     required PersonSafe moddedPerson,
     required String instanceHost,
@@ -242,7 +242,7 @@ class ModAddView with _$ModAddView {
   @modelSerde
   const factory ModAddView({
     required ModAdd modAdd,
-    required PersonSafe moderator,
+    required PersonSafe? moderator,
     required PersonSafe moddedPerson,
     required String instanceHost,
   }) = _ModAddView;
@@ -257,7 +257,7 @@ class ModBanFromCommunityView with _$ModBanFromCommunityView {
   @modelSerde
   const factory ModBanFromCommunityView({
     required ModBanFromCommunity modBanFromCommunity,
-    required PersonSafe moderator,
+    required PersonSafe? moderator,
     required CommunitySafe community,
     required PersonSafe bannedPerson,
     required String instanceHost,
@@ -273,7 +273,7 @@ class ModBanView with _$ModBanView {
   @modelSerde
   const factory ModBanView({
     required ModBan modBan,
-    required PersonSafe moderator,
+    required PersonSafe? moderator,
     required PersonSafe bannedPerson,
     required String instanceHost,
   }) = _ModBanView;
@@ -288,7 +288,7 @@ class ModLockPostView with _$ModLockPostView {
   @modelSerde
   const factory ModLockPostView({
     required ModLockPost modLockPost,
-    required PersonSafe moderator,
+    required PersonSafe? moderator,
     required Post post,
     required CommunitySafe community,
     required String instanceHost,
@@ -304,7 +304,7 @@ class ModRemoveCommentView with _$ModRemoveCommentView {
   @modelSerde
   const factory ModRemoveCommentView({
     required ModRemoveComment modRemoveComment,
-    required PersonSafe moderator,
+    required PersonSafe? moderator,
     required Comment comment,
     required PersonSafe commenter,
     required Post post,
@@ -322,7 +322,7 @@ class ModRemoveCommunityView with _$ModRemoveCommunityView {
   @modelSerde
   const factory ModRemoveCommunityView({
     required ModRemoveCommunity modRemoveCommunity,
-    required PersonSafe moderator,
+    required PersonSafe? moderator,
     required CommunitySafe community,
     required String instanceHost,
   }) = _ModRemoveCommunityView;
@@ -333,11 +333,26 @@ class ModRemoveCommunityView with _$ModRemoveCommunityView {
 }
 
 @freezed
+class ModHideCommunityView with _$ModHideCommunityView {
+  @modelSerde
+  const factory ModHideCommunityView({
+    required ModHideCommunity modHideCommunity,
+    PersonSafe? admin,
+    required CommunitySafe community,
+    required String instanceHost,
+  }) = _ModHideCommunityView;
+
+  const ModHideCommunityView._();
+  factory ModHideCommunityView.fromJson(Map<String, dynamic> json) =>
+      _$ModHideCommunityViewFromJson(json);
+}
+
+@freezed
 class ModRemovePostView with _$ModRemovePostView {
   @modelSerde
   const factory ModRemovePostView({
     required ModRemovePost modRemovePost,
-    required PersonSafe moderator,
+    required PersonSafe? moderator,
     required Post post,
     required CommunitySafe community,
     required String instanceHost,
@@ -353,7 +368,7 @@ class ModStickyPostView with _$ModStickyPostView {
   @modelSerde
   const factory ModStickyPostView({
     required ModStickyPost modStickyPost,
-    required PersonSafe moderator,
+    required PersonSafe? moderator,
     required Post post,
     required CommunitySafe community,
     required String instanceHost,
@@ -362,6 +377,22 @@ class ModStickyPostView with _$ModStickyPostView {
   const ModStickyPostView._();
   factory ModStickyPostView.fromJson(Map<String, dynamic> json) =>
       _$ModStickyPostViewFromJson(json);
+}
+
+@freezed
+class ModFeaturePostView with _$ModFeaturePostView {
+  @modelSerde
+  const factory ModFeaturePostView({
+    required ModFeaturePost modFeaturePost,
+    PersonSafe? moderator,
+    required Post post,
+    required CommunitySafe community,
+    required String instanceHost,
+  }) = _ModFeaturePostView;
+
+  const ModFeaturePostView._();
+  factory ModFeaturePostView.fromJson(Map<String, dynamic> json) =>
+      _$ModFeaturePostViewFromJson(json);
 }
 
 @freezed
@@ -383,7 +414,7 @@ class CommunityModeratorView with _$CommunityModeratorView {
   @modelSerde
   const factory CommunityModeratorView({
     required CommunitySafe community,
-    required PersonSafe moderator,
+    required PersonSafe? moderator,
     required String instanceHost,
   }) = _CommunityModeratorView;
 
@@ -464,4 +495,62 @@ class RegistrationApplicationView with _$RegistrationApplicationView {
   const RegistrationApplicationView._();
   factory RegistrationApplicationView.fromJson(Map<String, dynamic> json) =>
       _$RegistrationApplicationViewFromJson(json);
+}
+
+@freezed
+class AdminPurgeCommentView with _$AdminPurgeCommentView {
+  @modelSerde
+  const factory AdminPurgeCommentView({
+    required AdminPurgeComment adminPurgeComment,
+    PersonSafe? admin,
+    required Post post,
+    required String instanceHost,
+  }) = _AdminPurgeCommentView;
+
+  const AdminPurgeCommentView._();
+  factory AdminPurgeCommentView.fromJson(Map<String, dynamic> json) =>
+      _$AdminPurgeCommentViewFromJson(json);
+}
+
+@freezed
+class AdminPurgePostView with _$AdminPurgePostView {
+  @modelSerde
+  const factory AdminPurgePostView({
+    required AdminPurgePost adminPurgePost,
+    PersonSafe? admin,
+    required CommunitySafe community,
+    required String instanceHost,
+  }) = _AdminPurgePostView;
+
+  const AdminPurgePostView._();
+  factory AdminPurgePostView.fromJson(Map<String, dynamic> json) =>
+      _$AdminPurgePostViewFromJson(json);
+}
+
+@freezed
+class AdminPurgePersonView with _$AdminPurgePersonView {
+  @modelSerde
+  const factory AdminPurgePersonView({
+    required AdminPurgePerson adminPurgePerson,
+    PersonSafe? admin,
+    required String instanceHost,
+  }) = _AdminPurgePersonView;
+
+  const AdminPurgePersonView._();
+  factory AdminPurgePersonView.fromJson(Map<String, dynamic> json) =>
+      _$AdminPurgePersonViewFromJson(json);
+}
+
+@freezed
+class AdminPurgeCommunityView with _$AdminPurgeCommunityView {
+  @modelSerde
+  const factory AdminPurgeCommunityView({
+    required AdminPurgeCommunity adminPurgeCommunity,
+    PersonSafe? admin,
+    required String instanceHost,
+  }) = _AdminPurgeCommunityView;
+
+  const AdminPurgeCommunityView._();
+  factory AdminPurgeCommunityView.fromJson(Map<String, dynamic> json) =>
+      _$AdminPurgeCommunityViewFromJson(json);
 }
