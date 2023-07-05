@@ -46,9 +46,11 @@ class GetModlog with _$GetModlog implements LemmyApiQuery<Modlog> {
   const factory GetModlog({
     int? modPersonId,
     int? communityId,
+    int? otherPersonId,
     int? page,
     int? limit,
     String? auth,
+    @JsonKey(name: 'type_') ModlogActionType? type,
   }) = _GetModlog;
 
   const GetModlog._();

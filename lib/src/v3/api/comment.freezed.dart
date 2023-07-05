@@ -1345,6 +1345,7 @@ mixin _$GetComments {
   int? get communityId => throw _privateConstructorUsedError;
   String? get communityName => throw _privateConstructorUsedError;
   int? get postId => throw _privateConstructorUsedError;
+  int? get parentId => throw _privateConstructorUsedError;
   bool? get savedOnly => throw _privateConstructorUsedError;
   String? get auth => throw _privateConstructorUsedError;
   int? get maxDepth => throw _privateConstructorUsedError;
@@ -1369,6 +1370,7 @@ abstract class $GetCommentsCopyWith<$Res> {
       int? communityId,
       String? communityName,
       int? postId,
+      int? parentId,
       bool? savedOnly,
       String? auth,
       int? maxDepth});
@@ -1394,6 +1396,7 @@ class _$GetCommentsCopyWithImpl<$Res, $Val extends GetComments>
     Object? communityId = freezed,
     Object? communityName = freezed,
     Object? postId = freezed,
+    Object? parentId = freezed,
     Object? savedOnly = freezed,
     Object? auth = freezed,
     Object? maxDepth = freezed,
@@ -1427,6 +1430,10 @@ class _$GetCommentsCopyWithImpl<$Res, $Val extends GetComments>
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int?,
+      parentId: freezed == parentId
+          ? _value.parentId
+          : parentId // ignore: cast_nullable_to_non_nullable
+              as int?,
       savedOnly: freezed == savedOnly
           ? _value.savedOnly
           : savedOnly // ignore: cast_nullable_to_non_nullable
@@ -1459,6 +1466,7 @@ abstract class _$$_GetCommentsCopyWith<$Res>
       int? communityId,
       String? communityName,
       int? postId,
+      int? parentId,
       bool? savedOnly,
       String? auth,
       int? maxDepth});
@@ -1482,6 +1490,7 @@ class __$$_GetCommentsCopyWithImpl<$Res>
     Object? communityId = freezed,
     Object? communityName = freezed,
     Object? postId = freezed,
+    Object? parentId = freezed,
     Object? savedOnly = freezed,
     Object? auth = freezed,
     Object? maxDepth = freezed,
@@ -1515,6 +1524,10 @@ class __$$_GetCommentsCopyWithImpl<$Res>
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int?,
+      parentId: freezed == parentId
+          ? _value.parentId
+          : parentId // ignore: cast_nullable_to_non_nullable
+              as int?,
       savedOnly: freezed == savedOnly
           ? _value.savedOnly
           : savedOnly // ignore: cast_nullable_to_non_nullable
@@ -1543,6 +1556,7 @@ class _$_GetComments extends _GetComments {
       this.communityId,
       this.communityName,
       this.postId,
+      this.parentId,
       this.savedOnly,
       this.auth,
       this.maxDepth})
@@ -1567,6 +1581,8 @@ class _$_GetComments extends _GetComments {
   @override
   final int? postId;
   @override
+  final int? parentId;
+  @override
   final bool? savedOnly;
   @override
   final String? auth;
@@ -1575,7 +1591,7 @@ class _$_GetComments extends _GetComments {
 
   @override
   String toString() {
-    return 'GetComments(type: $type, sort: $sort, page: $page, limit: $limit, communityId: $communityId, communityName: $communityName, postId: $postId, savedOnly: $savedOnly, auth: $auth, maxDepth: $maxDepth)';
+    return 'GetComments(type: $type, sort: $sort, page: $page, limit: $limit, communityId: $communityId, communityName: $communityName, postId: $postId, parentId: $parentId, savedOnly: $savedOnly, auth: $auth, maxDepth: $maxDepth)';
   }
 
   @override
@@ -1592,6 +1608,8 @@ class _$_GetComments extends _GetComments {
             (identical(other.communityName, communityName) ||
                 other.communityName == communityName) &&
             (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.parentId, parentId) ||
+                other.parentId == parentId) &&
             (identical(other.savedOnly, savedOnly) ||
                 other.savedOnly == savedOnly) &&
             (identical(other.auth, auth) || other.auth == auth) &&
@@ -1602,7 +1620,7 @@ class _$_GetComments extends _GetComments {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, type, sort, page, limit,
-      communityId, communityName, postId, savedOnly, auth, maxDepth);
+      communityId, communityName, postId, parentId, savedOnly, auth, maxDepth);
 
   @JsonKey(ignore: true)
   @override
@@ -1627,6 +1645,7 @@ abstract class _GetComments extends GetComments {
       final int? communityId,
       final String? communityName,
       final int? postId,
+      final int? parentId,
       final bool? savedOnly,
       final String? auth,
       final int? maxDepth}) = _$_GetComments;
@@ -1650,6 +1669,8 @@ abstract class _GetComments extends GetComments {
   String? get communityName;
   @override
   int? get postId;
+  @override
+  int? get parentId;
   @override
   bool? get savedOnly;
   @override

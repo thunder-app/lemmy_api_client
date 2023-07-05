@@ -347,9 +347,12 @@ GetModlog _$GetModlogFromJson(Map<String, dynamic> json) {
 mixin _$GetModlog {
   int? get modPersonId => throw _privateConstructorUsedError;
   int? get communityId => throw _privateConstructorUsedError;
+  int? get otherPersonId => throw _privateConstructorUsedError;
   int? get page => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
   String? get auth => throw _privateConstructorUsedError;
+  @JsonKey(name: 'type_')
+  ModlogActionType? get type => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -365,9 +368,11 @@ abstract class $GetModlogCopyWith<$Res> {
   $Res call(
       {int? modPersonId,
       int? communityId,
+      int? otherPersonId,
       int? page,
       int? limit,
-      String? auth});
+      String? auth,
+      @JsonKey(name: 'type_') ModlogActionType? type});
 }
 
 /// @nodoc
@@ -385,9 +390,11 @@ class _$GetModlogCopyWithImpl<$Res, $Val extends GetModlog>
   $Res call({
     Object? modPersonId = freezed,
     Object? communityId = freezed,
+    Object? otherPersonId = freezed,
     Object? page = freezed,
     Object? limit = freezed,
     Object? auth = freezed,
+    Object? type = freezed,
   }) {
     return _then(_value.copyWith(
       modPersonId: freezed == modPersonId
@@ -397,6 +404,10 @@ class _$GetModlogCopyWithImpl<$Res, $Val extends GetModlog>
       communityId: freezed == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      otherPersonId: freezed == otherPersonId
+          ? _value.otherPersonId
+          : otherPersonId // ignore: cast_nullable_to_non_nullable
               as int?,
       page: freezed == page
           ? _value.page
@@ -410,6 +421,10 @@ class _$GetModlogCopyWithImpl<$Res, $Val extends GetModlog>
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as ModlogActionType?,
     ) as $Val);
   }
 }
@@ -424,9 +439,11 @@ abstract class _$$_GetModlogCopyWith<$Res> implements $GetModlogCopyWith<$Res> {
   $Res call(
       {int? modPersonId,
       int? communityId,
+      int? otherPersonId,
       int? page,
       int? limit,
-      String? auth});
+      String? auth,
+      @JsonKey(name: 'type_') ModlogActionType? type});
 }
 
 /// @nodoc
@@ -442,9 +459,11 @@ class __$$_GetModlogCopyWithImpl<$Res>
   $Res call({
     Object? modPersonId = freezed,
     Object? communityId = freezed,
+    Object? otherPersonId = freezed,
     Object? page = freezed,
     Object? limit = freezed,
     Object? auth = freezed,
+    Object? type = freezed,
   }) {
     return _then(_$_GetModlog(
       modPersonId: freezed == modPersonId
@@ -454,6 +473,10 @@ class __$$_GetModlogCopyWithImpl<$Res>
       communityId: freezed == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      otherPersonId: freezed == otherPersonId
+          ? _value.otherPersonId
+          : otherPersonId // ignore: cast_nullable_to_non_nullable
               as int?,
       page: freezed == page
           ? _value.page
@@ -467,6 +490,10 @@ class __$$_GetModlogCopyWithImpl<$Res>
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as ModlogActionType?,
     ));
   }
 }
@@ -476,7 +503,13 @@ class __$$_GetModlogCopyWithImpl<$Res>
 @apiSerde
 class _$_GetModlog extends _GetModlog {
   const _$_GetModlog(
-      {this.modPersonId, this.communityId, this.page, this.limit, this.auth})
+      {this.modPersonId,
+      this.communityId,
+      this.otherPersonId,
+      this.page,
+      this.limit,
+      this.auth,
+      @JsonKey(name: 'type_') this.type})
       : super._();
 
   factory _$_GetModlog.fromJson(Map<String, dynamic> json) =>
@@ -487,15 +520,20 @@ class _$_GetModlog extends _GetModlog {
   @override
   final int? communityId;
   @override
+  final int? otherPersonId;
+  @override
   final int? page;
   @override
   final int? limit;
   @override
   final String? auth;
+  @override
+  @JsonKey(name: 'type_')
+  final ModlogActionType? type;
 
   @override
   String toString() {
-    return 'GetModlog(modPersonId: $modPersonId, communityId: $communityId, page: $page, limit: $limit, auth: $auth)';
+    return 'GetModlog(modPersonId: $modPersonId, communityId: $communityId, otherPersonId: $otherPersonId, page: $page, limit: $limit, auth: $auth, type: $type)';
   }
 
   @override
@@ -507,15 +545,18 @@ class _$_GetModlog extends _GetModlog {
                 other.modPersonId == modPersonId) &&
             (identical(other.communityId, communityId) ||
                 other.communityId == communityId) &&
+            (identical(other.otherPersonId, otherPersonId) ||
+                other.otherPersonId == otherPersonId) &&
             (identical(other.page, page) || other.page == page) &&
             (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            (identical(other.auth, auth) || other.auth == auth) &&
+            (identical(other.type, type) || other.type == type));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, modPersonId, communityId, page, limit, auth);
+  int get hashCode => Object.hash(runtimeType, modPersonId, communityId,
+      otherPersonId, page, limit, auth, type);
 
   @JsonKey(ignore: true)
   @override
@@ -535,9 +576,11 @@ abstract class _GetModlog extends GetModlog {
   const factory _GetModlog(
       {final int? modPersonId,
       final int? communityId,
+      final int? otherPersonId,
       final int? page,
       final int? limit,
-      final String? auth}) = _$_GetModlog;
+      final String? auth,
+      @JsonKey(name: 'type_') final ModlogActionType? type}) = _$_GetModlog;
   const _GetModlog._() : super._();
 
   factory _GetModlog.fromJson(Map<String, dynamic> json) =
@@ -548,11 +591,16 @@ abstract class _GetModlog extends GetModlog {
   @override
   int? get communityId;
   @override
+  int? get otherPersonId;
+  @override
   int? get page;
   @override
   int? get limit;
   @override
   String? get auth;
+  @override
+  @JsonKey(name: 'type_')
+  ModlogActionType? get type;
   @override
   @JsonKey(ignore: true)
   _$$_GetModlogCopyWith<_$_GetModlog> get copyWith =>

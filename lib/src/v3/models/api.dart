@@ -63,14 +63,19 @@ class Modlog with _$Modlog {
   const factory Modlog({
     required List<ModRemovePostView> removedPosts,
     required List<ModLockPostView> lockedPosts,
-    required List<ModStickyPostView> stickiedPosts,
+    required List<ModFeaturePostView> featuredPosts,
     required List<ModRemoveCommentView> removedComments,
     required List<ModRemoveCommunityView> removedCommunities,
+    required List<ModHideCommunityView> hiddenCommunities,
     required List<ModBanFromCommunityView> bannedFromCommunity,
     required List<ModBanView> banned,
     required List<ModAddCommunityView> addedToCommunity,
     required List<ModTransferCommunityView> transferredToCommunity,
     required List<ModAddView> added,
+    required List<AdminPurgeCommentView> adminPurgedComments,
+    required List<AdminPurgePersonView> adminPurgedPersons,
+    required List<AdminPurgeCommunityView> adminPurgedCommunities,
+    required List<AdminPurgePostView> adminPurgedPosts,
     required String instanceHost,
   }) = _Modlog;
 
