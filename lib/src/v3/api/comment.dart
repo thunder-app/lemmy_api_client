@@ -180,6 +180,29 @@ class CreateCommentLike
 }
 
 @freezed
+class GetComment
+    with _$GetComment
+    implements LemmyApiQuery<CommentView> {
+  @apiSerde
+  const factory GetComment({
+    int? id,
+    String? auth,
+  }) = _GetComment;
+
+  const GetComment._();
+  factory GetComment.fromJson(Map<String, dynamic> json) =>
+      _$GetCommentFromJson(json);
+
+  final path = '/comment';
+
+  final httpMethod = HttpMethod.get;
+
+  @override
+  CommentView responseFactory(Map<String, dynamic> json) =>
+      CommentView.fromJson(json['comment_view']);
+}
+
+@freezed
 class GetComments
     with _$GetComments
     implements LemmyApiQuery<List<CommentView>> {

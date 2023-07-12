@@ -1331,6 +1331,161 @@ abstract class _CreateCommentLike extends CreateCommentLike {
       throw _privateConstructorUsedError;
 }
 
+GetComment _$GetCommentFromJson(Map<String, dynamic> json) {
+  return _GetComment.fromJson(json);
+}
+
+/// @nodoc
+mixin _$GetComment {
+  int? get id => throw _privateConstructorUsedError;
+  String? get auth => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $GetCommentCopyWith<GetComment> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $GetCommentCopyWith<$Res> {
+  factory $GetCommentCopyWith(
+          GetComment value, $Res Function(GetComment) then) =
+      _$GetCommentCopyWithImpl<$Res, GetComment>;
+  @useResult
+  $Res call({int? id, String? auth});
+}
+
+/// @nodoc
+class _$GetCommentCopyWithImpl<$Res, $Val extends GetComment>
+    implements $GetCommentCopyWith<$Res> {
+  _$GetCommentCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
+      auth: freezed == auth
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_GetCommentCopyWith<$Res>
+    implements $GetCommentCopyWith<$Res> {
+  factory _$$_GetCommentCopyWith(
+          _$_GetComment value, $Res Function(_$_GetComment) then) =
+      __$$_GetCommentCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int? id, String? auth});
+}
+
+/// @nodoc
+class __$$_GetCommentCopyWithImpl<$Res>
+    extends _$GetCommentCopyWithImpl<$Res, _$_GetComment>
+    implements _$$_GetCommentCopyWith<$Res> {
+  __$$_GetCommentCopyWithImpl(
+      _$_GetComment _value, $Res Function(_$_GetComment) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(_$_GetComment(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
+      auth: freezed == auth
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+@apiSerde
+class _$_GetComment extends _GetComment {
+  const _$_GetComment({this.id, this.auth}) : super._();
+
+  factory _$_GetComment.fromJson(Map<String, dynamic> json) =>
+      _$$_GetCommentFromJson(json);
+
+  @override
+  final int? id;
+  @override
+  final String? auth;
+
+  @override
+  String toString() {
+    return 'GetComment(id: $id, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_GetComment &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, id, auth);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_GetCommentCopyWith<_$_GetComment> get copyWith =>
+      __$$_GetCommentCopyWithImpl<_$_GetComment>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_GetCommentToJson(
+      this,
+    );
+  }
+}
+
+abstract class _GetComment extends GetComment {
+  const factory _GetComment({final int? id, final String? auth}) =
+      _$_GetComment;
+  const _GetComment._() : super._();
+
+  factory _GetComment.fromJson(Map<String, dynamic> json) =
+      _$_GetComment.fromJson;
+
+  @override
+  int? get id;
+  @override
+  String? get auth;
+  @override
+  @JsonKey(ignore: true)
+  _$$_GetCommentCopyWith<_$_GetComment> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 GetComments _$GetCommentsFromJson(Map<String, dynamic> json) {
   return _GetComments.fromJson(json);
 }

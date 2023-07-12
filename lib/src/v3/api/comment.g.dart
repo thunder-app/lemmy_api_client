@@ -141,6 +141,26 @@ Map<String, dynamic> _$$_CreateCommentLikeToJson(
       'auth': instance.auth,
     };
 
+_$_GetComment _$$_GetCommentFromJson(Map<String, dynamic> json) =>
+    _$_GetComment(
+      id: json['id'] as int?,
+      auth: json['auth'] as String?,
+    );
+
+Map<String, dynamic> _$$_GetCommentToJson(_$_GetComment instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('auth', instance.auth);
+  return val;
+}
+
 _$_GetComments _$$_GetCommentsFromJson(Map<String, dynamic> json) =>
     _$_GetComments(
       type: json['type_'] == null
