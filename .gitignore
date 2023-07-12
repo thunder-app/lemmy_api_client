@@ -9,3 +9,4 @@ pubspec.lock
 
 # dev
 Taskfile.yml
+.idea
