@@ -1337,7 +1337,7 @@ GetComment _$GetCommentFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetComment {
-  int? get id => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError;
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1352,7 +1352,7 @@ abstract class $GetCommentCopyWith<$Res> {
           GetComment value, $Res Function(GetComment) then) =
       _$GetCommentCopyWithImpl<$Res, GetComment>;
   @useResult
-  $Res call({int? id, String? auth});
+  $Res call({int id, String? auth});
 }
 
 /// @nodoc
@@ -1368,14 +1368,14 @@ class _$GetCommentCopyWithImpl<$Res, $Val extends GetComment>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? id = null,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1392,7 +1392,7 @@ abstract class _$$_GetCommentCopyWith<$Res>
       __$$_GetCommentCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int? id, String? auth});
+  $Res call({int id, String? auth});
 }
 
 /// @nodoc
@@ -1406,14 +1406,14 @@ class __$$_GetCommentCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? id = null,
     Object? auth = freezed,
   }) {
     return _then(_$_GetComment(
-      id: freezed == id
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1426,13 +1426,13 @@ class __$$_GetCommentCopyWithImpl<$Res>
 
 @apiSerde
 class _$_GetComment extends _GetComment {
-  const _$_GetComment({this.id, this.auth}) : super._();
+  const _$_GetComment({required this.id, this.auth}) : super._();
 
   factory _$_GetComment.fromJson(Map<String, dynamic> json) =>
       _$$_GetCommentFromJson(json);
 
   @override
-  final int? id;
+  final int id;
   @override
   final String? auth;
 
@@ -1469,7 +1469,7 @@ class _$_GetComment extends _GetComment {
 }
 
 abstract class _GetComment extends GetComment {
-  const factory _GetComment({final int? id, final String? auth}) =
+  const factory _GetComment({required final int id, final String? auth}) =
       _$_GetComment;
   const _GetComment._() : super._();
 
@@ -1477,7 +1477,7 @@ abstract class _GetComment extends GetComment {
       _$_GetComment.fromJson;
 
   @override
-  int? get id;
+  int get id;
   @override
   String? get auth;
   @override
