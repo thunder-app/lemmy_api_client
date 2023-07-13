@@ -117,6 +117,7 @@ _$_CommentAggregates _$$_CommentAggregatesFromJson(Map<String, dynamic> json) =>
       score: json['score'] as int,
       upvotes: json['upvotes'] as int,
       downvotes: json['downvotes'] as int,
+      childCount: json['child_count'] as int,
     );
 
 Map<String, dynamic> _$$_CommentAggregatesToJson(
@@ -127,4 +128,5 @@ Map<String, dynamic> _$$_CommentAggregatesToJson(
       'score': instance.score,
       'upvotes': instance.upvotes,
       'downvotes': instance.downvotes,
+      'child_count': instance.childCount,
     };

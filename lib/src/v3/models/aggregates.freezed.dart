@@ -1223,6 +1223,7 @@ mixin _$CommentAggregates {
   int get score => throw _privateConstructorUsedError;
   int get upvotes => throw _privateConstructorUsedError;
   int get downvotes => throw _privateConstructorUsedError;
+  int get childCount => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1236,7 +1237,13 @@ abstract class $CommentAggregatesCopyWith<$Res> {
           CommentAggregates value, $Res Function(CommentAggregates) then) =
       _$CommentAggregatesCopyWithImpl<$Res, CommentAggregates>;
   @useResult
-  $Res call({int id, int commentId, int score, int upvotes, int downvotes});
+  $Res call(
+      {int id,
+      int commentId,
+      int score,
+      int upvotes,
+      int downvotes,
+      int childCount});
 }
 
 /// @nodoc
@@ -1257,6 +1264,7 @@ class _$CommentAggregatesCopyWithImpl<$Res, $Val extends CommentAggregates>
     Object? score = null,
     Object? upvotes = null,
     Object? downvotes = null,
+    Object? childCount = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -1279,6 +1287,10 @@ class _$CommentAggregatesCopyWithImpl<$Res, $Val extends CommentAggregates>
           ? _value.downvotes
           : downvotes // ignore: cast_nullable_to_non_nullable
               as int,
+      childCount: null == childCount
+          ? _value.childCount
+          : childCount // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -1291,7 +1303,13 @@ abstract class _$$_CommentAggregatesCopyWith<$Res>
       __$$_CommentAggregatesCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int id, int commentId, int score, int upvotes, int downvotes});
+  $Res call(
+      {int id,
+      int commentId,
+      int score,
+      int upvotes,
+      int downvotes,
+      int childCount});
 }
 
 /// @nodoc
@@ -1310,6 +1328,7 @@ class __$$_CommentAggregatesCopyWithImpl<$Res>
     Object? score = null,
     Object? upvotes = null,
     Object? downvotes = null,
+    Object? childCount = null,
   }) {
     return _then(_$_CommentAggregates(
       id: null == id
@@ -1332,6 +1351,10 @@ class __$$_CommentAggregatesCopyWithImpl<$Res>
           ? _value.downvotes
           : downvotes // ignore: cast_nullable_to_non_nullable
               as int,
+      childCount: null == childCount
+          ? _value.childCount
+          : childCount // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -1345,7 +1368,8 @@ class _$_CommentAggregates extends _CommentAggregates {
       required this.commentId,
       required this.score,
       required this.upvotes,
-      required this.downvotes})
+      required this.downvotes,
+      required this.childCount})
       : super._();
 
   factory _$_CommentAggregates.fromJson(Map<String, dynamic> json) =>
@@ -1361,10 +1385,12 @@ class _$_CommentAggregates extends _CommentAggregates {
   final int upvotes;
   @override
   final int downvotes;
+  @override
+  final int childCount;
 
   @override
   String toString() {
-    return 'CommentAggregates(id: $id, commentId: $commentId, score: $score, upvotes: $upvotes, downvotes: $downvotes)';
+    return 'CommentAggregates(id: $id, commentId: $commentId, score: $score, upvotes: $upvotes, downvotes: $downvotes, childCount: $childCount)';
   }
 
   @override
@@ -1378,13 +1404,15 @@ class _$_CommentAggregates extends _CommentAggregates {
             (identical(other.score, score) || other.score == score) &&
             (identical(other.upvotes, upvotes) || other.upvotes == upvotes) &&
             (identical(other.downvotes, downvotes) ||
-                other.downvotes == downvotes));
+                other.downvotes == downvotes) &&
+            (identical(other.childCount, childCount) ||
+                other.childCount == childCount));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, commentId, score, upvotes, downvotes);
+  int get hashCode => Object.hash(
+      runtimeType, id, commentId, score, upvotes, downvotes, childCount);
 
   @JsonKey(ignore: true)
   @override
@@ -1407,7 +1435,8 @@ abstract class _CommentAggregates extends CommentAggregates {
       required final int commentId,
       required final int score,
       required final int upvotes,
-      required final int downvotes}) = _$_CommentAggregates;
+      required final int downvotes,
+      required final int childCount}) = _$_CommentAggregates;
   const _CommentAggregates._() : super._();
 
   factory _CommentAggregates.fromJson(Map<String, dynamic> json) =
@@ -1423,6 +1452,8 @@ abstract class _CommentAggregates extends CommentAggregates {
   int get upvotes;
   @override
   int get downvotes;
+  @override
+  int get childCount;
   @override
   @JsonKey(ignore: true)
   _$$_CommentAggregatesCopyWith<_$_CommentAggregates> get copyWith =>

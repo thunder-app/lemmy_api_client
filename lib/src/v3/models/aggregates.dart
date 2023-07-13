@@ -92,6 +92,7 @@ class CommentAggregates with _$CommentAggregates {
     required int score,
     required int upvotes,
     required int downvotes,
+    required int childCount,
   }) = _CommentAggregates;
 
   const CommentAggregates._();
