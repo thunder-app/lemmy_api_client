@@ -117,6 +117,27 @@ void main() {
         // );
       });
 
+      group('GetComment', () {
+        test(
+          'correctly fetches no auth',
+          () => run(
+            const GetComment(
+              id: goodMyCommentId,
+            ),
+          ),
+        );
+
+        test(
+          'correctly fetches with auth',
+              () => run(
+            GetComment(
+              id: goodMyCommentId,
+              auth: goodAuth,
+            ),
+          ),
+        );
+      });
+
       group('GetComments', () {
         test(
           'correctly fetches',

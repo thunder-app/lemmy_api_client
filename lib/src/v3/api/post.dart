@@ -340,3 +340,25 @@ class ListPostReports
           .map((dynamic e) => PostReportView.fromJson(e))
           .toList();
 }
+
+@freezed
+class MarkPostAsRead with _$MarkPostAsRead implements LemmyApiQuery<PostView> {
+  @apiSerde
+  const factory MarkPostAsRead({
+    required int postId,
+    required bool read,
+    required String auth,
+  }) = _MarkPostAsRead;
+
+  const MarkPostAsRead._();
+  factory MarkPostAsRead.fromJson(Map<String, dynamic> json) =>
+      _$MarkPostAsReadFromJson(json);
+
+  final path = '/post/mark_as_read';
+
+  final httpMethod = HttpMethod.post;
+
+  @override
+  PostView responseFactory(Map<String, dynamic> json) =>
+      PostView.fromJson(json['post_view']);
+}

@@ -2740,3 +2740,178 @@ abstract class _ListPostReports extends ListPostReports {
   _$$_ListPostReportsCopyWith<_$_ListPostReports> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+MarkPostAsRead _$MarkPostAsReadFromJson(Map<String, dynamic> json) {
+  return _MarkPostAsRead.fromJson(json);
+}
+
+/// @nodoc
+mixin _$MarkPostAsRead {
+  int get postId => throw _privateConstructorUsedError;
+  bool get read => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MarkPostAsReadCopyWith<MarkPostAsRead> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MarkPostAsReadCopyWith<$Res> {
+  factory $MarkPostAsReadCopyWith(
+          MarkPostAsRead value, $Res Function(MarkPostAsRead) then) =
+      _$MarkPostAsReadCopyWithImpl<$Res, MarkPostAsRead>;
+  @useResult
+  $Res call({int postId, bool read, String auth});
+}
+
+/// @nodoc
+class _$MarkPostAsReadCopyWithImpl<$Res, $Val extends MarkPostAsRead>
+    implements $MarkPostAsReadCopyWith<$Res> {
+  _$MarkPostAsReadCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? postId = null,
+    Object? read = null,
+    Object? auth = null,
+  }) {
+    return _then(_value.copyWith(
+      postId: null == postId
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      read: null == read
+          ? _value.read
+          : read // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: null == auth
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_MarkPostAsReadCopyWith<$Res>
+    implements $MarkPostAsReadCopyWith<$Res> {
+  factory _$$_MarkPostAsReadCopyWith(
+          _$_MarkPostAsRead value, $Res Function(_$_MarkPostAsRead) then) =
+      __$$_MarkPostAsReadCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int postId, bool read, String auth});
+}
+
+/// @nodoc
+class __$$_MarkPostAsReadCopyWithImpl<$Res>
+    extends _$MarkPostAsReadCopyWithImpl<$Res, _$_MarkPostAsRead>
+    implements _$$_MarkPostAsReadCopyWith<$Res> {
+  __$$_MarkPostAsReadCopyWithImpl(
+      _$_MarkPostAsRead _value, $Res Function(_$_MarkPostAsRead) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? postId = null,
+    Object? read = null,
+    Object? auth = null,
+  }) {
+    return _then(_$_MarkPostAsRead(
+      postId: null == postId
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      read: null == read
+          ? _value.read
+          : read // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: null == auth
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+@apiSerde
+class _$_MarkPostAsRead extends _MarkPostAsRead {
+  const _$_MarkPostAsRead(
+      {required this.postId, required this.read, required this.auth})
+      : super._();
+
+  factory _$_MarkPostAsRead.fromJson(Map<String, dynamic> json) =>
+      _$$_MarkPostAsReadFromJson(json);
+
+  @override
+  final int postId;
+  @override
+  final bool read;
+  @override
+  final String auth;
+
+  @override
+  String toString() {
+    return 'MarkPostAsRead(postId: $postId, read: $read, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_MarkPostAsRead &&
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.read, read) || other.read == read) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, postId, read, auth);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_MarkPostAsReadCopyWith<_$_MarkPostAsRead> get copyWith =>
+      __$$_MarkPostAsReadCopyWithImpl<_$_MarkPostAsRead>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_MarkPostAsReadToJson(
+      this,
+    );
+  }
+}
+
+abstract class _MarkPostAsRead extends MarkPostAsRead {
+  const factory _MarkPostAsRead(
+      {required final int postId,
+      required final bool read,
+      required final String auth}) = _$_MarkPostAsRead;
+  const _MarkPostAsRead._() : super._();
+
+  factory _MarkPostAsRead.fromJson(Map<String, dynamic> json) =
+      _$_MarkPostAsRead.fromJson;
+
+  @override
+  int get postId;
+  @override
+  bool get read;
+  @override
+  String get auth;
+  @override
+  @JsonKey(ignore: true)
+  _$$_MarkPostAsReadCopyWith<_$_MarkPostAsRead> get copyWith =>
+      throw _privateConstructorUsedError;
+}

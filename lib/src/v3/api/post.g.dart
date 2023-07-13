@@ -275,3 +275,17 @@ Map<String, dynamic> _$$_ListPostReportsToJson(_$_ListPostReports instance) {
   val['auth'] = instance.auth;
   return val;
 }
+
+_$_MarkPostAsRead _$$_MarkPostAsReadFromJson(Map<String, dynamic> json) =>
+    _$_MarkPostAsRead(
+      postId: json['post_id'] as int,
+      read: json['read'] as bool,
+      auth: json['auth'] as String,
+    );
+
+Map<String, dynamic> _$$_MarkPostAsReadToJson(_$_MarkPostAsRead instance) =>
+    <String, dynamic>{
+      'post_id': instance.postId,
+      'read': instance.read,
+      'auth': instance.auth,
+    };
