@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../v3.dart';
+import '../../utils/force_utc_datetime.dart';
 import '../../utils/serde.dart';
 
 part 'api.freezed.dart';
@@ -123,12 +124,30 @@ class FullSiteView with _$FullSiteView {
     MyUserInfo? myUser,
     FederatedInstances? federatedInstances,
     required String instanceHost,
+    List<Tagline>? taglines,
   }) = _FullSiteView;
 
   const FullSiteView._();
 
   factory FullSiteView.fromJson(Map<String, dynamic> json) =>
       _$FullSiteViewFromJson(json);
+}
+
+@freezed
+class Tagline with _$Tagline {
+  @modelSerde
+  const factory Tagline({
+    int? id,
+    int? localSiteId,
+    String? content,
+    required DateTime published,
+    String? instanceHost,
+  }) = _Tagline;
+
+  const Tagline._();
+
+  factory Tagline.fromJson(Map<String, dynamic> json) =>
+      _$TaglineFromJson(json);
 }
 
 @freezed

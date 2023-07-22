@@ -217,6 +217,9 @@ _$_FullSiteView _$$_FullSiteViewFromJson(Map<String, dynamic> json) =>
           : FederatedInstances.fromJson(
               json['federated_instances'] as Map<String, dynamic>),
       instanceHost: json['instance_host'] as String,
+      taglines: (json['taglines'] as List<dynamic>?)
+          ?.map((e) => Tagline.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$$_FullSiteViewToJson(_$_FullSiteView instance) =>
@@ -227,6 +230,24 @@ Map<String, dynamic> _$$_FullSiteViewToJson(_$_FullSiteView instance) =>
       'version': instance.version,
       'my_user': instance.myUser?.toJson(),
       'federated_instances': instance.federatedInstances?.toJson(),
+      'instance_host': instance.instanceHost,
+      'taglines': instance.taglines?.map((e) => e.toJson()).toList(),
+    };
+
+_$_Tagline _$$_TaglineFromJson(Map<String, dynamic> json) => _$_Tagline(
+      id: json['id'] as int?,
+      localSiteId: json['local_site_id'] as int?,
+      content: json['content'] as String?,
+      published: const ForceUtcDateTime().fromJson(json['published'] as String),
+      instanceHost: json['instance_host'] as String?,
+    );
+
+Map<String, dynamic> _$$_TaglineToJson(_$_Tagline instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'local_site_id': instance.localSiteId,
+      'content': instance.content,
+      'published': const ForceUtcDateTime().toJson(instance.published),
       'instance_host': instance.instanceHost,
     };
 
