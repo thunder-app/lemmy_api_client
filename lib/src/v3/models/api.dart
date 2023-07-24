@@ -124,7 +124,7 @@ class FullSiteView with _$FullSiteView {
     MyUserInfo? myUser,
     FederatedInstances? federatedInstances,
     required String instanceHost,
-    List<Tagline>? taglines,
+    required List<Tagline> taglines,
   }) = _FullSiteView;
 
   const FullSiteView._();
@@ -137,11 +137,12 @@ class FullSiteView with _$FullSiteView {
 class Tagline with _$Tagline {
   @modelSerde
   const factory Tagline({
-    int? id,
-    int? localSiteId,
-    String? content,
+    required int id,
+    required int localSiteId,
+    required String content,
     required DateTime published,
-    String? instanceHost,
+    required String instanceHost,
+    DateTime? updated,
   }) = _Tagline;
 
   const Tagline._();

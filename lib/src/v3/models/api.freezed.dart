@@ -1831,7 +1831,7 @@ mixin _$FullSiteView {
   FederatedInstances? get federatedInstances =>
       throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
-  List<Tagline>? get taglines => throw _privateConstructorUsedError;
+  List<Tagline> get taglines => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1853,7 +1853,7 @@ abstract class $FullSiteViewCopyWith<$Res> {
       MyUserInfo? myUser,
       FederatedInstances? federatedInstances,
       String instanceHost,
-      List<Tagline>? taglines});
+      List<Tagline> taglines});
 
   $SiteViewCopyWith<$Res>? get siteView;
   $MyUserInfoCopyWith<$Res>? get myUser;
@@ -1880,7 +1880,7 @@ class _$FullSiteViewCopyWithImpl<$Res, $Val extends FullSiteView>
     Object? myUser = freezed,
     Object? federatedInstances = freezed,
     Object? instanceHost = null,
-    Object? taglines = freezed,
+    Object? taglines = null,
   }) {
     return _then(_value.copyWith(
       siteView: freezed == siteView
@@ -1911,10 +1911,10 @@ class _$FullSiteViewCopyWithImpl<$Res, $Val extends FullSiteView>
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-      taglines: freezed == taglines
+      taglines: null == taglines
           ? _value.taglines
           : taglines // ignore: cast_nullable_to_non_nullable
-              as List<Tagline>?,
+              as List<Tagline>,
     ) as $Val);
   }
 
@@ -1972,7 +1972,7 @@ abstract class _$$_FullSiteViewCopyWith<$Res>
       MyUserInfo? myUser,
       FederatedInstances? federatedInstances,
       String instanceHost,
-      List<Tagline>? taglines});
+      List<Tagline> taglines});
 
   @override
   $SiteViewCopyWith<$Res>? get siteView;
@@ -2000,7 +2000,7 @@ class __$$_FullSiteViewCopyWithImpl<$Res>
     Object? myUser = freezed,
     Object? federatedInstances = freezed,
     Object? instanceHost = null,
-    Object? taglines = freezed,
+    Object? taglines = null,
   }) {
     return _then(_$_FullSiteView(
       siteView: freezed == siteView
@@ -2031,10 +2031,10 @@ class __$$_FullSiteViewCopyWithImpl<$Res>
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
-      taglines: freezed == taglines
+      taglines: null == taglines
           ? _value._taglines
           : taglines // ignore: cast_nullable_to_non_nullable
-              as List<Tagline>?,
+              as List<Tagline>,
     ));
   }
 }
@@ -2051,7 +2051,7 @@ class _$_FullSiteView extends _FullSiteView {
       this.myUser,
       this.federatedInstances,
       required this.instanceHost,
-      final List<Tagline>? taglines})
+      required final List<Tagline> taglines})
       : _admins = admins,
         _taglines = taglines,
         super._();
@@ -2079,14 +2079,12 @@ class _$_FullSiteView extends _FullSiteView {
   final FederatedInstances? federatedInstances;
   @override
   final String instanceHost;
-  final List<Tagline>? _taglines;
+  final List<Tagline> _taglines;
   @override
-  List<Tagline>? get taglines {
-    final value = _taglines;
-    if (value == null) return null;
+  List<Tagline> get taglines {
     if (_taglines is EqualUnmodifiableListView) return _taglines;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
+    return EqualUnmodifiableListView(_taglines);
   }
 
   @override
@@ -2148,7 +2146,7 @@ abstract class _FullSiteView extends FullSiteView {
       final MyUserInfo? myUser,
       final FederatedInstances? federatedInstances,
       required final String instanceHost,
-      final List<Tagline>? taglines}) = _$_FullSiteView;
+      required final List<Tagline> taglines}) = _$_FullSiteView;
   const _FullSiteView._() : super._();
 
   factory _FullSiteView.fromJson(Map<String, dynamic> json) =
@@ -2169,7 +2167,7 @@ abstract class _FullSiteView extends FullSiteView {
   @override
   String get instanceHost;
   @override
-  List<Tagline>? get taglines;
+  List<Tagline> get taglines;
   @override
   @JsonKey(ignore: true)
   _$$_FullSiteViewCopyWith<_$_FullSiteView> get copyWith =>
@@ -2182,11 +2180,12 @@ Tagline _$TaglineFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Tagline {
-  int? get id => throw _privateConstructorUsedError;
-  int? get localSiteId => throw _privateConstructorUsedError;
-  String? get content => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError;
+  int get localSiteId => throw _privateConstructorUsedError;
+  String get content => throw _privateConstructorUsedError;
   DateTime get published => throw _privateConstructorUsedError;
-  String? get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
+  DateTime? get updated => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -2199,11 +2198,12 @@ abstract class $TaglineCopyWith<$Res> {
       _$TaglineCopyWithImpl<$Res, Tagline>;
   @useResult
   $Res call(
-      {int? id,
-      int? localSiteId,
-      String? content,
+      {int id,
+      int localSiteId,
+      String content,
       DateTime published,
-      String? instanceHost});
+      String instanceHost,
+      DateTime? updated});
 }
 
 /// @nodoc
@@ -2219,33 +2219,38 @@ class _$TaglineCopyWithImpl<$Res, $Val extends Tagline>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? localSiteId = freezed,
-    Object? content = freezed,
+    Object? id = null,
+    Object? localSiteId = null,
+    Object? content = null,
     Object? published = null,
-    Object? instanceHost = freezed,
+    Object? instanceHost = null,
+    Object? updated = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      localSiteId: freezed == localSiteId
+              as int,
+      localSiteId: null == localSiteId
           ? _value.localSiteId
           : localSiteId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      content: freezed == content
+              as int,
+      content: null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: freezed == instanceHost
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
+      updated: freezed == updated
+          ? _value.updated
+          : updated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ) as $Val);
   }
 }
@@ -2258,11 +2263,12 @@ abstract class _$$_TaglineCopyWith<$Res> implements $TaglineCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {int? id,
-      int? localSiteId,
-      String? content,
+      {int id,
+      int localSiteId,
+      String content,
       DateTime published,
-      String? instanceHost});
+      String instanceHost,
+      DateTime? updated});
 }
 
 /// @nodoc
@@ -2275,33 +2281,38 @@ class __$$_TaglineCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? localSiteId = freezed,
-    Object? content = freezed,
+    Object? id = null,
+    Object? localSiteId = null,
+    Object? content = null,
     Object? published = null,
-    Object? instanceHost = freezed,
+    Object? instanceHost = null,
+    Object? updated = freezed,
   }) {
     return _then(_$_Tagline(
-      id: freezed == id
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      localSiteId: freezed == localSiteId
+              as int,
+      localSiteId: null == localSiteId
           ? _value.localSiteId
           : localSiteId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      content: freezed == content
+              as int,
+      content: null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      instanceHost: freezed == instanceHost
+      instanceHost: null == instanceHost
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
+      updated: freezed == updated
+          ? _value.updated
+          : updated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -2311,30 +2322,33 @@ class __$$_TaglineCopyWithImpl<$Res>
 @modelSerde
 class _$_Tagline extends _Tagline {
   const _$_Tagline(
-      {this.id,
-      this.localSiteId,
-      this.content,
+      {required this.id,
+      required this.localSiteId,
+      required this.content,
       required this.published,
-      this.instanceHost})
+      required this.instanceHost,
+      this.updated})
       : super._();
 
   factory _$_Tagline.fromJson(Map<String, dynamic> json) =>
       _$$_TaglineFromJson(json);
 
   @override
-  final int? id;
+  final int id;
   @override
-  final int? localSiteId;
+  final int localSiteId;
   @override
-  final String? content;
+  final String content;
   @override
   final DateTime published;
   @override
-  final String? instanceHost;
+  final String instanceHost;
+  @override
+  final DateTime? updated;
 
   @override
   String toString() {
-    return 'Tagline(id: $id, localSiteId: $localSiteId, content: $content, published: $published, instanceHost: $instanceHost)';
+    return 'Tagline(id: $id, localSiteId: $localSiteId, content: $content, published: $published, instanceHost: $instanceHost, updated: $updated)';
   }
 
   @override
@@ -2349,13 +2363,14 @@ class _$_Tagline extends _Tagline {
             (identical(other.published, published) ||
                 other.published == published) &&
             (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+                other.instanceHost == instanceHost) &&
+            (identical(other.updated, updated) || other.updated == updated));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, id, localSiteId, content, published, instanceHost);
+      runtimeType, id, localSiteId, content, published, instanceHost, updated);
 
   @JsonKey(ignore: true)
   @override
@@ -2373,25 +2388,28 @@ class _$_Tagline extends _Tagline {
 
 abstract class _Tagline extends Tagline {
   const factory _Tagline(
-      {final int? id,
-      final int? localSiteId,
-      final String? content,
+      {required final int id,
+      required final int localSiteId,
+      required final String content,
       required final DateTime published,
-      final String? instanceHost}) = _$_Tagline;
+      required final String instanceHost,
+      final DateTime? updated}) = _$_Tagline;
   const _Tagline._() : super._();
 
   factory _Tagline.fromJson(Map<String, dynamic> json) = _$_Tagline.fromJson;
 
   @override
-  int? get id;
+  int get id;
   @override
-  int? get localSiteId;
+  int get localSiteId;
   @override
-  String? get content;
+  String get content;
   @override
   DateTime get published;
   @override
-  String? get instanceHost;
+  String get instanceHost;
+  @override
+  DateTime? get updated;
   @override
   @JsonKey(ignore: true)
   _$$_TaglineCopyWith<_$_Tagline> get copyWith =>

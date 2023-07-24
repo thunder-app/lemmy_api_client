@@ -217,8 +217,8 @@ _$_FullSiteView _$$_FullSiteViewFromJson(Map<String, dynamic> json) =>
           : FederatedInstances.fromJson(
               json['federated_instances'] as Map<String, dynamic>),
       instanceHost: json['instance_host'] as String,
-      taglines: (json['taglines'] as List<dynamic>?)
-          ?.map((e) => Tagline.fromJson(e as Map<String, dynamic>))
+      taglines: (json['taglines'] as List<dynamic>)
+          .map((e) => Tagline.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -231,15 +231,17 @@ Map<String, dynamic> _$$_FullSiteViewToJson(_$_FullSiteView instance) =>
       'my_user': instance.myUser?.toJson(),
       'federated_instances': instance.federatedInstances?.toJson(),
       'instance_host': instance.instanceHost,
-      'taglines': instance.taglines?.map((e) => e.toJson()).toList(),
+      'taglines': instance.taglines.map((e) => e.toJson()).toList(),
     };
 
 _$_Tagline _$$_TaglineFromJson(Map<String, dynamic> json) => _$_Tagline(
-      id: json['id'] as int?,
-      localSiteId: json['local_site_id'] as int?,
-      content: json['content'] as String?,
+      id: json['id'] as int,
+      localSiteId: json['local_site_id'] as int,
+      content: json['content'] as String,
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
-      instanceHost: json['instance_host'] as String?,
+      instanceHost: json['instance_host'] as String,
+      updated: _$JsonConverterFromJson<String, DateTime>(
+          json['updated'], const ForceUtcDateTime().fromJson),
     );
 
 Map<String, dynamic> _$$_TaglineToJson(_$_Tagline instance) =>
@@ -249,7 +251,21 @@ Map<String, dynamic> _$$_TaglineToJson(_$_Tagline instance) =>
       'content': instance.content,
       'published': const ForceUtcDateTime().toJson(instance.published),
       'instance_host': instance.instanceHost,
+      'updated': _$JsonConverterToJson<String, DateTime>(
+          instance.updated, const ForceUtcDateTime().toJson),
     };
+
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) =>
+    json == null ? null : fromJson(json as Json);
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) =>
+    value == null ? null : toJson(value);
 
 _$_MyUserInfo _$$_MyUserInfoFromJson(Map<String, dynamic> json) =>
     _$_MyUserInfo(
