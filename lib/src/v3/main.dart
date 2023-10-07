@@ -20,6 +20,12 @@ class LemmyApiV3 {
   /// Run a given query
   Future<T> run<T>(LemmyApiQuery<T> query) async {
     // get a future based on http method
+
+    String? auth;
+    if (query is LemmyApiAuthenticatedQuery) {
+      auth = (query as LemmyApiAuthenticatedQuery).auth;
+    }
+
     final res = await () {
       switch (query.httpMethod) {
         case HttpMethod.get:
@@ -32,18 +38,25 @@ class LemmyApiV3 {
                   entry.key: entry.value.toString()
               },
             ),
+            headers: (auth != null) ? {'Authorization': 'Bearer $auth'} : null,
           );
         case HttpMethod.post:
           return http.post(
             Uri.https(host, '$extraPath${query.path}'),
             body: jsonEncode(query.toJson()),
-            headers: const {'Content-Type': 'application/json'},
+            headers: {
+              'Content-Type': 'application/json',
+              if (auth != null) 'Authorization': 'Bearer $auth'
+            },
           );
         case HttpMethod.put:
           return http.put(
             Uri.https(host, '$extraPath${query.path}'),
             body: jsonEncode(query.toJson()),
-            headers: const {'Content-Type': 'application/json'},
+            headers: {
+              'Content-Type': 'application/json',
+              if (auth != null) 'Authorization': 'Bearer $auth'
+            },
           );
       }
     }();

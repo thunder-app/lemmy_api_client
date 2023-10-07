@@ -14,7 +14,7 @@ part 'comment.g.dart';
 @freezed
 class CreateComment
     with _$CreateComment
-    implements LemmyApiQuery<FullCommentView> {
+    implements LemmyApiQuery<FullCommentView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory CreateComment({
     required String content,
@@ -38,7 +38,9 @@ class CreateComment
 }
 
 @freezed
-class EditComment with _$EditComment implements LemmyApiQuery<FullCommentView> {
+class EditComment
+    with _$EditComment
+    implements LemmyApiQuery<FullCommentView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory EditComment({
     required String content,
@@ -63,7 +65,7 @@ class EditComment with _$EditComment implements LemmyApiQuery<FullCommentView> {
 @freezed
 class DeleteComment
     with _$DeleteComment
-    implements LemmyApiQuery<FullCommentView> {
+    implements LemmyApiQuery<FullCommentView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory DeleteComment({
     required int commentId,
@@ -87,7 +89,7 @@ class DeleteComment
 @freezed
 class RemoveComment
     with _$RemoveComment
-    implements LemmyApiQuery<FullCommentView> {
+    implements LemmyApiQuery<FullCommentView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory RemoveComment({
     required int commentId,
@@ -112,7 +114,7 @@ class RemoveComment
 @freezed
 class MarkCommentAsRead
     with _$MarkCommentAsRead
-    implements LemmyApiQuery<FullCommentReplyView> {
+    implements LemmyApiQuery<FullCommentReplyView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory MarkCommentAsRead({
     required int commentReplyId,
@@ -134,7 +136,9 @@ class MarkCommentAsRead
 }
 
 @freezed
-class SaveComment with _$SaveComment implements LemmyApiQuery<FullCommentView> {
+class SaveComment
+    with _$SaveComment
+    implements LemmyApiQuery<FullCommentView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory SaveComment({
     required int commentId,
@@ -158,7 +162,7 @@ class SaveComment with _$SaveComment implements LemmyApiQuery<FullCommentView> {
 @freezed
 class CreateCommentLike
     with _$CreateCommentLike
-    implements LemmyApiQuery<FullCommentView> {
+    implements LemmyApiQuery<FullCommentView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory CreateCommentLike({
     required int commentId,
@@ -182,7 +186,7 @@ class CreateCommentLike
 @freezed
 class GetComment
     with _$GetComment
-    implements LemmyApiQuery<FullCommentView> {
+    implements LemmyApiQuery<FullCommentView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetComment({
     required int id,
@@ -205,7 +209,7 @@ class GetComment
 @freezed
 class GetComments
     with _$GetComments
-    implements LemmyApiQuery<List<CommentView>> {
+    implements LemmyApiQuery<List<CommentView>>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetComments({
     @JsonKey(name: 'type_') CommentListingType? type,
@@ -239,7 +243,7 @@ class GetComments
 @freezed
 class CreateCommentReport
     with _$CreateCommentReport
-    implements LemmyApiQuery<CommentReportView> {
+    implements LemmyApiQuery<CommentReportView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory CreateCommentReport({
     required int commentId,
@@ -263,7 +267,7 @@ class CreateCommentReport
 @freezed
 class ResolveCommentReport
     with _$ResolveCommentReport
-    implements LemmyApiQuery<CommentReportView> {
+    implements LemmyApiQuery<CommentReportView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ResolveCommentReport({
     required int reportId,
@@ -287,7 +291,9 @@ class ResolveCommentReport
 @freezed
 class ListCommentReports
     with _$ListCommentReports
-    implements LemmyApiQuery<List<CommentReportView>> {
+    implements
+        LemmyApiQuery<List<CommentReportView>>,
+        LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ListCommentReports({
     int? page,

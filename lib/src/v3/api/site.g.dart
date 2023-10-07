@@ -6,7 +6,7 @@ part of 'site.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Search _$$_SearchFromJson(Map<String, dynamic> json) => _$_Search(
+_$SearchImpl _$$SearchImplFromJson(Map<String, dynamic> json) => _$SearchImpl(
       q: json['q'] as String,
       type: json['type_'] == null
           ? null
@@ -23,7 +23,7 @@ _$_Search _$$_SearchFromJson(Map<String, dynamic> json) => _$_Search(
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_SearchToJson(_$_Search instance) {
+Map<String, dynamic> _$$SearchImplToJson(_$SearchImpl instance) {
   final val = <String, dynamic>{
     'q': instance.q,
   };
@@ -46,7 +46,8 @@ Map<String, dynamic> _$$_SearchToJson(_$_Search instance) {
   return val;
 }
 
-_$_GetModlog _$$_GetModlogFromJson(Map<String, dynamic> json) => _$_GetModlog(
+_$GetModlogImpl _$$GetModlogImplFromJson(Map<String, dynamic> json) =>
+    _$GetModlogImpl(
       modPersonId: json['mod_person_id'] as int?,
       communityId: json['community_id'] as int?,
       otherPersonId: json['other_person_id'] as int?,
@@ -58,7 +59,7 @@ _$_GetModlog _$$_GetModlogFromJson(Map<String, dynamic> json) => _$_GetModlog(
           : ModlogActionType.fromJson(json['type_'] as String),
     );
 
-Map<String, dynamic> _$$_GetModlogToJson(_$_GetModlog instance) {
+Map<String, dynamic> _$$GetModlogImplToJson(_$GetModlogImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -77,8 +78,8 @@ Map<String, dynamic> _$$_GetModlogToJson(_$_GetModlog instance) {
   return val;
 }
 
-_$_CreateSite _$$_CreateSiteFromJson(Map<String, dynamic> json) =>
-    _$_CreateSite(
+_$CreateSiteImpl _$$CreateSiteImplFromJson(Map<String, dynamic> json) =>
+    _$CreateSiteImpl(
       name: json['name'] as String,
       sidebar: json['sidebar'] as String?,
       description: json['description'] as String?,
@@ -97,7 +98,7 @@ _$_CreateSite _$$_CreateSiteFromJson(Map<String, dynamic> json) =>
       defaultTheme: json['default_theme'] as String?,
     );
 
-Map<String, dynamic> _$$_CreateSiteToJson(_$_CreateSite instance) {
+Map<String, dynamic> _$$CreateSiteImplToJson(_$CreateSiteImpl instance) {
   final val = <String, dynamic>{
     'name': instance.name,
   };
@@ -126,7 +127,8 @@ Map<String, dynamic> _$$_CreateSiteToJson(_$_CreateSite instance) {
   return val;
 }
 
-_$_EditSite _$$_EditSiteFromJson(Map<String, dynamic> json) => _$_EditSite(
+_$EditSiteImpl _$$EditSiteImplFromJson(Map<String, dynamic> json) =>
+    _$EditSiteImpl(
       name: json['name'] as String?,
       sidebar: json['sidebar'] as String?,
       description: json['description'] as String?,
@@ -145,7 +147,7 @@ _$_EditSite _$$_EditSiteFromJson(Map<String, dynamic> json) => _$_EditSite(
       defaultTheme: json['default_theme'] as String?,
     );
 
-Map<String, dynamic> _$$_EditSiteToJson(_$_EditSite instance) {
+Map<String, dynamic> _$$EditSiteImplToJson(_$EditSiteImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -173,11 +175,12 @@ Map<String, dynamic> _$$_EditSiteToJson(_$_EditSite instance) {
   return val;
 }
 
-_$_GetSite _$$_GetSiteFromJson(Map<String, dynamic> json) => _$_GetSite(
+_$GetSiteImpl _$$GetSiteImplFromJson(Map<String, dynamic> json) =>
+    _$GetSiteImpl(
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_GetSiteToJson(_$_GetSite instance) {
+Map<String, dynamic> _$$GetSiteImplToJson(_$GetSiteImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -190,45 +193,46 @@ Map<String, dynamic> _$$_GetSiteToJson(_$_GetSite instance) {
   return val;
 }
 
-_$_LeaveAdmin _$$_LeaveAdminFromJson(Map<String, dynamic> json) =>
-    _$_LeaveAdmin(
+_$LeaveAdminImpl _$$LeaveAdminImplFromJson(Map<String, dynamic> json) =>
+    _$LeaveAdminImpl(
       auth: json['auth'] as String,
     );
 
-Map<String, dynamic> _$$_LeaveAdminToJson(_$_LeaveAdmin instance) =>
+Map<String, dynamic> _$$LeaveAdminImplToJson(_$LeaveAdminImpl instance) =>
     <String, dynamic>{
       'auth': instance.auth,
     };
 
-_$_GetSiteConfig _$$_GetSiteConfigFromJson(Map<String, dynamic> json) =>
-    _$_GetSiteConfig(
+_$GetSiteConfigImpl _$$GetSiteConfigImplFromJson(Map<String, dynamic> json) =>
+    _$GetSiteConfigImpl(
       auth: json['auth'] as String,
     );
 
-Map<String, dynamic> _$$_GetSiteConfigToJson(_$_GetSiteConfig instance) =>
+Map<String, dynamic> _$$GetSiteConfigImplToJson(_$GetSiteConfigImpl instance) =>
     <String, dynamic>{
       'auth': instance.auth,
     };
 
-_$_SaveSiteConfig _$$_SaveSiteConfigFromJson(Map<String, dynamic> json) =>
-    _$_SaveSiteConfig(
+_$SaveSiteConfigImpl _$$SaveSiteConfigImplFromJson(Map<String, dynamic> json) =>
+    _$SaveSiteConfigImpl(
       configHjson: json['config_hjson'] as String,
       auth: json['auth'] as String,
     );
 
-Map<String, dynamic> _$$_SaveSiteConfigToJson(_$_SaveSiteConfig instance) =>
+Map<String, dynamic> _$$SaveSiteConfigImplToJson(
+        _$SaveSiteConfigImpl instance) =>
     <String, dynamic>{
       'config_hjson': instance.configHjson,
       'auth': instance.auth,
     };
 
-_$_ResolveObject _$$_ResolveObjectFromJson(Map<String, dynamic> json) =>
-    _$_ResolveObject(
+_$ResolveObjectImpl _$$ResolveObjectImplFromJson(Map<String, dynamic> json) =>
+    _$ResolveObjectImpl(
       q: json['q'] as String,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_ResolveObjectToJson(_$_ResolveObject instance) {
+Map<String, dynamic> _$$ResolveObjectImplToJson(_$ResolveObjectImpl instance) {
   final val = <String, dynamic>{
     'q': instance.q,
   };
@@ -243,30 +247,30 @@ Map<String, dynamic> _$$_ResolveObjectToJson(_$_ResolveObject instance) {
   return val;
 }
 
-_$_GetUnreadRegistrationApplicationCount
-    _$$_GetUnreadRegistrationApplicationCountFromJson(
+_$GetUnreadRegistrationApplicationCountImpl
+    _$$GetUnreadRegistrationApplicationCountImplFromJson(
             Map<String, dynamic> json) =>
-        _$_GetUnreadRegistrationApplicationCount(
+        _$GetUnreadRegistrationApplicationCountImpl(
           auth: json['auth'] as String,
         );
 
-Map<String, dynamic> _$$_GetUnreadRegistrationApplicationCountToJson(
-        _$_GetUnreadRegistrationApplicationCount instance) =>
+Map<String, dynamic> _$$GetUnreadRegistrationApplicationCountImplToJson(
+        _$GetUnreadRegistrationApplicationCountImpl instance) =>
     <String, dynamic>{
       'auth': instance.auth,
     };
 
-_$_ListRegistrationApplications _$$_ListRegistrationApplicationsFromJson(
+_$ListRegistrationApplicationsImpl _$$ListRegistrationApplicationsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ListRegistrationApplications(
+    _$ListRegistrationApplicationsImpl(
       unreadOnly: json['unread_only'] as bool?,
       page: json['page'] as int?,
       limit: json['limit'] as int?,
       auth: json['auth'] as String,
     );
 
-Map<String, dynamic> _$$_ListRegistrationApplicationsToJson(
-    _$_ListRegistrationApplications instance) {
+Map<String, dynamic> _$$ListRegistrationApplicationsImplToJson(
+    _$ListRegistrationApplicationsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -282,17 +286,17 @@ Map<String, dynamic> _$$_ListRegistrationApplicationsToJson(
   return val;
 }
 
-_$_ApproveRegistrationApplication _$$_ApproveRegistrationApplicationFromJson(
-        Map<String, dynamic> json) =>
-    _$_ApproveRegistrationApplication(
-      id: json['id'] as int,
-      approve: json['approve'] as bool,
-      denyReason: json['deny_reason'] as String?,
-      auth: json['auth'] as String,
-    );
+_$ApproveRegistrationApplicationImpl
+    _$$ApproveRegistrationApplicationImplFromJson(Map<String, dynamic> json) =>
+        _$ApproveRegistrationApplicationImpl(
+          id: json['id'] as int,
+          approve: json['approve'] as bool,
+          denyReason: json['deny_reason'] as String?,
+          auth: json['auth'] as String,
+        );
 
-Map<String, dynamic> _$$_ApproveRegistrationApplicationToJson(
-    _$_ApproveRegistrationApplication instance) {
+Map<String, dynamic> _$$ApproveRegistrationApplicationImplToJson(
+    _$ApproveRegistrationApplicationImpl instance) {
   final val = <String, dynamic>{
     'id': instance.id,
     'approve': instance.approve,
