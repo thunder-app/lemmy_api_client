@@ -6,8 +6,8 @@ part of 'source.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PersonSafe _$$_PersonSafeFromJson(Map<String, dynamic> json) =>
-    _$_PersonSafe(
+_$PersonSafeImpl _$$PersonSafeImplFromJson(Map<String, dynamic> json) =>
+    _$PersonSafeImpl(
       id: json['id'] as int,
       name: json['name'] as String,
       displayName: json['display_name'] as String?,
@@ -22,14 +22,14 @@ _$_PersonSafe _$$_PersonSafeFromJson(Map<String, dynamic> json) =>
       banner: json['banner'] as String?,
       deleted: json['deleted'] as bool,
       matrixUserId: json['matrix_user_id'] as String?,
-      admin: json['admin'] as bool,
+      admin: json['admin'] as bool?,
       botAccount: json['bot_account'] as bool,
       banExpires: _$JsonConverterFromJson<String, DateTime>(
           json['ban_expires'], const ForceUtcDateTime().fromJson),
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_PersonSafeToJson(_$_PersonSafe instance) =>
+Map<String, dynamic> _$$PersonSafeImplToJson(_$PersonSafeImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
@@ -64,8 +64,9 @@ Json? _$JsonConverterToJson<Json, Value>(
 ) =>
     value == null ? null : toJson(value);
 
-_$_LocalUserSettings _$$_LocalUserSettingsFromJson(Map<String, dynamic> json) =>
-    _$_LocalUserSettings(
+_$LocalUserSettingsImpl _$$LocalUserSettingsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$LocalUserSettingsImpl(
       id: json['id'] as int,
       personId: json['person_id'] as int,
       email: json['email'] as String?,
@@ -89,8 +90,8 @@ _$_LocalUserSettings _$$_LocalUserSettingsFromJson(Map<String, dynamic> json) =>
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_LocalUserSettingsToJson(
-        _$_LocalUserSettings instance) =>
+Map<String, dynamic> _$$LocalUserSettingsImplToJson(
+        _$LocalUserSettingsImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'person_id': instance.personId,
@@ -111,7 +112,7 @@ Map<String, dynamic> _$$_LocalUserSettingsToJson(
       'instance_host': instance.instanceHost,
     };
 
-_$_Site _$$_SiteFromJson(Map<String, dynamic> json) => _$_Site(
+_$SiteImpl _$$SiteImplFromJson(Map<String, dynamic> json) => _$SiteImpl(
       id: json['id'] as int,
       name: json['name'] as String,
       sidebar: json['sidebar'] as String?,
@@ -129,7 +130,8 @@ _$_Site _$$_SiteFromJson(Map<String, dynamic> json) => _$_Site(
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_SiteToJson(_$_Site instance) => <String, dynamic>{
+Map<String, dynamic> _$$SiteImplToJson(_$SiteImpl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
       'sidebar': instance.sidebar,
@@ -147,7 +149,8 @@ Map<String, dynamic> _$$_SiteToJson(_$_Site instance) => <String, dynamic>{
       'instance_host': instance.instanceHost,
     };
 
-_$_LocalSite _$$_LocalSiteFromJson(Map<String, dynamic> json) => _$_LocalSite(
+_$LocalSiteImpl _$$LocalSiteImplFromJson(Map<String, dynamic> json) =>
+    _$LocalSiteImpl(
       id: json['id'] as int,
       siteId: json['site_id'] as int,
       siteSetup: json['site_setup'] as bool,
@@ -176,7 +179,7 @@ _$_LocalSite _$$_LocalSiteFromJson(Map<String, dynamic> json) => _$_LocalSite(
       reportsEmailAdmins: json['reports_email_admins'] as bool,
     );
 
-Map<String, dynamic> _$$_LocalSiteToJson(_$_LocalSite instance) =>
+Map<String, dynamic> _$$LocalSiteImplToJson(_$LocalSiteImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'site_id': instance.siteId,
@@ -205,8 +208,8 @@ Map<String, dynamic> _$$_LocalSiteToJson(_$_LocalSite instance) =>
       'reports_email_admins': instance.reportsEmailAdmins,
     };
 
-_$_PrivateMessage _$$_PrivateMessageFromJson(Map<String, dynamic> json) =>
-    _$_PrivateMessage(
+_$PrivateMessageImpl _$$PrivateMessageImplFromJson(Map<String, dynamic> json) =>
+    _$PrivateMessageImpl(
       id: json['id'] as int,
       creatorId: json['creator_id'] as int,
       recipientId: json['recipient_id'] as int,
@@ -221,7 +224,8 @@ _$_PrivateMessage _$$_PrivateMessageFromJson(Map<String, dynamic> json) =>
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_PrivateMessageToJson(_$_PrivateMessage instance) =>
+Map<String, dynamic> _$$PrivateMessageImplToJson(
+        _$PrivateMessageImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'creator_id': instance.creatorId,
@@ -237,8 +241,8 @@ Map<String, dynamic> _$$_PrivateMessageToJson(_$_PrivateMessage instance) =>
       'instance_host': instance.instanceHost,
     };
 
-_$_PostReport _$$_PostReportFromJson(Map<String, dynamic> json) =>
-    _$_PostReport(
+_$PostReportImpl _$$PostReportImplFromJson(Map<String, dynamic> json) =>
+    _$PostReportImpl(
       id: json['id'] as int,
       creatorId: json['creator_id'] as int,
       postId: json['post_id'] as int,
@@ -254,7 +258,7 @@ _$_PostReport _$$_PostReportFromJson(Map<String, dynamic> json) =>
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_PostReportToJson(_$_PostReport instance) =>
+Map<String, dynamic> _$$PostReportImplToJson(_$PostReportImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'creator_id': instance.creatorId,
@@ -271,7 +275,7 @@ Map<String, dynamic> _$$_PostReportToJson(_$_PostReport instance) =>
       'instance_host': instance.instanceHost,
     };
 
-_$_Post _$$_PostFromJson(Map<String, dynamic> json) => _$_Post(
+_$PostImpl _$$PostImplFromJson(Map<String, dynamic> json) => _$PostImpl(
       id: json['id'] as int,
       name: json['name'] as String,
       url: json['url'] as String?,
@@ -296,7 +300,8 @@ _$_Post _$$_PostFromJson(Map<String, dynamic> json) => _$_Post(
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_PostToJson(_$_Post instance) => <String, dynamic>{
+Map<String, dynamic> _$$PostImplToJson(_$PostImpl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
       'url': instance.url,
@@ -321,9 +326,9 @@ Map<String, dynamic> _$$_PostToJson(_$_Post instance) => <String, dynamic>{
       'instance_host': instance.instanceHost,
     };
 
-_$_PasswordResetRequest _$$_PasswordResetRequestFromJson(
+_$PasswordResetRequestImpl _$$PasswordResetRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PasswordResetRequest(
+    _$PasswordResetRequestImpl(
       id: json['id'] as int,
       localUserId: json['local_user_id'] as int,
       tokenEncrypted: json['token_encrypted'] as String,
@@ -331,8 +336,8 @@ _$_PasswordResetRequest _$$_PasswordResetRequestFromJson(
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_PasswordResetRequestToJson(
-        _$_PasswordResetRequest instance) =>
+Map<String, dynamic> _$$PasswordResetRequestImplToJson(
+        _$PasswordResetRequestImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'local_user_id': instance.localUserId,
@@ -341,8 +346,8 @@ Map<String, dynamic> _$$_PasswordResetRequestToJson(
       'instance_host': instance.instanceHost,
     };
 
-_$_ModRemovePost _$$_ModRemovePostFromJson(Map<String, dynamic> json) =>
-    _$_ModRemovePost(
+_$ModRemovePostImpl _$$ModRemovePostImplFromJson(Map<String, dynamic> json) =>
+    _$ModRemovePostImpl(
       id: json['id'] as int,
       modPersonId: json['mod_person_id'] as int,
       postId: json['post_id'] as int,
@@ -352,7 +357,7 @@ _$_ModRemovePost _$$_ModRemovePostFromJson(Map<String, dynamic> json) =>
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_ModRemovePostToJson(_$_ModRemovePost instance) =>
+Map<String, dynamic> _$$ModRemovePostImplToJson(_$ModRemovePostImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'mod_person_id': instance.modPersonId,
@@ -363,8 +368,8 @@ Map<String, dynamic> _$$_ModRemovePostToJson(_$_ModRemovePost instance) =>
       'instance_host': instance.instanceHost,
     };
 
-_$_ModLockPost _$$_ModLockPostFromJson(Map<String, dynamic> json) =>
-    _$_ModLockPost(
+_$ModLockPostImpl _$$ModLockPostImplFromJson(Map<String, dynamic> json) =>
+    _$ModLockPostImpl(
       id: json['id'] as int,
       modPersonId: json['mod_person_id'] as int,
       postId: json['post_id'] as int,
@@ -373,7 +378,7 @@ _$_ModLockPost _$$_ModLockPostFromJson(Map<String, dynamic> json) =>
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_ModLockPostToJson(_$_ModLockPost instance) =>
+Map<String, dynamic> _$$ModLockPostImplToJson(_$ModLockPostImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'mod_person_id': instance.modPersonId,
@@ -383,8 +388,8 @@ Map<String, dynamic> _$$_ModLockPostToJson(_$_ModLockPost instance) =>
       'instance_host': instance.instanceHost,
     };
 
-_$_ModStickyPost _$$_ModStickyPostFromJson(Map<String, dynamic> json) =>
-    _$_ModStickyPost(
+_$ModStickyPostImpl _$$ModStickyPostImplFromJson(Map<String, dynamic> json) =>
+    _$ModStickyPostImpl(
       id: json['id'] as int,
       modPersonId: json['mod_person_id'] as int,
       postId: json['post_id'] as int,
@@ -393,7 +398,7 @@ _$_ModStickyPost _$$_ModStickyPostFromJson(Map<String, dynamic> json) =>
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_ModStickyPostToJson(_$_ModStickyPost instance) =>
+Map<String, dynamic> _$$ModStickyPostImplToJson(_$ModStickyPostImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'mod_person_id': instance.modPersonId,
@@ -403,8 +408,8 @@ Map<String, dynamic> _$$_ModStickyPostToJson(_$_ModStickyPost instance) =>
       'instance_host': instance.instanceHost,
     };
 
-_$_ModFeaturePost _$$_ModFeaturePostFromJson(Map<String, dynamic> json) =>
-    _$_ModFeaturePost(
+_$ModFeaturePostImpl _$$ModFeaturePostImplFromJson(Map<String, dynamic> json) =>
+    _$ModFeaturePostImpl(
       id: json['id'] as int,
       modPersonId: json['mod_person_id'] as int,
       postId: json['post_id'] as int,
@@ -414,7 +419,8 @@ _$_ModFeaturePost _$$_ModFeaturePostFromJson(Map<String, dynamic> json) =>
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_ModFeaturePostToJson(_$_ModFeaturePost instance) =>
+Map<String, dynamic> _$$ModFeaturePostImplToJson(
+        _$ModFeaturePostImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'mod_person_id': instance.modPersonId,
@@ -425,8 +431,9 @@ Map<String, dynamic> _$$_ModFeaturePostToJson(_$_ModFeaturePost instance) =>
       'instance_host': instance.instanceHost,
     };
 
-_$_ModRemoveComment _$$_ModRemoveCommentFromJson(Map<String, dynamic> json) =>
-    _$_ModRemoveComment(
+_$ModRemoveCommentImpl _$$ModRemoveCommentImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ModRemoveCommentImpl(
       id: json['id'] as int,
       modPersonId: json['mod_person_id'] as int,
       commentId: json['comment_id'] as int,
@@ -436,7 +443,8 @@ _$_ModRemoveComment _$$_ModRemoveCommentFromJson(Map<String, dynamic> json) =>
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_ModRemoveCommentToJson(_$_ModRemoveComment instance) =>
+Map<String, dynamic> _$$ModRemoveCommentImplToJson(
+        _$ModRemoveCommentImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'mod_person_id': instance.modPersonId,
@@ -447,9 +455,9 @@ Map<String, dynamic> _$$_ModRemoveCommentToJson(_$_ModRemoveComment instance) =>
       'instance_host': instance.instanceHost,
     };
 
-_$_ModRemoveCommunity _$$_ModRemoveCommunityFromJson(
+_$ModRemoveCommunityImpl _$$ModRemoveCommunityImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ModRemoveCommunity(
+    _$ModRemoveCommunityImpl(
       id: json['id'] as int,
       modPersonId: json['mod_person_id'] as int,
       communityId: json['community_id'] as int,
@@ -461,8 +469,8 @@ _$_ModRemoveCommunity _$$_ModRemoveCommunityFromJson(
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_ModRemoveCommunityToJson(
-        _$_ModRemoveCommunity instance) =>
+Map<String, dynamic> _$$ModRemoveCommunityImplToJson(
+        _$ModRemoveCommunityImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'mod_person_id': instance.modPersonId,
@@ -475,8 +483,9 @@ Map<String, dynamic> _$$_ModRemoveCommunityToJson(
       'instance_host': instance.instanceHost,
     };
 
-_$_ModHideCommunity _$$_ModHideCommunityFromJson(Map<String, dynamic> json) =>
-    _$_ModHideCommunity(
+_$ModHideCommunityImpl _$$ModHideCommunityImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ModHideCommunityImpl(
       id: json['id'] as int,
       modPersonId: json['mod_person_id'] as int,
       communityId: json['community_id'] as int,
@@ -486,7 +495,8 @@ _$_ModHideCommunity _$$_ModHideCommunityFromJson(Map<String, dynamic> json) =>
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_ModHideCommunityToJson(_$_ModHideCommunity instance) =>
+Map<String, dynamic> _$$ModHideCommunityImplToJson(
+        _$ModHideCommunityImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'mod_person_id': instance.modPersonId,
@@ -497,9 +507,9 @@ Map<String, dynamic> _$$_ModHideCommunityToJson(_$_ModHideCommunity instance) =>
       'instance_host': instance.instanceHost,
     };
 
-_$_ModBanFromCommunity _$$_ModBanFromCommunityFromJson(
+_$ModBanFromCommunityImpl _$$ModBanFromCommunityImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ModBanFromCommunity(
+    _$ModBanFromCommunityImpl(
       id: json['id'] as int,
       modPersonId: json['mod_person_id'] as int,
       otherPersonId: json['other_person_id'] as int,
@@ -512,8 +522,8 @@ _$_ModBanFromCommunity _$$_ModBanFromCommunityFromJson(
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_ModBanFromCommunityToJson(
-        _$_ModBanFromCommunity instance) =>
+Map<String, dynamic> _$$ModBanFromCommunityImplToJson(
+        _$ModBanFromCommunityImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'mod_person_id': instance.modPersonId,
@@ -527,7 +537,7 @@ Map<String, dynamic> _$$_ModBanFromCommunityToJson(
       'instance_host': instance.instanceHost,
     };
 
-_$_ModBan _$$_ModBanFromJson(Map<String, dynamic> json) => _$_ModBan(
+_$ModBanImpl _$$ModBanImplFromJson(Map<String, dynamic> json) => _$ModBanImpl(
       id: json['id'] as int,
       modPersonId: json['mod_person_id'] as int,
       otherPersonId: json['other_person_id'] as int,
@@ -539,7 +549,8 @@ _$_ModBan _$$_ModBanFromJson(Map<String, dynamic> json) => _$_ModBan(
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_ModBanToJson(_$_ModBan instance) => <String, dynamic>{
+Map<String, dynamic> _$$ModBanImplToJson(_$ModBanImpl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'mod_person_id': instance.modPersonId,
       'other_person_id': instance.otherPersonId,
@@ -551,31 +562,9 @@ Map<String, dynamic> _$$_ModBanToJson(_$_ModBan instance) => <String, dynamic>{
       'instance_host': instance.instanceHost,
     };
 
-_$_ModAddCommunity _$$_ModAddCommunityFromJson(Map<String, dynamic> json) =>
-    _$_ModAddCommunity(
-      id: json['id'] as int,
-      modPersonId: json['mod_person_id'] as int,
-      otherPersonId: json['other_person_id'] as int,
-      communityId: json['community_id'] as int,
-      removed: json['removed'] as bool?,
-      when: const ForceUtcDateTime().fromJson(json['when_'] as String),
-      instanceHost: json['instance_host'] as String,
-    );
-
-Map<String, dynamic> _$$_ModAddCommunityToJson(_$_ModAddCommunity instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'mod_person_id': instance.modPersonId,
-      'other_person_id': instance.otherPersonId,
-      'community_id': instance.communityId,
-      'removed': instance.removed,
-      'when_': const ForceUtcDateTime().toJson(instance.when),
-      'instance_host': instance.instanceHost,
-    };
-
-_$_ModTransferCommunity _$$_ModTransferCommunityFromJson(
+_$ModAddCommunityImpl _$$ModAddCommunityImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ModTransferCommunity(
+    _$ModAddCommunityImpl(
       id: json['id'] as int,
       modPersonId: json['mod_person_id'] as int,
       otherPersonId: json['other_person_id'] as int,
@@ -585,8 +574,8 @@ _$_ModTransferCommunity _$$_ModTransferCommunityFromJson(
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_ModTransferCommunityToJson(
-        _$_ModTransferCommunity instance) =>
+Map<String, dynamic> _$$ModAddCommunityImplToJson(
+        _$ModAddCommunityImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'mod_person_id': instance.modPersonId,
@@ -597,7 +586,31 @@ Map<String, dynamic> _$$_ModTransferCommunityToJson(
       'instance_host': instance.instanceHost,
     };
 
-_$_ModAdd _$$_ModAddFromJson(Map<String, dynamic> json) => _$_ModAdd(
+_$ModTransferCommunityImpl _$$ModTransferCommunityImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ModTransferCommunityImpl(
+      id: json['id'] as int,
+      modPersonId: json['mod_person_id'] as int,
+      otherPersonId: json['other_person_id'] as int,
+      communityId: json['community_id'] as int,
+      removed: json['removed'] as bool?,
+      when: const ForceUtcDateTime().fromJson(json['when_'] as String),
+      instanceHost: json['instance_host'] as String,
+    );
+
+Map<String, dynamic> _$$ModTransferCommunityImplToJson(
+        _$ModTransferCommunityImpl instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'mod_person_id': instance.modPersonId,
+      'other_person_id': instance.otherPersonId,
+      'community_id': instance.communityId,
+      'removed': instance.removed,
+      'when_': const ForceUtcDateTime().toJson(instance.when),
+      'instance_host': instance.instanceHost,
+    };
+
+_$ModAddImpl _$$ModAddImplFromJson(Map<String, dynamic> json) => _$ModAddImpl(
       id: json['id'] as int,
       modPersonId: json['mod_person_id'] as int,
       otherPersonId: json['other_person_id'] as int,
@@ -606,7 +619,8 @@ _$_ModAdd _$$_ModAddFromJson(Map<String, dynamic> json) => _$_ModAdd(
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_ModAddToJson(_$_ModAdd instance) => <String, dynamic>{
+Map<String, dynamic> _$$ModAddImplToJson(_$ModAddImpl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'mod_person_id': instance.modPersonId,
       'other_person_id': instance.otherPersonId,
@@ -615,8 +629,9 @@ Map<String, dynamic> _$$_ModAddToJson(_$_ModAdd instance) => <String, dynamic>{
       'instance_host': instance.instanceHost,
     };
 
-_$_AdminPurgeComment _$$_AdminPurgeCommentFromJson(Map<String, dynamic> json) =>
-    _$_AdminPurgeComment(
+_$AdminPurgeCommentImpl _$$AdminPurgeCommentImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AdminPurgeCommentImpl(
       id: json['id'] as int,
       adminPersonId: json['admin_person_id'] as int,
       postId: json['post_id'] as int,
@@ -625,8 +640,8 @@ _$_AdminPurgeComment _$$_AdminPurgeCommentFromJson(Map<String, dynamic> json) =>
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_AdminPurgeCommentToJson(
-        _$_AdminPurgeComment instance) =>
+Map<String, dynamic> _$$AdminPurgeCommentImplToJson(
+        _$AdminPurgeCommentImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'admin_person_id': instance.adminPersonId,
@@ -636,8 +651,8 @@ Map<String, dynamic> _$$_AdminPurgeCommentToJson(
       'instance_host': instance.instanceHost,
     };
 
-_$_AdminPurgePost _$$_AdminPurgePostFromJson(Map<String, dynamic> json) =>
-    _$_AdminPurgePost(
+_$AdminPurgePostImpl _$$AdminPurgePostImplFromJson(Map<String, dynamic> json) =>
+    _$AdminPurgePostImpl(
       id: json['id'] as int,
       adminPersonId: json['admin_person_id'] as int,
       communityId: json['community_id'] as int,
@@ -646,7 +661,8 @@ _$_AdminPurgePost _$$_AdminPurgePostFromJson(Map<String, dynamic> json) =>
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_AdminPurgePostToJson(_$_AdminPurgePost instance) =>
+Map<String, dynamic> _$$AdminPurgePostImplToJson(
+        _$AdminPurgePostImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'admin_person_id': instance.adminPersonId,
@@ -656,27 +672,9 @@ Map<String, dynamic> _$$_AdminPurgePostToJson(_$_AdminPurgePost instance) =>
       'instance_host': instance.instanceHost,
     };
 
-_$_AdminPurgePerson _$$_AdminPurgePersonFromJson(Map<String, dynamic> json) =>
-    _$_AdminPurgePerson(
-      id: json['id'] as int,
-      adminPersonId: json['admin_person_id'] as int,
-      reason: json['reason'] as String?,
-      when: const ForceUtcDateTime().fromJson(json['when_'] as String),
-      instanceHost: json['instance_host'] as String,
-    );
-
-Map<String, dynamic> _$$_AdminPurgePersonToJson(_$_AdminPurgePerson instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'admin_person_id': instance.adminPersonId,
-      'reason': instance.reason,
-      'when_': const ForceUtcDateTime().toJson(instance.when),
-      'instance_host': instance.instanceHost,
-    };
-
-_$_AdminPurgeCommunity _$$_AdminPurgeCommunityFromJson(
+_$AdminPurgePersonImpl _$$AdminPurgePersonImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AdminPurgeCommunity(
+    _$AdminPurgePersonImpl(
       id: json['id'] as int,
       adminPersonId: json['admin_person_id'] as int,
       reason: json['reason'] as String?,
@@ -684,8 +682,8 @@ _$_AdminPurgeCommunity _$$_AdminPurgeCommunityFromJson(
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_AdminPurgeCommunityToJson(
-        _$_AdminPurgeCommunity instance) =>
+Map<String, dynamic> _$$AdminPurgePersonImplToJson(
+        _$AdminPurgePersonImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'admin_person_id': instance.adminPersonId,
@@ -694,8 +692,28 @@ Map<String, dynamic> _$$_AdminPurgeCommunityToJson(
       'instance_host': instance.instanceHost,
     };
 
-_$_CommunitySafe _$$_CommunitySafeFromJson(Map<String, dynamic> json) =>
-    _$_CommunitySafe(
+_$AdminPurgeCommunityImpl _$$AdminPurgeCommunityImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AdminPurgeCommunityImpl(
+      id: json['id'] as int,
+      adminPersonId: json['admin_person_id'] as int,
+      reason: json['reason'] as String?,
+      when: const ForceUtcDateTime().fromJson(json['when_'] as String),
+      instanceHost: json['instance_host'] as String,
+    );
+
+Map<String, dynamic> _$$AdminPurgeCommunityImplToJson(
+        _$AdminPurgeCommunityImpl instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'admin_person_id': instance.adminPersonId,
+      'reason': instance.reason,
+      'when_': const ForceUtcDateTime().toJson(instance.when),
+      'instance_host': instance.instanceHost,
+    };
+
+_$CommunitySafeImpl _$$CommunitySafeImplFromJson(Map<String, dynamic> json) =>
+    _$CommunitySafeImpl(
       id: json['id'] as int,
       name: json['name'] as String,
       title: json['title'] as String,
@@ -713,7 +731,7 @@ _$_CommunitySafe _$$_CommunitySafeFromJson(Map<String, dynamic> json) =>
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_CommunitySafeToJson(_$_CommunitySafe instance) =>
+Map<String, dynamic> _$$CommunitySafeImplToJson(_$CommunitySafeImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
@@ -732,8 +750,8 @@ Map<String, dynamic> _$$_CommunitySafeToJson(_$_CommunitySafe instance) =>
       'instance_host': instance.instanceHost,
     };
 
-_$_CommentReport _$$_CommentReportFromJson(Map<String, dynamic> json) =>
-    _$_CommentReport(
+_$CommentReportImpl _$$CommentReportImplFromJson(Map<String, dynamic> json) =>
+    _$CommentReportImpl(
       id: json['id'] as int,
       creatorId: json['creator_id'] as int,
       commentId: json['comment_id'] as int,
@@ -747,7 +765,7 @@ _$_CommentReport _$$_CommentReportFromJson(Map<String, dynamic> json) =>
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_CommentReportToJson(_$_CommentReport instance) =>
+Map<String, dynamic> _$$CommentReportImplToJson(_$CommentReportImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'creator_id': instance.creatorId,
@@ -762,7 +780,8 @@ Map<String, dynamic> _$$_CommentReportToJson(_$_CommentReport instance) =>
       'instance_host': instance.instanceHost,
     };
 
-_$_Comment _$$_CommentFromJson(Map<String, dynamic> json) => _$_Comment(
+_$CommentImpl _$$CommentImplFromJson(Map<String, dynamic> json) =>
+    _$CommentImpl(
       id: json['id'] as int,
       creatorId: json['creator_id'] as int,
       postId: json['post_id'] as int,
@@ -781,7 +800,7 @@ _$_Comment _$$_CommentFromJson(Map<String, dynamic> json) => _$_Comment(
       path: json['path'] as String,
     );
 
-Map<String, dynamic> _$$_CommentToJson(_$_Comment instance) =>
+Map<String, dynamic> _$$CommentImplToJson(_$CommentImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'creator_id': instance.creatorId,
@@ -801,8 +820,8 @@ Map<String, dynamic> _$$_CommentToJson(_$_Comment instance) =>
       'path': instance.path,
     };
 
-_$_CommentReply _$$_CommentReplyFromJson(Map<String, dynamic> json) =>
-    _$_CommentReply(
+_$CommentReplyImpl _$$CommentReplyImplFromJson(Map<String, dynamic> json) =>
+    _$CommentReplyImpl(
       id: json['id'] as int,
       recipientId: json['recipient_id'] as int,
       commentId: json['comment_id'] as int,
@@ -811,7 +830,7 @@ _$_CommentReply _$$_CommentReplyFromJson(Map<String, dynamic> json) =>
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_CommentReplyToJson(_$_CommentReply instance) =>
+Map<String, dynamic> _$$CommentReplyImplToJson(_$CommentReplyImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'recipient_id': instance.recipientId,
@@ -821,8 +840,8 @@ Map<String, dynamic> _$$_CommentReplyToJson(_$_CommentReply instance) =>
       'instance_host': instance.instanceHost,
     };
 
-_$_PersonMention _$$_PersonMentionFromJson(Map<String, dynamic> json) =>
-    _$_PersonMention(
+_$PersonMentionImpl _$$PersonMentionImplFromJson(Map<String, dynamic> json) =>
+    _$PersonMentionImpl(
       id: json['id'] as int,
       recipientId: json['recipient_id'] as int,
       commentId: json['comment_id'] as int,
@@ -831,7 +850,7 @@ _$_PersonMention _$$_PersonMentionFromJson(Map<String, dynamic> json) =>
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_PersonMentionToJson(_$_PersonMention instance) =>
+Map<String, dynamic> _$$PersonMentionImplToJson(_$PersonMentionImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'recipient_id': instance.recipientId,
@@ -841,9 +860,9 @@ Map<String, dynamic> _$$_PersonMentionToJson(_$_PersonMention instance) =>
       'instance_host': instance.instanceHost,
     };
 
-_$_RegistrationApplication _$$_RegistrationApplicationFromJson(
+_$RegistrationApplicationImpl _$$RegistrationApplicationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_RegistrationApplication(
+    _$RegistrationApplicationImpl(
       id: json['id'] as int,
       localUserId: json['local_user_id'] as int,
       answer: json['answer'] as String,
@@ -853,8 +872,8 @@ _$_RegistrationApplication _$$_RegistrationApplicationFromJson(
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_RegistrationApplicationToJson(
-        _$_RegistrationApplication instance) =>
+Map<String, dynamic> _$$RegistrationApplicationImplToJson(
+        _$RegistrationApplicationImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'local_user_id': instance.localUserId,

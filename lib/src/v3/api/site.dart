@@ -12,7 +12,9 @@ part 'site.freezed.dart';
 part 'site.g.dart';
 
 @freezed
-class Search with _$Search implements LemmyApiQuery<SearchResults> {
+class Search
+    with _$Search
+    implements LemmyApiQuery<SearchResults>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory Search({
     required String q,
@@ -41,7 +43,9 @@ class Search with _$Search implements LemmyApiQuery<SearchResults> {
 }
 
 @freezed
-class GetModlog with _$GetModlog implements LemmyApiQuery<Modlog> {
+class GetModlog
+    with _$GetModlog
+    implements LemmyApiQuery<Modlog>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetModlog({
     int? modPersonId,
@@ -67,7 +71,9 @@ class GetModlog with _$GetModlog implements LemmyApiQuery<Modlog> {
 }
 
 @freezed
-class CreateSite with _$CreateSite implements LemmyApiQuery<SiteView> {
+class CreateSite
+    with _$CreateSite
+    implements LemmyApiQuery<SiteView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory CreateSite({
     required String name,
@@ -102,7 +108,9 @@ class CreateSite with _$CreateSite implements LemmyApiQuery<SiteView> {
 }
 
 @freezed
-class EditSite with _$EditSite implements LemmyApiQuery<SiteView> {
+class EditSite
+    with _$EditSite
+    implements LemmyApiQuery<SiteView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory EditSite({
     String? name,
@@ -137,7 +145,9 @@ class EditSite with _$EditSite implements LemmyApiQuery<SiteView> {
 }
 
 @freezed
-class GetSite with _$GetSite implements LemmyApiQuery<FullSiteView> {
+class GetSite
+    with _$GetSite
+    implements LemmyApiQuery<FullSiteView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetSite({
     String? auth,
@@ -158,7 +168,9 @@ class GetSite with _$GetSite implements LemmyApiQuery<FullSiteView> {
 }
 
 @freezed
-class LeaveAdmin with _$LeaveAdmin implements LemmyApiQuery<FullSiteView> {
+class LeaveAdmin
+    with _$LeaveAdmin
+    implements LemmyApiQuery<FullSiteView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory LeaveAdmin({
     required String auth,
@@ -179,7 +191,9 @@ class LeaveAdmin with _$LeaveAdmin implements LemmyApiQuery<FullSiteView> {
 }
 
 @freezed
-class GetSiteConfig with _$GetSiteConfig implements LemmyApiQuery<String> {
+class GetSiteConfig
+    with _$GetSiteConfig
+    implements LemmyApiQuery<String>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetSiteConfig({
     required String auth,
@@ -200,7 +214,9 @@ class GetSiteConfig with _$GetSiteConfig implements LemmyApiQuery<String> {
 }
 
 @freezed
-class SaveSiteConfig with _$SaveSiteConfig implements LemmyApiQuery<String> {
+class SaveSiteConfig
+    with _$SaveSiteConfig
+    implements LemmyApiQuery<String>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory SaveSiteConfig({
     required String configHjson,
@@ -224,7 +240,9 @@ class SaveSiteConfig with _$SaveSiteConfig implements LemmyApiQuery<String> {
 @freezed
 class ResolveObject
     with _$ResolveObject
-    implements LemmyApiQuery<ResolveObjectResponse> {
+    implements
+        LemmyApiQuery<ResolveObjectResponse>,
+        LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ResolveObject({
     required String q,
@@ -248,7 +266,7 @@ class ResolveObject
 @freezed
 class GetUnreadRegistrationApplicationCount
     with _$GetUnreadRegistrationApplicationCount
-    implements LemmyApiQuery<int> {
+    implements LemmyApiQuery<int>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetUnreadRegistrationApplicationCount({
     required String auth,
@@ -273,7 +291,9 @@ class GetUnreadRegistrationApplicationCount
 @freezed
 class ListRegistrationApplications
     with _$ListRegistrationApplications
-    implements LemmyApiQuery<List<RegistrationApplicationView>> {
+    implements
+        LemmyApiQuery<List<RegistrationApplicationView>>,
+        LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ListRegistrationApplications({
     bool? unreadOnly,
@@ -305,7 +325,9 @@ class ListRegistrationApplications
 @freezed
 class ApproveRegistrationApplication
     with _$ApproveRegistrationApplication
-    implements LemmyApiQuery<RegistrationApplicationView> {
+    implements
+        LemmyApiQuery<RegistrationApplicationView>,
+        LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ApproveRegistrationApplication({
     required int id,

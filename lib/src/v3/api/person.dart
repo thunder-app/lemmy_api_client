@@ -79,7 +79,9 @@ class GetCaptcha with _$GetCaptcha implements LemmyApiQuery<Captcha> {
 }
 
 @freezed
-class SaveUserSettings with _$SaveUserSettings implements LemmyApiQuery<Jwt> {
+class SaveUserSettings
+    with _$SaveUserSettings
+    implements LemmyApiQuery<Jwt>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory SaveUserSettings({
     bool? showNsfw,
@@ -117,7 +119,9 @@ class SaveUserSettings with _$SaveUserSettings implements LemmyApiQuery<Jwt> {
 }
 
 @freezed
-class ChangePassword with _$ChangePassword implements LemmyApiQuery<Jwt> {
+class ChangePassword
+    with _$ChangePassword
+    implements LemmyApiQuery<Jwt>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ChangePassword({
     required String newPassword,
@@ -141,7 +145,7 @@ class ChangePassword with _$ChangePassword implements LemmyApiQuery<Jwt> {
 @freezed
 class GetPersonDetails
     with _$GetPersonDetails
-    implements LemmyApiQuery<FullPersonView> {
+    implements LemmyApiQuery<FullPersonView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetPersonDetails({
     int? personId,
@@ -170,7 +174,7 @@ class GetPersonDetails
 @freezed
 class MarkAllAsRead
     with _$MarkAllAsRead
-    implements LemmyApiQuery<List<CommentView>> {
+    implements LemmyApiQuery<List<CommentView>>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory MarkAllAsRead({
     required String auth,
@@ -192,7 +196,9 @@ class MarkAllAsRead
 }
 
 @freezed
-class AddAdmin with _$AddAdmin implements LemmyApiQuery<List<PersonViewSafe>> {
+class AddAdmin
+    with _$AddAdmin
+    implements LemmyApiQuery<List<PersonViewSafe>>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory AddAdmin({
     required int personId,
@@ -216,7 +222,9 @@ class AddAdmin with _$AddAdmin implements LemmyApiQuery<List<PersonViewSafe>> {
 }
 
 @freezed
-class BanPerson with _$BanPerson implements LemmyApiQuery<BannedPerson> {
+class BanPerson
+    with _$BanPerson
+    implements LemmyApiQuery<BannedPerson>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory BanPerson({
     required int personId,
@@ -241,7 +249,9 @@ class BanPerson with _$BanPerson implements LemmyApiQuery<BannedPerson> {
 }
 
 @freezed
-class GetReplies with _$GetReplies implements LemmyApiQuery<List<CommentView>> {
+class GetReplies
+    with _$GetReplies
+    implements LemmyApiQuery<List<CommentView>>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetReplies({
     SortType? sort,
@@ -269,7 +279,9 @@ class GetReplies with _$GetReplies implements LemmyApiQuery<List<CommentView>> {
 @freezed
 class GetPersonMentions
     with _$GetPersonMentions
-    implements LemmyApiQuery<List<PersonMentionView>> {
+    implements
+        LemmyApiQuery<List<PersonMentionView>>,
+        LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetPersonMentions({
     SortType? sort,
@@ -297,7 +309,7 @@ class GetPersonMentions
 @freezed
 class MarkPersonMentionAsRead
     with _$MarkPersonMentionAsRead
-    implements LemmyApiQuery<PersonMentionView> {
+    implements LemmyApiQuery<PersonMentionView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory MarkPersonMentionAsRead({
     required int personMentionId,
@@ -319,7 +331,9 @@ class MarkPersonMentionAsRead
 }
 
 @freezed
-class DeleteAccount with _$DeleteAccount implements LemmyApiQuery<void> {
+class DeleteAccount
+    with _$DeleteAccount
+    implements LemmyApiQuery<void>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory DeleteAccount({
     required String password,
@@ -381,7 +395,7 @@ class PasswordChange with _$PasswordChange implements LemmyApiQuery<Jwt> {
 @freezed
 class CreatePrivateMessage
     with _$CreatePrivateMessage
-    implements LemmyApiQuery<PrivateMessageView> {
+    implements LemmyApiQuery<PrivateMessageView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory CreatePrivateMessage({
     required String content,
@@ -405,7 +419,7 @@ class CreatePrivateMessage
 @freezed
 class EditPrivateMessage
     with _$EditPrivateMessage
-    implements LemmyApiQuery<PrivateMessageView> {
+    implements LemmyApiQuery<PrivateMessageView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory EditPrivateMessage({
     required int privateMessageId,
@@ -429,7 +443,7 @@ class EditPrivateMessage
 @freezed
 class DeletePrivateMessage
     with _$DeletePrivateMessage
-    implements LemmyApiQuery<PrivateMessageView> {
+    implements LemmyApiQuery<PrivateMessageView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory DeletePrivateMessage({
     required int privateMessageId,
@@ -453,7 +467,7 @@ class DeletePrivateMessage
 @freezed
 class MarkPrivateMessageAsRead
     with _$MarkPrivateMessageAsRead
-    implements LemmyApiQuery<PrivateMessageView> {
+    implements LemmyApiQuery<PrivateMessageView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory MarkPrivateMessageAsRead({
     required int privateMessageId,
@@ -477,7 +491,9 @@ class MarkPrivateMessageAsRead
 @freezed
 class GetPrivateMessages
     with _$GetPrivateMessages
-    implements LemmyApiQuery<List<PrivateMessageView>> {
+    implements
+        LemmyApiQuery<List<PrivateMessageView>>,
+        LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetPrivateMessages({
     bool? unreadOnly,
@@ -502,7 +518,9 @@ class GetPrivateMessages
 }
 
 @freezed
-class BlockPerson with _$BlockPerson implements LemmyApiQuery<BlockedPerson> {
+class BlockPerson
+    with _$BlockPerson
+    implements LemmyApiQuery<BlockedPerson>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory BlockPerson({
     required int personId,
@@ -527,7 +545,7 @@ class BlockPerson with _$BlockPerson implements LemmyApiQuery<BlockedPerson> {
 @freezed
 class GetUnreadCount
     with _$GetUnreadCount
-    implements LemmyApiQuery<UnreadCount> {
+    implements LemmyApiQuery<UnreadCount>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetUnreadCount({
     required String auth,
@@ -550,7 +568,7 @@ class GetUnreadCount
 @freezed
 class GetReportCount
     with _$GetReportCount
-    implements LemmyApiQuery<ReportCount> {
+    implements LemmyApiQuery<ReportCount>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetReportCount({
     int? communityId,
@@ -573,7 +591,7 @@ class GetReportCount
 @freezed
 class GetBannedPersons
     with _$GetBannedPersons
-    implements LemmyApiQuery<List<PersonViewSafe>> {
+    implements LemmyApiQuery<List<PersonViewSafe>>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetBannedPersons({
     required String auth,

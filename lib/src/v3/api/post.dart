@@ -12,7 +12,9 @@ part 'post.freezed.dart';
 part 'post.g.dart';
 
 @freezed
-class GetPost with _$GetPost implements LemmyApiQuery<FullPostView> {
+class GetPost
+    with _$GetPost
+    implements LemmyApiQuery<FullPostView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetPost({
     required int id,
@@ -33,7 +35,9 @@ class GetPost with _$GetPost implements LemmyApiQuery<FullPostView> {
 }
 
 @freezed
-class CreatePost with _$CreatePost implements LemmyApiQuery<PostView> {
+class CreatePost
+    with _$CreatePost
+    implements LemmyApiQuery<PostView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory CreatePost({
     required String name,
@@ -59,7 +63,9 @@ class CreatePost with _$CreatePost implements LemmyApiQuery<PostView> {
 }
 
 @freezed
-class GetPosts with _$GetPosts implements LemmyApiQuery<List<PostView>> {
+class GetPosts
+    with _$GetPosts
+    implements LemmyApiQuery<List<PostView>>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetPosts({
     @JsonKey(name: 'type_') PostListingType? type,
@@ -86,7 +92,9 @@ class GetPosts with _$GetPosts implements LemmyApiQuery<List<PostView>> {
 }
 
 @freezed
-class CreatePostLike with _$CreatePostLike implements LemmyApiQuery<PostView> {
+class CreatePostLike
+    with _$CreatePostLike
+    implements LemmyApiQuery<PostView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory CreatePostLike({
     required int postId,
@@ -108,7 +116,9 @@ class CreatePostLike with _$CreatePostLike implements LemmyApiQuery<PostView> {
 }
 
 @freezed
-class EditPost with _$EditPost implements LemmyApiQuery<PostView> {
+class EditPost
+    with _$EditPost
+    implements LemmyApiQuery<PostView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory EditPost({
     required int postId,
@@ -133,7 +143,9 @@ class EditPost with _$EditPost implements LemmyApiQuery<PostView> {
 }
 
 @freezed
-class DeletePost with _$DeletePost implements LemmyApiQuery<PostView> {
+class DeletePost
+    with _$DeletePost
+    implements LemmyApiQuery<PostView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory DeletePost({
     required int postId,
@@ -155,7 +167,9 @@ class DeletePost with _$DeletePost implements LemmyApiQuery<PostView> {
 }
 
 @freezed
-class RemovePost with _$RemovePost implements LemmyApiQuery<PostView> {
+class RemovePost
+    with _$RemovePost
+    implements LemmyApiQuery<PostView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory RemovePost({
     required int postId,
@@ -178,7 +192,9 @@ class RemovePost with _$RemovePost implements LemmyApiQuery<PostView> {
 }
 
 @freezed
-class LockPost with _$LockPost implements LemmyApiQuery<PostView> {
+class LockPost
+    with _$LockPost
+    implements LemmyApiQuery<PostView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory LockPost({
     required int postId,
@@ -200,7 +216,9 @@ class LockPost with _$LockPost implements LemmyApiQuery<PostView> {
 }
 
 @freezed
-class StickyPost with _$StickyPost implements LemmyApiQuery<PostView> {
+class StickyPost
+    with _$StickyPost
+    implements LemmyApiQuery<PostView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory StickyPost({
     required int postId,
@@ -222,7 +240,9 @@ class StickyPost with _$StickyPost implements LemmyApiQuery<PostView> {
 }
 
 @freezed
-class SavePost with _$SavePost implements LemmyApiQuery<PostView> {
+class SavePost
+    with _$SavePost
+    implements LemmyApiQuery<PostView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory SavePost({
     required int postId,
@@ -268,7 +288,7 @@ class GetSiteMetadata
 @freezed
 class CreatePostReport
     with _$CreatePostReport
-    implements LemmyApiQuery<PostReportView> {
+    implements LemmyApiQuery<PostReportView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory CreatePostReport({
     required int postId,
@@ -292,7 +312,7 @@ class CreatePostReport
 @freezed
 class ResolvePostReport
     with _$ResolvePostReport
-    implements LemmyApiQuery<PostReportView> {
+    implements LemmyApiQuery<PostReportView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ResolvePostReport({
     required int reportId,
@@ -316,7 +336,7 @@ class ResolvePostReport
 @freezed
 class ListPostReports
     with _$ListPostReports
-    implements LemmyApiQuery<List<PostReportView>> {
+    implements LemmyApiQuery<List<PostReportView>>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ListPostReports({
     int? page,
@@ -342,7 +362,9 @@ class ListPostReports
 }
 
 @freezed
-class MarkPostAsRead with _$MarkPostAsRead implements LemmyApiQuery<PostView> {
+class MarkPostAsRead
+    with _$MarkPostAsRead
+    implements LemmyApiQuery<PostView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory MarkPostAsRead({
     required int postId,

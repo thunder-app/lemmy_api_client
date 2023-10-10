@@ -8,3 +8,7 @@ abstract class LemmyApiQuery<T> {
 
   T responseFactory(Map<String, dynamic> json);
 }
+
+abstract class LemmyApiAuthenticatedQuery {
+  String? get auth;
+}

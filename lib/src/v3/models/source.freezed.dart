@@ -33,7 +33,7 @@ mixin _$PersonSafe {
   String? get banner => throw _privateConstructorUsedError;
   bool get deleted => throw _privateConstructorUsedError;
   String? get matrixUserId => throw _privateConstructorUsedError;
-  bool get admin => throw _privateConstructorUsedError;
+  bool? get admin => throw _privateConstructorUsedError;
   bool get botAccount => throw _privateConstructorUsedError;
   DateTime? get banExpires => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
@@ -64,7 +64,7 @@ abstract class $PersonSafeCopyWith<$Res> {
       String? banner,
       bool deleted,
       String? matrixUserId,
-      bool admin,
+      bool? admin,
       bool botAccount,
       DateTime? banExpires,
       String instanceHost});
@@ -96,7 +96,7 @@ class _$PersonSafeCopyWithImpl<$Res, $Val extends PersonSafe>
     Object? banner = freezed,
     Object? deleted = null,
     Object? matrixUserId = freezed,
-    Object? admin = null,
+    Object? admin = freezed,
     Object? botAccount = null,
     Object? banExpires = freezed,
     Object? instanceHost = null,
@@ -154,10 +154,10 @@ class _$PersonSafeCopyWithImpl<$Res, $Val extends PersonSafe>
           ? _value.matrixUserId
           : matrixUserId // ignore: cast_nullable_to_non_nullable
               as String?,
-      admin: null == admin
+      admin: freezed == admin
           ? _value.admin
           : admin // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       botAccount: null == botAccount
           ? _value.botAccount
           : botAccount // ignore: cast_nullable_to_non_nullable
@@ -175,11 +175,11 @@ class _$PersonSafeCopyWithImpl<$Res, $Val extends PersonSafe>
 }
 
 /// @nodoc
-abstract class _$$_PersonSafeCopyWith<$Res>
+abstract class _$$PersonSafeImplCopyWith<$Res>
     implements $PersonSafeCopyWith<$Res> {
-  factory _$$_PersonSafeCopyWith(
-          _$_PersonSafe value, $Res Function(_$_PersonSafe) then) =
-      __$$_PersonSafeCopyWithImpl<$Res>;
+  factory _$$PersonSafeImplCopyWith(
+          _$PersonSafeImpl value, $Res Function(_$PersonSafeImpl) then) =
+      __$$PersonSafeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -196,18 +196,18 @@ abstract class _$$_PersonSafeCopyWith<$Res>
       String? banner,
       bool deleted,
       String? matrixUserId,
-      bool admin,
+      bool? admin,
       bool botAccount,
       DateTime? banExpires,
       String instanceHost});
 }
 
 /// @nodoc
-class __$$_PersonSafeCopyWithImpl<$Res>
-    extends _$PersonSafeCopyWithImpl<$Res, _$_PersonSafe>
-    implements _$$_PersonSafeCopyWith<$Res> {
-  __$$_PersonSafeCopyWithImpl(
-      _$_PersonSafe _value, $Res Function(_$_PersonSafe) _then)
+class __$$PersonSafeImplCopyWithImpl<$Res>
+    extends _$PersonSafeCopyWithImpl<$Res, _$PersonSafeImpl>
+    implements _$$PersonSafeImplCopyWith<$Res> {
+  __$$PersonSafeImplCopyWithImpl(
+      _$PersonSafeImpl _value, $Res Function(_$PersonSafeImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -226,12 +226,12 @@ class __$$_PersonSafeCopyWithImpl<$Res>
     Object? banner = freezed,
     Object? deleted = null,
     Object? matrixUserId = freezed,
-    Object? admin = null,
+    Object? admin = freezed,
     Object? botAccount = null,
     Object? banExpires = freezed,
     Object? instanceHost = null,
   }) {
-    return _then(_$_PersonSafe(
+    return _then(_$PersonSafeImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -284,10 +284,10 @@ class __$$_PersonSafeCopyWithImpl<$Res>
           ? _value.matrixUserId
           : matrixUserId // ignore: cast_nullable_to_non_nullable
               as String?,
-      admin: null == admin
+      admin: freezed == admin
           ? _value.admin
           : admin // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       botAccount: null == botAccount
           ? _value.botAccount
           : botAccount // ignore: cast_nullable_to_non_nullable
@@ -307,8 +307,8 @@ class __$$_PersonSafeCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_PersonSafe extends _PersonSafe {
-  const _$_PersonSafe(
+class _$PersonSafeImpl extends _PersonSafe {
+  const _$PersonSafeImpl(
       {required this.id,
       required this.name,
       this.displayName,
@@ -322,14 +322,14 @@ class _$_PersonSafe extends _PersonSafe {
       this.banner,
       required this.deleted,
       this.matrixUserId,
-      required this.admin,
+      this.admin,
       required this.botAccount,
       this.banExpires,
       required this.instanceHost})
       : super._();
 
-  factory _$_PersonSafe.fromJson(Map<String, dynamic> json) =>
-      _$$_PersonSafeFromJson(json);
+  factory _$PersonSafeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PersonSafeImplFromJson(json);
 
   @override
   final int id;
@@ -358,7 +358,7 @@ class _$_PersonSafe extends _PersonSafe {
   @override
   final String? matrixUserId;
   @override
-  final bool admin;
+  final bool? admin;
   @override
   final bool botAccount;
   @override
@@ -375,7 +375,7 @@ class _$_PersonSafe extends _PersonSafe {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PersonSafe &&
+            other is _$PersonSafeImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.displayName, displayName) ||
@@ -426,12 +426,12 @@ class _$_PersonSafe extends _PersonSafe {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PersonSafeCopyWith<_$_PersonSafe> get copyWith =>
-      __$$_PersonSafeCopyWithImpl<_$_PersonSafe>(this, _$identity);
+  _$$PersonSafeImplCopyWith<_$PersonSafeImpl> get copyWith =>
+      __$$PersonSafeImplCopyWithImpl<_$PersonSafeImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PersonSafeToJson(
+    return _$$PersonSafeImplToJson(
       this,
     );
   }
@@ -452,14 +452,14 @@ abstract class _PersonSafe extends PersonSafe {
       final String? banner,
       required final bool deleted,
       final String? matrixUserId,
-      required final bool admin,
+      final bool? admin,
       required final bool botAccount,
       final DateTime? banExpires,
-      required final String instanceHost}) = _$_PersonSafe;
+      required final String instanceHost}) = _$PersonSafeImpl;
   const _PersonSafe._() : super._();
 
   factory _PersonSafe.fromJson(Map<String, dynamic> json) =
-      _$_PersonSafe.fromJson;
+      _$PersonSafeImpl.fromJson;
 
   @override
   int get id;
@@ -488,7 +488,7 @@ abstract class _PersonSafe extends PersonSafe {
   @override
   String? get matrixUserId;
   @override
-  bool get admin;
+  bool? get admin;
   @override
   bool get botAccount;
   @override
@@ -497,7 +497,7 @@ abstract class _PersonSafe extends PersonSafe {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_PersonSafeCopyWith<_$_PersonSafe> get copyWith =>
+  _$$PersonSafeImplCopyWith<_$PersonSafeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -662,11 +662,11 @@ class _$LocalUserSettingsCopyWithImpl<$Res, $Val extends LocalUserSettings>
 }
 
 /// @nodoc
-abstract class _$$_LocalUserSettingsCopyWith<$Res>
+abstract class _$$LocalUserSettingsImplCopyWith<$Res>
     implements $LocalUserSettingsCopyWith<$Res> {
-  factory _$$_LocalUserSettingsCopyWith(_$_LocalUserSettings value,
-          $Res Function(_$_LocalUserSettings) then) =
-      __$$_LocalUserSettingsCopyWithImpl<$Res>;
+  factory _$$LocalUserSettingsImplCopyWith(_$LocalUserSettingsImpl value,
+          $Res Function(_$LocalUserSettingsImpl) then) =
+      __$$LocalUserSettingsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -690,11 +690,11 @@ abstract class _$$_LocalUserSettingsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_LocalUserSettingsCopyWithImpl<$Res>
-    extends _$LocalUserSettingsCopyWithImpl<$Res, _$_LocalUserSettings>
-    implements _$$_LocalUserSettingsCopyWith<$Res> {
-  __$$_LocalUserSettingsCopyWithImpl(
-      _$_LocalUserSettings _value, $Res Function(_$_LocalUserSettings) _then)
+class __$$LocalUserSettingsImplCopyWithImpl<$Res>
+    extends _$LocalUserSettingsCopyWithImpl<$Res, _$LocalUserSettingsImpl>
+    implements _$$LocalUserSettingsImplCopyWith<$Res> {
+  __$$LocalUserSettingsImplCopyWithImpl(_$LocalUserSettingsImpl _value,
+      $Res Function(_$LocalUserSettingsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -718,7 +718,7 @@ class __$$_LocalUserSettingsCopyWithImpl<$Res>
     Object? acceptedApplication = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$_LocalUserSettings(
+    return _then(_$LocalUserSettingsImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -794,8 +794,8 @@ class __$$_LocalUserSettingsCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_LocalUserSettings extends _LocalUserSettings {
-  const _$_LocalUserSettings(
+class _$LocalUserSettingsImpl extends _LocalUserSettings {
+  const _$LocalUserSettingsImpl(
       {required this.id,
       required this.personId,
       this.email,
@@ -815,8 +815,8 @@ class _$_LocalUserSettings extends _LocalUserSettings {
       required this.instanceHost})
       : super._();
 
-  factory _$_LocalUserSettings.fromJson(Map<String, dynamic> json) =>
-      _$$_LocalUserSettingsFromJson(json);
+  factory _$LocalUserSettingsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LocalUserSettingsImplFromJson(json);
 
   @override
   final int id;
@@ -862,7 +862,7 @@ class _$_LocalUserSettings extends _LocalUserSettings {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LocalUserSettings &&
+            other is _$LocalUserSettingsImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.personId, personId) ||
                 other.personId == personId) &&
@@ -922,13 +922,13 @@ class _$_LocalUserSettings extends _LocalUserSettings {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LocalUserSettingsCopyWith<_$_LocalUserSettings> get copyWith =>
-      __$$_LocalUserSettingsCopyWithImpl<_$_LocalUserSettings>(
+  _$$LocalUserSettingsImplCopyWith<_$LocalUserSettingsImpl> get copyWith =>
+      __$$LocalUserSettingsImplCopyWithImpl<_$LocalUserSettingsImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LocalUserSettingsToJson(
+    return _$$LocalUserSettingsImplToJson(
       this,
     );
   }
@@ -952,11 +952,11 @@ abstract class _LocalUserSettings extends LocalUserSettings {
       required final bool showNewPostNotifs,
       required final bool emailVerified,
       required final bool acceptedApplication,
-      required final String instanceHost}) = _$_LocalUserSettings;
+      required final String instanceHost}) = _$LocalUserSettingsImpl;
   const _LocalUserSettings._() : super._();
 
   factory _LocalUserSettings.fromJson(Map<String, dynamic> json) =
-      _$_LocalUserSettings.fromJson;
+      _$LocalUserSettingsImpl.fromJson;
 
   @override
   int get id;
@@ -994,7 +994,7 @@ abstract class _LocalUserSettings extends LocalUserSettings {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_LocalUserSettingsCopyWith<_$_LocalUserSettings> get copyWith =>
+  _$$LocalUserSettingsImplCopyWith<_$LocalUserSettingsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1136,9 +1136,10 @@ class _$SiteCopyWithImpl<$Res, $Val extends Site>
 }
 
 /// @nodoc
-abstract class _$$_SiteCopyWith<$Res> implements $SiteCopyWith<$Res> {
-  factory _$$_SiteCopyWith(_$_Site value, $Res Function(_$_Site) then) =
-      __$$_SiteCopyWithImpl<$Res>;
+abstract class _$$SiteImplCopyWith<$Res> implements $SiteCopyWith<$Res> {
+  factory _$$SiteImplCopyWith(
+          _$SiteImpl value, $Res Function(_$SiteImpl) then) =
+      __$$SiteImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1159,9 +1160,10 @@ abstract class _$$_SiteCopyWith<$Res> implements $SiteCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res, _$_Site>
-    implements _$$_SiteCopyWith<$Res> {
-  __$$_SiteCopyWithImpl(_$_Site _value, $Res Function(_$_Site) _then)
+class __$$SiteImplCopyWithImpl<$Res>
+    extends _$SiteCopyWithImpl<$Res, _$SiteImpl>
+    implements _$$SiteImplCopyWith<$Res> {
+  __$$SiteImplCopyWithImpl(_$SiteImpl _value, $Res Function(_$SiteImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1182,7 +1184,7 @@ class __$$_SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res, _$_Site>
     Object? instanceId = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$_Site(
+    return _then(_$SiteImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1246,8 +1248,8 @@ class __$$_SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res, _$_Site>
 /// @nodoc
 
 @modelSerde
-class _$_Site extends _Site {
-  const _$_Site(
+class _$SiteImpl extends _Site {
+  const _$SiteImpl(
       {required this.id,
       required this.name,
       this.sidebar,
@@ -1264,7 +1266,8 @@ class _$_Site extends _Site {
       required this.instanceHost})
       : super._();
 
-  factory _$_Site.fromJson(Map<String, dynamic> json) => _$$_SiteFromJson(json);
+  factory _$SiteImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SiteImplFromJson(json);
 
   @override
   final int id;
@@ -1304,7 +1307,7 @@ class _$_Site extends _Site {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Site &&
+            other is _$SiteImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.sidebar, sidebar) || other.sidebar == sidebar) &&
@@ -1350,12 +1353,12 @@ class _$_Site extends _Site {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SiteCopyWith<_$_Site> get copyWith =>
-      __$$_SiteCopyWithImpl<_$_Site>(this, _$identity);
+  _$$SiteImplCopyWith<_$SiteImpl> get copyWith =>
+      __$$SiteImplCopyWithImpl<_$SiteImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SiteToJson(
+    return _$$SiteImplToJson(
       this,
     );
   }
@@ -1376,10 +1379,10 @@ abstract class _Site extends Site {
       required final String inboxUrl,
       required final String publicKey,
       required final int instanceId,
-      required final String instanceHost}) = _$_Site;
+      required final String instanceHost}) = _$SiteImpl;
   const _Site._() : super._();
 
-  factory _Site.fromJson(Map<String, dynamic> json) = _$_Site.fromJson;
+  factory _Site.fromJson(Map<String, dynamic> json) = _$SiteImpl.fromJson;
 
   @override
   int get id;
@@ -1411,7 +1414,8 @@ abstract class _Site extends Site {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_SiteCopyWith<_$_Site> get copyWith => throw _privateConstructorUsedError;
+  _$$SiteImplCopyWith<_$SiteImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 LocalSite _$LocalSiteFromJson(Map<String, dynamic> json) {
@@ -1624,10 +1628,11 @@ class _$LocalSiteCopyWithImpl<$Res, $Val extends LocalSite>
 }
 
 /// @nodoc
-abstract class _$$_LocalSiteCopyWith<$Res> implements $LocalSiteCopyWith<$Res> {
-  factory _$$_LocalSiteCopyWith(
-          _$_LocalSite value, $Res Function(_$_LocalSite) then) =
-      __$$_LocalSiteCopyWithImpl<$Res>;
+abstract class _$$LocalSiteImplCopyWith<$Res>
+    implements $LocalSiteCopyWith<$Res> {
+  factory _$$LocalSiteImplCopyWith(
+          _$LocalSiteImpl value, $Res Function(_$LocalSiteImpl) then) =
+      __$$LocalSiteImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1658,11 +1663,11 @@ abstract class _$$_LocalSiteCopyWith<$Res> implements $LocalSiteCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_LocalSiteCopyWithImpl<$Res>
-    extends _$LocalSiteCopyWithImpl<$Res, _$_LocalSite>
-    implements _$$_LocalSiteCopyWith<$Res> {
-  __$$_LocalSiteCopyWithImpl(
-      _$_LocalSite _value, $Res Function(_$_LocalSite) _then)
+class __$$LocalSiteImplCopyWithImpl<$Res>
+    extends _$LocalSiteCopyWithImpl<$Res, _$LocalSiteImpl>
+    implements _$$LocalSiteImplCopyWith<$Res> {
+  __$$LocalSiteImplCopyWithImpl(
+      _$LocalSiteImpl _value, $Res Function(_$LocalSiteImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1693,7 +1698,7 @@ class __$$_LocalSiteCopyWithImpl<$Res>
     Object? registrationMode = null,
     Object? reportsEmailAdmins = null,
   }) {
-    return _then(_$_LocalSite(
+    return _then(_$LocalSiteImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1797,8 +1802,8 @@ class __$$_LocalSiteCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_LocalSite extends _LocalSite {
-  const _$_LocalSite(
+class _$LocalSiteImpl extends _LocalSite {
+  const _$LocalSiteImpl(
       {required this.id,
       required this.siteId,
       required this.siteSetup,
@@ -1825,8 +1830,8 @@ class _$_LocalSite extends _LocalSite {
       required this.reportsEmailAdmins})
       : super._();
 
-  factory _$_LocalSite.fromJson(Map<String, dynamic> json) =>
-      _$$_LocalSiteFromJson(json);
+  factory _$LocalSiteImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LocalSiteImplFromJson(json);
 
   @override
   final int id;
@@ -1886,7 +1891,7 @@ class _$_LocalSite extends _LocalSite {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LocalSite &&
+            other is _$LocalSiteImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.siteId, siteId) || other.siteId == siteId) &&
             (identical(other.siteSetup, siteSetup) ||
@@ -1970,12 +1975,12 @@ class _$_LocalSite extends _LocalSite {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LocalSiteCopyWith<_$_LocalSite> get copyWith =>
-      __$$_LocalSiteCopyWithImpl<_$_LocalSite>(this, _$identity);
+  _$$LocalSiteImplCopyWith<_$LocalSiteImpl> get copyWith =>
+      __$$LocalSiteImplCopyWithImpl<_$LocalSiteImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LocalSiteToJson(
+    return _$$LocalSiteImplToJson(
       this,
     );
   }
@@ -2006,11 +2011,11 @@ abstract class _LocalSite extends LocalSite {
       required final String published,
       final DateTime? updated,
       required final String registrationMode,
-      required final bool reportsEmailAdmins}) = _$_LocalSite;
+      required final bool reportsEmailAdmins}) = _$LocalSiteImpl;
   const _LocalSite._() : super._();
 
   factory _LocalSite.fromJson(Map<String, dynamic> json) =
-      _$_LocalSite.fromJson;
+      _$LocalSiteImpl.fromJson;
 
   @override
   int get id;
@@ -2062,7 +2067,7 @@ abstract class _LocalSite extends LocalSite {
   bool get reportsEmailAdmins;
   @override
   @JsonKey(ignore: true)
-  _$$_LocalSiteCopyWith<_$_LocalSite> get copyWith =>
+  _$$LocalSiteImplCopyWith<_$LocalSiteImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2185,11 +2190,11 @@ class _$PrivateMessageCopyWithImpl<$Res, $Val extends PrivateMessage>
 }
 
 /// @nodoc
-abstract class _$$_PrivateMessageCopyWith<$Res>
+abstract class _$$PrivateMessageImplCopyWith<$Res>
     implements $PrivateMessageCopyWith<$Res> {
-  factory _$$_PrivateMessageCopyWith(
-          _$_PrivateMessage value, $Res Function(_$_PrivateMessage) then) =
-      __$$_PrivateMessageCopyWithImpl<$Res>;
+  factory _$$PrivateMessageImplCopyWith(_$PrivateMessageImpl value,
+          $Res Function(_$PrivateMessageImpl) then) =
+      __$$PrivateMessageImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2207,11 +2212,11 @@ abstract class _$$_PrivateMessageCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PrivateMessageCopyWithImpl<$Res>
-    extends _$PrivateMessageCopyWithImpl<$Res, _$_PrivateMessage>
-    implements _$$_PrivateMessageCopyWith<$Res> {
-  __$$_PrivateMessageCopyWithImpl(
-      _$_PrivateMessage _value, $Res Function(_$_PrivateMessage) _then)
+class __$$PrivateMessageImplCopyWithImpl<$Res>
+    extends _$PrivateMessageCopyWithImpl<$Res, _$PrivateMessageImpl>
+    implements _$$PrivateMessageImplCopyWith<$Res> {
+  __$$PrivateMessageImplCopyWithImpl(
+      _$PrivateMessageImpl _value, $Res Function(_$PrivateMessageImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2229,7 +2234,7 @@ class __$$_PrivateMessageCopyWithImpl<$Res>
     Object? local = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$_PrivateMessage(
+    return _then(_$PrivateMessageImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -2281,8 +2286,8 @@ class __$$_PrivateMessageCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_PrivateMessage extends _PrivateMessage {
-  const _$_PrivateMessage(
+class _$PrivateMessageImpl extends _PrivateMessage {
+  const _$PrivateMessageImpl(
       {required this.id,
       required this.creatorId,
       required this.recipientId,
@@ -2296,8 +2301,8 @@ class _$_PrivateMessage extends _PrivateMessage {
       required this.instanceHost})
       : super._();
 
-  factory _$_PrivateMessage.fromJson(Map<String, dynamic> json) =>
-      _$$_PrivateMessageFromJson(json);
+  factory _$PrivateMessageImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PrivateMessageImplFromJson(json);
 
   @override
   final int id;
@@ -2331,7 +2336,7 @@ class _$_PrivateMessage extends _PrivateMessage {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PrivateMessage &&
+            other is _$PrivateMessageImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.creatorId, creatorId) ||
                 other.creatorId == creatorId) &&
@@ -2357,12 +2362,13 @@ class _$_PrivateMessage extends _PrivateMessage {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PrivateMessageCopyWith<_$_PrivateMessage> get copyWith =>
-      __$$_PrivateMessageCopyWithImpl<_$_PrivateMessage>(this, _$identity);
+  _$$PrivateMessageImplCopyWith<_$PrivateMessageImpl> get copyWith =>
+      __$$PrivateMessageImplCopyWithImpl<_$PrivateMessageImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PrivateMessageToJson(
+    return _$$PrivateMessageImplToJson(
       this,
     );
   }
@@ -2380,11 +2386,11 @@ abstract class _PrivateMessage extends PrivateMessage {
       final DateTime? updated,
       required final String apId,
       required final bool local,
-      required final String instanceHost}) = _$_PrivateMessage;
+      required final String instanceHost}) = _$PrivateMessageImpl;
   const _PrivateMessage._() : super._();
 
   factory _PrivateMessage.fromJson(Map<String, dynamic> json) =
-      _$_PrivateMessage.fromJson;
+      _$PrivateMessageImpl.fromJson;
 
   @override
   int get id;
@@ -2410,7 +2416,7 @@ abstract class _PrivateMessage extends PrivateMessage {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_PrivateMessageCopyWith<_$_PrivateMessage> get copyWith =>
+  _$$PrivateMessageImplCopyWith<_$PrivateMessageImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2540,11 +2546,11 @@ class _$PostReportCopyWithImpl<$Res, $Val extends PostReport>
 }
 
 /// @nodoc
-abstract class _$$_PostReportCopyWith<$Res>
+abstract class _$$PostReportImplCopyWith<$Res>
     implements $PostReportCopyWith<$Res> {
-  factory _$$_PostReportCopyWith(
-          _$_PostReport value, $Res Function(_$_PostReport) then) =
-      __$$_PostReportCopyWithImpl<$Res>;
+  factory _$$PostReportImplCopyWith(
+          _$PostReportImpl value, $Res Function(_$PostReportImpl) then) =
+      __$$PostReportImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2563,11 +2569,11 @@ abstract class _$$_PostReportCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PostReportCopyWithImpl<$Res>
-    extends _$PostReportCopyWithImpl<$Res, _$_PostReport>
-    implements _$$_PostReportCopyWith<$Res> {
-  __$$_PostReportCopyWithImpl(
-      _$_PostReport _value, $Res Function(_$_PostReport) _then)
+class __$$PostReportImplCopyWithImpl<$Res>
+    extends _$PostReportCopyWithImpl<$Res, _$PostReportImpl>
+    implements _$$PostReportImplCopyWith<$Res> {
+  __$$PostReportImplCopyWithImpl(
+      _$PostReportImpl _value, $Res Function(_$PostReportImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2586,7 +2592,7 @@ class __$$_PostReportCopyWithImpl<$Res>
     Object? updated = freezed,
     Object? instanceHost = null,
   }) {
-    return _then(_$_PostReport(
+    return _then(_$PostReportImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -2642,8 +2648,8 @@ class __$$_PostReportCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_PostReport extends _PostReport {
-  const _$_PostReport(
+class _$PostReportImpl extends _PostReport {
+  const _$PostReportImpl(
       {required this.id,
       required this.creatorId,
       required this.postId,
@@ -2658,8 +2664,8 @@ class _$_PostReport extends _PostReport {
       required this.instanceHost})
       : super._();
 
-  factory _$_PostReport.fromJson(Map<String, dynamic> json) =>
-      _$$_PostReportFromJson(json);
+  factory _$PostReportImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PostReportImplFromJson(json);
 
   @override
   final int id;
@@ -2695,7 +2701,7 @@ class _$_PostReport extends _PostReport {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PostReport &&
+            other is _$PostReportImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.creatorId, creatorId) ||
                 other.creatorId == creatorId) &&
@@ -2738,12 +2744,12 @@ class _$_PostReport extends _PostReport {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PostReportCopyWith<_$_PostReport> get copyWith =>
-      __$$_PostReportCopyWithImpl<_$_PostReport>(this, _$identity);
+  _$$PostReportImplCopyWith<_$PostReportImpl> get copyWith =>
+      __$$PostReportImplCopyWithImpl<_$PostReportImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PostReportToJson(
+    return _$$PostReportImplToJson(
       this,
     );
   }
@@ -2762,11 +2768,11 @@ abstract class _PostReport extends PostReport {
       final int? resolverId,
       required final DateTime published,
       final DateTime? updated,
-      required final String instanceHost}) = _$_PostReport;
+      required final String instanceHost}) = _$PostReportImpl;
   const _PostReport._() : super._();
 
   factory _PostReport.fromJson(Map<String, dynamic> json) =
-      _$_PostReport.fromJson;
+      _$PostReportImpl.fromJson;
 
   @override
   int get id;
@@ -2794,7 +2800,7 @@ abstract class _PostReport extends PostReport {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_PostReportCopyWith<_$_PostReport> get copyWith =>
+  _$$PostReportImplCopyWith<_$PostReportImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2985,9 +2991,10 @@ class _$PostCopyWithImpl<$Res, $Val extends Post>
 }
 
 /// @nodoc
-abstract class _$$_PostCopyWith<$Res> implements $PostCopyWith<$Res> {
-  factory _$$_PostCopyWith(_$_Post value, $Res Function(_$_Post) then) =
-      __$$_PostCopyWithImpl<$Res>;
+abstract class _$$PostImplCopyWith<$Res> implements $PostCopyWith<$Res> {
+  factory _$$PostImplCopyWith(
+          _$PostImpl value, $Res Function(_$PostImpl) then) =
+      __$$PostImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3015,9 +3022,10 @@ abstract class _$$_PostCopyWith<$Res> implements $PostCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res, _$_Post>
-    implements _$$_PostCopyWith<$Res> {
-  __$$_PostCopyWithImpl(_$_Post _value, $Res Function(_$_Post) _then)
+class __$$PostImplCopyWithImpl<$Res>
+    extends _$PostCopyWithImpl<$Res, _$PostImpl>
+    implements _$$PostImplCopyWith<$Res> {
+  __$$PostImplCopyWithImpl(_$PostImpl _value, $Res Function(_$PostImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3045,7 +3053,7 @@ class __$$_PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res, _$_Post>
     Object? local = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$_Post(
+    return _then(_$PostImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3137,8 +3145,8 @@ class __$$_PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res, _$_Post>
 /// @nodoc
 
 @modelSerde
-class _$_Post extends _Post {
-  const _$_Post(
+class _$PostImpl extends _Post {
+  const _$PostImpl(
       {required this.id,
       required this.name,
       this.url,
@@ -3162,7 +3170,8 @@ class _$_Post extends _Post {
       required this.instanceHost})
       : super._();
 
-  factory _$_Post.fromJson(Map<String, dynamic> json) => _$$_PostFromJson(json);
+  factory _$PostImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PostImplFromJson(json);
 
   @override
   final int id;
@@ -3216,7 +3225,7 @@ class _$_Post extends _Post {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Post &&
+            other is _$PostImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.url, url) || other.url == url) &&
@@ -3280,12 +3289,12 @@ class _$_Post extends _Post {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PostCopyWith<_$_Post> get copyWith =>
-      __$$_PostCopyWithImpl<_$_Post>(this, _$identity);
+  _$$PostImplCopyWith<_$PostImpl> get copyWith =>
+      __$$PostImplCopyWithImpl<_$PostImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PostToJson(
+    return _$$PostImplToJson(
       this,
     );
   }
@@ -3313,10 +3322,10 @@ abstract class _Post extends Post {
       final String? thumbnailUrl,
       required final String apId,
       required final bool local,
-      required final String instanceHost}) = _$_Post;
+      required final String instanceHost}) = _$PostImpl;
   const _Post._() : super._();
 
-  factory _Post.fromJson(Map<String, dynamic> json) = _$_Post.fromJson;
+  factory _Post.fromJson(Map<String, dynamic> json) = _$PostImpl.fromJson;
 
   @override
   int get id;
@@ -3362,7 +3371,8 @@ abstract class _Post extends Post {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_PostCopyWith<_$_Post> get copyWith => throw _privateConstructorUsedError;
+  _$$PostImplCopyWith<_$PostImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 PasswordResetRequest _$PasswordResetRequestFromJson(Map<String, dynamic> json) {
@@ -3443,11 +3453,11 @@ class _$PasswordResetRequestCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PasswordResetRequestCopyWith<$Res>
+abstract class _$$PasswordResetRequestImplCopyWith<$Res>
     implements $PasswordResetRequestCopyWith<$Res> {
-  factory _$$_PasswordResetRequestCopyWith(_$_PasswordResetRequest value,
-          $Res Function(_$_PasswordResetRequest) then) =
-      __$$_PasswordResetRequestCopyWithImpl<$Res>;
+  factory _$$PasswordResetRequestImplCopyWith(_$PasswordResetRequestImpl value,
+          $Res Function(_$PasswordResetRequestImpl) then) =
+      __$$PasswordResetRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3459,11 +3469,11 @@ abstract class _$$_PasswordResetRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PasswordResetRequestCopyWithImpl<$Res>
-    extends _$PasswordResetRequestCopyWithImpl<$Res, _$_PasswordResetRequest>
-    implements _$$_PasswordResetRequestCopyWith<$Res> {
-  __$$_PasswordResetRequestCopyWithImpl(_$_PasswordResetRequest _value,
-      $Res Function(_$_PasswordResetRequest) _then)
+class __$$PasswordResetRequestImplCopyWithImpl<$Res>
+    extends _$PasswordResetRequestCopyWithImpl<$Res, _$PasswordResetRequestImpl>
+    implements _$$PasswordResetRequestImplCopyWith<$Res> {
+  __$$PasswordResetRequestImplCopyWithImpl(_$PasswordResetRequestImpl _value,
+      $Res Function(_$PasswordResetRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3475,7 +3485,7 @@ class __$$_PasswordResetRequestCopyWithImpl<$Res>
     Object? published = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$_PasswordResetRequest(
+    return _then(_$PasswordResetRequestImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3503,8 +3513,8 @@ class __$$_PasswordResetRequestCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_PasswordResetRequest extends _PasswordResetRequest {
-  const _$_PasswordResetRequest(
+class _$PasswordResetRequestImpl extends _PasswordResetRequest {
+  const _$PasswordResetRequestImpl(
       {required this.id,
       required this.localUserId,
       required this.tokenEncrypted,
@@ -3512,8 +3522,8 @@ class _$_PasswordResetRequest extends _PasswordResetRequest {
       required this.instanceHost})
       : super._();
 
-  factory _$_PasswordResetRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_PasswordResetRequestFromJson(json);
+  factory _$PasswordResetRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PasswordResetRequestImplFromJson(json);
 
   @override
   final int id;
@@ -3535,7 +3545,7 @@ class _$_PasswordResetRequest extends _PasswordResetRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PasswordResetRequest &&
+            other is _$PasswordResetRequestImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.localUserId, localUserId) ||
                 other.localUserId == localUserId) &&
@@ -3555,13 +3565,14 @@ class _$_PasswordResetRequest extends _PasswordResetRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PasswordResetRequestCopyWith<_$_PasswordResetRequest> get copyWith =>
-      __$$_PasswordResetRequestCopyWithImpl<_$_PasswordResetRequest>(
-          this, _$identity);
+  _$$PasswordResetRequestImplCopyWith<_$PasswordResetRequestImpl>
+      get copyWith =>
+          __$$PasswordResetRequestImplCopyWithImpl<_$PasswordResetRequestImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PasswordResetRequestToJson(
+    return _$$PasswordResetRequestImplToJson(
       this,
     );
   }
@@ -3573,11 +3584,11 @@ abstract class _PasswordResetRequest extends PasswordResetRequest {
       required final int localUserId,
       required final String tokenEncrypted,
       required final DateTime published,
-      required final String instanceHost}) = _$_PasswordResetRequest;
+      required final String instanceHost}) = _$PasswordResetRequestImpl;
   const _PasswordResetRequest._() : super._();
 
   factory _PasswordResetRequest.fromJson(Map<String, dynamic> json) =
-      _$_PasswordResetRequest.fromJson;
+      _$PasswordResetRequestImpl.fromJson;
 
   @override
   int get id;
@@ -3591,8 +3602,8 @@ abstract class _PasswordResetRequest extends PasswordResetRequest {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_PasswordResetRequestCopyWith<_$_PasswordResetRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PasswordResetRequestImplCopyWith<_$PasswordResetRequestImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ModRemovePost _$ModRemovePostFromJson(Map<String, dynamic> json) {
@@ -3687,11 +3698,11 @@ class _$ModRemovePostCopyWithImpl<$Res, $Val extends ModRemovePost>
 }
 
 /// @nodoc
-abstract class _$$_ModRemovePostCopyWith<$Res>
+abstract class _$$ModRemovePostImplCopyWith<$Res>
     implements $ModRemovePostCopyWith<$Res> {
-  factory _$$_ModRemovePostCopyWith(
-          _$_ModRemovePost value, $Res Function(_$_ModRemovePost) then) =
-      __$$_ModRemovePostCopyWithImpl<$Res>;
+  factory _$$ModRemovePostImplCopyWith(
+          _$ModRemovePostImpl value, $Res Function(_$ModRemovePostImpl) then) =
+      __$$ModRemovePostImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3705,11 +3716,11 @@ abstract class _$$_ModRemovePostCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ModRemovePostCopyWithImpl<$Res>
-    extends _$ModRemovePostCopyWithImpl<$Res, _$_ModRemovePost>
-    implements _$$_ModRemovePostCopyWith<$Res> {
-  __$$_ModRemovePostCopyWithImpl(
-      _$_ModRemovePost _value, $Res Function(_$_ModRemovePost) _then)
+class __$$ModRemovePostImplCopyWithImpl<$Res>
+    extends _$ModRemovePostCopyWithImpl<$Res, _$ModRemovePostImpl>
+    implements _$$ModRemovePostImplCopyWith<$Res> {
+  __$$ModRemovePostImplCopyWithImpl(
+      _$ModRemovePostImpl _value, $Res Function(_$ModRemovePostImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3723,7 +3734,7 @@ class __$$_ModRemovePostCopyWithImpl<$Res>
     Object? when = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$_ModRemovePost(
+    return _then(_$ModRemovePostImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3759,8 +3770,8 @@ class __$$_ModRemovePostCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ModRemovePost extends _ModRemovePost {
-  const _$_ModRemovePost(
+class _$ModRemovePostImpl extends _ModRemovePost {
+  const _$ModRemovePostImpl(
       {required this.id,
       required this.modPersonId,
       required this.postId,
@@ -3770,8 +3781,8 @@ class _$_ModRemovePost extends _ModRemovePost {
       required this.instanceHost})
       : super._();
 
-  factory _$_ModRemovePost.fromJson(Map<String, dynamic> json) =>
-      _$$_ModRemovePostFromJson(json);
+  factory _$ModRemovePostImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModRemovePostImplFromJson(json);
 
   @override
   final int id;
@@ -3798,7 +3809,7 @@ class _$_ModRemovePost extends _ModRemovePost {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ModRemovePost &&
+            other is _$ModRemovePostImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.modPersonId, modPersonId) ||
                 other.modPersonId == modPersonId) &&
@@ -3818,12 +3829,12 @@ class _$_ModRemovePost extends _ModRemovePost {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ModRemovePostCopyWith<_$_ModRemovePost> get copyWith =>
-      __$$_ModRemovePostCopyWithImpl<_$_ModRemovePost>(this, _$identity);
+  _$$ModRemovePostImplCopyWith<_$ModRemovePostImpl> get copyWith =>
+      __$$ModRemovePostImplCopyWithImpl<_$ModRemovePostImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModRemovePostToJson(
+    return _$$ModRemovePostImplToJson(
       this,
     );
   }
@@ -3837,11 +3848,11 @@ abstract class _ModRemovePost extends ModRemovePost {
       final String? reason,
       final bool? removed,
       @JsonKey(name: 'when_') required final DateTime when,
-      required final String instanceHost}) = _$_ModRemovePost;
+      required final String instanceHost}) = _$ModRemovePostImpl;
   const _ModRemovePost._() : super._();
 
   factory _ModRemovePost.fromJson(Map<String, dynamic> json) =
-      _$_ModRemovePost.fromJson;
+      _$ModRemovePostImpl.fromJson;
 
   @override
   int get id;
@@ -3860,7 +3871,7 @@ abstract class _ModRemovePost extends ModRemovePost {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_ModRemovePostCopyWith<_$_ModRemovePost> get copyWith =>
+  _$$ModRemovePostImplCopyWith<_$ModRemovePostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3949,11 +3960,11 @@ class _$ModLockPostCopyWithImpl<$Res, $Val extends ModLockPost>
 }
 
 /// @nodoc
-abstract class _$$_ModLockPostCopyWith<$Res>
+abstract class _$$ModLockPostImplCopyWith<$Res>
     implements $ModLockPostCopyWith<$Res> {
-  factory _$$_ModLockPostCopyWith(
-          _$_ModLockPost value, $Res Function(_$_ModLockPost) then) =
-      __$$_ModLockPostCopyWithImpl<$Res>;
+  factory _$$ModLockPostImplCopyWith(
+          _$ModLockPostImpl value, $Res Function(_$ModLockPostImpl) then) =
+      __$$ModLockPostImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3966,11 +3977,11 @@ abstract class _$$_ModLockPostCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ModLockPostCopyWithImpl<$Res>
-    extends _$ModLockPostCopyWithImpl<$Res, _$_ModLockPost>
-    implements _$$_ModLockPostCopyWith<$Res> {
-  __$$_ModLockPostCopyWithImpl(
-      _$_ModLockPost _value, $Res Function(_$_ModLockPost) _then)
+class __$$ModLockPostImplCopyWithImpl<$Res>
+    extends _$ModLockPostCopyWithImpl<$Res, _$ModLockPostImpl>
+    implements _$$ModLockPostImplCopyWith<$Res> {
+  __$$ModLockPostImplCopyWithImpl(
+      _$ModLockPostImpl _value, $Res Function(_$ModLockPostImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3983,7 +3994,7 @@ class __$$_ModLockPostCopyWithImpl<$Res>
     Object? when = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$_ModLockPost(
+    return _then(_$ModLockPostImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -4015,8 +4026,8 @@ class __$$_ModLockPostCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ModLockPost extends _ModLockPost {
-  const _$_ModLockPost(
+class _$ModLockPostImpl extends _ModLockPost {
+  const _$ModLockPostImpl(
       {required this.id,
       required this.modPersonId,
       required this.postId,
@@ -4025,8 +4036,8 @@ class _$_ModLockPost extends _ModLockPost {
       required this.instanceHost})
       : super._();
 
-  factory _$_ModLockPost.fromJson(Map<String, dynamic> json) =>
-      _$$_ModLockPostFromJson(json);
+  factory _$ModLockPostImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModLockPostImplFromJson(json);
 
   @override
   final int id;
@@ -4051,7 +4062,7 @@ class _$_ModLockPost extends _ModLockPost {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ModLockPost &&
+            other is _$ModLockPostImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.modPersonId, modPersonId) ||
                 other.modPersonId == modPersonId) &&
@@ -4070,12 +4081,12 @@ class _$_ModLockPost extends _ModLockPost {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ModLockPostCopyWith<_$_ModLockPost> get copyWith =>
-      __$$_ModLockPostCopyWithImpl<_$_ModLockPost>(this, _$identity);
+  _$$ModLockPostImplCopyWith<_$ModLockPostImpl> get copyWith =>
+      __$$ModLockPostImplCopyWithImpl<_$ModLockPostImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModLockPostToJson(
+    return _$$ModLockPostImplToJson(
       this,
     );
   }
@@ -4088,11 +4099,11 @@ abstract class _ModLockPost extends ModLockPost {
       required final int postId,
       final bool? locked,
       @JsonKey(name: 'when_') required final DateTime when,
-      required final String instanceHost}) = _$_ModLockPost;
+      required final String instanceHost}) = _$ModLockPostImpl;
   const _ModLockPost._() : super._();
 
   factory _ModLockPost.fromJson(Map<String, dynamic> json) =
-      _$_ModLockPost.fromJson;
+      _$ModLockPostImpl.fromJson;
 
   @override
   int get id;
@@ -4109,7 +4120,7 @@ abstract class _ModLockPost extends ModLockPost {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_ModLockPostCopyWith<_$_ModLockPost> get copyWith =>
+  _$$ModLockPostImplCopyWith<_$ModLockPostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4198,11 +4209,11 @@ class _$ModStickyPostCopyWithImpl<$Res, $Val extends ModStickyPost>
 }
 
 /// @nodoc
-abstract class _$$_ModStickyPostCopyWith<$Res>
+abstract class _$$ModStickyPostImplCopyWith<$Res>
     implements $ModStickyPostCopyWith<$Res> {
-  factory _$$_ModStickyPostCopyWith(
-          _$_ModStickyPost value, $Res Function(_$_ModStickyPost) then) =
-      __$$_ModStickyPostCopyWithImpl<$Res>;
+  factory _$$ModStickyPostImplCopyWith(
+          _$ModStickyPostImpl value, $Res Function(_$ModStickyPostImpl) then) =
+      __$$ModStickyPostImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -4215,11 +4226,11 @@ abstract class _$$_ModStickyPostCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ModStickyPostCopyWithImpl<$Res>
-    extends _$ModStickyPostCopyWithImpl<$Res, _$_ModStickyPost>
-    implements _$$_ModStickyPostCopyWith<$Res> {
-  __$$_ModStickyPostCopyWithImpl(
-      _$_ModStickyPost _value, $Res Function(_$_ModStickyPost) _then)
+class __$$ModStickyPostImplCopyWithImpl<$Res>
+    extends _$ModStickyPostCopyWithImpl<$Res, _$ModStickyPostImpl>
+    implements _$$ModStickyPostImplCopyWith<$Res> {
+  __$$ModStickyPostImplCopyWithImpl(
+      _$ModStickyPostImpl _value, $Res Function(_$ModStickyPostImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4232,7 +4243,7 @@ class __$$_ModStickyPostCopyWithImpl<$Res>
     Object? when = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$_ModStickyPost(
+    return _then(_$ModStickyPostImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -4264,8 +4275,8 @@ class __$$_ModStickyPostCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ModStickyPost extends _ModStickyPost {
-  const _$_ModStickyPost(
+class _$ModStickyPostImpl extends _ModStickyPost {
+  const _$ModStickyPostImpl(
       {required this.id,
       required this.modPersonId,
       required this.postId,
@@ -4274,8 +4285,8 @@ class _$_ModStickyPost extends _ModStickyPost {
       required this.instanceHost})
       : super._();
 
-  factory _$_ModStickyPost.fromJson(Map<String, dynamic> json) =>
-      _$$_ModStickyPostFromJson(json);
+  factory _$ModStickyPostImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModStickyPostImplFromJson(json);
 
   @override
   final int id;
@@ -4300,7 +4311,7 @@ class _$_ModStickyPost extends _ModStickyPost {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ModStickyPost &&
+            other is _$ModStickyPostImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.modPersonId, modPersonId) ||
                 other.modPersonId == modPersonId) &&
@@ -4320,12 +4331,12 @@ class _$_ModStickyPost extends _ModStickyPost {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ModStickyPostCopyWith<_$_ModStickyPost> get copyWith =>
-      __$$_ModStickyPostCopyWithImpl<_$_ModStickyPost>(this, _$identity);
+  _$$ModStickyPostImplCopyWith<_$ModStickyPostImpl> get copyWith =>
+      __$$ModStickyPostImplCopyWithImpl<_$ModStickyPostImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModStickyPostToJson(
+    return _$$ModStickyPostImplToJson(
       this,
     );
   }
@@ -4338,11 +4349,11 @@ abstract class _ModStickyPost extends ModStickyPost {
       required final int postId,
       final bool? stickied,
       @JsonKey(name: 'when_') required final DateTime when,
-      required final String instanceHost}) = _$_ModStickyPost;
+      required final String instanceHost}) = _$ModStickyPostImpl;
   const _ModStickyPost._() : super._();
 
   factory _ModStickyPost.fromJson(Map<String, dynamic> json) =
-      _$_ModStickyPost.fromJson;
+      _$ModStickyPostImpl.fromJson;
 
   @override
   int get id;
@@ -4359,7 +4370,7 @@ abstract class _ModStickyPost extends ModStickyPost {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_ModStickyPostCopyWith<_$_ModStickyPost> get copyWith =>
+  _$$ModStickyPostImplCopyWith<_$ModStickyPostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4455,11 +4466,11 @@ class _$ModFeaturePostCopyWithImpl<$Res, $Val extends ModFeaturePost>
 }
 
 /// @nodoc
-abstract class _$$_ModFeaturePostCopyWith<$Res>
+abstract class _$$ModFeaturePostImplCopyWith<$Res>
     implements $ModFeaturePostCopyWith<$Res> {
-  factory _$$_ModFeaturePostCopyWith(
-          _$_ModFeaturePost value, $Res Function(_$_ModFeaturePost) then) =
-      __$$_ModFeaturePostCopyWithImpl<$Res>;
+  factory _$$ModFeaturePostImplCopyWith(_$ModFeaturePostImpl value,
+          $Res Function(_$ModFeaturePostImpl) then) =
+      __$$ModFeaturePostImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -4473,11 +4484,11 @@ abstract class _$$_ModFeaturePostCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ModFeaturePostCopyWithImpl<$Res>
-    extends _$ModFeaturePostCopyWithImpl<$Res, _$_ModFeaturePost>
-    implements _$$_ModFeaturePostCopyWith<$Res> {
-  __$$_ModFeaturePostCopyWithImpl(
-      _$_ModFeaturePost _value, $Res Function(_$_ModFeaturePost) _then)
+class __$$ModFeaturePostImplCopyWithImpl<$Res>
+    extends _$ModFeaturePostCopyWithImpl<$Res, _$ModFeaturePostImpl>
+    implements _$$ModFeaturePostImplCopyWith<$Res> {
+  __$$ModFeaturePostImplCopyWithImpl(
+      _$ModFeaturePostImpl _value, $Res Function(_$ModFeaturePostImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4491,7 +4502,7 @@ class __$$_ModFeaturePostCopyWithImpl<$Res>
     Object? when = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$_ModFeaturePost(
+    return _then(_$ModFeaturePostImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -4527,8 +4538,8 @@ class __$$_ModFeaturePostCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ModFeaturePost extends _ModFeaturePost {
-  const _$_ModFeaturePost(
+class _$ModFeaturePostImpl extends _ModFeaturePost {
+  const _$ModFeaturePostImpl(
       {required this.id,
       required this.modPersonId,
       required this.postId,
@@ -4538,8 +4549,8 @@ class _$_ModFeaturePost extends _ModFeaturePost {
       required this.instanceHost})
       : super._();
 
-  factory _$_ModFeaturePost.fromJson(Map<String, dynamic> json) =>
-      _$$_ModFeaturePostFromJson(json);
+  factory _$ModFeaturePostImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModFeaturePostImplFromJson(json);
 
   @override
   final int id;
@@ -4566,7 +4577,7 @@ class _$_ModFeaturePost extends _ModFeaturePost {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ModFeaturePost &&
+            other is _$ModFeaturePostImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.modPersonId, modPersonId) ||
                 other.modPersonId == modPersonId) &&
@@ -4588,12 +4599,13 @@ class _$_ModFeaturePost extends _ModFeaturePost {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ModFeaturePostCopyWith<_$_ModFeaturePost> get copyWith =>
-      __$$_ModFeaturePostCopyWithImpl<_$_ModFeaturePost>(this, _$identity);
+  _$$ModFeaturePostImplCopyWith<_$ModFeaturePostImpl> get copyWith =>
+      __$$ModFeaturePostImplCopyWithImpl<_$ModFeaturePostImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModFeaturePostToJson(
+    return _$$ModFeaturePostImplToJson(
       this,
     );
   }
@@ -4607,11 +4619,11 @@ abstract class _ModFeaturePost extends ModFeaturePost {
       required final bool featured,
       required final bool isFeaturedCommunity,
       @JsonKey(name: 'when_') required final DateTime when,
-      required final String instanceHost}) = _$_ModFeaturePost;
+      required final String instanceHost}) = _$ModFeaturePostImpl;
   const _ModFeaturePost._() : super._();
 
   factory _ModFeaturePost.fromJson(Map<String, dynamic> json) =
-      _$_ModFeaturePost.fromJson;
+      _$ModFeaturePostImpl.fromJson;
 
   @override
   int get id;
@@ -4630,7 +4642,7 @@ abstract class _ModFeaturePost extends ModFeaturePost {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_ModFeaturePostCopyWith<_$_ModFeaturePost> get copyWith =>
+  _$$ModFeaturePostImplCopyWith<_$ModFeaturePostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4726,11 +4738,11 @@ class _$ModRemoveCommentCopyWithImpl<$Res, $Val extends ModRemoveComment>
 }
 
 /// @nodoc
-abstract class _$$_ModRemoveCommentCopyWith<$Res>
+abstract class _$$ModRemoveCommentImplCopyWith<$Res>
     implements $ModRemoveCommentCopyWith<$Res> {
-  factory _$$_ModRemoveCommentCopyWith(
-          _$_ModRemoveComment value, $Res Function(_$_ModRemoveComment) then) =
-      __$$_ModRemoveCommentCopyWithImpl<$Res>;
+  factory _$$ModRemoveCommentImplCopyWith(_$ModRemoveCommentImpl value,
+          $Res Function(_$ModRemoveCommentImpl) then) =
+      __$$ModRemoveCommentImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -4744,11 +4756,11 @@ abstract class _$$_ModRemoveCommentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ModRemoveCommentCopyWithImpl<$Res>
-    extends _$ModRemoveCommentCopyWithImpl<$Res, _$_ModRemoveComment>
-    implements _$$_ModRemoveCommentCopyWith<$Res> {
-  __$$_ModRemoveCommentCopyWithImpl(
-      _$_ModRemoveComment _value, $Res Function(_$_ModRemoveComment) _then)
+class __$$ModRemoveCommentImplCopyWithImpl<$Res>
+    extends _$ModRemoveCommentCopyWithImpl<$Res, _$ModRemoveCommentImpl>
+    implements _$$ModRemoveCommentImplCopyWith<$Res> {
+  __$$ModRemoveCommentImplCopyWithImpl(_$ModRemoveCommentImpl _value,
+      $Res Function(_$ModRemoveCommentImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4762,7 +4774,7 @@ class __$$_ModRemoveCommentCopyWithImpl<$Res>
     Object? when = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$_ModRemoveComment(
+    return _then(_$ModRemoveCommentImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -4798,8 +4810,8 @@ class __$$_ModRemoveCommentCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ModRemoveComment extends _ModRemoveComment {
-  const _$_ModRemoveComment(
+class _$ModRemoveCommentImpl extends _ModRemoveComment {
+  const _$ModRemoveCommentImpl(
       {required this.id,
       required this.modPersonId,
       required this.commentId,
@@ -4809,8 +4821,8 @@ class _$_ModRemoveComment extends _ModRemoveComment {
       required this.instanceHost})
       : super._();
 
-  factory _$_ModRemoveComment.fromJson(Map<String, dynamic> json) =>
-      _$$_ModRemoveCommentFromJson(json);
+  factory _$ModRemoveCommentImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModRemoveCommentImplFromJson(json);
 
   @override
   final int id;
@@ -4837,7 +4849,7 @@ class _$_ModRemoveComment extends _ModRemoveComment {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ModRemoveComment &&
+            other is _$ModRemoveCommentImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.modPersonId, modPersonId) ||
                 other.modPersonId == modPersonId) &&
@@ -4858,12 +4870,13 @@ class _$_ModRemoveComment extends _ModRemoveComment {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ModRemoveCommentCopyWith<_$_ModRemoveComment> get copyWith =>
-      __$$_ModRemoveCommentCopyWithImpl<_$_ModRemoveComment>(this, _$identity);
+  _$$ModRemoveCommentImplCopyWith<_$ModRemoveCommentImpl> get copyWith =>
+      __$$ModRemoveCommentImplCopyWithImpl<_$ModRemoveCommentImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModRemoveCommentToJson(
+    return _$$ModRemoveCommentImplToJson(
       this,
     );
   }
@@ -4877,11 +4890,11 @@ abstract class _ModRemoveComment extends ModRemoveComment {
       final String? reason,
       final bool? removed,
       @JsonKey(name: 'when_') required final DateTime when,
-      required final String instanceHost}) = _$_ModRemoveComment;
+      required final String instanceHost}) = _$ModRemoveCommentImpl;
   const _ModRemoveComment._() : super._();
 
   factory _ModRemoveComment.fromJson(Map<String, dynamic> json) =
-      _$_ModRemoveComment.fromJson;
+      _$ModRemoveCommentImpl.fromJson;
 
   @override
   int get id;
@@ -4900,7 +4913,7 @@ abstract class _ModRemoveComment extends ModRemoveComment {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_ModRemoveCommentCopyWith<_$_ModRemoveComment> get copyWith =>
+  _$$ModRemoveCommentImplCopyWith<_$ModRemoveCommentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -5003,11 +5016,11 @@ class _$ModRemoveCommunityCopyWithImpl<$Res, $Val extends ModRemoveCommunity>
 }
 
 /// @nodoc
-abstract class _$$_ModRemoveCommunityCopyWith<$Res>
+abstract class _$$ModRemoveCommunityImplCopyWith<$Res>
     implements $ModRemoveCommunityCopyWith<$Res> {
-  factory _$$_ModRemoveCommunityCopyWith(_$_ModRemoveCommunity value,
-          $Res Function(_$_ModRemoveCommunity) then) =
-      __$$_ModRemoveCommunityCopyWithImpl<$Res>;
+  factory _$$ModRemoveCommunityImplCopyWith(_$ModRemoveCommunityImpl value,
+          $Res Function(_$ModRemoveCommunityImpl) then) =
+      __$$ModRemoveCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -5022,11 +5035,11 @@ abstract class _$$_ModRemoveCommunityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ModRemoveCommunityCopyWithImpl<$Res>
-    extends _$ModRemoveCommunityCopyWithImpl<$Res, _$_ModRemoveCommunity>
-    implements _$$_ModRemoveCommunityCopyWith<$Res> {
-  __$$_ModRemoveCommunityCopyWithImpl(
-      _$_ModRemoveCommunity _value, $Res Function(_$_ModRemoveCommunity) _then)
+class __$$ModRemoveCommunityImplCopyWithImpl<$Res>
+    extends _$ModRemoveCommunityCopyWithImpl<$Res, _$ModRemoveCommunityImpl>
+    implements _$$ModRemoveCommunityImplCopyWith<$Res> {
+  __$$ModRemoveCommunityImplCopyWithImpl(_$ModRemoveCommunityImpl _value,
+      $Res Function(_$ModRemoveCommunityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -5041,7 +5054,7 @@ class __$$_ModRemoveCommunityCopyWithImpl<$Res>
     Object? when = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$_ModRemoveCommunity(
+    return _then(_$ModRemoveCommunityImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -5081,8 +5094,8 @@ class __$$_ModRemoveCommunityCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ModRemoveCommunity extends _ModRemoveCommunity {
-  const _$_ModRemoveCommunity(
+class _$ModRemoveCommunityImpl extends _ModRemoveCommunity {
+  const _$ModRemoveCommunityImpl(
       {required this.id,
       required this.modPersonId,
       required this.communityId,
@@ -5093,8 +5106,8 @@ class _$_ModRemoveCommunity extends _ModRemoveCommunity {
       required this.instanceHost})
       : super._();
 
-  factory _$_ModRemoveCommunity.fromJson(Map<String, dynamic> json) =>
-      _$$_ModRemoveCommunityFromJson(json);
+  factory _$ModRemoveCommunityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModRemoveCommunityImplFromJson(json);
 
   @override
   final int id;
@@ -5123,7 +5136,7 @@ class _$_ModRemoveCommunity extends _ModRemoveCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ModRemoveCommunity &&
+            other is _$ModRemoveCommunityImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.modPersonId, modPersonId) ||
                 other.modPersonId == modPersonId) &&
@@ -5145,13 +5158,13 @@ class _$_ModRemoveCommunity extends _ModRemoveCommunity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ModRemoveCommunityCopyWith<_$_ModRemoveCommunity> get copyWith =>
-      __$$_ModRemoveCommunityCopyWithImpl<_$_ModRemoveCommunity>(
+  _$$ModRemoveCommunityImplCopyWith<_$ModRemoveCommunityImpl> get copyWith =>
+      __$$ModRemoveCommunityImplCopyWithImpl<_$ModRemoveCommunityImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModRemoveCommunityToJson(
+    return _$$ModRemoveCommunityImplToJson(
       this,
     );
   }
@@ -5166,11 +5179,11 @@ abstract class _ModRemoveCommunity extends ModRemoveCommunity {
       final bool? removed,
       final DateTime? expires,
       @JsonKey(name: 'when_') required final DateTime when,
-      required final String instanceHost}) = _$_ModRemoveCommunity;
+      required final String instanceHost}) = _$ModRemoveCommunityImpl;
   const _ModRemoveCommunity._() : super._();
 
   factory _ModRemoveCommunity.fromJson(Map<String, dynamic> json) =
-      _$_ModRemoveCommunity.fromJson;
+      _$ModRemoveCommunityImpl.fromJson;
 
   @override
   int get id;
@@ -5191,7 +5204,7 @@ abstract class _ModRemoveCommunity extends ModRemoveCommunity {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_ModRemoveCommunityCopyWith<_$_ModRemoveCommunity> get copyWith =>
+  _$$ModRemoveCommunityImplCopyWith<_$ModRemoveCommunityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -5287,11 +5300,11 @@ class _$ModHideCommunityCopyWithImpl<$Res, $Val extends ModHideCommunity>
 }
 
 /// @nodoc
-abstract class _$$_ModHideCommunityCopyWith<$Res>
+abstract class _$$ModHideCommunityImplCopyWith<$Res>
     implements $ModHideCommunityCopyWith<$Res> {
-  factory _$$_ModHideCommunityCopyWith(
-          _$_ModHideCommunity value, $Res Function(_$_ModHideCommunity) then) =
-      __$$_ModHideCommunityCopyWithImpl<$Res>;
+  factory _$$ModHideCommunityImplCopyWith(_$ModHideCommunityImpl value,
+          $Res Function(_$ModHideCommunityImpl) then) =
+      __$$ModHideCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -5305,11 +5318,11 @@ abstract class _$$_ModHideCommunityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ModHideCommunityCopyWithImpl<$Res>
-    extends _$ModHideCommunityCopyWithImpl<$Res, _$_ModHideCommunity>
-    implements _$$_ModHideCommunityCopyWith<$Res> {
-  __$$_ModHideCommunityCopyWithImpl(
-      _$_ModHideCommunity _value, $Res Function(_$_ModHideCommunity) _then)
+class __$$ModHideCommunityImplCopyWithImpl<$Res>
+    extends _$ModHideCommunityCopyWithImpl<$Res, _$ModHideCommunityImpl>
+    implements _$$ModHideCommunityImplCopyWith<$Res> {
+  __$$ModHideCommunityImplCopyWithImpl(_$ModHideCommunityImpl _value,
+      $Res Function(_$ModHideCommunityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -5323,7 +5336,7 @@ class __$$_ModHideCommunityCopyWithImpl<$Res>
     Object? when = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$_ModHideCommunity(
+    return _then(_$ModHideCommunityImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -5359,8 +5372,8 @@ class __$$_ModHideCommunityCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ModHideCommunity extends _ModHideCommunity {
-  const _$_ModHideCommunity(
+class _$ModHideCommunityImpl extends _ModHideCommunity {
+  const _$ModHideCommunityImpl(
       {required this.id,
       required this.modPersonId,
       required this.communityId,
@@ -5370,8 +5383,8 @@ class _$_ModHideCommunity extends _ModHideCommunity {
       required this.instanceHost})
       : super._();
 
-  factory _$_ModHideCommunity.fromJson(Map<String, dynamic> json) =>
-      _$$_ModHideCommunityFromJson(json);
+  factory _$ModHideCommunityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModHideCommunityImplFromJson(json);
 
   @override
   final int id;
@@ -5398,7 +5411,7 @@ class _$_ModHideCommunity extends _ModHideCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ModHideCommunity &&
+            other is _$ModHideCommunityImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.modPersonId, modPersonId) ||
                 other.modPersonId == modPersonId) &&
@@ -5419,12 +5432,13 @@ class _$_ModHideCommunity extends _ModHideCommunity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ModHideCommunityCopyWith<_$_ModHideCommunity> get copyWith =>
-      __$$_ModHideCommunityCopyWithImpl<_$_ModHideCommunity>(this, _$identity);
+  _$$ModHideCommunityImplCopyWith<_$ModHideCommunityImpl> get copyWith =>
+      __$$ModHideCommunityImplCopyWithImpl<_$ModHideCommunityImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModHideCommunityToJson(
+    return _$$ModHideCommunityImplToJson(
       this,
     );
   }
@@ -5438,11 +5452,11 @@ abstract class _ModHideCommunity extends ModHideCommunity {
       final String? reason,
       required final bool hidden,
       @JsonKey(name: 'when_') required final DateTime when,
-      required final String instanceHost}) = _$_ModHideCommunity;
+      required final String instanceHost}) = _$ModHideCommunityImpl;
   const _ModHideCommunity._() : super._();
 
   factory _ModHideCommunity.fromJson(Map<String, dynamic> json) =
-      _$_ModHideCommunity.fromJson;
+      _$ModHideCommunityImpl.fromJson;
 
   @override
   int get id;
@@ -5461,7 +5475,7 @@ abstract class _ModHideCommunity extends ModHideCommunity {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_ModHideCommunityCopyWith<_$_ModHideCommunity> get copyWith =>
+  _$$ModHideCommunityImplCopyWith<_$ModHideCommunityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -5571,11 +5585,11 @@ class _$ModBanFromCommunityCopyWithImpl<$Res, $Val extends ModBanFromCommunity>
 }
 
 /// @nodoc
-abstract class _$$_ModBanFromCommunityCopyWith<$Res>
+abstract class _$$ModBanFromCommunityImplCopyWith<$Res>
     implements $ModBanFromCommunityCopyWith<$Res> {
-  factory _$$_ModBanFromCommunityCopyWith(_$_ModBanFromCommunity value,
-          $Res Function(_$_ModBanFromCommunity) then) =
-      __$$_ModBanFromCommunityCopyWithImpl<$Res>;
+  factory _$$ModBanFromCommunityImplCopyWith(_$ModBanFromCommunityImpl value,
+          $Res Function(_$ModBanFromCommunityImpl) then) =
+      __$$ModBanFromCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -5591,11 +5605,11 @@ abstract class _$$_ModBanFromCommunityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ModBanFromCommunityCopyWithImpl<$Res>
-    extends _$ModBanFromCommunityCopyWithImpl<$Res, _$_ModBanFromCommunity>
-    implements _$$_ModBanFromCommunityCopyWith<$Res> {
-  __$$_ModBanFromCommunityCopyWithImpl(_$_ModBanFromCommunity _value,
-      $Res Function(_$_ModBanFromCommunity) _then)
+class __$$ModBanFromCommunityImplCopyWithImpl<$Res>
+    extends _$ModBanFromCommunityCopyWithImpl<$Res, _$ModBanFromCommunityImpl>
+    implements _$$ModBanFromCommunityImplCopyWith<$Res> {
+  __$$ModBanFromCommunityImplCopyWithImpl(_$ModBanFromCommunityImpl _value,
+      $Res Function(_$ModBanFromCommunityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -5611,7 +5625,7 @@ class __$$_ModBanFromCommunityCopyWithImpl<$Res>
     Object? when = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$_ModBanFromCommunity(
+    return _then(_$ModBanFromCommunityImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -5655,8 +5669,8 @@ class __$$_ModBanFromCommunityCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ModBanFromCommunity extends _ModBanFromCommunity {
-  const _$_ModBanFromCommunity(
+class _$ModBanFromCommunityImpl extends _ModBanFromCommunity {
+  const _$ModBanFromCommunityImpl(
       {required this.id,
       required this.modPersonId,
       required this.otherPersonId,
@@ -5668,8 +5682,8 @@ class _$_ModBanFromCommunity extends _ModBanFromCommunity {
       required this.instanceHost})
       : super._();
 
-  factory _$_ModBanFromCommunity.fromJson(Map<String, dynamic> json) =>
-      _$$_ModBanFromCommunityFromJson(json);
+  factory _$ModBanFromCommunityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModBanFromCommunityImplFromJson(json);
 
   @override
   final int id;
@@ -5700,7 +5714,7 @@ class _$_ModBanFromCommunity extends _ModBanFromCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ModBanFromCommunity &&
+            other is _$ModBanFromCommunityImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.modPersonId, modPersonId) ||
                 other.modPersonId == modPersonId) &&
@@ -5724,13 +5738,13 @@ class _$_ModBanFromCommunity extends _ModBanFromCommunity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ModBanFromCommunityCopyWith<_$_ModBanFromCommunity> get copyWith =>
-      __$$_ModBanFromCommunityCopyWithImpl<_$_ModBanFromCommunity>(
+  _$$ModBanFromCommunityImplCopyWith<_$ModBanFromCommunityImpl> get copyWith =>
+      __$$ModBanFromCommunityImplCopyWithImpl<_$ModBanFromCommunityImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModBanFromCommunityToJson(
+    return _$$ModBanFromCommunityImplToJson(
       this,
     );
   }
@@ -5746,11 +5760,11 @@ abstract class _ModBanFromCommunity extends ModBanFromCommunity {
       final bool? banned,
       final DateTime? expires,
       @JsonKey(name: 'when_') required final DateTime when,
-      required final String instanceHost}) = _$_ModBanFromCommunity;
+      required final String instanceHost}) = _$ModBanFromCommunityImpl;
   const _ModBanFromCommunity._() : super._();
 
   factory _ModBanFromCommunity.fromJson(Map<String, dynamic> json) =
-      _$_ModBanFromCommunity.fromJson;
+      _$ModBanFromCommunityImpl.fromJson;
 
   @override
   int get id;
@@ -5773,7 +5787,7 @@ abstract class _ModBanFromCommunity extends ModBanFromCommunity {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_ModBanFromCommunityCopyWith<_$_ModBanFromCommunity> get copyWith =>
+  _$$ModBanFromCommunityImplCopyWith<_$ModBanFromCommunityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -5874,9 +5888,10 @@ class _$ModBanCopyWithImpl<$Res, $Val extends ModBan>
 }
 
 /// @nodoc
-abstract class _$$_ModBanCopyWith<$Res> implements $ModBanCopyWith<$Res> {
-  factory _$$_ModBanCopyWith(_$_ModBan value, $Res Function(_$_ModBan) then) =
-      __$$_ModBanCopyWithImpl<$Res>;
+abstract class _$$ModBanImplCopyWith<$Res> implements $ModBanCopyWith<$Res> {
+  factory _$$ModBanImplCopyWith(
+          _$ModBanImpl value, $Res Function(_$ModBanImpl) then) =
+      __$$ModBanImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -5891,10 +5906,11 @@ abstract class _$$_ModBanCopyWith<$Res> implements $ModBanCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ModBanCopyWithImpl<$Res>
-    extends _$ModBanCopyWithImpl<$Res, _$_ModBan>
-    implements _$$_ModBanCopyWith<$Res> {
-  __$$_ModBanCopyWithImpl(_$_ModBan _value, $Res Function(_$_ModBan) _then)
+class __$$ModBanImplCopyWithImpl<$Res>
+    extends _$ModBanCopyWithImpl<$Res, _$ModBanImpl>
+    implements _$$ModBanImplCopyWith<$Res> {
+  __$$ModBanImplCopyWithImpl(
+      _$ModBanImpl _value, $Res Function(_$ModBanImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -5909,7 +5925,7 @@ class __$$_ModBanCopyWithImpl<$Res>
     Object? when = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$_ModBan(
+    return _then(_$ModBanImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -5949,8 +5965,8 @@ class __$$_ModBanCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ModBan extends _ModBan {
-  const _$_ModBan(
+class _$ModBanImpl extends _ModBan {
+  const _$ModBanImpl(
       {required this.id,
       required this.modPersonId,
       required this.otherPersonId,
@@ -5961,8 +5977,8 @@ class _$_ModBan extends _ModBan {
       required this.instanceHost})
       : super._();
 
-  factory _$_ModBan.fromJson(Map<String, dynamic> json) =>
-      _$$_ModBanFromJson(json);
+  factory _$ModBanImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModBanImplFromJson(json);
 
   @override
   final int id;
@@ -5991,7 +6007,7 @@ class _$_ModBan extends _ModBan {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ModBan &&
+            other is _$ModBanImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.modPersonId, modPersonId) ||
                 other.modPersonId == modPersonId) &&
@@ -6013,12 +6029,12 @@ class _$_ModBan extends _ModBan {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ModBanCopyWith<_$_ModBan> get copyWith =>
-      __$$_ModBanCopyWithImpl<_$_ModBan>(this, _$identity);
+  _$$ModBanImplCopyWith<_$ModBanImpl> get copyWith =>
+      __$$ModBanImplCopyWithImpl<_$ModBanImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModBanToJson(
+    return _$$ModBanImplToJson(
       this,
     );
   }
@@ -6033,10 +6049,10 @@ abstract class _ModBan extends ModBan {
       final bool? banned,
       final DateTime? expires,
       @JsonKey(name: 'when_') required final DateTime when,
-      required final String instanceHost}) = _$_ModBan;
+      required final String instanceHost}) = _$ModBanImpl;
   const _ModBan._() : super._();
 
-  factory _ModBan.fromJson(Map<String, dynamic> json) = _$_ModBan.fromJson;
+  factory _ModBan.fromJson(Map<String, dynamic> json) = _$ModBanImpl.fromJson;
 
   @override
   int get id;
@@ -6057,7 +6073,7 @@ abstract class _ModBan extends ModBan {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_ModBanCopyWith<_$_ModBan> get copyWith =>
+  _$$ModBanImplCopyWith<_$ModBanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -6153,11 +6169,11 @@ class _$ModAddCommunityCopyWithImpl<$Res, $Val extends ModAddCommunity>
 }
 
 /// @nodoc
-abstract class _$$_ModAddCommunityCopyWith<$Res>
+abstract class _$$ModAddCommunityImplCopyWith<$Res>
     implements $ModAddCommunityCopyWith<$Res> {
-  factory _$$_ModAddCommunityCopyWith(
-          _$_ModAddCommunity value, $Res Function(_$_ModAddCommunity) then) =
-      __$$_ModAddCommunityCopyWithImpl<$Res>;
+  factory _$$ModAddCommunityImplCopyWith(_$ModAddCommunityImpl value,
+          $Res Function(_$ModAddCommunityImpl) then) =
+      __$$ModAddCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -6171,11 +6187,11 @@ abstract class _$$_ModAddCommunityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ModAddCommunityCopyWithImpl<$Res>
-    extends _$ModAddCommunityCopyWithImpl<$Res, _$_ModAddCommunity>
-    implements _$$_ModAddCommunityCopyWith<$Res> {
-  __$$_ModAddCommunityCopyWithImpl(
-      _$_ModAddCommunity _value, $Res Function(_$_ModAddCommunity) _then)
+class __$$ModAddCommunityImplCopyWithImpl<$Res>
+    extends _$ModAddCommunityCopyWithImpl<$Res, _$ModAddCommunityImpl>
+    implements _$$ModAddCommunityImplCopyWith<$Res> {
+  __$$ModAddCommunityImplCopyWithImpl(
+      _$ModAddCommunityImpl _value, $Res Function(_$ModAddCommunityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -6189,7 +6205,7 @@ class __$$_ModAddCommunityCopyWithImpl<$Res>
     Object? when = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$_ModAddCommunity(
+    return _then(_$ModAddCommunityImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -6225,8 +6241,8 @@ class __$$_ModAddCommunityCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ModAddCommunity extends _ModAddCommunity {
-  const _$_ModAddCommunity(
+class _$ModAddCommunityImpl extends _ModAddCommunity {
+  const _$ModAddCommunityImpl(
       {required this.id,
       required this.modPersonId,
       required this.otherPersonId,
@@ -6236,8 +6252,8 @@ class _$_ModAddCommunity extends _ModAddCommunity {
       required this.instanceHost})
       : super._();
 
-  factory _$_ModAddCommunity.fromJson(Map<String, dynamic> json) =>
-      _$$_ModAddCommunityFromJson(json);
+  factory _$ModAddCommunityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModAddCommunityImplFromJson(json);
 
   @override
   final int id;
@@ -6264,7 +6280,7 @@ class _$_ModAddCommunity extends _ModAddCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ModAddCommunity &&
+            other is _$ModAddCommunityImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.modPersonId, modPersonId) ||
                 other.modPersonId == modPersonId) &&
@@ -6286,12 +6302,13 @@ class _$_ModAddCommunity extends _ModAddCommunity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ModAddCommunityCopyWith<_$_ModAddCommunity> get copyWith =>
-      __$$_ModAddCommunityCopyWithImpl<_$_ModAddCommunity>(this, _$identity);
+  _$$ModAddCommunityImplCopyWith<_$ModAddCommunityImpl> get copyWith =>
+      __$$ModAddCommunityImplCopyWithImpl<_$ModAddCommunityImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModAddCommunityToJson(
+    return _$$ModAddCommunityImplToJson(
       this,
     );
   }
@@ -6305,11 +6322,11 @@ abstract class _ModAddCommunity extends ModAddCommunity {
       required final int communityId,
       final bool? removed,
       @JsonKey(name: 'when_') required final DateTime when,
-      required final String instanceHost}) = _$_ModAddCommunity;
+      required final String instanceHost}) = _$ModAddCommunityImpl;
   const _ModAddCommunity._() : super._();
 
   factory _ModAddCommunity.fromJson(Map<String, dynamic> json) =
-      _$_ModAddCommunity.fromJson;
+      _$ModAddCommunityImpl.fromJson;
 
   @override
   int get id;
@@ -6328,7 +6345,7 @@ abstract class _ModAddCommunity extends ModAddCommunity {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_ModAddCommunityCopyWith<_$_ModAddCommunity> get copyWith =>
+  _$$ModAddCommunityImplCopyWith<_$ModAddCommunityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -6425,11 +6442,11 @@ class _$ModTransferCommunityCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ModTransferCommunityCopyWith<$Res>
+abstract class _$$ModTransferCommunityImplCopyWith<$Res>
     implements $ModTransferCommunityCopyWith<$Res> {
-  factory _$$_ModTransferCommunityCopyWith(_$_ModTransferCommunity value,
-          $Res Function(_$_ModTransferCommunity) then) =
-      __$$_ModTransferCommunityCopyWithImpl<$Res>;
+  factory _$$ModTransferCommunityImplCopyWith(_$ModTransferCommunityImpl value,
+          $Res Function(_$ModTransferCommunityImpl) then) =
+      __$$ModTransferCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -6443,11 +6460,11 @@ abstract class _$$_ModTransferCommunityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ModTransferCommunityCopyWithImpl<$Res>
-    extends _$ModTransferCommunityCopyWithImpl<$Res, _$_ModTransferCommunity>
-    implements _$$_ModTransferCommunityCopyWith<$Res> {
-  __$$_ModTransferCommunityCopyWithImpl(_$_ModTransferCommunity _value,
-      $Res Function(_$_ModTransferCommunity) _then)
+class __$$ModTransferCommunityImplCopyWithImpl<$Res>
+    extends _$ModTransferCommunityCopyWithImpl<$Res, _$ModTransferCommunityImpl>
+    implements _$$ModTransferCommunityImplCopyWith<$Res> {
+  __$$ModTransferCommunityImplCopyWithImpl(_$ModTransferCommunityImpl _value,
+      $Res Function(_$ModTransferCommunityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -6461,7 +6478,7 @@ class __$$_ModTransferCommunityCopyWithImpl<$Res>
     Object? when = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$_ModTransferCommunity(
+    return _then(_$ModTransferCommunityImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -6497,8 +6514,8 @@ class __$$_ModTransferCommunityCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ModTransferCommunity extends _ModTransferCommunity {
-  const _$_ModTransferCommunity(
+class _$ModTransferCommunityImpl extends _ModTransferCommunity {
+  const _$ModTransferCommunityImpl(
       {required this.id,
       required this.modPersonId,
       required this.otherPersonId,
@@ -6508,8 +6525,8 @@ class _$_ModTransferCommunity extends _ModTransferCommunity {
       required this.instanceHost})
       : super._();
 
-  factory _$_ModTransferCommunity.fromJson(Map<String, dynamic> json) =>
-      _$$_ModTransferCommunityFromJson(json);
+  factory _$ModTransferCommunityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModTransferCommunityImplFromJson(json);
 
   @override
   final int id;
@@ -6536,7 +6553,7 @@ class _$_ModTransferCommunity extends _ModTransferCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ModTransferCommunity &&
+            other is _$ModTransferCommunityImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.modPersonId, modPersonId) ||
                 other.modPersonId == modPersonId) &&
@@ -6558,13 +6575,14 @@ class _$_ModTransferCommunity extends _ModTransferCommunity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ModTransferCommunityCopyWith<_$_ModTransferCommunity> get copyWith =>
-      __$$_ModTransferCommunityCopyWithImpl<_$_ModTransferCommunity>(
-          this, _$identity);
+  _$$ModTransferCommunityImplCopyWith<_$ModTransferCommunityImpl>
+      get copyWith =>
+          __$$ModTransferCommunityImplCopyWithImpl<_$ModTransferCommunityImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModTransferCommunityToJson(
+    return _$$ModTransferCommunityImplToJson(
       this,
     );
   }
@@ -6578,11 +6596,11 @@ abstract class _ModTransferCommunity extends ModTransferCommunity {
       required final int communityId,
       final bool? removed,
       @JsonKey(name: 'when_') required final DateTime when,
-      required final String instanceHost}) = _$_ModTransferCommunity;
+      required final String instanceHost}) = _$ModTransferCommunityImpl;
   const _ModTransferCommunity._() : super._();
 
   factory _ModTransferCommunity.fromJson(Map<String, dynamic> json) =
-      _$_ModTransferCommunity.fromJson;
+      _$ModTransferCommunityImpl.fromJson;
 
   @override
   int get id;
@@ -6601,8 +6619,8 @@ abstract class _ModTransferCommunity extends ModTransferCommunity {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_ModTransferCommunityCopyWith<_$_ModTransferCommunity> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ModTransferCommunityImplCopyWith<_$ModTransferCommunityImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ModAdd _$ModAddFromJson(Map<String, dynamic> json) {
@@ -6688,9 +6706,10 @@ class _$ModAddCopyWithImpl<$Res, $Val extends ModAdd>
 }
 
 /// @nodoc
-abstract class _$$_ModAddCopyWith<$Res> implements $ModAddCopyWith<$Res> {
-  factory _$$_ModAddCopyWith(_$_ModAdd value, $Res Function(_$_ModAdd) then) =
-      __$$_ModAddCopyWithImpl<$Res>;
+abstract class _$$ModAddImplCopyWith<$Res> implements $ModAddCopyWith<$Res> {
+  factory _$$ModAddImplCopyWith(
+          _$ModAddImpl value, $Res Function(_$ModAddImpl) then) =
+      __$$ModAddImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -6703,10 +6722,11 @@ abstract class _$$_ModAddCopyWith<$Res> implements $ModAddCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ModAddCopyWithImpl<$Res>
-    extends _$ModAddCopyWithImpl<$Res, _$_ModAdd>
-    implements _$$_ModAddCopyWith<$Res> {
-  __$$_ModAddCopyWithImpl(_$_ModAdd _value, $Res Function(_$_ModAdd) _then)
+class __$$ModAddImplCopyWithImpl<$Res>
+    extends _$ModAddCopyWithImpl<$Res, _$ModAddImpl>
+    implements _$$ModAddImplCopyWith<$Res> {
+  __$$ModAddImplCopyWithImpl(
+      _$ModAddImpl _value, $Res Function(_$ModAddImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -6719,7 +6739,7 @@ class __$$_ModAddCopyWithImpl<$Res>
     Object? when = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$_ModAdd(
+    return _then(_$ModAddImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -6751,8 +6771,8 @@ class __$$_ModAddCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ModAdd extends _ModAdd {
-  const _$_ModAdd(
+class _$ModAddImpl extends _ModAdd {
+  const _$ModAddImpl(
       {required this.id,
       required this.modPersonId,
       required this.otherPersonId,
@@ -6761,8 +6781,8 @@ class _$_ModAdd extends _ModAdd {
       required this.instanceHost})
       : super._();
 
-  factory _$_ModAdd.fromJson(Map<String, dynamic> json) =>
-      _$$_ModAddFromJson(json);
+  factory _$ModAddImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModAddImplFromJson(json);
 
   @override
   final int id;
@@ -6787,7 +6807,7 @@ class _$_ModAdd extends _ModAdd {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ModAdd &&
+            other is _$ModAddImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.modPersonId, modPersonId) ||
                 other.modPersonId == modPersonId) &&
@@ -6807,12 +6827,12 @@ class _$_ModAdd extends _ModAdd {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ModAddCopyWith<_$_ModAdd> get copyWith =>
-      __$$_ModAddCopyWithImpl<_$_ModAdd>(this, _$identity);
+  _$$ModAddImplCopyWith<_$ModAddImpl> get copyWith =>
+      __$$ModAddImplCopyWithImpl<_$ModAddImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModAddToJson(
+    return _$$ModAddImplToJson(
       this,
     );
   }
@@ -6825,10 +6845,10 @@ abstract class _ModAdd extends ModAdd {
       required final int otherPersonId,
       final bool? removed,
       @JsonKey(name: 'when_') required final DateTime when,
-      required final String instanceHost}) = _$_ModAdd;
+      required final String instanceHost}) = _$ModAddImpl;
   const _ModAdd._() : super._();
 
-  factory _ModAdd.fromJson(Map<String, dynamic> json) = _$_ModAdd.fromJson;
+  factory _ModAdd.fromJson(Map<String, dynamic> json) = _$ModAddImpl.fromJson;
 
   @override
   int get id;
@@ -6845,7 +6865,7 @@ abstract class _ModAdd extends ModAdd {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_ModAddCopyWith<_$_ModAdd> get copyWith =>
+  _$$ModAddImplCopyWith<_$ModAddImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -6934,11 +6954,11 @@ class _$AdminPurgeCommentCopyWithImpl<$Res, $Val extends AdminPurgeComment>
 }
 
 /// @nodoc
-abstract class _$$_AdminPurgeCommentCopyWith<$Res>
+abstract class _$$AdminPurgeCommentImplCopyWith<$Res>
     implements $AdminPurgeCommentCopyWith<$Res> {
-  factory _$$_AdminPurgeCommentCopyWith(_$_AdminPurgeComment value,
-          $Res Function(_$_AdminPurgeComment) then) =
-      __$$_AdminPurgeCommentCopyWithImpl<$Res>;
+  factory _$$AdminPurgeCommentImplCopyWith(_$AdminPurgeCommentImpl value,
+          $Res Function(_$AdminPurgeCommentImpl) then) =
+      __$$AdminPurgeCommentImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -6951,11 +6971,11 @@ abstract class _$$_AdminPurgeCommentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AdminPurgeCommentCopyWithImpl<$Res>
-    extends _$AdminPurgeCommentCopyWithImpl<$Res, _$_AdminPurgeComment>
-    implements _$$_AdminPurgeCommentCopyWith<$Res> {
-  __$$_AdminPurgeCommentCopyWithImpl(
-      _$_AdminPurgeComment _value, $Res Function(_$_AdminPurgeComment) _then)
+class __$$AdminPurgeCommentImplCopyWithImpl<$Res>
+    extends _$AdminPurgeCommentCopyWithImpl<$Res, _$AdminPurgeCommentImpl>
+    implements _$$AdminPurgeCommentImplCopyWith<$Res> {
+  __$$AdminPurgeCommentImplCopyWithImpl(_$AdminPurgeCommentImpl _value,
+      $Res Function(_$AdminPurgeCommentImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -6968,7 +6988,7 @@ class __$$_AdminPurgeCommentCopyWithImpl<$Res>
     Object? when = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$_AdminPurgeComment(
+    return _then(_$AdminPurgeCommentImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -7000,8 +7020,8 @@ class __$$_AdminPurgeCommentCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_AdminPurgeComment extends _AdminPurgeComment {
-  const _$_AdminPurgeComment(
+class _$AdminPurgeCommentImpl extends _AdminPurgeComment {
+  const _$AdminPurgeCommentImpl(
       {required this.id,
       required this.adminPersonId,
       required this.postId,
@@ -7010,8 +7030,8 @@ class _$_AdminPurgeComment extends _AdminPurgeComment {
       required this.instanceHost})
       : super._();
 
-  factory _$_AdminPurgeComment.fromJson(Map<String, dynamic> json) =>
-      _$$_AdminPurgeCommentFromJson(json);
+  factory _$AdminPurgeCommentImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AdminPurgeCommentImplFromJson(json);
 
   @override
   final int id;
@@ -7036,7 +7056,7 @@ class _$_AdminPurgeComment extends _AdminPurgeComment {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AdminPurgeComment &&
+            other is _$AdminPurgeCommentImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.adminPersonId, adminPersonId) ||
                 other.adminPersonId == adminPersonId) &&
@@ -7055,13 +7075,13 @@ class _$_AdminPurgeComment extends _AdminPurgeComment {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AdminPurgeCommentCopyWith<_$_AdminPurgeComment> get copyWith =>
-      __$$_AdminPurgeCommentCopyWithImpl<_$_AdminPurgeComment>(
+  _$$AdminPurgeCommentImplCopyWith<_$AdminPurgeCommentImpl> get copyWith =>
+      __$$AdminPurgeCommentImplCopyWithImpl<_$AdminPurgeCommentImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AdminPurgeCommentToJson(
+    return _$$AdminPurgeCommentImplToJson(
       this,
     );
   }
@@ -7074,11 +7094,11 @@ abstract class _AdminPurgeComment extends AdminPurgeComment {
       required final int postId,
       final String? reason,
       @JsonKey(name: 'when_') required final DateTime when,
-      required final String instanceHost}) = _$_AdminPurgeComment;
+      required final String instanceHost}) = _$AdminPurgeCommentImpl;
   const _AdminPurgeComment._() : super._();
 
   factory _AdminPurgeComment.fromJson(Map<String, dynamic> json) =
-      _$_AdminPurgeComment.fromJson;
+      _$AdminPurgeCommentImpl.fromJson;
 
   @override
   int get id;
@@ -7095,7 +7115,7 @@ abstract class _AdminPurgeComment extends AdminPurgeComment {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_AdminPurgeCommentCopyWith<_$_AdminPurgeComment> get copyWith =>
+  _$$AdminPurgeCommentImplCopyWith<_$AdminPurgeCommentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -7184,11 +7204,11 @@ class _$AdminPurgePostCopyWithImpl<$Res, $Val extends AdminPurgePost>
 }
 
 /// @nodoc
-abstract class _$$_AdminPurgePostCopyWith<$Res>
+abstract class _$$AdminPurgePostImplCopyWith<$Res>
     implements $AdminPurgePostCopyWith<$Res> {
-  factory _$$_AdminPurgePostCopyWith(
-          _$_AdminPurgePost value, $Res Function(_$_AdminPurgePost) then) =
-      __$$_AdminPurgePostCopyWithImpl<$Res>;
+  factory _$$AdminPurgePostImplCopyWith(_$AdminPurgePostImpl value,
+          $Res Function(_$AdminPurgePostImpl) then) =
+      __$$AdminPurgePostImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -7201,11 +7221,11 @@ abstract class _$$_AdminPurgePostCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AdminPurgePostCopyWithImpl<$Res>
-    extends _$AdminPurgePostCopyWithImpl<$Res, _$_AdminPurgePost>
-    implements _$$_AdminPurgePostCopyWith<$Res> {
-  __$$_AdminPurgePostCopyWithImpl(
-      _$_AdminPurgePost _value, $Res Function(_$_AdminPurgePost) _then)
+class __$$AdminPurgePostImplCopyWithImpl<$Res>
+    extends _$AdminPurgePostCopyWithImpl<$Res, _$AdminPurgePostImpl>
+    implements _$$AdminPurgePostImplCopyWith<$Res> {
+  __$$AdminPurgePostImplCopyWithImpl(
+      _$AdminPurgePostImpl _value, $Res Function(_$AdminPurgePostImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -7218,7 +7238,7 @@ class __$$_AdminPurgePostCopyWithImpl<$Res>
     Object? when = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$_AdminPurgePost(
+    return _then(_$AdminPurgePostImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -7250,8 +7270,8 @@ class __$$_AdminPurgePostCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_AdminPurgePost extends _AdminPurgePost {
-  const _$_AdminPurgePost(
+class _$AdminPurgePostImpl extends _AdminPurgePost {
+  const _$AdminPurgePostImpl(
       {required this.id,
       required this.adminPersonId,
       required this.communityId,
@@ -7260,8 +7280,8 @@ class _$_AdminPurgePost extends _AdminPurgePost {
       required this.instanceHost})
       : super._();
 
-  factory _$_AdminPurgePost.fromJson(Map<String, dynamic> json) =>
-      _$$_AdminPurgePostFromJson(json);
+  factory _$AdminPurgePostImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AdminPurgePostImplFromJson(json);
 
   @override
   final int id;
@@ -7286,7 +7306,7 @@ class _$_AdminPurgePost extends _AdminPurgePost {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AdminPurgePost &&
+            other is _$AdminPurgePostImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.adminPersonId, adminPersonId) ||
                 other.adminPersonId == adminPersonId) &&
@@ -7306,12 +7326,13 @@ class _$_AdminPurgePost extends _AdminPurgePost {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AdminPurgePostCopyWith<_$_AdminPurgePost> get copyWith =>
-      __$$_AdminPurgePostCopyWithImpl<_$_AdminPurgePost>(this, _$identity);
+  _$$AdminPurgePostImplCopyWith<_$AdminPurgePostImpl> get copyWith =>
+      __$$AdminPurgePostImplCopyWithImpl<_$AdminPurgePostImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AdminPurgePostToJson(
+    return _$$AdminPurgePostImplToJson(
       this,
     );
   }
@@ -7324,11 +7345,11 @@ abstract class _AdminPurgePost extends AdminPurgePost {
       required final int communityId,
       final String? reason,
       @JsonKey(name: 'when_') required final DateTime when,
-      required final String instanceHost}) = _$_AdminPurgePost;
+      required final String instanceHost}) = _$AdminPurgePostImpl;
   const _AdminPurgePost._() : super._();
 
   factory _AdminPurgePost.fromJson(Map<String, dynamic> json) =
-      _$_AdminPurgePost.fromJson;
+      _$AdminPurgePostImpl.fromJson;
 
   @override
   int get id;
@@ -7345,7 +7366,7 @@ abstract class _AdminPurgePost extends AdminPurgePost {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_AdminPurgePostCopyWith<_$_AdminPurgePost> get copyWith =>
+  _$$AdminPurgePostImplCopyWith<_$AdminPurgePostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -7427,11 +7448,11 @@ class _$AdminPurgePersonCopyWithImpl<$Res, $Val extends AdminPurgePerson>
 }
 
 /// @nodoc
-abstract class _$$_AdminPurgePersonCopyWith<$Res>
+abstract class _$$AdminPurgePersonImplCopyWith<$Res>
     implements $AdminPurgePersonCopyWith<$Res> {
-  factory _$$_AdminPurgePersonCopyWith(
-          _$_AdminPurgePerson value, $Res Function(_$_AdminPurgePerson) then) =
-      __$$_AdminPurgePersonCopyWithImpl<$Res>;
+  factory _$$AdminPurgePersonImplCopyWith(_$AdminPurgePersonImpl value,
+          $Res Function(_$AdminPurgePersonImpl) then) =
+      __$$AdminPurgePersonImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -7443,11 +7464,11 @@ abstract class _$$_AdminPurgePersonCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AdminPurgePersonCopyWithImpl<$Res>
-    extends _$AdminPurgePersonCopyWithImpl<$Res, _$_AdminPurgePerson>
-    implements _$$_AdminPurgePersonCopyWith<$Res> {
-  __$$_AdminPurgePersonCopyWithImpl(
-      _$_AdminPurgePerson _value, $Res Function(_$_AdminPurgePerson) _then)
+class __$$AdminPurgePersonImplCopyWithImpl<$Res>
+    extends _$AdminPurgePersonCopyWithImpl<$Res, _$AdminPurgePersonImpl>
+    implements _$$AdminPurgePersonImplCopyWith<$Res> {
+  __$$AdminPurgePersonImplCopyWithImpl(_$AdminPurgePersonImpl _value,
+      $Res Function(_$AdminPurgePersonImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -7459,7 +7480,7 @@ class __$$_AdminPurgePersonCopyWithImpl<$Res>
     Object? when = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$_AdminPurgePerson(
+    return _then(_$AdminPurgePersonImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -7487,8 +7508,8 @@ class __$$_AdminPurgePersonCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_AdminPurgePerson extends _AdminPurgePerson {
-  const _$_AdminPurgePerson(
+class _$AdminPurgePersonImpl extends _AdminPurgePerson {
+  const _$AdminPurgePersonImpl(
       {required this.id,
       required this.adminPersonId,
       this.reason,
@@ -7496,8 +7517,8 @@ class _$_AdminPurgePerson extends _AdminPurgePerson {
       required this.instanceHost})
       : super._();
 
-  factory _$_AdminPurgePerson.fromJson(Map<String, dynamic> json) =>
-      _$$_AdminPurgePersonFromJson(json);
+  factory _$AdminPurgePersonImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AdminPurgePersonImplFromJson(json);
 
   @override
   final int id;
@@ -7520,7 +7541,7 @@ class _$_AdminPurgePerson extends _AdminPurgePerson {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AdminPurgePerson &&
+            other is _$AdminPurgePersonImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.adminPersonId, adminPersonId) ||
                 other.adminPersonId == adminPersonId) &&
@@ -7538,12 +7559,13 @@ class _$_AdminPurgePerson extends _AdminPurgePerson {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AdminPurgePersonCopyWith<_$_AdminPurgePerson> get copyWith =>
-      __$$_AdminPurgePersonCopyWithImpl<_$_AdminPurgePerson>(this, _$identity);
+  _$$AdminPurgePersonImplCopyWith<_$AdminPurgePersonImpl> get copyWith =>
+      __$$AdminPurgePersonImplCopyWithImpl<_$AdminPurgePersonImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AdminPurgePersonToJson(
+    return _$$AdminPurgePersonImplToJson(
       this,
     );
   }
@@ -7555,11 +7577,11 @@ abstract class _AdminPurgePerson extends AdminPurgePerson {
       required final int adminPersonId,
       final String? reason,
       @JsonKey(name: 'when_') required final DateTime when,
-      required final String instanceHost}) = _$_AdminPurgePerson;
+      required final String instanceHost}) = _$AdminPurgePersonImpl;
   const _AdminPurgePerson._() : super._();
 
   factory _AdminPurgePerson.fromJson(Map<String, dynamic> json) =
-      _$_AdminPurgePerson.fromJson;
+      _$AdminPurgePersonImpl.fromJson;
 
   @override
   int get id;
@@ -7574,7 +7596,7 @@ abstract class _AdminPurgePerson extends AdminPurgePerson {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_AdminPurgePersonCopyWith<_$_AdminPurgePerson> get copyWith =>
+  _$$AdminPurgePersonImplCopyWith<_$AdminPurgePersonImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -7656,11 +7678,11 @@ class _$AdminPurgeCommunityCopyWithImpl<$Res, $Val extends AdminPurgeCommunity>
 }
 
 /// @nodoc
-abstract class _$$_AdminPurgeCommunityCopyWith<$Res>
+abstract class _$$AdminPurgeCommunityImplCopyWith<$Res>
     implements $AdminPurgeCommunityCopyWith<$Res> {
-  factory _$$_AdminPurgeCommunityCopyWith(_$_AdminPurgeCommunity value,
-          $Res Function(_$_AdminPurgeCommunity) then) =
-      __$$_AdminPurgeCommunityCopyWithImpl<$Res>;
+  factory _$$AdminPurgeCommunityImplCopyWith(_$AdminPurgeCommunityImpl value,
+          $Res Function(_$AdminPurgeCommunityImpl) then) =
+      __$$AdminPurgeCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -7672,11 +7694,11 @@ abstract class _$$_AdminPurgeCommunityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AdminPurgeCommunityCopyWithImpl<$Res>
-    extends _$AdminPurgeCommunityCopyWithImpl<$Res, _$_AdminPurgeCommunity>
-    implements _$$_AdminPurgeCommunityCopyWith<$Res> {
-  __$$_AdminPurgeCommunityCopyWithImpl(_$_AdminPurgeCommunity _value,
-      $Res Function(_$_AdminPurgeCommunity) _then)
+class __$$AdminPurgeCommunityImplCopyWithImpl<$Res>
+    extends _$AdminPurgeCommunityCopyWithImpl<$Res, _$AdminPurgeCommunityImpl>
+    implements _$$AdminPurgeCommunityImplCopyWith<$Res> {
+  __$$AdminPurgeCommunityImplCopyWithImpl(_$AdminPurgeCommunityImpl _value,
+      $Res Function(_$AdminPurgeCommunityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -7688,7 +7710,7 @@ class __$$_AdminPurgeCommunityCopyWithImpl<$Res>
     Object? when = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$_AdminPurgeCommunity(
+    return _then(_$AdminPurgeCommunityImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -7716,8 +7738,8 @@ class __$$_AdminPurgeCommunityCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_AdminPurgeCommunity extends _AdminPurgeCommunity {
-  const _$_AdminPurgeCommunity(
+class _$AdminPurgeCommunityImpl extends _AdminPurgeCommunity {
+  const _$AdminPurgeCommunityImpl(
       {required this.id,
       required this.adminPersonId,
       this.reason,
@@ -7725,8 +7747,8 @@ class _$_AdminPurgeCommunity extends _AdminPurgeCommunity {
       required this.instanceHost})
       : super._();
 
-  factory _$_AdminPurgeCommunity.fromJson(Map<String, dynamic> json) =>
-      _$$_AdminPurgeCommunityFromJson(json);
+  factory _$AdminPurgeCommunityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AdminPurgeCommunityImplFromJson(json);
 
   @override
   final int id;
@@ -7749,7 +7771,7 @@ class _$_AdminPurgeCommunity extends _AdminPurgeCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AdminPurgeCommunity &&
+            other is _$AdminPurgeCommunityImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.adminPersonId, adminPersonId) ||
                 other.adminPersonId == adminPersonId) &&
@@ -7767,13 +7789,13 @@ class _$_AdminPurgeCommunity extends _AdminPurgeCommunity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AdminPurgeCommunityCopyWith<_$_AdminPurgeCommunity> get copyWith =>
-      __$$_AdminPurgeCommunityCopyWithImpl<_$_AdminPurgeCommunity>(
+  _$$AdminPurgeCommunityImplCopyWith<_$AdminPurgeCommunityImpl> get copyWith =>
+      __$$AdminPurgeCommunityImplCopyWithImpl<_$AdminPurgeCommunityImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AdminPurgeCommunityToJson(
+    return _$$AdminPurgeCommunityImplToJson(
       this,
     );
   }
@@ -7785,11 +7807,11 @@ abstract class _AdminPurgeCommunity extends AdminPurgeCommunity {
       required final int adminPersonId,
       final String? reason,
       @JsonKey(name: 'when_') required final DateTime when,
-      required final String instanceHost}) = _$_AdminPurgeCommunity;
+      required final String instanceHost}) = _$AdminPurgeCommunityImpl;
   const _AdminPurgeCommunity._() : super._();
 
   factory _AdminPurgeCommunity.fromJson(Map<String, dynamic> json) =
-      _$_AdminPurgeCommunity.fromJson;
+      _$AdminPurgeCommunityImpl.fromJson;
 
   @override
   int get id;
@@ -7804,7 +7826,7 @@ abstract class _AdminPurgeCommunity extends AdminPurgeCommunity {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_AdminPurgeCommunityCopyWith<_$_AdminPurgeCommunity> get copyWith =>
+  _$$AdminPurgeCommunityImplCopyWith<_$AdminPurgeCommunityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -7948,11 +7970,11 @@ class _$CommunitySafeCopyWithImpl<$Res, $Val extends CommunitySafe>
 }
 
 /// @nodoc
-abstract class _$$_CommunitySafeCopyWith<$Res>
+abstract class _$$CommunitySafeImplCopyWith<$Res>
     implements $CommunitySafeCopyWith<$Res> {
-  factory _$$_CommunitySafeCopyWith(
-          _$_CommunitySafe value, $Res Function(_$_CommunitySafe) then) =
-      __$$_CommunitySafeCopyWithImpl<$Res>;
+  factory _$$CommunitySafeImplCopyWith(
+          _$CommunitySafeImpl value, $Res Function(_$CommunitySafeImpl) then) =
+      __$$CommunitySafeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -7973,11 +7995,11 @@ abstract class _$$_CommunitySafeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CommunitySafeCopyWithImpl<$Res>
-    extends _$CommunitySafeCopyWithImpl<$Res, _$_CommunitySafe>
-    implements _$$_CommunitySafeCopyWith<$Res> {
-  __$$_CommunitySafeCopyWithImpl(
-      _$_CommunitySafe _value, $Res Function(_$_CommunitySafe) _then)
+class __$$CommunitySafeImplCopyWithImpl<$Res>
+    extends _$CommunitySafeCopyWithImpl<$Res, _$CommunitySafeImpl>
+    implements _$$CommunitySafeImplCopyWith<$Res> {
+  __$$CommunitySafeImplCopyWithImpl(
+      _$CommunitySafeImpl _value, $Res Function(_$CommunitySafeImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -7998,7 +8020,7 @@ class __$$_CommunitySafeCopyWithImpl<$Res>
     Object? banner = freezed,
     Object? instanceHost = null,
   }) {
-    return _then(_$_CommunitySafe(
+    return _then(_$CommunitySafeImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -8062,8 +8084,8 @@ class __$$_CommunitySafeCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_CommunitySafe extends _CommunitySafe {
-  const _$_CommunitySafe(
+class _$CommunitySafeImpl extends _CommunitySafe {
+  const _$CommunitySafeImpl(
       {required this.id,
       required this.name,
       required this.title,
@@ -8080,8 +8102,8 @@ class _$_CommunitySafe extends _CommunitySafe {
       required this.instanceHost})
       : super._();
 
-  factory _$_CommunitySafe.fromJson(Map<String, dynamic> json) =>
-      _$$_CommunitySafeFromJson(json);
+  factory _$CommunitySafeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CommunitySafeImplFromJson(json);
 
   @override
   final int id;
@@ -8121,7 +8143,7 @@ class _$_CommunitySafe extends _CommunitySafe {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CommunitySafe &&
+            other is _$CommunitySafeImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.title, title) || other.title == title) &&
@@ -8163,12 +8185,12 @@ class _$_CommunitySafe extends _CommunitySafe {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CommunitySafeCopyWith<_$_CommunitySafe> get copyWith =>
-      __$$_CommunitySafeCopyWithImpl<_$_CommunitySafe>(this, _$identity);
+  _$$CommunitySafeImplCopyWith<_$CommunitySafeImpl> get copyWith =>
+      __$$CommunitySafeImplCopyWithImpl<_$CommunitySafeImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunitySafeToJson(
+    return _$$CommunitySafeImplToJson(
       this,
     );
   }
@@ -8189,11 +8211,11 @@ abstract class _CommunitySafe extends CommunitySafe {
       required final bool local,
       final String? icon,
       final String? banner,
-      required final String instanceHost}) = _$_CommunitySafe;
+      required final String instanceHost}) = _$CommunitySafeImpl;
   const _CommunitySafe._() : super._();
 
   factory _CommunitySafe.fromJson(Map<String, dynamic> json) =
-      _$_CommunitySafe.fromJson;
+      _$CommunitySafeImpl.fromJson;
 
   @override
   int get id;
@@ -8225,7 +8247,7 @@ abstract class _CommunitySafe extends CommunitySafe {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_CommunitySafeCopyWith<_$_CommunitySafe> get copyWith =>
+  _$$CommunitySafeImplCopyWith<_$CommunitySafeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -8341,11 +8363,11 @@ class _$CommentReportCopyWithImpl<$Res, $Val extends CommentReport>
 }
 
 /// @nodoc
-abstract class _$$_CommentReportCopyWith<$Res>
+abstract class _$$CommentReportImplCopyWith<$Res>
     implements $CommentReportCopyWith<$Res> {
-  factory _$$_CommentReportCopyWith(
-          _$_CommentReport value, $Res Function(_$_CommentReport) then) =
-      __$$_CommentReportCopyWithImpl<$Res>;
+  factory _$$CommentReportImplCopyWith(
+          _$CommentReportImpl value, $Res Function(_$CommentReportImpl) then) =
+      __$$CommentReportImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -8362,11 +8384,11 @@ abstract class _$$_CommentReportCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CommentReportCopyWithImpl<$Res>
-    extends _$CommentReportCopyWithImpl<$Res, _$_CommentReport>
-    implements _$$_CommentReportCopyWith<$Res> {
-  __$$_CommentReportCopyWithImpl(
-      _$_CommentReport _value, $Res Function(_$_CommentReport) _then)
+class __$$CommentReportImplCopyWithImpl<$Res>
+    extends _$CommentReportCopyWithImpl<$Res, _$CommentReportImpl>
+    implements _$$CommentReportImplCopyWith<$Res> {
+  __$$CommentReportImplCopyWithImpl(
+      _$CommentReportImpl _value, $Res Function(_$CommentReportImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -8383,7 +8405,7 @@ class __$$_CommentReportCopyWithImpl<$Res>
     Object? updated = freezed,
     Object? instanceHost = null,
   }) {
-    return _then(_$_CommentReport(
+    return _then(_$CommentReportImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -8431,8 +8453,8 @@ class __$$_CommentReportCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_CommentReport extends _CommentReport {
-  const _$_CommentReport(
+class _$CommentReportImpl extends _CommentReport {
+  const _$CommentReportImpl(
       {required this.id,
       required this.creatorId,
       required this.commentId,
@@ -8445,8 +8467,8 @@ class _$_CommentReport extends _CommentReport {
       required this.instanceHost})
       : super._();
 
-  factory _$_CommentReport.fromJson(Map<String, dynamic> json) =>
-      _$$_CommentReportFromJson(json);
+  factory _$CommentReportImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CommentReportImplFromJson(json);
 
   @override
   final int id;
@@ -8478,7 +8500,7 @@ class _$_CommentReport extends _CommentReport {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CommentReport &&
+            other is _$CommentReportImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.creatorId, creatorId) ||
                 other.creatorId == creatorId) &&
@@ -8516,12 +8538,12 @@ class _$_CommentReport extends _CommentReport {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CommentReportCopyWith<_$_CommentReport> get copyWith =>
-      __$$_CommentReportCopyWithImpl<_$_CommentReport>(this, _$identity);
+  _$$CommentReportImplCopyWith<_$CommentReportImpl> get copyWith =>
+      __$$CommentReportImplCopyWithImpl<_$CommentReportImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommentReportToJson(
+    return _$$CommentReportImplToJson(
       this,
     );
   }
@@ -8538,11 +8560,11 @@ abstract class _CommentReport extends CommentReport {
       final int? resolverId,
       required final DateTime published,
       final DateTime? updated,
-      required final String instanceHost}) = _$_CommentReport;
+      required final String instanceHost}) = _$CommentReportImpl;
   const _CommentReport._() : super._();
 
   factory _CommentReport.fromJson(Map<String, dynamic> json) =
-      _$_CommentReport.fromJson;
+      _$CommentReportImpl.fromJson;
 
   @override
   int get id;
@@ -8566,7 +8588,7 @@ abstract class _CommentReport extends CommentReport {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_CommentReportCopyWith<_$_CommentReport> get copyWith =>
+  _$$CommentReportImplCopyWith<_$CommentReportImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -8715,10 +8737,10 @@ class _$CommentCopyWithImpl<$Res, $Val extends Comment>
 }
 
 /// @nodoc
-abstract class _$$_CommentCopyWith<$Res> implements $CommentCopyWith<$Res> {
-  factory _$$_CommentCopyWith(
-          _$_Comment value, $Res Function(_$_Comment) then) =
-      __$$_CommentCopyWithImpl<$Res>;
+abstract class _$$CommentImplCopyWith<$Res> implements $CommentCopyWith<$Res> {
+  factory _$$CommentImplCopyWith(
+          _$CommentImpl value, $Res Function(_$CommentImpl) then) =
+      __$$CommentImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -8740,10 +8762,11 @@ abstract class _$$_CommentCopyWith<$Res> implements $CommentCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_CommentCopyWithImpl<$Res>
-    extends _$CommentCopyWithImpl<$Res, _$_Comment>
-    implements _$$_CommentCopyWith<$Res> {
-  __$$_CommentCopyWithImpl(_$_Comment _value, $Res Function(_$_Comment) _then)
+class __$$CommentImplCopyWithImpl<$Res>
+    extends _$CommentCopyWithImpl<$Res, _$CommentImpl>
+    implements _$$CommentImplCopyWith<$Res> {
+  __$$CommentImplCopyWithImpl(
+      _$CommentImpl _value, $Res Function(_$CommentImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -8765,7 +8788,7 @@ class __$$_CommentCopyWithImpl<$Res>
     Object? instanceHost = null,
     Object? path = null,
   }) {
-    return _then(_$_Comment(
+    return _then(_$CommentImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -8833,8 +8856,8 @@ class __$$_CommentCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_Comment extends _Comment {
-  const _$_Comment(
+class _$CommentImpl extends _Comment {
+  const _$CommentImpl(
       {required this.id,
       required this.creatorId,
       required this.postId,
@@ -8852,8 +8875,8 @@ class _$_Comment extends _Comment {
       required this.path})
       : super._();
 
-  factory _$_Comment.fromJson(Map<String, dynamic> json) =>
-      _$$_CommentFromJson(json);
+  factory _$CommentImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CommentImplFromJson(json);
 
   @override
   final int id;
@@ -8895,7 +8918,7 @@ class _$_Comment extends _Comment {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Comment &&
+            other is _$CommentImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.creatorId, creatorId) ||
                 other.creatorId == creatorId) &&
@@ -8942,12 +8965,12 @@ class _$_Comment extends _Comment {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CommentCopyWith<_$_Comment> get copyWith =>
-      __$$_CommentCopyWithImpl<_$_Comment>(this, _$identity);
+  _$$CommentImplCopyWith<_$CommentImpl> get copyWith =>
+      __$$CommentImplCopyWithImpl<_$CommentImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommentToJson(
+    return _$$CommentImplToJson(
       this,
     );
   }
@@ -8969,10 +8992,10 @@ abstract class _Comment extends Comment {
       required final bool local,
       required final int languageId,
       required final String instanceHost,
-      required final String path}) = _$_Comment;
+      required final String path}) = _$CommentImpl;
   const _Comment._() : super._();
 
-  factory _Comment.fromJson(Map<String, dynamic> json) = _$_Comment.fromJson;
+  factory _Comment.fromJson(Map<String, dynamic> json) = _$CommentImpl.fromJson;
 
   @override
   int get id;
@@ -9006,7 +9029,7 @@ abstract class _Comment extends Comment {
   String get path;
   @override
   @JsonKey(ignore: true)
-  _$$_CommentCopyWith<_$_Comment> get copyWith =>
+  _$$CommentImplCopyWith<_$CommentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -9094,11 +9117,11 @@ class _$CommentReplyCopyWithImpl<$Res, $Val extends CommentReply>
 }
 
 /// @nodoc
-abstract class _$$_CommentReplyCopyWith<$Res>
+abstract class _$$CommentReplyImplCopyWith<$Res>
     implements $CommentReplyCopyWith<$Res> {
-  factory _$$_CommentReplyCopyWith(
-          _$_CommentReply value, $Res Function(_$_CommentReply) then) =
-      __$$_CommentReplyCopyWithImpl<$Res>;
+  factory _$$CommentReplyImplCopyWith(
+          _$CommentReplyImpl value, $Res Function(_$CommentReplyImpl) then) =
+      __$$CommentReplyImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -9111,11 +9134,11 @@ abstract class _$$_CommentReplyCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CommentReplyCopyWithImpl<$Res>
-    extends _$CommentReplyCopyWithImpl<$Res, _$_CommentReply>
-    implements _$$_CommentReplyCopyWith<$Res> {
-  __$$_CommentReplyCopyWithImpl(
-      _$_CommentReply _value, $Res Function(_$_CommentReply) _then)
+class __$$CommentReplyImplCopyWithImpl<$Res>
+    extends _$CommentReplyCopyWithImpl<$Res, _$CommentReplyImpl>
+    implements _$$CommentReplyImplCopyWith<$Res> {
+  __$$CommentReplyImplCopyWithImpl(
+      _$CommentReplyImpl _value, $Res Function(_$CommentReplyImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -9128,7 +9151,7 @@ class __$$_CommentReplyCopyWithImpl<$Res>
     Object? published = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$_CommentReply(
+    return _then(_$CommentReplyImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -9160,8 +9183,8 @@ class __$$_CommentReplyCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_CommentReply extends _CommentReply {
-  const _$_CommentReply(
+class _$CommentReplyImpl extends _CommentReply {
+  const _$CommentReplyImpl(
       {required this.id,
       required this.recipientId,
       required this.commentId,
@@ -9170,8 +9193,8 @@ class _$_CommentReply extends _CommentReply {
       required this.instanceHost})
       : super._();
 
-  factory _$_CommentReply.fromJson(Map<String, dynamic> json) =>
-      _$$_CommentReplyFromJson(json);
+  factory _$CommentReplyImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CommentReplyImplFromJson(json);
 
   @override
   final int id;
@@ -9195,7 +9218,7 @@ class _$_CommentReply extends _CommentReply {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CommentReply &&
+            other is _$CommentReplyImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.recipientId, recipientId) ||
                 other.recipientId == recipientId) &&
@@ -9216,12 +9239,12 @@ class _$_CommentReply extends _CommentReply {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CommentReplyCopyWith<_$_CommentReply> get copyWith =>
-      __$$_CommentReplyCopyWithImpl<_$_CommentReply>(this, _$identity);
+  _$$CommentReplyImplCopyWith<_$CommentReplyImpl> get copyWith =>
+      __$$CommentReplyImplCopyWithImpl<_$CommentReplyImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommentReplyToJson(
+    return _$$CommentReplyImplToJson(
       this,
     );
   }
@@ -9234,11 +9257,11 @@ abstract class _CommentReply extends CommentReply {
       required final int commentId,
       required final bool read,
       required final DateTime published,
-      required final String instanceHost}) = _$_CommentReply;
+      required final String instanceHost}) = _$CommentReplyImpl;
   const _CommentReply._() : super._();
 
   factory _CommentReply.fromJson(Map<String, dynamic> json) =
-      _$_CommentReply.fromJson;
+      _$CommentReplyImpl.fromJson;
 
   @override
   int get id;
@@ -9254,7 +9277,7 @@ abstract class _CommentReply extends CommentReply {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_CommentReplyCopyWith<_$_CommentReply> get copyWith =>
+  _$$CommentReplyImplCopyWith<_$CommentReplyImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -9342,11 +9365,11 @@ class _$PersonMentionCopyWithImpl<$Res, $Val extends PersonMention>
 }
 
 /// @nodoc
-abstract class _$$_PersonMentionCopyWith<$Res>
+abstract class _$$PersonMentionImplCopyWith<$Res>
     implements $PersonMentionCopyWith<$Res> {
-  factory _$$_PersonMentionCopyWith(
-          _$_PersonMention value, $Res Function(_$_PersonMention) then) =
-      __$$_PersonMentionCopyWithImpl<$Res>;
+  factory _$$PersonMentionImplCopyWith(
+          _$PersonMentionImpl value, $Res Function(_$PersonMentionImpl) then) =
+      __$$PersonMentionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -9359,11 +9382,11 @@ abstract class _$$_PersonMentionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PersonMentionCopyWithImpl<$Res>
-    extends _$PersonMentionCopyWithImpl<$Res, _$_PersonMention>
-    implements _$$_PersonMentionCopyWith<$Res> {
-  __$$_PersonMentionCopyWithImpl(
-      _$_PersonMention _value, $Res Function(_$_PersonMention) _then)
+class __$$PersonMentionImplCopyWithImpl<$Res>
+    extends _$PersonMentionCopyWithImpl<$Res, _$PersonMentionImpl>
+    implements _$$PersonMentionImplCopyWith<$Res> {
+  __$$PersonMentionImplCopyWithImpl(
+      _$PersonMentionImpl _value, $Res Function(_$PersonMentionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -9376,7 +9399,7 @@ class __$$_PersonMentionCopyWithImpl<$Res>
     Object? published = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$_PersonMention(
+    return _then(_$PersonMentionImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -9408,8 +9431,8 @@ class __$$_PersonMentionCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_PersonMention extends _PersonMention {
-  const _$_PersonMention(
+class _$PersonMentionImpl extends _PersonMention {
+  const _$PersonMentionImpl(
       {required this.id,
       required this.recipientId,
       required this.commentId,
@@ -9418,8 +9441,8 @@ class _$_PersonMention extends _PersonMention {
       required this.instanceHost})
       : super._();
 
-  factory _$_PersonMention.fromJson(Map<String, dynamic> json) =>
-      _$$_PersonMentionFromJson(json);
+  factory _$PersonMentionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PersonMentionImplFromJson(json);
 
   @override
   final int id;
@@ -9443,7 +9466,7 @@ class _$_PersonMention extends _PersonMention {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PersonMention &&
+            other is _$PersonMentionImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.recipientId, recipientId) ||
                 other.recipientId == recipientId) &&
@@ -9464,12 +9487,12 @@ class _$_PersonMention extends _PersonMention {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PersonMentionCopyWith<_$_PersonMention> get copyWith =>
-      __$$_PersonMentionCopyWithImpl<_$_PersonMention>(this, _$identity);
+  _$$PersonMentionImplCopyWith<_$PersonMentionImpl> get copyWith =>
+      __$$PersonMentionImplCopyWithImpl<_$PersonMentionImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PersonMentionToJson(
+    return _$$PersonMentionImplToJson(
       this,
     );
   }
@@ -9482,11 +9505,11 @@ abstract class _PersonMention extends PersonMention {
       required final int commentId,
       required final bool read,
       required final DateTime published,
-      required final String instanceHost}) = _$_PersonMention;
+      required final String instanceHost}) = _$PersonMentionImpl;
   const _PersonMention._() : super._();
 
   factory _PersonMention.fromJson(Map<String, dynamic> json) =
-      _$_PersonMention.fromJson;
+      _$PersonMentionImpl.fromJson;
 
   @override
   int get id;
@@ -9502,7 +9525,7 @@ abstract class _PersonMention extends PersonMention {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_PersonMentionCopyWith<_$_PersonMention> get copyWith =>
+  _$$PersonMentionImplCopyWith<_$PersonMentionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -9599,11 +9622,12 @@ class _$RegistrationApplicationCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_RegistrationApplicationCopyWith<$Res>
+abstract class _$$RegistrationApplicationImplCopyWith<$Res>
     implements $RegistrationApplicationCopyWith<$Res> {
-  factory _$$_RegistrationApplicationCopyWith(_$_RegistrationApplication value,
-          $Res Function(_$_RegistrationApplication) then) =
-      __$$_RegistrationApplicationCopyWithImpl<$Res>;
+  factory _$$RegistrationApplicationImplCopyWith(
+          _$RegistrationApplicationImpl value,
+          $Res Function(_$RegistrationApplicationImpl) then) =
+      __$$RegistrationApplicationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -9617,12 +9641,13 @@ abstract class _$$_RegistrationApplicationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_RegistrationApplicationCopyWithImpl<$Res>
+class __$$RegistrationApplicationImplCopyWithImpl<$Res>
     extends _$RegistrationApplicationCopyWithImpl<$Res,
-        _$_RegistrationApplication>
-    implements _$$_RegistrationApplicationCopyWith<$Res> {
-  __$$_RegistrationApplicationCopyWithImpl(_$_RegistrationApplication _value,
-      $Res Function(_$_RegistrationApplication) _then)
+        _$RegistrationApplicationImpl>
+    implements _$$RegistrationApplicationImplCopyWith<$Res> {
+  __$$RegistrationApplicationImplCopyWithImpl(
+      _$RegistrationApplicationImpl _value,
+      $Res Function(_$RegistrationApplicationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -9636,7 +9661,7 @@ class __$$_RegistrationApplicationCopyWithImpl<$Res>
     Object? published = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$_RegistrationApplication(
+    return _then(_$RegistrationApplicationImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -9672,8 +9697,8 @@ class __$$_RegistrationApplicationCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_RegistrationApplication extends _RegistrationApplication {
-  const _$_RegistrationApplication(
+class _$RegistrationApplicationImpl extends _RegistrationApplication {
+  const _$RegistrationApplicationImpl(
       {required this.id,
       required this.localUserId,
       required this.answer,
@@ -9683,8 +9708,8 @@ class _$_RegistrationApplication extends _RegistrationApplication {
       required this.instanceHost})
       : super._();
 
-  factory _$_RegistrationApplication.fromJson(Map<String, dynamic> json) =>
-      _$$_RegistrationApplicationFromJson(json);
+  factory _$RegistrationApplicationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RegistrationApplicationImplFromJson(json);
 
   @override
   final int id;
@@ -9710,7 +9735,7 @@ class _$_RegistrationApplication extends _RegistrationApplication {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RegistrationApplication &&
+            other is _$RegistrationApplicationImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.localUserId, localUserId) ||
                 other.localUserId == localUserId) &&
@@ -9732,14 +9757,13 @@ class _$_RegistrationApplication extends _RegistrationApplication {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RegistrationApplicationCopyWith<_$_RegistrationApplication>
-      get copyWith =>
-          __$$_RegistrationApplicationCopyWithImpl<_$_RegistrationApplication>(
-              this, _$identity);
+  _$$RegistrationApplicationImplCopyWith<_$RegistrationApplicationImpl>
+      get copyWith => __$$RegistrationApplicationImplCopyWithImpl<
+          _$RegistrationApplicationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RegistrationApplicationToJson(
+    return _$$RegistrationApplicationImplToJson(
       this,
     );
   }
@@ -9753,11 +9777,11 @@ abstract class _RegistrationApplication extends RegistrationApplication {
       final int? adminId,
       final String? denyReason,
       required final DateTime published,
-      required final String instanceHost}) = _$_RegistrationApplication;
+      required final String instanceHost}) = _$RegistrationApplicationImpl;
   const _RegistrationApplication._() : super._();
 
   factory _RegistrationApplication.fromJson(Map<String, dynamic> json) =
-      _$_RegistrationApplication.fromJson;
+      _$RegistrationApplicationImpl.fromJson;
 
   @override
   int get id;
@@ -9775,6 +9799,6 @@ abstract class _RegistrationApplication extends RegistrationApplication {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_RegistrationApplicationCopyWith<_$_RegistrationApplication>
+  _$$RegistrationApplicationImplCopyWith<_$RegistrationApplicationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -14,7 +14,7 @@ part 'community.g.dart';
 @freezed
 class GetCommunity
     with _$GetCommunity
-    implements LemmyApiQuery<FullCommunityView> {
+    implements LemmyApiQuery<FullCommunityView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetCommunity({
     int? id,
@@ -39,7 +39,7 @@ class GetCommunity
 @freezed
 class CreateCommunity
     with _$CreateCommunity
-    implements LemmyApiQuery<CommunityView> {
+    implements LemmyApiQuery<CommunityView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory CreateCommunity({
     required String name,
@@ -68,7 +68,7 @@ class CreateCommunity
 @freezed
 class ListCommunities
     with _$ListCommunities
-    implements LemmyApiQuery<List<CommunityView>> {
+    implements LemmyApiQuery<List<CommunityView>>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ListCommunities({
     @JsonKey(name: 'type_') PostListingType? type,
@@ -97,7 +97,7 @@ class ListCommunities
 @freezed
 class BanFromCommunity
     with _$BanFromCommunity
-    implements LemmyApiQuery<BannedCommunityUser> {
+    implements LemmyApiQuery<BannedCommunityUser>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory BanFromCommunity({
     required int communityId,
@@ -126,7 +126,9 @@ class BanFromCommunity
 @freezed
 class AddModToCommunity
     with _$AddModToCommunity
-    implements LemmyApiQuery<List<CommunityModeratorView>> {
+    implements
+        LemmyApiQuery<List<CommunityModeratorView>>,
+        LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory AddModToCommunity({
     required int communityId,
@@ -154,7 +156,7 @@ class AddModToCommunity
 @freezed
 class EditCommunity
     with _$EditCommunity
-    implements LemmyApiQuery<CommunityView> {
+    implements LemmyApiQuery<CommunityView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory EditCommunity({
     required int communityId,
@@ -183,7 +185,7 @@ class EditCommunity
 @freezed
 class DeleteCommunity
     with _$DeleteCommunity
-    implements LemmyApiQuery<CommunityView> {
+    implements LemmyApiQuery<CommunityView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory DeleteCommunity({
     required int communityId,
@@ -208,7 +210,7 @@ class DeleteCommunity
 @freezed
 class RemoveCommunity
     with _$RemoveCommunity
-    implements LemmyApiQuery<CommunityView> {
+    implements LemmyApiQuery<CommunityView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory RemoveCommunity({
     required int communityId,
@@ -235,7 +237,7 @@ class RemoveCommunity
 @freezed
 class FollowCommunity
     with _$FollowCommunity
-    implements LemmyApiQuery<CommunityView> {
+    implements LemmyApiQuery<CommunityView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory FollowCommunity({
     required int communityId,
@@ -260,7 +262,7 @@ class FollowCommunity
 @freezed
 class TransferCommunity
     with _$TransferCommunity
-    implements LemmyApiQuery<FullCommunityView> {
+    implements LemmyApiQuery<FullCommunityView>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory TransferCommunity({
     required int communityId,
@@ -285,7 +287,7 @@ class TransferCommunity
 @freezed
 class BlockCommunity
     with _$BlockCommunity
-    implements LemmyApiQuery<BlockedCommunity> {
+    implements LemmyApiQuery<BlockedCommunity>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory BlockCommunity({
     required int communityId,

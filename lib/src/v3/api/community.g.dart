@@ -6,14 +6,14 @@ part of 'community.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetCommunity _$$_GetCommunityFromJson(Map<String, dynamic> json) =>
-    _$_GetCommunity(
+_$GetCommunityImpl _$$GetCommunityImplFromJson(Map<String, dynamic> json) =>
+    _$GetCommunityImpl(
       id: json['id'] as int?,
       name: json['name'] as String?,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_GetCommunityToJson(_$_GetCommunity instance) {
+Map<String, dynamic> _$$GetCommunityImplToJson(_$GetCommunityImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -28,8 +28,9 @@ Map<String, dynamic> _$$_GetCommunityToJson(_$_GetCommunity instance) {
   return val;
 }
 
-_$_CreateCommunity _$$_CreateCommunityFromJson(Map<String, dynamic> json) =>
-    _$_CreateCommunity(
+_$CreateCommunityImpl _$$CreateCommunityImplFromJson(
+        Map<String, dynamic> json) =>
+    _$CreateCommunityImpl(
       name: json['name'] as String,
       title: json['title'] as String,
       description: json['description'] as String?,
@@ -39,7 +40,8 @@ _$_CreateCommunity _$$_CreateCommunityFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String,
     );
 
-Map<String, dynamic> _$$_CreateCommunityToJson(_$_CreateCommunity instance) {
+Map<String, dynamic> _$$CreateCommunityImplToJson(
+    _$CreateCommunityImpl instance) {
   final val = <String, dynamic>{
     'name': instance.name,
     'title': instance.title,
@@ -59,8 +61,9 @@ Map<String, dynamic> _$$_CreateCommunityToJson(_$_CreateCommunity instance) {
   return val;
 }
 
-_$_ListCommunities _$$_ListCommunitiesFromJson(Map<String, dynamic> json) =>
-    _$_ListCommunities(
+_$ListCommunitiesImpl _$$ListCommunitiesImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ListCommunitiesImpl(
       type: json['type_'] == null
           ? null
           : PostListingType.fromJson(json['type_']),
@@ -70,7 +73,8 @@ _$_ListCommunities _$$_ListCommunitiesFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_ListCommunitiesToJson(_$_ListCommunities instance) {
+Map<String, dynamic> _$$ListCommunitiesImplToJson(
+    _$ListCommunitiesImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -87,8 +91,9 @@ Map<String, dynamic> _$$_ListCommunitiesToJson(_$_ListCommunities instance) {
   return val;
 }
 
-_$_BanFromCommunity _$$_BanFromCommunityFromJson(Map<String, dynamic> json) =>
-    _$_BanFromCommunity(
+_$BanFromCommunityImpl _$$BanFromCommunityImplFromJson(
+        Map<String, dynamic> json) =>
+    _$BanFromCommunityImpl(
       communityId: json['community_id'] as int,
       personId: json['person_id'] as int,
       ban: json['ban'] as bool,
@@ -98,7 +103,8 @@ _$_BanFromCommunity _$$_BanFromCommunityFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String,
     );
 
-Map<String, dynamic> _$$_BanFromCommunityToJson(_$_BanFromCommunity instance) {
+Map<String, dynamic> _$$BanFromCommunityImplToJson(
+    _$BanFromCommunityImpl instance) {
   final val = <String, dynamic>{
     'community_id': instance.communityId,
     'person_id': instance.personId,
@@ -118,16 +124,17 @@ Map<String, dynamic> _$$_BanFromCommunityToJson(_$_BanFromCommunity instance) {
   return val;
 }
 
-_$_AddModToCommunity _$$_AddModToCommunityFromJson(Map<String, dynamic> json) =>
-    _$_AddModToCommunity(
+_$AddModToCommunityImpl _$$AddModToCommunityImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AddModToCommunityImpl(
       communityId: json['community_id'] as int,
       personId: json['person_id'] as int,
       added: json['added'] as bool,
       auth: json['auth'] as String,
     );
 
-Map<String, dynamic> _$$_AddModToCommunityToJson(
-        _$_AddModToCommunity instance) =>
+Map<String, dynamic> _$$AddModToCommunityImplToJson(
+        _$AddModToCommunityImpl instance) =>
     <String, dynamic>{
       'community_id': instance.communityId,
       'person_id': instance.personId,
@@ -135,8 +142,8 @@ Map<String, dynamic> _$$_AddModToCommunityToJson(
       'auth': instance.auth,
     };
 
-_$_EditCommunity _$$_EditCommunityFromJson(Map<String, dynamic> json) =>
-    _$_EditCommunity(
+_$EditCommunityImpl _$$EditCommunityImplFromJson(Map<String, dynamic> json) =>
+    _$EditCommunityImpl(
       communityId: json['community_id'] as int,
       title: json['title'] as String?,
       description: json['description'] as String?,
@@ -146,7 +153,7 @@ _$_EditCommunity _$$_EditCommunityFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String,
     );
 
-Map<String, dynamic> _$$_EditCommunityToJson(_$_EditCommunity instance) {
+Map<String, dynamic> _$$EditCommunityImplToJson(_$EditCommunityImpl instance) {
   final val = <String, dynamic>{
     'community_id': instance.communityId,
   };
@@ -166,22 +173,25 @@ Map<String, dynamic> _$$_EditCommunityToJson(_$_EditCommunity instance) {
   return val;
 }
 
-_$_DeleteCommunity _$$_DeleteCommunityFromJson(Map<String, dynamic> json) =>
-    _$_DeleteCommunity(
+_$DeleteCommunityImpl _$$DeleteCommunityImplFromJson(
+        Map<String, dynamic> json) =>
+    _$DeleteCommunityImpl(
       communityId: json['community_id'] as int,
       deleted: json['deleted'] as bool,
       auth: json['auth'] as String,
     );
 
-Map<String, dynamic> _$$_DeleteCommunityToJson(_$_DeleteCommunity instance) =>
+Map<String, dynamic> _$$DeleteCommunityImplToJson(
+        _$DeleteCommunityImpl instance) =>
     <String, dynamic>{
       'community_id': instance.communityId,
       'deleted': instance.deleted,
       'auth': instance.auth,
     };
 
-_$_RemoveCommunity _$$_RemoveCommunityFromJson(Map<String, dynamic> json) =>
-    _$_RemoveCommunity(
+_$RemoveCommunityImpl _$$RemoveCommunityImplFromJson(
+        Map<String, dynamic> json) =>
+    _$RemoveCommunityImpl(
       communityId: json['community_id'] as int,
       removed: json['removed'] as bool,
       reason: json['reason'] as String?,
@@ -189,7 +199,8 @@ _$_RemoveCommunity _$$_RemoveCommunityFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String,
     );
 
-Map<String, dynamic> _$$_RemoveCommunityToJson(_$_RemoveCommunity instance) {
+Map<String, dynamic> _$$RemoveCommunityImplToJson(
+    _$RemoveCommunityImpl instance) {
   final val = <String, dynamic>{
     'community_id': instance.communityId,
     'removed': instance.removed,
@@ -207,43 +218,47 @@ Map<String, dynamic> _$$_RemoveCommunityToJson(_$_RemoveCommunity instance) {
   return val;
 }
 
-_$_FollowCommunity _$$_FollowCommunityFromJson(Map<String, dynamic> json) =>
-    _$_FollowCommunity(
+_$FollowCommunityImpl _$$FollowCommunityImplFromJson(
+        Map<String, dynamic> json) =>
+    _$FollowCommunityImpl(
       communityId: json['community_id'] as int,
       follow: json['follow'] as bool,
       auth: json['auth'] as String,
     );
 
-Map<String, dynamic> _$$_FollowCommunityToJson(_$_FollowCommunity instance) =>
+Map<String, dynamic> _$$FollowCommunityImplToJson(
+        _$FollowCommunityImpl instance) =>
     <String, dynamic>{
       'community_id': instance.communityId,
       'follow': instance.follow,
       'auth': instance.auth,
     };
 
-_$_TransferCommunity _$$_TransferCommunityFromJson(Map<String, dynamic> json) =>
-    _$_TransferCommunity(
+_$TransferCommunityImpl _$$TransferCommunityImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TransferCommunityImpl(
       communityId: json['community_id'] as int,
       personId: json['person_id'] as int,
       auth: json['auth'] as String,
     );
 
-Map<String, dynamic> _$$_TransferCommunityToJson(
-        _$_TransferCommunity instance) =>
+Map<String, dynamic> _$$TransferCommunityImplToJson(
+        _$TransferCommunityImpl instance) =>
     <String, dynamic>{
       'community_id': instance.communityId,
       'person_id': instance.personId,
       'auth': instance.auth,
     };
 
-_$_BlockCommunity _$$_BlockCommunityFromJson(Map<String, dynamic> json) =>
-    _$_BlockCommunity(
+_$BlockCommunityImpl _$$BlockCommunityImplFromJson(Map<String, dynamic> json) =>
+    _$BlockCommunityImpl(
       communityId: json['community_id'] as int,
       block: json['block'] as bool,
       auth: json['auth'] as String,
     );
 
-Map<String, dynamic> _$$_BlockCommunityToJson(_$_BlockCommunity instance) =>
+Map<String, dynamic> _$$BlockCommunityImplToJson(
+        _$BlockCommunityImpl instance) =>
     <String, dynamic>{
       'community_id': instance.communityId,
       'block': instance.block,
