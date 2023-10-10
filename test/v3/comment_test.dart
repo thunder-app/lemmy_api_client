@@ -129,7 +129,7 @@ void main() {
 
         test(
           'correctly fetches with auth',
-              () => run(
+          () => run(
             GetComment(
               id: goodMyCommentId,
               auth: goodAuth,

@@ -74,22 +74,22 @@ class _$GetCommunityCopyWithImpl<$Res, $Val extends GetCommunity>
 }
 
 /// @nodoc
-abstract class _$$GetCommunityImplCopyWith<$Res>
+abstract class _$$_GetCommunityCopyWith<$Res>
     implements $GetCommunityCopyWith<$Res> {
-  factory _$$GetCommunityImplCopyWith(
-          _$GetCommunityImpl value, $Res Function(_$GetCommunityImpl) then) =
-      __$$GetCommunityImplCopyWithImpl<$Res>;
+  factory _$$_GetCommunityCopyWith(
+          _$_GetCommunity value, $Res Function(_$_GetCommunity) then) =
+      __$$_GetCommunityCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? id, String? name, String? auth});
 }
 
 /// @nodoc
-class __$$GetCommunityImplCopyWithImpl<$Res>
-    extends _$GetCommunityCopyWithImpl<$Res, _$GetCommunityImpl>
-    implements _$$GetCommunityImplCopyWith<$Res> {
-  __$$GetCommunityImplCopyWithImpl(
-      _$GetCommunityImpl _value, $Res Function(_$GetCommunityImpl) _then)
+class __$$_GetCommunityCopyWithImpl<$Res>
+    extends _$GetCommunityCopyWithImpl<$Res, _$_GetCommunity>
+    implements _$$_GetCommunityCopyWith<$Res> {
+  __$$_GetCommunityCopyWithImpl(
+      _$_GetCommunity _value, $Res Function(_$_GetCommunity) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -99,7 +99,7 @@ class __$$GetCommunityImplCopyWithImpl<$Res>
     Object? name = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_$GetCommunityImpl(
+    return _then(_$_GetCommunity(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -119,11 +119,11 @@ class __$$GetCommunityImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$GetCommunityImpl extends _GetCommunity {
-  const _$GetCommunityImpl({this.id, this.name, this.auth}) : super._();
+class _$_GetCommunity extends _GetCommunity {
+  const _$_GetCommunity({this.id, this.name, this.auth}) : super._();
 
-  factory _$GetCommunityImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GetCommunityImplFromJson(json);
+  factory _$_GetCommunity.fromJson(Map<String, dynamic> json) =>
+      _$$_GetCommunityFromJson(json);
 
   @override
   final int? id;
@@ -141,7 +141,7 @@ class _$GetCommunityImpl extends _GetCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GetCommunityImpl &&
+            other is _$_GetCommunity &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.auth, auth) || other.auth == auth));
@@ -154,12 +154,12 @@ class _$GetCommunityImpl extends _GetCommunity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetCommunityImplCopyWith<_$GetCommunityImpl> get copyWith =>
-      __$$GetCommunityImplCopyWithImpl<_$GetCommunityImpl>(this, _$identity);
+  _$$_GetCommunityCopyWith<_$_GetCommunity> get copyWith =>
+      __$$_GetCommunityCopyWithImpl<_$_GetCommunity>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetCommunityImplToJson(
+    return _$$_GetCommunityToJson(
       this,
     );
   }
@@ -169,11 +169,11 @@ abstract class _GetCommunity extends GetCommunity {
   const factory _GetCommunity(
       {final int? id,
       final String? name,
-      final String? auth}) = _$GetCommunityImpl;
+      final String? auth}) = _$_GetCommunity;
   const _GetCommunity._() : super._();
 
   factory _GetCommunity.fromJson(Map<String, dynamic> json) =
-      _$GetCommunityImpl.fromJson;
+      _$_GetCommunity.fromJson;
 
   @override
   int? get id;
@@ -183,7 +183,7 @@ abstract class _GetCommunity extends GetCommunity {
   String? get auth;
   @override
   @JsonKey(ignore: true)
-  _$$GetCommunityImplCopyWith<_$GetCommunityImpl> get copyWith =>
+  _$$_GetCommunityCopyWith<_$_GetCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -278,11 +278,11 @@ class _$CreateCommunityCopyWithImpl<$Res, $Val extends CreateCommunity>
 }
 
 /// @nodoc
-abstract class _$$CreateCommunityImplCopyWith<$Res>
+abstract class _$$_CreateCommunityCopyWith<$Res>
     implements $CreateCommunityCopyWith<$Res> {
-  factory _$$CreateCommunityImplCopyWith(_$CreateCommunityImpl value,
-          $Res Function(_$CreateCommunityImpl) then) =
-      __$$CreateCommunityImplCopyWithImpl<$Res>;
+  factory _$$_CreateCommunityCopyWith(
+          _$_CreateCommunity value, $Res Function(_$_CreateCommunity) then) =
+      __$$_CreateCommunityCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -296,11 +296,11 @@ abstract class _$$CreateCommunityImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CreateCommunityImplCopyWithImpl<$Res>
-    extends _$CreateCommunityCopyWithImpl<$Res, _$CreateCommunityImpl>
-    implements _$$CreateCommunityImplCopyWith<$Res> {
-  __$$CreateCommunityImplCopyWithImpl(
-      _$CreateCommunityImpl _value, $Res Function(_$CreateCommunityImpl) _then)
+class __$$_CreateCommunityCopyWithImpl<$Res>
+    extends _$CreateCommunityCopyWithImpl<$Res, _$_CreateCommunity>
+    implements _$$_CreateCommunityCopyWith<$Res> {
+  __$$_CreateCommunityCopyWithImpl(
+      _$_CreateCommunity _value, $Res Function(_$_CreateCommunity) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -314,7 +314,7 @@ class __$$CreateCommunityImplCopyWithImpl<$Res>
     Object? nsfw = freezed,
     Object? auth = null,
   }) {
-    return _then(_$CreateCommunityImpl(
+    return _then(_$_CreateCommunity(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -350,8 +350,8 @@ class __$$CreateCommunityImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$CreateCommunityImpl extends _CreateCommunity {
-  const _$CreateCommunityImpl(
+class _$_CreateCommunity extends _CreateCommunity {
+  const _$_CreateCommunity(
       {required this.name,
       required this.title,
       this.description,
@@ -361,8 +361,8 @@ class _$CreateCommunityImpl extends _CreateCommunity {
       required this.auth})
       : super._();
 
-  factory _$CreateCommunityImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CreateCommunityImplFromJson(json);
+  factory _$_CreateCommunity.fromJson(Map<String, dynamic> json) =>
+      _$$_CreateCommunityFromJson(json);
 
   @override
   final String name;
@@ -388,7 +388,7 @@ class _$CreateCommunityImpl extends _CreateCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CreateCommunityImpl &&
+            other is _$_CreateCommunity &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.description, description) ||
@@ -407,13 +407,12 @@ class _$CreateCommunityImpl extends _CreateCommunity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CreateCommunityImplCopyWith<_$CreateCommunityImpl> get copyWith =>
-      __$$CreateCommunityImplCopyWithImpl<_$CreateCommunityImpl>(
-          this, _$identity);
+  _$$_CreateCommunityCopyWith<_$_CreateCommunity> get copyWith =>
+      __$$_CreateCommunityCopyWithImpl<_$_CreateCommunity>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CreateCommunityImplToJson(
+    return _$$_CreateCommunityToJson(
       this,
     );
   }
@@ -427,11 +426,11 @@ abstract class _CreateCommunity extends CreateCommunity {
       final String? icon,
       final String? banner,
       final bool? nsfw,
-      required final String auth}) = _$CreateCommunityImpl;
+      required final String auth}) = _$_CreateCommunity;
   const _CreateCommunity._() : super._();
 
   factory _CreateCommunity.fromJson(Map<String, dynamic> json) =
-      _$CreateCommunityImpl.fromJson;
+      _$_CreateCommunity.fromJson;
 
   @override
   String get name;
@@ -449,7 +448,7 @@ abstract class _CreateCommunity extends CreateCommunity {
   String get auth;
   @override
   @JsonKey(ignore: true)
-  _$$CreateCommunityImplCopyWith<_$CreateCommunityImpl> get copyWith =>
+  _$$_CreateCommunityCopyWith<_$_CreateCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -531,11 +530,11 @@ class _$ListCommunitiesCopyWithImpl<$Res, $Val extends ListCommunities>
 }
 
 /// @nodoc
-abstract class _$$ListCommunitiesImplCopyWith<$Res>
+abstract class _$$_ListCommunitiesCopyWith<$Res>
     implements $ListCommunitiesCopyWith<$Res> {
-  factory _$$ListCommunitiesImplCopyWith(_$ListCommunitiesImpl value,
-          $Res Function(_$ListCommunitiesImpl) then) =
-      __$$ListCommunitiesImplCopyWithImpl<$Res>;
+  factory _$$_ListCommunitiesCopyWith(
+          _$_ListCommunities value, $Res Function(_$_ListCommunities) then) =
+      __$$_ListCommunitiesCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -547,11 +546,11 @@ abstract class _$$ListCommunitiesImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ListCommunitiesImplCopyWithImpl<$Res>
-    extends _$ListCommunitiesCopyWithImpl<$Res, _$ListCommunitiesImpl>
-    implements _$$ListCommunitiesImplCopyWith<$Res> {
-  __$$ListCommunitiesImplCopyWithImpl(
-      _$ListCommunitiesImpl _value, $Res Function(_$ListCommunitiesImpl) _then)
+class __$$_ListCommunitiesCopyWithImpl<$Res>
+    extends _$ListCommunitiesCopyWithImpl<$Res, _$_ListCommunities>
+    implements _$$_ListCommunitiesCopyWith<$Res> {
+  __$$_ListCommunitiesCopyWithImpl(
+      _$_ListCommunities _value, $Res Function(_$_ListCommunities) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -563,7 +562,7 @@ class __$$ListCommunitiesImplCopyWithImpl<$Res>
     Object? limit = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_$ListCommunitiesImpl(
+    return _then(_$_ListCommunities(
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -591,8 +590,8 @@ class __$$ListCommunitiesImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$ListCommunitiesImpl extends _ListCommunities {
-  const _$ListCommunitiesImpl(
+class _$_ListCommunities extends _ListCommunities {
+  const _$_ListCommunities(
       {@JsonKey(name: 'type_') this.type,
       this.sort,
       this.page,
@@ -600,8 +599,8 @@ class _$ListCommunitiesImpl extends _ListCommunities {
       this.auth})
       : super._();
 
-  factory _$ListCommunitiesImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ListCommunitiesImplFromJson(json);
+  factory _$_ListCommunities.fromJson(Map<String, dynamic> json) =>
+      _$$_ListCommunitiesFromJson(json);
 
   @override
   @JsonKey(name: 'type_')
@@ -624,7 +623,7 @@ class _$ListCommunitiesImpl extends _ListCommunities {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ListCommunitiesImpl &&
+            other is _$_ListCommunities &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.sort, sort) || other.sort == sort) &&
             (identical(other.page, page) || other.page == page) &&
@@ -639,13 +638,12 @@ class _$ListCommunitiesImpl extends _ListCommunities {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ListCommunitiesImplCopyWith<_$ListCommunitiesImpl> get copyWith =>
-      __$$ListCommunitiesImplCopyWithImpl<_$ListCommunitiesImpl>(
-          this, _$identity);
+  _$$_ListCommunitiesCopyWith<_$_ListCommunities> get copyWith =>
+      __$$_ListCommunitiesCopyWithImpl<_$_ListCommunities>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ListCommunitiesImplToJson(
+    return _$$_ListCommunitiesToJson(
       this,
     );
   }
@@ -657,11 +655,11 @@ abstract class _ListCommunities extends ListCommunities {
       final SortType? sort,
       final int? page,
       final int? limit,
-      final String? auth}) = _$ListCommunitiesImpl;
+      final String? auth}) = _$_ListCommunities;
   const _ListCommunities._() : super._();
 
   factory _ListCommunities.fromJson(Map<String, dynamic> json) =
-      _$ListCommunitiesImpl.fromJson;
+      _$_ListCommunities.fromJson;
 
   @override
   @JsonKey(name: 'type_')
@@ -676,7 +674,7 @@ abstract class _ListCommunities extends ListCommunities {
   String? get auth;
   @override
   @JsonKey(ignore: true)
-  _$$ListCommunitiesImplCopyWith<_$ListCommunitiesImpl> get copyWith =>
+  _$$_ListCommunitiesCopyWith<_$_ListCommunities> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -771,11 +769,11 @@ class _$BanFromCommunityCopyWithImpl<$Res, $Val extends BanFromCommunity>
 }
 
 /// @nodoc
-abstract class _$$BanFromCommunityImplCopyWith<$Res>
+abstract class _$$_BanFromCommunityCopyWith<$Res>
     implements $BanFromCommunityCopyWith<$Res> {
-  factory _$$BanFromCommunityImplCopyWith(_$BanFromCommunityImpl value,
-          $Res Function(_$BanFromCommunityImpl) then) =
-      __$$BanFromCommunityImplCopyWithImpl<$Res>;
+  factory _$$_BanFromCommunityCopyWith(
+          _$_BanFromCommunity value, $Res Function(_$_BanFromCommunity) then) =
+      __$$_BanFromCommunityCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -789,11 +787,11 @@ abstract class _$$BanFromCommunityImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$BanFromCommunityImplCopyWithImpl<$Res>
-    extends _$BanFromCommunityCopyWithImpl<$Res, _$BanFromCommunityImpl>
-    implements _$$BanFromCommunityImplCopyWith<$Res> {
-  __$$BanFromCommunityImplCopyWithImpl(_$BanFromCommunityImpl _value,
-      $Res Function(_$BanFromCommunityImpl) _then)
+class __$$_BanFromCommunityCopyWithImpl<$Res>
+    extends _$BanFromCommunityCopyWithImpl<$Res, _$_BanFromCommunity>
+    implements _$$_BanFromCommunityCopyWith<$Res> {
+  __$$_BanFromCommunityCopyWithImpl(
+      _$_BanFromCommunity _value, $Res Function(_$_BanFromCommunity) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -807,7 +805,7 @@ class __$$BanFromCommunityImplCopyWithImpl<$Res>
     Object? expires = freezed,
     Object? auth = null,
   }) {
-    return _then(_$BanFromCommunityImpl(
+    return _then(_$_BanFromCommunity(
       communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -843,8 +841,8 @@ class __$$BanFromCommunityImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$BanFromCommunityImpl extends _BanFromCommunity {
-  const _$BanFromCommunityImpl(
+class _$_BanFromCommunity extends _BanFromCommunity {
+  const _$_BanFromCommunity(
       {required this.communityId,
       required this.personId,
       required this.ban,
@@ -854,8 +852,8 @@ class _$BanFromCommunityImpl extends _BanFromCommunity {
       required this.auth})
       : super._();
 
-  factory _$BanFromCommunityImpl.fromJson(Map<String, dynamic> json) =>
-      _$$BanFromCommunityImplFromJson(json);
+  factory _$_BanFromCommunity.fromJson(Map<String, dynamic> json) =>
+      _$$_BanFromCommunityFromJson(json);
 
   @override
   final int communityId;
@@ -881,7 +879,7 @@ class _$BanFromCommunityImpl extends _BanFromCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$BanFromCommunityImpl &&
+            other is _$_BanFromCommunity &&
             (identical(other.communityId, communityId) ||
                 other.communityId == communityId) &&
             (identical(other.personId, personId) ||
@@ -902,13 +900,12 @@ class _$BanFromCommunityImpl extends _BanFromCommunity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$BanFromCommunityImplCopyWith<_$BanFromCommunityImpl> get copyWith =>
-      __$$BanFromCommunityImplCopyWithImpl<_$BanFromCommunityImpl>(
-          this, _$identity);
+  _$$_BanFromCommunityCopyWith<_$_BanFromCommunity> get copyWith =>
+      __$$_BanFromCommunityCopyWithImpl<_$_BanFromCommunity>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BanFromCommunityImplToJson(
+    return _$$_BanFromCommunityToJson(
       this,
     );
   }
@@ -922,11 +919,11 @@ abstract class _BanFromCommunity extends BanFromCommunity {
       final bool? removeData,
       final String? reason,
       final int? expires,
-      required final String auth}) = _$BanFromCommunityImpl;
+      required final String auth}) = _$_BanFromCommunity;
   const _BanFromCommunity._() : super._();
 
   factory _BanFromCommunity.fromJson(Map<String, dynamic> json) =
-      _$BanFromCommunityImpl.fromJson;
+      _$_BanFromCommunity.fromJson;
 
   @override
   int get communityId;
@@ -944,7 +941,7 @@ abstract class _BanFromCommunity extends BanFromCommunity {
   String get auth;
   @override
   @JsonKey(ignore: true)
-  _$$BanFromCommunityImplCopyWith<_$BanFromCommunityImpl> get copyWith =>
+  _$$_BanFromCommunityCopyWith<_$_BanFromCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1014,22 +1011,22 @@ class _$AddModToCommunityCopyWithImpl<$Res, $Val extends AddModToCommunity>
 }
 
 /// @nodoc
-abstract class _$$AddModToCommunityImplCopyWith<$Res>
+abstract class _$$_AddModToCommunityCopyWith<$Res>
     implements $AddModToCommunityCopyWith<$Res> {
-  factory _$$AddModToCommunityImplCopyWith(_$AddModToCommunityImpl value,
-          $Res Function(_$AddModToCommunityImpl) then) =
-      __$$AddModToCommunityImplCopyWithImpl<$Res>;
+  factory _$$_AddModToCommunityCopyWith(_$_AddModToCommunity value,
+          $Res Function(_$_AddModToCommunity) then) =
+      __$$_AddModToCommunityCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int communityId, int personId, bool added, String auth});
 }
 
 /// @nodoc
-class __$$AddModToCommunityImplCopyWithImpl<$Res>
-    extends _$AddModToCommunityCopyWithImpl<$Res, _$AddModToCommunityImpl>
-    implements _$$AddModToCommunityImplCopyWith<$Res> {
-  __$$AddModToCommunityImplCopyWithImpl(_$AddModToCommunityImpl _value,
-      $Res Function(_$AddModToCommunityImpl) _then)
+class __$$_AddModToCommunityCopyWithImpl<$Res>
+    extends _$AddModToCommunityCopyWithImpl<$Res, _$_AddModToCommunity>
+    implements _$$_AddModToCommunityCopyWith<$Res> {
+  __$$_AddModToCommunityCopyWithImpl(
+      _$_AddModToCommunity _value, $Res Function(_$_AddModToCommunity) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1040,7 +1037,7 @@ class __$$AddModToCommunityImplCopyWithImpl<$Res>
     Object? added = null,
     Object? auth = null,
   }) {
-    return _then(_$AddModToCommunityImpl(
+    return _then(_$_AddModToCommunity(
       communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -1064,16 +1061,16 @@ class __$$AddModToCommunityImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$AddModToCommunityImpl extends _AddModToCommunity {
-  const _$AddModToCommunityImpl(
+class _$_AddModToCommunity extends _AddModToCommunity {
+  const _$_AddModToCommunity(
       {required this.communityId,
       required this.personId,
       required this.added,
       required this.auth})
       : super._();
 
-  factory _$AddModToCommunityImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AddModToCommunityImplFromJson(json);
+  factory _$_AddModToCommunity.fromJson(Map<String, dynamic> json) =>
+      _$$_AddModToCommunityFromJson(json);
 
   @override
   final int communityId;
@@ -1093,7 +1090,7 @@ class _$AddModToCommunityImpl extends _AddModToCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AddModToCommunityImpl &&
+            other is _$_AddModToCommunity &&
             (identical(other.communityId, communityId) ||
                 other.communityId == communityId) &&
             (identical(other.personId, personId) ||
@@ -1110,13 +1107,13 @@ class _$AddModToCommunityImpl extends _AddModToCommunity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$AddModToCommunityImplCopyWith<_$AddModToCommunityImpl> get copyWith =>
-      __$$AddModToCommunityImplCopyWithImpl<_$AddModToCommunityImpl>(
+  _$$_AddModToCommunityCopyWith<_$_AddModToCommunity> get copyWith =>
+      __$$_AddModToCommunityCopyWithImpl<_$_AddModToCommunity>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AddModToCommunityImplToJson(
+    return _$$_AddModToCommunityToJson(
       this,
     );
   }
@@ -1127,11 +1124,11 @@ abstract class _AddModToCommunity extends AddModToCommunity {
       {required final int communityId,
       required final int personId,
       required final bool added,
-      required final String auth}) = _$AddModToCommunityImpl;
+      required final String auth}) = _$_AddModToCommunity;
   const _AddModToCommunity._() : super._();
 
   factory _AddModToCommunity.fromJson(Map<String, dynamic> json) =
-      _$AddModToCommunityImpl.fromJson;
+      _$_AddModToCommunity.fromJson;
 
   @override
   int get communityId;
@@ -1143,7 +1140,7 @@ abstract class _AddModToCommunity extends AddModToCommunity {
   String get auth;
   @override
   @JsonKey(ignore: true)
-  _$$AddModToCommunityImplCopyWith<_$AddModToCommunityImpl> get copyWith =>
+  _$$_AddModToCommunityCopyWith<_$_AddModToCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1238,11 +1235,11 @@ class _$EditCommunityCopyWithImpl<$Res, $Val extends EditCommunity>
 }
 
 /// @nodoc
-abstract class _$$EditCommunityImplCopyWith<$Res>
+abstract class _$$_EditCommunityCopyWith<$Res>
     implements $EditCommunityCopyWith<$Res> {
-  factory _$$EditCommunityImplCopyWith(
-          _$EditCommunityImpl value, $Res Function(_$EditCommunityImpl) then) =
-      __$$EditCommunityImplCopyWithImpl<$Res>;
+  factory _$$_EditCommunityCopyWith(
+          _$_EditCommunity value, $Res Function(_$_EditCommunity) then) =
+      __$$_EditCommunityCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1256,11 +1253,11 @@ abstract class _$$EditCommunityImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$EditCommunityImplCopyWithImpl<$Res>
-    extends _$EditCommunityCopyWithImpl<$Res, _$EditCommunityImpl>
-    implements _$$EditCommunityImplCopyWith<$Res> {
-  __$$EditCommunityImplCopyWithImpl(
-      _$EditCommunityImpl _value, $Res Function(_$EditCommunityImpl) _then)
+class __$$_EditCommunityCopyWithImpl<$Res>
+    extends _$EditCommunityCopyWithImpl<$Res, _$_EditCommunity>
+    implements _$$_EditCommunityCopyWith<$Res> {
+  __$$_EditCommunityCopyWithImpl(
+      _$_EditCommunity _value, $Res Function(_$_EditCommunity) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1274,7 +1271,7 @@ class __$$EditCommunityImplCopyWithImpl<$Res>
     Object? nsfw = freezed,
     Object? auth = null,
   }) {
-    return _then(_$EditCommunityImpl(
+    return _then(_$_EditCommunity(
       communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -1310,8 +1307,8 @@ class __$$EditCommunityImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$EditCommunityImpl extends _EditCommunity {
-  const _$EditCommunityImpl(
+class _$_EditCommunity extends _EditCommunity {
+  const _$_EditCommunity(
       {required this.communityId,
       this.title,
       this.description,
@@ -1321,8 +1318,8 @@ class _$EditCommunityImpl extends _EditCommunity {
       required this.auth})
       : super._();
 
-  factory _$EditCommunityImpl.fromJson(Map<String, dynamic> json) =>
-      _$$EditCommunityImplFromJson(json);
+  factory _$_EditCommunity.fromJson(Map<String, dynamic> json) =>
+      _$$_EditCommunityFromJson(json);
 
   @override
   final int communityId;
@@ -1348,7 +1345,7 @@ class _$EditCommunityImpl extends _EditCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$EditCommunityImpl &&
+            other is _$_EditCommunity &&
             (identical(other.communityId, communityId) ||
                 other.communityId == communityId) &&
             (identical(other.title, title) || other.title == title) &&
@@ -1368,12 +1365,12 @@ class _$EditCommunityImpl extends _EditCommunity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$EditCommunityImplCopyWith<_$EditCommunityImpl> get copyWith =>
-      __$$EditCommunityImplCopyWithImpl<_$EditCommunityImpl>(this, _$identity);
+  _$$_EditCommunityCopyWith<_$_EditCommunity> get copyWith =>
+      __$$_EditCommunityCopyWithImpl<_$_EditCommunity>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$EditCommunityImplToJson(
+    return _$$_EditCommunityToJson(
       this,
     );
   }
@@ -1387,11 +1384,11 @@ abstract class _EditCommunity extends EditCommunity {
       final String? icon,
       final String? banner,
       final bool? nsfw,
-      required final String auth}) = _$EditCommunityImpl;
+      required final String auth}) = _$_EditCommunity;
   const _EditCommunity._() : super._();
 
   factory _EditCommunity.fromJson(Map<String, dynamic> json) =
-      _$EditCommunityImpl.fromJson;
+      _$_EditCommunity.fromJson;
 
   @override
   int get communityId;
@@ -1409,7 +1406,7 @@ abstract class _EditCommunity extends EditCommunity {
   String get auth;
   @override
   @JsonKey(ignore: true)
-  _$$EditCommunityImplCopyWith<_$EditCommunityImpl> get copyWith =>
+  _$$_EditCommunityCopyWith<_$_EditCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1473,22 +1470,22 @@ class _$DeleteCommunityCopyWithImpl<$Res, $Val extends DeleteCommunity>
 }
 
 /// @nodoc
-abstract class _$$DeleteCommunityImplCopyWith<$Res>
+abstract class _$$_DeleteCommunityCopyWith<$Res>
     implements $DeleteCommunityCopyWith<$Res> {
-  factory _$$DeleteCommunityImplCopyWith(_$DeleteCommunityImpl value,
-          $Res Function(_$DeleteCommunityImpl) then) =
-      __$$DeleteCommunityImplCopyWithImpl<$Res>;
+  factory _$$_DeleteCommunityCopyWith(
+          _$_DeleteCommunity value, $Res Function(_$_DeleteCommunity) then) =
+      __$$_DeleteCommunityCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int communityId, bool deleted, String auth});
 }
 
 /// @nodoc
-class __$$DeleteCommunityImplCopyWithImpl<$Res>
-    extends _$DeleteCommunityCopyWithImpl<$Res, _$DeleteCommunityImpl>
-    implements _$$DeleteCommunityImplCopyWith<$Res> {
-  __$$DeleteCommunityImplCopyWithImpl(
-      _$DeleteCommunityImpl _value, $Res Function(_$DeleteCommunityImpl) _then)
+class __$$_DeleteCommunityCopyWithImpl<$Res>
+    extends _$DeleteCommunityCopyWithImpl<$Res, _$_DeleteCommunity>
+    implements _$$_DeleteCommunityCopyWith<$Res> {
+  __$$_DeleteCommunityCopyWithImpl(
+      _$_DeleteCommunity _value, $Res Function(_$_DeleteCommunity) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1498,7 +1495,7 @@ class __$$DeleteCommunityImplCopyWithImpl<$Res>
     Object? deleted = null,
     Object? auth = null,
   }) {
-    return _then(_$DeleteCommunityImpl(
+    return _then(_$_DeleteCommunity(
       communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -1518,13 +1515,13 @@ class __$$DeleteCommunityImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$DeleteCommunityImpl extends _DeleteCommunity {
-  const _$DeleteCommunityImpl(
+class _$_DeleteCommunity extends _DeleteCommunity {
+  const _$_DeleteCommunity(
       {required this.communityId, required this.deleted, required this.auth})
       : super._();
 
-  factory _$DeleteCommunityImpl.fromJson(Map<String, dynamic> json) =>
-      _$$DeleteCommunityImplFromJson(json);
+  factory _$_DeleteCommunity.fromJson(Map<String, dynamic> json) =>
+      _$$_DeleteCommunityFromJson(json);
 
   @override
   final int communityId;
@@ -1542,7 +1539,7 @@ class _$DeleteCommunityImpl extends _DeleteCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DeleteCommunityImpl &&
+            other is _$_DeleteCommunity &&
             (identical(other.communityId, communityId) ||
                 other.communityId == communityId) &&
             (identical(other.deleted, deleted) || other.deleted == deleted) &&
@@ -1556,13 +1553,12 @@ class _$DeleteCommunityImpl extends _DeleteCommunity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$DeleteCommunityImplCopyWith<_$DeleteCommunityImpl> get copyWith =>
-      __$$DeleteCommunityImplCopyWithImpl<_$DeleteCommunityImpl>(
-          this, _$identity);
+  _$$_DeleteCommunityCopyWith<_$_DeleteCommunity> get copyWith =>
+      __$$_DeleteCommunityCopyWithImpl<_$_DeleteCommunity>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DeleteCommunityImplToJson(
+    return _$$_DeleteCommunityToJson(
       this,
     );
   }
@@ -1572,11 +1568,11 @@ abstract class _DeleteCommunity extends DeleteCommunity {
   const factory _DeleteCommunity(
       {required final int communityId,
       required final bool deleted,
-      required final String auth}) = _$DeleteCommunityImpl;
+      required final String auth}) = _$_DeleteCommunity;
   const _DeleteCommunity._() : super._();
 
   factory _DeleteCommunity.fromJson(Map<String, dynamic> json) =
-      _$DeleteCommunityImpl.fromJson;
+      _$_DeleteCommunity.fromJson;
 
   @override
   int get communityId;
@@ -1586,7 +1582,7 @@ abstract class _DeleteCommunity extends DeleteCommunity {
   String get auth;
   @override
   @JsonKey(ignore: true)
-  _$$DeleteCommunityImplCopyWith<_$DeleteCommunityImpl> get copyWith =>
+  _$$_DeleteCommunityCopyWith<_$_DeleteCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1667,11 +1663,11 @@ class _$RemoveCommunityCopyWithImpl<$Res, $Val extends RemoveCommunity>
 }
 
 /// @nodoc
-abstract class _$$RemoveCommunityImplCopyWith<$Res>
+abstract class _$$_RemoveCommunityCopyWith<$Res>
     implements $RemoveCommunityCopyWith<$Res> {
-  factory _$$RemoveCommunityImplCopyWith(_$RemoveCommunityImpl value,
-          $Res Function(_$RemoveCommunityImpl) then) =
-      __$$RemoveCommunityImplCopyWithImpl<$Res>;
+  factory _$$_RemoveCommunityCopyWith(
+          _$_RemoveCommunity value, $Res Function(_$_RemoveCommunity) then) =
+      __$$_RemoveCommunityCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1683,11 +1679,11 @@ abstract class _$$RemoveCommunityImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$RemoveCommunityImplCopyWithImpl<$Res>
-    extends _$RemoveCommunityCopyWithImpl<$Res, _$RemoveCommunityImpl>
-    implements _$$RemoveCommunityImplCopyWith<$Res> {
-  __$$RemoveCommunityImplCopyWithImpl(
-      _$RemoveCommunityImpl _value, $Res Function(_$RemoveCommunityImpl) _then)
+class __$$_RemoveCommunityCopyWithImpl<$Res>
+    extends _$RemoveCommunityCopyWithImpl<$Res, _$_RemoveCommunity>
+    implements _$$_RemoveCommunityCopyWith<$Res> {
+  __$$_RemoveCommunityCopyWithImpl(
+      _$_RemoveCommunity _value, $Res Function(_$_RemoveCommunity) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1699,7 +1695,7 @@ class __$$RemoveCommunityImplCopyWithImpl<$Res>
     Object? expires = freezed,
     Object? auth = null,
   }) {
-    return _then(_$RemoveCommunityImpl(
+    return _then(_$_RemoveCommunity(
       communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -1727,8 +1723,8 @@ class __$$RemoveCommunityImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$RemoveCommunityImpl extends _RemoveCommunity {
-  const _$RemoveCommunityImpl(
+class _$_RemoveCommunity extends _RemoveCommunity {
+  const _$_RemoveCommunity(
       {required this.communityId,
       required this.removed,
       this.reason,
@@ -1736,8 +1732,8 @@ class _$RemoveCommunityImpl extends _RemoveCommunity {
       required this.auth})
       : super._();
 
-  factory _$RemoveCommunityImpl.fromJson(Map<String, dynamic> json) =>
-      _$$RemoveCommunityImplFromJson(json);
+  factory _$_RemoveCommunity.fromJson(Map<String, dynamic> json) =>
+      _$$_RemoveCommunityFromJson(json);
 
   @override
   final int communityId;
@@ -1759,7 +1755,7 @@ class _$RemoveCommunityImpl extends _RemoveCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RemoveCommunityImpl &&
+            other is _$_RemoveCommunity &&
             (identical(other.communityId, communityId) ||
                 other.communityId == communityId) &&
             (identical(other.removed, removed) || other.removed == removed) &&
@@ -1776,13 +1772,12 @@ class _$RemoveCommunityImpl extends _RemoveCommunity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$RemoveCommunityImplCopyWith<_$RemoveCommunityImpl> get copyWith =>
-      __$$RemoveCommunityImplCopyWithImpl<_$RemoveCommunityImpl>(
-          this, _$identity);
+  _$$_RemoveCommunityCopyWith<_$_RemoveCommunity> get copyWith =>
+      __$$_RemoveCommunityCopyWithImpl<_$_RemoveCommunity>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RemoveCommunityImplToJson(
+    return _$$_RemoveCommunityToJson(
       this,
     );
   }
@@ -1794,11 +1789,11 @@ abstract class _RemoveCommunity extends RemoveCommunity {
       required final bool removed,
       final String? reason,
       final int? expires,
-      required final String auth}) = _$RemoveCommunityImpl;
+      required final String auth}) = _$_RemoveCommunity;
   const _RemoveCommunity._() : super._();
 
   factory _RemoveCommunity.fromJson(Map<String, dynamic> json) =
-      _$RemoveCommunityImpl.fromJson;
+      _$_RemoveCommunity.fromJson;
 
   @override
   int get communityId;
@@ -1812,7 +1807,7 @@ abstract class _RemoveCommunity extends RemoveCommunity {
   String get auth;
   @override
   @JsonKey(ignore: true)
-  _$$RemoveCommunityImplCopyWith<_$RemoveCommunityImpl> get copyWith =>
+  _$$_RemoveCommunityCopyWith<_$_RemoveCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1876,22 +1871,22 @@ class _$FollowCommunityCopyWithImpl<$Res, $Val extends FollowCommunity>
 }
 
 /// @nodoc
-abstract class _$$FollowCommunityImplCopyWith<$Res>
+abstract class _$$_FollowCommunityCopyWith<$Res>
     implements $FollowCommunityCopyWith<$Res> {
-  factory _$$FollowCommunityImplCopyWith(_$FollowCommunityImpl value,
-          $Res Function(_$FollowCommunityImpl) then) =
-      __$$FollowCommunityImplCopyWithImpl<$Res>;
+  factory _$$_FollowCommunityCopyWith(
+          _$_FollowCommunity value, $Res Function(_$_FollowCommunity) then) =
+      __$$_FollowCommunityCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int communityId, bool follow, String auth});
 }
 
 /// @nodoc
-class __$$FollowCommunityImplCopyWithImpl<$Res>
-    extends _$FollowCommunityCopyWithImpl<$Res, _$FollowCommunityImpl>
-    implements _$$FollowCommunityImplCopyWith<$Res> {
-  __$$FollowCommunityImplCopyWithImpl(
-      _$FollowCommunityImpl _value, $Res Function(_$FollowCommunityImpl) _then)
+class __$$_FollowCommunityCopyWithImpl<$Res>
+    extends _$FollowCommunityCopyWithImpl<$Res, _$_FollowCommunity>
+    implements _$$_FollowCommunityCopyWith<$Res> {
+  __$$_FollowCommunityCopyWithImpl(
+      _$_FollowCommunity _value, $Res Function(_$_FollowCommunity) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1901,7 +1896,7 @@ class __$$FollowCommunityImplCopyWithImpl<$Res>
     Object? follow = null,
     Object? auth = null,
   }) {
-    return _then(_$FollowCommunityImpl(
+    return _then(_$_FollowCommunity(
       communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -1921,13 +1916,13 @@ class __$$FollowCommunityImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$FollowCommunityImpl extends _FollowCommunity {
-  const _$FollowCommunityImpl(
+class _$_FollowCommunity extends _FollowCommunity {
+  const _$_FollowCommunity(
       {required this.communityId, required this.follow, required this.auth})
       : super._();
 
-  factory _$FollowCommunityImpl.fromJson(Map<String, dynamic> json) =>
-      _$$FollowCommunityImplFromJson(json);
+  factory _$_FollowCommunity.fromJson(Map<String, dynamic> json) =>
+      _$$_FollowCommunityFromJson(json);
 
   @override
   final int communityId;
@@ -1945,7 +1940,7 @@ class _$FollowCommunityImpl extends _FollowCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FollowCommunityImpl &&
+            other is _$_FollowCommunity &&
             (identical(other.communityId, communityId) ||
                 other.communityId == communityId) &&
             (identical(other.follow, follow) || other.follow == follow) &&
@@ -1959,13 +1954,12 @@ class _$FollowCommunityImpl extends _FollowCommunity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$FollowCommunityImplCopyWith<_$FollowCommunityImpl> get copyWith =>
-      __$$FollowCommunityImplCopyWithImpl<_$FollowCommunityImpl>(
-          this, _$identity);
+  _$$_FollowCommunityCopyWith<_$_FollowCommunity> get copyWith =>
+      __$$_FollowCommunityCopyWithImpl<_$_FollowCommunity>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FollowCommunityImplToJson(
+    return _$$_FollowCommunityToJson(
       this,
     );
   }
@@ -1975,11 +1969,11 @@ abstract class _FollowCommunity extends FollowCommunity {
   const factory _FollowCommunity(
       {required final int communityId,
       required final bool follow,
-      required final String auth}) = _$FollowCommunityImpl;
+      required final String auth}) = _$_FollowCommunity;
   const _FollowCommunity._() : super._();
 
   factory _FollowCommunity.fromJson(Map<String, dynamic> json) =
-      _$FollowCommunityImpl.fromJson;
+      _$_FollowCommunity.fromJson;
 
   @override
   int get communityId;
@@ -1989,7 +1983,7 @@ abstract class _FollowCommunity extends FollowCommunity {
   String get auth;
   @override
   @JsonKey(ignore: true)
-  _$$FollowCommunityImplCopyWith<_$FollowCommunityImpl> get copyWith =>
+  _$$_FollowCommunityCopyWith<_$_FollowCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2053,22 +2047,22 @@ class _$TransferCommunityCopyWithImpl<$Res, $Val extends TransferCommunity>
 }
 
 /// @nodoc
-abstract class _$$TransferCommunityImplCopyWith<$Res>
+abstract class _$$_TransferCommunityCopyWith<$Res>
     implements $TransferCommunityCopyWith<$Res> {
-  factory _$$TransferCommunityImplCopyWith(_$TransferCommunityImpl value,
-          $Res Function(_$TransferCommunityImpl) then) =
-      __$$TransferCommunityImplCopyWithImpl<$Res>;
+  factory _$$_TransferCommunityCopyWith(_$_TransferCommunity value,
+          $Res Function(_$_TransferCommunity) then) =
+      __$$_TransferCommunityCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int communityId, int personId, String auth});
 }
 
 /// @nodoc
-class __$$TransferCommunityImplCopyWithImpl<$Res>
-    extends _$TransferCommunityCopyWithImpl<$Res, _$TransferCommunityImpl>
-    implements _$$TransferCommunityImplCopyWith<$Res> {
-  __$$TransferCommunityImplCopyWithImpl(_$TransferCommunityImpl _value,
-      $Res Function(_$TransferCommunityImpl) _then)
+class __$$_TransferCommunityCopyWithImpl<$Res>
+    extends _$TransferCommunityCopyWithImpl<$Res, _$_TransferCommunity>
+    implements _$$_TransferCommunityCopyWith<$Res> {
+  __$$_TransferCommunityCopyWithImpl(
+      _$_TransferCommunity _value, $Res Function(_$_TransferCommunity) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2078,7 +2072,7 @@ class __$$TransferCommunityImplCopyWithImpl<$Res>
     Object? personId = null,
     Object? auth = null,
   }) {
-    return _then(_$TransferCommunityImpl(
+    return _then(_$_TransferCommunity(
       communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -2098,13 +2092,13 @@ class __$$TransferCommunityImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$TransferCommunityImpl extends _TransferCommunity {
-  const _$TransferCommunityImpl(
+class _$_TransferCommunity extends _TransferCommunity {
+  const _$_TransferCommunity(
       {required this.communityId, required this.personId, required this.auth})
       : super._();
 
-  factory _$TransferCommunityImpl.fromJson(Map<String, dynamic> json) =>
-      _$$TransferCommunityImplFromJson(json);
+  factory _$_TransferCommunity.fromJson(Map<String, dynamic> json) =>
+      _$$_TransferCommunityFromJson(json);
 
   @override
   final int communityId;
@@ -2122,7 +2116,7 @@ class _$TransferCommunityImpl extends _TransferCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$TransferCommunityImpl &&
+            other is _$_TransferCommunity &&
             (identical(other.communityId, communityId) ||
                 other.communityId == communityId) &&
             (identical(other.personId, personId) ||
@@ -2137,13 +2131,13 @@ class _$TransferCommunityImpl extends _TransferCommunity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$TransferCommunityImplCopyWith<_$TransferCommunityImpl> get copyWith =>
-      __$$TransferCommunityImplCopyWithImpl<_$TransferCommunityImpl>(
+  _$$_TransferCommunityCopyWith<_$_TransferCommunity> get copyWith =>
+      __$$_TransferCommunityCopyWithImpl<_$_TransferCommunity>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$TransferCommunityImplToJson(
+    return _$$_TransferCommunityToJson(
       this,
     );
   }
@@ -2153,11 +2147,11 @@ abstract class _TransferCommunity extends TransferCommunity {
   const factory _TransferCommunity(
       {required final int communityId,
       required final int personId,
-      required final String auth}) = _$TransferCommunityImpl;
+      required final String auth}) = _$_TransferCommunity;
   const _TransferCommunity._() : super._();
 
   factory _TransferCommunity.fromJson(Map<String, dynamic> json) =
-      _$TransferCommunityImpl.fromJson;
+      _$_TransferCommunity.fromJson;
 
   @override
   int get communityId;
@@ -2167,7 +2161,7 @@ abstract class _TransferCommunity extends TransferCommunity {
   String get auth;
   @override
   @JsonKey(ignore: true)
-  _$$TransferCommunityImplCopyWith<_$TransferCommunityImpl> get copyWith =>
+  _$$_TransferCommunityCopyWith<_$_TransferCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2231,22 +2225,22 @@ class _$BlockCommunityCopyWithImpl<$Res, $Val extends BlockCommunity>
 }
 
 /// @nodoc
-abstract class _$$BlockCommunityImplCopyWith<$Res>
+abstract class _$$_BlockCommunityCopyWith<$Res>
     implements $BlockCommunityCopyWith<$Res> {
-  factory _$$BlockCommunityImplCopyWith(_$BlockCommunityImpl value,
-          $Res Function(_$BlockCommunityImpl) then) =
-      __$$BlockCommunityImplCopyWithImpl<$Res>;
+  factory _$$_BlockCommunityCopyWith(
+          _$_BlockCommunity value, $Res Function(_$_BlockCommunity) then) =
+      __$$_BlockCommunityCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int communityId, bool block, String auth});
 }
 
 /// @nodoc
-class __$$BlockCommunityImplCopyWithImpl<$Res>
-    extends _$BlockCommunityCopyWithImpl<$Res, _$BlockCommunityImpl>
-    implements _$$BlockCommunityImplCopyWith<$Res> {
-  __$$BlockCommunityImplCopyWithImpl(
-      _$BlockCommunityImpl _value, $Res Function(_$BlockCommunityImpl) _then)
+class __$$_BlockCommunityCopyWithImpl<$Res>
+    extends _$BlockCommunityCopyWithImpl<$Res, _$_BlockCommunity>
+    implements _$$_BlockCommunityCopyWith<$Res> {
+  __$$_BlockCommunityCopyWithImpl(
+      _$_BlockCommunity _value, $Res Function(_$_BlockCommunity) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2256,7 +2250,7 @@ class __$$BlockCommunityImplCopyWithImpl<$Res>
     Object? block = null,
     Object? auth = null,
   }) {
-    return _then(_$BlockCommunityImpl(
+    return _then(_$_BlockCommunity(
       communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -2276,13 +2270,13 @@ class __$$BlockCommunityImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$BlockCommunityImpl extends _BlockCommunity {
-  const _$BlockCommunityImpl(
+class _$_BlockCommunity extends _BlockCommunity {
+  const _$_BlockCommunity(
       {required this.communityId, required this.block, required this.auth})
       : super._();
 
-  factory _$BlockCommunityImpl.fromJson(Map<String, dynamic> json) =>
-      _$$BlockCommunityImplFromJson(json);
+  factory _$_BlockCommunity.fromJson(Map<String, dynamic> json) =>
+      _$$_BlockCommunityFromJson(json);
 
   @override
   final int communityId;
@@ -2300,7 +2294,7 @@ class _$BlockCommunityImpl extends _BlockCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$BlockCommunityImpl &&
+            other is _$_BlockCommunity &&
             (identical(other.communityId, communityId) ||
                 other.communityId == communityId) &&
             (identical(other.block, block) || other.block == block) &&
@@ -2314,13 +2308,12 @@ class _$BlockCommunityImpl extends _BlockCommunity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$BlockCommunityImplCopyWith<_$BlockCommunityImpl> get copyWith =>
-      __$$BlockCommunityImplCopyWithImpl<_$BlockCommunityImpl>(
-          this, _$identity);
+  _$$_BlockCommunityCopyWith<_$_BlockCommunity> get copyWith =>
+      __$$_BlockCommunityCopyWithImpl<_$_BlockCommunity>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BlockCommunityImplToJson(
+    return _$$_BlockCommunityToJson(
       this,
     );
   }
@@ -2330,11 +2323,11 @@ abstract class _BlockCommunity extends BlockCommunity {
   const factory _BlockCommunity(
       {required final int communityId,
       required final bool block,
-      required final String auth}) = _$BlockCommunityImpl;
+      required final String auth}) = _$_BlockCommunity;
   const _BlockCommunity._() : super._();
 
   factory _BlockCommunity.fromJson(Map<String, dynamic> json) =
-      _$BlockCommunityImpl.fromJson;
+      _$_BlockCommunity.fromJson;
 
   @override
   int get communityId;
@@ -2344,6 +2337,6 @@ abstract class _BlockCommunity extends BlockCommunity {
   String get auth;
   @override
   @JsonKey(ignore: true)
-  _$$BlockCommunityImplCopyWith<_$BlockCommunityImpl> get copyWith =>
+  _$$_BlockCommunityCopyWith<_$_BlockCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
