@@ -6,6 +6,71 @@ import 'util.dart';
 void main() {
   group('lemmy API v3', () {
     group('site', () {
+      group('Block Instance', () {
+        test('correctly blocks', () async {
+          final blockInstanceResponse = await run(
+            BlockInstance(
+              instanceId: goodInstanceId,
+              block: true,
+              auth: goodAuth,
+            ),
+          );
+
+          expect(blockInstanceResponse.blocked, true);
+        });
+
+        test('correctly unblocks', () async {
+          final blockInstanceResponse = await run(
+            BlockInstance(
+              instanceId: goodInstanceId,
+              block: false,
+              auth: goodAuth,
+            ),
+          );
+
+          expect(blockInstanceResponse.blocked, false);
+        });
+
+        test(
+          'bad auth',
+          () => {
+            lemmyThrows(
+              const BlockInstance(
+                instanceId: badInstanceId,
+                block: true,
+                auth: badAuth,
+              ),
+            ),
+          },
+        );
+
+        test(
+          'no auth',
+          () => {
+            lemmyThrows(
+              const BlockInstance(
+                instanceId: badInstanceId,
+                block: true,
+              ),
+            ),
+          },
+        );
+
+        /// Note: it seems like lemmy does not throw an error when we try to block an instance that does not exist
+        // test(
+        //   'incorrect instance',
+        //   () => {
+        //     lemmyThrows(
+        //       BlockInstance(
+        //         instanceId: badInstanceId,
+        //         block: false,
+        //         auth: goodAuth,
+        //       ),
+        //     ),
+        //   },
+        // );
+      });
+
       group('Search', () {
         test(
           'correctly fetches',

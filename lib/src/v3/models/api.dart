@@ -351,3 +351,15 @@ class LoginResponse with _$LoginResponse {
   factory LoginResponse.fromJson(Map<String, dynamic> json) =>
       _$LoginResponseFromJson(json);
 }
+
+@freezed
+class BlockInstanceResponse with _$BlockInstanceResponse {
+  @modelSerde
+  const factory BlockInstanceResponse({
+    required bool blocked,
+  }) = _BlockInstanceResponse;
+
+  const BlockInstanceResponse._();
+  factory BlockInstanceResponse.fromJson(Map<String, dynamic> json) =>
+      _$BlockInstanceResponseFromJson(json);
+}

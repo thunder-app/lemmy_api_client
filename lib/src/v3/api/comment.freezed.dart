@@ -87,11 +87,11 @@ class _$CreateCommentCopyWithImpl<$Res, $Val extends CreateComment>
 }
 
 /// @nodoc
-abstract class _$$CreateCommentImplCopyWith<$Res>
+abstract class _$$_CreateCommentCopyWith<$Res>
     implements $CreateCommentCopyWith<$Res> {
-  factory _$$CreateCommentImplCopyWith(
-          _$CreateCommentImpl value, $Res Function(_$CreateCommentImpl) then) =
-      __$$CreateCommentImplCopyWithImpl<$Res>;
+  factory _$$_CreateCommentCopyWith(
+          _$_CreateComment value, $Res Function(_$_CreateComment) then) =
+      __$$_CreateCommentCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -99,11 +99,11 @@ abstract class _$$CreateCommentImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CreateCommentImplCopyWithImpl<$Res>
-    extends _$CreateCommentCopyWithImpl<$Res, _$CreateCommentImpl>
-    implements _$$CreateCommentImplCopyWith<$Res> {
-  __$$CreateCommentImplCopyWithImpl(
-      _$CreateCommentImpl _value, $Res Function(_$CreateCommentImpl) _then)
+class __$$_CreateCommentCopyWithImpl<$Res>
+    extends _$CreateCommentCopyWithImpl<$Res, _$_CreateComment>
+    implements _$$_CreateCommentCopyWith<$Res> {
+  __$$_CreateCommentCopyWithImpl(
+      _$_CreateComment _value, $Res Function(_$_CreateComment) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -115,7 +115,7 @@ class __$$CreateCommentImplCopyWithImpl<$Res>
     Object? formId = freezed,
     Object? auth = null,
   }) {
-    return _then(_$CreateCommentImpl(
+    return _then(_$_CreateComment(
       content: null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
@@ -143,8 +143,8 @@ class __$$CreateCommentImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$CreateCommentImpl extends _CreateComment {
-  const _$CreateCommentImpl(
+class _$_CreateComment extends _CreateComment {
+  const _$_CreateComment(
       {required this.content,
       this.parentId,
       required this.postId,
@@ -152,8 +152,8 @@ class _$CreateCommentImpl extends _CreateComment {
       required this.auth})
       : super._();
 
-  factory _$CreateCommentImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CreateCommentImplFromJson(json);
+  factory _$_CreateComment.fromJson(Map<String, dynamic> json) =>
+      _$$_CreateCommentFromJson(json);
 
   @override
   final String content;
@@ -175,7 +175,7 @@ class _$CreateCommentImpl extends _CreateComment {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CreateCommentImpl &&
+            other is _$_CreateComment &&
             (identical(other.content, content) || other.content == content) &&
             (identical(other.parentId, parentId) ||
                 other.parentId == parentId) &&
@@ -192,12 +192,12 @@ class _$CreateCommentImpl extends _CreateComment {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CreateCommentImplCopyWith<_$CreateCommentImpl> get copyWith =>
-      __$$CreateCommentImplCopyWithImpl<_$CreateCommentImpl>(this, _$identity);
+  _$$_CreateCommentCopyWith<_$_CreateComment> get copyWith =>
+      __$$_CreateCommentCopyWithImpl<_$_CreateComment>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CreateCommentImplToJson(
+    return _$$_CreateCommentToJson(
       this,
     );
   }
@@ -209,11 +209,11 @@ abstract class _CreateComment extends CreateComment {
       final int? parentId,
       required final int postId,
       final String? formId,
-      required final String auth}) = _$CreateCommentImpl;
+      required final String auth}) = _$_CreateComment;
   const _CreateComment._() : super._();
 
   factory _CreateComment.fromJson(Map<String, dynamic> json) =
-      _$CreateCommentImpl.fromJson;
+      _$_CreateComment.fromJson;
 
   @override
   String get content;
@@ -227,7 +227,7 @@ abstract class _CreateComment extends CreateComment {
   String get auth;
   @override
   @JsonKey(ignore: true)
-  _$$CreateCommentImplCopyWith<_$CreateCommentImpl> get copyWith =>
+  _$$_CreateCommentCopyWith<_$_CreateComment> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -297,22 +297,22 @@ class _$EditCommentCopyWithImpl<$Res, $Val extends EditComment>
 }
 
 /// @nodoc
-abstract class _$$EditCommentImplCopyWith<$Res>
+abstract class _$$_EditCommentCopyWith<$Res>
     implements $EditCommentCopyWith<$Res> {
-  factory _$$EditCommentImplCopyWith(
-          _$EditCommentImpl value, $Res Function(_$EditCommentImpl) then) =
-      __$$EditCommentImplCopyWithImpl<$Res>;
+  factory _$$_EditCommentCopyWith(
+          _$_EditComment value, $Res Function(_$_EditComment) then) =
+      __$$_EditCommentCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String content, int commentId, String? formId, String auth});
 }
 
 /// @nodoc
-class __$$EditCommentImplCopyWithImpl<$Res>
-    extends _$EditCommentCopyWithImpl<$Res, _$EditCommentImpl>
-    implements _$$EditCommentImplCopyWith<$Res> {
-  __$$EditCommentImplCopyWithImpl(
-      _$EditCommentImpl _value, $Res Function(_$EditCommentImpl) _then)
+class __$$_EditCommentCopyWithImpl<$Res>
+    extends _$EditCommentCopyWithImpl<$Res, _$_EditComment>
+    implements _$$_EditCommentCopyWith<$Res> {
+  __$$_EditCommentCopyWithImpl(
+      _$_EditComment _value, $Res Function(_$_EditComment) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -323,7 +323,7 @@ class __$$EditCommentImplCopyWithImpl<$Res>
     Object? formId = freezed,
     Object? auth = null,
   }) {
-    return _then(_$EditCommentImpl(
+    return _then(_$_EditComment(
       content: null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
@@ -347,16 +347,16 @@ class __$$EditCommentImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$EditCommentImpl extends _EditComment {
-  const _$EditCommentImpl(
+class _$_EditComment extends _EditComment {
+  const _$_EditComment(
       {required this.content,
       required this.commentId,
       this.formId,
       required this.auth})
       : super._();
 
-  factory _$EditCommentImpl.fromJson(Map<String, dynamic> json) =>
-      _$$EditCommentImplFromJson(json);
+  factory _$_EditComment.fromJson(Map<String, dynamic> json) =>
+      _$$_EditCommentFromJson(json);
 
   @override
   final String content;
@@ -376,7 +376,7 @@ class _$EditCommentImpl extends _EditComment {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$EditCommentImpl &&
+            other is _$_EditComment &&
             (identical(other.content, content) || other.content == content) &&
             (identical(other.commentId, commentId) ||
                 other.commentId == commentId) &&
@@ -392,12 +392,12 @@ class _$EditCommentImpl extends _EditComment {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$EditCommentImplCopyWith<_$EditCommentImpl> get copyWith =>
-      __$$EditCommentImplCopyWithImpl<_$EditCommentImpl>(this, _$identity);
+  _$$_EditCommentCopyWith<_$_EditComment> get copyWith =>
+      __$$_EditCommentCopyWithImpl<_$_EditComment>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$EditCommentImplToJson(
+    return _$$_EditCommentToJson(
       this,
     );
   }
@@ -408,11 +408,11 @@ abstract class _EditComment extends EditComment {
       {required final String content,
       required final int commentId,
       final String? formId,
-      required final String auth}) = _$EditCommentImpl;
+      required final String auth}) = _$_EditComment;
   const _EditComment._() : super._();
 
   factory _EditComment.fromJson(Map<String, dynamic> json) =
-      _$EditCommentImpl.fromJson;
+      _$_EditComment.fromJson;
 
   @override
   String get content;
@@ -424,7 +424,7 @@ abstract class _EditComment extends EditComment {
   String get auth;
   @override
   @JsonKey(ignore: true)
-  _$$EditCommentImplCopyWith<_$EditCommentImpl> get copyWith =>
+  _$$_EditCommentCopyWith<_$_EditComment> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -488,22 +488,22 @@ class _$DeleteCommentCopyWithImpl<$Res, $Val extends DeleteComment>
 }
 
 /// @nodoc
-abstract class _$$DeleteCommentImplCopyWith<$Res>
+abstract class _$$_DeleteCommentCopyWith<$Res>
     implements $DeleteCommentCopyWith<$Res> {
-  factory _$$DeleteCommentImplCopyWith(
-          _$DeleteCommentImpl value, $Res Function(_$DeleteCommentImpl) then) =
-      __$$DeleteCommentImplCopyWithImpl<$Res>;
+  factory _$$_DeleteCommentCopyWith(
+          _$_DeleteComment value, $Res Function(_$_DeleteComment) then) =
+      __$$_DeleteCommentCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int commentId, bool deleted, String auth});
 }
 
 /// @nodoc
-class __$$DeleteCommentImplCopyWithImpl<$Res>
-    extends _$DeleteCommentCopyWithImpl<$Res, _$DeleteCommentImpl>
-    implements _$$DeleteCommentImplCopyWith<$Res> {
-  __$$DeleteCommentImplCopyWithImpl(
-      _$DeleteCommentImpl _value, $Res Function(_$DeleteCommentImpl) _then)
+class __$$_DeleteCommentCopyWithImpl<$Res>
+    extends _$DeleteCommentCopyWithImpl<$Res, _$_DeleteComment>
+    implements _$$_DeleteCommentCopyWith<$Res> {
+  __$$_DeleteCommentCopyWithImpl(
+      _$_DeleteComment _value, $Res Function(_$_DeleteComment) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -513,7 +513,7 @@ class __$$DeleteCommentImplCopyWithImpl<$Res>
     Object? deleted = null,
     Object? auth = null,
   }) {
-    return _then(_$DeleteCommentImpl(
+    return _then(_$_DeleteComment(
       commentId: null == commentId
           ? _value.commentId
           : commentId // ignore: cast_nullable_to_non_nullable
@@ -533,13 +533,13 @@ class __$$DeleteCommentImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$DeleteCommentImpl extends _DeleteComment {
-  const _$DeleteCommentImpl(
+class _$_DeleteComment extends _DeleteComment {
+  const _$_DeleteComment(
       {required this.commentId, required this.deleted, required this.auth})
       : super._();
 
-  factory _$DeleteCommentImpl.fromJson(Map<String, dynamic> json) =>
-      _$$DeleteCommentImplFromJson(json);
+  factory _$_DeleteComment.fromJson(Map<String, dynamic> json) =>
+      _$$_DeleteCommentFromJson(json);
 
   @override
   final int commentId;
@@ -557,7 +557,7 @@ class _$DeleteCommentImpl extends _DeleteComment {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DeleteCommentImpl &&
+            other is _$_DeleteComment &&
             (identical(other.commentId, commentId) ||
                 other.commentId == commentId) &&
             (identical(other.deleted, deleted) || other.deleted == deleted) &&
@@ -571,12 +571,12 @@ class _$DeleteCommentImpl extends _DeleteComment {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$DeleteCommentImplCopyWith<_$DeleteCommentImpl> get copyWith =>
-      __$$DeleteCommentImplCopyWithImpl<_$DeleteCommentImpl>(this, _$identity);
+  _$$_DeleteCommentCopyWith<_$_DeleteComment> get copyWith =>
+      __$$_DeleteCommentCopyWithImpl<_$_DeleteComment>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DeleteCommentImplToJson(
+    return _$$_DeleteCommentToJson(
       this,
     );
   }
@@ -586,11 +586,11 @@ abstract class _DeleteComment extends DeleteComment {
   const factory _DeleteComment(
       {required final int commentId,
       required final bool deleted,
-      required final String auth}) = _$DeleteCommentImpl;
+      required final String auth}) = _$_DeleteComment;
   const _DeleteComment._() : super._();
 
   factory _DeleteComment.fromJson(Map<String, dynamic> json) =
-      _$DeleteCommentImpl.fromJson;
+      _$_DeleteComment.fromJson;
 
   @override
   int get commentId;
@@ -600,7 +600,7 @@ abstract class _DeleteComment extends DeleteComment {
   String get auth;
   @override
   @JsonKey(ignore: true)
-  _$$DeleteCommentImplCopyWith<_$DeleteCommentImpl> get copyWith =>
+  _$$_DeleteCommentCopyWith<_$_DeleteComment> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -670,22 +670,22 @@ class _$RemoveCommentCopyWithImpl<$Res, $Val extends RemoveComment>
 }
 
 /// @nodoc
-abstract class _$$RemoveCommentImplCopyWith<$Res>
+abstract class _$$_RemoveCommentCopyWith<$Res>
     implements $RemoveCommentCopyWith<$Res> {
-  factory _$$RemoveCommentImplCopyWith(
-          _$RemoveCommentImpl value, $Res Function(_$RemoveCommentImpl) then) =
-      __$$RemoveCommentImplCopyWithImpl<$Res>;
+  factory _$$_RemoveCommentCopyWith(
+          _$_RemoveComment value, $Res Function(_$_RemoveComment) then) =
+      __$$_RemoveCommentCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int commentId, bool removed, String? reason, String auth});
 }
 
 /// @nodoc
-class __$$RemoveCommentImplCopyWithImpl<$Res>
-    extends _$RemoveCommentCopyWithImpl<$Res, _$RemoveCommentImpl>
-    implements _$$RemoveCommentImplCopyWith<$Res> {
-  __$$RemoveCommentImplCopyWithImpl(
-      _$RemoveCommentImpl _value, $Res Function(_$RemoveCommentImpl) _then)
+class __$$_RemoveCommentCopyWithImpl<$Res>
+    extends _$RemoveCommentCopyWithImpl<$Res, _$_RemoveComment>
+    implements _$$_RemoveCommentCopyWith<$Res> {
+  __$$_RemoveCommentCopyWithImpl(
+      _$_RemoveComment _value, $Res Function(_$_RemoveComment) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -696,7 +696,7 @@ class __$$RemoveCommentImplCopyWithImpl<$Res>
     Object? reason = freezed,
     Object? auth = null,
   }) {
-    return _then(_$RemoveCommentImpl(
+    return _then(_$_RemoveComment(
       commentId: null == commentId
           ? _value.commentId
           : commentId // ignore: cast_nullable_to_non_nullable
@@ -720,16 +720,16 @@ class __$$RemoveCommentImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$RemoveCommentImpl extends _RemoveComment {
-  const _$RemoveCommentImpl(
+class _$_RemoveComment extends _RemoveComment {
+  const _$_RemoveComment(
       {required this.commentId,
       required this.removed,
       this.reason,
       required this.auth})
       : super._();
 
-  factory _$RemoveCommentImpl.fromJson(Map<String, dynamic> json) =>
-      _$$RemoveCommentImplFromJson(json);
+  factory _$_RemoveComment.fromJson(Map<String, dynamic> json) =>
+      _$$_RemoveCommentFromJson(json);
 
   @override
   final int commentId;
@@ -749,7 +749,7 @@ class _$RemoveCommentImpl extends _RemoveComment {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RemoveCommentImpl &&
+            other is _$_RemoveComment &&
             (identical(other.commentId, commentId) ||
                 other.commentId == commentId) &&
             (identical(other.removed, removed) || other.removed == removed) &&
@@ -765,12 +765,12 @@ class _$RemoveCommentImpl extends _RemoveComment {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$RemoveCommentImplCopyWith<_$RemoveCommentImpl> get copyWith =>
-      __$$RemoveCommentImplCopyWithImpl<_$RemoveCommentImpl>(this, _$identity);
+  _$$_RemoveCommentCopyWith<_$_RemoveComment> get copyWith =>
+      __$$_RemoveCommentCopyWithImpl<_$_RemoveComment>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RemoveCommentImplToJson(
+    return _$$_RemoveCommentToJson(
       this,
     );
   }
@@ -781,11 +781,11 @@ abstract class _RemoveComment extends RemoveComment {
       {required final int commentId,
       required final bool removed,
       final String? reason,
-      required final String auth}) = _$RemoveCommentImpl;
+      required final String auth}) = _$_RemoveComment;
   const _RemoveComment._() : super._();
 
   factory _RemoveComment.fromJson(Map<String, dynamic> json) =
-      _$RemoveCommentImpl.fromJson;
+      _$_RemoveComment.fromJson;
 
   @override
   int get commentId;
@@ -797,7 +797,7 @@ abstract class _RemoveComment extends RemoveComment {
   String get auth;
   @override
   @JsonKey(ignore: true)
-  _$$RemoveCommentImplCopyWith<_$RemoveCommentImpl> get copyWith =>
+  _$$_RemoveCommentCopyWith<_$_RemoveComment> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -861,22 +861,22 @@ class _$MarkCommentAsReadCopyWithImpl<$Res, $Val extends MarkCommentAsRead>
 }
 
 /// @nodoc
-abstract class _$$MarkCommentAsReadImplCopyWith<$Res>
+abstract class _$$_MarkCommentAsReadCopyWith<$Res>
     implements $MarkCommentAsReadCopyWith<$Res> {
-  factory _$$MarkCommentAsReadImplCopyWith(_$MarkCommentAsReadImpl value,
-          $Res Function(_$MarkCommentAsReadImpl) then) =
-      __$$MarkCommentAsReadImplCopyWithImpl<$Res>;
+  factory _$$_MarkCommentAsReadCopyWith(_$_MarkCommentAsRead value,
+          $Res Function(_$_MarkCommentAsRead) then) =
+      __$$_MarkCommentAsReadCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int commentReplyId, bool read, String auth});
 }
 
 /// @nodoc
-class __$$MarkCommentAsReadImplCopyWithImpl<$Res>
-    extends _$MarkCommentAsReadCopyWithImpl<$Res, _$MarkCommentAsReadImpl>
-    implements _$$MarkCommentAsReadImplCopyWith<$Res> {
-  __$$MarkCommentAsReadImplCopyWithImpl(_$MarkCommentAsReadImpl _value,
-      $Res Function(_$MarkCommentAsReadImpl) _then)
+class __$$_MarkCommentAsReadCopyWithImpl<$Res>
+    extends _$MarkCommentAsReadCopyWithImpl<$Res, _$_MarkCommentAsRead>
+    implements _$$_MarkCommentAsReadCopyWith<$Res> {
+  __$$_MarkCommentAsReadCopyWithImpl(
+      _$_MarkCommentAsRead _value, $Res Function(_$_MarkCommentAsRead) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -886,7 +886,7 @@ class __$$MarkCommentAsReadImplCopyWithImpl<$Res>
     Object? read = null,
     Object? auth = null,
   }) {
-    return _then(_$MarkCommentAsReadImpl(
+    return _then(_$_MarkCommentAsRead(
       commentReplyId: null == commentReplyId
           ? _value.commentReplyId
           : commentReplyId // ignore: cast_nullable_to_non_nullable
@@ -906,13 +906,13 @@ class __$$MarkCommentAsReadImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$MarkCommentAsReadImpl extends _MarkCommentAsRead {
-  const _$MarkCommentAsReadImpl(
+class _$_MarkCommentAsRead extends _MarkCommentAsRead {
+  const _$_MarkCommentAsRead(
       {required this.commentReplyId, required this.read, required this.auth})
       : super._();
 
-  factory _$MarkCommentAsReadImpl.fromJson(Map<String, dynamic> json) =>
-      _$$MarkCommentAsReadImplFromJson(json);
+  factory _$_MarkCommentAsRead.fromJson(Map<String, dynamic> json) =>
+      _$$_MarkCommentAsReadFromJson(json);
 
   @override
   final int commentReplyId;
@@ -930,7 +930,7 @@ class _$MarkCommentAsReadImpl extends _MarkCommentAsRead {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$MarkCommentAsReadImpl &&
+            other is _$_MarkCommentAsRead &&
             (identical(other.commentReplyId, commentReplyId) ||
                 other.commentReplyId == commentReplyId) &&
             (identical(other.read, read) || other.read == read) &&
@@ -944,13 +944,13 @@ class _$MarkCommentAsReadImpl extends _MarkCommentAsRead {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$MarkCommentAsReadImplCopyWith<_$MarkCommentAsReadImpl> get copyWith =>
-      __$$MarkCommentAsReadImplCopyWithImpl<_$MarkCommentAsReadImpl>(
+  _$$_MarkCommentAsReadCopyWith<_$_MarkCommentAsRead> get copyWith =>
+      __$$_MarkCommentAsReadCopyWithImpl<_$_MarkCommentAsRead>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MarkCommentAsReadImplToJson(
+    return _$$_MarkCommentAsReadToJson(
       this,
     );
   }
@@ -960,11 +960,11 @@ abstract class _MarkCommentAsRead extends MarkCommentAsRead {
   const factory _MarkCommentAsRead(
       {required final int commentReplyId,
       required final bool read,
-      required final String auth}) = _$MarkCommentAsReadImpl;
+      required final String auth}) = _$_MarkCommentAsRead;
   const _MarkCommentAsRead._() : super._();
 
   factory _MarkCommentAsRead.fromJson(Map<String, dynamic> json) =
-      _$MarkCommentAsReadImpl.fromJson;
+      _$_MarkCommentAsRead.fromJson;
 
   @override
   int get commentReplyId;
@@ -974,7 +974,7 @@ abstract class _MarkCommentAsRead extends MarkCommentAsRead {
   String get auth;
   @override
   @JsonKey(ignore: true)
-  _$$MarkCommentAsReadImplCopyWith<_$MarkCommentAsReadImpl> get copyWith =>
+  _$$_MarkCommentAsReadCopyWith<_$_MarkCommentAsRead> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1038,22 +1038,22 @@ class _$SaveCommentCopyWithImpl<$Res, $Val extends SaveComment>
 }
 
 /// @nodoc
-abstract class _$$SaveCommentImplCopyWith<$Res>
+abstract class _$$_SaveCommentCopyWith<$Res>
     implements $SaveCommentCopyWith<$Res> {
-  factory _$$SaveCommentImplCopyWith(
-          _$SaveCommentImpl value, $Res Function(_$SaveCommentImpl) then) =
-      __$$SaveCommentImplCopyWithImpl<$Res>;
+  factory _$$_SaveCommentCopyWith(
+          _$_SaveComment value, $Res Function(_$_SaveComment) then) =
+      __$$_SaveCommentCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int commentId, bool save, String auth});
 }
 
 /// @nodoc
-class __$$SaveCommentImplCopyWithImpl<$Res>
-    extends _$SaveCommentCopyWithImpl<$Res, _$SaveCommentImpl>
-    implements _$$SaveCommentImplCopyWith<$Res> {
-  __$$SaveCommentImplCopyWithImpl(
-      _$SaveCommentImpl _value, $Res Function(_$SaveCommentImpl) _then)
+class __$$_SaveCommentCopyWithImpl<$Res>
+    extends _$SaveCommentCopyWithImpl<$Res, _$_SaveComment>
+    implements _$$_SaveCommentCopyWith<$Res> {
+  __$$_SaveCommentCopyWithImpl(
+      _$_SaveComment _value, $Res Function(_$_SaveComment) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1063,7 +1063,7 @@ class __$$SaveCommentImplCopyWithImpl<$Res>
     Object? save = null,
     Object? auth = null,
   }) {
-    return _then(_$SaveCommentImpl(
+    return _then(_$_SaveComment(
       commentId: null == commentId
           ? _value.commentId
           : commentId // ignore: cast_nullable_to_non_nullable
@@ -1083,13 +1083,13 @@ class __$$SaveCommentImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$SaveCommentImpl extends _SaveComment {
-  const _$SaveCommentImpl(
+class _$_SaveComment extends _SaveComment {
+  const _$_SaveComment(
       {required this.commentId, required this.save, required this.auth})
       : super._();
 
-  factory _$SaveCommentImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SaveCommentImplFromJson(json);
+  factory _$_SaveComment.fromJson(Map<String, dynamic> json) =>
+      _$$_SaveCommentFromJson(json);
 
   @override
   final int commentId;
@@ -1107,7 +1107,7 @@ class _$SaveCommentImpl extends _SaveComment {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SaveCommentImpl &&
+            other is _$_SaveComment &&
             (identical(other.commentId, commentId) ||
                 other.commentId == commentId) &&
             (identical(other.save, save) || other.save == save) &&
@@ -1121,12 +1121,12 @@ class _$SaveCommentImpl extends _SaveComment {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$SaveCommentImplCopyWith<_$SaveCommentImpl> get copyWith =>
-      __$$SaveCommentImplCopyWithImpl<_$SaveCommentImpl>(this, _$identity);
+  _$$_SaveCommentCopyWith<_$_SaveComment> get copyWith =>
+      __$$_SaveCommentCopyWithImpl<_$_SaveComment>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SaveCommentImplToJson(
+    return _$$_SaveCommentToJson(
       this,
     );
   }
@@ -1136,11 +1136,11 @@ abstract class _SaveComment extends SaveComment {
   const factory _SaveComment(
       {required final int commentId,
       required final bool save,
-      required final String auth}) = _$SaveCommentImpl;
+      required final String auth}) = _$_SaveComment;
   const _SaveComment._() : super._();
 
   factory _SaveComment.fromJson(Map<String, dynamic> json) =
-      _$SaveCommentImpl.fromJson;
+      _$_SaveComment.fromJson;
 
   @override
   int get commentId;
@@ -1150,7 +1150,7 @@ abstract class _SaveComment extends SaveComment {
   String get auth;
   @override
   @JsonKey(ignore: true)
-  _$$SaveCommentImplCopyWith<_$SaveCommentImpl> get copyWith =>
+  _$$_SaveCommentCopyWith<_$_SaveComment> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1214,22 +1214,22 @@ class _$CreateCommentLikeCopyWithImpl<$Res, $Val extends CreateCommentLike>
 }
 
 /// @nodoc
-abstract class _$$CreateCommentLikeImplCopyWith<$Res>
+abstract class _$$_CreateCommentLikeCopyWith<$Res>
     implements $CreateCommentLikeCopyWith<$Res> {
-  factory _$$CreateCommentLikeImplCopyWith(_$CreateCommentLikeImpl value,
-          $Res Function(_$CreateCommentLikeImpl) then) =
-      __$$CreateCommentLikeImplCopyWithImpl<$Res>;
+  factory _$$_CreateCommentLikeCopyWith(_$_CreateCommentLike value,
+          $Res Function(_$_CreateCommentLike) then) =
+      __$$_CreateCommentLikeCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int commentId, VoteType score, String auth});
 }
 
 /// @nodoc
-class __$$CreateCommentLikeImplCopyWithImpl<$Res>
-    extends _$CreateCommentLikeCopyWithImpl<$Res, _$CreateCommentLikeImpl>
-    implements _$$CreateCommentLikeImplCopyWith<$Res> {
-  __$$CreateCommentLikeImplCopyWithImpl(_$CreateCommentLikeImpl _value,
-      $Res Function(_$CreateCommentLikeImpl) _then)
+class __$$_CreateCommentLikeCopyWithImpl<$Res>
+    extends _$CreateCommentLikeCopyWithImpl<$Res, _$_CreateCommentLike>
+    implements _$$_CreateCommentLikeCopyWith<$Res> {
+  __$$_CreateCommentLikeCopyWithImpl(
+      _$_CreateCommentLike _value, $Res Function(_$_CreateCommentLike) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1239,7 +1239,7 @@ class __$$CreateCommentLikeImplCopyWithImpl<$Res>
     Object? score = null,
     Object? auth = null,
   }) {
-    return _then(_$CreateCommentLikeImpl(
+    return _then(_$_CreateCommentLike(
       commentId: null == commentId
           ? _value.commentId
           : commentId // ignore: cast_nullable_to_non_nullable
@@ -1259,13 +1259,13 @@ class __$$CreateCommentLikeImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$CreateCommentLikeImpl extends _CreateCommentLike {
-  const _$CreateCommentLikeImpl(
+class _$_CreateCommentLike extends _CreateCommentLike {
+  const _$_CreateCommentLike(
       {required this.commentId, required this.score, required this.auth})
       : super._();
 
-  factory _$CreateCommentLikeImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CreateCommentLikeImplFromJson(json);
+  factory _$_CreateCommentLike.fromJson(Map<String, dynamic> json) =>
+      _$$_CreateCommentLikeFromJson(json);
 
   @override
   final int commentId;
@@ -1283,7 +1283,7 @@ class _$CreateCommentLikeImpl extends _CreateCommentLike {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CreateCommentLikeImpl &&
+            other is _$_CreateCommentLike &&
             (identical(other.commentId, commentId) ||
                 other.commentId == commentId) &&
             (identical(other.score, score) || other.score == score) &&
@@ -1297,13 +1297,13 @@ class _$CreateCommentLikeImpl extends _CreateCommentLike {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CreateCommentLikeImplCopyWith<_$CreateCommentLikeImpl> get copyWith =>
-      __$$CreateCommentLikeImplCopyWithImpl<_$CreateCommentLikeImpl>(
+  _$$_CreateCommentLikeCopyWith<_$_CreateCommentLike> get copyWith =>
+      __$$_CreateCommentLikeCopyWithImpl<_$_CreateCommentLike>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CreateCommentLikeImplToJson(
+    return _$$_CreateCommentLikeToJson(
       this,
     );
   }
@@ -1313,11 +1313,11 @@ abstract class _CreateCommentLike extends CreateCommentLike {
   const factory _CreateCommentLike(
       {required final int commentId,
       required final VoteType score,
-      required final String auth}) = _$CreateCommentLikeImpl;
+      required final String auth}) = _$_CreateCommentLike;
   const _CreateCommentLike._() : super._();
 
   factory _CreateCommentLike.fromJson(Map<String, dynamic> json) =
-      _$CreateCommentLikeImpl.fromJson;
+      _$_CreateCommentLike.fromJson;
 
   @override
   int get commentId;
@@ -1327,7 +1327,7 @@ abstract class _CreateCommentLike extends CreateCommentLike {
   String get auth;
   @override
   @JsonKey(ignore: true)
-  _$$CreateCommentLikeImplCopyWith<_$CreateCommentLikeImpl> get copyWith =>
+  _$$_CreateCommentLikeCopyWith<_$_CreateCommentLike> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1385,22 +1385,22 @@ class _$GetCommentCopyWithImpl<$Res, $Val extends GetComment>
 }
 
 /// @nodoc
-abstract class _$$GetCommentImplCopyWith<$Res>
+abstract class _$$_GetCommentCopyWith<$Res>
     implements $GetCommentCopyWith<$Res> {
-  factory _$$GetCommentImplCopyWith(
-          _$GetCommentImpl value, $Res Function(_$GetCommentImpl) then) =
-      __$$GetCommentImplCopyWithImpl<$Res>;
+  factory _$$_GetCommentCopyWith(
+          _$_GetComment value, $Res Function(_$_GetComment) then) =
+      __$$_GetCommentCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int id, String? auth});
 }
 
 /// @nodoc
-class __$$GetCommentImplCopyWithImpl<$Res>
-    extends _$GetCommentCopyWithImpl<$Res, _$GetCommentImpl>
-    implements _$$GetCommentImplCopyWith<$Res> {
-  __$$GetCommentImplCopyWithImpl(
-      _$GetCommentImpl _value, $Res Function(_$GetCommentImpl) _then)
+class __$$_GetCommentCopyWithImpl<$Res>
+    extends _$GetCommentCopyWithImpl<$Res, _$_GetComment>
+    implements _$$_GetCommentCopyWith<$Res> {
+  __$$_GetCommentCopyWithImpl(
+      _$_GetComment _value, $Res Function(_$_GetComment) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1409,7 +1409,7 @@ class __$$GetCommentImplCopyWithImpl<$Res>
     Object? id = null,
     Object? auth = freezed,
   }) {
-    return _then(_$GetCommentImpl(
+    return _then(_$_GetComment(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1425,11 +1425,11 @@ class __$$GetCommentImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$GetCommentImpl extends _GetComment {
-  const _$GetCommentImpl({required this.id, this.auth}) : super._();
+class _$_GetComment extends _GetComment {
+  const _$_GetComment({required this.id, this.auth}) : super._();
 
-  factory _$GetCommentImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GetCommentImplFromJson(json);
+  factory _$_GetComment.fromJson(Map<String, dynamic> json) =>
+      _$$_GetCommentFromJson(json);
 
   @override
   final int id;
@@ -1445,7 +1445,7 @@ class _$GetCommentImpl extends _GetComment {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GetCommentImpl &&
+            other is _$_GetComment &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
@@ -1457,12 +1457,12 @@ class _$GetCommentImpl extends _GetComment {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetCommentImplCopyWith<_$GetCommentImpl> get copyWith =>
-      __$$GetCommentImplCopyWithImpl<_$GetCommentImpl>(this, _$identity);
+  _$$_GetCommentCopyWith<_$_GetComment> get copyWith =>
+      __$$_GetCommentCopyWithImpl<_$_GetComment>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetCommentImplToJson(
+    return _$$_GetCommentToJson(
       this,
     );
   }
@@ -1470,11 +1470,11 @@ class _$GetCommentImpl extends _GetComment {
 
 abstract class _GetComment extends GetComment {
   const factory _GetComment({required final int id, final String? auth}) =
-      _$GetCommentImpl;
+      _$_GetComment;
   const _GetComment._() : super._();
 
   factory _GetComment.fromJson(Map<String, dynamic> json) =
-      _$GetCommentImpl.fromJson;
+      _$_GetComment.fromJson;
 
   @override
   int get id;
@@ -1482,7 +1482,7 @@ abstract class _GetComment extends GetComment {
   String? get auth;
   @override
   @JsonKey(ignore: true)
-  _$$GetCommentImplCopyWith<_$GetCommentImpl> get copyWith =>
+  _$$_GetCommentCopyWith<_$_GetComment> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1606,11 +1606,11 @@ class _$GetCommentsCopyWithImpl<$Res, $Val extends GetComments>
 }
 
 /// @nodoc
-abstract class _$$GetCommentsImplCopyWith<$Res>
+abstract class _$$_GetCommentsCopyWith<$Res>
     implements $GetCommentsCopyWith<$Res> {
-  factory _$$GetCommentsImplCopyWith(
-          _$GetCommentsImpl value, $Res Function(_$GetCommentsImpl) then) =
-      __$$GetCommentsImplCopyWithImpl<$Res>;
+  factory _$$_GetCommentsCopyWith(
+          _$_GetComments value, $Res Function(_$_GetComments) then) =
+      __$$_GetCommentsCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1628,11 +1628,11 @@ abstract class _$$GetCommentsImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$GetCommentsImplCopyWithImpl<$Res>
-    extends _$GetCommentsCopyWithImpl<$Res, _$GetCommentsImpl>
-    implements _$$GetCommentsImplCopyWith<$Res> {
-  __$$GetCommentsImplCopyWithImpl(
-      _$GetCommentsImpl _value, $Res Function(_$GetCommentsImpl) _then)
+class __$$_GetCommentsCopyWithImpl<$Res>
+    extends _$GetCommentsCopyWithImpl<$Res, _$_GetComments>
+    implements _$$_GetCommentsCopyWith<$Res> {
+  __$$_GetCommentsCopyWithImpl(
+      _$_GetComments _value, $Res Function(_$_GetComments) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1650,7 +1650,7 @@ class __$$GetCommentsImplCopyWithImpl<$Res>
     Object? auth = freezed,
     Object? maxDepth = freezed,
   }) {
-    return _then(_$GetCommentsImpl(
+    return _then(_$_GetComments(
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -1702,8 +1702,8 @@ class __$$GetCommentsImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$GetCommentsImpl extends _GetComments {
-  const _$GetCommentsImpl(
+class _$_GetComments extends _GetComments {
+  const _$_GetComments(
       {@JsonKey(name: 'type_') this.type,
       this.sort,
       this.page,
@@ -1717,8 +1717,8 @@ class _$GetCommentsImpl extends _GetComments {
       this.maxDepth})
       : super._();
 
-  factory _$GetCommentsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GetCommentsImplFromJson(json);
+  factory _$_GetComments.fromJson(Map<String, dynamic> json) =>
+      _$$_GetCommentsFromJson(json);
 
   @override
   @JsonKey(name: 'type_')
@@ -1753,7 +1753,7 @@ class _$GetCommentsImpl extends _GetComments {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GetCommentsImpl &&
+            other is _$_GetComments &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.sort, sort) || other.sort == sort) &&
             (identical(other.page, page) || other.page == page) &&
@@ -1780,12 +1780,12 @@ class _$GetCommentsImpl extends _GetComments {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetCommentsImplCopyWith<_$GetCommentsImpl> get copyWith =>
-      __$$GetCommentsImplCopyWithImpl<_$GetCommentsImpl>(this, _$identity);
+  _$$_GetCommentsCopyWith<_$_GetComments> get copyWith =>
+      __$$_GetCommentsCopyWithImpl<_$_GetComments>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetCommentsImplToJson(
+    return _$$_GetCommentsToJson(
       this,
     );
   }
@@ -1803,11 +1803,11 @@ abstract class _GetComments extends GetComments {
       final int? parentId,
       final bool? savedOnly,
       final String? auth,
-      final int? maxDepth}) = _$GetCommentsImpl;
+      final int? maxDepth}) = _$_GetComments;
   const _GetComments._() : super._();
 
   factory _GetComments.fromJson(Map<String, dynamic> json) =
-      _$GetCommentsImpl.fromJson;
+      _$_GetComments.fromJson;
 
   @override
   @JsonKey(name: 'type_')
@@ -1834,7 +1834,7 @@ abstract class _GetComments extends GetComments {
   int? get maxDepth;
   @override
   @JsonKey(ignore: true)
-  _$$GetCommentsImplCopyWith<_$GetCommentsImpl> get copyWith =>
+  _$$_GetCommentsCopyWith<_$_GetComments> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1898,22 +1898,22 @@ class _$CreateCommentReportCopyWithImpl<$Res, $Val extends CreateCommentReport>
 }
 
 /// @nodoc
-abstract class _$$CreateCommentReportImplCopyWith<$Res>
+abstract class _$$_CreateCommentReportCopyWith<$Res>
     implements $CreateCommentReportCopyWith<$Res> {
-  factory _$$CreateCommentReportImplCopyWith(_$CreateCommentReportImpl value,
-          $Res Function(_$CreateCommentReportImpl) then) =
-      __$$CreateCommentReportImplCopyWithImpl<$Res>;
+  factory _$$_CreateCommentReportCopyWith(_$_CreateCommentReport value,
+          $Res Function(_$_CreateCommentReport) then) =
+      __$$_CreateCommentReportCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int commentId, String reason, String auth});
 }
 
 /// @nodoc
-class __$$CreateCommentReportImplCopyWithImpl<$Res>
-    extends _$CreateCommentReportCopyWithImpl<$Res, _$CreateCommentReportImpl>
-    implements _$$CreateCommentReportImplCopyWith<$Res> {
-  __$$CreateCommentReportImplCopyWithImpl(_$CreateCommentReportImpl _value,
-      $Res Function(_$CreateCommentReportImpl) _then)
+class __$$_CreateCommentReportCopyWithImpl<$Res>
+    extends _$CreateCommentReportCopyWithImpl<$Res, _$_CreateCommentReport>
+    implements _$$_CreateCommentReportCopyWith<$Res> {
+  __$$_CreateCommentReportCopyWithImpl(_$_CreateCommentReport _value,
+      $Res Function(_$_CreateCommentReport) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1923,7 +1923,7 @@ class __$$CreateCommentReportImplCopyWithImpl<$Res>
     Object? reason = null,
     Object? auth = null,
   }) {
-    return _then(_$CreateCommentReportImpl(
+    return _then(_$_CreateCommentReport(
       commentId: null == commentId
           ? _value.commentId
           : commentId // ignore: cast_nullable_to_non_nullable
@@ -1943,13 +1943,13 @@ class __$$CreateCommentReportImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$CreateCommentReportImpl extends _CreateCommentReport {
-  const _$CreateCommentReportImpl(
+class _$_CreateCommentReport extends _CreateCommentReport {
+  const _$_CreateCommentReport(
       {required this.commentId, required this.reason, required this.auth})
       : super._();
 
-  factory _$CreateCommentReportImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CreateCommentReportImplFromJson(json);
+  factory _$_CreateCommentReport.fromJson(Map<String, dynamic> json) =>
+      _$$_CreateCommentReportFromJson(json);
 
   @override
   final int commentId;
@@ -1967,7 +1967,7 @@ class _$CreateCommentReportImpl extends _CreateCommentReport {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CreateCommentReportImpl &&
+            other is _$_CreateCommentReport &&
             (identical(other.commentId, commentId) ||
                 other.commentId == commentId) &&
             (identical(other.reason, reason) || other.reason == reason) &&
@@ -1981,13 +1981,13 @@ class _$CreateCommentReportImpl extends _CreateCommentReport {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CreateCommentReportImplCopyWith<_$CreateCommentReportImpl> get copyWith =>
-      __$$CreateCommentReportImplCopyWithImpl<_$CreateCommentReportImpl>(
+  _$$_CreateCommentReportCopyWith<_$_CreateCommentReport> get copyWith =>
+      __$$_CreateCommentReportCopyWithImpl<_$_CreateCommentReport>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CreateCommentReportImplToJson(
+    return _$$_CreateCommentReportToJson(
       this,
     );
   }
@@ -1997,11 +1997,11 @@ abstract class _CreateCommentReport extends CreateCommentReport {
   const factory _CreateCommentReport(
       {required final int commentId,
       required final String reason,
-      required final String auth}) = _$CreateCommentReportImpl;
+      required final String auth}) = _$_CreateCommentReport;
   const _CreateCommentReport._() : super._();
 
   factory _CreateCommentReport.fromJson(Map<String, dynamic> json) =
-      _$CreateCommentReportImpl.fromJson;
+      _$_CreateCommentReport.fromJson;
 
   @override
   int get commentId;
@@ -2011,7 +2011,7 @@ abstract class _CreateCommentReport extends CreateCommentReport {
   String get auth;
   @override
   @JsonKey(ignore: true)
-  _$$CreateCommentReportImplCopyWith<_$CreateCommentReportImpl> get copyWith =>
+  _$$_CreateCommentReportCopyWith<_$_CreateCommentReport> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2076,22 +2076,22 @@ class _$ResolveCommentReportCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$ResolveCommentReportImplCopyWith<$Res>
+abstract class _$$_ResolveCommentReportCopyWith<$Res>
     implements $ResolveCommentReportCopyWith<$Res> {
-  factory _$$ResolveCommentReportImplCopyWith(_$ResolveCommentReportImpl value,
-          $Res Function(_$ResolveCommentReportImpl) then) =
-      __$$ResolveCommentReportImplCopyWithImpl<$Res>;
+  factory _$$_ResolveCommentReportCopyWith(_$_ResolveCommentReport value,
+          $Res Function(_$_ResolveCommentReport) then) =
+      __$$_ResolveCommentReportCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int reportId, bool resolved, String auth});
 }
 
 /// @nodoc
-class __$$ResolveCommentReportImplCopyWithImpl<$Res>
-    extends _$ResolveCommentReportCopyWithImpl<$Res, _$ResolveCommentReportImpl>
-    implements _$$ResolveCommentReportImplCopyWith<$Res> {
-  __$$ResolveCommentReportImplCopyWithImpl(_$ResolveCommentReportImpl _value,
-      $Res Function(_$ResolveCommentReportImpl) _then)
+class __$$_ResolveCommentReportCopyWithImpl<$Res>
+    extends _$ResolveCommentReportCopyWithImpl<$Res, _$_ResolveCommentReport>
+    implements _$$_ResolveCommentReportCopyWith<$Res> {
+  __$$_ResolveCommentReportCopyWithImpl(_$_ResolveCommentReport _value,
+      $Res Function(_$_ResolveCommentReport) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2101,7 +2101,7 @@ class __$$ResolveCommentReportImplCopyWithImpl<$Res>
     Object? resolved = null,
     Object? auth = null,
   }) {
-    return _then(_$ResolveCommentReportImpl(
+    return _then(_$_ResolveCommentReport(
       reportId: null == reportId
           ? _value.reportId
           : reportId // ignore: cast_nullable_to_non_nullable
@@ -2121,13 +2121,13 @@ class __$$ResolveCommentReportImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$ResolveCommentReportImpl extends _ResolveCommentReport {
-  const _$ResolveCommentReportImpl(
+class _$_ResolveCommentReport extends _ResolveCommentReport {
+  const _$_ResolveCommentReport(
       {required this.reportId, required this.resolved, required this.auth})
       : super._();
 
-  factory _$ResolveCommentReportImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ResolveCommentReportImplFromJson(json);
+  factory _$_ResolveCommentReport.fromJson(Map<String, dynamic> json) =>
+      _$$_ResolveCommentReportFromJson(json);
 
   @override
   final int reportId;
@@ -2145,7 +2145,7 @@ class _$ResolveCommentReportImpl extends _ResolveCommentReport {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ResolveCommentReportImpl &&
+            other is _$_ResolveCommentReport &&
             (identical(other.reportId, reportId) ||
                 other.reportId == reportId) &&
             (identical(other.resolved, resolved) ||
@@ -2160,14 +2160,13 @@ class _$ResolveCommentReportImpl extends _ResolveCommentReport {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ResolveCommentReportImplCopyWith<_$ResolveCommentReportImpl>
-      get copyWith =>
-          __$$ResolveCommentReportImplCopyWithImpl<_$ResolveCommentReportImpl>(
-              this, _$identity);
+  _$$_ResolveCommentReportCopyWith<_$_ResolveCommentReport> get copyWith =>
+      __$$_ResolveCommentReportCopyWithImpl<_$_ResolveCommentReport>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ResolveCommentReportImplToJson(
+    return _$$_ResolveCommentReportToJson(
       this,
     );
   }
@@ -2177,11 +2176,11 @@ abstract class _ResolveCommentReport extends ResolveCommentReport {
   const factory _ResolveCommentReport(
       {required final int reportId,
       required final bool resolved,
-      required final String auth}) = _$ResolveCommentReportImpl;
+      required final String auth}) = _$_ResolveCommentReport;
   const _ResolveCommentReport._() : super._();
 
   factory _ResolveCommentReport.fromJson(Map<String, dynamic> json) =
-      _$ResolveCommentReportImpl.fromJson;
+      _$_ResolveCommentReport.fromJson;
 
   @override
   int get reportId;
@@ -2191,8 +2190,8 @@ abstract class _ResolveCommentReport extends ResolveCommentReport {
   String get auth;
   @override
   @JsonKey(ignore: true)
-  _$$ResolveCommentReportImplCopyWith<_$ResolveCommentReportImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$_ResolveCommentReportCopyWith<_$_ResolveCommentReport> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ListCommentReports _$ListCommentReportsFromJson(Map<String, dynamic> json) {
@@ -2272,11 +2271,11 @@ class _$ListCommentReportsCopyWithImpl<$Res, $Val extends ListCommentReports>
 }
 
 /// @nodoc
-abstract class _$$ListCommentReportsImplCopyWith<$Res>
+abstract class _$$_ListCommentReportsCopyWith<$Res>
     implements $ListCommentReportsCopyWith<$Res> {
-  factory _$$ListCommentReportsImplCopyWith(_$ListCommentReportsImpl value,
-          $Res Function(_$ListCommentReportsImpl) then) =
-      __$$ListCommentReportsImplCopyWithImpl<$Res>;
+  factory _$$_ListCommentReportsCopyWith(_$_ListCommentReports value,
+          $Res Function(_$_ListCommentReports) then) =
+      __$$_ListCommentReportsCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2288,11 +2287,11 @@ abstract class _$$ListCommentReportsImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ListCommentReportsImplCopyWithImpl<$Res>
-    extends _$ListCommentReportsCopyWithImpl<$Res, _$ListCommentReportsImpl>
-    implements _$$ListCommentReportsImplCopyWith<$Res> {
-  __$$ListCommentReportsImplCopyWithImpl(_$ListCommentReportsImpl _value,
-      $Res Function(_$ListCommentReportsImpl) _then)
+class __$$_ListCommentReportsCopyWithImpl<$Res>
+    extends _$ListCommentReportsCopyWithImpl<$Res, _$_ListCommentReports>
+    implements _$$_ListCommentReportsCopyWith<$Res> {
+  __$$_ListCommentReportsCopyWithImpl(
+      _$_ListCommentReports _value, $Res Function(_$_ListCommentReports) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2304,7 +2303,7 @@ class __$$ListCommentReportsImplCopyWithImpl<$Res>
     Object? unresolvedOnly = freezed,
     Object? auth = null,
   }) {
-    return _then(_$ListCommentReportsImpl(
+    return _then(_$_ListCommentReports(
       page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -2332,8 +2331,8 @@ class __$$ListCommentReportsImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$ListCommentReportsImpl extends _ListCommentReports {
-  const _$ListCommentReportsImpl(
+class _$_ListCommentReports extends _ListCommentReports {
+  const _$_ListCommentReports(
       {this.page,
       this.limit,
       this.communityId,
@@ -2341,8 +2340,8 @@ class _$ListCommentReportsImpl extends _ListCommentReports {
       required this.auth})
       : super._();
 
-  factory _$ListCommentReportsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ListCommentReportsImplFromJson(json);
+  factory _$_ListCommentReports.fromJson(Map<String, dynamic> json) =>
+      _$$_ListCommentReportsFromJson(json);
 
   @override
   final int? page;
@@ -2364,7 +2363,7 @@ class _$ListCommentReportsImpl extends _ListCommentReports {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ListCommentReportsImpl &&
+            other is _$_ListCommentReports &&
             (identical(other.page, page) || other.page == page) &&
             (identical(other.limit, limit) || other.limit == limit) &&
             (identical(other.communityId, communityId) ||
@@ -2382,13 +2381,13 @@ class _$ListCommentReportsImpl extends _ListCommentReports {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ListCommentReportsImplCopyWith<_$ListCommentReportsImpl> get copyWith =>
-      __$$ListCommentReportsImplCopyWithImpl<_$ListCommentReportsImpl>(
+  _$$_ListCommentReportsCopyWith<_$_ListCommentReports> get copyWith =>
+      __$$_ListCommentReportsCopyWithImpl<_$_ListCommentReports>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ListCommentReportsImplToJson(
+    return _$$_ListCommentReportsToJson(
       this,
     );
   }
@@ -2400,11 +2399,11 @@ abstract class _ListCommentReports extends ListCommentReports {
       final int? limit,
       final int? communityId,
       final bool? unresolvedOnly,
-      required final String auth}) = _$ListCommentReportsImpl;
+      required final String auth}) = _$_ListCommentReports;
   const _ListCommentReports._() : super._();
 
   factory _ListCommentReports.fromJson(Map<String, dynamic> json) =
-      _$ListCommentReportsImpl.fromJson;
+      _$_ListCommentReports.fromJson;
 
   @override
   int? get page;
@@ -2418,6 +2417,6 @@ abstract class _ListCommentReports extends ListCommentReports {
   String get auth;
   @override
   @JsonKey(ignore: true)
-  _$$ListCommentReportsImplCopyWith<_$ListCommentReportsImpl> get copyWith =>
+  _$$_ListCommentReportsCopyWith<_$_ListCommentReports> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -70,6 +70,41 @@ class GetModlog
   Modlog responseFactory(Map<String, dynamic> json) => Modlog.fromJson(json);
 }
 
+/// Blocks an instance given its instance id.
+///
+/// This function is only supported on lemmy instances version 0.19.0 and above.
+@freezed
+class BlockInstance
+    with _$BlockInstance
+    implements
+        LemmyApiQuery<BlockInstanceResponse>,
+        LemmyApiAuthenticatedQuery {
+  @apiSerde
+  const factory BlockInstance({
+    /// The ID of the instance
+    required int instanceId,
+
+    /// Whether to block or unblock the given instance
+    required bool block,
+
+    /// The auth token. This parameter is passed in the header
+    String? auth,
+  }) = _BlockInstance;
+
+  const BlockInstance._();
+
+  factory BlockInstance.fromJson(Map<String, dynamic> json) =>
+      _$BlockInstanceFromJson(json);
+
+  final path = '/site/block';
+
+  final httpMethod = HttpMethod.post;
+
+  @override
+  BlockInstanceResponse responseFactory(Map<String, dynamic> json) =>
+      BlockInstanceResponse.fromJson(json);
+}
+
 @freezed
 class CreateSite
     with _$CreateSite
