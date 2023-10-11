@@ -87,7 +87,7 @@ class BlockInstance
     /// Whether to block or unblock the given instance
     required bool block,
 
-    /// The auth token. This only works if auth is set within the header
+    /// The auth token. This parameter is passed in the header
     String? auth,
   }) = _BlockInstance;
 
