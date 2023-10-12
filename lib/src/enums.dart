@@ -51,6 +51,8 @@ enum SortType {
   hot('Hot'),
   new_('New'),
   old('Old'),
+  scaled('Scaled'),
+  controversial('Controversial'),
   topHour('TopHour'),
   topSixHour('TopSixHour'),
   topTwelveHour('TopTwelveHour'),
@@ -81,6 +83,7 @@ enum CommentSortType {
   top('Top'),
   new_('New'),
   old('Old'),
+  controversial('Controversial'),
   chat('Chat');
 
   final String value;
