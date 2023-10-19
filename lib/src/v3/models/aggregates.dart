@@ -54,8 +54,8 @@ class PostAggregates with _$PostAggregates {
     required int score,
     required int upvotes,
     required int downvotes,
-    required DateTime newestCommentTime,
-    required DateTime newestCommentTimeNecro,
+    required DateTime? newestCommentTime,
+    required DateTime? newestCommentTimeNecro,
   }) = _PostAggregates;
 
   const PostAggregates._();

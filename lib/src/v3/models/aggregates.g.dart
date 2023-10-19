@@ -6,8 +6,9 @@ part of 'aggregates.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PersonAggregates _$$_PersonAggregatesFromJson(Map<String, dynamic> json) =>
-    _$_PersonAggregates(
+_$PersonAggregatesImpl _$$PersonAggregatesImplFromJson(
+        Map<String, dynamic> json) =>
+    _$PersonAggregatesImpl(
       id: json['id'] as int,
       personId: json['person_id'] as int,
       postCount: json['post_count'] as int,
@@ -16,7 +17,8 @@ _$_PersonAggregates _$$_PersonAggregatesFromJson(Map<String, dynamic> json) =>
       commentScore: json['comment_score'] as int,
     );
 
-Map<String, dynamic> _$$_PersonAggregatesToJson(_$_PersonAggregates instance) =>
+Map<String, dynamic> _$$PersonAggregatesImplToJson(
+        _$PersonAggregatesImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'person_id': instance.personId,
@@ -26,8 +28,8 @@ Map<String, dynamic> _$$_PersonAggregatesToJson(_$_PersonAggregates instance) =>
       'comment_score': instance.commentScore,
     };
 
-_$_SiteAggregates _$$_SiteAggregatesFromJson(Map<String, dynamic> json) =>
-    _$_SiteAggregates(
+_$SiteAggregatesImpl _$$SiteAggregatesImplFromJson(Map<String, dynamic> json) =>
+    _$SiteAggregatesImpl(
       id: json['id'] as int,
       siteId: json['site_id'] as int,
       users: json['users'] as int,
@@ -40,7 +42,8 @@ _$_SiteAggregates _$$_SiteAggregatesFromJson(Map<String, dynamic> json) =>
       usersActiveHalfYear: json['users_active_half_year'] as int,
     );
 
-Map<String, dynamic> _$$_SiteAggregatesToJson(_$_SiteAggregates instance) =>
+Map<String, dynamic> _$$SiteAggregatesImplToJson(
+        _$SiteAggregatesImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'site_id': instance.siteId,
@@ -54,21 +57,22 @@ Map<String, dynamic> _$$_SiteAggregatesToJson(_$_SiteAggregates instance) =>
       'users_active_half_year': instance.usersActiveHalfYear,
     };
 
-_$_PostAggregates _$$_PostAggregatesFromJson(Map<String, dynamic> json) =>
-    _$_PostAggregates(
+_$PostAggregatesImpl _$$PostAggregatesImplFromJson(Map<String, dynamic> json) =>
+    _$PostAggregatesImpl(
       id: json['id'] as int,
       postId: json['post_id'] as int,
       comments: json['comments'] as int,
       score: json['score'] as int,
       upvotes: json['upvotes'] as int,
       downvotes: json['downvotes'] as int,
-      newestCommentTime: const ForceUtcDateTime()
-          .fromJson(json['newest_comment_time'] as String),
-      newestCommentTimeNecro: const ForceUtcDateTime()
-          .fromJson(json['newest_comment_time_necro'] as String),
+      newestCommentTime: _$JsonConverterFromJson<String, DateTime>(
+          json['newest_comment_time'], const ForceUtcDateTime().fromJson),
+      newestCommentTimeNecro: _$JsonConverterFromJson<String, DateTime>(
+          json['newest_comment_time_necro'], const ForceUtcDateTime().fromJson),
     );
 
-Map<String, dynamic> _$$_PostAggregatesToJson(_$_PostAggregates instance) =>
+Map<String, dynamic> _$$PostAggregatesImplToJson(
+        _$PostAggregatesImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'post_id': instance.postId,
@@ -76,15 +80,27 @@ Map<String, dynamic> _$$_PostAggregatesToJson(_$_PostAggregates instance) =>
       'score': instance.score,
       'upvotes': instance.upvotes,
       'downvotes': instance.downvotes,
-      'newest_comment_time':
-          const ForceUtcDateTime().toJson(instance.newestCommentTime),
-      'newest_comment_time_necro':
-          const ForceUtcDateTime().toJson(instance.newestCommentTimeNecro),
+      'newest_comment_time': _$JsonConverterToJson<String, DateTime>(
+          instance.newestCommentTime, const ForceUtcDateTime().toJson),
+      'newest_comment_time_necro': _$JsonConverterToJson<String, DateTime>(
+          instance.newestCommentTimeNecro, const ForceUtcDateTime().toJson),
     };
 
-_$_CommunityAggregates _$$_CommunityAggregatesFromJson(
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) =>
+    json == null ? null : fromJson(json as Json);
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) =>
+    value == null ? null : toJson(value);
+
+_$CommunityAggregatesImpl _$$CommunityAggregatesImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CommunityAggregates(
+    _$CommunityAggregatesImpl(
       id: json['id'] as int,
       communityId: json['community_id'] as int,
       subscribers: json['subscribers'] as int,
@@ -96,8 +112,8 @@ _$_CommunityAggregates _$$_CommunityAggregatesFromJson(
       usersActiveHalfYear: json['users_active_half_year'] as int,
     );
 
-Map<String, dynamic> _$$_CommunityAggregatesToJson(
-        _$_CommunityAggregates instance) =>
+Map<String, dynamic> _$$CommunityAggregatesImplToJson(
+        _$CommunityAggregatesImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'community_id': instance.communityId,
@@ -110,8 +126,9 @@ Map<String, dynamic> _$$_CommunityAggregatesToJson(
       'users_active_half_year': instance.usersActiveHalfYear,
     };
 
-_$_CommentAggregates _$$_CommentAggregatesFromJson(Map<String, dynamic> json) =>
-    _$_CommentAggregates(
+_$CommentAggregatesImpl _$$CommentAggregatesImplFromJson(
+        Map<String, dynamic> json) =>
+    _$CommentAggregatesImpl(
       id: json['id'] as int,
       commentId: json['comment_id'] as int,
       score: json['score'] as int,
@@ -120,8 +137,8 @@ _$_CommentAggregates _$$_CommentAggregatesFromJson(Map<String, dynamic> json) =>
       childCount: json['child_count'] as int,
     );
 
-Map<String, dynamic> _$$_CommentAggregatesToJson(
-        _$_CommentAggregates instance) =>
+Map<String, dynamic> _$$CommentAggregatesImplToJson(
+        _$CommentAggregatesImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'comment_id': instance.commentId,
