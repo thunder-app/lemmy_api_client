@@ -617,7 +617,9 @@ mixin _$PostAggregates {
   int get score => throw _privateConstructorUsedError;
   int get upvotes => throw _privateConstructorUsedError;
   int get downvotes => throw _privateConstructorUsedError;
+  @deprecated
   DateTime? get newestCommentTime => throw _privateConstructorUsedError;
+  @deprecated
   DateTime? get newestCommentTimeNecro => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -639,8 +641,8 @@ abstract class $PostAggregatesCopyWith<$Res> {
       int score,
       int upvotes,
       int downvotes,
-      DateTime? newestCommentTime,
-      DateTime? newestCommentTimeNecro});
+      @deprecated DateTime? newestCommentTime,
+      @deprecated DateTime? newestCommentTimeNecro});
 }
 
 /// @nodoc
@@ -717,8 +719,8 @@ abstract class _$$PostAggregatesImplCopyWith<$Res>
       int score,
       int upvotes,
       int downvotes,
-      DateTime? newestCommentTime,
-      DateTime? newestCommentTimeNecro});
+      @deprecated DateTime? newestCommentTime,
+      @deprecated DateTime? newestCommentTimeNecro});
 }
 
 /// @nodoc
@@ -789,8 +791,8 @@ class _$PostAggregatesImpl extends _PostAggregates {
       required this.score,
       required this.upvotes,
       required this.downvotes,
-      required this.newestCommentTime,
-      required this.newestCommentTimeNecro})
+      @deprecated this.newestCommentTime,
+      @deprecated this.newestCommentTimeNecro})
       : super._();
 
   factory _$PostAggregatesImpl.fromJson(Map<String, dynamic> json) =>
@@ -809,8 +811,10 @@ class _$PostAggregatesImpl extends _PostAggregates {
   @override
   final int downvotes;
   @override
+  @deprecated
   final DateTime? newestCommentTime;
   @override
+  @deprecated
   final DateTime? newestCommentTimeNecro;
 
   @override
@@ -859,14 +863,15 @@ class _$PostAggregatesImpl extends _PostAggregates {
 
 abstract class _PostAggregates extends PostAggregates {
   const factory _PostAggregates(
-      {required final int id,
-      required final int postId,
-      required final int comments,
-      required final int score,
-      required final int upvotes,
-      required final int downvotes,
-      required final DateTime? newestCommentTime,
-      required final DateTime? newestCommentTimeNecro}) = _$PostAggregatesImpl;
+          {required final int id,
+          required final int postId,
+          required final int comments,
+          required final int score,
+          required final int upvotes,
+          required final int downvotes,
+          @deprecated final DateTime? newestCommentTime,
+          @deprecated final DateTime? newestCommentTimeNecro}) =
+      _$PostAggregatesImpl;
   const _PostAggregates._() : super._();
 
   factory _PostAggregates.fromJson(Map<String, dynamic> json) =
@@ -885,8 +890,10 @@ abstract class _PostAggregates extends PostAggregates {
   @override
   int get downvotes;
   @override
+  @deprecated
   DateTime? get newestCommentTime;
   @override
+  @deprecated
   DateTime? get newestCommentTimeNecro;
   @override
   @JsonKey(ignore: true)

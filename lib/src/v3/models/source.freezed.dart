@@ -33,8 +33,7 @@ mixin _$PersonSafe {
   String? get banner => throw _privateConstructorUsedError;
   bool get deleted => throw _privateConstructorUsedError;
   String? get matrixUserId => throw _privateConstructorUsedError;
-
-  /// Removed in Lemmy 0.19
+  @deprecated
   bool? get admin => throw _privateConstructorUsedError;
   bool get botAccount => throw _privateConstructorUsedError;
   DateTime? get banExpires => throw _privateConstructorUsedError;
@@ -66,7 +65,7 @@ abstract class $PersonSafeCopyWith<$Res> {
       String? banner,
       bool deleted,
       String? matrixUserId,
-      bool? admin,
+      @deprecated bool? admin,
       bool botAccount,
       DateTime? banExpires,
       String instanceHost});
@@ -198,7 +197,7 @@ abstract class _$$PersonSafeImplCopyWith<$Res>
       String? banner,
       bool deleted,
       String? matrixUserId,
-      bool? admin,
+      @deprecated bool? admin,
       bool botAccount,
       DateTime? banExpires,
       String instanceHost});
@@ -324,7 +323,7 @@ class _$PersonSafeImpl extends _PersonSafe {
       this.banner,
       required this.deleted,
       this.matrixUserId,
-      this.admin,
+      @deprecated this.admin,
       required this.botAccount,
       this.banExpires,
       required this.instanceHost})
@@ -359,9 +358,8 @@ class _$PersonSafeImpl extends _PersonSafe {
   final bool deleted;
   @override
   final String? matrixUserId;
-
-  /// Removed in Lemmy 0.19
   @override
+  @deprecated
   final bool? admin;
   @override
   final bool botAccount;
@@ -456,7 +454,7 @@ abstract class _PersonSafe extends PersonSafe {
       final String? banner,
       required final bool deleted,
       final String? matrixUserId,
-      final bool? admin,
+      @deprecated final bool? admin,
       required final bool botAccount,
       final DateTime? banExpires,
       required final String instanceHost}) = _$PersonSafeImpl;
@@ -492,8 +490,7 @@ abstract class _PersonSafe extends PersonSafe {
   @override
   String? get matrixUserId;
   @override
-
-  /// Removed in Lemmy 0.19
+  @deprecated
   bool? get admin;
   @override
   bool get botAccount;

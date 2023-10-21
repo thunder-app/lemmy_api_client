@@ -24,9 +24,7 @@ class PersonSafe with _$PersonSafe {
     String? banner,
     required bool deleted,
     String? matrixUserId,
-
-    /// Removed in Lemmy 0.19
-    bool? admin,
+    @deprecated bool? admin,
     required bool botAccount,
     DateTime? banExpires,
     required String instanceHost,
