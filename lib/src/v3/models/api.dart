@@ -33,6 +33,7 @@ class FullPostView with _$FullPostView {
     required List<CommunityModeratorView> moderators,
     int? online,
     required String instanceHost,
+    required List<PostView> crossPosts,
   }) = _FullPostView;
 
   const FullPostView._();

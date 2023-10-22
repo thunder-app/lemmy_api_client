@@ -74,22 +74,22 @@ class _$JwtPayloadCopyWithImpl<$Res, $Val extends JwtPayload>
 }
 
 /// @nodoc
-abstract class _$$_JwtPayloadCopyWith<$Res>
+abstract class _$$JwtPayloadImplCopyWith<$Res>
     implements $JwtPayloadCopyWith<$Res> {
-  factory _$$_JwtPayloadCopyWith(
-          _$_JwtPayload value, $Res Function(_$_JwtPayload) then) =
-      __$$_JwtPayloadCopyWithImpl<$Res>;
+  factory _$$JwtPayloadImplCopyWith(
+          _$JwtPayloadImpl value, $Res Function(_$JwtPayloadImpl) then) =
+      __$$JwtPayloadImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int iat, String iss, int sub});
 }
 
 /// @nodoc
-class __$$_JwtPayloadCopyWithImpl<$Res>
-    extends _$JwtPayloadCopyWithImpl<$Res, _$_JwtPayload>
-    implements _$$_JwtPayloadCopyWith<$Res> {
-  __$$_JwtPayloadCopyWithImpl(
-      _$_JwtPayload _value, $Res Function(_$_JwtPayload) _then)
+class __$$JwtPayloadImplCopyWithImpl<$Res>
+    extends _$JwtPayloadCopyWithImpl<$Res, _$JwtPayloadImpl>
+    implements _$$JwtPayloadImplCopyWith<$Res> {
+  __$$JwtPayloadImplCopyWithImpl(
+      _$JwtPayloadImpl _value, $Res Function(_$JwtPayloadImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -99,7 +99,7 @@ class __$$_JwtPayloadCopyWithImpl<$Res>
     Object? iss = null,
     Object? sub = null,
   }) {
-    return _then(_$_JwtPayload(
+    return _then(_$JwtPayloadImpl(
       iat: null == iat
           ? _value.iat
           : iat // ignore: cast_nullable_to_non_nullable
@@ -119,12 +119,13 @@ class __$$_JwtPayloadCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_JwtPayload extends _JwtPayload {
-  const _$_JwtPayload({required this.iat, required this.iss, required this.sub})
+class _$JwtPayloadImpl extends _JwtPayload {
+  const _$JwtPayloadImpl(
+      {required this.iat, required this.iss, required this.sub})
       : super._();
 
-  factory _$_JwtPayload.fromJson(Map<String, dynamic> json) =>
-      _$$_JwtPayloadFromJson(json);
+  factory _$JwtPayloadImpl.fromJson(Map<String, dynamic> json) =>
+      _$$JwtPayloadImplFromJson(json);
 
   @override
   final int iat;
@@ -142,7 +143,7 @@ class _$_JwtPayload extends _JwtPayload {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_JwtPayload &&
+            other is _$JwtPayloadImpl &&
             (identical(other.iat, iat) || other.iat == iat) &&
             (identical(other.iss, iss) || other.iss == iss) &&
             (identical(other.sub, sub) || other.sub == sub));
@@ -155,12 +156,12 @@ class _$_JwtPayload extends _JwtPayload {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_JwtPayloadCopyWith<_$_JwtPayload> get copyWith =>
-      __$$_JwtPayloadCopyWithImpl<_$_JwtPayload>(this, _$identity);
+  _$$JwtPayloadImplCopyWith<_$JwtPayloadImpl> get copyWith =>
+      __$$JwtPayloadImplCopyWithImpl<_$JwtPayloadImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_JwtPayloadToJson(
+    return _$$JwtPayloadImplToJson(
       this,
     );
   }
@@ -170,11 +171,11 @@ abstract class _JwtPayload extends JwtPayload {
   const factory _JwtPayload(
       {required final int iat,
       required final String iss,
-      required final int sub}) = _$_JwtPayload;
+      required final int sub}) = _$JwtPayloadImpl;
   const _JwtPayload._() : super._();
 
   factory _JwtPayload.fromJson(Map<String, dynamic> json) =
-      _$_JwtPayload.fromJson;
+      _$JwtPayloadImpl.fromJson;
 
   @override
   int get iat;
@@ -184,6 +185,6 @@ abstract class _JwtPayload extends JwtPayload {
   int get sub;
   @override
   @JsonKey(ignore: true)
-  _$$_JwtPayloadCopyWith<_$_JwtPayload> get copyWith =>
+  _$$JwtPayloadImplCopyWith<_$JwtPayloadImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
