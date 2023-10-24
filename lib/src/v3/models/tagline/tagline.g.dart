@@ -1,0 +1,38 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'tagline.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_Tagline _$$_TaglineFromJson(Map<String, dynamic> json) => _$_Tagline(
+      id: json['id'] as int,
+      localSiteId: json['local_site_id'] as int,
+      content: json['content'] as String,
+      published: const ForceUtcDateTime().fromJson(json['published'] as String),
+      updated: _$JsonConverterFromJson<String, DateTime>(
+          json['updated'], const ForceUtcDateTime().fromJson),
+    );
+
+Map<String, dynamic> _$$_TaglineToJson(_$_Tagline instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'local_site_id': instance.localSiteId,
+      'content': instance.content,
+      'published': const ForceUtcDateTime().toJson(instance.published),
+      'updated': _$JsonConverterToJson<String, DateTime>(
+          instance.updated, const ForceUtcDateTime().toJson),
+    };
+
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) =>
+    json == null ? null : fromJson(json as Json);
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) =>
+    value == null ? null : toJson(value);

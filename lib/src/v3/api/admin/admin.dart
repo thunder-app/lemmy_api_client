@@ -1,0 +1,192 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+
+import '../../../../v3.dart';
+import '../../../utils/serde.dart';
+import '../../models/models.dart';
+
+part 'admin.freezed.dart';
+part 'admin.g.dart';
+
+/// Add an admin to your site.
+///
+/// `HTTP.POST /admin/add`
+@freezed
+class AddAdmin with _$AddAdmin implements LemmyApiQuery<AddAdminResponse>, LemmyApiAuthenticatedQuery {
+  @apiSerde
+  const factory AddAdmin({
+    required int personId,
+    required bool added,
+    String? auth,
+  }) = _AddAdmin;
+
+  const AddAdmin._();
+  factory AddAdmin.fromJson(Map<String, dynamic> json) => _$AddAdminFromJson(json);
+
+  final path = '/admin/add';
+
+  final httpMethod = HttpMethod.post;
+
+  @override
+  AddAdminResponse responseFactory(Map<String, dynamic> json) => AddAdminResponse.fromJson(json);
+}
+
+/// Get the unread registration applications count.
+///
+/// `HTTP.GET /admin/registration_application/count`
+@freezed
+class GetUnreadRegistrationApplicationCount with _$GetUnreadRegistrationApplicationCount implements LemmyApiQuery<GetUnreadRegistrationApplicationCountResponse>, LemmyApiAuthenticatedQuery {
+  @apiSerde
+  const factory GetUnreadRegistrationApplicationCount({
+    String? auth,
+  }) = _GetUnreadRegistrationApplicationCount;
+
+  const GetUnreadRegistrationApplicationCount._();
+  factory GetUnreadRegistrationApplicationCount.fromJson(Map<String, dynamic> json) => _$GetUnreadRegistrationApplicationCountFromJson(json);
+
+  final path = '/admin/registration_application/count';
+
+  final httpMethod = HttpMethod.get;
+
+  @override
+  GetUnreadRegistrationApplicationCountResponse responseFactory(Map<String, dynamic> json) => GetUnreadRegistrationApplicationCountResponse.fromJson(json);
+}
+
+/// List the registration applications.
+///
+/// `HTTP.GET /admin/registration_application/list`
+@freezed
+class ListRegistrationApplications with _$ListRegistrationApplications implements LemmyApiQuery<ListRegistrationApplicationsResponse>, LemmyApiAuthenticatedQuery {
+  @apiSerde
+  const factory ListRegistrationApplications({
+    bool? unreadOnly,
+    int? page,
+    int? limit,
+    String? auth,
+  }) = _ListRegistrationApplications;
+
+  const ListRegistrationApplications._();
+  factory ListRegistrationApplications.fromJson(Map<String, dynamic> json) => _$ListRegistrationApplicationsFromJson(json);
+
+  final path = '/admin/registration_application/list';
+
+  final httpMethod = HttpMethod.get;
+
+  @override
+  ListRegistrationApplicationsResponse responseFactory(Map<String, dynamic> json) => ListRegistrationApplicationsResponse.fromJson(json);
+}
+
+/// Approve a registration application
+///
+/// `HTTP.PUT /admin/registration_application/approve`
+@freezed
+class ApproveRegistrationApplication with _$ApproveRegistrationApplication implements LemmyApiQuery<RegistrationApplicationResponse>, LemmyApiAuthenticatedQuery {
+  @apiSerde
+  const factory ApproveRegistrationApplication({
+    required int id,
+    required bool approve,
+    String? denyReason,
+    String? auth,
+  }) = _ApproveRegistrationApplication;
+
+  const ApproveRegistrationApplication._();
+  factory ApproveRegistrationApplication.fromJson(Map<String, dynamic> json) => _$ApproveRegistrationApplicationFromJson(json);
+
+  final path = '/admin/registration_application/approve';
+
+  final httpMethod = HttpMethod.put;
+
+  @override
+  RegistrationApplicationResponse responseFactory(Map<String, dynamic> json) => RegistrationApplicationResponse.fromJson(json);
+}
+
+/// Purge / Delete a person from the database.
+///
+/// `HTTP.POST /admin/purge/person`
+@freezed
+class PurgePerson with _$PurgePerson implements LemmyApiQuery<PurgeItemResponse>, LemmyApiAuthenticatedQuery {
+  @apiSerde
+  const factory PurgePerson({
+    required int personId,
+    String? reason,
+    String? auth,
+  }) = _PurgePerson;
+
+  const PurgePerson._();
+  factory PurgePerson.fromJson(Map<String, dynamic> json) => _$PurgePersonFromJson(json);
+
+  final path = '/admin/purge/person';
+
+  final httpMethod = HttpMethod.post;
+
+  @override
+  PurgeItemResponse responseFactory(Map<String, dynamic> json) => PurgeItemResponse.fromJson(json);
+}
+
+/// Purge / Delete a community from the database.
+///
+/// `HTTP.POST /admin/purge/community`
+@freezed
+class PurgeCommunity with _$PurgeCommunity implements LemmyApiQuery<PurgeItemResponse>, LemmyApiAuthenticatedQuery {
+  @apiSerde
+  const factory PurgeCommunity({
+    required int communityId,
+    String? reason,
+    String? auth,
+  }) = _PurgeCommunity;
+
+  const PurgeCommunity._();
+  factory PurgeCommunity.fromJson(Map<String, dynamic> json) => _$PurgeCommunityFromJson(json);
+
+  final path = '/admin/purge/community';
+
+  final httpMethod = HttpMethod.post;
+
+  @override
+  PurgeItemResponse responseFactory(Map<String, dynamic> json) => PurgeItemResponse.fromJson(json);
+}
+
+/// Purge / Delete a post from the database.
+///
+/// `HTTP.POST /admin/purge/post`
+@freezed
+class PurgePost with _$PurgePost implements LemmyApiQuery<PurgeItemResponse>, LemmyApiAuthenticatedQuery {
+  @apiSerde
+  const factory PurgePost({
+    required int postId,
+    String? reason,
+    String? auth,
+  }) = _PurgePost;
+
+  const PurgePost._();
+  factory PurgePost.fromJson(Map<String, dynamic> json) => _$PurgePostFromJson(json);
+
+  final path = '/admin/purge/post';
+
+  final httpMethod = HttpMethod.post;
+
+  @override
+  PurgeItemResponse responseFactory(Map<String, dynamic> json) => PurgeItemResponse.fromJson(json);
+}
+
+/// Purge / Delete a comment from the database.
+///
+/// `HTTP.POST /admin/purge/comment`
+@freezed
+class PurgeComment with _$PurgeComment implements LemmyApiQuery<PurgeItemResponse>, LemmyApiAuthenticatedQuery {
+  @apiSerde
+  const factory PurgeComment({
+    required int commentId,
+    String? reason,
+    String? auth,
+  }) = _PurgeComment;
+
+  const PurgeComment._();
+  factory PurgeComment.fromJson(Map<String, dynamic> json) => _$PurgeCommentFromJson(json);
+
+  final path = '/admin/purge/comment';
+
+  final httpMethod = HttpMethod.post;
+
+  @override
+  PurgeItemResponse responseFactory(Map<String, dynamic> json) => PurgeItemResponse.fromJson(json);
+}
