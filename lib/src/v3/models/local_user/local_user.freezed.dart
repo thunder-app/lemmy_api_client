@@ -25,7 +25,7 @@ mixin _$LocalUser {
   String? get email => throw _privateConstructorUsedError;
   bool get showNsfw => throw _privateConstructorUsedError;
   bool? get blurNsfw => throw _privateConstructorUsedError;
-  bool get autoExpand => throw _privateConstructorUsedError;
+  bool? get autoExpand => throw _privateConstructorUsedError;
   String get theme => throw _privateConstructorUsedError;
   SortType get defaultSortType => throw _privateConstructorUsedError;
   ListingType get defaultListingType => throw _privateConstructorUsedError;
@@ -71,7 +71,7 @@ abstract class $LocalUserCopyWith<$Res> {
       String? email,
       bool showNsfw,
       bool? blurNsfw,
-      bool autoExpand,
+      bool? autoExpand,
       String theme,
       SortType defaultSortType,
       ListingType defaultListingType,
@@ -113,7 +113,7 @@ class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
     Object? email = freezed,
     Object? showNsfw = null,
     Object? blurNsfw = freezed,
-    Object? autoExpand = null,
+    Object? autoExpand = freezed,
     Object? theme = null,
     Object? defaultSortType = null,
     Object? defaultListingType = null,
@@ -157,10 +157,10 @@ class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
           ? _value.blurNsfw
           : blurNsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
-      autoExpand: null == autoExpand
+      autoExpand: freezed == autoExpand
           ? _value.autoExpand
           : autoExpand // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       theme: null == theme
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
@@ -262,7 +262,7 @@ abstract class _$$_LocalUserCopyWith<$Res> implements $LocalUserCopyWith<$Res> {
       String? email,
       bool showNsfw,
       bool? blurNsfw,
-      bool autoExpand,
+      bool? autoExpand,
       String theme,
       SortType defaultSortType,
       ListingType defaultListingType,
@@ -302,7 +302,7 @@ class __$$_LocalUserCopyWithImpl<$Res>
     Object? email = freezed,
     Object? showNsfw = null,
     Object? blurNsfw = freezed,
-    Object? autoExpand = null,
+    Object? autoExpand = freezed,
     Object? theme = null,
     Object? defaultSortType = null,
     Object? defaultListingType = null,
@@ -346,10 +346,10 @@ class __$$_LocalUserCopyWithImpl<$Res>
           ? _value.blurNsfw
           : blurNsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
-      autoExpand: null == autoExpand
+      autoExpand: freezed == autoExpand
           ? _value.autoExpand
           : autoExpand // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       theme: null == theme
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
@@ -448,7 +448,7 @@ class _$_LocalUser extends _LocalUser {
       this.email,
       required this.showNsfw,
       this.blurNsfw,
-      required this.autoExpand,
+      this.autoExpand,
       required this.theme,
       required this.defaultSortType,
       required this.defaultListingType,
@@ -486,7 +486,7 @@ class _$_LocalUser extends _LocalUser {
   @override
   final bool? blurNsfw;
   @override
-  final bool autoExpand;
+  final bool? autoExpand;
   @override
   final String theme;
   @override
@@ -654,7 +654,7 @@ abstract class _LocalUser extends LocalUser {
       final String? email,
       required final bool showNsfw,
       final bool? blurNsfw,
-      required final bool autoExpand,
+      final bool? autoExpand,
       required final String theme,
       required final SortType defaultSortType,
       required final ListingType defaultListingType,
@@ -692,7 +692,7 @@ abstract class _LocalUser extends LocalUser {
   @override
   bool? get blurNsfw;
   @override
-  bool get autoExpand;
+  bool? get autoExpand;
   @override
   String get theme;
   @override

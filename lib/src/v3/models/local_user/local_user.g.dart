@@ -12,7 +12,7 @@ _$_LocalUser _$$_LocalUserFromJson(Map<String, dynamic> json) => _$_LocalUser(
       email: json['email'] as String?,
       showNsfw: json['show_nsfw'] as bool,
       blurNsfw: json['blur_nsfw'] as bool?,
-      autoExpand: json['auto_expand'] as bool,
+      autoExpand: json['auto_expand'] as bool?,
       theme: json['theme'] as String,
       defaultSortType: SortType.fromJson(json['default_sort_type']),
       defaultListingType: ListingType.fromJson(json['default_listing_type']),
