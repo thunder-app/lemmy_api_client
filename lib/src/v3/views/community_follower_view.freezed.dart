@@ -22,7 +22,7 @@ CommunityFollowerView _$CommunityFollowerViewFromJson(
 /// @nodoc
 mixin _$CommunityFollowerView {
   Community get community => throw _privateConstructorUsedError;
-  Person get person => throw _privateConstructorUsedError;
+  Person get follower => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -36,10 +36,10 @@ abstract class $CommunityFollowerViewCopyWith<$Res> {
           $Res Function(CommunityFollowerView) then) =
       _$CommunityFollowerViewCopyWithImpl<$Res, CommunityFollowerView>;
   @useResult
-  $Res call({Community community, Person person});
+  $Res call({Community community, Person follower});
 
   $CommunityCopyWith<$Res> get community;
-  $PersonCopyWith<$Res> get person;
+  $PersonCopyWith<$Res> get follower;
 }
 
 /// @nodoc
@@ -57,16 +57,16 @@ class _$CommunityFollowerViewCopyWithImpl<$Res,
   @override
   $Res call({
     Object? community = null,
-    Object? person = null,
+    Object? follower = null,
   }) {
     return _then(_value.copyWith(
       community: null == community
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
               as Community,
-      person: null == person
-          ? _value.person
-          : person // ignore: cast_nullable_to_non_nullable
+      follower: null == follower
+          ? _value.follower
+          : follower // ignore: cast_nullable_to_non_nullable
               as Person,
     ) as $Val);
   }
@@ -81,9 +81,9 @@ class _$CommunityFollowerViewCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $PersonCopyWith<$Res> get person {
-    return $PersonCopyWith<$Res>(_value.person, (value) {
-      return _then(_value.copyWith(person: value) as $Val);
+  $PersonCopyWith<$Res> get follower {
+    return $PersonCopyWith<$Res>(_value.follower, (value) {
+      return _then(_value.copyWith(follower: value) as $Val);
     });
   }
 }
@@ -96,12 +96,12 @@ abstract class _$$_CommunityFollowerViewCopyWith<$Res>
       __$$_CommunityFollowerViewCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Community community, Person person});
+  $Res call({Community community, Person follower});
 
   @override
   $CommunityCopyWith<$Res> get community;
   @override
-  $PersonCopyWith<$Res> get person;
+  $PersonCopyWith<$Res> get follower;
 }
 
 /// @nodoc
@@ -116,16 +116,16 @@ class __$$_CommunityFollowerViewCopyWithImpl<$Res>
   @override
   $Res call({
     Object? community = null,
-    Object? person = null,
+    Object? follower = null,
   }) {
     return _then(_$_CommunityFollowerView(
       community: null == community
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
               as Community,
-      person: null == person
-          ? _value.person
-          : person // ignore: cast_nullable_to_non_nullable
+      follower: null == follower
+          ? _value.follower
+          : follower // ignore: cast_nullable_to_non_nullable
               as Person,
     ));
   }
@@ -136,7 +136,7 @@ class __$$_CommunityFollowerViewCopyWithImpl<$Res>
 @modelSerde
 class _$_CommunityFollowerView extends _CommunityFollowerView {
   const _$_CommunityFollowerView(
-      {required this.community, required this.person})
+      {required this.community, required this.follower})
       : super._();
 
   factory _$_CommunityFollowerView.fromJson(Map<String, dynamic> json) =>
@@ -145,11 +145,11 @@ class _$_CommunityFollowerView extends _CommunityFollowerView {
   @override
   final Community community;
   @override
-  final Person person;
+  final Person follower;
 
   @override
   String toString() {
-    return 'CommunityFollowerView(community: $community, person: $person)';
+    return 'CommunityFollowerView(community: $community, follower: $follower)';
   }
 
   @override
@@ -159,12 +159,13 @@ class _$_CommunityFollowerView extends _CommunityFollowerView {
             other is _$_CommunityFollowerView &&
             (identical(other.community, community) ||
                 other.community == community) &&
-            (identical(other.person, person) || other.person == person));
+            (identical(other.follower, follower) ||
+                other.follower == follower));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, community, person);
+  int get hashCode => Object.hash(runtimeType, community, follower);
 
   @JsonKey(ignore: true)
   @override
@@ -184,7 +185,7 @@ class _$_CommunityFollowerView extends _CommunityFollowerView {
 abstract class _CommunityFollowerView extends CommunityFollowerView {
   const factory _CommunityFollowerView(
       {required final Community community,
-      required final Person person}) = _$_CommunityFollowerView;
+      required final Person follower}) = _$_CommunityFollowerView;
   const _CommunityFollowerView._() : super._();
 
   factory _CommunityFollowerView.fromJson(Map<String, dynamic> json) =
@@ -193,7 +194,7 @@ abstract class _CommunityFollowerView extends CommunityFollowerView {
   @override
   Community get community;
   @override
-  Person get person;
+  Person get follower;
   @override
   @JsonKey(ignore: true)
   _$$_CommunityFollowerViewCopyWith<_$_CommunityFollowerView> get copyWith =>

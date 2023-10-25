@@ -11,7 +11,7 @@ class CommunityFollowerView with _$CommunityFollowerView {
   @modelSerde
   const factory CommunityFollowerView({
     required Community community,
-    required Person person,
+    required Person follower,
   }) = _CommunityFollowerView;
 
   const CommunityFollowerView._();
