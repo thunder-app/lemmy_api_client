@@ -14,7 +14,7 @@ class LocalUser with _$LocalUser {
     required int personId,
     String? email,
     required bool showNsfw,
-    required bool blurNsfw,
+    bool? blurNsfw,
     required bool autoExpand,
     required String theme,
     required SortType defaultSortType,

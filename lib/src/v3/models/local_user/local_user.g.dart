@@ -11,7 +11,7 @@ _$_LocalUser _$$_LocalUserFromJson(Map<String, dynamic> json) => _$_LocalUser(
       personId: json['person_id'] as int,
       email: json['email'] as String?,
       showNsfw: json['show_nsfw'] as bool,
-      blurNsfw: json['blur_nsfw'] as bool,
+      blurNsfw: json['blur_nsfw'] as bool?,
       autoExpand: json['auto_expand'] as bool,
       theme: json['theme'] as String,
       defaultSortType: SortType.fromJson(json['default_sort_type']),
