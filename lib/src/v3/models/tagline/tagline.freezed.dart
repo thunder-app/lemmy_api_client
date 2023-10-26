@@ -1,0 +1,236 @@
+// coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
+
+part of 'tagline.dart';
+
+// **************************************************************************
+// FreezedGenerator
+// **************************************************************************
+
+T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+Tagline _$TaglineFromJson(Map<String, dynamic> json) {
+  return _Tagline.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Tagline {
+  int get id => throw _privateConstructorUsedError;
+  int get localSiteId => throw _privateConstructorUsedError;
+  String get content => throw _privateConstructorUsedError;
+  DateTime get published => throw _privateConstructorUsedError;
+  DateTime? get updated => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TaglineCopyWith<Tagline> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TaglineCopyWith<$Res> {
+  factory $TaglineCopyWith(Tagline value, $Res Function(Tagline) then) =
+      _$TaglineCopyWithImpl<$Res, Tagline>;
+  @useResult
+  $Res call(
+      {int id,
+      int localSiteId,
+      String content,
+      DateTime published,
+      DateTime? updated});
+}
+
+/// @nodoc
+class _$TaglineCopyWithImpl<$Res, $Val extends Tagline>
+    implements $TaglineCopyWith<$Res> {
+  _$TaglineCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? localSiteId = null,
+    Object? content = null,
+    Object? published = null,
+    Object? updated = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      localSiteId: null == localSiteId
+          ? _value.localSiteId
+          : localSiteId // ignore: cast_nullable_to_non_nullable
+              as int,
+      content: null == content
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
+      published: null == published
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updated: freezed == updated
+          ? _value.updated
+          : updated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_TaglineCopyWith<$Res> implements $TaglineCopyWith<$Res> {
+  factory _$$_TaglineCopyWith(
+          _$_Tagline value, $Res Function(_$_Tagline) then) =
+      __$$_TaglineCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {int id,
+      int localSiteId,
+      String content,
+      DateTime published,
+      DateTime? updated});
+}
+
+/// @nodoc
+class __$$_TaglineCopyWithImpl<$Res>
+    extends _$TaglineCopyWithImpl<$Res, _$_Tagline>
+    implements _$$_TaglineCopyWith<$Res> {
+  __$$_TaglineCopyWithImpl(_$_Tagline _value, $Res Function(_$_Tagline) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? localSiteId = null,
+    Object? content = null,
+    Object? published = null,
+    Object? updated = freezed,
+  }) {
+    return _then(_$_Tagline(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      localSiteId: null == localSiteId
+          ? _value.localSiteId
+          : localSiteId // ignore: cast_nullable_to_non_nullable
+              as int,
+      content: null == content
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
+      published: null == published
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updated: freezed == updated
+          ? _value.updated
+          : updated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+    ));
+  }
+}
+
+/// @nodoc
+
+@modelSerde
+class _$_Tagline extends _Tagline {
+  const _$_Tagline(
+      {required this.id,
+      required this.localSiteId,
+      required this.content,
+      required this.published,
+      this.updated})
+      : super._();
+
+  factory _$_Tagline.fromJson(Map<String, dynamic> json) =>
+      _$$_TaglineFromJson(json);
+
+  @override
+  final int id;
+  @override
+  final int localSiteId;
+  @override
+  final String content;
+  @override
+  final DateTime published;
+  @override
+  final DateTime? updated;
+
+  @override
+  String toString() {
+    return 'Tagline(id: $id, localSiteId: $localSiteId, content: $content, published: $published, updated: $updated)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_Tagline &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.localSiteId, localSiteId) ||
+                other.localSiteId == localSiteId) &&
+            (identical(other.content, content) || other.content == content) &&
+            (identical(other.published, published) ||
+                other.published == published) &&
+            (identical(other.updated, updated) || other.updated == updated));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, id, localSiteId, content, published, updated);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_TaglineCopyWith<_$_Tagline> get copyWith =>
+      __$$_TaglineCopyWithImpl<_$_Tagline>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_TaglineToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Tagline extends Tagline {
+  const factory _Tagline(
+      {required final int id,
+      required final int localSiteId,
+      required final String content,
+      required final DateTime published,
+      final DateTime? updated}) = _$_Tagline;
+  const _Tagline._() : super._();
+
+  factory _Tagline.fromJson(Map<String, dynamic> json) = _$_Tagline.fromJson;
+
+  @override
+  int get id;
+  @override
+  int get localSiteId;
+  @override
+  String get content;
+  @override
+  DateTime get published;
+  @override
+  DateTime? get updated;
+  @override
+  @JsonKey(ignore: true)
+  _$$_TaglineCopyWith<_$_Tagline> get copyWith =>
+      throw _privateConstructorUsedError;
+}
