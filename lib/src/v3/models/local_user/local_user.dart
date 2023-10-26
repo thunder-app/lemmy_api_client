@@ -22,15 +22,15 @@ class LocalUser with _$LocalUser {
     required String interfaceLanguage,
     required bool showAvatars,
     required bool sendNotificationsToEmail,
-    required String validatorTime,
+    @deprecated String? validatorTime,
     required bool showScores,
     required bool showBotAccounts,
     required bool showReadPosts,
-    required bool showNewPostNotifs,
+    @deprecated bool? showNewPostNotifs,
     required bool emailVerified,
     required bool acceptedApplication,
     @deprecated String? totp2faUrl,
-    required bool openLinksInNewTab,
+    bool? openLinksInNewTab,
     bool? infiniteScrollEnabled, // Only available in lemmy v0.19.0 and above
     bool? admin, // Only available in lemmy v0.19.0 and above
     String? postListingMode, // Only available in lemmy v0.19.0 and above

@@ -32,16 +32,18 @@ mixin _$LocalUser {
   String get interfaceLanguage => throw _privateConstructorUsedError;
   bool get showAvatars => throw _privateConstructorUsedError;
   bool get sendNotificationsToEmail => throw _privateConstructorUsedError;
-  String get validatorTime => throw _privateConstructorUsedError;
+  @deprecated
+  String? get validatorTime => throw _privateConstructorUsedError;
   bool get showScores => throw _privateConstructorUsedError;
   bool get showBotAccounts => throw _privateConstructorUsedError;
   bool get showReadPosts => throw _privateConstructorUsedError;
-  bool get showNewPostNotifs => throw _privateConstructorUsedError;
+  @deprecated
+  bool? get showNewPostNotifs => throw _privateConstructorUsedError;
   bool get emailVerified => throw _privateConstructorUsedError;
   bool get acceptedApplication => throw _privateConstructorUsedError;
   @deprecated
   String? get totp2faUrl => throw _privateConstructorUsedError;
-  bool get openLinksInNewTab => throw _privateConstructorUsedError;
+  bool? get openLinksInNewTab => throw _privateConstructorUsedError;
   bool? get infiniteScrollEnabled =>
       throw _privateConstructorUsedError; // Only available in lemmy v0.19.0 and above
   bool? get admin =>
@@ -78,15 +80,15 @@ abstract class $LocalUserCopyWith<$Res> {
       String interfaceLanguage,
       bool showAvatars,
       bool sendNotificationsToEmail,
-      String validatorTime,
+      @deprecated String? validatorTime,
       bool showScores,
       bool showBotAccounts,
       bool showReadPosts,
-      bool showNewPostNotifs,
+      @deprecated bool? showNewPostNotifs,
       bool emailVerified,
       bool acceptedApplication,
       @deprecated String? totp2faUrl,
-      bool openLinksInNewTab,
+      bool? openLinksInNewTab,
       bool? infiniteScrollEnabled,
       bool? admin,
       String? postListingMode,
@@ -120,15 +122,15 @@ class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
     Object? interfaceLanguage = null,
     Object? showAvatars = null,
     Object? sendNotificationsToEmail = null,
-    Object? validatorTime = null,
+    Object? validatorTime = freezed,
     Object? showScores = null,
     Object? showBotAccounts = null,
     Object? showReadPosts = null,
-    Object? showNewPostNotifs = null,
+    Object? showNewPostNotifs = freezed,
     Object? emailVerified = null,
     Object? acceptedApplication = null,
     Object? totp2faUrl = freezed,
-    Object? openLinksInNewTab = null,
+    Object? openLinksInNewTab = freezed,
     Object? infiniteScrollEnabled = freezed,
     Object? admin = freezed,
     Object? postListingMode = freezed,
@@ -185,10 +187,10 @@ class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
           ? _value.sendNotificationsToEmail
           : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
               as bool,
-      validatorTime: null == validatorTime
+      validatorTime: freezed == validatorTime
           ? _value.validatorTime
           : validatorTime // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       showScores: null == showScores
           ? _value.showScores
           : showScores // ignore: cast_nullable_to_non_nullable
@@ -201,10 +203,10 @@ class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
           ? _value.showReadPosts
           : showReadPosts // ignore: cast_nullable_to_non_nullable
               as bool,
-      showNewPostNotifs: null == showNewPostNotifs
+      showNewPostNotifs: freezed == showNewPostNotifs
           ? _value.showNewPostNotifs
           : showNewPostNotifs // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       emailVerified: null == emailVerified
           ? _value.emailVerified
           : emailVerified // ignore: cast_nullable_to_non_nullable
@@ -217,10 +219,10 @@ class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
           ? _value.totp2faUrl
           : totp2faUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      openLinksInNewTab: null == openLinksInNewTab
+      openLinksInNewTab: freezed == openLinksInNewTab
           ? _value.openLinksInNewTab
           : openLinksInNewTab // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       infiniteScrollEnabled: freezed == infiniteScrollEnabled
           ? _value.infiniteScrollEnabled
           : infiniteScrollEnabled // ignore: cast_nullable_to_non_nullable
@@ -269,15 +271,15 @@ abstract class _$$_LocalUserCopyWith<$Res> implements $LocalUserCopyWith<$Res> {
       String interfaceLanguage,
       bool showAvatars,
       bool sendNotificationsToEmail,
-      String validatorTime,
+      @deprecated String? validatorTime,
       bool showScores,
       bool showBotAccounts,
       bool showReadPosts,
-      bool showNewPostNotifs,
+      @deprecated bool? showNewPostNotifs,
       bool emailVerified,
       bool acceptedApplication,
       @deprecated String? totp2faUrl,
-      bool openLinksInNewTab,
+      bool? openLinksInNewTab,
       bool? infiniteScrollEnabled,
       bool? admin,
       String? postListingMode,
@@ -309,15 +311,15 @@ class __$$_LocalUserCopyWithImpl<$Res>
     Object? interfaceLanguage = null,
     Object? showAvatars = null,
     Object? sendNotificationsToEmail = null,
-    Object? validatorTime = null,
+    Object? validatorTime = freezed,
     Object? showScores = null,
     Object? showBotAccounts = null,
     Object? showReadPosts = null,
-    Object? showNewPostNotifs = null,
+    Object? showNewPostNotifs = freezed,
     Object? emailVerified = null,
     Object? acceptedApplication = null,
     Object? totp2faUrl = freezed,
-    Object? openLinksInNewTab = null,
+    Object? openLinksInNewTab = freezed,
     Object? infiniteScrollEnabled = freezed,
     Object? admin = freezed,
     Object? postListingMode = freezed,
@@ -374,10 +376,10 @@ class __$$_LocalUserCopyWithImpl<$Res>
           ? _value.sendNotificationsToEmail
           : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
               as bool,
-      validatorTime: null == validatorTime
+      validatorTime: freezed == validatorTime
           ? _value.validatorTime
           : validatorTime // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       showScores: null == showScores
           ? _value.showScores
           : showScores // ignore: cast_nullable_to_non_nullable
@@ -390,10 +392,10 @@ class __$$_LocalUserCopyWithImpl<$Res>
           ? _value.showReadPosts
           : showReadPosts // ignore: cast_nullable_to_non_nullable
               as bool,
-      showNewPostNotifs: null == showNewPostNotifs
+      showNewPostNotifs: freezed == showNewPostNotifs
           ? _value.showNewPostNotifs
           : showNewPostNotifs // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       emailVerified: null == emailVerified
           ? _value.emailVerified
           : emailVerified // ignore: cast_nullable_to_non_nullable
@@ -406,10 +408,10 @@ class __$$_LocalUserCopyWithImpl<$Res>
           ? _value.totp2faUrl
           : totp2faUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      openLinksInNewTab: null == openLinksInNewTab
+      openLinksInNewTab: freezed == openLinksInNewTab
           ? _value.openLinksInNewTab
           : openLinksInNewTab // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       infiniteScrollEnabled: freezed == infiniteScrollEnabled
           ? _value.infiniteScrollEnabled
           : infiniteScrollEnabled // ignore: cast_nullable_to_non_nullable
@@ -455,15 +457,15 @@ class _$_LocalUser extends _LocalUser {
       required this.interfaceLanguage,
       required this.showAvatars,
       required this.sendNotificationsToEmail,
-      required this.validatorTime,
+      @deprecated this.validatorTime,
       required this.showScores,
       required this.showBotAccounts,
       required this.showReadPosts,
-      required this.showNewPostNotifs,
+      @deprecated this.showNewPostNotifs,
       required this.emailVerified,
       required this.acceptedApplication,
       @deprecated this.totp2faUrl,
-      required this.openLinksInNewTab,
+      this.openLinksInNewTab,
       this.infiniteScrollEnabled,
       this.admin,
       this.postListingMode,
@@ -500,7 +502,8 @@ class _$_LocalUser extends _LocalUser {
   @override
   final bool sendNotificationsToEmail;
   @override
-  final String validatorTime;
+  @deprecated
+  final String? validatorTime;
   @override
   final bool showScores;
   @override
@@ -508,7 +511,8 @@ class _$_LocalUser extends _LocalUser {
   @override
   final bool showReadPosts;
   @override
-  final bool showNewPostNotifs;
+  @deprecated
+  final bool? showNewPostNotifs;
   @override
   final bool emailVerified;
   @override
@@ -517,7 +521,7 @@ class _$_LocalUser extends _LocalUser {
   @deprecated
   final String? totp2faUrl;
   @override
-  final bool openLinksInNewTab;
+  final bool? openLinksInNewTab;
   @override
   final bool? infiniteScrollEnabled;
 // Only available in lemmy v0.19.0 and above
@@ -661,15 +665,15 @@ abstract class _LocalUser extends LocalUser {
       required final String interfaceLanguage,
       required final bool showAvatars,
       required final bool sendNotificationsToEmail,
-      required final String validatorTime,
+      @deprecated final String? validatorTime,
       required final bool showScores,
       required final bool showBotAccounts,
       required final bool showReadPosts,
-      required final bool showNewPostNotifs,
+      @deprecated final bool? showNewPostNotifs,
       required final bool emailVerified,
       required final bool acceptedApplication,
       @deprecated final String? totp2faUrl,
-      required final bool openLinksInNewTab,
+      final bool? openLinksInNewTab,
       final bool? infiniteScrollEnabled,
       final bool? admin,
       final String? postListingMode,
@@ -706,7 +710,8 @@ abstract class _LocalUser extends LocalUser {
   @override
   bool get sendNotificationsToEmail;
   @override
-  String get validatorTime;
+  @deprecated
+  String? get validatorTime;
   @override
   bool get showScores;
   @override
@@ -714,7 +719,8 @@ abstract class _LocalUser extends LocalUser {
   @override
   bool get showReadPosts;
   @override
-  bool get showNewPostNotifs;
+  @deprecated
+  bool? get showNewPostNotifs;
   @override
   bool get emailVerified;
   @override
@@ -723,7 +729,7 @@ abstract class _LocalUser extends LocalUser {
   @deprecated
   String? get totp2faUrl;
   @override
-  bool get openLinksInNewTab;
+  bool? get openLinksInNewTab;
   @override
   bool? get infiniteScrollEnabled;
   @override // Only available in lemmy v0.19.0 and above
