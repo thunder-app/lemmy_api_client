@@ -6,9 +6,10 @@ part of 'list_private_message_reports_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ListPrivateMessageReportsResponse
-    _$$_ListPrivateMessageReportsResponseFromJson(Map<String, dynamic> json) =>
-        _$_ListPrivateMessageReportsResponse(
+_$ListPrivateMessageReportsResponseImpl
+    _$$ListPrivateMessageReportsResponseImplFromJson(
+            Map<String, dynamic> json) =>
+        _$ListPrivateMessageReportsResponseImpl(
           privateMessageReports: (json['private_message_reports']
                   as List<dynamic>)
               .map((e) =>
@@ -16,8 +17,8 @@ _$_ListPrivateMessageReportsResponse
               .toList(),
         );
 
-Map<String, dynamic> _$$_ListPrivateMessageReportsResponseToJson(
-        _$_ListPrivateMessageReportsResponse instance) =>
+Map<String, dynamic> _$$ListPrivateMessageReportsResponseImplToJson(
+        _$ListPrivateMessageReportsResponseImpl instance) =>
     <String, dynamic>{
       'private_message_reports':
           instance.privateMessageReports.map((e) => e.toJson()).toList(),

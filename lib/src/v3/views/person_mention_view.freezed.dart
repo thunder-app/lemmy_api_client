@@ -28,6 +28,8 @@ mixin _$PersonMentionView {
   Person get recipient => throw _privateConstructorUsedError;
   CommentAggregates get counts => throw _privateConstructorUsedError;
   bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
+  bool? get creatorIsModerator =>
+      throw _privateConstructorUsedError; // Only available in lemmy v0.19.0 and above
   SubscribedType get subscribed => throw _privateConstructorUsedError;
   bool get saved => throw _privateConstructorUsedError;
   bool get creatorBlocked => throw _privateConstructorUsedError;
@@ -54,6 +56,7 @@ abstract class $PersonMentionViewCopyWith<$Res> {
       Person recipient,
       CommentAggregates counts,
       bool creatorBannedFromCommunity,
+      bool? creatorIsModerator,
       SubscribedType subscribed,
       bool saved,
       bool creatorBlocked,
@@ -89,6 +92,7 @@ class _$PersonMentionViewCopyWithImpl<$Res, $Val extends PersonMentionView>
     Object? recipient = null,
     Object? counts = null,
     Object? creatorBannedFromCommunity = null,
+    Object? creatorIsModerator = freezed,
     Object? subscribed = null,
     Object? saved = null,
     Object? creatorBlocked = null,
@@ -127,6 +131,10 @@ class _$PersonMentionViewCopyWithImpl<$Res, $Val extends PersonMentionView>
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
               as bool,
+      creatorIsModerator: freezed == creatorIsModerator
+          ? _value.creatorIsModerator
+          : creatorIsModerator // ignore: cast_nullable_to_non_nullable
+              as bool?,
       subscribed: null == subscribed
           ? _value.subscribed
           : subscribed // ignore: cast_nullable_to_non_nullable
@@ -204,11 +212,11 @@ class _$PersonMentionViewCopyWithImpl<$Res, $Val extends PersonMentionView>
 }
 
 /// @nodoc
-abstract class _$$_PersonMentionViewCopyWith<$Res>
+abstract class _$$PersonMentionViewImplCopyWith<$Res>
     implements $PersonMentionViewCopyWith<$Res> {
-  factory _$$_PersonMentionViewCopyWith(_$_PersonMentionView value,
-          $Res Function(_$_PersonMentionView) then) =
-      __$$_PersonMentionViewCopyWithImpl<$Res>;
+  factory _$$PersonMentionViewImplCopyWith(_$PersonMentionViewImpl value,
+          $Res Function(_$PersonMentionViewImpl) then) =
+      __$$PersonMentionViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -220,6 +228,7 @@ abstract class _$$_PersonMentionViewCopyWith<$Res>
       Person recipient,
       CommentAggregates counts,
       bool creatorBannedFromCommunity,
+      bool? creatorIsModerator,
       SubscribedType subscribed,
       bool saved,
       bool creatorBlocked,
@@ -242,11 +251,11 @@ abstract class _$$_PersonMentionViewCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PersonMentionViewCopyWithImpl<$Res>
-    extends _$PersonMentionViewCopyWithImpl<$Res, _$_PersonMentionView>
-    implements _$$_PersonMentionViewCopyWith<$Res> {
-  __$$_PersonMentionViewCopyWithImpl(
-      _$_PersonMentionView _value, $Res Function(_$_PersonMentionView) _then)
+class __$$PersonMentionViewImplCopyWithImpl<$Res>
+    extends _$PersonMentionViewCopyWithImpl<$Res, _$PersonMentionViewImpl>
+    implements _$$PersonMentionViewImplCopyWith<$Res> {
+  __$$PersonMentionViewImplCopyWithImpl(_$PersonMentionViewImpl _value,
+      $Res Function(_$PersonMentionViewImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -260,12 +269,13 @@ class __$$_PersonMentionViewCopyWithImpl<$Res>
     Object? recipient = null,
     Object? counts = null,
     Object? creatorBannedFromCommunity = null,
+    Object? creatorIsModerator = freezed,
     Object? subscribed = null,
     Object? saved = null,
     Object? creatorBlocked = null,
     Object? myVote = freezed,
   }) {
-    return _then(_$_PersonMentionView(
+    return _then(_$PersonMentionViewImpl(
       personMention: null == personMention
           ? _value.personMention
           : personMention // ignore: cast_nullable_to_non_nullable
@@ -298,6 +308,10 @@ class __$$_PersonMentionViewCopyWithImpl<$Res>
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
               as bool,
+      creatorIsModerator: freezed == creatorIsModerator
+          ? _value.creatorIsModerator
+          : creatorIsModerator // ignore: cast_nullable_to_non_nullable
+              as bool?,
       subscribed: null == subscribed
           ? _value.subscribed
           : subscribed // ignore: cast_nullable_to_non_nullable
@@ -321,8 +335,8 @@ class __$$_PersonMentionViewCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_PersonMentionView extends _PersonMentionView {
-  const _$_PersonMentionView(
+class _$PersonMentionViewImpl extends _PersonMentionView {
+  const _$PersonMentionViewImpl(
       {required this.personMention,
       required this.comment,
       required this.creator,
@@ -331,14 +345,15 @@ class _$_PersonMentionView extends _PersonMentionView {
       required this.recipient,
       required this.counts,
       required this.creatorBannedFromCommunity,
+      this.creatorIsModerator,
       required this.subscribed,
       required this.saved,
       required this.creatorBlocked,
       required this.myVote})
       : super._();
 
-  factory _$_PersonMentionView.fromJson(Map<String, dynamic> json) =>
-      _$$_PersonMentionViewFromJson(json);
+  factory _$PersonMentionViewImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PersonMentionViewImplFromJson(json);
 
   @override
   final PersonMention personMention;
@@ -357,6 +372,9 @@ class _$_PersonMentionView extends _PersonMentionView {
   @override
   final bool creatorBannedFromCommunity;
   @override
+  final bool? creatorIsModerator;
+// Only available in lemmy v0.19.0 and above
+  @override
   final SubscribedType subscribed;
   @override
   final bool saved;
@@ -367,14 +385,14 @@ class _$_PersonMentionView extends _PersonMentionView {
 
   @override
   String toString() {
-    return 'PersonMentionView(personMention: $personMention, comment: $comment, creator: $creator, post: $post, community: $community, recipient: $recipient, counts: $counts, creatorBannedFromCommunity: $creatorBannedFromCommunity, subscribed: $subscribed, saved: $saved, creatorBlocked: $creatorBlocked, myVote: $myVote)';
+    return 'PersonMentionView(personMention: $personMention, comment: $comment, creator: $creator, post: $post, community: $community, recipient: $recipient, counts: $counts, creatorBannedFromCommunity: $creatorBannedFromCommunity, creatorIsModerator: $creatorIsModerator, subscribed: $subscribed, saved: $saved, creatorBlocked: $creatorBlocked, myVote: $myVote)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PersonMentionView &&
+            other is _$PersonMentionViewImpl &&
             (identical(other.personMention, personMention) ||
                 other.personMention == personMention) &&
             (identical(other.comment, comment) || other.comment == comment) &&
@@ -389,6 +407,8 @@ class _$_PersonMentionView extends _PersonMentionView {
                     creatorBannedFromCommunity) ||
                 other.creatorBannedFromCommunity ==
                     creatorBannedFromCommunity) &&
+            (identical(other.creatorIsModerator, creatorIsModerator) ||
+                other.creatorIsModerator == creatorIsModerator) &&
             (identical(other.subscribed, subscribed) ||
                 other.subscribed == subscribed) &&
             (identical(other.saved, saved) || other.saved == saved) &&
@@ -409,6 +429,7 @@ class _$_PersonMentionView extends _PersonMentionView {
       recipient,
       counts,
       creatorBannedFromCommunity,
+      creatorIsModerator,
       subscribed,
       saved,
       creatorBlocked,
@@ -417,13 +438,13 @@ class _$_PersonMentionView extends _PersonMentionView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PersonMentionViewCopyWith<_$_PersonMentionView> get copyWith =>
-      __$$_PersonMentionViewCopyWithImpl<_$_PersonMentionView>(
+  _$$PersonMentionViewImplCopyWith<_$PersonMentionViewImpl> get copyWith =>
+      __$$PersonMentionViewImplCopyWithImpl<_$PersonMentionViewImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PersonMentionViewToJson(
+    return _$$PersonMentionViewImplToJson(
       this,
     );
   }
@@ -439,14 +460,15 @@ abstract class _PersonMentionView extends PersonMentionView {
       required final Person recipient,
       required final CommentAggregates counts,
       required final bool creatorBannedFromCommunity,
+      final bool? creatorIsModerator,
       required final SubscribedType subscribed,
       required final bool saved,
       required final bool creatorBlocked,
-      required final int? myVote}) = _$_PersonMentionView;
+      required final int? myVote}) = _$PersonMentionViewImpl;
   const _PersonMentionView._() : super._();
 
   factory _PersonMentionView.fromJson(Map<String, dynamic> json) =
-      _$_PersonMentionView.fromJson;
+      _$PersonMentionViewImpl.fromJson;
 
   @override
   PersonMention get personMention;
@@ -465,6 +487,8 @@ abstract class _PersonMentionView extends PersonMentionView {
   @override
   bool get creatorBannedFromCommunity;
   @override
+  bool? get creatorIsModerator;
+  @override // Only available in lemmy v0.19.0 and above
   SubscribedType get subscribed;
   @override
   bool get saved;
@@ -474,6 +498,6 @@ abstract class _PersonMentionView extends PersonMentionView {
   int? get myVote;
   @override
   @JsonKey(ignore: true)
-  _$$_PersonMentionViewCopyWith<_$_PersonMentionView> get copyWith =>
+  _$$PersonMentionViewImplCopyWith<_$PersonMentionViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

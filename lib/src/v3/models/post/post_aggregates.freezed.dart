@@ -153,11 +153,11 @@ class _$PostAggregatesCopyWithImpl<$Res, $Val extends PostAggregates>
 }
 
 /// @nodoc
-abstract class _$$_PostAggregatesCopyWith<$Res>
+abstract class _$$PostAggregatesImplCopyWith<$Res>
     implements $PostAggregatesCopyWith<$Res> {
-  factory _$$_PostAggregatesCopyWith(
-          _$_PostAggregates value, $Res Function(_$_PostAggregates) then) =
-      __$$_PostAggregatesCopyWithImpl<$Res>;
+  factory _$$PostAggregatesImplCopyWith(_$PostAggregatesImpl value,
+          $Res Function(_$PostAggregatesImpl) then) =
+      __$$PostAggregatesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -177,11 +177,11 @@ abstract class _$$_PostAggregatesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PostAggregatesCopyWithImpl<$Res>
-    extends _$PostAggregatesCopyWithImpl<$Res, _$_PostAggregates>
-    implements _$$_PostAggregatesCopyWith<$Res> {
-  __$$_PostAggregatesCopyWithImpl(
-      _$_PostAggregates _value, $Res Function(_$_PostAggregates) _then)
+class __$$PostAggregatesImplCopyWithImpl<$Res>
+    extends _$PostAggregatesCopyWithImpl<$Res, _$PostAggregatesImpl>
+    implements _$$PostAggregatesImplCopyWith<$Res> {
+  __$$PostAggregatesImplCopyWithImpl(
+      _$PostAggregatesImpl _value, $Res Function(_$PostAggregatesImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -201,7 +201,7 @@ class __$$_PostAggregatesCopyWithImpl<$Res>
     Object? hotRank = freezed,
     Object? hotRankActive = freezed,
   }) {
-    return _then(_$_PostAggregates(
+    return _then(_$PostAggregatesImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -261,8 +261,8 @@ class __$$_PostAggregatesCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_PostAggregates extends _PostAggregates {
-  const _$_PostAggregates(
+class _$PostAggregatesImpl extends _PostAggregates {
+  const _$PostAggregatesImpl(
       {required this.id,
       required this.postId,
       required this.comments,
@@ -278,8 +278,8 @@ class _$_PostAggregates extends _PostAggregates {
       @deprecated this.hotRankActive})
       : super._();
 
-  factory _$_PostAggregates.fromJson(Map<String, dynamic> json) =>
-      _$$_PostAggregatesFromJson(json);
+  factory _$PostAggregatesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PostAggregatesImplFromJson(json);
 
   @override
   final int id;
@@ -323,7 +323,7 @@ class _$_PostAggregates extends _PostAggregates {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PostAggregates &&
+            other is _$PostAggregatesImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.postId, postId) || other.postId == postId) &&
             (identical(other.comments, comments) ||
@@ -368,12 +368,13 @@ class _$_PostAggregates extends _PostAggregates {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PostAggregatesCopyWith<_$_PostAggregates> get copyWith =>
-      __$$_PostAggregatesCopyWithImpl<_$_PostAggregates>(this, _$identity);
+  _$$PostAggregatesImplCopyWith<_$PostAggregatesImpl> get copyWith =>
+      __$$PostAggregatesImplCopyWithImpl<_$PostAggregatesImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PostAggregatesToJson(
+    return _$$PostAggregatesImplToJson(
       this,
     );
   }
@@ -393,11 +394,11 @@ abstract class _PostAggregates extends PostAggregates {
       @deprecated final bool? featuredCommunity,
       @deprecated final bool? featuredLocal,
       @deprecated final int? hotRank,
-      @deprecated final int? hotRankActive}) = _$_PostAggregates;
+      @deprecated final int? hotRankActive}) = _$PostAggregatesImpl;
   const _PostAggregates._() : super._();
 
   factory _PostAggregates.fromJson(Map<String, dynamic> json) =
-      _$_PostAggregates.fromJson;
+      _$PostAggregatesImpl.fromJson;
 
   @override
   int get id;
@@ -433,6 +434,6 @@ abstract class _PostAggregates extends PostAggregates {
   int? get hotRankActive;
   @override
   @JsonKey(ignore: true)
-  _$$_PostAggregatesCopyWith<_$_PostAggregates> get copyWith =>
+  _$$PostAggregatesImplCopyWith<_$PostAggregatesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

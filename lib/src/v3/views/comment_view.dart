@@ -17,6 +17,7 @@ class CommentView with _$CommentView {
     required Community community,
     required CommentAggregates counts,
     required bool creatorBannedFromCommunity,
+    bool? creatorIsModerator, // Only available in lemmy v0.19.0 and above
     required SubscribedType subscribed,
     required bool saved,
     required bool creatorBlocked,

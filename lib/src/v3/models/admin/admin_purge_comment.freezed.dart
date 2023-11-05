@@ -92,11 +92,11 @@ class _$AdminPurgeCommentCopyWithImpl<$Res, $Val extends AdminPurgeComment>
 }
 
 /// @nodoc
-abstract class _$$_AdminPurgeCommentCopyWith<$Res>
+abstract class _$$AdminPurgeCommentImplCopyWith<$Res>
     implements $AdminPurgeCommentCopyWith<$Res> {
-  factory _$$_AdminPurgeCommentCopyWith(_$_AdminPurgeComment value,
-          $Res Function(_$_AdminPurgeComment) then) =
-      __$$_AdminPurgeCommentCopyWithImpl<$Res>;
+  factory _$$AdminPurgeCommentImplCopyWith(_$AdminPurgeCommentImpl value,
+          $Res Function(_$AdminPurgeCommentImpl) then) =
+      __$$AdminPurgeCommentImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -108,11 +108,11 @@ abstract class _$$_AdminPurgeCommentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AdminPurgeCommentCopyWithImpl<$Res>
-    extends _$AdminPurgeCommentCopyWithImpl<$Res, _$_AdminPurgeComment>
-    implements _$$_AdminPurgeCommentCopyWith<$Res> {
-  __$$_AdminPurgeCommentCopyWithImpl(
-      _$_AdminPurgeComment _value, $Res Function(_$_AdminPurgeComment) _then)
+class __$$AdminPurgeCommentImplCopyWithImpl<$Res>
+    extends _$AdminPurgeCommentCopyWithImpl<$Res, _$AdminPurgeCommentImpl>
+    implements _$$AdminPurgeCommentImplCopyWith<$Res> {
+  __$$AdminPurgeCommentImplCopyWithImpl(_$AdminPurgeCommentImpl _value,
+      $Res Function(_$AdminPurgeCommentImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -124,7 +124,7 @@ class __$$_AdminPurgeCommentCopyWithImpl<$Res>
     Object? reason = freezed,
     Object? when = null,
   }) {
-    return _then(_$_AdminPurgeComment(
+    return _then(_$AdminPurgeCommentImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -152,8 +152,8 @@ class __$$_AdminPurgeCommentCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_AdminPurgeComment extends _AdminPurgeComment {
-  const _$_AdminPurgeComment(
+class _$AdminPurgeCommentImpl extends _AdminPurgeComment {
+  const _$AdminPurgeCommentImpl(
       {required this.id,
       required this.adminPersonId,
       required this.postId,
@@ -161,8 +161,8 @@ class _$_AdminPurgeComment extends _AdminPurgeComment {
       @JsonKey(name: 'when_') required this.when})
       : super._();
 
-  factory _$_AdminPurgeComment.fromJson(Map<String, dynamic> json) =>
-      _$$_AdminPurgeCommentFromJson(json);
+  factory _$AdminPurgeCommentImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AdminPurgeCommentImplFromJson(json);
 
   @override
   final int id;
@@ -185,7 +185,7 @@ class _$_AdminPurgeComment extends _AdminPurgeComment {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AdminPurgeComment &&
+            other is _$AdminPurgeCommentImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.adminPersonId, adminPersonId) ||
                 other.adminPersonId == adminPersonId) &&
@@ -202,13 +202,13 @@ class _$_AdminPurgeComment extends _AdminPurgeComment {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AdminPurgeCommentCopyWith<_$_AdminPurgeComment> get copyWith =>
-      __$$_AdminPurgeCommentCopyWithImpl<_$_AdminPurgeComment>(
+  _$$AdminPurgeCommentImplCopyWith<_$AdminPurgeCommentImpl> get copyWith =>
+      __$$AdminPurgeCommentImplCopyWithImpl<_$AdminPurgeCommentImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AdminPurgeCommentToJson(
+    return _$$AdminPurgeCommentImplToJson(
       this,
     );
   }
@@ -221,11 +221,11 @@ abstract class _AdminPurgeComment extends AdminPurgeComment {
           required final int postId,
           final String? reason,
           @JsonKey(name: 'when_') required final String when}) =
-      _$_AdminPurgeComment;
+      _$AdminPurgeCommentImpl;
   const _AdminPurgeComment._() : super._();
 
   factory _AdminPurgeComment.fromJson(Map<String, dynamic> json) =
-      _$_AdminPurgeComment.fromJson;
+      _$AdminPurgeCommentImpl.fromJson;
 
   @override
   int get id;
@@ -240,6 +240,6 @@ abstract class _AdminPurgeComment extends AdminPurgeComment {
   String get when;
   @override
   @JsonKey(ignore: true)
-  _$$_AdminPurgeCommentCopyWith<_$_AdminPurgeComment> get copyWith =>
+  _$$AdminPurgeCommentImplCopyWith<_$AdminPurgeCommentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -190,7 +190,7 @@ class DeleteCommunity with _$DeleteCommunity implements LemmyApiQuery<CommunityR
 ///
 /// `HTTP.PUT /community/hide`
 @freezed
-class HideCommunity with _$HideCommunity implements LemmyApiQuery<CommunityResponse>, LemmyApiAuthenticatedQuery {
+class HideCommunity with _$HideCommunity implements LemmyApiQuery<HideCommunityResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory HideCommunity({
     String? auth,
@@ -207,7 +207,7 @@ class HideCommunity with _$HideCommunity implements LemmyApiQuery<CommunityRespo
   final httpMethod = HttpMethod.put;
 
   @override
-  CommunityResponse responseFactory(Map<String, dynamic> json) => CommunityResponse.fromJson(json);
+  HideCommunityResponse responseFactory(Map<String, dynamic> json) => HideCommunityResponse.fromJson(json);
 }
 
 /// A moderator remove for a community.

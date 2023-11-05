@@ -23,9 +23,11 @@ mixin _$PersonAggregates {
   int get id => throw _privateConstructorUsedError;
   int get personId => throw _privateConstructorUsedError;
   int get postCount => throw _privateConstructorUsedError;
-  int get postScore => throw _privateConstructorUsedError;
+  @deprecated
+  int? get postScore => throw _privateConstructorUsedError;
   int get commentCount => throw _privateConstructorUsedError;
-  int get commentScore => throw _privateConstructorUsedError;
+  @deprecated
+  int? get commentScore => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -43,9 +45,9 @@ abstract class $PersonAggregatesCopyWith<$Res> {
       {int id,
       int personId,
       int postCount,
-      int postScore,
+      @deprecated int? postScore,
       int commentCount,
-      int commentScore});
+      @deprecated int? commentScore});
 }
 
 /// @nodoc
@@ -64,9 +66,9 @@ class _$PersonAggregatesCopyWithImpl<$Res, $Val extends PersonAggregates>
     Object? id = null,
     Object? personId = null,
     Object? postCount = null,
-    Object? postScore = null,
+    Object? postScore = freezed,
     Object? commentCount = null,
-    Object? commentScore = null,
+    Object? commentScore = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -81,45 +83,45 @@ class _$PersonAggregatesCopyWithImpl<$Res, $Val extends PersonAggregates>
           ? _value.postCount
           : postCount // ignore: cast_nullable_to_non_nullable
               as int,
-      postScore: null == postScore
+      postScore: freezed == postScore
           ? _value.postScore
           : postScore // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       commentCount: null == commentCount
           ? _value.commentCount
           : commentCount // ignore: cast_nullable_to_non_nullable
               as int,
-      commentScore: null == commentScore
+      commentScore: freezed == commentScore
           ? _value.commentScore
           : commentScore // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_PersonAggregatesCopyWith<$Res>
+abstract class _$$PersonAggregatesImplCopyWith<$Res>
     implements $PersonAggregatesCopyWith<$Res> {
-  factory _$$_PersonAggregatesCopyWith(
-          _$_PersonAggregates value, $Res Function(_$_PersonAggregates) then) =
-      __$$_PersonAggregatesCopyWithImpl<$Res>;
+  factory _$$PersonAggregatesImplCopyWith(_$PersonAggregatesImpl value,
+          $Res Function(_$PersonAggregatesImpl) then) =
+      __$$PersonAggregatesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {int id,
       int personId,
       int postCount,
-      int postScore,
+      @deprecated int? postScore,
       int commentCount,
-      int commentScore});
+      @deprecated int? commentScore});
 }
 
 /// @nodoc
-class __$$_PersonAggregatesCopyWithImpl<$Res>
-    extends _$PersonAggregatesCopyWithImpl<$Res, _$_PersonAggregates>
-    implements _$$_PersonAggregatesCopyWith<$Res> {
-  __$$_PersonAggregatesCopyWithImpl(
-      _$_PersonAggregates _value, $Res Function(_$_PersonAggregates) _then)
+class __$$PersonAggregatesImplCopyWithImpl<$Res>
+    extends _$PersonAggregatesCopyWithImpl<$Res, _$PersonAggregatesImpl>
+    implements _$$PersonAggregatesImplCopyWith<$Res> {
+  __$$PersonAggregatesImplCopyWithImpl(_$PersonAggregatesImpl _value,
+      $Res Function(_$PersonAggregatesImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -128,11 +130,11 @@ class __$$_PersonAggregatesCopyWithImpl<$Res>
     Object? id = null,
     Object? personId = null,
     Object? postCount = null,
-    Object? postScore = null,
+    Object? postScore = freezed,
     Object? commentCount = null,
-    Object? commentScore = null,
+    Object? commentScore = freezed,
   }) {
-    return _then(_$_PersonAggregates(
+    return _then(_$PersonAggregatesImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -145,18 +147,18 @@ class __$$_PersonAggregatesCopyWithImpl<$Res>
           ? _value.postCount
           : postCount // ignore: cast_nullable_to_non_nullable
               as int,
-      postScore: null == postScore
+      postScore: freezed == postScore
           ? _value.postScore
           : postScore // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       commentCount: null == commentCount
           ? _value.commentCount
           : commentCount // ignore: cast_nullable_to_non_nullable
               as int,
-      commentScore: null == commentScore
+      commentScore: freezed == commentScore
           ? _value.commentScore
           : commentScore // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
     ));
   }
 }
@@ -164,18 +166,18 @@ class __$$_PersonAggregatesCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_PersonAggregates extends _PersonAggregates {
-  const _$_PersonAggregates(
+class _$PersonAggregatesImpl extends _PersonAggregates {
+  const _$PersonAggregatesImpl(
       {required this.id,
       required this.personId,
       required this.postCount,
-      required this.postScore,
+      @deprecated this.postScore,
       required this.commentCount,
-      required this.commentScore})
+      @deprecated this.commentScore})
       : super._();
 
-  factory _$_PersonAggregates.fromJson(Map<String, dynamic> json) =>
-      _$$_PersonAggregatesFromJson(json);
+  factory _$PersonAggregatesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PersonAggregatesImplFromJson(json);
 
   @override
   final int id;
@@ -184,11 +186,13 @@ class _$_PersonAggregates extends _PersonAggregates {
   @override
   final int postCount;
   @override
-  final int postScore;
+  @deprecated
+  final int? postScore;
   @override
   final int commentCount;
   @override
-  final int commentScore;
+  @deprecated
+  final int? commentScore;
 
   @override
   String toString() {
@@ -199,7 +203,7 @@ class _$_PersonAggregates extends _PersonAggregates {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PersonAggregates &&
+            other is _$PersonAggregatesImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.personId, personId) ||
                 other.personId == personId) &&
@@ -221,12 +225,13 @@ class _$_PersonAggregates extends _PersonAggregates {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PersonAggregatesCopyWith<_$_PersonAggregates> get copyWith =>
-      __$$_PersonAggregatesCopyWithImpl<_$_PersonAggregates>(this, _$identity);
+  _$$PersonAggregatesImplCopyWith<_$PersonAggregatesImpl> get copyWith =>
+      __$$PersonAggregatesImplCopyWithImpl<_$PersonAggregatesImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PersonAggregatesToJson(
+    return _$$PersonAggregatesImplToJson(
       this,
     );
   }
@@ -237,13 +242,13 @@ abstract class _PersonAggregates extends PersonAggregates {
       {required final int id,
       required final int personId,
       required final int postCount,
-      required final int postScore,
+      @deprecated final int? postScore,
       required final int commentCount,
-      required final int commentScore}) = _$_PersonAggregates;
+      @deprecated final int? commentScore}) = _$PersonAggregatesImpl;
   const _PersonAggregates._() : super._();
 
   factory _PersonAggregates.fromJson(Map<String, dynamic> json) =
-      _$_PersonAggregates.fromJson;
+      _$PersonAggregatesImpl.fromJson;
 
   @override
   int get id;
@@ -252,13 +257,15 @@ abstract class _PersonAggregates extends PersonAggregates {
   @override
   int get postCount;
   @override
-  int get postScore;
+  @deprecated
+  int? get postScore;
   @override
   int get commentCount;
   @override
-  int get commentScore;
+  @deprecated
+  int? get commentScore;
   @override
   @JsonKey(ignore: true)
-  _$$_PersonAggregatesCopyWith<_$_PersonAggregates> get copyWith =>
+  _$$PersonAggregatesImplCopyWith<_$PersonAggregatesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

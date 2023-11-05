@@ -6,10 +6,10 @@ part of 'list_registration_applications_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ListRegistrationApplicationsResponse
-    _$$_ListRegistrationApplicationsResponseFromJson(
+_$ListRegistrationApplicationsResponseImpl
+    _$$ListRegistrationApplicationsResponseImplFromJson(
             Map<String, dynamic> json) =>
-        _$_ListRegistrationApplicationsResponse(
+        _$ListRegistrationApplicationsResponseImpl(
           registrationApplications:
               (json['registration_applications'] as List<dynamic>)
                   .map((e) => RegistrationApplicationView.fromJson(
@@ -17,8 +17,8 @@ _$_ListRegistrationApplicationsResponse
                   .toList(),
         );
 
-Map<String, dynamic> _$$_ListRegistrationApplicationsResponseToJson(
-        _$_ListRegistrationApplicationsResponse instance) =>
+Map<String, dynamic> _$$ListRegistrationApplicationsResponseImplToJson(
+        _$ListRegistrationApplicationsResponseImpl instance) =>
     <String, dynamic>{
       'registration_applications':
           instance.registrationApplications.map((e) => e.toJson()).toList(),

@@ -6,7 +6,7 @@ part of 'mod_ban.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ModBan _$$_ModBanFromJson(Map<String, dynamic> json) => _$_ModBan(
+_$ModBanImpl _$$ModBanImplFromJson(Map<String, dynamic> json) => _$ModBanImpl(
       id: json['id'] as int,
       modPersonId: json['mod_person_id'] as int,
       otherPersonId: json['other_person_id'] as int,
@@ -16,7 +16,8 @@ _$_ModBan _$$_ModBanFromJson(Map<String, dynamic> json) => _$_ModBan(
       when: json['when_'] as String,
     );
 
-Map<String, dynamic> _$$_ModBanToJson(_$_ModBan instance) => <String, dynamic>{
+Map<String, dynamic> _$$ModBanImplToJson(_$ModBanImpl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'mod_person_id': instance.modPersonId,
       'other_person_id': instance.otherPersonId,

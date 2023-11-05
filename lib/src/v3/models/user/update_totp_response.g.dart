@@ -6,14 +6,14 @@ part of 'update_totp_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_UpdateTotpResponse _$$_UpdateTotpResponseFromJson(
+_$UpdateTotpResponseImpl _$$UpdateTotpResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_UpdateTotpResponse(
+    _$UpdateTotpResponseImpl(
       enabled: json['enabled'] as bool,
     );
 
-Map<String, dynamic> _$$_UpdateTotpResponseToJson(
-        _$_UpdateTotpResponse instance) =>
+Map<String, dynamic> _$$UpdateTotpResponseImplToJson(
+        _$UpdateTotpResponseImpl instance) =>
     <String, dynamic>{
       'enabled': instance.enabled,
     };

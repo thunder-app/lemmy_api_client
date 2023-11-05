@@ -64,23 +64,25 @@ class _$ListPostReportsResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ListPostReportsResponseCopyWith<$Res>
+abstract class _$$ListPostReportsResponseImplCopyWith<$Res>
     implements $ListPostReportsResponseCopyWith<$Res> {
-  factory _$$_ListPostReportsResponseCopyWith(_$_ListPostReportsResponse value,
-          $Res Function(_$_ListPostReportsResponse) then) =
-      __$$_ListPostReportsResponseCopyWithImpl<$Res>;
+  factory _$$ListPostReportsResponseImplCopyWith(
+          _$ListPostReportsResponseImpl value,
+          $Res Function(_$ListPostReportsResponseImpl) then) =
+      __$$ListPostReportsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<PostReportView> postReports});
 }
 
 /// @nodoc
-class __$$_ListPostReportsResponseCopyWithImpl<$Res>
+class __$$ListPostReportsResponseImplCopyWithImpl<$Res>
     extends _$ListPostReportsResponseCopyWithImpl<$Res,
-        _$_ListPostReportsResponse>
-    implements _$$_ListPostReportsResponseCopyWith<$Res> {
-  __$$_ListPostReportsResponseCopyWithImpl(_$_ListPostReportsResponse _value,
-      $Res Function(_$_ListPostReportsResponse) _then)
+        _$ListPostReportsResponseImpl>
+    implements _$$ListPostReportsResponseImplCopyWith<$Res> {
+  __$$ListPostReportsResponseImplCopyWithImpl(
+      _$ListPostReportsResponseImpl _value,
+      $Res Function(_$ListPostReportsResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -88,7 +90,7 @@ class __$$_ListPostReportsResponseCopyWithImpl<$Res>
   $Res call({
     Object? postReports = null,
   }) {
-    return _then(_$_ListPostReportsResponse(
+    return _then(_$ListPostReportsResponseImpl(
       postReports: null == postReports
           ? _value._postReports
           : postReports // ignore: cast_nullable_to_non_nullable
@@ -100,14 +102,14 @@ class __$$_ListPostReportsResponseCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ListPostReportsResponse extends _ListPostReportsResponse {
-  const _$_ListPostReportsResponse(
+class _$ListPostReportsResponseImpl extends _ListPostReportsResponse {
+  const _$ListPostReportsResponseImpl(
       {required final List<PostReportView> postReports})
       : _postReports = postReports,
         super._();
 
-  factory _$_ListPostReportsResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_ListPostReportsResponseFromJson(json);
+  factory _$ListPostReportsResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ListPostReportsResponseImplFromJson(json);
 
   final List<PostReportView> _postReports;
   @override
@@ -126,7 +128,7 @@ class _$_ListPostReportsResponse extends _ListPostReportsResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ListPostReportsResponse &&
+            other is _$ListPostReportsResponseImpl &&
             const DeepCollectionEquality()
                 .equals(other._postReports, _postReports));
   }
@@ -139,14 +141,13 @@ class _$_ListPostReportsResponse extends _ListPostReportsResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ListPostReportsResponseCopyWith<_$_ListPostReportsResponse>
-      get copyWith =>
-          __$$_ListPostReportsResponseCopyWithImpl<_$_ListPostReportsResponse>(
-              this, _$identity);
+  _$$ListPostReportsResponseImplCopyWith<_$ListPostReportsResponseImpl>
+      get copyWith => __$$ListPostReportsResponseImplCopyWithImpl<
+          _$ListPostReportsResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ListPostReportsResponseToJson(
+    return _$$ListPostReportsResponseImplToJson(
       this,
     );
   }
@@ -155,16 +156,16 @@ class _$_ListPostReportsResponse extends _ListPostReportsResponse {
 abstract class _ListPostReportsResponse extends ListPostReportsResponse {
   const factory _ListPostReportsResponse(
           {required final List<PostReportView> postReports}) =
-      _$_ListPostReportsResponse;
+      _$ListPostReportsResponseImpl;
   const _ListPostReportsResponse._() : super._();
 
   factory _ListPostReportsResponse.fromJson(Map<String, dynamic> json) =
-      _$_ListPostReportsResponse.fromJson;
+      _$ListPostReportsResponseImpl.fromJson;
 
   @override
   List<PostReportView> get postReports;
   @override
   @JsonKey(ignore: true)
-  _$$_ListPostReportsResponseCopyWith<_$_ListPostReportsResponse>
+  _$$ListPostReportsResponseImplCopyWith<_$ListPostReportsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

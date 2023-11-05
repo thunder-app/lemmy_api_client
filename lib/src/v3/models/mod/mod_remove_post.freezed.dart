@@ -99,11 +99,11 @@ class _$ModRemovePostCopyWithImpl<$Res, $Val extends ModRemovePost>
 }
 
 /// @nodoc
-abstract class _$$_ModRemovePostCopyWith<$Res>
+abstract class _$$ModRemovePostImplCopyWith<$Res>
     implements $ModRemovePostCopyWith<$Res> {
-  factory _$$_ModRemovePostCopyWith(
-          _$_ModRemovePost value, $Res Function(_$_ModRemovePost) then) =
-      __$$_ModRemovePostCopyWithImpl<$Res>;
+  factory _$$ModRemovePostImplCopyWith(
+          _$ModRemovePostImpl value, $Res Function(_$ModRemovePostImpl) then) =
+      __$$ModRemovePostImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -116,11 +116,11 @@ abstract class _$$_ModRemovePostCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ModRemovePostCopyWithImpl<$Res>
-    extends _$ModRemovePostCopyWithImpl<$Res, _$_ModRemovePost>
-    implements _$$_ModRemovePostCopyWith<$Res> {
-  __$$_ModRemovePostCopyWithImpl(
-      _$_ModRemovePost _value, $Res Function(_$_ModRemovePost) _then)
+class __$$ModRemovePostImplCopyWithImpl<$Res>
+    extends _$ModRemovePostCopyWithImpl<$Res, _$ModRemovePostImpl>
+    implements _$$ModRemovePostImplCopyWith<$Res> {
+  __$$ModRemovePostImplCopyWithImpl(
+      _$ModRemovePostImpl _value, $Res Function(_$ModRemovePostImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -133,7 +133,7 @@ class __$$_ModRemovePostCopyWithImpl<$Res>
     Object? removed = null,
     Object? when = null,
   }) {
-    return _then(_$_ModRemovePost(
+    return _then(_$ModRemovePostImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -165,8 +165,8 @@ class __$$_ModRemovePostCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ModRemovePost extends _ModRemovePost {
-  const _$_ModRemovePost(
+class _$ModRemovePostImpl extends _ModRemovePost {
+  const _$ModRemovePostImpl(
       {required this.id,
       required this.modPersonId,
       required this.postId,
@@ -175,8 +175,8 @@ class _$_ModRemovePost extends _ModRemovePost {
       @JsonKey(name: 'when_') required this.when})
       : super._();
 
-  factory _$_ModRemovePost.fromJson(Map<String, dynamic> json) =>
-      _$$_ModRemovePostFromJson(json);
+  factory _$ModRemovePostImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModRemovePostImplFromJson(json);
 
   @override
   final int id;
@@ -201,7 +201,7 @@ class _$_ModRemovePost extends _ModRemovePost {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ModRemovePost &&
+            other is _$ModRemovePostImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.modPersonId, modPersonId) ||
                 other.modPersonId == modPersonId) &&
@@ -219,12 +219,12 @@ class _$_ModRemovePost extends _ModRemovePost {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ModRemovePostCopyWith<_$_ModRemovePost> get copyWith =>
-      __$$_ModRemovePostCopyWithImpl<_$_ModRemovePost>(this, _$identity);
+  _$$ModRemovePostImplCopyWith<_$ModRemovePostImpl> get copyWith =>
+      __$$ModRemovePostImplCopyWithImpl<_$ModRemovePostImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModRemovePostToJson(
+    return _$$ModRemovePostImplToJson(
       this,
     );
   }
@@ -232,16 +232,17 @@ class _$_ModRemovePost extends _ModRemovePost {
 
 abstract class _ModRemovePost extends ModRemovePost {
   const factory _ModRemovePost(
-      {required final int id,
-      required final int modPersonId,
-      required final int postId,
-      final String? reason,
-      required final bool removed,
-      @JsonKey(name: 'when_') required final String when}) = _$_ModRemovePost;
+          {required final int id,
+          required final int modPersonId,
+          required final int postId,
+          final String? reason,
+          required final bool removed,
+          @JsonKey(name: 'when_') required final String when}) =
+      _$ModRemovePostImpl;
   const _ModRemovePost._() : super._();
 
   factory _ModRemovePost.fromJson(Map<String, dynamic> json) =
-      _$_ModRemovePost.fromJson;
+      _$ModRemovePostImpl.fromJson;
 
   @override
   int get id;
@@ -258,6 +259,6 @@ abstract class _ModRemovePost extends ModRemovePost {
   String get when;
   @override
   @JsonKey(ignore: true)
-  _$$_ModRemovePostCopyWith<_$_ModRemovePost> get copyWith =>
+  _$$ModRemovePostImplCopyWith<_$ModRemovePostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

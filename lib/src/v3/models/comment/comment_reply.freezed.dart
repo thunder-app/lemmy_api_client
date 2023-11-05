@@ -87,11 +87,11 @@ class _$CommentReplyCopyWithImpl<$Res, $Val extends CommentReply>
 }
 
 /// @nodoc
-abstract class _$$_CommentReplyCopyWith<$Res>
+abstract class _$$CommentReplyImplCopyWith<$Res>
     implements $CommentReplyCopyWith<$Res> {
-  factory _$$_CommentReplyCopyWith(
-          _$_CommentReply value, $Res Function(_$_CommentReply) then) =
-      __$$_CommentReplyCopyWithImpl<$Res>;
+  factory _$$CommentReplyImplCopyWith(
+          _$CommentReplyImpl value, $Res Function(_$CommentReplyImpl) then) =
+      __$$CommentReplyImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -99,11 +99,11 @@ abstract class _$$_CommentReplyCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CommentReplyCopyWithImpl<$Res>
-    extends _$CommentReplyCopyWithImpl<$Res, _$_CommentReply>
-    implements _$$_CommentReplyCopyWith<$Res> {
-  __$$_CommentReplyCopyWithImpl(
-      _$_CommentReply _value, $Res Function(_$_CommentReply) _then)
+class __$$CommentReplyImplCopyWithImpl<$Res>
+    extends _$CommentReplyCopyWithImpl<$Res, _$CommentReplyImpl>
+    implements _$$CommentReplyImplCopyWith<$Res> {
+  __$$CommentReplyImplCopyWithImpl(
+      _$CommentReplyImpl _value, $Res Function(_$CommentReplyImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -115,7 +115,7 @@ class __$$_CommentReplyCopyWithImpl<$Res>
     Object? read = null,
     Object? published = null,
   }) {
-    return _then(_$_CommentReply(
+    return _then(_$CommentReplyImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -143,8 +143,8 @@ class __$$_CommentReplyCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_CommentReply extends _CommentReply {
-  const _$_CommentReply(
+class _$CommentReplyImpl extends _CommentReply {
+  const _$CommentReplyImpl(
       {required this.id,
       required this.recipientId,
       required this.commentId,
@@ -152,8 +152,8 @@ class _$_CommentReply extends _CommentReply {
       required this.published})
       : super._();
 
-  factory _$_CommentReply.fromJson(Map<String, dynamic> json) =>
-      _$$_CommentReplyFromJson(json);
+  factory _$CommentReplyImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CommentReplyImplFromJson(json);
 
   @override
   final int id;
@@ -175,7 +175,7 @@ class _$_CommentReply extends _CommentReply {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CommentReply &&
+            other is _$CommentReplyImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.recipientId, recipientId) ||
                 other.recipientId == recipientId) &&
@@ -194,12 +194,12 @@ class _$_CommentReply extends _CommentReply {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CommentReplyCopyWith<_$_CommentReply> get copyWith =>
-      __$$_CommentReplyCopyWithImpl<_$_CommentReply>(this, _$identity);
+  _$$CommentReplyImplCopyWith<_$CommentReplyImpl> get copyWith =>
+      __$$CommentReplyImplCopyWithImpl<_$CommentReplyImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommentReplyToJson(
+    return _$$CommentReplyImplToJson(
       this,
     );
   }
@@ -211,11 +211,11 @@ abstract class _CommentReply extends CommentReply {
       required final int recipientId,
       required final int commentId,
       required final bool read,
-      required final DateTime published}) = _$_CommentReply;
+      required final DateTime published}) = _$CommentReplyImpl;
   const _CommentReply._() : super._();
 
   factory _CommentReply.fromJson(Map<String, dynamic> json) =
-      _$_CommentReply.fromJson;
+      _$CommentReplyImpl.fromJson;
 
   @override
   int get id;
@@ -229,6 +229,6 @@ abstract class _CommentReply extends CommentReply {
   DateTime get published;
   @override
   @JsonKey(ignore: true)
-  _$$_CommentReplyCopyWith<_$_CommentReply> get copyWith =>
+  _$$CommentReplyImplCopyWith<_$CommentReplyImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

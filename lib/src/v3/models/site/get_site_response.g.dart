@@ -6,8 +6,9 @@ part of 'get_site_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetSiteResponse _$$_GetSiteResponseFromJson(Map<String, dynamic> json) =>
-    _$_GetSiteResponse(
+_$GetSiteResponseImpl _$$GetSiteResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetSiteResponseImpl(
       siteView: SiteView.fromJson(json['site_view'] as Map<String, dynamic>),
       admins: (json['admins'] as List<dynamic>)
           .map((e) => PersonView.fromJson(e as Map<String, dynamic>))
@@ -30,7 +31,8 @@ _$_GetSiteResponse _$$_GetSiteResponseFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_GetSiteResponseToJson(_$_GetSiteResponse instance) =>
+Map<String, dynamic> _$$GetSiteResponseImplToJson(
+        _$GetSiteResponseImpl instance) =>
     <String, dynamic>{
       'site_view': instance.siteView.toJson(),
       'admins': instance.admins.map((e) => e.toJson()).toList(),

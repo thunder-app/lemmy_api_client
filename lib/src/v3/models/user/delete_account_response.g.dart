@@ -6,10 +6,14 @@ part of 'delete_account_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_DeleteAccountResponse _$$_DeleteAccountResponseFromJson(
+_$DeleteAccountResponseImpl _$$DeleteAccountResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DeleteAccountResponse();
+    _$DeleteAccountResponseImpl(
+      success: json['success'] as bool?,
+    );
 
-Map<String, dynamic> _$$_DeleteAccountResponseToJson(
-        _$_DeleteAccountResponse instance) =>
-    <String, dynamic>{};
+Map<String, dynamic> _$$DeleteAccountResponseImplToJson(
+        _$DeleteAccountResponseImpl instance) =>
+    <String, dynamic>{
+      'success': instance.success,
+    };

@@ -6,14 +6,14 @@ part of 'get_site_metadata_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetSiteMetadataResponse _$$_GetSiteMetadataResponseFromJson(
+_$GetSiteMetadataResponseImpl _$$GetSiteMetadataResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetSiteMetadataResponse(
+    _$GetSiteMetadataResponseImpl(
       metadata: SiteMetadata.fromJson(json['metadata'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetSiteMetadataResponseToJson(
-        _$_GetSiteMetadataResponse instance) =>
+Map<String, dynamic> _$$GetSiteMetadataResponseImplToJson(
+        _$GetSiteMetadataResponseImpl instance) =>
     <String, dynamic>{
       'metadata': instance.metadata.toJson(),
     };

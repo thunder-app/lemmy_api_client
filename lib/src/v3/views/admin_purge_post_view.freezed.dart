@@ -107,11 +107,11 @@ class _$AdminPurgePostViewCopyWithImpl<$Res, $Val extends AdminPurgePostView>
 }
 
 /// @nodoc
-abstract class _$$_AdminPurgePostViewCopyWith<$Res>
+abstract class _$$AdminPurgePostViewImplCopyWith<$Res>
     implements $AdminPurgePostViewCopyWith<$Res> {
-  factory _$$_AdminPurgePostViewCopyWith(_$_AdminPurgePostView value,
-          $Res Function(_$_AdminPurgePostView) then) =
-      __$$_AdminPurgePostViewCopyWithImpl<$Res>;
+  factory _$$AdminPurgePostViewImplCopyWith(_$AdminPurgePostViewImpl value,
+          $Res Function(_$AdminPurgePostViewImpl) then) =
+      __$$AdminPurgePostViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -126,11 +126,11 @@ abstract class _$$_AdminPurgePostViewCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AdminPurgePostViewCopyWithImpl<$Res>
-    extends _$AdminPurgePostViewCopyWithImpl<$Res, _$_AdminPurgePostView>
-    implements _$$_AdminPurgePostViewCopyWith<$Res> {
-  __$$_AdminPurgePostViewCopyWithImpl(
-      _$_AdminPurgePostView _value, $Res Function(_$_AdminPurgePostView) _then)
+class __$$AdminPurgePostViewImplCopyWithImpl<$Res>
+    extends _$AdminPurgePostViewCopyWithImpl<$Res, _$AdminPurgePostViewImpl>
+    implements _$$AdminPurgePostViewImplCopyWith<$Res> {
+  __$$AdminPurgePostViewImplCopyWithImpl(_$AdminPurgePostViewImpl _value,
+      $Res Function(_$AdminPurgePostViewImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -140,7 +140,7 @@ class __$$_AdminPurgePostViewCopyWithImpl<$Res>
     Object? admin = freezed,
     Object? community = null,
   }) {
-    return _then(_$_AdminPurgePostView(
+    return _then(_$AdminPurgePostViewImpl(
       adminPurgePost: null == adminPurgePost
           ? _value.adminPurgePost
           : adminPurgePost // ignore: cast_nullable_to_non_nullable
@@ -160,13 +160,13 @@ class __$$_AdminPurgePostViewCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_AdminPurgePostView extends _AdminPurgePostView {
-  const _$_AdminPurgePostView(
+class _$AdminPurgePostViewImpl extends _AdminPurgePostView {
+  const _$AdminPurgePostViewImpl(
       {required this.adminPurgePost, this.admin, required this.community})
       : super._();
 
-  factory _$_AdminPurgePostView.fromJson(Map<String, dynamic> json) =>
-      _$$_AdminPurgePostViewFromJson(json);
+  factory _$AdminPurgePostViewImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AdminPurgePostViewImplFromJson(json);
 
   @override
   final AdminPurgePost adminPurgePost;
@@ -184,7 +184,7 @@ class _$_AdminPurgePostView extends _AdminPurgePostView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AdminPurgePostView &&
+            other is _$AdminPurgePostViewImpl &&
             (identical(other.adminPurgePost, adminPurgePost) ||
                 other.adminPurgePost == adminPurgePost) &&
             (identical(other.admin, admin) || other.admin == admin) &&
@@ -200,13 +200,13 @@ class _$_AdminPurgePostView extends _AdminPurgePostView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AdminPurgePostViewCopyWith<_$_AdminPurgePostView> get copyWith =>
-      __$$_AdminPurgePostViewCopyWithImpl<_$_AdminPurgePostView>(
+  _$$AdminPurgePostViewImplCopyWith<_$AdminPurgePostViewImpl> get copyWith =>
+      __$$AdminPurgePostViewImplCopyWithImpl<_$AdminPurgePostViewImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AdminPurgePostViewToJson(
+    return _$$AdminPurgePostViewImplToJson(
       this,
     );
   }
@@ -216,11 +216,11 @@ abstract class _AdminPurgePostView extends AdminPurgePostView {
   const factory _AdminPurgePostView(
       {required final AdminPurgePost adminPurgePost,
       final Person? admin,
-      required final Community community}) = _$_AdminPurgePostView;
+      required final Community community}) = _$AdminPurgePostViewImpl;
   const _AdminPurgePostView._() : super._();
 
   factory _AdminPurgePostView.fromJson(Map<String, dynamic> json) =
-      _$_AdminPurgePostView.fromJson;
+      _$AdminPurgePostViewImpl.fromJson;
 
   @override
   AdminPurgePost get adminPurgePost;
@@ -230,6 +230,6 @@ abstract class _AdminPurgePostView extends AdminPurgePostView {
   Community get community;
   @override
   @JsonKey(ignore: true)
-  _$$_AdminPurgePostViewCopyWith<_$_AdminPurgePostView> get copyWith =>
+  _$$AdminPurgePostViewImplCopyWith<_$AdminPurgePostViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

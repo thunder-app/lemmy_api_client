@@ -60,20 +60,21 @@ class _$GetSiteCopyWithImpl<$Res, $Val extends GetSite>
 }
 
 /// @nodoc
-abstract class _$$_GetSiteCopyWith<$Res> implements $GetSiteCopyWith<$Res> {
-  factory _$$_GetSiteCopyWith(
-          _$_GetSite value, $Res Function(_$_GetSite) then) =
-      __$$_GetSiteCopyWithImpl<$Res>;
+abstract class _$$GetSiteImplCopyWith<$Res> implements $GetSiteCopyWith<$Res> {
+  factory _$$GetSiteImplCopyWith(
+          _$GetSiteImpl value, $Res Function(_$GetSiteImpl) then) =
+      __$$GetSiteImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? auth});
 }
 
 /// @nodoc
-class __$$_GetSiteCopyWithImpl<$Res>
-    extends _$GetSiteCopyWithImpl<$Res, _$_GetSite>
-    implements _$$_GetSiteCopyWith<$Res> {
-  __$$_GetSiteCopyWithImpl(_$_GetSite _value, $Res Function(_$_GetSite) _then)
+class __$$GetSiteImplCopyWithImpl<$Res>
+    extends _$GetSiteCopyWithImpl<$Res, _$GetSiteImpl>
+    implements _$$GetSiteImplCopyWith<$Res> {
+  __$$GetSiteImplCopyWithImpl(
+      _$GetSiteImpl _value, $Res Function(_$GetSiteImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -81,7 +82,7 @@ class __$$_GetSiteCopyWithImpl<$Res>
   $Res call({
     Object? auth = freezed,
   }) {
-    return _then(_$_GetSite(
+    return _then(_$GetSiteImpl(
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -93,11 +94,11 @@ class __$$_GetSiteCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$_GetSite extends _GetSite {
-  const _$_GetSite({this.auth}) : super._();
+class _$GetSiteImpl extends _GetSite {
+  const _$GetSiteImpl({this.auth}) : super._();
 
-  factory _$_GetSite.fromJson(Map<String, dynamic> json) =>
-      _$$_GetSiteFromJson(json);
+  factory _$GetSiteImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetSiteImplFromJson(json);
 
   @override
   final String? auth;
@@ -111,7 +112,7 @@ class _$_GetSite extends _GetSite {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetSite &&
+            other is _$GetSiteImpl &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
@@ -122,28 +123,28 @@ class _$_GetSite extends _GetSite {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetSiteCopyWith<_$_GetSite> get copyWith =>
-      __$$_GetSiteCopyWithImpl<_$_GetSite>(this, _$identity);
+  _$$GetSiteImplCopyWith<_$GetSiteImpl> get copyWith =>
+      __$$GetSiteImplCopyWithImpl<_$GetSiteImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetSiteToJson(
+    return _$$GetSiteImplToJson(
       this,
     );
   }
 }
 
 abstract class _GetSite extends GetSite {
-  const factory _GetSite({final String? auth}) = _$_GetSite;
+  const factory _GetSite({final String? auth}) = _$GetSiteImpl;
   const _GetSite._() : super._();
 
-  factory _GetSite.fromJson(Map<String, dynamic> json) = _$_GetSite.fromJson;
+  factory _GetSite.fromJson(Map<String, dynamic> json) = _$GetSiteImpl.fromJson;
 
   @override
   String? get auth;
   @override
   @JsonKey(ignore: true)
-  _$$_GetSiteCopyWith<_$_GetSite> get copyWith =>
+  _$$GetSiteImplCopyWith<_$GetSiteImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -469,11 +470,11 @@ class _$CreateSiteCopyWithImpl<$Res, $Val extends CreateSite>
 }
 
 /// @nodoc
-abstract class _$$_CreateSiteCopyWith<$Res>
+abstract class _$$CreateSiteImplCopyWith<$Res>
     implements $CreateSiteCopyWith<$Res> {
-  factory _$$_CreateSiteCopyWith(
-          _$_CreateSite value, $Res Function(_$_CreateSite) then) =
-      __$$_CreateSiteCopyWithImpl<$Res>;
+  factory _$$CreateSiteImplCopyWith(
+          _$CreateSiteImpl value, $Res Function(_$CreateSiteImpl) then) =
+      __$$CreateSiteImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -520,11 +521,11 @@ abstract class _$$_CreateSiteCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CreateSiteCopyWithImpl<$Res>
-    extends _$CreateSiteCopyWithImpl<$Res, _$_CreateSite>
-    implements _$$_CreateSiteCopyWith<$Res> {
-  __$$_CreateSiteCopyWithImpl(
-      _$_CreateSite _value, $Res Function(_$_CreateSite) _then)
+class __$$CreateSiteImplCopyWithImpl<$Res>
+    extends _$CreateSiteCopyWithImpl<$Res, _$CreateSiteImpl>
+    implements _$$CreateSiteImplCopyWith<$Res> {
+  __$$CreateSiteImplCopyWithImpl(
+      _$CreateSiteImpl _value, $Res Function(_$CreateSiteImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -571,7 +572,7 @@ class __$$_CreateSiteCopyWithImpl<$Res>
     Object? registrationMode = null,
     Object? auth = freezed,
   }) {
-    return _then(_$_CreateSite(
+    return _then(_$CreateSiteImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -739,8 +740,8 @@ class __$$_CreateSiteCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$_CreateSite extends _CreateSite {
-  const _$_CreateSite(
+class _$CreateSiteImpl extends _CreateSite {
+  const _$CreateSiteImpl(
       {required this.name,
       this.sidebar,
       this.description,
@@ -787,8 +788,8 @@ class _$_CreateSite extends _CreateSite {
         _taglines = taglines,
         super._();
 
-  factory _$_CreateSite.fromJson(Map<String, dynamic> json) =>
-      _$$_CreateSiteFromJson(json);
+  factory _$CreateSiteImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CreateSiteImplFromJson(json);
 
   @override
   final String name;
@@ -915,7 +916,7 @@ class _$_CreateSite extends _CreateSite {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CreateSite &&
+            other is _$CreateSiteImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.sidebar, sidebar) || other.sidebar == sidebar) &&
             (identical(other.description, description) ||
@@ -1034,12 +1035,12 @@ class _$_CreateSite extends _CreateSite {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CreateSiteCopyWith<_$_CreateSite> get copyWith =>
-      __$$_CreateSiteCopyWithImpl<_$_CreateSite>(this, _$identity);
+  _$$CreateSiteImplCopyWith<_$CreateSiteImpl> get copyWith =>
+      __$$CreateSiteImplCopyWithImpl<_$CreateSiteImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CreateSiteToJson(
+    return _$$CreateSiteImplToJson(
       this,
     );
   }
@@ -1086,11 +1087,11 @@ abstract class _CreateSite extends CreateSite {
       final List<String>? blockedInstances,
       final List<String>? taglines,
       required final RegistrationMode registrationMode,
-      final String? auth}) = _$_CreateSite;
+      final String? auth}) = _$CreateSiteImpl;
   const _CreateSite._() : super._();
 
   factory _CreateSite.fromJson(Map<String, dynamic> json) =
-      _$_CreateSite.fromJson;
+      _$CreateSiteImpl.fromJson;
 
   @override
   String get name;
@@ -1174,7 +1175,7 @@ abstract class _CreateSite extends CreateSite {
   String? get auth;
   @override
   @JsonKey(ignore: true)
-  _$$_CreateSiteCopyWith<_$_CreateSite> get copyWith =>
+  _$$CreateSiteImplCopyWith<_$CreateSiteImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1506,10 +1507,11 @@ class _$EditSiteCopyWithImpl<$Res, $Val extends EditSite>
 }
 
 /// @nodoc
-abstract class _$$_EditSiteCopyWith<$Res> implements $EditSiteCopyWith<$Res> {
-  factory _$$_EditSiteCopyWith(
-          _$_EditSite value, $Res Function(_$_EditSite) then) =
-      __$$_EditSiteCopyWithImpl<$Res>;
+abstract class _$$EditSiteImplCopyWith<$Res>
+    implements $EditSiteCopyWith<$Res> {
+  factory _$$EditSiteImplCopyWith(
+          _$EditSiteImpl value, $Res Function(_$EditSiteImpl) then) =
+      __$$EditSiteImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1557,11 +1559,11 @@ abstract class _$$_EditSiteCopyWith<$Res> implements $EditSiteCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_EditSiteCopyWithImpl<$Res>
-    extends _$EditSiteCopyWithImpl<$Res, _$_EditSite>
-    implements _$$_EditSiteCopyWith<$Res> {
-  __$$_EditSiteCopyWithImpl(
-      _$_EditSite _value, $Res Function(_$_EditSite) _then)
+class __$$EditSiteImplCopyWithImpl<$Res>
+    extends _$EditSiteCopyWithImpl<$Res, _$EditSiteImpl>
+    implements _$$EditSiteImplCopyWith<$Res> {
+  __$$EditSiteImplCopyWithImpl(
+      _$EditSiteImpl _value, $Res Function(_$EditSiteImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1609,7 +1611,7 @@ class __$$_EditSiteCopyWithImpl<$Res>
     Object? reportsEmailAdmins = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_$_EditSite(
+    return _then(_$EditSiteImpl(
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -1781,8 +1783,8 @@ class __$$_EditSiteCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$_EditSite extends _EditSite {
-  const _$_EditSite(
+class _$EditSiteImpl extends _EditSite {
+  const _$EditSiteImpl(
       {this.name,
       this.sidebar,
       this.description,
@@ -1830,8 +1832,8 @@ class _$_EditSite extends _EditSite {
         _taglines = taglines,
         super._();
 
-  factory _$_EditSite.fromJson(Map<String, dynamic> json) =>
-      _$$_EditSiteFromJson(json);
+  factory _$EditSiteImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EditSiteImplFromJson(json);
 
   @override
   final String? name;
@@ -1960,7 +1962,7 @@ class _$_EditSite extends _EditSite {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EditSite &&
+            other is _$EditSiteImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.sidebar, sidebar) || other.sidebar == sidebar) &&
             (identical(other.description, description) ||
@@ -2081,12 +2083,12 @@ class _$_EditSite extends _EditSite {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EditSiteCopyWith<_$_EditSite> get copyWith =>
-      __$$_EditSiteCopyWithImpl<_$_EditSite>(this, _$identity);
+  _$$EditSiteImplCopyWith<_$EditSiteImpl> get copyWith =>
+      __$$EditSiteImplCopyWithImpl<_$EditSiteImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EditSiteToJson(
+    return _$$EditSiteImplToJson(
       this,
     );
   }
@@ -2134,10 +2136,11 @@ abstract class _EditSite extends EditSite {
       final List<String>? taglines,
       final RegistrationMode? registrationMode,
       final bool? reportsEmailAdmins,
-      final String? auth}) = _$_EditSite;
+      final String? auth}) = _$EditSiteImpl;
   const _EditSite._() : super._();
 
-  factory _EditSite.fromJson(Map<String, dynamic> json) = _$_EditSite.fromJson;
+  factory _EditSite.fromJson(Map<String, dynamic> json) =
+      _$EditSiteImpl.fromJson;
 
   @override
   String? get name;
@@ -2223,7 +2226,7 @@ abstract class _EditSite extends EditSite {
   String? get auth;
   @override
   @JsonKey(ignore: true)
-  _$$_EditSiteCopyWith<_$_EditSite> get copyWith =>
+  _$$EditSiteImplCopyWith<_$EditSiteImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2287,22 +2290,22 @@ class _$BlockInstanceCopyWithImpl<$Res, $Val extends BlockInstance>
 }
 
 /// @nodoc
-abstract class _$$_BlockInstanceCopyWith<$Res>
+abstract class _$$BlockInstanceImplCopyWith<$Res>
     implements $BlockInstanceCopyWith<$Res> {
-  factory _$$_BlockInstanceCopyWith(
-          _$_BlockInstance value, $Res Function(_$_BlockInstance) then) =
-      __$$_BlockInstanceCopyWithImpl<$Res>;
+  factory _$$BlockInstanceImplCopyWith(
+          _$BlockInstanceImpl value, $Res Function(_$BlockInstanceImpl) then) =
+      __$$BlockInstanceImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? auth, int instanceId, bool block});
 }
 
 /// @nodoc
-class __$$_BlockInstanceCopyWithImpl<$Res>
-    extends _$BlockInstanceCopyWithImpl<$Res, _$_BlockInstance>
-    implements _$$_BlockInstanceCopyWith<$Res> {
-  __$$_BlockInstanceCopyWithImpl(
-      _$_BlockInstance _value, $Res Function(_$_BlockInstance) _then)
+class __$$BlockInstanceImplCopyWithImpl<$Res>
+    extends _$BlockInstanceCopyWithImpl<$Res, _$BlockInstanceImpl>
+    implements _$$BlockInstanceImplCopyWith<$Res> {
+  __$$BlockInstanceImplCopyWithImpl(
+      _$BlockInstanceImpl _value, $Res Function(_$BlockInstanceImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2312,7 +2315,7 @@ class __$$_BlockInstanceCopyWithImpl<$Res>
     Object? instanceId = null,
     Object? block = null,
   }) {
-    return _then(_$_BlockInstance(
+    return _then(_$BlockInstanceImpl(
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -2332,13 +2335,13 @@ class __$$_BlockInstanceCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$_BlockInstance extends _BlockInstance {
-  const _$_BlockInstance(
+class _$BlockInstanceImpl extends _BlockInstance {
+  const _$BlockInstanceImpl(
       {this.auth, required this.instanceId, required this.block})
       : super._();
 
-  factory _$_BlockInstance.fromJson(Map<String, dynamic> json) =>
-      _$$_BlockInstanceFromJson(json);
+  factory _$BlockInstanceImpl.fromJson(Map<String, dynamic> json) =>
+      _$$BlockInstanceImplFromJson(json);
 
   @override
   final String? auth;
@@ -2356,7 +2359,7 @@ class _$_BlockInstance extends _BlockInstance {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_BlockInstance &&
+            other is _$BlockInstanceImpl &&
             (identical(other.auth, auth) || other.auth == auth) &&
             (identical(other.instanceId, instanceId) ||
                 other.instanceId == instanceId) &&
@@ -2370,12 +2373,12 @@ class _$_BlockInstance extends _BlockInstance {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_BlockInstanceCopyWith<_$_BlockInstance> get copyWith =>
-      __$$_BlockInstanceCopyWithImpl<_$_BlockInstance>(this, _$identity);
+  _$$BlockInstanceImplCopyWith<_$BlockInstanceImpl> get copyWith =>
+      __$$BlockInstanceImplCopyWithImpl<_$BlockInstanceImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BlockInstanceToJson(
+    return _$$BlockInstanceImplToJson(
       this,
     );
   }
@@ -2385,11 +2388,11 @@ abstract class _BlockInstance extends BlockInstance {
   const factory _BlockInstance(
       {final String? auth,
       required final int instanceId,
-      required final bool block}) = _$_BlockInstance;
+      required final bool block}) = _$BlockInstanceImpl;
   const _BlockInstance._() : super._();
 
   factory _BlockInstance.fromJson(Map<String, dynamic> json) =
-      _$_BlockInstance.fromJson;
+      _$BlockInstanceImpl.fromJson;
 
   @override
   String? get auth;
@@ -2399,6 +2402,6 @@ abstract class _BlockInstance extends BlockInstance {
   bool get block;
   @override
   @JsonKey(ignore: true)
-  _$$_BlockInstanceCopyWith<_$_BlockInstance> get copyWith =>
+  _$$BlockInstanceImplCopyWith<_$BlockInstanceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

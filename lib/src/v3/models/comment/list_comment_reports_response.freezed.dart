@@ -66,25 +66,25 @@ class _$ListCommentReportsResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ListCommentReportsResponseCopyWith<$Res>
+abstract class _$$ListCommentReportsResponseImplCopyWith<$Res>
     implements $ListCommentReportsResponseCopyWith<$Res> {
-  factory _$$_ListCommentReportsResponseCopyWith(
-          _$_ListCommentReportsResponse value,
-          $Res Function(_$_ListCommentReportsResponse) then) =
-      __$$_ListCommentReportsResponseCopyWithImpl<$Res>;
+  factory _$$ListCommentReportsResponseImplCopyWith(
+          _$ListCommentReportsResponseImpl value,
+          $Res Function(_$ListCommentReportsResponseImpl) then) =
+      __$$ListCommentReportsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<CommentReportView> commentReports});
 }
 
 /// @nodoc
-class __$$_ListCommentReportsResponseCopyWithImpl<$Res>
+class __$$ListCommentReportsResponseImplCopyWithImpl<$Res>
     extends _$ListCommentReportsResponseCopyWithImpl<$Res,
-        _$_ListCommentReportsResponse>
-    implements _$$_ListCommentReportsResponseCopyWith<$Res> {
-  __$$_ListCommentReportsResponseCopyWithImpl(
-      _$_ListCommentReportsResponse _value,
-      $Res Function(_$_ListCommentReportsResponse) _then)
+        _$ListCommentReportsResponseImpl>
+    implements _$$ListCommentReportsResponseImplCopyWith<$Res> {
+  __$$ListCommentReportsResponseImplCopyWithImpl(
+      _$ListCommentReportsResponseImpl _value,
+      $Res Function(_$ListCommentReportsResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -92,7 +92,7 @@ class __$$_ListCommentReportsResponseCopyWithImpl<$Res>
   $Res call({
     Object? commentReports = null,
   }) {
-    return _then(_$_ListCommentReportsResponse(
+    return _then(_$ListCommentReportsResponseImpl(
       commentReports: null == commentReports
           ? _value._commentReports
           : commentReports // ignore: cast_nullable_to_non_nullable
@@ -104,14 +104,15 @@ class __$$_ListCommentReportsResponseCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ListCommentReportsResponse extends _ListCommentReportsResponse {
-  const _$_ListCommentReportsResponse(
+class _$ListCommentReportsResponseImpl extends _ListCommentReportsResponse {
+  const _$ListCommentReportsResponseImpl(
       {required final List<CommentReportView> commentReports})
       : _commentReports = commentReports,
         super._();
 
-  factory _$_ListCommentReportsResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_ListCommentReportsResponseFromJson(json);
+  factory _$ListCommentReportsResponseImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$ListCommentReportsResponseImplFromJson(json);
 
   final List<CommentReportView> _commentReports;
   @override
@@ -130,7 +131,7 @@ class _$_ListCommentReportsResponse extends _ListCommentReportsResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ListCommentReportsResponse &&
+            other is _$ListCommentReportsResponseImpl &&
             const DeepCollectionEquality()
                 .equals(other._commentReports, _commentReports));
   }
@@ -143,13 +144,13 @@ class _$_ListCommentReportsResponse extends _ListCommentReportsResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ListCommentReportsResponseCopyWith<_$_ListCommentReportsResponse>
-      get copyWith => __$$_ListCommentReportsResponseCopyWithImpl<
-          _$_ListCommentReportsResponse>(this, _$identity);
+  _$$ListCommentReportsResponseImplCopyWith<_$ListCommentReportsResponseImpl>
+      get copyWith => __$$ListCommentReportsResponseImplCopyWithImpl<
+          _$ListCommentReportsResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ListCommentReportsResponseToJson(
+    return _$$ListCommentReportsResponseImplToJson(
       this,
     );
   }
@@ -158,16 +159,16 @@ class _$_ListCommentReportsResponse extends _ListCommentReportsResponse {
 abstract class _ListCommentReportsResponse extends ListCommentReportsResponse {
   const factory _ListCommentReportsResponse(
           {required final List<CommentReportView> commentReports}) =
-      _$_ListCommentReportsResponse;
+      _$ListCommentReportsResponseImpl;
   const _ListCommentReportsResponse._() : super._();
 
   factory _ListCommentReportsResponse.fromJson(Map<String, dynamic> json) =
-      _$_ListCommentReportsResponse.fromJson;
+      _$ListCommentReportsResponseImpl.fromJson;
 
   @override
   List<CommentReportView> get commentReports;
   @override
   @JsonKey(ignore: true)
-  _$$_ListCommentReportsResponseCopyWith<_$_ListCommentReportsResponse>
+  _$$ListCommentReportsResponseImplCopyWith<_$ListCommentReportsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

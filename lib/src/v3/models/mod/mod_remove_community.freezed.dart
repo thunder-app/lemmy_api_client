@@ -107,11 +107,11 @@ class _$ModRemoveCommunityCopyWithImpl<$Res, $Val extends ModRemoveCommunity>
 }
 
 /// @nodoc
-abstract class _$$_ModRemoveCommunityCopyWith<$Res>
+abstract class _$$ModRemoveCommunityImplCopyWith<$Res>
     implements $ModRemoveCommunityCopyWith<$Res> {
-  factory _$$_ModRemoveCommunityCopyWith(_$_ModRemoveCommunity value,
-          $Res Function(_$_ModRemoveCommunity) then) =
-      __$$_ModRemoveCommunityCopyWithImpl<$Res>;
+  factory _$$ModRemoveCommunityImplCopyWith(_$ModRemoveCommunityImpl value,
+          $Res Function(_$ModRemoveCommunityImpl) then) =
+      __$$ModRemoveCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -125,11 +125,11 @@ abstract class _$$_ModRemoveCommunityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ModRemoveCommunityCopyWithImpl<$Res>
-    extends _$ModRemoveCommunityCopyWithImpl<$Res, _$_ModRemoveCommunity>
-    implements _$$_ModRemoveCommunityCopyWith<$Res> {
-  __$$_ModRemoveCommunityCopyWithImpl(
-      _$_ModRemoveCommunity _value, $Res Function(_$_ModRemoveCommunity) _then)
+class __$$ModRemoveCommunityImplCopyWithImpl<$Res>
+    extends _$ModRemoveCommunityCopyWithImpl<$Res, _$ModRemoveCommunityImpl>
+    implements _$$ModRemoveCommunityImplCopyWith<$Res> {
+  __$$ModRemoveCommunityImplCopyWithImpl(_$ModRemoveCommunityImpl _value,
+      $Res Function(_$ModRemoveCommunityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -143,7 +143,7 @@ class __$$_ModRemoveCommunityCopyWithImpl<$Res>
     Object? expires = freezed,
     Object? when = null,
   }) {
-    return _then(_$_ModRemoveCommunity(
+    return _then(_$ModRemoveCommunityImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -179,8 +179,8 @@ class __$$_ModRemoveCommunityCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ModRemoveCommunity extends _ModRemoveCommunity {
-  const _$_ModRemoveCommunity(
+class _$ModRemoveCommunityImpl extends _ModRemoveCommunity {
+  const _$ModRemoveCommunityImpl(
       {required this.id,
       required this.modPersonId,
       required this.communityId,
@@ -190,8 +190,8 @@ class _$_ModRemoveCommunity extends _ModRemoveCommunity {
       @JsonKey(name: 'when_') required this.when})
       : super._();
 
-  factory _$_ModRemoveCommunity.fromJson(Map<String, dynamic> json) =>
-      _$$_ModRemoveCommunityFromJson(json);
+  factory _$ModRemoveCommunityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModRemoveCommunityImplFromJson(json);
 
   @override
   final int id;
@@ -219,7 +219,7 @@ class _$_ModRemoveCommunity extends _ModRemoveCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ModRemoveCommunity &&
+            other is _$ModRemoveCommunityImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.modPersonId, modPersonId) ||
                 other.modPersonId == modPersonId) &&
@@ -239,13 +239,13 @@ class _$_ModRemoveCommunity extends _ModRemoveCommunity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ModRemoveCommunityCopyWith<_$_ModRemoveCommunity> get copyWith =>
-      __$$_ModRemoveCommunityCopyWithImpl<_$_ModRemoveCommunity>(
+  _$$ModRemoveCommunityImplCopyWith<_$ModRemoveCommunityImpl> get copyWith =>
+      __$$ModRemoveCommunityImplCopyWithImpl<_$ModRemoveCommunityImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModRemoveCommunityToJson(
+    return _$$ModRemoveCommunityImplToJson(
       this,
     );
   }
@@ -260,11 +260,11 @@ abstract class _ModRemoveCommunity extends ModRemoveCommunity {
           required final bool removed,
           @deprecated final int? expires,
           @JsonKey(name: 'when_') required final String when}) =
-      _$_ModRemoveCommunity;
+      _$ModRemoveCommunityImpl;
   const _ModRemoveCommunity._() : super._();
 
   factory _ModRemoveCommunity.fromJson(Map<String, dynamic> json) =
-      _$_ModRemoveCommunity.fromJson;
+      _$ModRemoveCommunityImpl.fromJson;
 
   @override
   int get id;
@@ -284,6 +284,6 @@ abstract class _ModRemoveCommunity extends ModRemoveCommunity {
   String get when;
   @override
   @JsonKey(ignore: true)
-  _$$_ModRemoveCommunityCopyWith<_$_ModRemoveCommunity> get copyWith =>
+  _$$ModRemoveCommunityImplCopyWith<_$ModRemoveCommunityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

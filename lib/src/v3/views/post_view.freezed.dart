@@ -24,6 +24,8 @@ mixin _$PostView {
   Person get creator => throw _privateConstructorUsedError;
   Community get community => throw _privateConstructorUsedError;
   bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
+  bool? get creatorIsModerator =>
+      throw _privateConstructorUsedError; // Only available in lemmy v0.19.0 and above
   PostAggregates get counts => throw _privateConstructorUsedError;
   SubscribedType get subscribed => throw _privateConstructorUsedError;
   bool get saved => throw _privateConstructorUsedError;
@@ -48,6 +50,7 @@ abstract class $PostViewCopyWith<$Res> {
       Person creator,
       Community community,
       bool creatorBannedFromCommunity,
+      bool? creatorIsModerator,
       PostAggregates counts,
       SubscribedType subscribed,
       bool saved,
@@ -79,6 +82,7 @@ class _$PostViewCopyWithImpl<$Res, $Val extends PostView>
     Object? creator = null,
     Object? community = null,
     Object? creatorBannedFromCommunity = null,
+    Object? creatorIsModerator = freezed,
     Object? counts = null,
     Object? subscribed = null,
     Object? saved = null,
@@ -104,6 +108,10 @@ class _$PostViewCopyWithImpl<$Res, $Val extends PostView>
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
               as bool,
+      creatorIsModerator: freezed == creatorIsModerator
+          ? _value.creatorIsModerator
+          : creatorIsModerator // ignore: cast_nullable_to_non_nullable
+              as bool?,
       counts: null == counts
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
@@ -169,10 +177,11 @@ class _$PostViewCopyWithImpl<$Res, $Val extends PostView>
 }
 
 /// @nodoc
-abstract class _$$_PostViewCopyWith<$Res> implements $PostViewCopyWith<$Res> {
-  factory _$$_PostViewCopyWith(
-          _$_PostView value, $Res Function(_$_PostView) then) =
-      __$$_PostViewCopyWithImpl<$Res>;
+abstract class _$$PostViewImplCopyWith<$Res>
+    implements $PostViewCopyWith<$Res> {
+  factory _$$PostViewImplCopyWith(
+          _$PostViewImpl value, $Res Function(_$PostViewImpl) then) =
+      __$$PostViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -180,6 +189,7 @@ abstract class _$$_PostViewCopyWith<$Res> implements $PostViewCopyWith<$Res> {
       Person creator,
       Community community,
       bool creatorBannedFromCommunity,
+      bool? creatorIsModerator,
       PostAggregates counts,
       SubscribedType subscribed,
       bool saved,
@@ -199,11 +209,11 @@ abstract class _$$_PostViewCopyWith<$Res> implements $PostViewCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_PostViewCopyWithImpl<$Res>
-    extends _$PostViewCopyWithImpl<$Res, _$_PostView>
-    implements _$$_PostViewCopyWith<$Res> {
-  __$$_PostViewCopyWithImpl(
-      _$_PostView _value, $Res Function(_$_PostView) _then)
+class __$$PostViewImplCopyWithImpl<$Res>
+    extends _$PostViewCopyWithImpl<$Res, _$PostViewImpl>
+    implements _$$PostViewImplCopyWith<$Res> {
+  __$$PostViewImplCopyWithImpl(
+      _$PostViewImpl _value, $Res Function(_$PostViewImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -213,6 +223,7 @@ class __$$_PostViewCopyWithImpl<$Res>
     Object? creator = null,
     Object? community = null,
     Object? creatorBannedFromCommunity = null,
+    Object? creatorIsModerator = freezed,
     Object? counts = null,
     Object? subscribed = null,
     Object? saved = null,
@@ -221,7 +232,7 @@ class __$$_PostViewCopyWithImpl<$Res>
     Object? myVote = freezed,
     Object? unreadComments = null,
   }) {
-    return _then(_$_PostView(
+    return _then(_$PostViewImpl(
       post: null == post
           ? _value.post
           : post // ignore: cast_nullable_to_non_nullable
@@ -238,6 +249,10 @@ class __$$_PostViewCopyWithImpl<$Res>
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
               as bool,
+      creatorIsModerator: freezed == creatorIsModerator
+          ? _value.creatorIsModerator
+          : creatorIsModerator // ignore: cast_nullable_to_non_nullable
+              as bool?,
       counts: null == counts
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
@@ -273,12 +288,13 @@ class __$$_PostViewCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_PostView extends _PostView {
-  const _$_PostView(
+class _$PostViewImpl extends _PostView {
+  const _$PostViewImpl(
       {required this.post,
       required this.creator,
       required this.community,
       required this.creatorBannedFromCommunity,
+      this.creatorIsModerator,
       required this.counts,
       required this.subscribed,
       required this.saved,
@@ -288,8 +304,8 @@ class _$_PostView extends _PostView {
       required this.unreadComments})
       : super._();
 
-  factory _$_PostView.fromJson(Map<String, dynamic> json) =>
-      _$$_PostViewFromJson(json);
+  factory _$PostViewImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PostViewImplFromJson(json);
 
   @override
   final Post post;
@@ -299,6 +315,9 @@ class _$_PostView extends _PostView {
   final Community community;
   @override
   final bool creatorBannedFromCommunity;
+  @override
+  final bool? creatorIsModerator;
+// Only available in lemmy v0.19.0 and above
   @override
   final PostAggregates counts;
   @override
@@ -316,14 +335,14 @@ class _$_PostView extends _PostView {
 
   @override
   String toString() {
-    return 'PostView(post: $post, creator: $creator, community: $community, creatorBannedFromCommunity: $creatorBannedFromCommunity, counts: $counts, subscribed: $subscribed, saved: $saved, read: $read, creatorBlocked: $creatorBlocked, myVote: $myVote, unreadComments: $unreadComments)';
+    return 'PostView(post: $post, creator: $creator, community: $community, creatorBannedFromCommunity: $creatorBannedFromCommunity, creatorIsModerator: $creatorIsModerator, counts: $counts, subscribed: $subscribed, saved: $saved, read: $read, creatorBlocked: $creatorBlocked, myVote: $myVote, unreadComments: $unreadComments)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PostView &&
+            other is _$PostViewImpl &&
             (identical(other.post, post) || other.post == post) &&
             (identical(other.creator, creator) || other.creator == creator) &&
             (identical(other.community, community) ||
@@ -332,6 +351,8 @@ class _$_PostView extends _PostView {
                     creatorBannedFromCommunity) ||
                 other.creatorBannedFromCommunity ==
                     creatorBannedFromCommunity) &&
+            (identical(other.creatorIsModerator, creatorIsModerator) ||
+                other.creatorIsModerator == creatorIsModerator) &&
             (identical(other.counts, counts) || other.counts == counts) &&
             (identical(other.subscribed, subscribed) ||
                 other.subscribed == subscribed) &&
@@ -352,6 +373,7 @@ class _$_PostView extends _PostView {
       creator,
       community,
       creatorBannedFromCommunity,
+      creatorIsModerator,
       counts,
       subscribed,
       saved,
@@ -363,12 +385,12 @@ class _$_PostView extends _PostView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PostViewCopyWith<_$_PostView> get copyWith =>
-      __$$_PostViewCopyWithImpl<_$_PostView>(this, _$identity);
+  _$$PostViewImplCopyWith<_$PostViewImpl> get copyWith =>
+      __$$PostViewImplCopyWithImpl<_$PostViewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PostViewToJson(
+    return _$$PostViewImplToJson(
       this,
     );
   }
@@ -380,16 +402,18 @@ abstract class _PostView extends PostView {
       required final Person creator,
       required final Community community,
       required final bool creatorBannedFromCommunity,
+      final bool? creatorIsModerator,
       required final PostAggregates counts,
       required final SubscribedType subscribed,
       required final bool saved,
       required final bool read,
       required final bool creatorBlocked,
       final int? myVote,
-      required final int unreadComments}) = _$_PostView;
+      required final int unreadComments}) = _$PostViewImpl;
   const _PostView._() : super._();
 
-  factory _PostView.fromJson(Map<String, dynamic> json) = _$_PostView.fromJson;
+  factory _PostView.fromJson(Map<String, dynamic> json) =
+      _$PostViewImpl.fromJson;
 
   @override
   Post get post;
@@ -400,6 +424,8 @@ abstract class _PostView extends PostView {
   @override
   bool get creatorBannedFromCommunity;
   @override
+  bool? get creatorIsModerator;
+  @override // Only available in lemmy v0.19.0 and above
   PostAggregates get counts;
   @override
   SubscribedType get subscribed;
@@ -415,6 +441,6 @@ abstract class _PostView extends PostView {
   int get unreadComments;
   @override
   @JsonKey(ignore: true)
-  _$$_PostViewCopyWith<_$_PostView> get copyWith =>
+  _$$PostViewImplCopyWith<_$PostViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

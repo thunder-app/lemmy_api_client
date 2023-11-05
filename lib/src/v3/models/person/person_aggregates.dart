@@ -12,9 +12,9 @@ class PersonAggregates with _$PersonAggregates {
     required int id,
     required int personId,
     required int postCount,
-    required int postScore,
+    @deprecated int? postScore,
     required int commentCount,
-    required int commentScore,
+    @deprecated int? commentScore,
   }) = _PersonAggregates;
 
   const PersonAggregates._();

@@ -6,13 +6,13 @@ part of 'resolve_object.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ResolveObject _$$_ResolveObjectFromJson(Map<String, dynamic> json) =>
-    _$_ResolveObject(
+_$ResolveObjectImpl _$$ResolveObjectImplFromJson(Map<String, dynamic> json) =>
+    _$ResolveObjectImpl(
       q: json['q'] as String,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_ResolveObjectToJson(_$_ResolveObject instance) {
+Map<String, dynamic> _$$ResolveObjectImplToJson(_$ResolveObjectImpl instance) {
   final val = <String, dynamic>{
     'q': instance.q,
   };

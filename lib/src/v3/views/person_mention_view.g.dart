@@ -6,8 +6,9 @@ part of 'person_mention_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PersonMentionView _$$_PersonMentionViewFromJson(Map<String, dynamic> json) =>
-    _$_PersonMentionView(
+_$PersonMentionViewImpl _$$PersonMentionViewImplFromJson(
+        Map<String, dynamic> json) =>
+    _$PersonMentionViewImpl(
       personMention: PersonMention.fromJson(
           json['person_mention'] as Map<String, dynamic>),
       comment: Comment.fromJson(json['comment'] as Map<String, dynamic>),
@@ -18,14 +19,15 @@ _$_PersonMentionView _$$_PersonMentionViewFromJson(Map<String, dynamic> json) =>
       counts:
           CommentAggregates.fromJson(json['counts'] as Map<String, dynamic>),
       creatorBannedFromCommunity: json['creator_banned_from_community'] as bool,
+      creatorIsModerator: json['creator_is_moderator'] as bool?,
       subscribed: SubscribedType.fromJson(json['subscribed'] as String),
       saved: json['saved'] as bool,
       creatorBlocked: json['creator_blocked'] as bool,
       myVote: json['my_vote'] as int?,
     );
 
-Map<String, dynamic> _$$_PersonMentionViewToJson(
-        _$_PersonMentionView instance) =>
+Map<String, dynamic> _$$PersonMentionViewImplToJson(
+        _$PersonMentionViewImpl instance) =>
     <String, dynamic>{
       'person_mention': instance.personMention.toJson(),
       'comment': instance.comment.toJson(),
@@ -35,6 +37,7 @@ Map<String, dynamic> _$$_PersonMentionViewToJson(
       'recipient': instance.recipient.toJson(),
       'counts': instance.counts.toJson(),
       'creator_banned_from_community': instance.creatorBannedFromCommunity,
+      'creator_is_moderator': instance.creatorIsModerator,
       'subscribed': instance.subscribed.toJson(),
       'saved': instance.saved,
       'creator_blocked': instance.creatorBlocked,

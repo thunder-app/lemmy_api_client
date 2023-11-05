@@ -113,11 +113,11 @@ class _$ModBanFromCommunityCopyWithImpl<$Res, $Val extends ModBanFromCommunity>
 }
 
 /// @nodoc
-abstract class _$$_ModBanFromCommunityCopyWith<$Res>
+abstract class _$$ModBanFromCommunityImplCopyWith<$Res>
     implements $ModBanFromCommunityCopyWith<$Res> {
-  factory _$$_ModBanFromCommunityCopyWith(_$_ModBanFromCommunity value,
-          $Res Function(_$_ModBanFromCommunity) then) =
-      __$$_ModBanFromCommunityCopyWithImpl<$Res>;
+  factory _$$ModBanFromCommunityImplCopyWith(_$ModBanFromCommunityImpl value,
+          $Res Function(_$ModBanFromCommunityImpl) then) =
+      __$$ModBanFromCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -132,11 +132,11 @@ abstract class _$$_ModBanFromCommunityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ModBanFromCommunityCopyWithImpl<$Res>
-    extends _$ModBanFromCommunityCopyWithImpl<$Res, _$_ModBanFromCommunity>
-    implements _$$_ModBanFromCommunityCopyWith<$Res> {
-  __$$_ModBanFromCommunityCopyWithImpl(_$_ModBanFromCommunity _value,
-      $Res Function(_$_ModBanFromCommunity) _then)
+class __$$ModBanFromCommunityImplCopyWithImpl<$Res>
+    extends _$ModBanFromCommunityCopyWithImpl<$Res, _$ModBanFromCommunityImpl>
+    implements _$$ModBanFromCommunityImplCopyWith<$Res> {
+  __$$ModBanFromCommunityImplCopyWithImpl(_$ModBanFromCommunityImpl _value,
+      $Res Function(_$ModBanFromCommunityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -151,7 +151,7 @@ class __$$_ModBanFromCommunityCopyWithImpl<$Res>
     Object? expires = freezed,
     Object? when = null,
   }) {
-    return _then(_$_ModBanFromCommunity(
+    return _then(_$ModBanFromCommunityImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -191,8 +191,8 @@ class __$$_ModBanFromCommunityCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ModBanFromCommunity extends _ModBanFromCommunity {
-  const _$_ModBanFromCommunity(
+class _$ModBanFromCommunityImpl extends _ModBanFromCommunity {
+  const _$ModBanFromCommunityImpl(
       {required this.id,
       required this.modPersonId,
       required this.otherPersonId,
@@ -203,8 +203,8 @@ class _$_ModBanFromCommunity extends _ModBanFromCommunity {
       @JsonKey(name: 'when_') required this.when})
       : super._();
 
-  factory _$_ModBanFromCommunity.fromJson(Map<String, dynamic> json) =>
-      _$$_ModBanFromCommunityFromJson(json);
+  factory _$ModBanFromCommunityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModBanFromCommunityImplFromJson(json);
 
   @override
   final int id;
@@ -233,7 +233,7 @@ class _$_ModBanFromCommunity extends _ModBanFromCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ModBanFromCommunity &&
+            other is _$ModBanFromCommunityImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.modPersonId, modPersonId) ||
                 other.modPersonId == modPersonId) &&
@@ -255,13 +255,13 @@ class _$_ModBanFromCommunity extends _ModBanFromCommunity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ModBanFromCommunityCopyWith<_$_ModBanFromCommunity> get copyWith =>
-      __$$_ModBanFromCommunityCopyWithImpl<_$_ModBanFromCommunity>(
+  _$$ModBanFromCommunityImplCopyWith<_$ModBanFromCommunityImpl> get copyWith =>
+      __$$ModBanFromCommunityImplCopyWithImpl<_$ModBanFromCommunityImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModBanFromCommunityToJson(
+    return _$$ModBanFromCommunityImplToJson(
       this,
     );
   }
@@ -277,11 +277,11 @@ abstract class _ModBanFromCommunity extends ModBanFromCommunity {
           required final bool banned,
           final int? expires,
           @JsonKey(name: 'when_') required final String when}) =
-      _$_ModBanFromCommunity;
+      _$ModBanFromCommunityImpl;
   const _ModBanFromCommunity._() : super._();
 
   factory _ModBanFromCommunity.fromJson(Map<String, dynamic> json) =
-      _$_ModBanFromCommunity.fromJson;
+      _$ModBanFromCommunityImpl.fromJson;
 
   @override
   int get id;
@@ -302,6 +302,6 @@ abstract class _ModBanFromCommunity extends ModBanFromCommunity {
   String get when;
   @override
   @JsonKey(ignore: true)
-  _$$_ModBanFromCommunityCopyWith<_$_ModBanFromCommunity> get copyWith =>
+  _$$ModBanFromCommunityImplCopyWith<_$ModBanFromCommunityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

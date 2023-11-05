@@ -21,7 +21,12 @@ DeleteAccountResponse _$DeleteAccountResponseFromJson(
 
 /// @nodoc
 mixin _$DeleteAccountResponse {
+  bool? get success => throw _privateConstructorUsedError;
+
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DeleteAccountResponseCopyWith<DeleteAccountResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -29,6 +34,8 @@ abstract class $DeleteAccountResponseCopyWith<$Res> {
   factory $DeleteAccountResponseCopyWith(DeleteAccountResponse value,
           $Res Function(DeleteAccountResponse) then) =
       _$DeleteAccountResponseCopyWithImpl<$Res, DeleteAccountResponse>;
+  @useResult
+  $Res call({bool? success});
 }
 
 /// @nodoc
@@ -41,60 +48,112 @@ class _$DeleteAccountResponseCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? success = freezed,
+  }) {
+    return _then(_value.copyWith(
+      success: freezed == success
+          ? _value.success
+          : success // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ) as $Val);
+  }
 }
 
 /// @nodoc
-abstract class _$$_DeleteAccountResponseCopyWith<$Res> {
-  factory _$$_DeleteAccountResponseCopyWith(_$_DeleteAccountResponse value,
-          $Res Function(_$_DeleteAccountResponse) then) =
-      __$$_DeleteAccountResponseCopyWithImpl<$Res>;
+abstract class _$$DeleteAccountResponseImplCopyWith<$Res>
+    implements $DeleteAccountResponseCopyWith<$Res> {
+  factory _$$DeleteAccountResponseImplCopyWith(
+          _$DeleteAccountResponseImpl value,
+          $Res Function(_$DeleteAccountResponseImpl) then) =
+      __$$DeleteAccountResponseImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({bool? success});
 }
 
 /// @nodoc
-class __$$_DeleteAccountResponseCopyWithImpl<$Res>
-    extends _$DeleteAccountResponseCopyWithImpl<$Res, _$_DeleteAccountResponse>
-    implements _$$_DeleteAccountResponseCopyWith<$Res> {
-  __$$_DeleteAccountResponseCopyWithImpl(_$_DeleteAccountResponse _value,
-      $Res Function(_$_DeleteAccountResponse) _then)
+class __$$DeleteAccountResponseImplCopyWithImpl<$Res>
+    extends _$DeleteAccountResponseCopyWithImpl<$Res,
+        _$DeleteAccountResponseImpl>
+    implements _$$DeleteAccountResponseImplCopyWith<$Res> {
+  __$$DeleteAccountResponseImplCopyWithImpl(_$DeleteAccountResponseImpl _value,
+      $Res Function(_$DeleteAccountResponseImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? success = freezed,
+  }) {
+    return _then(_$DeleteAccountResponseImpl(
+      success: freezed == success
+          ? _value.success
+          : success // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ));
+  }
 }
 
 /// @nodoc
 
 @modelSerde
-class _$_DeleteAccountResponse extends _DeleteAccountResponse {
-  const _$_DeleteAccountResponse() : super._();
+class _$DeleteAccountResponseImpl extends _DeleteAccountResponse {
+  const _$DeleteAccountResponseImpl({this.success}) : super._();
 
-  factory _$_DeleteAccountResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_DeleteAccountResponseFromJson(json);
+  factory _$DeleteAccountResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DeleteAccountResponseImplFromJson(json);
+
+  @override
+  final bool? success;
 
   @override
   String toString() {
-    return 'DeleteAccountResponse()';
+    return 'DeleteAccountResponse(success: $success)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_DeleteAccountResponse);
+        (other.runtimeType == runtimeType &&
+            other is _$DeleteAccountResponseImpl &&
+            (identical(other.success, success) || other.success == success));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, success);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DeleteAccountResponseImplCopyWith<_$DeleteAccountResponseImpl>
+      get copyWith => __$$DeleteAccountResponseImplCopyWithImpl<
+          _$DeleteAccountResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeleteAccountResponseToJson(
+    return _$$DeleteAccountResponseImplToJson(
       this,
     );
   }
 }
 
 abstract class _DeleteAccountResponse extends DeleteAccountResponse {
-  const factory _DeleteAccountResponse() = _$_DeleteAccountResponse;
+  const factory _DeleteAccountResponse({final bool? success}) =
+      _$DeleteAccountResponseImpl;
   const _DeleteAccountResponse._() : super._();
 
   factory _DeleteAccountResponse.fromJson(Map<String, dynamic> json) =
-      _$_DeleteAccountResponse.fromJson;
+      _$DeleteAccountResponseImpl.fromJson;
+
+  @override
+  bool? get success;
+  @override
+  @JsonKey(ignore: true)
+  _$$DeleteAccountResponseImplCopyWith<_$DeleteAccountResponseImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

@@ -6,8 +6,9 @@ part of 'community_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CommunityResponse _$$_CommunityResponseFromJson(Map<String, dynamic> json) =>
-    _$_CommunityResponse(
+_$CommunityResponseImpl _$$CommunityResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$CommunityResponseImpl(
       communityView: CommunityView.fromJson(
           json['community_view'] as Map<String, dynamic>),
       discussionLanguages: (json['discussion_languages'] as List<dynamic>)
@@ -15,8 +16,8 @@ _$_CommunityResponse _$$_CommunityResponseFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_CommunityResponseToJson(
-        _$_CommunityResponse instance) =>
+Map<String, dynamic> _$$CommunityResponseImplToJson(
+        _$CommunityResponseImpl instance) =>
     <String, dynamic>{
       'community_view': instance.communityView.toJson(),
       'discussion_languages': instance.discussionLanguages,

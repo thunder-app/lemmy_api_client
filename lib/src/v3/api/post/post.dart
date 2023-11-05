@@ -137,7 +137,7 @@ class RemovePost with _$RemovePost implements LemmyApiQuery<PostResponse>, Lemmy
 ///
 /// `HTTP.POST /post/mark_as_read`
 @freezed
-class MarkPostAsRead with _$MarkPostAsRead implements LemmyApiQuery<PostResponse>, LemmyApiAuthenticatedQuery {
+class MarkPostAsRead with _$MarkPostAsRead implements LemmyApiQuery<MarkPostAsReadResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory MarkPostAsRead({
     int? postId,
@@ -154,7 +154,7 @@ class MarkPostAsRead with _$MarkPostAsRead implements LemmyApiQuery<PostResponse
   final httpMethod = HttpMethod.post;
 
   @override
-  PostResponse responseFactory(Map<String, dynamic> json) => PostResponse.fromJson(json);
+  MarkPostAsReadResponse responseFactory(Map<String, dynamic> json) => MarkPostAsReadResponse.fromJson(json);
 }
 
 /// A moderator can lock a post ( IE disable new comments ).

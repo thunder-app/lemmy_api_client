@@ -62,22 +62,22 @@ class _$GetCommentsResponseCopyWithImpl<$Res, $Val extends GetCommentsResponse>
 }
 
 /// @nodoc
-abstract class _$$_GetCommentsResponseCopyWith<$Res>
+abstract class _$$GetCommentsResponseImplCopyWith<$Res>
     implements $GetCommentsResponseCopyWith<$Res> {
-  factory _$$_GetCommentsResponseCopyWith(_$_GetCommentsResponse value,
-          $Res Function(_$_GetCommentsResponse) then) =
-      __$$_GetCommentsResponseCopyWithImpl<$Res>;
+  factory _$$GetCommentsResponseImplCopyWith(_$GetCommentsResponseImpl value,
+          $Res Function(_$GetCommentsResponseImpl) then) =
+      __$$GetCommentsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<CommentView> comments});
 }
 
 /// @nodoc
-class __$$_GetCommentsResponseCopyWithImpl<$Res>
-    extends _$GetCommentsResponseCopyWithImpl<$Res, _$_GetCommentsResponse>
-    implements _$$_GetCommentsResponseCopyWith<$Res> {
-  __$$_GetCommentsResponseCopyWithImpl(_$_GetCommentsResponse _value,
-      $Res Function(_$_GetCommentsResponse) _then)
+class __$$GetCommentsResponseImplCopyWithImpl<$Res>
+    extends _$GetCommentsResponseCopyWithImpl<$Res, _$GetCommentsResponseImpl>
+    implements _$$GetCommentsResponseImplCopyWith<$Res> {
+  __$$GetCommentsResponseImplCopyWithImpl(_$GetCommentsResponseImpl _value,
+      $Res Function(_$GetCommentsResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -85,7 +85,7 @@ class __$$_GetCommentsResponseCopyWithImpl<$Res>
   $Res call({
     Object? comments = null,
   }) {
-    return _then(_$_GetCommentsResponse(
+    return _then(_$GetCommentsResponseImpl(
       comments: null == comments
           ? _value._comments
           : comments // ignore: cast_nullable_to_non_nullable
@@ -97,13 +97,13 @@ class __$$_GetCommentsResponseCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_GetCommentsResponse extends _GetCommentsResponse {
-  const _$_GetCommentsResponse({required final List<CommentView> comments})
+class _$GetCommentsResponseImpl extends _GetCommentsResponse {
+  const _$GetCommentsResponseImpl({required final List<CommentView> comments})
       : _comments = comments,
         super._();
 
-  factory _$_GetCommentsResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_GetCommentsResponseFromJson(json);
+  factory _$GetCommentsResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetCommentsResponseImplFromJson(json);
 
   final List<CommentView> _comments;
   @override
@@ -122,7 +122,7 @@ class _$_GetCommentsResponse extends _GetCommentsResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetCommentsResponse &&
+            other is _$GetCommentsResponseImpl &&
             const DeepCollectionEquality().equals(other._comments, _comments));
   }
 
@@ -134,13 +134,13 @@ class _$_GetCommentsResponse extends _GetCommentsResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetCommentsResponseCopyWith<_$_GetCommentsResponse> get copyWith =>
-      __$$_GetCommentsResponseCopyWithImpl<_$_GetCommentsResponse>(
+  _$$GetCommentsResponseImplCopyWith<_$GetCommentsResponseImpl> get copyWith =>
+      __$$GetCommentsResponseImplCopyWithImpl<_$GetCommentsResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetCommentsResponseToJson(
+    return _$$GetCommentsResponseImplToJson(
       this,
     );
   }
@@ -148,16 +148,16 @@ class _$_GetCommentsResponse extends _GetCommentsResponse {
 
 abstract class _GetCommentsResponse extends GetCommentsResponse {
   const factory _GetCommentsResponse(
-      {required final List<CommentView> comments}) = _$_GetCommentsResponse;
+      {required final List<CommentView> comments}) = _$GetCommentsResponseImpl;
   const _GetCommentsResponse._() : super._();
 
   factory _GetCommentsResponse.fromJson(Map<String, dynamic> json) =
-      _$_GetCommentsResponse.fromJson;
+      _$GetCommentsResponseImpl.fromJson;
 
   @override
   List<CommentView> get comments;
   @override
   @JsonKey(ignore: true)
-  _$$_GetCommentsResponseCopyWith<_$_GetCommentsResponse> get copyWith =>
+  _$$GetCommentsResponseImplCopyWith<_$GetCommentsResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

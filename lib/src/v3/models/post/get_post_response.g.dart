@@ -6,8 +6,9 @@ part of 'get_post_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetPostResponse _$$_GetPostResponseFromJson(Map<String, dynamic> json) =>
-    _$_GetPostResponse(
+_$GetPostResponseImpl _$$GetPostResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetPostResponseImpl(
       postView: PostView.fromJson(json['post_view'] as Map<String, dynamic>),
       communityView: CommunityView.fromJson(
           json['community_view'] as Map<String, dynamic>),
@@ -20,7 +21,8 @@ _$_GetPostResponse _$$_GetPostResponseFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_GetPostResponseToJson(_$_GetPostResponse instance) =>
+Map<String, dynamic> _$$GetPostResponseImplToJson(
+        _$GetPostResponseImpl instance) =>
     <String, dynamic>{
       'post_view': instance.postView.toJson(),
       'community_view': instance.communityView.toJson(),

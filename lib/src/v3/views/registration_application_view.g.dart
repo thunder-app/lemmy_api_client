@@ -6,9 +6,9 @@ part of 'registration_application_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_RegistrationApplicationView _$$_RegistrationApplicationViewFromJson(
+_$RegistrationApplicationViewImpl _$$RegistrationApplicationViewImplFromJson(
         Map<String, dynamic> json) =>
-    _$_RegistrationApplicationView(
+    _$RegistrationApplicationViewImpl(
       registrationApplication: RegistrationApplication.fromJson(
           json['registration_application'] as Map<String, dynamic>),
       creatorLocalUser: LocalUser.fromJson(
@@ -19,8 +19,8 @@ _$_RegistrationApplicationView _$$_RegistrationApplicationViewFromJson(
           : Person.fromJson(json['admin'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_RegistrationApplicationViewToJson(
-        _$_RegistrationApplicationView instance) =>
+Map<String, dynamic> _$$RegistrationApplicationViewImplToJson(
+        _$RegistrationApplicationViewImpl instance) =>
     <String, dynamic>{
       'registration_application': instance.registrationApplication.toJson(),
       'creator_local_user': instance.creatorLocalUser.toJson(),

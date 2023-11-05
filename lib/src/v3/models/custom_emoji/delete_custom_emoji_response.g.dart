@@ -6,15 +6,15 @@ part of 'delete_custom_emoji_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_DeleteCustomEmojiResponse _$$_DeleteCustomEmojiResponseFromJson(
+_$DeleteCustomEmojiResponseImpl _$$DeleteCustomEmojiResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DeleteCustomEmojiResponse(
-      id: json['id'] as int,
-      success: json['success'] as bool,
+    _$DeleteCustomEmojiResponseImpl(
+      id: json['id'] as int?,
+      success: json['success'] as bool?,
     );
 
-Map<String, dynamic> _$$_DeleteCustomEmojiResponseToJson(
-        _$_DeleteCustomEmojiResponse instance) =>
+Map<String, dynamic> _$$DeleteCustomEmojiResponseImplToJson(
+        _$DeleteCustomEmojiResponseImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'success': instance.success,

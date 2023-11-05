@@ -20,7 +20,7 @@ PurgeItemResponse _$PurgeItemResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PurgeItemResponse {
-  bool get success => throw _privateConstructorUsedError;
+  bool? get success => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -34,7 +34,7 @@ abstract class $PurgeItemResponseCopyWith<$Res> {
           PurgeItemResponse value, $Res Function(PurgeItemResponse) then) =
       _$PurgeItemResponseCopyWithImpl<$Res, PurgeItemResponse>;
   @useResult
-  $Res call({bool success});
+  $Res call({bool? success});
 }
 
 /// @nodoc
@@ -50,46 +50,46 @@ class _$PurgeItemResponseCopyWithImpl<$Res, $Val extends PurgeItemResponse>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? success = null,
+    Object? success = freezed,
   }) {
     return _then(_value.copyWith(
-      success: null == success
+      success: freezed == success
           ? _value.success
           : success // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_PurgeItemResponseCopyWith<$Res>
+abstract class _$$PurgeItemResponseImplCopyWith<$Res>
     implements $PurgeItemResponseCopyWith<$Res> {
-  factory _$$_PurgeItemResponseCopyWith(_$_PurgeItemResponse value,
-          $Res Function(_$_PurgeItemResponse) then) =
-      __$$_PurgeItemResponseCopyWithImpl<$Res>;
+  factory _$$PurgeItemResponseImplCopyWith(_$PurgeItemResponseImpl value,
+          $Res Function(_$PurgeItemResponseImpl) then) =
+      __$$PurgeItemResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool success});
+  $Res call({bool? success});
 }
 
 /// @nodoc
-class __$$_PurgeItemResponseCopyWithImpl<$Res>
-    extends _$PurgeItemResponseCopyWithImpl<$Res, _$_PurgeItemResponse>
-    implements _$$_PurgeItemResponseCopyWith<$Res> {
-  __$$_PurgeItemResponseCopyWithImpl(
-      _$_PurgeItemResponse _value, $Res Function(_$_PurgeItemResponse) _then)
+class __$$PurgeItemResponseImplCopyWithImpl<$Res>
+    extends _$PurgeItemResponseCopyWithImpl<$Res, _$PurgeItemResponseImpl>
+    implements _$$PurgeItemResponseImplCopyWith<$Res> {
+  __$$PurgeItemResponseImplCopyWithImpl(_$PurgeItemResponseImpl _value,
+      $Res Function(_$PurgeItemResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? success = null,
+    Object? success = freezed,
   }) {
-    return _then(_$_PurgeItemResponse(
-      success: null == success
+    return _then(_$PurgeItemResponseImpl(
+      success: freezed == success
           ? _value.success
           : success // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ));
   }
 }
@@ -97,14 +97,14 @@ class __$$_PurgeItemResponseCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_PurgeItemResponse extends _PurgeItemResponse {
-  const _$_PurgeItemResponse({required this.success}) : super._();
+class _$PurgeItemResponseImpl extends _PurgeItemResponse {
+  const _$PurgeItemResponseImpl({this.success}) : super._();
 
-  factory _$_PurgeItemResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_PurgeItemResponseFromJson(json);
+  factory _$PurgeItemResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PurgeItemResponseImplFromJson(json);
 
   @override
-  final bool success;
+  final bool? success;
 
   @override
   String toString() {
@@ -115,7 +115,7 @@ class _$_PurgeItemResponse extends _PurgeItemResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PurgeItemResponse &&
+            other is _$PurgeItemResponseImpl &&
             (identical(other.success, success) || other.success == success));
   }
 
@@ -126,30 +126,30 @@ class _$_PurgeItemResponse extends _PurgeItemResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PurgeItemResponseCopyWith<_$_PurgeItemResponse> get copyWith =>
-      __$$_PurgeItemResponseCopyWithImpl<_$_PurgeItemResponse>(
+  _$$PurgeItemResponseImplCopyWith<_$PurgeItemResponseImpl> get copyWith =>
+      __$$PurgeItemResponseImplCopyWithImpl<_$PurgeItemResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PurgeItemResponseToJson(
+    return _$$PurgeItemResponseImplToJson(
       this,
     );
   }
 }
 
 abstract class _PurgeItemResponse extends PurgeItemResponse {
-  const factory _PurgeItemResponse({required final bool success}) =
-      _$_PurgeItemResponse;
+  const factory _PurgeItemResponse({final bool? success}) =
+      _$PurgeItemResponseImpl;
   const _PurgeItemResponse._() : super._();
 
   factory _PurgeItemResponse.fromJson(Map<String, dynamic> json) =
-      _$_PurgeItemResponse.fromJson;
+      _$PurgeItemResponseImpl.fromJson;
 
   @override
-  bool get success;
+  bool? get success;
   @override
   @JsonKey(ignore: true)
-  _$$_PurgeItemResponseCopyWith<_$_PurgeItemResponse> get copyWith =>
+  _$$PurgeItemResponseImplCopyWith<_$PurgeItemResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

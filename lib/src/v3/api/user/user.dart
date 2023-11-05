@@ -217,6 +217,27 @@ class Login with _$Login implements LemmyApiQuery<LoginResponse> {
   LoginResponse responseFactory(Map<String, dynamic> json) => LoginResponse.fromJson(json);
 }
 
+/// Only available in lemmy v0.19.0 and above
+///
+/// Log out of lemmy.
+///
+/// `HTTP.POST /user/logout`
+@freezed
+class Logout with _$Logout implements LemmyApiQuery<SuccessResponse> {
+  @apiSerde
+  const factory Logout() = _Logout;
+
+  const Logout._();
+  factory Logout.fromJson(Map<String, dynamic> json) => _$LogoutFromJson(json);
+
+  final path = '/user/logout';
+
+  final httpMethod = HttpMethod.post;
+
+  @override
+  SuccessResponse responseFactory(Map<String, dynamic> json) => SuccessResponse.fromJson(json);
+}
+
 /// Get the details for a person.
 ///
 /// `HTTP.GET /user`
@@ -457,7 +478,7 @@ class PasswordReset with _$PasswordReset implements LemmyApiQuery<PasswordResetR
 ///
 /// `HTTP.POST /user/password_change`
 @freezed
-class PasswordChangeAfterReset with _$PasswordChangeAfterReset implements LemmyApiQuery<LoginResponse> {
+class PasswordChangeAfterReset with _$PasswordChangeAfterReset implements LemmyApiQuery<PasswordChangeAfterResetResponse> {
   @apiSerde
   const factory PasswordChangeAfterReset({
     required String token,
@@ -473,7 +494,7 @@ class PasswordChangeAfterReset with _$PasswordChangeAfterReset implements LemmyA
   final httpMethod = HttpMethod.post;
 
   @override
-  LoginResponse responseFactory(Map<String, dynamic> json) => LoginResponse.fromJson(json);
+  PasswordChangeAfterResetResponse responseFactory(Map<String, dynamic> json) => PasswordChangeAfterResetResponse.fromJson(json);
 }
 
 /// Mark all replies as read.
@@ -501,7 +522,7 @@ class MarkAllAsRead with _$MarkAllAsRead implements LemmyApiQuery<GetRepliesResp
 ///
 /// `HTTP.PUT /user/save_user_settings`
 @freezed
-class SaveUserSettings with _$SaveUserSettings implements LemmyApiQuery<LoginResponse>, LemmyApiAuthenticatedQuery {
+class SaveUserSettings with _$SaveUserSettings implements LemmyApiQuery<SaveUserSettingsResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory SaveUserSettings({
     bool? showNsfw,
@@ -542,7 +563,7 @@ class SaveUserSettings with _$SaveUserSettings implements LemmyApiQuery<LoginRes
   final httpMethod = HttpMethod.put;
 
   @override
-  LoginResponse responseFactory(Map<String, dynamic> json) => LoginResponse.fromJson(json);
+  SaveUserSettingsResponse responseFactory(Map<String, dynamic> json) => SaveUserSettingsResponse.fromJson(json);
 }
 
 /// Change your user password.

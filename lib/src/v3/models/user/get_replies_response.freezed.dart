@@ -62,22 +62,22 @@ class _$GetRepliesResponseCopyWithImpl<$Res, $Val extends GetRepliesResponse>
 }
 
 /// @nodoc
-abstract class _$$_GetRepliesResponseCopyWith<$Res>
+abstract class _$$GetRepliesResponseImplCopyWith<$Res>
     implements $GetRepliesResponseCopyWith<$Res> {
-  factory _$$_GetRepliesResponseCopyWith(_$_GetRepliesResponse value,
-          $Res Function(_$_GetRepliesResponse) then) =
-      __$$_GetRepliesResponseCopyWithImpl<$Res>;
+  factory _$$GetRepliesResponseImplCopyWith(_$GetRepliesResponseImpl value,
+          $Res Function(_$GetRepliesResponseImpl) then) =
+      __$$GetRepliesResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<CommentReplyView> replies});
 }
 
 /// @nodoc
-class __$$_GetRepliesResponseCopyWithImpl<$Res>
-    extends _$GetRepliesResponseCopyWithImpl<$Res, _$_GetRepliesResponse>
-    implements _$$_GetRepliesResponseCopyWith<$Res> {
-  __$$_GetRepliesResponseCopyWithImpl(
-      _$_GetRepliesResponse _value, $Res Function(_$_GetRepliesResponse) _then)
+class __$$GetRepliesResponseImplCopyWithImpl<$Res>
+    extends _$GetRepliesResponseCopyWithImpl<$Res, _$GetRepliesResponseImpl>
+    implements _$$GetRepliesResponseImplCopyWith<$Res> {
+  __$$GetRepliesResponseImplCopyWithImpl(_$GetRepliesResponseImpl _value,
+      $Res Function(_$GetRepliesResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -85,7 +85,7 @@ class __$$_GetRepliesResponseCopyWithImpl<$Res>
   $Res call({
     Object? replies = null,
   }) {
-    return _then(_$_GetRepliesResponse(
+    return _then(_$GetRepliesResponseImpl(
       replies: null == replies
           ? _value._replies
           : replies // ignore: cast_nullable_to_non_nullable
@@ -97,13 +97,14 @@ class __$$_GetRepliesResponseCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_GetRepliesResponse extends _GetRepliesResponse {
-  const _$_GetRepliesResponse({required final List<CommentReplyView> replies})
+class _$GetRepliesResponseImpl extends _GetRepliesResponse {
+  const _$GetRepliesResponseImpl(
+      {required final List<CommentReplyView> replies})
       : _replies = replies,
         super._();
 
-  factory _$_GetRepliesResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_GetRepliesResponseFromJson(json);
+  factory _$GetRepliesResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetRepliesResponseImplFromJson(json);
 
   final List<CommentReplyView> _replies;
   @override
@@ -122,7 +123,7 @@ class _$_GetRepliesResponse extends _GetRepliesResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetRepliesResponse &&
+            other is _$GetRepliesResponseImpl &&
             const DeepCollectionEquality().equals(other._replies, _replies));
   }
 
@@ -134,13 +135,13 @@ class _$_GetRepliesResponse extends _GetRepliesResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetRepliesResponseCopyWith<_$_GetRepliesResponse> get copyWith =>
-      __$$_GetRepliesResponseCopyWithImpl<_$_GetRepliesResponse>(
+  _$$GetRepliesResponseImplCopyWith<_$GetRepliesResponseImpl> get copyWith =>
+      __$$GetRepliesResponseImplCopyWithImpl<_$GetRepliesResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetRepliesResponseToJson(
+    return _$$GetRepliesResponseImplToJson(
       this,
     );
   }
@@ -148,16 +149,17 @@ class _$_GetRepliesResponse extends _GetRepliesResponse {
 
 abstract class _GetRepliesResponse extends GetRepliesResponse {
   const factory _GetRepliesResponse(
-      {required final List<CommentReplyView> replies}) = _$_GetRepliesResponse;
+          {required final List<CommentReplyView> replies}) =
+      _$GetRepliesResponseImpl;
   const _GetRepliesResponse._() : super._();
 
   factory _GetRepliesResponse.fromJson(Map<String, dynamic> json) =
-      _$_GetRepliesResponse.fromJson;
+      _$GetRepliesResponseImpl.fromJson;
 
   @override
   List<CommentReplyView> get replies;
   @override
   @JsonKey(ignore: true)
-  _$$_GetRepliesResponseCopyWith<_$_GetRepliesResponse> get copyWith =>
+  _$$GetRepliesResponseImplCopyWith<_$GetRepliesResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -90,9 +90,10 @@ class _$ModAddCopyWithImpl<$Res, $Val extends ModAdd>
 }
 
 /// @nodoc
-abstract class _$$_ModAddCopyWith<$Res> implements $ModAddCopyWith<$Res> {
-  factory _$$_ModAddCopyWith(_$_ModAdd value, $Res Function(_$_ModAdd) then) =
-      __$$_ModAddCopyWithImpl<$Res>;
+abstract class _$$ModAddImplCopyWith<$Res> implements $ModAddCopyWith<$Res> {
+  factory _$$ModAddImplCopyWith(
+          _$ModAddImpl value, $Res Function(_$ModAddImpl) then) =
+      __$$ModAddImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -104,10 +105,11 @@ abstract class _$$_ModAddCopyWith<$Res> implements $ModAddCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ModAddCopyWithImpl<$Res>
-    extends _$ModAddCopyWithImpl<$Res, _$_ModAdd>
-    implements _$$_ModAddCopyWith<$Res> {
-  __$$_ModAddCopyWithImpl(_$_ModAdd _value, $Res Function(_$_ModAdd) _then)
+class __$$ModAddImplCopyWithImpl<$Res>
+    extends _$ModAddCopyWithImpl<$Res, _$ModAddImpl>
+    implements _$$ModAddImplCopyWith<$Res> {
+  __$$ModAddImplCopyWithImpl(
+      _$ModAddImpl _value, $Res Function(_$ModAddImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -119,7 +121,7 @@ class __$$_ModAddCopyWithImpl<$Res>
     Object? removed = null,
     Object? when = null,
   }) {
-    return _then(_$_ModAdd(
+    return _then(_$ModAddImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -147,8 +149,8 @@ class __$$_ModAddCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ModAdd extends _ModAdd {
-  const _$_ModAdd(
+class _$ModAddImpl extends _ModAdd {
+  const _$ModAddImpl(
       {required this.id,
       required this.modPersonId,
       required this.otherPersonId,
@@ -156,8 +158,8 @@ class _$_ModAdd extends _ModAdd {
       @JsonKey(name: 'when_') required this.when})
       : super._();
 
-  factory _$_ModAdd.fromJson(Map<String, dynamic> json) =>
-      _$$_ModAddFromJson(json);
+  factory _$ModAddImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModAddImplFromJson(json);
 
   @override
   final int id;
@@ -180,7 +182,7 @@ class _$_ModAdd extends _ModAdd {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ModAdd &&
+            other is _$ModAddImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.modPersonId, modPersonId) ||
                 other.modPersonId == modPersonId) &&
@@ -198,12 +200,12 @@ class _$_ModAdd extends _ModAdd {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ModAddCopyWith<_$_ModAdd> get copyWith =>
-      __$$_ModAddCopyWithImpl<_$_ModAdd>(this, _$identity);
+  _$$ModAddImplCopyWith<_$ModAddImpl> get copyWith =>
+      __$$ModAddImplCopyWithImpl<_$ModAddImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModAddToJson(
+    return _$$ModAddImplToJson(
       this,
     );
   }
@@ -215,10 +217,10 @@ abstract class _ModAdd extends ModAdd {
       required final int modPersonId,
       required final int otherPersonId,
       required final bool removed,
-      @JsonKey(name: 'when_') required final String when}) = _$_ModAdd;
+      @JsonKey(name: 'when_') required final String when}) = _$ModAddImpl;
   const _ModAdd._() : super._();
 
-  factory _ModAdd.fromJson(Map<String, dynamic> json) = _$_ModAdd.fromJson;
+  factory _ModAdd.fromJson(Map<String, dynamic> json) = _$ModAddImpl.fromJson;
 
   @override
   int get id;
@@ -233,6 +235,6 @@ abstract class _ModAdd extends ModAdd {
   String get when;
   @override
   @JsonKey(ignore: true)
-  _$$_ModAddCopyWith<_$_ModAdd> get copyWith =>
+  _$$ModAddImplCopyWith<_$ModAddImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

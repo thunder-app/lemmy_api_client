@@ -252,10 +252,11 @@ class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
 }
 
 /// @nodoc
-abstract class _$$_LocalUserCopyWith<$Res> implements $LocalUserCopyWith<$Res> {
-  factory _$$_LocalUserCopyWith(
-          _$_LocalUser value, $Res Function(_$_LocalUser) then) =
-      __$$_LocalUserCopyWithImpl<$Res>;
+abstract class _$$LocalUserImplCopyWith<$Res>
+    implements $LocalUserCopyWith<$Res> {
+  factory _$$LocalUserImplCopyWith(
+          _$LocalUserImpl value, $Res Function(_$LocalUserImpl) then) =
+      __$$LocalUserImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -289,11 +290,11 @@ abstract class _$$_LocalUserCopyWith<$Res> implements $LocalUserCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_LocalUserCopyWithImpl<$Res>
-    extends _$LocalUserCopyWithImpl<$Res, _$_LocalUser>
-    implements _$$_LocalUserCopyWith<$Res> {
-  __$$_LocalUserCopyWithImpl(
-      _$_LocalUser _value, $Res Function(_$_LocalUser) _then)
+class __$$LocalUserImplCopyWithImpl<$Res>
+    extends _$LocalUserCopyWithImpl<$Res, _$LocalUserImpl>
+    implements _$$LocalUserImplCopyWith<$Res> {
+  __$$LocalUserImplCopyWithImpl(
+      _$LocalUserImpl _value, $Res Function(_$LocalUserImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -327,7 +328,7 @@ class __$$_LocalUserCopyWithImpl<$Res>
     Object? enableKeyboardNavigation = freezed,
     Object? enableAnimatedImages = freezed,
   }) {
-    return _then(_$_LocalUser(
+    return _then(_$LocalUserImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -443,8 +444,8 @@ class __$$_LocalUserCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_LocalUser extends _LocalUser {
-  const _$_LocalUser(
+class _$LocalUserImpl extends _LocalUser {
+  const _$LocalUserImpl(
       {required this.id,
       required this.personId,
       this.email,
@@ -474,8 +475,8 @@ class _$_LocalUser extends _LocalUser {
       this.enableAnimatedImages})
       : super._();
 
-  factory _$_LocalUser.fromJson(Map<String, dynamic> json) =>
-      _$$_LocalUserFromJson(json);
+  factory _$LocalUserImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LocalUserImplFromJson(json);
 
   @override
   final int id;
@@ -549,7 +550,7 @@ class _$_LocalUser extends _LocalUser {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LocalUser &&
+            other is _$LocalUserImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.personId, personId) ||
                 other.personId == personId) &&
@@ -640,12 +641,12 @@ class _$_LocalUser extends _LocalUser {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LocalUserCopyWith<_$_LocalUser> get copyWith =>
-      __$$_LocalUserCopyWithImpl<_$_LocalUser>(this, _$identity);
+  _$$LocalUserImplCopyWith<_$LocalUserImpl> get copyWith =>
+      __$$LocalUserImplCopyWithImpl<_$LocalUserImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LocalUserToJson(
+    return _$$LocalUserImplToJson(
       this,
     );
   }
@@ -679,11 +680,11 @@ abstract class _LocalUser extends LocalUser {
       final String? postListingMode,
       final bool? totp2faEnabled,
       final bool? enableKeyboardNavigation,
-      final bool? enableAnimatedImages}) = _$_LocalUser;
+      final bool? enableAnimatedImages}) = _$LocalUserImpl;
   const _LocalUser._() : super._();
 
   factory _LocalUser.fromJson(Map<String, dynamic> json) =
-      _$_LocalUser.fromJson;
+      _$LocalUserImpl.fromJson;
 
   @override
   int get id;
@@ -744,6 +745,6 @@ abstract class _LocalUser extends LocalUser {
   bool? get enableAnimatedImages;
   @override
   @JsonKey(ignore: true)
-  _$$_LocalUserCopyWith<_$_LocalUser> get copyWith =>
+  _$$LocalUserImplCopyWith<_$LocalUserImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

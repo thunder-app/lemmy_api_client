@@ -102,11 +102,11 @@ class _$LocalUserViewCopyWithImpl<$Res, $Val extends LocalUserView>
 }
 
 /// @nodoc
-abstract class _$$_LocalUserViewCopyWith<$Res>
+abstract class _$$LocalUserViewImplCopyWith<$Res>
     implements $LocalUserViewCopyWith<$Res> {
-  factory _$$_LocalUserViewCopyWith(
-          _$_LocalUserView value, $Res Function(_$_LocalUserView) then) =
-      __$$_LocalUserViewCopyWithImpl<$Res>;
+  factory _$$LocalUserViewImplCopyWith(
+          _$LocalUserViewImpl value, $Res Function(_$LocalUserViewImpl) then) =
+      __$$LocalUserViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({LocalUser localUser, Person person, PersonAggregates counts});
@@ -120,11 +120,11 @@ abstract class _$$_LocalUserViewCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_LocalUserViewCopyWithImpl<$Res>
-    extends _$LocalUserViewCopyWithImpl<$Res, _$_LocalUserView>
-    implements _$$_LocalUserViewCopyWith<$Res> {
-  __$$_LocalUserViewCopyWithImpl(
-      _$_LocalUserView _value, $Res Function(_$_LocalUserView) _then)
+class __$$LocalUserViewImplCopyWithImpl<$Res>
+    extends _$LocalUserViewCopyWithImpl<$Res, _$LocalUserViewImpl>
+    implements _$$LocalUserViewImplCopyWith<$Res> {
+  __$$LocalUserViewImplCopyWithImpl(
+      _$LocalUserViewImpl _value, $Res Function(_$LocalUserViewImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -134,7 +134,7 @@ class __$$_LocalUserViewCopyWithImpl<$Res>
     Object? person = null,
     Object? counts = null,
   }) {
-    return _then(_$_LocalUserView(
+    return _then(_$LocalUserViewImpl(
       localUser: null == localUser
           ? _value.localUser
           : localUser // ignore: cast_nullable_to_non_nullable
@@ -154,13 +154,13 @@ class __$$_LocalUserViewCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_LocalUserView extends _LocalUserView {
-  const _$_LocalUserView(
+class _$LocalUserViewImpl extends _LocalUserView {
+  const _$LocalUserViewImpl(
       {required this.localUser, required this.person, required this.counts})
       : super._();
 
-  factory _$_LocalUserView.fromJson(Map<String, dynamic> json) =>
-      _$$_LocalUserViewFromJson(json);
+  factory _$LocalUserViewImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LocalUserViewImplFromJson(json);
 
   @override
   final LocalUser localUser;
@@ -178,7 +178,7 @@ class _$_LocalUserView extends _LocalUserView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LocalUserView &&
+            other is _$LocalUserViewImpl &&
             (identical(other.localUser, localUser) ||
                 other.localUser == localUser) &&
             (identical(other.person, person) || other.person == person) &&
@@ -192,12 +192,12 @@ class _$_LocalUserView extends _LocalUserView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LocalUserViewCopyWith<_$_LocalUserView> get copyWith =>
-      __$$_LocalUserViewCopyWithImpl<_$_LocalUserView>(this, _$identity);
+  _$$LocalUserViewImplCopyWith<_$LocalUserViewImpl> get copyWith =>
+      __$$LocalUserViewImplCopyWithImpl<_$LocalUserViewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LocalUserViewToJson(
+    return _$$LocalUserViewImplToJson(
       this,
     );
   }
@@ -207,11 +207,11 @@ abstract class _LocalUserView extends LocalUserView {
   const factory _LocalUserView(
       {required final LocalUser localUser,
       required final Person person,
-      required final PersonAggregates counts}) = _$_LocalUserView;
+      required final PersonAggregates counts}) = _$LocalUserViewImpl;
   const _LocalUserView._() : super._();
 
   factory _LocalUserView.fromJson(Map<String, dynamic> json) =
-      _$_LocalUserView.fromJson;
+      _$LocalUserViewImpl.fromJson;
 
   @override
   LocalUser get localUser;
@@ -221,6 +221,6 @@ abstract class _LocalUserView extends LocalUserView {
   PersonAggregates get counts;
   @override
   @JsonKey(ignore: true)
-  _$$_LocalUserViewCopyWith<_$_LocalUserView> get copyWith =>
+  _$$LocalUserViewImplCopyWith<_$LocalUserViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

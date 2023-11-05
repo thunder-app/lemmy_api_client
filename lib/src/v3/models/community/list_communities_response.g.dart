@@ -6,16 +6,16 @@ part of 'list_communities_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ListCommunitiesResponse _$$_ListCommunitiesResponseFromJson(
+_$ListCommunitiesResponseImpl _$$ListCommunitiesResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ListCommunitiesResponse(
+    _$ListCommunitiesResponseImpl(
       communities: (json['communities'] as List<dynamic>)
           .map((e) => CommunityView.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_ListCommunitiesResponseToJson(
-        _$_ListCommunitiesResponse instance) =>
+Map<String, dynamic> _$$ListCommunitiesResponseImplToJson(
+        _$ListCommunitiesResponseImpl instance) =>
     <String, dynamic>{
       'communities': instance.communities.map((e) => e.toJson()).toList(),
     };

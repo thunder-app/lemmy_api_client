@@ -152,9 +152,10 @@ class _$SiteCopyWithImpl<$Res, $Val extends Site>
 }
 
 /// @nodoc
-abstract class _$$_SiteCopyWith<$Res> implements $SiteCopyWith<$Res> {
-  factory _$$_SiteCopyWith(_$_Site value, $Res Function(_$_Site) then) =
-      __$$_SiteCopyWithImpl<$Res>;
+abstract class _$$SiteImplCopyWith<$Res> implements $SiteCopyWith<$Res> {
+  factory _$$SiteImplCopyWith(
+          _$SiteImpl value, $Res Function(_$SiteImpl) then) =
+      __$$SiteImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -175,9 +176,10 @@ abstract class _$$_SiteCopyWith<$Res> implements $SiteCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res, _$_Site>
-    implements _$$_SiteCopyWith<$Res> {
-  __$$_SiteCopyWithImpl(_$_Site _value, $Res Function(_$_Site) _then)
+class __$$SiteImplCopyWithImpl<$Res>
+    extends _$SiteCopyWithImpl<$Res, _$SiteImpl>
+    implements _$$SiteImplCopyWith<$Res> {
+  __$$SiteImplCopyWithImpl(_$SiteImpl _value, $Res Function(_$SiteImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -198,7 +200,7 @@ class __$$_SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res, _$_Site>
     Object? publicKey = null,
     Object? instanceId = null,
   }) {
-    return _then(_$_Site(
+    return _then(_$SiteImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -262,8 +264,8 @@ class __$$_SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res, _$_Site>
 /// @nodoc
 
 @modelSerde
-class _$_Site extends _Site {
-  const _$_Site(
+class _$SiteImpl extends _Site {
+  const _$SiteImpl(
       {required this.id,
       required this.name,
       this.sidebar,
@@ -280,7 +282,8 @@ class _$_Site extends _Site {
       required this.instanceId})
       : super._();
 
-  factory _$_Site.fromJson(Map<String, dynamic> json) => _$$_SiteFromJson(json);
+  factory _$SiteImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SiteImplFromJson(json);
 
   @override
   final int id;
@@ -320,7 +323,7 @@ class _$_Site extends _Site {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Site &&
+            other is _$SiteImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.sidebar, sidebar) || other.sidebar == sidebar) &&
@@ -366,12 +369,12 @@ class _$_Site extends _Site {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SiteCopyWith<_$_Site> get copyWith =>
-      __$$_SiteCopyWithImpl<_$_Site>(this, _$identity);
+  _$$SiteImplCopyWith<_$SiteImpl> get copyWith =>
+      __$$SiteImplCopyWithImpl<_$SiteImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SiteToJson(
+    return _$$SiteImplToJson(
       this,
     );
   }
@@ -392,10 +395,10 @@ abstract class _Site extends Site {
       required final String inboxUrl,
       final String? privateKey,
       required final String publicKey,
-      required final int instanceId}) = _$_Site;
+      required final int instanceId}) = _$SiteImpl;
   const _Site._() : super._();
 
-  factory _Site.fromJson(Map<String, dynamic> json) = _$_Site.fromJson;
+  factory _Site.fromJson(Map<String, dynamic> json) = _$SiteImpl.fromJson;
 
   @override
   int get id;
@@ -427,5 +430,6 @@ abstract class _Site extends Site {
   int get instanceId;
   @override
   @JsonKey(ignore: true)
-  _$$_SiteCopyWith<_$_Site> get copyWith => throw _privateConstructorUsedError;
+  _$$SiteImplCopyWith<_$SiteImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

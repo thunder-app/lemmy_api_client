@@ -6,7 +6,7 @@ part of 'site.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Site _$$_SiteFromJson(Map<String, dynamic> json) => _$_Site(
+_$SiteImpl _$$SiteImplFromJson(Map<String, dynamic> json) => _$SiteImpl(
       id: json['id'] as int,
       name: json['name'] as String,
       sidebar: json['sidebar'] as String?,
@@ -25,7 +25,8 @@ _$_Site _$$_SiteFromJson(Map<String, dynamic> json) => _$_Site(
       instanceId: json['instance_id'] as int,
     );
 
-Map<String, dynamic> _$$_SiteToJson(_$_Site instance) => <String, dynamic>{
+Map<String, dynamic> _$$SiteImplToJson(_$SiteImpl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
       'sidebar': instance.sidebar,

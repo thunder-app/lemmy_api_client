@@ -104,9 +104,10 @@ class _$ModBanCopyWithImpl<$Res, $Val extends ModBan>
 }
 
 /// @nodoc
-abstract class _$$_ModBanCopyWith<$Res> implements $ModBanCopyWith<$Res> {
-  factory _$$_ModBanCopyWith(_$_ModBan value, $Res Function(_$_ModBan) then) =
-      __$$_ModBanCopyWithImpl<$Res>;
+abstract class _$$ModBanImplCopyWith<$Res> implements $ModBanCopyWith<$Res> {
+  factory _$$ModBanImplCopyWith(
+          _$ModBanImpl value, $Res Function(_$ModBanImpl) then) =
+      __$$ModBanImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -120,10 +121,11 @@ abstract class _$$_ModBanCopyWith<$Res> implements $ModBanCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ModBanCopyWithImpl<$Res>
-    extends _$ModBanCopyWithImpl<$Res, _$_ModBan>
-    implements _$$_ModBanCopyWith<$Res> {
-  __$$_ModBanCopyWithImpl(_$_ModBan _value, $Res Function(_$_ModBan) _then)
+class __$$ModBanImplCopyWithImpl<$Res>
+    extends _$ModBanCopyWithImpl<$Res, _$ModBanImpl>
+    implements _$$ModBanImplCopyWith<$Res> {
+  __$$ModBanImplCopyWithImpl(
+      _$ModBanImpl _value, $Res Function(_$ModBanImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -137,7 +139,7 @@ class __$$_ModBanCopyWithImpl<$Res>
     Object? expires = freezed,
     Object? when = null,
   }) {
-    return _then(_$_ModBan(
+    return _then(_$ModBanImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -173,8 +175,8 @@ class __$$_ModBanCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ModBan extends _ModBan {
-  const _$_ModBan(
+class _$ModBanImpl extends _ModBan {
+  const _$ModBanImpl(
       {required this.id,
       required this.modPersonId,
       required this.otherPersonId,
@@ -184,8 +186,8 @@ class _$_ModBan extends _ModBan {
       @JsonKey(name: 'when_') required this.when})
       : super._();
 
-  factory _$_ModBan.fromJson(Map<String, dynamic> json) =>
-      _$$_ModBanFromJson(json);
+  factory _$ModBanImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModBanImplFromJson(json);
 
   @override
   final int id;
@@ -212,7 +214,7 @@ class _$_ModBan extends _ModBan {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ModBan &&
+            other is _$ModBanImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.modPersonId, modPersonId) ||
                 other.modPersonId == modPersonId) &&
@@ -232,12 +234,12 @@ class _$_ModBan extends _ModBan {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ModBanCopyWith<_$_ModBan> get copyWith =>
-      __$$_ModBanCopyWithImpl<_$_ModBan>(this, _$identity);
+  _$$ModBanImplCopyWith<_$ModBanImpl> get copyWith =>
+      __$$ModBanImplCopyWithImpl<_$ModBanImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModBanToJson(
+    return _$$ModBanImplToJson(
       this,
     );
   }
@@ -251,10 +253,10 @@ abstract class _ModBan extends ModBan {
       final String? reason,
       required final bool banned,
       final int? expires,
-      @JsonKey(name: 'when_') required final String when}) = _$_ModBan;
+      @JsonKey(name: 'when_') required final String when}) = _$ModBanImpl;
   const _ModBan._() : super._();
 
-  factory _ModBan.fromJson(Map<String, dynamic> json) = _$_ModBan.fromJson;
+  factory _ModBan.fromJson(Map<String, dynamic> json) = _$ModBanImpl.fromJson;
 
   @override
   int get id;
@@ -273,6 +275,6 @@ abstract class _ModBan extends ModBan {
   String get when;
   @override
   @JsonKey(ignore: true)
-  _$$_ModBanCopyWith<_$_ModBan> get copyWith =>
+  _$$ModBanImplCopyWith<_$ModBanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

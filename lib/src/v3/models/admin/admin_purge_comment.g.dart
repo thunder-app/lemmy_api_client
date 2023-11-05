@@ -6,8 +6,9 @@ part of 'admin_purge_comment.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AdminPurgeComment _$$_AdminPurgeCommentFromJson(Map<String, dynamic> json) =>
-    _$_AdminPurgeComment(
+_$AdminPurgeCommentImpl _$$AdminPurgeCommentImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AdminPurgeCommentImpl(
       id: json['id'] as int,
       adminPersonId: json['admin_person_id'] as int,
       postId: json['post_id'] as int,
@@ -15,8 +16,8 @@ _$_AdminPurgeComment _$$_AdminPurgeCommentFromJson(Map<String, dynamic> json) =>
       when: json['when_'] as String,
     );
 
-Map<String, dynamic> _$$_AdminPurgeCommentToJson(
-        _$_AdminPurgeComment instance) =>
+Map<String, dynamic> _$$AdminPurgeCommentImplToJson(
+        _$AdminPurgeCommentImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'admin_person_id': instance.adminPersonId,

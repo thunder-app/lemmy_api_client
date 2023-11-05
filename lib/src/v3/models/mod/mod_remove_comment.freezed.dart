@@ -99,11 +99,11 @@ class _$ModRemoveCommentCopyWithImpl<$Res, $Val extends ModRemoveComment>
 }
 
 /// @nodoc
-abstract class _$$_ModRemoveCommentCopyWith<$Res>
+abstract class _$$ModRemoveCommentImplCopyWith<$Res>
     implements $ModRemoveCommentCopyWith<$Res> {
-  factory _$$_ModRemoveCommentCopyWith(
-          _$_ModRemoveComment value, $Res Function(_$_ModRemoveComment) then) =
-      __$$_ModRemoveCommentCopyWithImpl<$Res>;
+  factory _$$ModRemoveCommentImplCopyWith(_$ModRemoveCommentImpl value,
+          $Res Function(_$ModRemoveCommentImpl) then) =
+      __$$ModRemoveCommentImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -116,11 +116,11 @@ abstract class _$$_ModRemoveCommentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ModRemoveCommentCopyWithImpl<$Res>
-    extends _$ModRemoveCommentCopyWithImpl<$Res, _$_ModRemoveComment>
-    implements _$$_ModRemoveCommentCopyWith<$Res> {
-  __$$_ModRemoveCommentCopyWithImpl(
-      _$_ModRemoveComment _value, $Res Function(_$_ModRemoveComment) _then)
+class __$$ModRemoveCommentImplCopyWithImpl<$Res>
+    extends _$ModRemoveCommentCopyWithImpl<$Res, _$ModRemoveCommentImpl>
+    implements _$$ModRemoveCommentImplCopyWith<$Res> {
+  __$$ModRemoveCommentImplCopyWithImpl(_$ModRemoveCommentImpl _value,
+      $Res Function(_$ModRemoveCommentImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -133,7 +133,7 @@ class __$$_ModRemoveCommentCopyWithImpl<$Res>
     Object? removed = null,
     Object? when = null,
   }) {
-    return _then(_$_ModRemoveComment(
+    return _then(_$ModRemoveCommentImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -165,8 +165,8 @@ class __$$_ModRemoveCommentCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ModRemoveComment extends _ModRemoveComment {
-  const _$_ModRemoveComment(
+class _$ModRemoveCommentImpl extends _ModRemoveComment {
+  const _$ModRemoveCommentImpl(
       {required this.id,
       required this.modPersonId,
       required this.commentId,
@@ -175,8 +175,8 @@ class _$_ModRemoveComment extends _ModRemoveComment {
       @JsonKey(name: 'when_') required this.when})
       : super._();
 
-  factory _$_ModRemoveComment.fromJson(Map<String, dynamic> json) =>
-      _$$_ModRemoveCommentFromJson(json);
+  factory _$ModRemoveCommentImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModRemoveCommentImplFromJson(json);
 
   @override
   final int id;
@@ -201,7 +201,7 @@ class _$_ModRemoveComment extends _ModRemoveComment {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ModRemoveComment &&
+            other is _$ModRemoveCommentImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.modPersonId, modPersonId) ||
                 other.modPersonId == modPersonId) &&
@@ -220,12 +220,13 @@ class _$_ModRemoveComment extends _ModRemoveComment {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ModRemoveCommentCopyWith<_$_ModRemoveComment> get copyWith =>
-      __$$_ModRemoveCommentCopyWithImpl<_$_ModRemoveComment>(this, _$identity);
+  _$$ModRemoveCommentImplCopyWith<_$ModRemoveCommentImpl> get copyWith =>
+      __$$ModRemoveCommentImplCopyWithImpl<_$ModRemoveCommentImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModRemoveCommentToJson(
+    return _$$ModRemoveCommentImplToJson(
       this,
     );
   }
@@ -239,11 +240,11 @@ abstract class _ModRemoveComment extends ModRemoveComment {
           final String? reason,
           required final bool removed,
           @JsonKey(name: 'when_') required final String when}) =
-      _$_ModRemoveComment;
+      _$ModRemoveCommentImpl;
   const _ModRemoveComment._() : super._();
 
   factory _ModRemoveComment.fromJson(Map<String, dynamic> json) =
-      _$_ModRemoveComment.fromJson;
+      _$ModRemoveCommentImpl.fromJson;
 
   @override
   int get id;
@@ -260,6 +261,6 @@ abstract class _ModRemoveComment extends ModRemoveComment {
   String get when;
   @override
   @JsonKey(ignore: true)
-  _$$_ModRemoveCommentCopyWith<_$_ModRemoveComment> get copyWith =>
+  _$$ModRemoveCommentImplCopyWith<_$ModRemoveCommentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

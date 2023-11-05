@@ -73,11 +73,11 @@ class _$CommentReplyResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CommentReplyResponseCopyWith<$Res>
+abstract class _$$CommentReplyResponseImplCopyWith<$Res>
     implements $CommentReplyResponseCopyWith<$Res> {
-  factory _$$_CommentReplyResponseCopyWith(_$_CommentReplyResponse value,
-          $Res Function(_$_CommentReplyResponse) then) =
-      __$$_CommentReplyResponseCopyWithImpl<$Res>;
+  factory _$$CommentReplyResponseImplCopyWith(_$CommentReplyResponseImpl value,
+          $Res Function(_$CommentReplyResponseImpl) then) =
+      __$$CommentReplyResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({CommentReplyView commentReplyView});
@@ -87,11 +87,11 @@ abstract class _$$_CommentReplyResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CommentReplyResponseCopyWithImpl<$Res>
-    extends _$CommentReplyResponseCopyWithImpl<$Res, _$_CommentReplyResponse>
-    implements _$$_CommentReplyResponseCopyWith<$Res> {
-  __$$_CommentReplyResponseCopyWithImpl(_$_CommentReplyResponse _value,
-      $Res Function(_$_CommentReplyResponse) _then)
+class __$$CommentReplyResponseImplCopyWithImpl<$Res>
+    extends _$CommentReplyResponseCopyWithImpl<$Res, _$CommentReplyResponseImpl>
+    implements _$$CommentReplyResponseImplCopyWith<$Res> {
+  __$$CommentReplyResponseImplCopyWithImpl(_$CommentReplyResponseImpl _value,
+      $Res Function(_$CommentReplyResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -99,7 +99,7 @@ class __$$_CommentReplyResponseCopyWithImpl<$Res>
   $Res call({
     Object? commentReplyView = null,
   }) {
-    return _then(_$_CommentReplyResponse(
+    return _then(_$CommentReplyResponseImpl(
       commentReplyView: null == commentReplyView
           ? _value.commentReplyView
           : commentReplyView // ignore: cast_nullable_to_non_nullable
@@ -111,11 +111,12 @@ class __$$_CommentReplyResponseCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_CommentReplyResponse extends _CommentReplyResponse {
-  const _$_CommentReplyResponse({required this.commentReplyView}) : super._();
+class _$CommentReplyResponseImpl extends _CommentReplyResponse {
+  const _$CommentReplyResponseImpl({required this.commentReplyView})
+      : super._();
 
-  factory _$_CommentReplyResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_CommentReplyResponseFromJson(json);
+  factory _$CommentReplyResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CommentReplyResponseImplFromJson(json);
 
   @override
   final CommentReplyView commentReplyView;
@@ -129,7 +130,7 @@ class _$_CommentReplyResponse extends _CommentReplyResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CommentReplyResponse &&
+            other is _$CommentReplyResponseImpl &&
             (identical(other.commentReplyView, commentReplyView) ||
                 other.commentReplyView == commentReplyView));
   }
@@ -141,13 +142,14 @@ class _$_CommentReplyResponse extends _CommentReplyResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CommentReplyResponseCopyWith<_$_CommentReplyResponse> get copyWith =>
-      __$$_CommentReplyResponseCopyWithImpl<_$_CommentReplyResponse>(
-          this, _$identity);
+  _$$CommentReplyResponseImplCopyWith<_$CommentReplyResponseImpl>
+      get copyWith =>
+          __$$CommentReplyResponseImplCopyWithImpl<_$CommentReplyResponseImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommentReplyResponseToJson(
+    return _$$CommentReplyResponseImplToJson(
       this,
     );
   }
@@ -156,16 +158,16 @@ class _$_CommentReplyResponse extends _CommentReplyResponse {
 abstract class _CommentReplyResponse extends CommentReplyResponse {
   const factory _CommentReplyResponse(
           {required final CommentReplyView commentReplyView}) =
-      _$_CommentReplyResponse;
+      _$CommentReplyResponseImpl;
   const _CommentReplyResponse._() : super._();
 
   factory _CommentReplyResponse.fromJson(Map<String, dynamic> json) =
-      _$_CommentReplyResponse.fromJson;
+      _$CommentReplyResponseImpl.fromJson;
 
   @override
   CommentReplyView get commentReplyView;
   @override
   @JsonKey(ignore: true)
-  _$$_CommentReplyResponseCopyWith<_$_CommentReplyResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CommentReplyResponseImplCopyWith<_$CommentReplyResponseImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

@@ -84,11 +84,11 @@ class _$SiteMetadataCopyWithImpl<$Res, $Val extends SiteMetadata>
 }
 
 /// @nodoc
-abstract class _$$_SiteMetadataCopyWith<$Res>
+abstract class _$$SiteMetadataImplCopyWith<$Res>
     implements $SiteMetadataCopyWith<$Res> {
-  factory _$$_SiteMetadataCopyWith(
-          _$_SiteMetadata value, $Res Function(_$_SiteMetadata) then) =
-      __$$_SiteMetadataCopyWithImpl<$Res>;
+  factory _$$SiteMetadataImplCopyWith(
+          _$SiteMetadataImpl value, $Res Function(_$SiteMetadataImpl) then) =
+      __$$SiteMetadataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -99,11 +99,11 @@ abstract class _$$_SiteMetadataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SiteMetadataCopyWithImpl<$Res>
-    extends _$SiteMetadataCopyWithImpl<$Res, _$_SiteMetadata>
-    implements _$$_SiteMetadataCopyWith<$Res> {
-  __$$_SiteMetadataCopyWithImpl(
-      _$_SiteMetadata _value, $Res Function(_$_SiteMetadata) _then)
+class __$$SiteMetadataImplCopyWithImpl<$Res>
+    extends _$SiteMetadataCopyWithImpl<$Res, _$SiteMetadataImpl>
+    implements _$$SiteMetadataImplCopyWith<$Res> {
+  __$$SiteMetadataImplCopyWithImpl(
+      _$SiteMetadataImpl _value, $Res Function(_$SiteMetadataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -114,7 +114,7 @@ class __$$_SiteMetadataCopyWithImpl<$Res>
     Object? image = freezed,
     Object? embedVideoUrl = freezed,
   }) {
-    return _then(_$_SiteMetadata(
+    return _then(_$SiteMetadataImpl(
       title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -138,13 +138,13 @@ class __$$_SiteMetadataCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_SiteMetadata extends _SiteMetadata {
-  const _$_SiteMetadata(
+class _$SiteMetadataImpl extends _SiteMetadata {
+  const _$SiteMetadataImpl(
       {this.title, this.description, this.image, this.embedVideoUrl})
       : super._();
 
-  factory _$_SiteMetadata.fromJson(Map<String, dynamic> json) =>
-      _$$_SiteMetadataFromJson(json);
+  factory _$SiteMetadataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SiteMetadataImplFromJson(json);
 
   @override
   final String? title;
@@ -164,7 +164,7 @@ class _$_SiteMetadata extends _SiteMetadata {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SiteMetadata &&
+            other is _$SiteMetadataImpl &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.description, description) ||
                 other.description == description) &&
@@ -181,12 +181,12 @@ class _$_SiteMetadata extends _SiteMetadata {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SiteMetadataCopyWith<_$_SiteMetadata> get copyWith =>
-      __$$_SiteMetadataCopyWithImpl<_$_SiteMetadata>(this, _$identity);
+  _$$SiteMetadataImplCopyWith<_$SiteMetadataImpl> get copyWith =>
+      __$$SiteMetadataImplCopyWithImpl<_$SiteMetadataImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SiteMetadataToJson(
+    return _$$SiteMetadataImplToJson(
       this,
     );
   }
@@ -197,11 +197,11 @@ abstract class _SiteMetadata extends SiteMetadata {
       {final String? title,
       final String? description,
       final String? image,
-      final String? embedVideoUrl}) = _$_SiteMetadata;
+      final String? embedVideoUrl}) = _$SiteMetadataImpl;
   const _SiteMetadata._() : super._();
 
   factory _SiteMetadata.fromJson(Map<String, dynamic> json) =
-      _$_SiteMetadata.fromJson;
+      _$SiteMetadataImpl.fromJson;
 
   @override
   String? get title;
@@ -213,6 +213,6 @@ abstract class _SiteMetadata extends SiteMetadata {
   String? get embedVideoUrl;
   @override
   @JsonKey(ignore: true)
-  _$$_SiteMetadataCopyWith<_$_SiteMetadata> get copyWith =>
+  _$$SiteMetadataImplCopyWith<_$SiteMetadataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

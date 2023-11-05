@@ -72,11 +72,11 @@ class _$PostReportResponseCopyWithImpl<$Res, $Val extends PostReportResponse>
 }
 
 /// @nodoc
-abstract class _$$_PostReportResponseCopyWith<$Res>
+abstract class _$$PostReportResponseImplCopyWith<$Res>
     implements $PostReportResponseCopyWith<$Res> {
-  factory _$$_PostReportResponseCopyWith(_$_PostReportResponse value,
-          $Res Function(_$_PostReportResponse) then) =
-      __$$_PostReportResponseCopyWithImpl<$Res>;
+  factory _$$PostReportResponseImplCopyWith(_$PostReportResponseImpl value,
+          $Res Function(_$PostReportResponseImpl) then) =
+      __$$PostReportResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({PostReportView postReportView});
@@ -86,11 +86,11 @@ abstract class _$$_PostReportResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PostReportResponseCopyWithImpl<$Res>
-    extends _$PostReportResponseCopyWithImpl<$Res, _$_PostReportResponse>
-    implements _$$_PostReportResponseCopyWith<$Res> {
-  __$$_PostReportResponseCopyWithImpl(
-      _$_PostReportResponse _value, $Res Function(_$_PostReportResponse) _then)
+class __$$PostReportResponseImplCopyWithImpl<$Res>
+    extends _$PostReportResponseCopyWithImpl<$Res, _$PostReportResponseImpl>
+    implements _$$PostReportResponseImplCopyWith<$Res> {
+  __$$PostReportResponseImplCopyWithImpl(_$PostReportResponseImpl _value,
+      $Res Function(_$PostReportResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -98,7 +98,7 @@ class __$$_PostReportResponseCopyWithImpl<$Res>
   $Res call({
     Object? postReportView = null,
   }) {
-    return _then(_$_PostReportResponse(
+    return _then(_$PostReportResponseImpl(
       postReportView: null == postReportView
           ? _value.postReportView
           : postReportView // ignore: cast_nullable_to_non_nullable
@@ -110,11 +110,11 @@ class __$$_PostReportResponseCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_PostReportResponse extends _PostReportResponse {
-  const _$_PostReportResponse({required this.postReportView}) : super._();
+class _$PostReportResponseImpl extends _PostReportResponse {
+  const _$PostReportResponseImpl({required this.postReportView}) : super._();
 
-  factory _$_PostReportResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_PostReportResponseFromJson(json);
+  factory _$PostReportResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PostReportResponseImplFromJson(json);
 
   @override
   final PostReportView postReportView;
@@ -128,7 +128,7 @@ class _$_PostReportResponse extends _PostReportResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PostReportResponse &&
+            other is _$PostReportResponseImpl &&
             (identical(other.postReportView, postReportView) ||
                 other.postReportView == postReportView));
   }
@@ -140,13 +140,13 @@ class _$_PostReportResponse extends _PostReportResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PostReportResponseCopyWith<_$_PostReportResponse> get copyWith =>
-      __$$_PostReportResponseCopyWithImpl<_$_PostReportResponse>(
+  _$$PostReportResponseImplCopyWith<_$PostReportResponseImpl> get copyWith =>
+      __$$PostReportResponseImplCopyWithImpl<_$PostReportResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PostReportResponseToJson(
+    return _$$PostReportResponseImplToJson(
       this,
     );
   }
@@ -154,16 +154,17 @@ class _$_PostReportResponse extends _PostReportResponse {
 
 abstract class _PostReportResponse extends PostReportResponse {
   const factory _PostReportResponse(
-      {required final PostReportView postReportView}) = _$_PostReportResponse;
+          {required final PostReportView postReportView}) =
+      _$PostReportResponseImpl;
   const _PostReportResponse._() : super._();
 
   factory _PostReportResponse.fromJson(Map<String, dynamic> json) =
-      _$_PostReportResponse.fromJson;
+      _$PostReportResponseImpl.fromJson;
 
   @override
   PostReportView get postReportView;
   @override
   @JsonKey(ignore: true)
-  _$$_PostReportResponseCopyWith<_$_PostReportResponse> get copyWith =>
+  _$$PostReportResponseImplCopyWith<_$PostReportResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

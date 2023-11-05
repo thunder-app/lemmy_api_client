@@ -6,8 +6,8 @@ part of 'private_message.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PrivateMessage _$$_PrivateMessageFromJson(Map<String, dynamic> json) =>
-    _$_PrivateMessage(
+_$PrivateMessageImpl _$$PrivateMessageImplFromJson(Map<String, dynamic> json) =>
+    _$PrivateMessageImpl(
       id: json['id'] as int,
       creatorId: json['creator_id'] as int,
       recipientId: json['recipient_id'] as int,
@@ -21,7 +21,8 @@ _$_PrivateMessage _$$_PrivateMessageFromJson(Map<String, dynamic> json) =>
       local: json['local'] as bool,
     );
 
-Map<String, dynamic> _$$_PrivateMessageToJson(_$_PrivateMessage instance) =>
+Map<String, dynamic> _$$PrivateMessageImplToJson(
+        _$PrivateMessageImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'creator_id': instance.creatorId,
