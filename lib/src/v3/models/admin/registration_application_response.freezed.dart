@@ -78,12 +78,12 @@ class _$RegistrationApplicationResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$RegistrationApplicationResponseImplCopyWith<$Res>
+abstract class _$$_RegistrationApplicationResponseCopyWith<$Res>
     implements $RegistrationApplicationResponseCopyWith<$Res> {
-  factory _$$RegistrationApplicationResponseImplCopyWith(
-          _$RegistrationApplicationResponseImpl value,
-          $Res Function(_$RegistrationApplicationResponseImpl) then) =
-      __$$RegistrationApplicationResponseImplCopyWithImpl<$Res>;
+  factory _$$_RegistrationApplicationResponseCopyWith(
+          _$_RegistrationApplicationResponse value,
+          $Res Function(_$_RegistrationApplicationResponse) then) =
+      __$$_RegistrationApplicationResponseCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({RegistrationApplicationView registrationApplication});
@@ -93,13 +93,13 @@ abstract class _$$RegistrationApplicationResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$RegistrationApplicationResponseImplCopyWithImpl<$Res>
+class __$$_RegistrationApplicationResponseCopyWithImpl<$Res>
     extends _$RegistrationApplicationResponseCopyWithImpl<$Res,
-        _$RegistrationApplicationResponseImpl>
-    implements _$$RegistrationApplicationResponseImplCopyWith<$Res> {
-  __$$RegistrationApplicationResponseImplCopyWithImpl(
-      _$RegistrationApplicationResponseImpl _value,
-      $Res Function(_$RegistrationApplicationResponseImpl) _then)
+        _$_RegistrationApplicationResponse>
+    implements _$$_RegistrationApplicationResponseCopyWith<$Res> {
+  __$$_RegistrationApplicationResponseCopyWithImpl(
+      _$_RegistrationApplicationResponse _value,
+      $Res Function(_$_RegistrationApplicationResponse) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -107,7 +107,7 @@ class __$$RegistrationApplicationResponseImplCopyWithImpl<$Res>
   $Res call({
     Object? registrationApplication = null,
   }) {
-    return _then(_$RegistrationApplicationResponseImpl(
+    return _then(_$_RegistrationApplicationResponse(
       registrationApplication: null == registrationApplication
           ? _value.registrationApplication
           : registrationApplication // ignore: cast_nullable_to_non_nullable
@@ -119,15 +119,15 @@ class __$$RegistrationApplicationResponseImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$RegistrationApplicationResponseImpl
+class _$_RegistrationApplicationResponse
     extends _RegistrationApplicationResponse {
-  const _$RegistrationApplicationResponseImpl(
+  const _$_RegistrationApplicationResponse(
       {required this.registrationApplication})
       : super._();
 
-  factory _$RegistrationApplicationResponseImpl.fromJson(
+  factory _$_RegistrationApplicationResponse.fromJson(
           Map<String, dynamic> json) =>
-      _$$RegistrationApplicationResponseImplFromJson(json);
+      _$$_RegistrationApplicationResponseFromJson(json);
 
   @override
   final RegistrationApplicationView registrationApplication;
@@ -141,7 +141,7 @@ class _$RegistrationApplicationResponseImpl
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RegistrationApplicationResponseImpl &&
+            other is _$_RegistrationApplicationResponse &&
             (identical(
                     other.registrationApplication, registrationApplication) ||
                 other.registrationApplication == registrationApplication));
@@ -154,14 +154,14 @@ class _$RegistrationApplicationResponseImpl
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$RegistrationApplicationResponseImplCopyWith<
-          _$RegistrationApplicationResponseImpl>
-      get copyWith => __$$RegistrationApplicationResponseImplCopyWithImpl<
-          _$RegistrationApplicationResponseImpl>(this, _$identity);
+  _$$_RegistrationApplicationResponseCopyWith<
+          _$_RegistrationApplicationResponse>
+      get copyWith => __$$_RegistrationApplicationResponseCopyWithImpl<
+          _$_RegistrationApplicationResponse>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RegistrationApplicationResponseImplToJson(
+    return _$$_RegistrationApplicationResponseToJson(
       this,
     );
   }
@@ -171,17 +171,17 @@ abstract class _RegistrationApplicationResponse
     extends RegistrationApplicationResponse {
   const factory _RegistrationApplicationResponse(
       {required final RegistrationApplicationView
-          registrationApplication}) = _$RegistrationApplicationResponseImpl;
+          registrationApplication}) = _$_RegistrationApplicationResponse;
   const _RegistrationApplicationResponse._() : super._();
 
   factory _RegistrationApplicationResponse.fromJson(Map<String, dynamic> json) =
-      _$RegistrationApplicationResponseImpl.fromJson;
+      _$_RegistrationApplicationResponse.fromJson;
 
   @override
   RegistrationApplicationView get registrationApplication;
   @override
   @JsonKey(ignore: true)
-  _$$RegistrationApplicationResponseImplCopyWith<
-          _$RegistrationApplicationResponseImpl>
+  _$$_RegistrationApplicationResponseCopyWith<
+          _$_RegistrationApplicationResponse>
       get copyWith => throw _privateConstructorUsedError;
 }

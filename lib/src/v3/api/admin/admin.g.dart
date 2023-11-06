@@ -6,14 +6,13 @@ part of 'admin.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AddAdminImpl _$$AddAdminImplFromJson(Map<String, dynamic> json) =>
-    _$AddAdminImpl(
+_$_AddAdmin _$$_AddAdminFromJson(Map<String, dynamic> json) => _$_AddAdmin(
       personId: json['person_id'] as int,
       added: json['added'] as bool,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$AddAdminImplToJson(_$AddAdminImpl instance) {
+Map<String, dynamic> _$$_AddAdminToJson(_$_AddAdmin instance) {
   final val = <String, dynamic>{
     'person_id': instance.personId,
     'added': instance.added,
@@ -29,15 +28,15 @@ Map<String, dynamic> _$$AddAdminImplToJson(_$AddAdminImpl instance) {
   return val;
 }
 
-_$GetUnreadRegistrationApplicationCountImpl
-    _$$GetUnreadRegistrationApplicationCountImplFromJson(
+_$_GetUnreadRegistrationApplicationCount
+    _$$_GetUnreadRegistrationApplicationCountFromJson(
             Map<String, dynamic> json) =>
-        _$GetUnreadRegistrationApplicationCountImpl(
+        _$_GetUnreadRegistrationApplicationCount(
           auth: json['auth'] as String?,
         );
 
-Map<String, dynamic> _$$GetUnreadRegistrationApplicationCountImplToJson(
-    _$GetUnreadRegistrationApplicationCountImpl instance) {
+Map<String, dynamic> _$$_GetUnreadRegistrationApplicationCountToJson(
+    _$_GetUnreadRegistrationApplicationCount instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -50,17 +49,17 @@ Map<String, dynamic> _$$GetUnreadRegistrationApplicationCountImplToJson(
   return val;
 }
 
-_$ListRegistrationApplicationsImpl _$$ListRegistrationApplicationsImplFromJson(
+_$_ListRegistrationApplications _$$_ListRegistrationApplicationsFromJson(
         Map<String, dynamic> json) =>
-    _$ListRegistrationApplicationsImpl(
+    _$_ListRegistrationApplications(
       unreadOnly: json['unread_only'] as bool?,
       page: json['page'] as int?,
       limit: json['limit'] as int?,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$ListRegistrationApplicationsImplToJson(
-    _$ListRegistrationApplicationsImpl instance) {
+Map<String, dynamic> _$$_ListRegistrationApplicationsToJson(
+    _$_ListRegistrationApplications instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -76,17 +75,17 @@ Map<String, dynamic> _$$ListRegistrationApplicationsImplToJson(
   return val;
 }
 
-_$ApproveRegistrationApplicationImpl
-    _$$ApproveRegistrationApplicationImplFromJson(Map<String, dynamic> json) =>
-        _$ApproveRegistrationApplicationImpl(
-          id: json['id'] as int,
-          approve: json['approve'] as bool,
-          denyReason: json['deny_reason'] as String?,
-          auth: json['auth'] as String?,
-        );
+_$_ApproveRegistrationApplication _$$_ApproveRegistrationApplicationFromJson(
+        Map<String, dynamic> json) =>
+    _$_ApproveRegistrationApplication(
+      id: json['id'] as int,
+      approve: json['approve'] as bool,
+      denyReason: json['deny_reason'] as String?,
+      auth: json['auth'] as String?,
+    );
 
-Map<String, dynamic> _$$ApproveRegistrationApplicationImplToJson(
-    _$ApproveRegistrationApplicationImpl instance) {
+Map<String, dynamic> _$$_ApproveRegistrationApplicationToJson(
+    _$_ApproveRegistrationApplication instance) {
   final val = <String, dynamic>{
     'id': instance.id,
     'approve': instance.approve,
@@ -103,14 +102,14 @@ Map<String, dynamic> _$$ApproveRegistrationApplicationImplToJson(
   return val;
 }
 
-_$PurgePersonImpl _$$PurgePersonImplFromJson(Map<String, dynamic> json) =>
-    _$PurgePersonImpl(
+_$_PurgePerson _$$_PurgePersonFromJson(Map<String, dynamic> json) =>
+    _$_PurgePerson(
       personId: json['person_id'] as int,
       reason: json['reason'] as String?,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$PurgePersonImplToJson(_$PurgePersonImpl instance) {
+Map<String, dynamic> _$$_PurgePersonToJson(_$_PurgePerson instance) {
   final val = <String, dynamic>{
     'person_id': instance.personId,
   };
@@ -126,15 +125,14 @@ Map<String, dynamic> _$$PurgePersonImplToJson(_$PurgePersonImpl instance) {
   return val;
 }
 
-_$PurgeCommunityImpl _$$PurgeCommunityImplFromJson(Map<String, dynamic> json) =>
-    _$PurgeCommunityImpl(
+_$_PurgeCommunity _$$_PurgeCommunityFromJson(Map<String, dynamic> json) =>
+    _$_PurgeCommunity(
       communityId: json['community_id'] as int,
       reason: json['reason'] as String?,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$PurgeCommunityImplToJson(
-    _$PurgeCommunityImpl instance) {
+Map<String, dynamic> _$$_PurgeCommunityToJson(_$_PurgeCommunity instance) {
   final val = <String, dynamic>{
     'community_id': instance.communityId,
   };
@@ -150,14 +148,13 @@ Map<String, dynamic> _$$PurgeCommunityImplToJson(
   return val;
 }
 
-_$PurgePostImpl _$$PurgePostImplFromJson(Map<String, dynamic> json) =>
-    _$PurgePostImpl(
+_$_PurgePost _$$_PurgePostFromJson(Map<String, dynamic> json) => _$_PurgePost(
       postId: json['post_id'] as int,
       reason: json['reason'] as String?,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$PurgePostImplToJson(_$PurgePostImpl instance) {
+Map<String, dynamic> _$$_PurgePostToJson(_$_PurgePost instance) {
   final val = <String, dynamic>{
     'post_id': instance.postId,
   };
@@ -173,14 +170,14 @@ Map<String, dynamic> _$$PurgePostImplToJson(_$PurgePostImpl instance) {
   return val;
 }
 
-_$PurgeCommentImpl _$$PurgeCommentImplFromJson(Map<String, dynamic> json) =>
-    _$PurgeCommentImpl(
+_$_PurgeComment _$$_PurgeCommentFromJson(Map<String, dynamic> json) =>
+    _$_PurgeComment(
       commentId: json['comment_id'] as int,
       reason: json['reason'] as String?,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$PurgeCommentImplToJson(_$PurgeCommentImpl instance) {
+Map<String, dynamic> _$$_PurgeCommentToJson(_$_PurgeComment instance) {
   final val = <String, dynamic>{
     'comment_id': instance.commentId,
   };

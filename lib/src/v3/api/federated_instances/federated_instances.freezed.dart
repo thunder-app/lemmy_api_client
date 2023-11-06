@@ -64,24 +64,22 @@ class _$GetFederatedInstancesCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$GetFederatedInstancesImplCopyWith<$Res>
+abstract class _$$_GetFederatedInstancesCopyWith<$Res>
     implements $GetFederatedInstancesCopyWith<$Res> {
-  factory _$$GetFederatedInstancesImplCopyWith(
-          _$GetFederatedInstancesImpl value,
-          $Res Function(_$GetFederatedInstancesImpl) then) =
-      __$$GetFederatedInstancesImplCopyWithImpl<$Res>;
+  factory _$$_GetFederatedInstancesCopyWith(_$_GetFederatedInstances value,
+          $Res Function(_$_GetFederatedInstances) then) =
+      __$$_GetFederatedInstancesCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? auth});
 }
 
 /// @nodoc
-class __$$GetFederatedInstancesImplCopyWithImpl<$Res>
-    extends _$GetFederatedInstancesCopyWithImpl<$Res,
-        _$GetFederatedInstancesImpl>
-    implements _$$GetFederatedInstancesImplCopyWith<$Res> {
-  __$$GetFederatedInstancesImplCopyWithImpl(_$GetFederatedInstancesImpl _value,
-      $Res Function(_$GetFederatedInstancesImpl) _then)
+class __$$_GetFederatedInstancesCopyWithImpl<$Res>
+    extends _$GetFederatedInstancesCopyWithImpl<$Res, _$_GetFederatedInstances>
+    implements _$$_GetFederatedInstancesCopyWith<$Res> {
+  __$$_GetFederatedInstancesCopyWithImpl(_$_GetFederatedInstances _value,
+      $Res Function(_$_GetFederatedInstances) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -89,7 +87,7 @@ class __$$GetFederatedInstancesImplCopyWithImpl<$Res>
   $Res call({
     Object? auth = freezed,
   }) {
-    return _then(_$GetFederatedInstancesImpl(
+    return _then(_$_GetFederatedInstances(
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -101,11 +99,11 @@ class __$$GetFederatedInstancesImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$GetFederatedInstancesImpl extends _GetFederatedInstances {
-  const _$GetFederatedInstancesImpl({this.auth}) : super._();
+class _$_GetFederatedInstances extends _GetFederatedInstances {
+  const _$_GetFederatedInstances({this.auth}) : super._();
 
-  factory _$GetFederatedInstancesImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GetFederatedInstancesImplFromJson(json);
+  factory _$_GetFederatedInstances.fromJson(Map<String, dynamic> json) =>
+      _$$_GetFederatedInstancesFromJson(json);
 
   @override
   final String? auth;
@@ -119,7 +117,7 @@ class _$GetFederatedInstancesImpl extends _GetFederatedInstances {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GetFederatedInstancesImpl &&
+            other is _$_GetFederatedInstances &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
@@ -130,13 +128,13 @@ class _$GetFederatedInstancesImpl extends _GetFederatedInstances {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetFederatedInstancesImplCopyWith<_$GetFederatedInstancesImpl>
-      get copyWith => __$$GetFederatedInstancesImplCopyWithImpl<
-          _$GetFederatedInstancesImpl>(this, _$identity);
+  _$$_GetFederatedInstancesCopyWith<_$_GetFederatedInstances> get copyWith =>
+      __$$_GetFederatedInstancesCopyWithImpl<_$_GetFederatedInstances>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetFederatedInstancesImplToJson(
+    return _$$_GetFederatedInstancesToJson(
       this,
     );
   }
@@ -144,16 +142,16 @@ class _$GetFederatedInstancesImpl extends _GetFederatedInstances {
 
 abstract class _GetFederatedInstances extends GetFederatedInstances {
   const factory _GetFederatedInstances({final String? auth}) =
-      _$GetFederatedInstancesImpl;
+      _$_GetFederatedInstances;
   const _GetFederatedInstances._() : super._();
 
   factory _GetFederatedInstances.fromJson(Map<String, dynamic> json) =
-      _$GetFederatedInstancesImpl.fromJson;
+      _$_GetFederatedInstances.fromJson;
 
   @override
   String? get auth;
   @override
   @JsonKey(ignore: true)
-  _$$GetFederatedInstancesImplCopyWith<_$GetFederatedInstancesImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$_GetFederatedInstancesCopyWith<_$_GetFederatedInstances> get copyWith =>
+      throw _privateConstructorUsedError;
 }

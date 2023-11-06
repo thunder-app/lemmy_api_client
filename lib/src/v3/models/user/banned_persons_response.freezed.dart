@@ -64,24 +64,22 @@ class _$BannedPersonsResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$BannedPersonsResponseImplCopyWith<$Res>
+abstract class _$$_BannedPersonsResponseCopyWith<$Res>
     implements $BannedPersonsResponseCopyWith<$Res> {
-  factory _$$BannedPersonsResponseImplCopyWith(
-          _$BannedPersonsResponseImpl value,
-          $Res Function(_$BannedPersonsResponseImpl) then) =
-      __$$BannedPersonsResponseImplCopyWithImpl<$Res>;
+  factory _$$_BannedPersonsResponseCopyWith(_$_BannedPersonsResponse value,
+          $Res Function(_$_BannedPersonsResponse) then) =
+      __$$_BannedPersonsResponseCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<PersonView> banned});
 }
 
 /// @nodoc
-class __$$BannedPersonsResponseImplCopyWithImpl<$Res>
-    extends _$BannedPersonsResponseCopyWithImpl<$Res,
-        _$BannedPersonsResponseImpl>
-    implements _$$BannedPersonsResponseImplCopyWith<$Res> {
-  __$$BannedPersonsResponseImplCopyWithImpl(_$BannedPersonsResponseImpl _value,
-      $Res Function(_$BannedPersonsResponseImpl) _then)
+class __$$_BannedPersonsResponseCopyWithImpl<$Res>
+    extends _$BannedPersonsResponseCopyWithImpl<$Res, _$_BannedPersonsResponse>
+    implements _$$_BannedPersonsResponseCopyWith<$Res> {
+  __$$_BannedPersonsResponseCopyWithImpl(_$_BannedPersonsResponse _value,
+      $Res Function(_$_BannedPersonsResponse) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -89,7 +87,7 @@ class __$$BannedPersonsResponseImplCopyWithImpl<$Res>
   $Res call({
     Object? banned = null,
   }) {
-    return _then(_$BannedPersonsResponseImpl(
+    return _then(_$_BannedPersonsResponse(
       banned: null == banned
           ? _value._banned
           : banned // ignore: cast_nullable_to_non_nullable
@@ -101,13 +99,13 @@ class __$$BannedPersonsResponseImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$BannedPersonsResponseImpl extends _BannedPersonsResponse {
-  const _$BannedPersonsResponseImpl({required final List<PersonView> banned})
+class _$_BannedPersonsResponse extends _BannedPersonsResponse {
+  const _$_BannedPersonsResponse({required final List<PersonView> banned})
       : _banned = banned,
         super._();
 
-  factory _$BannedPersonsResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$BannedPersonsResponseImplFromJson(json);
+  factory _$_BannedPersonsResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_BannedPersonsResponseFromJson(json);
 
   final List<PersonView> _banned;
   @override
@@ -126,7 +124,7 @@ class _$BannedPersonsResponseImpl extends _BannedPersonsResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$BannedPersonsResponseImpl &&
+            other is _$_BannedPersonsResponse &&
             const DeepCollectionEquality().equals(other._banned, _banned));
   }
 
@@ -138,13 +136,13 @@ class _$BannedPersonsResponseImpl extends _BannedPersonsResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$BannedPersonsResponseImplCopyWith<_$BannedPersonsResponseImpl>
-      get copyWith => __$$BannedPersonsResponseImplCopyWithImpl<
-          _$BannedPersonsResponseImpl>(this, _$identity);
+  _$$_BannedPersonsResponseCopyWith<_$_BannedPersonsResponse> get copyWith =>
+      __$$_BannedPersonsResponseCopyWithImpl<_$_BannedPersonsResponse>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BannedPersonsResponseImplToJson(
+    return _$$_BannedPersonsResponseToJson(
       this,
     );
   }
@@ -152,16 +150,16 @@ class _$BannedPersonsResponseImpl extends _BannedPersonsResponse {
 
 abstract class _BannedPersonsResponse extends BannedPersonsResponse {
   const factory _BannedPersonsResponse(
-      {required final List<PersonView> banned}) = _$BannedPersonsResponseImpl;
+      {required final List<PersonView> banned}) = _$_BannedPersonsResponse;
   const _BannedPersonsResponse._() : super._();
 
   factory _BannedPersonsResponse.fromJson(Map<String, dynamic> json) =
-      _$BannedPersonsResponseImpl.fromJson;
+      _$_BannedPersonsResponse.fromJson;
 
   @override
   List<PersonView> get banned;
   @override
   @JsonKey(ignore: true)
-  _$$BannedPersonsResponseImplCopyWith<_$BannedPersonsResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$_BannedPersonsResponseCopyWith<_$_BannedPersonsResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }

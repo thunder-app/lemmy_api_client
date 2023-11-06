@@ -104,11 +104,11 @@ class _$GetPostResponseCopyWithImpl<$Res, $Val extends GetPostResponse>
 }
 
 /// @nodoc
-abstract class _$$GetPostResponseImplCopyWith<$Res>
+abstract class _$$_GetPostResponseCopyWith<$Res>
     implements $GetPostResponseCopyWith<$Res> {
-  factory _$$GetPostResponseImplCopyWith(_$GetPostResponseImpl value,
-          $Res Function(_$GetPostResponseImpl) then) =
-      __$$GetPostResponseImplCopyWithImpl<$Res>;
+  factory _$$_GetPostResponseCopyWith(
+          _$_GetPostResponse value, $Res Function(_$_GetPostResponse) then) =
+      __$$_GetPostResponseCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -124,11 +124,11 @@ abstract class _$$GetPostResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$GetPostResponseImplCopyWithImpl<$Res>
-    extends _$GetPostResponseCopyWithImpl<$Res, _$GetPostResponseImpl>
-    implements _$$GetPostResponseImplCopyWith<$Res> {
-  __$$GetPostResponseImplCopyWithImpl(
-      _$GetPostResponseImpl _value, $Res Function(_$GetPostResponseImpl) _then)
+class __$$_GetPostResponseCopyWithImpl<$Res>
+    extends _$GetPostResponseCopyWithImpl<$Res, _$_GetPostResponse>
+    implements _$$_GetPostResponseCopyWith<$Res> {
+  __$$_GetPostResponseCopyWithImpl(
+      _$_GetPostResponse _value, $Res Function(_$_GetPostResponse) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -139,7 +139,7 @@ class __$$GetPostResponseImplCopyWithImpl<$Res>
     Object? moderators = null,
     Object? crossPosts = null,
   }) {
-    return _then(_$GetPostResponseImpl(
+    return _then(_$_GetPostResponse(
       postView: null == postView
           ? _value.postView
           : postView // ignore: cast_nullable_to_non_nullable
@@ -163,8 +163,8 @@ class __$$GetPostResponseImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$GetPostResponseImpl extends _GetPostResponse {
-  const _$GetPostResponseImpl(
+class _$_GetPostResponse extends _GetPostResponse {
+  const _$_GetPostResponse(
       {required this.postView,
       required this.communityView,
       required final List<CommunityModeratorView> moderators,
@@ -173,8 +173,8 @@ class _$GetPostResponseImpl extends _GetPostResponse {
         _crossPosts = crossPosts,
         super._();
 
-  factory _$GetPostResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GetPostResponseImplFromJson(json);
+  factory _$_GetPostResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_GetPostResponseFromJson(json);
 
   @override
   final PostView postView;
@@ -205,7 +205,7 @@ class _$GetPostResponseImpl extends _GetPostResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GetPostResponseImpl &&
+            other is _$_GetPostResponse &&
             (identical(other.postView, postView) ||
                 other.postView == postView) &&
             (identical(other.communityView, communityView) ||
@@ -228,13 +228,12 @@ class _$GetPostResponseImpl extends _GetPostResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetPostResponseImplCopyWith<_$GetPostResponseImpl> get copyWith =>
-      __$$GetPostResponseImplCopyWithImpl<_$GetPostResponseImpl>(
-          this, _$identity);
+  _$$_GetPostResponseCopyWith<_$_GetPostResponse> get copyWith =>
+      __$$_GetPostResponseCopyWithImpl<_$_GetPostResponse>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetPostResponseImplToJson(
+    return _$$_GetPostResponseToJson(
       this,
     );
   }
@@ -245,11 +244,11 @@ abstract class _GetPostResponse extends GetPostResponse {
       {required final PostView postView,
       required final CommunityView communityView,
       required final List<CommunityModeratorView> moderators,
-      required final List<PostView> crossPosts}) = _$GetPostResponseImpl;
+      required final List<PostView> crossPosts}) = _$_GetPostResponse;
   const _GetPostResponse._() : super._();
 
   factory _GetPostResponse.fromJson(Map<String, dynamic> json) =
-      _$GetPostResponseImpl.fromJson;
+      _$_GetPostResponse.fromJson;
 
   @override
   PostView get postView;
@@ -261,6 +260,6 @@ abstract class _GetPostResponse extends GetPostResponse {
   List<PostView> get crossPosts;
   @override
   @JsonKey(ignore: true)
-  _$$GetPostResponseImplCopyWith<_$GetPostResponseImpl> get copyWith =>
+  _$$_GetPostResponseCopyWith<_$_GetPostResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }

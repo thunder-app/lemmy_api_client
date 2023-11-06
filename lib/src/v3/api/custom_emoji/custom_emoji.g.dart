@@ -6,9 +6,8 @@ part of 'custom_emoji.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$CreateCustomEmojiImpl _$$CreateCustomEmojiImplFromJson(
-        Map<String, dynamic> json) =>
-    _$CreateCustomEmojiImpl(
+_$_CreateCustomEmoji _$$_CreateCustomEmojiFromJson(Map<String, dynamic> json) =>
+    _$_CreateCustomEmoji(
       category: json['category'] as String,
       shortcode: json['shortcode'] as String,
       imageUrl: json['image_url'] as String,
@@ -18,8 +17,8 @@ _$CreateCustomEmojiImpl _$$CreateCustomEmojiImplFromJson(
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$CreateCustomEmojiImplToJson(
-    _$CreateCustomEmojiImpl instance) {
+Map<String, dynamic> _$$_CreateCustomEmojiToJson(
+    _$_CreateCustomEmoji instance) {
   final val = <String, dynamic>{
     'category': instance.category,
     'shortcode': instance.shortcode,
@@ -38,9 +37,8 @@ Map<String, dynamic> _$$CreateCustomEmojiImplToJson(
   return val;
 }
 
-_$EditCustomEmojiImpl _$$EditCustomEmojiImplFromJson(
-        Map<String, dynamic> json) =>
-    _$EditCustomEmojiImpl(
+_$_EditCustomEmoji _$$_EditCustomEmojiFromJson(Map<String, dynamic> json) =>
+    _$_EditCustomEmoji(
       id: json['id'] as int,
       category: json['category'] as String,
       imageUrl: json['image_url'] as String,
@@ -50,8 +48,7 @@ _$EditCustomEmojiImpl _$$EditCustomEmojiImplFromJson(
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$EditCustomEmojiImplToJson(
-    _$EditCustomEmojiImpl instance) {
+Map<String, dynamic> _$$_EditCustomEmojiToJson(_$_EditCustomEmoji instance) {
   final val = <String, dynamic>{
     'id': instance.id,
     'category': instance.category,
@@ -70,15 +67,14 @@ Map<String, dynamic> _$$EditCustomEmojiImplToJson(
   return val;
 }
 
-_$DeleteCustomEmojiImpl _$$DeleteCustomEmojiImplFromJson(
-        Map<String, dynamic> json) =>
-    _$DeleteCustomEmojiImpl(
+_$_DeleteCustomEmoji _$$_DeleteCustomEmojiFromJson(Map<String, dynamic> json) =>
+    _$_DeleteCustomEmoji(
       id: json['id'] as int,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$DeleteCustomEmojiImplToJson(
-    _$DeleteCustomEmojiImpl instance) {
+Map<String, dynamic> _$$_DeleteCustomEmojiToJson(
+    _$_DeleteCustomEmoji instance) {
   final val = <String, dynamic>{
     'id': instance.id,
   };

@@ -92,11 +92,11 @@ class _$SearchResponseCopyWithImpl<$Res, $Val extends SearchResponse>
 }
 
 /// @nodoc
-abstract class _$$SearchResponseImplCopyWith<$Res>
+abstract class _$$_SearchResponseCopyWith<$Res>
     implements $SearchResponseCopyWith<$Res> {
-  factory _$$SearchResponseImplCopyWith(_$SearchResponseImpl value,
-          $Res Function(_$SearchResponseImpl) then) =
-      __$$SearchResponseImplCopyWithImpl<$Res>;
+  factory _$$_SearchResponseCopyWith(
+          _$_SearchResponse value, $Res Function(_$_SearchResponse) then) =
+      __$$_SearchResponseCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -108,11 +108,11 @@ abstract class _$$SearchResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$SearchResponseImplCopyWithImpl<$Res>
-    extends _$SearchResponseCopyWithImpl<$Res, _$SearchResponseImpl>
-    implements _$$SearchResponseImplCopyWith<$Res> {
-  __$$SearchResponseImplCopyWithImpl(
-      _$SearchResponseImpl _value, $Res Function(_$SearchResponseImpl) _then)
+class __$$_SearchResponseCopyWithImpl<$Res>
+    extends _$SearchResponseCopyWithImpl<$Res, _$_SearchResponse>
+    implements _$$_SearchResponseCopyWith<$Res> {
+  __$$_SearchResponseCopyWithImpl(
+      _$_SearchResponse _value, $Res Function(_$_SearchResponse) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -124,7 +124,7 @@ class __$$SearchResponseImplCopyWithImpl<$Res>
     Object? communities = null,
     Object? users = null,
   }) {
-    return _then(_$SearchResponseImpl(
+    return _then(_$_SearchResponse(
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -152,8 +152,8 @@ class __$$SearchResponseImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$SearchResponseImpl extends _SearchResponse {
-  const _$SearchResponseImpl(
+class _$_SearchResponse extends _SearchResponse {
+  const _$_SearchResponse(
       {@JsonKey(name: 'type_') required this.type,
       required final List<CommentView> comments,
       required final List<PostView> posts,
@@ -165,8 +165,8 @@ class _$SearchResponseImpl extends _SearchResponse {
         _users = users,
         super._();
 
-  factory _$SearchResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SearchResponseImplFromJson(json);
+  factory _$_SearchResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_SearchResponseFromJson(json);
 
   @override
   @JsonKey(name: 'type_')
@@ -212,7 +212,7 @@ class _$SearchResponseImpl extends _SearchResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SearchResponseImpl &&
+            other is _$_SearchResponse &&
             (identical(other.type, type) || other.type == type) &&
             const DeepCollectionEquality().equals(other._comments, _comments) &&
             const DeepCollectionEquality().equals(other._posts, _posts) &&
@@ -234,13 +234,12 @@ class _$SearchResponseImpl extends _SearchResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$SearchResponseImplCopyWith<_$SearchResponseImpl> get copyWith =>
-      __$$SearchResponseImplCopyWithImpl<_$SearchResponseImpl>(
-          this, _$identity);
+  _$$_SearchResponseCopyWith<_$_SearchResponse> get copyWith =>
+      __$$_SearchResponseCopyWithImpl<_$_SearchResponse>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SearchResponseImplToJson(
+    return _$$_SearchResponseToJson(
       this,
     );
   }
@@ -252,11 +251,11 @@ abstract class _SearchResponse extends SearchResponse {
       required final List<CommentView> comments,
       required final List<PostView> posts,
       required final List<CommunityView> communities,
-      required final List<PersonView> users}) = _$SearchResponseImpl;
+      required final List<PersonView> users}) = _$_SearchResponse;
   const _SearchResponse._() : super._();
 
   factory _SearchResponse.fromJson(Map<String, dynamic> json) =
-      _$SearchResponseImpl.fromJson;
+      _$_SearchResponse.fromJson;
 
   @override
   @JsonKey(name: 'type_')
@@ -271,6 +270,6 @@ abstract class _SearchResponse extends SearchResponse {
   List<PersonView> get users;
   @override
   @JsonKey(ignore: true)
-  _$$SearchResponseImplCopyWith<_$SearchResponseImpl> get copyWith =>
+  _$$_SearchResponseCopyWith<_$_SearchResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }

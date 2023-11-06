@@ -62,22 +62,22 @@ class _$VerifyEmailResponseCopyWithImpl<$Res, $Val extends VerifyEmailResponse>
 }
 
 /// @nodoc
-abstract class _$$VerifyEmailResponseImplCopyWith<$Res>
+abstract class _$$_VerifyEmailResponseCopyWith<$Res>
     implements $VerifyEmailResponseCopyWith<$Res> {
-  factory _$$VerifyEmailResponseImplCopyWith(_$VerifyEmailResponseImpl value,
-          $Res Function(_$VerifyEmailResponseImpl) then) =
-      __$$VerifyEmailResponseImplCopyWithImpl<$Res>;
+  factory _$$_VerifyEmailResponseCopyWith(_$_VerifyEmailResponse value,
+          $Res Function(_$_VerifyEmailResponse) then) =
+      __$$_VerifyEmailResponseCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool? success});
 }
 
 /// @nodoc
-class __$$VerifyEmailResponseImplCopyWithImpl<$Res>
-    extends _$VerifyEmailResponseCopyWithImpl<$Res, _$VerifyEmailResponseImpl>
-    implements _$$VerifyEmailResponseImplCopyWith<$Res> {
-  __$$VerifyEmailResponseImplCopyWithImpl(_$VerifyEmailResponseImpl _value,
-      $Res Function(_$VerifyEmailResponseImpl) _then)
+class __$$_VerifyEmailResponseCopyWithImpl<$Res>
+    extends _$VerifyEmailResponseCopyWithImpl<$Res, _$_VerifyEmailResponse>
+    implements _$$_VerifyEmailResponseCopyWith<$Res> {
+  __$$_VerifyEmailResponseCopyWithImpl(_$_VerifyEmailResponse _value,
+      $Res Function(_$_VerifyEmailResponse) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -85,7 +85,7 @@ class __$$VerifyEmailResponseImplCopyWithImpl<$Res>
   $Res call({
     Object? success = freezed,
   }) {
-    return _then(_$VerifyEmailResponseImpl(
+    return _then(_$_VerifyEmailResponse(
       success: freezed == success
           ? _value.success
           : success // ignore: cast_nullable_to_non_nullable
@@ -97,11 +97,11 @@ class __$$VerifyEmailResponseImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$VerifyEmailResponseImpl extends _VerifyEmailResponse {
-  const _$VerifyEmailResponseImpl({this.success}) : super._();
+class _$_VerifyEmailResponse extends _VerifyEmailResponse {
+  const _$_VerifyEmailResponse({this.success}) : super._();
 
-  factory _$VerifyEmailResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$VerifyEmailResponseImplFromJson(json);
+  factory _$_VerifyEmailResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_VerifyEmailResponseFromJson(json);
 
   @override
   final bool? success;
@@ -115,7 +115,7 @@ class _$VerifyEmailResponseImpl extends _VerifyEmailResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$VerifyEmailResponseImpl &&
+            other is _$_VerifyEmailResponse &&
             (identical(other.success, success) || other.success == success));
   }
 
@@ -126,13 +126,13 @@ class _$VerifyEmailResponseImpl extends _VerifyEmailResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$VerifyEmailResponseImplCopyWith<_$VerifyEmailResponseImpl> get copyWith =>
-      __$$VerifyEmailResponseImplCopyWithImpl<_$VerifyEmailResponseImpl>(
+  _$$_VerifyEmailResponseCopyWith<_$_VerifyEmailResponse> get copyWith =>
+      __$$_VerifyEmailResponseCopyWithImpl<_$_VerifyEmailResponse>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$VerifyEmailResponseImplToJson(
+    return _$$_VerifyEmailResponseToJson(
       this,
     );
   }
@@ -140,16 +140,16 @@ class _$VerifyEmailResponseImpl extends _VerifyEmailResponse {
 
 abstract class _VerifyEmailResponse extends VerifyEmailResponse {
   const factory _VerifyEmailResponse({final bool? success}) =
-      _$VerifyEmailResponseImpl;
+      _$_VerifyEmailResponse;
   const _VerifyEmailResponse._() : super._();
 
   factory _VerifyEmailResponse.fromJson(Map<String, dynamic> json) =
-      _$VerifyEmailResponseImpl.fromJson;
+      _$_VerifyEmailResponse.fromJson;
 
   @override
   bool? get success;
   @override
   @JsonKey(ignore: true)
-  _$$VerifyEmailResponseImplCopyWith<_$VerifyEmailResponseImpl> get copyWith =>
+  _$$_VerifyEmailResponseCopyWith<_$_VerifyEmailResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -69,28 +69,26 @@ class _$GetUnreadRegistrationApplicationCountResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$GetUnreadRegistrationApplicationCountResponseImplCopyWith<
-        $Res>
+abstract class _$$_GetUnreadRegistrationApplicationCountResponseCopyWith<$Res>
     implements $GetUnreadRegistrationApplicationCountResponseCopyWith<$Res> {
-  factory _$$GetUnreadRegistrationApplicationCountResponseImplCopyWith(
-          _$GetUnreadRegistrationApplicationCountResponseImpl value,
-          $Res Function(_$GetUnreadRegistrationApplicationCountResponseImpl)
+  factory _$$_GetUnreadRegistrationApplicationCountResponseCopyWith(
+          _$_GetUnreadRegistrationApplicationCountResponse value,
+          $Res Function(_$_GetUnreadRegistrationApplicationCountResponse)
               then) =
-      __$$GetUnreadRegistrationApplicationCountResponseImplCopyWithImpl<$Res>;
+      __$$_GetUnreadRegistrationApplicationCountResponseCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int registrationApplications});
 }
 
 /// @nodoc
-class __$$GetUnreadRegistrationApplicationCountResponseImplCopyWithImpl<$Res>
+class __$$_GetUnreadRegistrationApplicationCountResponseCopyWithImpl<$Res>
     extends _$GetUnreadRegistrationApplicationCountResponseCopyWithImpl<$Res,
-        _$GetUnreadRegistrationApplicationCountResponseImpl>
-    implements
-        _$$GetUnreadRegistrationApplicationCountResponseImplCopyWith<$Res> {
-  __$$GetUnreadRegistrationApplicationCountResponseImplCopyWithImpl(
-      _$GetUnreadRegistrationApplicationCountResponseImpl _value,
-      $Res Function(_$GetUnreadRegistrationApplicationCountResponseImpl) _then)
+        _$_GetUnreadRegistrationApplicationCountResponse>
+    implements _$$_GetUnreadRegistrationApplicationCountResponseCopyWith<$Res> {
+  __$$_GetUnreadRegistrationApplicationCountResponseCopyWithImpl(
+      _$_GetUnreadRegistrationApplicationCountResponse _value,
+      $Res Function(_$_GetUnreadRegistrationApplicationCountResponse) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -98,7 +96,7 @@ class __$$GetUnreadRegistrationApplicationCountResponseImplCopyWithImpl<$Res>
   $Res call({
     Object? registrationApplications = null,
   }) {
-    return _then(_$GetUnreadRegistrationApplicationCountResponseImpl(
+    return _then(_$_GetUnreadRegistrationApplicationCountResponse(
       registrationApplications: null == registrationApplications
           ? _value.registrationApplications
           : registrationApplications // ignore: cast_nullable_to_non_nullable
@@ -110,15 +108,15 @@ class __$$GetUnreadRegistrationApplicationCountResponseImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$GetUnreadRegistrationApplicationCountResponseImpl
+class _$_GetUnreadRegistrationApplicationCountResponse
     extends _GetUnreadRegistrationApplicationCountResponse {
-  const _$GetUnreadRegistrationApplicationCountResponseImpl(
+  const _$_GetUnreadRegistrationApplicationCountResponse(
       {required this.registrationApplications})
       : super._();
 
-  factory _$GetUnreadRegistrationApplicationCountResponseImpl.fromJson(
+  factory _$_GetUnreadRegistrationApplicationCountResponse.fromJson(
           Map<String, dynamic> json) =>
-      _$$GetUnreadRegistrationApplicationCountResponseImplFromJson(json);
+      _$$_GetUnreadRegistrationApplicationCountResponseFromJson(json);
 
   @override
   final int registrationApplications;
@@ -132,7 +130,7 @@ class _$GetUnreadRegistrationApplicationCountResponseImpl
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GetUnreadRegistrationApplicationCountResponseImpl &&
+            other is _$_GetUnreadRegistrationApplicationCountResponse &&
             (identical(
                     other.registrationApplications, registrationApplications) ||
                 other.registrationApplications == registrationApplications));
@@ -145,16 +143,16 @@ class _$GetUnreadRegistrationApplicationCountResponseImpl
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetUnreadRegistrationApplicationCountResponseImplCopyWith<
-          _$GetUnreadRegistrationApplicationCountResponseImpl>
+  _$$_GetUnreadRegistrationApplicationCountResponseCopyWith<
+          _$_GetUnreadRegistrationApplicationCountResponse>
       get copyWith =>
-          __$$GetUnreadRegistrationApplicationCountResponseImplCopyWithImpl<
-                  _$GetUnreadRegistrationApplicationCountResponseImpl>(
+          __$$_GetUnreadRegistrationApplicationCountResponseCopyWithImpl<
+                  _$_GetUnreadRegistrationApplicationCountResponse>(
               this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetUnreadRegistrationApplicationCountResponseImplToJson(
+    return _$$_GetUnreadRegistrationApplicationCountResponseToJson(
       this,
     );
   }
@@ -164,18 +162,18 @@ abstract class _GetUnreadRegistrationApplicationCountResponse
     extends GetUnreadRegistrationApplicationCountResponse {
   const factory _GetUnreadRegistrationApplicationCountResponse(
           {required final int registrationApplications}) =
-      _$GetUnreadRegistrationApplicationCountResponseImpl;
+      _$_GetUnreadRegistrationApplicationCountResponse;
   const _GetUnreadRegistrationApplicationCountResponse._() : super._();
 
   factory _GetUnreadRegistrationApplicationCountResponse.fromJson(
           Map<String, dynamic> json) =
-      _$GetUnreadRegistrationApplicationCountResponseImpl.fromJson;
+      _$_GetUnreadRegistrationApplicationCountResponse.fromJson;
 
   @override
   int get registrationApplications;
   @override
   @JsonKey(ignore: true)
-  _$$GetUnreadRegistrationApplicationCountResponseImplCopyWith<
-          _$GetUnreadRegistrationApplicationCountResponseImpl>
+  _$$_GetUnreadRegistrationApplicationCountResponseCopyWith<
+          _$_GetUnreadRegistrationApplicationCountResponse>
       get copyWith => throw _privateConstructorUsedError;
 }

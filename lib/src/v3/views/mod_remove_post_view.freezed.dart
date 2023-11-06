@@ -125,11 +125,11 @@ class _$ModRemovePostViewCopyWithImpl<$Res, $Val extends ModRemovePostView>
 }
 
 /// @nodoc
-abstract class _$$ModRemovePostViewImplCopyWith<$Res>
+abstract class _$$_ModRemovePostViewCopyWith<$Res>
     implements $ModRemovePostViewCopyWith<$Res> {
-  factory _$$ModRemovePostViewImplCopyWith(_$ModRemovePostViewImpl value,
-          $Res Function(_$ModRemovePostViewImpl) then) =
-      __$$ModRemovePostViewImplCopyWithImpl<$Res>;
+  factory _$$_ModRemovePostViewCopyWith(_$_ModRemovePostView value,
+          $Res Function(_$_ModRemovePostView) then) =
+      __$$_ModRemovePostViewCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -149,11 +149,11 @@ abstract class _$$ModRemovePostViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ModRemovePostViewImplCopyWithImpl<$Res>
-    extends _$ModRemovePostViewCopyWithImpl<$Res, _$ModRemovePostViewImpl>
-    implements _$$ModRemovePostViewImplCopyWith<$Res> {
-  __$$ModRemovePostViewImplCopyWithImpl(_$ModRemovePostViewImpl _value,
-      $Res Function(_$ModRemovePostViewImpl) _then)
+class __$$_ModRemovePostViewCopyWithImpl<$Res>
+    extends _$ModRemovePostViewCopyWithImpl<$Res, _$_ModRemovePostView>
+    implements _$$_ModRemovePostViewCopyWith<$Res> {
+  __$$_ModRemovePostViewCopyWithImpl(
+      _$_ModRemovePostView _value, $Res Function(_$_ModRemovePostView) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -164,7 +164,7 @@ class __$$ModRemovePostViewImplCopyWithImpl<$Res>
     Object? post = null,
     Object? community = null,
   }) {
-    return _then(_$ModRemovePostViewImpl(
+    return _then(_$_ModRemovePostView(
       modRemovePost: null == modRemovePost
           ? _value.modRemovePost
           : modRemovePost // ignore: cast_nullable_to_non_nullable
@@ -188,16 +188,16 @@ class __$$ModRemovePostViewImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$ModRemovePostViewImpl extends _ModRemovePostView {
-  const _$ModRemovePostViewImpl(
+class _$_ModRemovePostView extends _ModRemovePostView {
+  const _$_ModRemovePostView(
       {required this.modRemovePost,
       this.moderator,
       required this.post,
       required this.community})
       : super._();
 
-  factory _$ModRemovePostViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ModRemovePostViewImplFromJson(json);
+  factory _$_ModRemovePostView.fromJson(Map<String, dynamic> json) =>
+      _$$_ModRemovePostViewFromJson(json);
 
   @override
   final ModRemovePost modRemovePost;
@@ -217,7 +217,7 @@ class _$ModRemovePostViewImpl extends _ModRemovePostView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ModRemovePostViewImpl &&
+            other is _$_ModRemovePostView &&
             (identical(other.modRemovePost, modRemovePost) ||
                 other.modRemovePost == modRemovePost) &&
             (identical(other.moderator, moderator) ||
@@ -235,13 +235,13 @@ class _$ModRemovePostViewImpl extends _ModRemovePostView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ModRemovePostViewImplCopyWith<_$ModRemovePostViewImpl> get copyWith =>
-      __$$ModRemovePostViewImplCopyWithImpl<_$ModRemovePostViewImpl>(
+  _$$_ModRemovePostViewCopyWith<_$_ModRemovePostView> get copyWith =>
+      __$$_ModRemovePostViewCopyWithImpl<_$_ModRemovePostView>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ModRemovePostViewImplToJson(
+    return _$$_ModRemovePostViewToJson(
       this,
     );
   }
@@ -252,11 +252,11 @@ abstract class _ModRemovePostView extends ModRemovePostView {
       {required final ModRemovePost modRemovePost,
       final Person? moderator,
       required final Post post,
-      required final Community community}) = _$ModRemovePostViewImpl;
+      required final Community community}) = _$_ModRemovePostView;
   const _ModRemovePostView._() : super._();
 
   factory _ModRemovePostView.fromJson(Map<String, dynamic> json) =
-      _$ModRemovePostViewImpl.fromJson;
+      _$_ModRemovePostView.fromJson;
 
   @override
   ModRemovePost get modRemovePost;
@@ -268,6 +268,6 @@ abstract class _ModRemovePostView extends ModRemovePostView {
   Community get community;
   @override
   @JsonKey(ignore: true)
-  _$$ModRemovePostViewImplCopyWith<_$ModRemovePostViewImpl> get copyWith =>
+  _$$_ModRemovePostViewCopyWith<_$_ModRemovePostView> get copyWith =>
       throw _privateConstructorUsedError;
 }

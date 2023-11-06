@@ -99,11 +99,11 @@ class _$ModAddCommunityCopyWithImpl<$Res, $Val extends ModAddCommunity>
 }
 
 /// @nodoc
-abstract class _$$ModAddCommunityImplCopyWith<$Res>
+abstract class _$$_ModAddCommunityCopyWith<$Res>
     implements $ModAddCommunityCopyWith<$Res> {
-  factory _$$ModAddCommunityImplCopyWith(_$ModAddCommunityImpl value,
-          $Res Function(_$ModAddCommunityImpl) then) =
-      __$$ModAddCommunityImplCopyWithImpl<$Res>;
+  factory _$$_ModAddCommunityCopyWith(
+          _$_ModAddCommunity value, $Res Function(_$_ModAddCommunity) then) =
+      __$$_ModAddCommunityCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -116,11 +116,11 @@ abstract class _$$ModAddCommunityImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ModAddCommunityImplCopyWithImpl<$Res>
-    extends _$ModAddCommunityCopyWithImpl<$Res, _$ModAddCommunityImpl>
-    implements _$$ModAddCommunityImplCopyWith<$Res> {
-  __$$ModAddCommunityImplCopyWithImpl(
-      _$ModAddCommunityImpl _value, $Res Function(_$ModAddCommunityImpl) _then)
+class __$$_ModAddCommunityCopyWithImpl<$Res>
+    extends _$ModAddCommunityCopyWithImpl<$Res, _$_ModAddCommunity>
+    implements _$$_ModAddCommunityCopyWith<$Res> {
+  __$$_ModAddCommunityCopyWithImpl(
+      _$_ModAddCommunity _value, $Res Function(_$_ModAddCommunity) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -133,7 +133,7 @@ class __$$ModAddCommunityImplCopyWithImpl<$Res>
     Object? removed = null,
     Object? when = null,
   }) {
-    return _then(_$ModAddCommunityImpl(
+    return _then(_$_ModAddCommunity(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -165,8 +165,8 @@ class __$$ModAddCommunityImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$ModAddCommunityImpl extends _ModAddCommunity {
-  const _$ModAddCommunityImpl(
+class _$_ModAddCommunity extends _ModAddCommunity {
+  const _$_ModAddCommunity(
       {required this.id,
       required this.modPersonId,
       required this.otherPersonId,
@@ -175,8 +175,8 @@ class _$ModAddCommunityImpl extends _ModAddCommunity {
       @JsonKey(name: 'when_') required this.when})
       : super._();
 
-  factory _$ModAddCommunityImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ModAddCommunityImplFromJson(json);
+  factory _$_ModAddCommunity.fromJson(Map<String, dynamic> json) =>
+      _$$_ModAddCommunityFromJson(json);
 
   @override
   final int id;
@@ -201,7 +201,7 @@ class _$ModAddCommunityImpl extends _ModAddCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ModAddCommunityImpl &&
+            other is _$_ModAddCommunity &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.modPersonId, modPersonId) ||
                 other.modPersonId == modPersonId) &&
@@ -221,13 +221,12 @@ class _$ModAddCommunityImpl extends _ModAddCommunity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ModAddCommunityImplCopyWith<_$ModAddCommunityImpl> get copyWith =>
-      __$$ModAddCommunityImplCopyWithImpl<_$ModAddCommunityImpl>(
-          this, _$identity);
+  _$$_ModAddCommunityCopyWith<_$_ModAddCommunity> get copyWith =>
+      __$$_ModAddCommunityCopyWithImpl<_$_ModAddCommunity>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ModAddCommunityImplToJson(
+    return _$$_ModAddCommunityToJson(
       this,
     );
   }
@@ -235,17 +234,16 @@ class _$ModAddCommunityImpl extends _ModAddCommunity {
 
 abstract class _ModAddCommunity extends ModAddCommunity {
   const factory _ModAddCommunity(
-          {required final int id,
-          required final int modPersonId,
-          required final int otherPersonId,
-          required final int communityId,
-          required final bool removed,
-          @JsonKey(name: 'when_') required final String when}) =
-      _$ModAddCommunityImpl;
+      {required final int id,
+      required final int modPersonId,
+      required final int otherPersonId,
+      required final int communityId,
+      required final bool removed,
+      @JsonKey(name: 'when_') required final String when}) = _$_ModAddCommunity;
   const _ModAddCommunity._() : super._();
 
   factory _ModAddCommunity.fromJson(Map<String, dynamic> json) =
-      _$ModAddCommunityImpl.fromJson;
+      _$_ModAddCommunity.fromJson;
 
   @override
   int get id;
@@ -262,6 +260,6 @@ abstract class _ModAddCommunity extends ModAddCommunity {
   String get when;
   @override
   @JsonKey(ignore: true)
-  _$$ModAddCommunityImplCopyWith<_$ModAddCommunityImpl> get copyWith =>
+  _$$_ModAddCommunityCopyWith<_$_ModAddCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }

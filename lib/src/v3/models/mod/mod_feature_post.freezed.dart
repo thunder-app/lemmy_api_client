@@ -99,11 +99,11 @@ class _$ModFeaturePostCopyWithImpl<$Res, $Val extends ModFeaturePost>
 }
 
 /// @nodoc
-abstract class _$$ModFeaturePostImplCopyWith<$Res>
+abstract class _$$_ModFeaturePostCopyWith<$Res>
     implements $ModFeaturePostCopyWith<$Res> {
-  factory _$$ModFeaturePostImplCopyWith(_$ModFeaturePostImpl value,
-          $Res Function(_$ModFeaturePostImpl) then) =
-      __$$ModFeaturePostImplCopyWithImpl<$Res>;
+  factory _$$_ModFeaturePostCopyWith(
+          _$_ModFeaturePost value, $Res Function(_$_ModFeaturePost) then) =
+      __$$_ModFeaturePostCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -116,11 +116,11 @@ abstract class _$$ModFeaturePostImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ModFeaturePostImplCopyWithImpl<$Res>
-    extends _$ModFeaturePostCopyWithImpl<$Res, _$ModFeaturePostImpl>
-    implements _$$ModFeaturePostImplCopyWith<$Res> {
-  __$$ModFeaturePostImplCopyWithImpl(
-      _$ModFeaturePostImpl _value, $Res Function(_$ModFeaturePostImpl) _then)
+class __$$_ModFeaturePostCopyWithImpl<$Res>
+    extends _$ModFeaturePostCopyWithImpl<$Res, _$_ModFeaturePost>
+    implements _$$_ModFeaturePostCopyWith<$Res> {
+  __$$_ModFeaturePostCopyWithImpl(
+      _$_ModFeaturePost _value, $Res Function(_$_ModFeaturePost) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -133,7 +133,7 @@ class __$$ModFeaturePostImplCopyWithImpl<$Res>
     Object? when = null,
     Object? isFeaturedCommunity = null,
   }) {
-    return _then(_$ModFeaturePostImpl(
+    return _then(_$_ModFeaturePost(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -165,8 +165,8 @@ class __$$ModFeaturePostImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$ModFeaturePostImpl extends _ModFeaturePost {
-  const _$ModFeaturePostImpl(
+class _$_ModFeaturePost extends _ModFeaturePost {
+  const _$_ModFeaturePost(
       {required this.id,
       required this.modPersonId,
       required this.postId,
@@ -175,8 +175,8 @@ class _$ModFeaturePostImpl extends _ModFeaturePost {
       required this.isFeaturedCommunity})
       : super._();
 
-  factory _$ModFeaturePostImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ModFeaturePostImplFromJson(json);
+  factory _$_ModFeaturePost.fromJson(Map<String, dynamic> json) =>
+      _$$_ModFeaturePostFromJson(json);
 
   @override
   final int id;
@@ -201,7 +201,7 @@ class _$ModFeaturePostImpl extends _ModFeaturePost {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ModFeaturePostImpl &&
+            other is _$_ModFeaturePost &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.modPersonId, modPersonId) ||
                 other.modPersonId == modPersonId) &&
@@ -221,13 +221,12 @@ class _$ModFeaturePostImpl extends _ModFeaturePost {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ModFeaturePostImplCopyWith<_$ModFeaturePostImpl> get copyWith =>
-      __$$ModFeaturePostImplCopyWithImpl<_$ModFeaturePostImpl>(
-          this, _$identity);
+  _$$_ModFeaturePostCopyWith<_$_ModFeaturePost> get copyWith =>
+      __$$_ModFeaturePostCopyWithImpl<_$_ModFeaturePost>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ModFeaturePostImplToJson(
+    return _$$_ModFeaturePostToJson(
       this,
     );
   }
@@ -240,11 +239,11 @@ abstract class _ModFeaturePost extends ModFeaturePost {
       required final int postId,
       required final bool featured,
       @JsonKey(name: 'when_') required final String when,
-      required final bool isFeaturedCommunity}) = _$ModFeaturePostImpl;
+      required final bool isFeaturedCommunity}) = _$_ModFeaturePost;
   const _ModFeaturePost._() : super._();
 
   factory _ModFeaturePost.fromJson(Map<String, dynamic> json) =
-      _$ModFeaturePostImpl.fromJson;
+      _$_ModFeaturePost.fromJson;
 
   @override
   int get id;
@@ -261,6 +260,6 @@ abstract class _ModFeaturePost extends ModFeaturePost {
   bool get isFeaturedCommunity;
   @override
   @JsonKey(ignore: true)
-  _$$ModFeaturePostImplCopyWith<_$ModFeaturePostImpl> get copyWith =>
+  _$$_ModFeaturePostCopyWith<_$_ModFeaturePost> get copyWith =>
       throw _privateConstructorUsedError;
 }

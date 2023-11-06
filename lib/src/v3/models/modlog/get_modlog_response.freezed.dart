@@ -173,11 +173,11 @@ class _$GetModlogResponseCopyWithImpl<$Res, $Val extends GetModlogResponse>
 }
 
 /// @nodoc
-abstract class _$$GetModlogResponseImplCopyWith<$Res>
+abstract class _$$_GetModlogResponseCopyWith<$Res>
     implements $GetModlogResponseCopyWith<$Res> {
-  factory _$$GetModlogResponseImplCopyWith(_$GetModlogResponseImpl value,
-          $Res Function(_$GetModlogResponseImpl) then) =
-      __$$GetModlogResponseImplCopyWithImpl<$Res>;
+  factory _$$_GetModlogResponseCopyWith(_$_GetModlogResponse value,
+          $Res Function(_$_GetModlogResponse) then) =
+      __$$_GetModlogResponseCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -199,11 +199,11 @@ abstract class _$$GetModlogResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$GetModlogResponseImplCopyWithImpl<$Res>
-    extends _$GetModlogResponseCopyWithImpl<$Res, _$GetModlogResponseImpl>
-    implements _$$GetModlogResponseImplCopyWith<$Res> {
-  __$$GetModlogResponseImplCopyWithImpl(_$GetModlogResponseImpl _value,
-      $Res Function(_$GetModlogResponseImpl) _then)
+class __$$_GetModlogResponseCopyWithImpl<$Res>
+    extends _$GetModlogResponseCopyWithImpl<$Res, _$_GetModlogResponse>
+    implements _$$_GetModlogResponseCopyWith<$Res> {
+  __$$_GetModlogResponseCopyWithImpl(
+      _$_GetModlogResponse _value, $Res Function(_$_GetModlogResponse) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -225,7 +225,7 @@ class __$$GetModlogResponseImplCopyWithImpl<$Res>
     Object? adminPurgedComments = null,
     Object? hiddenCommunities = null,
   }) {
-    return _then(_$GetModlogResponseImpl(
+    return _then(_$_GetModlogResponse(
       removedPosts: null == removedPosts
           ? _value._removedPosts
           : removedPosts // ignore: cast_nullable_to_non_nullable
@@ -293,8 +293,8 @@ class __$$GetModlogResponseImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$GetModlogResponseImpl extends _GetModlogResponse {
-  const _$GetModlogResponseImpl(
+class _$_GetModlogResponse extends _GetModlogResponse {
+  const _$_GetModlogResponse(
       {required final List<ModRemovePostView> removedPosts,
       required final List<ModLockPostView> lockedPosts,
       required final List<ModFeaturePostView> featuredPosts,
@@ -327,8 +327,8 @@ class _$GetModlogResponseImpl extends _GetModlogResponse {
         _hiddenCommunities = hiddenCommunities,
         super._();
 
-  factory _$GetModlogResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GetModlogResponseImplFromJson(json);
+  factory _$_GetModlogResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_GetModlogResponseFromJson(json);
 
   final List<ModRemovePostView> _removedPosts;
   @override
@@ -468,7 +468,7 @@ class _$GetModlogResponseImpl extends _GetModlogResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GetModlogResponseImpl &&
+            other is _$_GetModlogResponse &&
             const DeepCollectionEquality()
                 .equals(other._removedPosts, _removedPosts) &&
             const DeepCollectionEquality()
@@ -522,13 +522,13 @@ class _$GetModlogResponseImpl extends _GetModlogResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetModlogResponseImplCopyWith<_$GetModlogResponseImpl> get copyWith =>
-      __$$GetModlogResponseImplCopyWithImpl<_$GetModlogResponseImpl>(
+  _$$_GetModlogResponseCopyWith<_$_GetModlogResponse> get copyWith =>
+      __$$_GetModlogResponseCopyWithImpl<_$_GetModlogResponse>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetModlogResponseImplToJson(
+    return _$$_GetModlogResponseToJson(
       this,
     );
   }
@@ -551,11 +551,11 @@ abstract class _GetModlogResponse extends GetModlogResponse {
           required final List<AdminPurgePostView> adminPurgedPosts,
           required final List<AdminPurgeCommentView> adminPurgedComments,
           required final List<ModHideCommunityView> hiddenCommunities}) =
-      _$GetModlogResponseImpl;
+      _$_GetModlogResponse;
   const _GetModlogResponse._() : super._();
 
   factory _GetModlogResponse.fromJson(Map<String, dynamic> json) =
-      _$GetModlogResponseImpl.fromJson;
+      _$_GetModlogResponse.fromJson;
 
   @override
   List<ModRemovePostView> get removedPosts;
@@ -589,6 +589,6 @@ abstract class _GetModlogResponse extends GetModlogResponse {
   List<ModHideCommunityView> get hiddenCommunities;
   @override
   @JsonKey(ignore: true)
-  _$$GetModlogResponseImplCopyWith<_$GetModlogResponseImpl> get copyWith =>
+  _$$_GetModlogResponseCopyWith<_$_GetModlogResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }

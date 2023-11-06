@@ -6,8 +6,8 @@ part of 'site_aggregates.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$SiteAggregatesImpl _$$SiteAggregatesImplFromJson(Map<String, dynamic> json) =>
-    _$SiteAggregatesImpl(
+_$_SiteAggregates _$$_SiteAggregatesFromJson(Map<String, dynamic> json) =>
+    _$_SiteAggregates(
       id: json['id'] as int,
       siteId: json['site_id'] as int,
       users: json['users'] as int,
@@ -20,8 +20,7 @@ _$SiteAggregatesImpl _$$SiteAggregatesImplFromJson(Map<String, dynamic> json) =>
       usersActiveHalfYear: json['users_active_half_year'] as int,
     );
 
-Map<String, dynamic> _$$SiteAggregatesImplToJson(
-        _$SiteAggregatesImpl instance) =>
+Map<String, dynamic> _$$_SiteAggregatesToJson(_$_SiteAggregates instance) =>
     <String, dynamic>{
       'id': instance.id,
       'site_id': instance.siteId,

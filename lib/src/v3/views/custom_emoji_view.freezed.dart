@@ -78,11 +78,11 @@ class _$CustomEmojiViewCopyWithImpl<$Res, $Val extends CustomEmojiView>
 }
 
 /// @nodoc
-abstract class _$$CustomEmojiViewImplCopyWith<$Res>
+abstract class _$$_CustomEmojiViewCopyWith<$Res>
     implements $CustomEmojiViewCopyWith<$Res> {
-  factory _$$CustomEmojiViewImplCopyWith(_$CustomEmojiViewImpl value,
-          $Res Function(_$CustomEmojiViewImpl) then) =
-      __$$CustomEmojiViewImplCopyWithImpl<$Res>;
+  factory _$$_CustomEmojiViewCopyWith(
+          _$_CustomEmojiView value, $Res Function(_$_CustomEmojiView) then) =
+      __$$_CustomEmojiViewCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({CustomEmoji customEmoji, List<CustomEmojiKeyword> keywords});
@@ -92,11 +92,11 @@ abstract class _$$CustomEmojiViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CustomEmojiViewImplCopyWithImpl<$Res>
-    extends _$CustomEmojiViewCopyWithImpl<$Res, _$CustomEmojiViewImpl>
-    implements _$$CustomEmojiViewImplCopyWith<$Res> {
-  __$$CustomEmojiViewImplCopyWithImpl(
-      _$CustomEmojiViewImpl _value, $Res Function(_$CustomEmojiViewImpl) _then)
+class __$$_CustomEmojiViewCopyWithImpl<$Res>
+    extends _$CustomEmojiViewCopyWithImpl<$Res, _$_CustomEmojiView>
+    implements _$$_CustomEmojiViewCopyWith<$Res> {
+  __$$_CustomEmojiViewCopyWithImpl(
+      _$_CustomEmojiView _value, $Res Function(_$_CustomEmojiView) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -105,7 +105,7 @@ class __$$CustomEmojiViewImplCopyWithImpl<$Res>
     Object? customEmoji = null,
     Object? keywords = null,
   }) {
-    return _then(_$CustomEmojiViewImpl(
+    return _then(_$_CustomEmojiView(
       customEmoji: null == customEmoji
           ? _value.customEmoji
           : customEmoji // ignore: cast_nullable_to_non_nullable
@@ -121,15 +121,15 @@ class __$$CustomEmojiViewImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$CustomEmojiViewImpl extends _CustomEmojiView {
-  const _$CustomEmojiViewImpl(
+class _$_CustomEmojiView extends _CustomEmojiView {
+  const _$_CustomEmojiView(
       {required this.customEmoji,
       required final List<CustomEmojiKeyword> keywords})
       : _keywords = keywords,
         super._();
 
-  factory _$CustomEmojiViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CustomEmojiViewImplFromJson(json);
+  factory _$_CustomEmojiView.fromJson(Map<String, dynamic> json) =>
+      _$$_CustomEmojiViewFromJson(json);
 
   @override
   final CustomEmoji customEmoji;
@@ -150,7 +150,7 @@ class _$CustomEmojiViewImpl extends _CustomEmojiView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CustomEmojiViewImpl &&
+            other is _$_CustomEmojiView &&
             (identical(other.customEmoji, customEmoji) ||
                 other.customEmoji == customEmoji) &&
             const DeepCollectionEquality().equals(other._keywords, _keywords));
@@ -164,13 +164,12 @@ class _$CustomEmojiViewImpl extends _CustomEmojiView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CustomEmojiViewImplCopyWith<_$CustomEmojiViewImpl> get copyWith =>
-      __$$CustomEmojiViewImplCopyWithImpl<_$CustomEmojiViewImpl>(
-          this, _$identity);
+  _$$_CustomEmojiViewCopyWith<_$_CustomEmojiView> get copyWith =>
+      __$$_CustomEmojiViewCopyWithImpl<_$_CustomEmojiView>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CustomEmojiViewImplToJson(
+    return _$$_CustomEmojiViewToJson(
       this,
     );
   }
@@ -178,13 +177,12 @@ class _$CustomEmojiViewImpl extends _CustomEmojiView {
 
 abstract class _CustomEmojiView extends CustomEmojiView {
   const factory _CustomEmojiView(
-          {required final CustomEmoji customEmoji,
-          required final List<CustomEmojiKeyword> keywords}) =
-      _$CustomEmojiViewImpl;
+      {required final CustomEmoji customEmoji,
+      required final List<CustomEmojiKeyword> keywords}) = _$_CustomEmojiView;
   const _CustomEmojiView._() : super._();
 
   factory _CustomEmojiView.fromJson(Map<String, dynamic> json) =
-      _$CustomEmojiViewImpl.fromJson;
+      _$_CustomEmojiView.fromJson;
 
   @override
   CustomEmoji get customEmoji;
@@ -192,6 +190,6 @@ abstract class _CustomEmojiView extends CustomEmojiView {
   List<CustomEmojiKeyword> get keywords;
   @override
   @JsonKey(ignore: true)
-  _$$CustomEmojiViewImplCopyWith<_$CustomEmojiViewImpl> get copyWith =>
+  _$$_CustomEmojiViewCopyWith<_$_CustomEmojiView> get copyWith =>
       throw _privateConstructorUsedError;
 }

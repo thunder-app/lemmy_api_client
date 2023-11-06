@@ -6,16 +6,16 @@ part of 'list_comment_reports_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ListCommentReportsResponseImpl _$$ListCommentReportsResponseImplFromJson(
+_$_ListCommentReportsResponse _$$_ListCommentReportsResponseFromJson(
         Map<String, dynamic> json) =>
-    _$ListCommentReportsResponseImpl(
+    _$_ListCommentReportsResponse(
       commentReports: (json['comment_reports'] as List<dynamic>)
           .map((e) => CommentReportView.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$ListCommentReportsResponseImplToJson(
-        _$ListCommentReportsResponseImpl instance) =>
+Map<String, dynamic> _$$_ListCommentReportsResponseToJson(
+        _$_ListCommentReportsResponse instance) =>
     <String, dynamic>{
       'comment_reports':
           instance.commentReports.map((e) => e.toJson()).toList(),

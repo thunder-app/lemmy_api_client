@@ -6,15 +6,15 @@ part of 'private_message_report_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PrivateMessageReportResponseImpl _$$PrivateMessageReportResponseImplFromJson(
+_$_PrivateMessageReportResponse _$$_PrivateMessageReportResponseFromJson(
         Map<String, dynamic> json) =>
-    _$PrivateMessageReportResponseImpl(
+    _$_PrivateMessageReportResponse(
       privateMessageReportView: PrivateMessageReportView.fromJson(
           json['private_message_report_view'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$PrivateMessageReportResponseImplToJson(
-        _$PrivateMessageReportResponseImpl instance) =>
+Map<String, dynamic> _$$_PrivateMessageReportResponseToJson(
+        _$_PrivateMessageReportResponse instance) =>
     <String, dynamic>{
       'private_message_report_view': instance.privateMessageReportView.toJson(),
     };

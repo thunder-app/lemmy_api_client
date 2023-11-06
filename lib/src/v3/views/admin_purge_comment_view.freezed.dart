@@ -108,12 +108,11 @@ class _$AdminPurgeCommentViewCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$AdminPurgeCommentViewImplCopyWith<$Res>
+abstract class _$$_AdminPurgeCommentViewCopyWith<$Res>
     implements $AdminPurgeCommentViewCopyWith<$Res> {
-  factory _$$AdminPurgeCommentViewImplCopyWith(
-          _$AdminPurgeCommentViewImpl value,
-          $Res Function(_$AdminPurgeCommentViewImpl) then) =
-      __$$AdminPurgeCommentViewImplCopyWithImpl<$Res>;
+  factory _$$_AdminPurgeCommentViewCopyWith(_$_AdminPurgeCommentView value,
+          $Res Function(_$_AdminPurgeCommentView) then) =
+      __$$_AdminPurgeCommentViewCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({AdminPurgeComment adminPurgeComment, Person? admin, Post post});
@@ -127,12 +126,11 @@ abstract class _$$AdminPurgeCommentViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$AdminPurgeCommentViewImplCopyWithImpl<$Res>
-    extends _$AdminPurgeCommentViewCopyWithImpl<$Res,
-        _$AdminPurgeCommentViewImpl>
-    implements _$$AdminPurgeCommentViewImplCopyWith<$Res> {
-  __$$AdminPurgeCommentViewImplCopyWithImpl(_$AdminPurgeCommentViewImpl _value,
-      $Res Function(_$AdminPurgeCommentViewImpl) _then)
+class __$$_AdminPurgeCommentViewCopyWithImpl<$Res>
+    extends _$AdminPurgeCommentViewCopyWithImpl<$Res, _$_AdminPurgeCommentView>
+    implements _$$_AdminPurgeCommentViewCopyWith<$Res> {
+  __$$_AdminPurgeCommentViewCopyWithImpl(_$_AdminPurgeCommentView _value,
+      $Res Function(_$_AdminPurgeCommentView) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -142,7 +140,7 @@ class __$$AdminPurgeCommentViewImplCopyWithImpl<$Res>
     Object? admin = freezed,
     Object? post = null,
   }) {
-    return _then(_$AdminPurgeCommentViewImpl(
+    return _then(_$_AdminPurgeCommentView(
       adminPurgeComment: null == adminPurgeComment
           ? _value.adminPurgeComment
           : adminPurgeComment // ignore: cast_nullable_to_non_nullable
@@ -162,13 +160,13 @@ class __$$AdminPurgeCommentViewImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$AdminPurgeCommentViewImpl extends _AdminPurgeCommentView {
-  const _$AdminPurgeCommentViewImpl(
+class _$_AdminPurgeCommentView extends _AdminPurgeCommentView {
+  const _$_AdminPurgeCommentView(
       {required this.adminPurgeComment, this.admin, required this.post})
       : super._();
 
-  factory _$AdminPurgeCommentViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AdminPurgeCommentViewImplFromJson(json);
+  factory _$_AdminPurgeCommentView.fromJson(Map<String, dynamic> json) =>
+      _$$_AdminPurgeCommentViewFromJson(json);
 
   @override
   final AdminPurgeComment adminPurgeComment;
@@ -186,7 +184,7 @@ class _$AdminPurgeCommentViewImpl extends _AdminPurgeCommentView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AdminPurgeCommentViewImpl &&
+            other is _$_AdminPurgeCommentView &&
             (identical(other.adminPurgeComment, adminPurgeComment) ||
                 other.adminPurgeComment == adminPurgeComment) &&
             (identical(other.admin, admin) || other.admin == admin) &&
@@ -200,13 +198,13 @@ class _$AdminPurgeCommentViewImpl extends _AdminPurgeCommentView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$AdminPurgeCommentViewImplCopyWith<_$AdminPurgeCommentViewImpl>
-      get copyWith => __$$AdminPurgeCommentViewImplCopyWithImpl<
-          _$AdminPurgeCommentViewImpl>(this, _$identity);
+  _$$_AdminPurgeCommentViewCopyWith<_$_AdminPurgeCommentView> get copyWith =>
+      __$$_AdminPurgeCommentViewCopyWithImpl<_$_AdminPurgeCommentView>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AdminPurgeCommentViewImplToJson(
+    return _$$_AdminPurgeCommentViewToJson(
       this,
     );
   }
@@ -216,11 +214,11 @@ abstract class _AdminPurgeCommentView extends AdminPurgeCommentView {
   const factory _AdminPurgeCommentView(
       {required final AdminPurgeComment adminPurgeComment,
       final Person? admin,
-      required final Post post}) = _$AdminPurgeCommentViewImpl;
+      required final Post post}) = _$_AdminPurgeCommentView;
   const _AdminPurgeCommentView._() : super._();
 
   factory _AdminPurgeCommentView.fromJson(Map<String, dynamic> json) =
-      _$AdminPurgeCommentViewImpl.fromJson;
+      _$_AdminPurgeCommentView.fromJson;
 
   @override
   AdminPurgeComment get adminPurgeComment;
@@ -230,6 +228,6 @@ abstract class _AdminPurgeCommentView extends AdminPurgeCommentView {
   Post get post;
   @override
   @JsonKey(ignore: true)
-  _$$AdminPurgeCommentViewImplCopyWith<_$AdminPurgeCommentViewImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$_AdminPurgeCommentViewCopyWith<_$_AdminPurgeCommentView> get copyWith =>
+      throw _privateConstructorUsedError;
 }

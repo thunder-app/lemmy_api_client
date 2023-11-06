@@ -71,25 +71,25 @@ class _$DeleteCustomEmojiResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$DeleteCustomEmojiResponseImplCopyWith<$Res>
+abstract class _$$_DeleteCustomEmojiResponseCopyWith<$Res>
     implements $DeleteCustomEmojiResponseCopyWith<$Res> {
-  factory _$$DeleteCustomEmojiResponseImplCopyWith(
-          _$DeleteCustomEmojiResponseImpl value,
-          $Res Function(_$DeleteCustomEmojiResponseImpl) then) =
-      __$$DeleteCustomEmojiResponseImplCopyWithImpl<$Res>;
+  factory _$$_DeleteCustomEmojiResponseCopyWith(
+          _$_DeleteCustomEmojiResponse value,
+          $Res Function(_$_DeleteCustomEmojiResponse) then) =
+      __$$_DeleteCustomEmojiResponseCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@deprecated int? id, bool? success});
 }
 
 /// @nodoc
-class __$$DeleteCustomEmojiResponseImplCopyWithImpl<$Res>
+class __$$_DeleteCustomEmojiResponseCopyWithImpl<$Res>
     extends _$DeleteCustomEmojiResponseCopyWithImpl<$Res,
-        _$DeleteCustomEmojiResponseImpl>
-    implements _$$DeleteCustomEmojiResponseImplCopyWith<$Res> {
-  __$$DeleteCustomEmojiResponseImplCopyWithImpl(
-      _$DeleteCustomEmojiResponseImpl _value,
-      $Res Function(_$DeleteCustomEmojiResponseImpl) _then)
+        _$_DeleteCustomEmojiResponse>
+    implements _$$_DeleteCustomEmojiResponseCopyWith<$Res> {
+  __$$_DeleteCustomEmojiResponseCopyWithImpl(
+      _$_DeleteCustomEmojiResponse _value,
+      $Res Function(_$_DeleteCustomEmojiResponse) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -98,7 +98,7 @@ class __$$DeleteCustomEmojiResponseImplCopyWithImpl<$Res>
     Object? id = freezed,
     Object? success = freezed,
   }) {
-    return _then(_$DeleteCustomEmojiResponseImpl(
+    return _then(_$_DeleteCustomEmojiResponse(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -114,12 +114,12 @@ class __$$DeleteCustomEmojiResponseImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$DeleteCustomEmojiResponseImpl extends _DeleteCustomEmojiResponse {
-  const _$DeleteCustomEmojiResponseImpl({@deprecated this.id, this.success})
+class _$_DeleteCustomEmojiResponse extends _DeleteCustomEmojiResponse {
+  const _$_DeleteCustomEmojiResponse({@deprecated this.id, this.success})
       : super._();
 
-  factory _$DeleteCustomEmojiResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$DeleteCustomEmojiResponseImplFromJson(json);
+  factory _$_DeleteCustomEmojiResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_DeleteCustomEmojiResponseFromJson(json);
 
   @override
   @deprecated
@@ -136,7 +136,7 @@ class _$DeleteCustomEmojiResponseImpl extends _DeleteCustomEmojiResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DeleteCustomEmojiResponseImpl &&
+            other is _$_DeleteCustomEmojiResponse &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.success, success) || other.success == success));
   }
@@ -148,13 +148,13 @@ class _$DeleteCustomEmojiResponseImpl extends _DeleteCustomEmojiResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$DeleteCustomEmojiResponseImplCopyWith<_$DeleteCustomEmojiResponseImpl>
-      get copyWith => __$$DeleteCustomEmojiResponseImplCopyWithImpl<
-          _$DeleteCustomEmojiResponseImpl>(this, _$identity);
+  _$$_DeleteCustomEmojiResponseCopyWith<_$_DeleteCustomEmojiResponse>
+      get copyWith => __$$_DeleteCustomEmojiResponseCopyWithImpl<
+          _$_DeleteCustomEmojiResponse>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DeleteCustomEmojiResponseImplToJson(
+    return _$$_DeleteCustomEmojiResponseToJson(
       this,
     );
   }
@@ -163,11 +163,11 @@ class _$DeleteCustomEmojiResponseImpl extends _DeleteCustomEmojiResponse {
 abstract class _DeleteCustomEmojiResponse extends DeleteCustomEmojiResponse {
   const factory _DeleteCustomEmojiResponse(
       {@deprecated final int? id,
-      final bool? success}) = _$DeleteCustomEmojiResponseImpl;
+      final bool? success}) = _$_DeleteCustomEmojiResponse;
   const _DeleteCustomEmojiResponse._() : super._();
 
   factory _DeleteCustomEmojiResponse.fromJson(Map<String, dynamic> json) =
-      _$DeleteCustomEmojiResponseImpl.fromJson;
+      _$_DeleteCustomEmojiResponse.fromJson;
 
   @override
   @deprecated
@@ -176,6 +176,6 @@ abstract class _DeleteCustomEmojiResponse extends DeleteCustomEmojiResponse {
   bool? get success;
   @override
   @JsonKey(ignore: true)
-  _$$DeleteCustomEmojiResponseImplCopyWith<_$DeleteCustomEmojiResponseImpl>
+  _$$_DeleteCustomEmojiResponseCopyWith<_$_DeleteCustomEmojiResponse>
       get copyWith => throw _privateConstructorUsedError;
 }

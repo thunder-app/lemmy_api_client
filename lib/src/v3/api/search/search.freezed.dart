@@ -125,10 +125,9 @@ class _$SearchCopyWithImpl<$Res, $Val extends Search>
 }
 
 /// @nodoc
-abstract class _$$SearchImplCopyWith<$Res> implements $SearchCopyWith<$Res> {
-  factory _$$SearchImplCopyWith(
-          _$SearchImpl value, $Res Function(_$SearchImpl) then) =
-      __$$SearchImplCopyWithImpl<$Res>;
+abstract class _$$_SearchCopyWith<$Res> implements $SearchCopyWith<$Res> {
+  factory _$$_SearchCopyWith(_$_Search value, $Res Function(_$_Search) then) =
+      __$$_SearchCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -145,11 +144,10 @@ abstract class _$$SearchImplCopyWith<$Res> implements $SearchCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$SearchImplCopyWithImpl<$Res>
-    extends _$SearchCopyWithImpl<$Res, _$SearchImpl>
-    implements _$$SearchImplCopyWith<$Res> {
-  __$$SearchImplCopyWithImpl(
-      _$SearchImpl _value, $Res Function(_$SearchImpl) _then)
+class __$$_SearchCopyWithImpl<$Res>
+    extends _$SearchCopyWithImpl<$Res, _$_Search>
+    implements _$$_SearchCopyWith<$Res> {
+  __$$_SearchCopyWithImpl(_$_Search _value, $Res Function(_$_Search) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -166,7 +164,7 @@ class __$$SearchImplCopyWithImpl<$Res>
     Object? limit = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_$SearchImpl(
+    return _then(_$_Search(
       q: null == q
           ? _value.q
           : q // ignore: cast_nullable_to_non_nullable
@@ -214,8 +212,8 @@ class __$$SearchImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$SearchImpl extends _Search {
-  const _$SearchImpl(
+class _$_Search extends _Search {
+  const _$_Search(
       {required this.q,
       this.communityId,
       this.communityName,
@@ -228,8 +226,8 @@ class _$SearchImpl extends _Search {
       this.auth})
       : super._();
 
-  factory _$SearchImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SearchImplFromJson(json);
+  factory _$_Search.fromJson(Map<String, dynamic> json) =>
+      _$$_SearchFromJson(json);
 
   @override
   final String q;
@@ -262,7 +260,7 @@ class _$SearchImpl extends _Search {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SearchImpl &&
+            other is _$_Search &&
             (identical(other.q, q) || other.q == q) &&
             (identical(other.communityId, communityId) ||
                 other.communityId == communityId) &&
@@ -287,12 +285,12 @@ class _$SearchImpl extends _Search {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$SearchImplCopyWith<_$SearchImpl> get copyWith =>
-      __$$SearchImplCopyWithImpl<_$SearchImpl>(this, _$identity);
+  _$$_SearchCopyWith<_$_Search> get copyWith =>
+      __$$_SearchCopyWithImpl<_$_Search>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SearchImplToJson(
+    return _$$_SearchToJson(
       this,
     );
   }
@@ -309,10 +307,10 @@ abstract class _Search extends Search {
       final ListingType? listingType,
       final int? page,
       final int? limit,
-      final String? auth}) = _$SearchImpl;
+      final String? auth}) = _$_Search;
   const _Search._() : super._();
 
-  factory _Search.fromJson(Map<String, dynamic> json) = _$SearchImpl.fromJson;
+  factory _Search.fromJson(Map<String, dynamic> json) = _$_Search.fromJson;
 
   @override
   String get q;
@@ -337,6 +335,6 @@ abstract class _Search extends Search {
   String? get auth;
   @override
   @JsonKey(ignore: true)
-  _$$SearchImplCopyWith<_$SearchImpl> get copyWith =>
+  _$$_SearchCopyWith<_$_Search> get copyWith =>
       throw _privateConstructorUsedError;
 }

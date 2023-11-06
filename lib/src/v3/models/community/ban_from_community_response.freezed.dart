@@ -80,12 +80,12 @@ class _$BanFromCommunityResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$BanFromCommunityResponseImplCopyWith<$Res>
+abstract class _$$_BanFromCommunityResponseCopyWith<$Res>
     implements $BanFromCommunityResponseCopyWith<$Res> {
-  factory _$$BanFromCommunityResponseImplCopyWith(
-          _$BanFromCommunityResponseImpl value,
-          $Res Function(_$BanFromCommunityResponseImpl) then) =
-      __$$BanFromCommunityResponseImplCopyWithImpl<$Res>;
+  factory _$$_BanFromCommunityResponseCopyWith(
+          _$_BanFromCommunityResponse value,
+          $Res Function(_$_BanFromCommunityResponse) then) =
+      __$$_BanFromCommunityResponseCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({PersonView personView, bool banned});
@@ -95,13 +95,12 @@ abstract class _$$BanFromCommunityResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$BanFromCommunityResponseImplCopyWithImpl<$Res>
+class __$$_BanFromCommunityResponseCopyWithImpl<$Res>
     extends _$BanFromCommunityResponseCopyWithImpl<$Res,
-        _$BanFromCommunityResponseImpl>
-    implements _$$BanFromCommunityResponseImplCopyWith<$Res> {
-  __$$BanFromCommunityResponseImplCopyWithImpl(
-      _$BanFromCommunityResponseImpl _value,
-      $Res Function(_$BanFromCommunityResponseImpl) _then)
+        _$_BanFromCommunityResponse>
+    implements _$$_BanFromCommunityResponseCopyWith<$Res> {
+  __$$_BanFromCommunityResponseCopyWithImpl(_$_BanFromCommunityResponse _value,
+      $Res Function(_$_BanFromCommunityResponse) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -110,7 +109,7 @@ class __$$BanFromCommunityResponseImplCopyWithImpl<$Res>
     Object? personView = null,
     Object? banned = null,
   }) {
-    return _then(_$BanFromCommunityResponseImpl(
+    return _then(_$_BanFromCommunityResponse(
       personView: null == personView
           ? _value.personView
           : personView // ignore: cast_nullable_to_non_nullable
@@ -126,13 +125,13 @@ class __$$BanFromCommunityResponseImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$BanFromCommunityResponseImpl extends _BanFromCommunityResponse {
-  const _$BanFromCommunityResponseImpl(
+class _$_BanFromCommunityResponse extends _BanFromCommunityResponse {
+  const _$_BanFromCommunityResponse(
       {required this.personView, required this.banned})
       : super._();
 
-  factory _$BanFromCommunityResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$BanFromCommunityResponseImplFromJson(json);
+  factory _$_BanFromCommunityResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_BanFromCommunityResponseFromJson(json);
 
   @override
   final PersonView personView;
@@ -148,7 +147,7 @@ class _$BanFromCommunityResponseImpl extends _BanFromCommunityResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$BanFromCommunityResponseImpl &&
+            other is _$_BanFromCommunityResponse &&
             (identical(other.personView, personView) ||
                 other.personView == personView) &&
             (identical(other.banned, banned) || other.banned == banned));
@@ -161,13 +160,13 @@ class _$BanFromCommunityResponseImpl extends _BanFromCommunityResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$BanFromCommunityResponseImplCopyWith<_$BanFromCommunityResponseImpl>
-      get copyWith => __$$BanFromCommunityResponseImplCopyWithImpl<
-          _$BanFromCommunityResponseImpl>(this, _$identity);
+  _$$_BanFromCommunityResponseCopyWith<_$_BanFromCommunityResponse>
+      get copyWith => __$$_BanFromCommunityResponseCopyWithImpl<
+          _$_BanFromCommunityResponse>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BanFromCommunityResponseImplToJson(
+    return _$$_BanFromCommunityResponseToJson(
       this,
     );
   }
@@ -176,11 +175,11 @@ class _$BanFromCommunityResponseImpl extends _BanFromCommunityResponse {
 abstract class _BanFromCommunityResponse extends BanFromCommunityResponse {
   const factory _BanFromCommunityResponse(
       {required final PersonView personView,
-      required final bool banned}) = _$BanFromCommunityResponseImpl;
+      required final bool banned}) = _$_BanFromCommunityResponse;
   const _BanFromCommunityResponse._() : super._();
 
   factory _BanFromCommunityResponse.fromJson(Map<String, dynamic> json) =
-      _$BanFromCommunityResponseImpl.fromJson;
+      _$_BanFromCommunityResponse.fromJson;
 
   @override
   PersonView get personView;
@@ -188,6 +187,6 @@ abstract class _BanFromCommunityResponse extends BanFromCommunityResponse {
   bool get banned;
   @override
   @JsonKey(ignore: true)
-  _$$BanFromCommunityResponseImplCopyWith<_$BanFromCommunityResponseImpl>
+  _$$_BanFromCommunityResponseCopyWith<_$_BanFromCommunityResponse>
       get copyWith => throw _privateConstructorUsedError;
 }

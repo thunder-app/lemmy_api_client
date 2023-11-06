@@ -109,11 +109,11 @@ class _$GetCommunityResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$GetCommunityResponseImplCopyWith<$Res>
+abstract class _$$_GetCommunityResponseCopyWith<$Res>
     implements $GetCommunityResponseCopyWith<$Res> {
-  factory _$$GetCommunityResponseImplCopyWith(_$GetCommunityResponseImpl value,
-          $Res Function(_$GetCommunityResponseImpl) then) =
-      __$$GetCommunityResponseImplCopyWithImpl<$Res>;
+  factory _$$_GetCommunityResponseCopyWith(_$_GetCommunityResponse value,
+          $Res Function(_$_GetCommunityResponse) then) =
+      __$$_GetCommunityResponseCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -129,11 +129,11 @@ abstract class _$$GetCommunityResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$GetCommunityResponseImplCopyWithImpl<$Res>
-    extends _$GetCommunityResponseCopyWithImpl<$Res, _$GetCommunityResponseImpl>
-    implements _$$GetCommunityResponseImplCopyWith<$Res> {
-  __$$GetCommunityResponseImplCopyWithImpl(_$GetCommunityResponseImpl _value,
-      $Res Function(_$GetCommunityResponseImpl) _then)
+class __$$_GetCommunityResponseCopyWithImpl<$Res>
+    extends _$GetCommunityResponseCopyWithImpl<$Res, _$_GetCommunityResponse>
+    implements _$$_GetCommunityResponseCopyWith<$Res> {
+  __$$_GetCommunityResponseCopyWithImpl(_$_GetCommunityResponse _value,
+      $Res Function(_$_GetCommunityResponse) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -144,7 +144,7 @@ class __$$GetCommunityResponseImplCopyWithImpl<$Res>
     Object? moderators = null,
     Object? discussionLanguages = null,
   }) {
-    return _then(_$GetCommunityResponseImpl(
+    return _then(_$_GetCommunityResponse(
       communityView: null == communityView
           ? _value.communityView
           : communityView // ignore: cast_nullable_to_non_nullable
@@ -168,8 +168,8 @@ class __$$GetCommunityResponseImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$GetCommunityResponseImpl extends _GetCommunityResponse {
-  const _$GetCommunityResponseImpl(
+class _$_GetCommunityResponse extends _GetCommunityResponse {
+  const _$_GetCommunityResponse(
       {required this.communityView,
       this.site,
       required final List<CommunityModeratorView> moderators,
@@ -178,8 +178,8 @@ class _$GetCommunityResponseImpl extends _GetCommunityResponse {
         _discussionLanguages = discussionLanguages,
         super._();
 
-  factory _$GetCommunityResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GetCommunityResponseImplFromJson(json);
+  factory _$_GetCommunityResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_GetCommunityResponseFromJson(json);
 
   @override
   final CommunityView communityView;
@@ -211,7 +211,7 @@ class _$GetCommunityResponseImpl extends _GetCommunityResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GetCommunityResponseImpl &&
+            other is _$_GetCommunityResponse &&
             (identical(other.communityView, communityView) ||
                 other.communityView == communityView) &&
             (identical(other.site, site) || other.site == site) &&
@@ -233,14 +233,13 @@ class _$GetCommunityResponseImpl extends _GetCommunityResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetCommunityResponseImplCopyWith<_$GetCommunityResponseImpl>
-      get copyWith =>
-          __$$GetCommunityResponseImplCopyWithImpl<_$GetCommunityResponseImpl>(
-              this, _$identity);
+  _$$_GetCommunityResponseCopyWith<_$_GetCommunityResponse> get copyWith =>
+      __$$_GetCommunityResponseCopyWithImpl<_$_GetCommunityResponse>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetCommunityResponseImplToJson(
+    return _$$_GetCommunityResponseToJson(
       this,
     );
   }
@@ -248,15 +247,14 @@ class _$GetCommunityResponseImpl extends _GetCommunityResponse {
 
 abstract class _GetCommunityResponse extends GetCommunityResponse {
   const factory _GetCommunityResponse(
-          {required final CommunityView communityView,
-          final Site? site,
-          required final List<CommunityModeratorView> moderators,
-          required final List<int> discussionLanguages}) =
-      _$GetCommunityResponseImpl;
+      {required final CommunityView communityView,
+      final Site? site,
+      required final List<CommunityModeratorView> moderators,
+      required final List<int> discussionLanguages}) = _$_GetCommunityResponse;
   const _GetCommunityResponse._() : super._();
 
   factory _GetCommunityResponse.fromJson(Map<String, dynamic> json) =
-      _$GetCommunityResponseImpl.fromJson;
+      _$_GetCommunityResponse.fromJson;
 
   @override
   CommunityView get communityView;
@@ -268,6 +266,6 @@ abstract class _GetCommunityResponse extends GetCommunityResponse {
   List<int> get discussionLanguages;
   @override
   @JsonKey(ignore: true)
-  _$$GetCommunityResponseImplCopyWith<_$GetCommunityResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$_GetCommunityResponseCopyWith<_$_GetCommunityResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }

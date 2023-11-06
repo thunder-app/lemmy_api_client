@@ -87,11 +87,11 @@ class _$PersonBlockViewCopyWithImpl<$Res, $Val extends PersonBlockView>
 }
 
 /// @nodoc
-abstract class _$$PersonBlockViewImplCopyWith<$Res>
+abstract class _$$_PersonBlockViewCopyWith<$Res>
     implements $PersonBlockViewCopyWith<$Res> {
-  factory _$$PersonBlockViewImplCopyWith(_$PersonBlockViewImpl value,
-          $Res Function(_$PersonBlockViewImpl) then) =
-      __$$PersonBlockViewImplCopyWithImpl<$Res>;
+  factory _$$_PersonBlockViewCopyWith(
+          _$_PersonBlockView value, $Res Function(_$_PersonBlockView) then) =
+      __$$_PersonBlockViewCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Person person, Person target});
@@ -103,11 +103,11 @@ abstract class _$$PersonBlockViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PersonBlockViewImplCopyWithImpl<$Res>
-    extends _$PersonBlockViewCopyWithImpl<$Res, _$PersonBlockViewImpl>
-    implements _$$PersonBlockViewImplCopyWith<$Res> {
-  __$$PersonBlockViewImplCopyWithImpl(
-      _$PersonBlockViewImpl _value, $Res Function(_$PersonBlockViewImpl) _then)
+class __$$_PersonBlockViewCopyWithImpl<$Res>
+    extends _$PersonBlockViewCopyWithImpl<$Res, _$_PersonBlockView>
+    implements _$$_PersonBlockViewCopyWith<$Res> {
+  __$$_PersonBlockViewCopyWithImpl(
+      _$_PersonBlockView _value, $Res Function(_$_PersonBlockView) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -116,7 +116,7 @@ class __$$PersonBlockViewImplCopyWithImpl<$Res>
     Object? person = null,
     Object? target = null,
   }) {
-    return _then(_$PersonBlockViewImpl(
+    return _then(_$_PersonBlockView(
       person: null == person
           ? _value.person
           : person // ignore: cast_nullable_to_non_nullable
@@ -132,12 +132,12 @@ class __$$PersonBlockViewImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$PersonBlockViewImpl extends _PersonBlockView {
-  const _$PersonBlockViewImpl({required this.person, required this.target})
+class _$_PersonBlockView extends _PersonBlockView {
+  const _$_PersonBlockView({required this.person, required this.target})
       : super._();
 
-  factory _$PersonBlockViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PersonBlockViewImplFromJson(json);
+  factory _$_PersonBlockView.fromJson(Map<String, dynamic> json) =>
+      _$$_PersonBlockViewFromJson(json);
 
   @override
   final Person person;
@@ -153,7 +153,7 @@ class _$PersonBlockViewImpl extends _PersonBlockView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PersonBlockViewImpl &&
+            other is _$_PersonBlockView &&
             (identical(other.person, person) || other.person == person) &&
             (identical(other.target, target) || other.target == target));
   }
@@ -165,13 +165,12 @@ class _$PersonBlockViewImpl extends _PersonBlockView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PersonBlockViewImplCopyWith<_$PersonBlockViewImpl> get copyWith =>
-      __$$PersonBlockViewImplCopyWithImpl<_$PersonBlockViewImpl>(
-          this, _$identity);
+  _$$_PersonBlockViewCopyWith<_$_PersonBlockView> get copyWith =>
+      __$$_PersonBlockViewCopyWithImpl<_$_PersonBlockView>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PersonBlockViewImplToJson(
+    return _$$_PersonBlockViewToJson(
       this,
     );
   }
@@ -180,11 +179,11 @@ class _$PersonBlockViewImpl extends _PersonBlockView {
 abstract class _PersonBlockView extends PersonBlockView {
   const factory _PersonBlockView(
       {required final Person person,
-      required final Person target}) = _$PersonBlockViewImpl;
+      required final Person target}) = _$_PersonBlockView;
   const _PersonBlockView._() : super._();
 
   factory _PersonBlockView.fromJson(Map<String, dynamic> json) =
-      _$PersonBlockViewImpl.fromJson;
+      _$_PersonBlockView.fromJson;
 
   @override
   Person get person;
@@ -192,6 +191,6 @@ abstract class _PersonBlockView extends PersonBlockView {
   Person get target;
   @override
   @JsonKey(ignore: true)
-  _$$PersonBlockViewImplCopyWith<_$PersonBlockViewImpl> get copyWith =>
+  _$$_PersonBlockViewCopyWith<_$_PersonBlockView> get copyWith =>
       throw _privateConstructorUsedError;
 }

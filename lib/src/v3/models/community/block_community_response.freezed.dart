@@ -80,12 +80,11 @@ class _$BlockCommunityResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$BlockCommunityResponseImplCopyWith<$Res>
+abstract class _$$_BlockCommunityResponseCopyWith<$Res>
     implements $BlockCommunityResponseCopyWith<$Res> {
-  factory _$$BlockCommunityResponseImplCopyWith(
-          _$BlockCommunityResponseImpl value,
-          $Res Function(_$BlockCommunityResponseImpl) then) =
-      __$$BlockCommunityResponseImplCopyWithImpl<$Res>;
+  factory _$$_BlockCommunityResponseCopyWith(_$_BlockCommunityResponse value,
+          $Res Function(_$_BlockCommunityResponse) then) =
+      __$$_BlockCommunityResponseCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({CommunityView communityView, bool blocked});
@@ -95,13 +94,12 @@ abstract class _$$BlockCommunityResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$BlockCommunityResponseImplCopyWithImpl<$Res>
+class __$$_BlockCommunityResponseCopyWithImpl<$Res>
     extends _$BlockCommunityResponseCopyWithImpl<$Res,
-        _$BlockCommunityResponseImpl>
-    implements _$$BlockCommunityResponseImplCopyWith<$Res> {
-  __$$BlockCommunityResponseImplCopyWithImpl(
-      _$BlockCommunityResponseImpl _value,
-      $Res Function(_$BlockCommunityResponseImpl) _then)
+        _$_BlockCommunityResponse>
+    implements _$$_BlockCommunityResponseCopyWith<$Res> {
+  __$$_BlockCommunityResponseCopyWithImpl(_$_BlockCommunityResponse _value,
+      $Res Function(_$_BlockCommunityResponse) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -110,7 +108,7 @@ class __$$BlockCommunityResponseImplCopyWithImpl<$Res>
     Object? communityView = null,
     Object? blocked = null,
   }) {
-    return _then(_$BlockCommunityResponseImpl(
+    return _then(_$_BlockCommunityResponse(
       communityView: null == communityView
           ? _value.communityView
           : communityView // ignore: cast_nullable_to_non_nullable
@@ -126,13 +124,13 @@ class __$$BlockCommunityResponseImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$BlockCommunityResponseImpl extends _BlockCommunityResponse {
-  const _$BlockCommunityResponseImpl(
+class _$_BlockCommunityResponse extends _BlockCommunityResponse {
+  const _$_BlockCommunityResponse(
       {required this.communityView, required this.blocked})
       : super._();
 
-  factory _$BlockCommunityResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$BlockCommunityResponseImplFromJson(json);
+  factory _$_BlockCommunityResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_BlockCommunityResponseFromJson(json);
 
   @override
   final CommunityView communityView;
@@ -148,7 +146,7 @@ class _$BlockCommunityResponseImpl extends _BlockCommunityResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$BlockCommunityResponseImpl &&
+            other is _$_BlockCommunityResponse &&
             (identical(other.communityView, communityView) ||
                 other.communityView == communityView) &&
             (identical(other.blocked, blocked) || other.blocked == blocked));
@@ -161,13 +159,13 @@ class _$BlockCommunityResponseImpl extends _BlockCommunityResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$BlockCommunityResponseImplCopyWith<_$BlockCommunityResponseImpl>
-      get copyWith => __$$BlockCommunityResponseImplCopyWithImpl<
-          _$BlockCommunityResponseImpl>(this, _$identity);
+  _$$_BlockCommunityResponseCopyWith<_$_BlockCommunityResponse> get copyWith =>
+      __$$_BlockCommunityResponseCopyWithImpl<_$_BlockCommunityResponse>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BlockCommunityResponseImplToJson(
+    return _$$_BlockCommunityResponseToJson(
       this,
     );
   }
@@ -176,11 +174,11 @@ class _$BlockCommunityResponseImpl extends _BlockCommunityResponse {
 abstract class _BlockCommunityResponse extends BlockCommunityResponse {
   const factory _BlockCommunityResponse(
       {required final CommunityView communityView,
-      required final bool blocked}) = _$BlockCommunityResponseImpl;
+      required final bool blocked}) = _$_BlockCommunityResponse;
   const _BlockCommunityResponse._() : super._();
 
   factory _BlockCommunityResponse.fromJson(Map<String, dynamic> json) =
-      _$BlockCommunityResponseImpl.fromJson;
+      _$_BlockCommunityResponse.fromJson;
 
   @override
   CommunityView get communityView;
@@ -188,6 +186,6 @@ abstract class _BlockCommunityResponse extends BlockCommunityResponse {
   bool get blocked;
   @override
   @JsonKey(ignore: true)
-  _$$BlockCommunityResponseImplCopyWith<_$BlockCommunityResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$_BlockCommunityResponseCopyWith<_$_BlockCommunityResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }

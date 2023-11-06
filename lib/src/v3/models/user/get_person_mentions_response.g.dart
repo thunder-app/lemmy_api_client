@@ -6,16 +6,16 @@ part of 'get_person_mentions_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GetPersonMentionsResponseImpl _$$GetPersonMentionsResponseImplFromJson(
+_$_GetPersonMentionsResponse _$$_GetPersonMentionsResponseFromJson(
         Map<String, dynamic> json) =>
-    _$GetPersonMentionsResponseImpl(
+    _$_GetPersonMentionsResponse(
       mentions: (json['mentions'] as List<dynamic>)
           .map((e) => PersonMentionView.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$GetPersonMentionsResponseImplToJson(
-        _$GetPersonMentionsResponseImpl instance) =>
+Map<String, dynamic> _$$_GetPersonMentionsResponseToJson(
+        _$_GetPersonMentionsResponse instance) =>
     <String, dynamic>{
       'mentions': instance.mentions.map((e) => e.toJson()).toList(),
     };

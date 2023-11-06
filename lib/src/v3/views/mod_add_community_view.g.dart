@@ -6,9 +6,9 @@ part of 'mod_add_community_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ModAddCommunityViewImpl _$$ModAddCommunityViewImplFromJson(
+_$_ModAddCommunityView _$$_ModAddCommunityViewFromJson(
         Map<String, dynamic> json) =>
-    _$ModAddCommunityViewImpl(
+    _$_ModAddCommunityView(
       modAddCommunity: ModAddCommunity.fromJson(
           json['mod_add_community'] as Map<String, dynamic>),
       moderator: json['moderator'] == null
@@ -19,8 +19,8 @@ _$ModAddCommunityViewImpl _$$ModAddCommunityViewImplFromJson(
           Person.fromJson(json['modded_person'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$ModAddCommunityViewImplToJson(
-        _$ModAddCommunityViewImpl instance) =>
+Map<String, dynamic> _$$_ModAddCommunityViewToJson(
+        _$_ModAddCommunityView instance) =>
     <String, dynamic>{
       'mod_add_community': instance.modAddCommunity.toJson(),
       'moderator': instance.moderator?.toJson(),

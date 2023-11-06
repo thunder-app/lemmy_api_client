@@ -6,9 +6,8 @@ part of 'mod_add_community.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ModAddCommunityImpl _$$ModAddCommunityImplFromJson(
-        Map<String, dynamic> json) =>
-    _$ModAddCommunityImpl(
+_$_ModAddCommunity _$$_ModAddCommunityFromJson(Map<String, dynamic> json) =>
+    _$_ModAddCommunity(
       id: json['id'] as int,
       modPersonId: json['mod_person_id'] as int,
       otherPersonId: json['other_person_id'] as int,
@@ -17,8 +16,7 @@ _$ModAddCommunityImpl _$$ModAddCommunityImplFromJson(
       when: json['when_'] as String,
     );
 
-Map<String, dynamic> _$$ModAddCommunityImplToJson(
-        _$ModAddCommunityImpl instance) =>
+Map<String, dynamic> _$$_ModAddCommunityToJson(_$_ModAddCommunity instance) =>
     <String, dynamic>{
       'id': instance.id,
       'mod_person_id': instance.modPersonId,

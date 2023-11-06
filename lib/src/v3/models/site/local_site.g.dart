@@ -6,8 +6,7 @@ part of 'local_site.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$LocalSiteImpl _$$LocalSiteImplFromJson(Map<String, dynamic> json) =>
-    _$LocalSiteImpl(
+_$_LocalSite _$$_LocalSiteFromJson(Map<String, dynamic> json) => _$_LocalSite(
       id: json['id'] as int,
       siteId: json['site_id'] as int,
       siteSetup: json['site_setup'] as bool,
@@ -36,7 +35,7 @@ _$LocalSiteImpl _$$LocalSiteImplFromJson(Map<String, dynamic> json) =>
       reportsEmailAdmins: json['reports_email_admins'] as bool,
     );
 
-Map<String, dynamic> _$$LocalSiteImplToJson(_$LocalSiteImpl instance) =>
+Map<String, dynamic> _$$_LocalSiteToJson(_$_LocalSite instance) =>
     <String, dynamic>{
       'id': instance.id,
       'site_id': instance.siteId,

@@ -6,14 +6,14 @@ part of 'password_reset_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PasswordResetResponseImpl _$$PasswordResetResponseImplFromJson(
+_$_PasswordResetResponse _$$_PasswordResetResponseFromJson(
         Map<String, dynamic> json) =>
-    _$PasswordResetResponseImpl(
+    _$_PasswordResetResponse(
       success: json['success'] as bool?,
     );
 
-Map<String, dynamic> _$$PasswordResetResponseImplToJson(
-        _$PasswordResetResponseImpl instance) =>
+Map<String, dynamic> _$$_PasswordResetResponseToJson(
+        _$_PasswordResetResponse instance) =>
     <String, dynamic>{
       'success': instance.success,
     };

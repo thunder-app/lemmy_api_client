@@ -102,11 +102,11 @@ class _$PrivateMessageViewCopyWithImpl<$Res, $Val extends PrivateMessageView>
 }
 
 /// @nodoc
-abstract class _$$PrivateMessageViewImplCopyWith<$Res>
+abstract class _$$_PrivateMessageViewCopyWith<$Res>
     implements $PrivateMessageViewCopyWith<$Res> {
-  factory _$$PrivateMessageViewImplCopyWith(_$PrivateMessageViewImpl value,
-          $Res Function(_$PrivateMessageViewImpl) then) =
-      __$$PrivateMessageViewImplCopyWithImpl<$Res>;
+  factory _$$_PrivateMessageViewCopyWith(_$_PrivateMessageView value,
+          $Res Function(_$_PrivateMessageView) then) =
+      __$$_PrivateMessageViewCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({PrivateMessage privateMessage, Person creator, Person recipient});
@@ -120,11 +120,11 @@ abstract class _$$PrivateMessageViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PrivateMessageViewImplCopyWithImpl<$Res>
-    extends _$PrivateMessageViewCopyWithImpl<$Res, _$PrivateMessageViewImpl>
-    implements _$$PrivateMessageViewImplCopyWith<$Res> {
-  __$$PrivateMessageViewImplCopyWithImpl(_$PrivateMessageViewImpl _value,
-      $Res Function(_$PrivateMessageViewImpl) _then)
+class __$$_PrivateMessageViewCopyWithImpl<$Res>
+    extends _$PrivateMessageViewCopyWithImpl<$Res, _$_PrivateMessageView>
+    implements _$$_PrivateMessageViewCopyWith<$Res> {
+  __$$_PrivateMessageViewCopyWithImpl(
+      _$_PrivateMessageView _value, $Res Function(_$_PrivateMessageView) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -134,7 +134,7 @@ class __$$PrivateMessageViewImplCopyWithImpl<$Res>
     Object? creator = null,
     Object? recipient = null,
   }) {
-    return _then(_$PrivateMessageViewImpl(
+    return _then(_$_PrivateMessageView(
       privateMessage: null == privateMessage
           ? _value.privateMessage
           : privateMessage // ignore: cast_nullable_to_non_nullable
@@ -154,15 +154,15 @@ class __$$PrivateMessageViewImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$PrivateMessageViewImpl extends _PrivateMessageView {
-  const _$PrivateMessageViewImpl(
+class _$_PrivateMessageView extends _PrivateMessageView {
+  const _$_PrivateMessageView(
       {required this.privateMessage,
       required this.creator,
       required this.recipient})
       : super._();
 
-  factory _$PrivateMessageViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PrivateMessageViewImplFromJson(json);
+  factory _$_PrivateMessageView.fromJson(Map<String, dynamic> json) =>
+      _$$_PrivateMessageViewFromJson(json);
 
   @override
   final PrivateMessage privateMessage;
@@ -180,7 +180,7 @@ class _$PrivateMessageViewImpl extends _PrivateMessageView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PrivateMessageViewImpl &&
+            other is _$_PrivateMessageView &&
             (identical(other.privateMessage, privateMessage) ||
                 other.privateMessage == privateMessage) &&
             (identical(other.creator, creator) || other.creator == creator) &&
@@ -196,13 +196,13 @@ class _$PrivateMessageViewImpl extends _PrivateMessageView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PrivateMessageViewImplCopyWith<_$PrivateMessageViewImpl> get copyWith =>
-      __$$PrivateMessageViewImplCopyWithImpl<_$PrivateMessageViewImpl>(
+  _$$_PrivateMessageViewCopyWith<_$_PrivateMessageView> get copyWith =>
+      __$$_PrivateMessageViewCopyWithImpl<_$_PrivateMessageView>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PrivateMessageViewImplToJson(
+    return _$$_PrivateMessageViewToJson(
       this,
     );
   }
@@ -212,11 +212,11 @@ abstract class _PrivateMessageView extends PrivateMessageView {
   const factory _PrivateMessageView(
       {required final PrivateMessage privateMessage,
       required final Person creator,
-      required final Person recipient}) = _$PrivateMessageViewImpl;
+      required final Person recipient}) = _$_PrivateMessageView;
   const _PrivateMessageView._() : super._();
 
   factory _PrivateMessageView.fromJson(Map<String, dynamic> json) =
-      _$PrivateMessageViewImpl.fromJson;
+      _$_PrivateMessageView.fromJson;
 
   @override
   PrivateMessage get privateMessage;
@@ -226,6 +226,6 @@ abstract class _PrivateMessageView extends PrivateMessageView {
   Person get recipient;
   @override
   @JsonKey(ignore: true)
-  _$$PrivateMessageViewImplCopyWith<_$PrivateMessageViewImpl> get copyWith =>
+  _$$_PrivateMessageViewCopyWith<_$_PrivateMessageView> get copyWith =>
       throw _privateConstructorUsedError;
 }

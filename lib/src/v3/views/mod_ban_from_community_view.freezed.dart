@@ -129,12 +129,11 @@ class _$ModBanFromCommunityViewCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$ModBanFromCommunityViewImplCopyWith<$Res>
+abstract class _$$_ModBanFromCommunityViewCopyWith<$Res>
     implements $ModBanFromCommunityViewCopyWith<$Res> {
-  factory _$$ModBanFromCommunityViewImplCopyWith(
-          _$ModBanFromCommunityViewImpl value,
-          $Res Function(_$ModBanFromCommunityViewImpl) then) =
-      __$$ModBanFromCommunityViewImplCopyWithImpl<$Res>;
+  factory _$$_ModBanFromCommunityViewCopyWith(_$_ModBanFromCommunityView value,
+          $Res Function(_$_ModBanFromCommunityView) then) =
+      __$$_ModBanFromCommunityViewCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -154,13 +153,12 @@ abstract class _$$ModBanFromCommunityViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ModBanFromCommunityViewImplCopyWithImpl<$Res>
+class __$$_ModBanFromCommunityViewCopyWithImpl<$Res>
     extends _$ModBanFromCommunityViewCopyWithImpl<$Res,
-        _$ModBanFromCommunityViewImpl>
-    implements _$$ModBanFromCommunityViewImplCopyWith<$Res> {
-  __$$ModBanFromCommunityViewImplCopyWithImpl(
-      _$ModBanFromCommunityViewImpl _value,
-      $Res Function(_$ModBanFromCommunityViewImpl) _then)
+        _$_ModBanFromCommunityView>
+    implements _$$_ModBanFromCommunityViewCopyWith<$Res> {
+  __$$_ModBanFromCommunityViewCopyWithImpl(_$_ModBanFromCommunityView _value,
+      $Res Function(_$_ModBanFromCommunityView) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -171,7 +169,7 @@ class __$$ModBanFromCommunityViewImplCopyWithImpl<$Res>
     Object? community = null,
     Object? bannedPerson = null,
   }) {
-    return _then(_$ModBanFromCommunityViewImpl(
+    return _then(_$_ModBanFromCommunityView(
       modBanFromCommunity: null == modBanFromCommunity
           ? _value.modBanFromCommunity
           : modBanFromCommunity // ignore: cast_nullable_to_non_nullable
@@ -195,16 +193,16 @@ class __$$ModBanFromCommunityViewImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$ModBanFromCommunityViewImpl extends _ModBanFromCommunityView {
-  const _$ModBanFromCommunityViewImpl(
+class _$_ModBanFromCommunityView extends _ModBanFromCommunityView {
+  const _$_ModBanFromCommunityView(
       {required this.modBanFromCommunity,
       this.moderator,
       required this.community,
       required this.bannedPerson})
       : super._();
 
-  factory _$ModBanFromCommunityViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ModBanFromCommunityViewImplFromJson(json);
+  factory _$_ModBanFromCommunityView.fromJson(Map<String, dynamic> json) =>
+      _$$_ModBanFromCommunityViewFromJson(json);
 
   @override
   final ModBanFromCommunity modBanFromCommunity;
@@ -224,7 +222,7 @@ class _$ModBanFromCommunityViewImpl extends _ModBanFromCommunityView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ModBanFromCommunityViewImpl &&
+            other is _$_ModBanFromCommunityView &&
             (identical(other.modBanFromCommunity, modBanFromCommunity) ||
                 other.modBanFromCommunity == modBanFromCommunity) &&
             (identical(other.moderator, moderator) ||
@@ -243,13 +241,14 @@ class _$ModBanFromCommunityViewImpl extends _ModBanFromCommunityView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ModBanFromCommunityViewImplCopyWith<_$ModBanFromCommunityViewImpl>
-      get copyWith => __$$ModBanFromCommunityViewImplCopyWithImpl<
-          _$ModBanFromCommunityViewImpl>(this, _$identity);
+  _$$_ModBanFromCommunityViewCopyWith<_$_ModBanFromCommunityView>
+      get copyWith =>
+          __$$_ModBanFromCommunityViewCopyWithImpl<_$_ModBanFromCommunityView>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ModBanFromCommunityViewImplToJson(
+    return _$$_ModBanFromCommunityViewToJson(
       this,
     );
   }
@@ -260,11 +259,11 @@ abstract class _ModBanFromCommunityView extends ModBanFromCommunityView {
       {required final ModBanFromCommunity modBanFromCommunity,
       final Person? moderator,
       required final Community community,
-      required final Person bannedPerson}) = _$ModBanFromCommunityViewImpl;
+      required final Person bannedPerson}) = _$_ModBanFromCommunityView;
   const _ModBanFromCommunityView._() : super._();
 
   factory _ModBanFromCommunityView.fromJson(Map<String, dynamic> json) =
-      _$ModBanFromCommunityViewImpl.fromJson;
+      _$_ModBanFromCommunityView.fromJson;
 
   @override
   ModBanFromCommunity get modBanFromCommunity;
@@ -276,6 +275,6 @@ abstract class _ModBanFromCommunityView extends ModBanFromCommunityView {
   Person get bannedPerson;
   @override
   @JsonKey(ignore: true)
-  _$$ModBanFromCommunityViewImplCopyWith<_$ModBanFromCommunityViewImpl>
+  _$$_ModBanFromCommunityViewCopyWith<_$_ModBanFromCommunityView>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -158,11 +158,11 @@ class _$ModRemoveCommentViewCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$ModRemoveCommentViewImplCopyWith<$Res>
+abstract class _$$_ModRemoveCommentViewCopyWith<$Res>
     implements $ModRemoveCommentViewCopyWith<$Res> {
-  factory _$$ModRemoveCommentViewImplCopyWith(_$ModRemoveCommentViewImpl value,
-          $Res Function(_$ModRemoveCommentViewImpl) then) =
-      __$$ModRemoveCommentViewImplCopyWithImpl<$Res>;
+  factory _$$_ModRemoveCommentViewCopyWith(_$_ModRemoveCommentView value,
+          $Res Function(_$_ModRemoveCommentView) then) =
+      __$$_ModRemoveCommentViewCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -188,11 +188,11 @@ abstract class _$$ModRemoveCommentViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ModRemoveCommentViewImplCopyWithImpl<$Res>
-    extends _$ModRemoveCommentViewCopyWithImpl<$Res, _$ModRemoveCommentViewImpl>
-    implements _$$ModRemoveCommentViewImplCopyWith<$Res> {
-  __$$ModRemoveCommentViewImplCopyWithImpl(_$ModRemoveCommentViewImpl _value,
-      $Res Function(_$ModRemoveCommentViewImpl) _then)
+class __$$_ModRemoveCommentViewCopyWithImpl<$Res>
+    extends _$ModRemoveCommentViewCopyWithImpl<$Res, _$_ModRemoveCommentView>
+    implements _$$_ModRemoveCommentViewCopyWith<$Res> {
+  __$$_ModRemoveCommentViewCopyWithImpl(_$_ModRemoveCommentView _value,
+      $Res Function(_$_ModRemoveCommentView) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -205,7 +205,7 @@ class __$$ModRemoveCommentViewImplCopyWithImpl<$Res>
     Object? post = null,
     Object? community = null,
   }) {
-    return _then(_$ModRemoveCommentViewImpl(
+    return _then(_$_ModRemoveCommentView(
       modRemoveComment: null == modRemoveComment
           ? _value.modRemoveComment
           : modRemoveComment // ignore: cast_nullable_to_non_nullable
@@ -237,8 +237,8 @@ class __$$ModRemoveCommentViewImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$ModRemoveCommentViewImpl extends _ModRemoveCommentView {
-  const _$ModRemoveCommentViewImpl(
+class _$_ModRemoveCommentView extends _ModRemoveCommentView {
+  const _$_ModRemoveCommentView(
       {required this.modRemoveComment,
       this.moderator,
       required this.comment,
@@ -247,8 +247,8 @@ class _$ModRemoveCommentViewImpl extends _ModRemoveCommentView {
       required this.community})
       : super._();
 
-  factory _$ModRemoveCommentViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ModRemoveCommentViewImplFromJson(json);
+  factory _$_ModRemoveCommentView.fromJson(Map<String, dynamic> json) =>
+      _$$_ModRemoveCommentViewFromJson(json);
 
   @override
   final ModRemoveComment modRemoveComment;
@@ -272,7 +272,7 @@ class _$ModRemoveCommentViewImpl extends _ModRemoveCommentView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ModRemoveCommentViewImpl &&
+            other is _$_ModRemoveCommentView &&
             (identical(other.modRemoveComment, modRemoveComment) ||
                 other.modRemoveComment == modRemoveComment) &&
             (identical(other.moderator, moderator) ||
@@ -293,14 +293,13 @@ class _$ModRemoveCommentViewImpl extends _ModRemoveCommentView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ModRemoveCommentViewImplCopyWith<_$ModRemoveCommentViewImpl>
-      get copyWith =>
-          __$$ModRemoveCommentViewImplCopyWithImpl<_$ModRemoveCommentViewImpl>(
-              this, _$identity);
+  _$$_ModRemoveCommentViewCopyWith<_$_ModRemoveCommentView> get copyWith =>
+      __$$_ModRemoveCommentViewCopyWithImpl<_$_ModRemoveCommentView>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ModRemoveCommentViewImplToJson(
+    return _$$_ModRemoveCommentViewToJson(
       this,
     );
   }
@@ -313,11 +312,11 @@ abstract class _ModRemoveCommentView extends ModRemoveCommentView {
       required final Comment comment,
       required final Person commenter,
       required final Post post,
-      required final Community community}) = _$ModRemoveCommentViewImpl;
+      required final Community community}) = _$_ModRemoveCommentView;
   const _ModRemoveCommentView._() : super._();
 
   factory _ModRemoveCommentView.fromJson(Map<String, dynamic> json) =
-      _$ModRemoveCommentViewImpl.fromJson;
+      _$_ModRemoveCommentView.fromJson;
 
   @override
   ModRemoveComment get modRemoveComment;
@@ -333,6 +332,6 @@ abstract class _ModRemoveCommentView extends ModRemoveCommentView {
   Community get community;
   @override
   @JsonKey(ignore: true)
-  _$$ModRemoveCommentViewImplCopyWith<_$ModRemoveCommentViewImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$_ModRemoveCommentViewCopyWith<_$_ModRemoveCommentView> get copyWith =>
+      throw _privateConstructorUsedError;
 }

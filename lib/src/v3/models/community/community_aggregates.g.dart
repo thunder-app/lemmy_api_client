@@ -6,9 +6,9 @@ part of 'community_aggregates.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$CommunityAggregatesImpl _$$CommunityAggregatesImplFromJson(
+_$_CommunityAggregates _$$_CommunityAggregatesFromJson(
         Map<String, dynamic> json) =>
-    _$CommunityAggregatesImpl(
+    _$_CommunityAggregates(
       id: json['id'] as int,
       communityId: json['community_id'] as int,
       subscribers: json['subscribers'] as int,
@@ -22,8 +22,8 @@ _$CommunityAggregatesImpl _$$CommunityAggregatesImplFromJson(
       hotRank: json['hot_rank'] as int?,
     );
 
-Map<String, dynamic> _$$CommunityAggregatesImplToJson(
-        _$CommunityAggregatesImpl instance) =>
+Map<String, dynamic> _$$_CommunityAggregatesToJson(
+        _$_CommunityAggregates instance) =>
     <String, dynamic>{
       'id': instance.id,
       'community_id': instance.communityId,

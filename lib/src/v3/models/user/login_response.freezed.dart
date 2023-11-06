@@ -74,22 +74,22 @@ class _$LoginResponseCopyWithImpl<$Res, $Val extends LoginResponse>
 }
 
 /// @nodoc
-abstract class _$$LoginResponseImplCopyWith<$Res>
+abstract class _$$_LoginResponseCopyWith<$Res>
     implements $LoginResponseCopyWith<$Res> {
-  factory _$$LoginResponseImplCopyWith(
-          _$LoginResponseImpl value, $Res Function(_$LoginResponseImpl) then) =
-      __$$LoginResponseImplCopyWithImpl<$Res>;
+  factory _$$_LoginResponseCopyWith(
+          _$_LoginResponse value, $Res Function(_$_LoginResponse) then) =
+      __$$_LoginResponseCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? jwt, bool registrationCreated, bool verifyEmailSent});
 }
 
 /// @nodoc
-class __$$LoginResponseImplCopyWithImpl<$Res>
-    extends _$LoginResponseCopyWithImpl<$Res, _$LoginResponseImpl>
-    implements _$$LoginResponseImplCopyWith<$Res> {
-  __$$LoginResponseImplCopyWithImpl(
-      _$LoginResponseImpl _value, $Res Function(_$LoginResponseImpl) _then)
+class __$$_LoginResponseCopyWithImpl<$Res>
+    extends _$LoginResponseCopyWithImpl<$Res, _$_LoginResponse>
+    implements _$$_LoginResponseCopyWith<$Res> {
+  __$$_LoginResponseCopyWithImpl(
+      _$_LoginResponse _value, $Res Function(_$_LoginResponse) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -99,7 +99,7 @@ class __$$LoginResponseImplCopyWithImpl<$Res>
     Object? registrationCreated = null,
     Object? verifyEmailSent = null,
   }) {
-    return _then(_$LoginResponseImpl(
+    return _then(_$_LoginResponse(
       jwt: freezed == jwt
           ? _value.jwt
           : jwt // ignore: cast_nullable_to_non_nullable
@@ -119,15 +119,15 @@ class __$$LoginResponseImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$LoginResponseImpl extends _LoginResponse {
-  const _$LoginResponseImpl(
+class _$_LoginResponse extends _LoginResponse {
+  const _$_LoginResponse(
       {this.jwt,
       required this.registrationCreated,
       required this.verifyEmailSent})
       : super._();
 
-  factory _$LoginResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$LoginResponseImplFromJson(json);
+  factory _$_LoginResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_LoginResponseFromJson(json);
 
   @override
   final String? jwt;
@@ -145,7 +145,7 @@ class _$LoginResponseImpl extends _LoginResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LoginResponseImpl &&
+            other is _$_LoginResponse &&
             (identical(other.jwt, jwt) || other.jwt == jwt) &&
             (identical(other.registrationCreated, registrationCreated) ||
                 other.registrationCreated == registrationCreated) &&
@@ -161,12 +161,12 @@ class _$LoginResponseImpl extends _LoginResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$LoginResponseImplCopyWith<_$LoginResponseImpl> get copyWith =>
-      __$$LoginResponseImplCopyWithImpl<_$LoginResponseImpl>(this, _$identity);
+  _$$_LoginResponseCopyWith<_$_LoginResponse> get copyWith =>
+      __$$_LoginResponseCopyWithImpl<_$_LoginResponse>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$LoginResponseImplToJson(
+    return _$$_LoginResponseToJson(
       this,
     );
   }
@@ -176,11 +176,11 @@ abstract class _LoginResponse extends LoginResponse {
   const factory _LoginResponse(
       {final String? jwt,
       required final bool registrationCreated,
-      required final bool verifyEmailSent}) = _$LoginResponseImpl;
+      required final bool verifyEmailSent}) = _$_LoginResponse;
   const _LoginResponse._() : super._();
 
   factory _LoginResponse.fromJson(Map<String, dynamic> json) =
-      _$LoginResponseImpl.fromJson;
+      _$_LoginResponse.fromJson;
 
   @override
   String? get jwt;
@@ -190,6 +190,6 @@ abstract class _LoginResponse extends LoginResponse {
   bool get verifyEmailSent;
   @override
   @JsonKey(ignore: true)
-  _$$LoginResponseImplCopyWith<_$LoginResponseImpl> get copyWith =>
+  _$$_LoginResponseCopyWith<_$_LoginResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }

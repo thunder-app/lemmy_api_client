@@ -133,11 +133,11 @@ class _$PostReportCopyWithImpl<$Res, $Val extends PostReport>
 }
 
 /// @nodoc
-abstract class _$$PostReportImplCopyWith<$Res>
+abstract class _$$_PostReportCopyWith<$Res>
     implements $PostReportCopyWith<$Res> {
-  factory _$$PostReportImplCopyWith(
-          _$PostReportImpl value, $Res Function(_$PostReportImpl) then) =
-      __$$PostReportImplCopyWithImpl<$Res>;
+  factory _$$_PostReportCopyWith(
+          _$_PostReport value, $Res Function(_$_PostReport) then) =
+      __$$_PostReportCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -155,11 +155,11 @@ abstract class _$$PostReportImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PostReportImplCopyWithImpl<$Res>
-    extends _$PostReportCopyWithImpl<$Res, _$PostReportImpl>
-    implements _$$PostReportImplCopyWith<$Res> {
-  __$$PostReportImplCopyWithImpl(
-      _$PostReportImpl _value, $Res Function(_$PostReportImpl) _then)
+class __$$_PostReportCopyWithImpl<$Res>
+    extends _$PostReportCopyWithImpl<$Res, _$_PostReport>
+    implements _$$_PostReportCopyWith<$Res> {
+  __$$_PostReportCopyWithImpl(
+      _$_PostReport _value, $Res Function(_$_PostReport) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -177,7 +177,7 @@ class __$$PostReportImplCopyWithImpl<$Res>
     Object? published = null,
     Object? updated = freezed,
   }) {
-    return _then(_$PostReportImpl(
+    return _then(_$_PostReport(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -229,8 +229,8 @@ class __$$PostReportImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$PostReportImpl extends _PostReport {
-  const _$PostReportImpl(
+class _$_PostReport extends _PostReport {
+  const _$_PostReport(
       {required this.id,
       required this.creatorId,
       required this.postId,
@@ -244,8 +244,8 @@ class _$PostReportImpl extends _PostReport {
       this.updated})
       : super._();
 
-  factory _$PostReportImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PostReportImplFromJson(json);
+  factory _$_PostReport.fromJson(Map<String, dynamic> json) =>
+      _$$_PostReportFromJson(json);
 
   @override
   final int id;
@@ -279,7 +279,7 @@ class _$PostReportImpl extends _PostReport {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PostReportImpl &&
+            other is _$_PostReport &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.creatorId, creatorId) ||
                 other.creatorId == creatorId) &&
@@ -319,12 +319,12 @@ class _$PostReportImpl extends _PostReport {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PostReportImplCopyWith<_$PostReportImpl> get copyWith =>
-      __$$PostReportImplCopyWithImpl<_$PostReportImpl>(this, _$identity);
+  _$$_PostReportCopyWith<_$_PostReport> get copyWith =>
+      __$$_PostReportCopyWithImpl<_$_PostReport>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PostReportImplToJson(
+    return _$$_PostReportToJson(
       this,
     );
   }
@@ -342,11 +342,11 @@ abstract class _PostReport extends PostReport {
       required final bool resolved,
       final int? resolverId,
       required final DateTime published,
-      final DateTime? updated}) = _$PostReportImpl;
+      final DateTime? updated}) = _$_PostReport;
   const _PostReport._() : super._();
 
   factory _PostReport.fromJson(Map<String, dynamic> json) =
-      _$PostReportImpl.fromJson;
+      _$_PostReport.fromJson;
 
   @override
   int get id;
@@ -372,6 +372,6 @@ abstract class _PostReport extends PostReport {
   DateTime? get updated;
   @override
   @JsonKey(ignore: true)
-  _$$PostReportImplCopyWith<_$PostReportImpl> get copyWith =>
+  _$$_PostReportCopyWith<_$_PostReport> get copyWith =>
       throw _privateConstructorUsedError;
 }

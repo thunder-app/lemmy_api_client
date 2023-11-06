@@ -92,11 +92,11 @@ class _$AdminPurgePersonViewCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$AdminPurgePersonViewImplCopyWith<$Res>
+abstract class _$$_AdminPurgePersonViewCopyWith<$Res>
     implements $AdminPurgePersonViewCopyWith<$Res> {
-  factory _$$AdminPurgePersonViewImplCopyWith(_$AdminPurgePersonViewImpl value,
-          $Res Function(_$AdminPurgePersonViewImpl) then) =
-      __$$AdminPurgePersonViewImplCopyWithImpl<$Res>;
+  factory _$$_AdminPurgePersonViewCopyWith(_$_AdminPurgePersonView value,
+          $Res Function(_$_AdminPurgePersonView) then) =
+      __$$_AdminPurgePersonViewCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({AdminPurgePerson adminPurgePerson, Person? admin});
@@ -108,11 +108,11 @@ abstract class _$$AdminPurgePersonViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$AdminPurgePersonViewImplCopyWithImpl<$Res>
-    extends _$AdminPurgePersonViewCopyWithImpl<$Res, _$AdminPurgePersonViewImpl>
-    implements _$$AdminPurgePersonViewImplCopyWith<$Res> {
-  __$$AdminPurgePersonViewImplCopyWithImpl(_$AdminPurgePersonViewImpl _value,
-      $Res Function(_$AdminPurgePersonViewImpl) _then)
+class __$$_AdminPurgePersonViewCopyWithImpl<$Res>
+    extends _$AdminPurgePersonViewCopyWithImpl<$Res, _$_AdminPurgePersonView>
+    implements _$$_AdminPurgePersonViewCopyWith<$Res> {
+  __$$_AdminPurgePersonViewCopyWithImpl(_$_AdminPurgePersonView _value,
+      $Res Function(_$_AdminPurgePersonView) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -121,7 +121,7 @@ class __$$AdminPurgePersonViewImplCopyWithImpl<$Res>
     Object? adminPurgePerson = null,
     Object? admin = freezed,
   }) {
-    return _then(_$AdminPurgePersonViewImpl(
+    return _then(_$_AdminPurgePersonView(
       adminPurgePerson: null == adminPurgePerson
           ? _value.adminPurgePerson
           : adminPurgePerson // ignore: cast_nullable_to_non_nullable
@@ -137,13 +137,13 @@ class __$$AdminPurgePersonViewImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$AdminPurgePersonViewImpl extends _AdminPurgePersonView {
-  const _$AdminPurgePersonViewImpl(
+class _$_AdminPurgePersonView extends _AdminPurgePersonView {
+  const _$_AdminPurgePersonView(
       {required this.adminPurgePerson, required this.admin})
       : super._();
 
-  factory _$AdminPurgePersonViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AdminPurgePersonViewImplFromJson(json);
+  factory _$_AdminPurgePersonView.fromJson(Map<String, dynamic> json) =>
+      _$$_AdminPurgePersonViewFromJson(json);
 
   @override
   final AdminPurgePerson adminPurgePerson;
@@ -159,7 +159,7 @@ class _$AdminPurgePersonViewImpl extends _AdminPurgePersonView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AdminPurgePersonViewImpl &&
+            other is _$_AdminPurgePersonView &&
             (identical(other.adminPurgePerson, adminPurgePerson) ||
                 other.adminPurgePerson == adminPurgePerson) &&
             (identical(other.admin, admin) || other.admin == admin));
@@ -172,14 +172,13 @@ class _$AdminPurgePersonViewImpl extends _AdminPurgePersonView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$AdminPurgePersonViewImplCopyWith<_$AdminPurgePersonViewImpl>
-      get copyWith =>
-          __$$AdminPurgePersonViewImplCopyWithImpl<_$AdminPurgePersonViewImpl>(
-              this, _$identity);
+  _$$_AdminPurgePersonViewCopyWith<_$_AdminPurgePersonView> get copyWith =>
+      __$$_AdminPurgePersonViewCopyWithImpl<_$_AdminPurgePersonView>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AdminPurgePersonViewImplToJson(
+    return _$$_AdminPurgePersonViewToJson(
       this,
     );
   }
@@ -188,11 +187,11 @@ class _$AdminPurgePersonViewImpl extends _AdminPurgePersonView {
 abstract class _AdminPurgePersonView extends AdminPurgePersonView {
   const factory _AdminPurgePersonView(
       {required final AdminPurgePerson adminPurgePerson,
-      required final Person? admin}) = _$AdminPurgePersonViewImpl;
+      required final Person? admin}) = _$_AdminPurgePersonView;
   const _AdminPurgePersonView._() : super._();
 
   factory _AdminPurgePersonView.fromJson(Map<String, dynamic> json) =
-      _$AdminPurgePersonViewImpl.fromJson;
+      _$_AdminPurgePersonView.fromJson;
 
   @override
   AdminPurgePerson get adminPurgePerson;
@@ -200,6 +199,6 @@ abstract class _AdminPurgePersonView extends AdminPurgePersonView {
   Person? get admin;
   @override
   @JsonKey(ignore: true)
-  _$$AdminPurgePersonViewImplCopyWith<_$AdminPurgePersonViewImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$_AdminPurgePersonViewCopyWith<_$_AdminPurgePersonView> get copyWith =>
+      throw _privateConstructorUsedError;
 }

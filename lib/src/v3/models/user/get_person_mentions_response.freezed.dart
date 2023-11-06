@@ -64,25 +64,25 @@ class _$GetPersonMentionsResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$GetPersonMentionsResponseImplCopyWith<$Res>
+abstract class _$$_GetPersonMentionsResponseCopyWith<$Res>
     implements $GetPersonMentionsResponseCopyWith<$Res> {
-  factory _$$GetPersonMentionsResponseImplCopyWith(
-          _$GetPersonMentionsResponseImpl value,
-          $Res Function(_$GetPersonMentionsResponseImpl) then) =
-      __$$GetPersonMentionsResponseImplCopyWithImpl<$Res>;
+  factory _$$_GetPersonMentionsResponseCopyWith(
+          _$_GetPersonMentionsResponse value,
+          $Res Function(_$_GetPersonMentionsResponse) then) =
+      __$$_GetPersonMentionsResponseCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<PersonMentionView> mentions});
 }
 
 /// @nodoc
-class __$$GetPersonMentionsResponseImplCopyWithImpl<$Res>
+class __$$_GetPersonMentionsResponseCopyWithImpl<$Res>
     extends _$GetPersonMentionsResponseCopyWithImpl<$Res,
-        _$GetPersonMentionsResponseImpl>
-    implements _$$GetPersonMentionsResponseImplCopyWith<$Res> {
-  __$$GetPersonMentionsResponseImplCopyWithImpl(
-      _$GetPersonMentionsResponseImpl _value,
-      $Res Function(_$GetPersonMentionsResponseImpl) _then)
+        _$_GetPersonMentionsResponse>
+    implements _$$_GetPersonMentionsResponseCopyWith<$Res> {
+  __$$_GetPersonMentionsResponseCopyWithImpl(
+      _$_GetPersonMentionsResponse _value,
+      $Res Function(_$_GetPersonMentionsResponse) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -90,7 +90,7 @@ class __$$GetPersonMentionsResponseImplCopyWithImpl<$Res>
   $Res call({
     Object? mentions = null,
   }) {
-    return _then(_$GetPersonMentionsResponseImpl(
+    return _then(_$_GetPersonMentionsResponse(
       mentions: null == mentions
           ? _value._mentions
           : mentions // ignore: cast_nullable_to_non_nullable
@@ -102,14 +102,14 @@ class __$$GetPersonMentionsResponseImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$GetPersonMentionsResponseImpl extends _GetPersonMentionsResponse {
-  const _$GetPersonMentionsResponseImpl(
+class _$_GetPersonMentionsResponse extends _GetPersonMentionsResponse {
+  const _$_GetPersonMentionsResponse(
       {required final List<PersonMentionView> mentions})
       : _mentions = mentions,
         super._();
 
-  factory _$GetPersonMentionsResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GetPersonMentionsResponseImplFromJson(json);
+  factory _$_GetPersonMentionsResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_GetPersonMentionsResponseFromJson(json);
 
   final List<PersonMentionView> _mentions;
   @override
@@ -128,7 +128,7 @@ class _$GetPersonMentionsResponseImpl extends _GetPersonMentionsResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GetPersonMentionsResponseImpl &&
+            other is _$_GetPersonMentionsResponse &&
             const DeepCollectionEquality().equals(other._mentions, _mentions));
   }
 
@@ -140,13 +140,13 @@ class _$GetPersonMentionsResponseImpl extends _GetPersonMentionsResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetPersonMentionsResponseImplCopyWith<_$GetPersonMentionsResponseImpl>
-      get copyWith => __$$GetPersonMentionsResponseImplCopyWithImpl<
-          _$GetPersonMentionsResponseImpl>(this, _$identity);
+  _$$_GetPersonMentionsResponseCopyWith<_$_GetPersonMentionsResponse>
+      get copyWith => __$$_GetPersonMentionsResponseCopyWithImpl<
+          _$_GetPersonMentionsResponse>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetPersonMentionsResponseImplToJson(
+    return _$$_GetPersonMentionsResponseToJson(
       this,
     );
   }
@@ -155,16 +155,16 @@ class _$GetPersonMentionsResponseImpl extends _GetPersonMentionsResponse {
 abstract class _GetPersonMentionsResponse extends GetPersonMentionsResponse {
   const factory _GetPersonMentionsResponse(
           {required final List<PersonMentionView> mentions}) =
-      _$GetPersonMentionsResponseImpl;
+      _$_GetPersonMentionsResponse;
   const _GetPersonMentionsResponse._() : super._();
 
   factory _GetPersonMentionsResponse.fromJson(Map<String, dynamic> json) =
-      _$GetPersonMentionsResponseImpl.fromJson;
+      _$_GetPersonMentionsResponse.fromJson;
 
   @override
   List<PersonMentionView> get mentions;
   @override
   @JsonKey(ignore: true)
-  _$$GetPersonMentionsResponseImplCopyWith<_$GetPersonMentionsResponseImpl>
+  _$$_GetPersonMentionsResponseCopyWith<_$_GetPersonMentionsResponse>
       get copyWith => throw _privateConstructorUsedError;
 }

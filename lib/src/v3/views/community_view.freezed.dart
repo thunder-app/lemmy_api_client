@@ -103,11 +103,11 @@ class _$CommunityViewCopyWithImpl<$Res, $Val extends CommunityView>
 }
 
 /// @nodoc
-abstract class _$$CommunityViewImplCopyWith<$Res>
+abstract class _$$_CommunityViewCopyWith<$Res>
     implements $CommunityViewCopyWith<$Res> {
-  factory _$$CommunityViewImplCopyWith(
-          _$CommunityViewImpl value, $Res Function(_$CommunityViewImpl) then) =
-      __$$CommunityViewImplCopyWithImpl<$Res>;
+  factory _$$_CommunityViewCopyWith(
+          _$_CommunityView value, $Res Function(_$_CommunityView) then) =
+      __$$_CommunityViewCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -123,11 +123,11 @@ abstract class _$$CommunityViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CommunityViewImplCopyWithImpl<$Res>
-    extends _$CommunityViewCopyWithImpl<$Res, _$CommunityViewImpl>
-    implements _$$CommunityViewImplCopyWith<$Res> {
-  __$$CommunityViewImplCopyWithImpl(
-      _$CommunityViewImpl _value, $Res Function(_$CommunityViewImpl) _then)
+class __$$_CommunityViewCopyWithImpl<$Res>
+    extends _$CommunityViewCopyWithImpl<$Res, _$_CommunityView>
+    implements _$$_CommunityViewCopyWith<$Res> {
+  __$$_CommunityViewCopyWithImpl(
+      _$_CommunityView _value, $Res Function(_$_CommunityView) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -138,7 +138,7 @@ class __$$CommunityViewImplCopyWithImpl<$Res>
     Object? blocked = null,
     Object? counts = null,
   }) {
-    return _then(_$CommunityViewImpl(
+    return _then(_$_CommunityView(
       community: null == community
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
@@ -162,16 +162,16 @@ class __$$CommunityViewImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$CommunityViewImpl extends _CommunityView {
-  const _$CommunityViewImpl(
+class _$_CommunityView extends _CommunityView {
+  const _$_CommunityView(
       {required this.community,
       required this.subscribed,
       required this.blocked,
       required this.counts})
       : super._();
 
-  factory _$CommunityViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CommunityViewImplFromJson(json);
+  factory _$_CommunityView.fromJson(Map<String, dynamic> json) =>
+      _$$_CommunityViewFromJson(json);
 
   @override
   final Community community;
@@ -191,7 +191,7 @@ class _$CommunityViewImpl extends _CommunityView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CommunityViewImpl &&
+            other is _$_CommunityView &&
             (identical(other.community, community) ||
                 other.community == community) &&
             (identical(other.subscribed, subscribed) ||
@@ -208,12 +208,12 @@ class _$CommunityViewImpl extends _CommunityView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CommunityViewImplCopyWith<_$CommunityViewImpl> get copyWith =>
-      __$$CommunityViewImplCopyWithImpl<_$CommunityViewImpl>(this, _$identity);
+  _$$_CommunityViewCopyWith<_$_CommunityView> get copyWith =>
+      __$$_CommunityViewCopyWithImpl<_$_CommunityView>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CommunityViewImplToJson(
+    return _$$_CommunityViewToJson(
       this,
     );
   }
@@ -224,11 +224,11 @@ abstract class _CommunityView extends CommunityView {
       {required final Community community,
       required final SubscribedType subscribed,
       required final bool blocked,
-      required final CommunityAggregates counts}) = _$CommunityViewImpl;
+      required final CommunityAggregates counts}) = _$_CommunityView;
   const _CommunityView._() : super._();
 
   factory _CommunityView.fromJson(Map<String, dynamic> json) =
-      _$CommunityViewImpl.fromJson;
+      _$_CommunityView.fromJson;
 
   @override
   Community get community;
@@ -240,6 +240,6 @@ abstract class _CommunityView extends CommunityView {
   CommunityAggregates get counts;
   @override
   @JsonKey(ignore: true)
-  _$$CommunityViewImplCopyWith<_$CommunityViewImpl> get copyWith =>
+  _$$_CommunityViewCopyWith<_$_CommunityView> get copyWith =>
       throw _privateConstructorUsedError;
 }

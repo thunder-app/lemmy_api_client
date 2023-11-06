@@ -183,11 +183,11 @@ class _$LocalSiteRateLimitCopyWithImpl<$Res, $Val extends LocalSiteRateLimit>
 }
 
 /// @nodoc
-abstract class _$$LocalSiteRateLimitImplCopyWith<$Res>
+abstract class _$$_LocalSiteRateLimitCopyWith<$Res>
     implements $LocalSiteRateLimitCopyWith<$Res> {
-  factory _$$LocalSiteRateLimitImplCopyWith(_$LocalSiteRateLimitImpl value,
-          $Res Function(_$LocalSiteRateLimitImpl) then) =
-      __$$LocalSiteRateLimitImplCopyWithImpl<$Res>;
+  factory _$$_LocalSiteRateLimitCopyWith(_$_LocalSiteRateLimit value,
+          $Res Function(_$_LocalSiteRateLimit) then) =
+      __$$_LocalSiteRateLimitCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -212,11 +212,11 @@ abstract class _$$LocalSiteRateLimitImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$LocalSiteRateLimitImplCopyWithImpl<$Res>
-    extends _$LocalSiteRateLimitCopyWithImpl<$Res, _$LocalSiteRateLimitImpl>
-    implements _$$LocalSiteRateLimitImplCopyWith<$Res> {
-  __$$LocalSiteRateLimitImplCopyWithImpl(_$LocalSiteRateLimitImpl _value,
-      $Res Function(_$LocalSiteRateLimitImpl) _then)
+class __$$_LocalSiteRateLimitCopyWithImpl<$Res>
+    extends _$LocalSiteRateLimitCopyWithImpl<$Res, _$_LocalSiteRateLimit>
+    implements _$$_LocalSiteRateLimitCopyWith<$Res> {
+  __$$_LocalSiteRateLimitCopyWithImpl(
+      _$_LocalSiteRateLimit _value, $Res Function(_$_LocalSiteRateLimit) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -241,7 +241,7 @@ class __$$LocalSiteRateLimitImplCopyWithImpl<$Res>
     Object? importUserSettings = freezed,
     Object? importUserSettingsPerSecond = freezed,
   }) {
-    return _then(_$LocalSiteRateLimitImpl(
+    return _then(_$_LocalSiteRateLimit(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -321,8 +321,8 @@ class __$$LocalSiteRateLimitImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$LocalSiteRateLimitImpl extends _LocalSiteRateLimit {
-  const _$LocalSiteRateLimitImpl(
+class _$_LocalSiteRateLimit extends _LocalSiteRateLimit {
+  const _$_LocalSiteRateLimit(
       {required this.id,
       required this.localSiteId,
       required this.message,
@@ -343,8 +343,8 @@ class _$LocalSiteRateLimitImpl extends _LocalSiteRateLimit {
       this.importUserSettingsPerSecond})
       : super._();
 
-  factory _$LocalSiteRateLimitImpl.fromJson(Map<String, dynamic> json) =>
-      _$$LocalSiteRateLimitImplFromJson(json);
+  factory _$_LocalSiteRateLimit.fromJson(Map<String, dynamic> json) =>
+      _$$_LocalSiteRateLimitFromJson(json);
 
   @override
   final int id;
@@ -393,7 +393,7 @@ class _$LocalSiteRateLimitImpl extends _LocalSiteRateLimit {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LocalSiteRateLimitImpl &&
+            other is _$_LocalSiteRateLimit &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.localSiteId, localSiteId) ||
                 other.localSiteId == localSiteId) &&
@@ -453,13 +453,13 @@ class _$LocalSiteRateLimitImpl extends _LocalSiteRateLimit {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$LocalSiteRateLimitImplCopyWith<_$LocalSiteRateLimitImpl> get copyWith =>
-      __$$LocalSiteRateLimitImplCopyWithImpl<_$LocalSiteRateLimitImpl>(
+  _$$_LocalSiteRateLimitCopyWith<_$_LocalSiteRateLimit> get copyWith =>
+      __$$_LocalSiteRateLimitCopyWithImpl<_$_LocalSiteRateLimit>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$LocalSiteRateLimitImplToJson(
+    return _$$_LocalSiteRateLimitToJson(
       this,
     );
   }
@@ -484,11 +484,11 @@ abstract class _LocalSiteRateLimit extends LocalSiteRateLimit {
       required final DateTime published,
       final DateTime? updated,
       final int? importUserSettings,
-      final int? importUserSettingsPerSecond}) = _$LocalSiteRateLimitImpl;
+      final int? importUserSettingsPerSecond}) = _$_LocalSiteRateLimit;
   const _LocalSiteRateLimit._() : super._();
 
   factory _LocalSiteRateLimit.fromJson(Map<String, dynamic> json) =
-      _$LocalSiteRateLimitImpl.fromJson;
+      _$_LocalSiteRateLimit.fromJson;
 
   @override
   int get id;
@@ -528,6 +528,6 @@ abstract class _LocalSiteRateLimit extends LocalSiteRateLimit {
   int? get importUserSettingsPerSecond;
   @override
   @JsonKey(ignore: true)
-  _$$LocalSiteRateLimitImplCopyWith<_$LocalSiteRateLimitImpl> get copyWith =>
+  _$$_LocalSiteRateLimitCopyWith<_$_LocalSiteRateLimit> get copyWith =>
       throw _privateConstructorUsedError;
 }

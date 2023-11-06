@@ -89,12 +89,12 @@ class _$SaveUserSettingsResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$SaveUserSettingsResponseImplCopyWith<$Res>
+abstract class _$$_SaveUserSettingsResponseCopyWith<$Res>
     implements $SaveUserSettingsResponseCopyWith<$Res> {
-  factory _$$SaveUserSettingsResponseImplCopyWith(
-          _$SaveUserSettingsResponseImpl value,
-          $Res Function(_$SaveUserSettingsResponseImpl) then) =
-      __$$SaveUserSettingsResponseImplCopyWithImpl<$Res>;
+  factory _$$_SaveUserSettingsResponseCopyWith(
+          _$_SaveUserSettingsResponse value,
+          $Res Function(_$_SaveUserSettingsResponse) then) =
+      __$$_SaveUserSettingsResponseCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -105,13 +105,12 @@ abstract class _$$SaveUserSettingsResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$SaveUserSettingsResponseImplCopyWithImpl<$Res>
+class __$$_SaveUserSettingsResponseCopyWithImpl<$Res>
     extends _$SaveUserSettingsResponseCopyWithImpl<$Res,
-        _$SaveUserSettingsResponseImpl>
-    implements _$$SaveUserSettingsResponseImplCopyWith<$Res> {
-  __$$SaveUserSettingsResponseImplCopyWithImpl(
-      _$SaveUserSettingsResponseImpl _value,
-      $Res Function(_$SaveUserSettingsResponseImpl) _then)
+        _$_SaveUserSettingsResponse>
+    implements _$$_SaveUserSettingsResponseCopyWith<$Res> {
+  __$$_SaveUserSettingsResponseCopyWithImpl(_$_SaveUserSettingsResponse _value,
+      $Res Function(_$_SaveUserSettingsResponse) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -122,7 +121,7 @@ class __$$SaveUserSettingsResponseImplCopyWithImpl<$Res>
     Object? verifyEmailSent = freezed,
     Object? success = freezed,
   }) {
-    return _then(_$SaveUserSettingsResponseImpl(
+    return _then(_$_SaveUserSettingsResponse(
       jwt: freezed == jwt
           ? _value.jwt
           : jwt // ignore: cast_nullable_to_non_nullable
@@ -146,16 +145,16 @@ class __$$SaveUserSettingsResponseImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$SaveUserSettingsResponseImpl extends _SaveUserSettingsResponse {
-  const _$SaveUserSettingsResponseImpl(
+class _$_SaveUserSettingsResponse extends _SaveUserSettingsResponse {
+  const _$_SaveUserSettingsResponse(
       {@deprecated this.jwt,
       @deprecated this.registrationCreated,
       @deprecated this.verifyEmailSent,
       this.success})
       : super._();
 
-  factory _$SaveUserSettingsResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SaveUserSettingsResponseImplFromJson(json);
+  factory _$_SaveUserSettingsResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_SaveUserSettingsResponseFromJson(json);
 
   @override
   @deprecated
@@ -178,7 +177,7 @@ class _$SaveUserSettingsResponseImpl extends _SaveUserSettingsResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SaveUserSettingsResponseImpl &&
+            other is _$_SaveUserSettingsResponse &&
             (identical(other.jwt, jwt) || other.jwt == jwt) &&
             (identical(other.registrationCreated, registrationCreated) ||
                 other.registrationCreated == registrationCreated) &&
@@ -195,13 +194,13 @@ class _$SaveUserSettingsResponseImpl extends _SaveUserSettingsResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$SaveUserSettingsResponseImplCopyWith<_$SaveUserSettingsResponseImpl>
-      get copyWith => __$$SaveUserSettingsResponseImplCopyWithImpl<
-          _$SaveUserSettingsResponseImpl>(this, _$identity);
+  _$$_SaveUserSettingsResponseCopyWith<_$_SaveUserSettingsResponse>
+      get copyWith => __$$_SaveUserSettingsResponseCopyWithImpl<
+          _$_SaveUserSettingsResponse>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SaveUserSettingsResponseImplToJson(
+    return _$$_SaveUserSettingsResponseToJson(
       this,
     );
   }
@@ -212,11 +211,11 @@ abstract class _SaveUserSettingsResponse extends SaveUserSettingsResponse {
       {@deprecated final String? jwt,
       @deprecated final bool? registrationCreated,
       @deprecated final bool? verifyEmailSent,
-      final bool? success}) = _$SaveUserSettingsResponseImpl;
+      final bool? success}) = _$_SaveUserSettingsResponse;
   const _SaveUserSettingsResponse._() : super._();
 
   factory _SaveUserSettingsResponse.fromJson(Map<String, dynamic> json) =
-      _$SaveUserSettingsResponseImpl.fromJson;
+      _$_SaveUserSettingsResponse.fromJson;
 
   @override
   @deprecated
@@ -231,6 +230,6 @@ abstract class _SaveUserSettingsResponse extends SaveUserSettingsResponse {
   bool? get success;
   @override
   @JsonKey(ignore: true)
-  _$$SaveUserSettingsResponseImplCopyWith<_$SaveUserSettingsResponseImpl>
+  _$$_SaveUserSettingsResponseCopyWith<_$_SaveUserSettingsResponse>
       get copyWith => throw _privateConstructorUsedError;
 }

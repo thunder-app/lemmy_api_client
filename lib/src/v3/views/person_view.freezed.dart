@@ -87,11 +87,11 @@ class _$PersonViewCopyWithImpl<$Res, $Val extends PersonView>
 }
 
 /// @nodoc
-abstract class _$$PersonViewImplCopyWith<$Res>
+abstract class _$$_PersonViewCopyWith<$Res>
     implements $PersonViewCopyWith<$Res> {
-  factory _$$PersonViewImplCopyWith(
-          _$PersonViewImpl value, $Res Function(_$PersonViewImpl) then) =
-      __$$PersonViewImplCopyWithImpl<$Res>;
+  factory _$$_PersonViewCopyWith(
+          _$_PersonView value, $Res Function(_$_PersonView) then) =
+      __$$_PersonViewCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Person person, PersonAggregates counts});
@@ -103,11 +103,11 @@ abstract class _$$PersonViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PersonViewImplCopyWithImpl<$Res>
-    extends _$PersonViewCopyWithImpl<$Res, _$PersonViewImpl>
-    implements _$$PersonViewImplCopyWith<$Res> {
-  __$$PersonViewImplCopyWithImpl(
-      _$PersonViewImpl _value, $Res Function(_$PersonViewImpl) _then)
+class __$$_PersonViewCopyWithImpl<$Res>
+    extends _$PersonViewCopyWithImpl<$Res, _$_PersonView>
+    implements _$$_PersonViewCopyWith<$Res> {
+  __$$_PersonViewCopyWithImpl(
+      _$_PersonView _value, $Res Function(_$_PersonView) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -116,7 +116,7 @@ class __$$PersonViewImplCopyWithImpl<$Res>
     Object? person = null,
     Object? counts = null,
   }) {
-    return _then(_$PersonViewImpl(
+    return _then(_$_PersonView(
       person: null == person
           ? _value.person
           : person // ignore: cast_nullable_to_non_nullable
@@ -132,12 +132,11 @@ class __$$PersonViewImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$PersonViewImpl extends _PersonView {
-  const _$PersonViewImpl({required this.person, required this.counts})
-      : super._();
+class _$_PersonView extends _PersonView {
+  const _$_PersonView({required this.person, required this.counts}) : super._();
 
-  factory _$PersonViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PersonViewImplFromJson(json);
+  factory _$_PersonView.fromJson(Map<String, dynamic> json) =>
+      _$$_PersonViewFromJson(json);
 
   @override
   final Person person;
@@ -153,7 +152,7 @@ class _$PersonViewImpl extends _PersonView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PersonViewImpl &&
+            other is _$_PersonView &&
             (identical(other.person, person) || other.person == person) &&
             (identical(other.counts, counts) || other.counts == counts));
   }
@@ -165,12 +164,12 @@ class _$PersonViewImpl extends _PersonView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PersonViewImplCopyWith<_$PersonViewImpl> get copyWith =>
-      __$$PersonViewImplCopyWithImpl<_$PersonViewImpl>(this, _$identity);
+  _$$_PersonViewCopyWith<_$_PersonView> get copyWith =>
+      __$$_PersonViewCopyWithImpl<_$_PersonView>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PersonViewImplToJson(
+    return _$$_PersonViewToJson(
       this,
     );
   }
@@ -179,11 +178,11 @@ class _$PersonViewImpl extends _PersonView {
 abstract class _PersonView extends PersonView {
   const factory _PersonView(
       {required final Person person,
-      required final PersonAggregates counts}) = _$PersonViewImpl;
+      required final PersonAggregates counts}) = _$_PersonView;
   const _PersonView._() : super._();
 
   factory _PersonView.fromJson(Map<String, dynamic> json) =
-      _$PersonViewImpl.fromJson;
+      _$_PersonView.fromJson;
 
   @override
   Person get person;
@@ -191,6 +190,6 @@ abstract class _PersonView extends PersonView {
   PersonAggregates get counts;
   @override
   @JsonKey(ignore: true)
-  _$$PersonViewImplCopyWith<_$PersonViewImpl> get copyWith =>
+  _$$_PersonViewCopyWith<_$_PersonView> get copyWith =>
       throw _privateConstructorUsedError;
 }

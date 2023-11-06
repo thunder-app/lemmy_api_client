@@ -72,11 +72,11 @@ class _$PostResponseCopyWithImpl<$Res, $Val extends PostResponse>
 }
 
 /// @nodoc
-abstract class _$$PostResponseImplCopyWith<$Res>
+abstract class _$$_PostResponseCopyWith<$Res>
     implements $PostResponseCopyWith<$Res> {
-  factory _$$PostResponseImplCopyWith(
-          _$PostResponseImpl value, $Res Function(_$PostResponseImpl) then) =
-      __$$PostResponseImplCopyWithImpl<$Res>;
+  factory _$$_PostResponseCopyWith(
+          _$_PostResponse value, $Res Function(_$_PostResponse) then) =
+      __$$_PostResponseCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({PostView postView});
@@ -86,11 +86,11 @@ abstract class _$$PostResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PostResponseImplCopyWithImpl<$Res>
-    extends _$PostResponseCopyWithImpl<$Res, _$PostResponseImpl>
-    implements _$$PostResponseImplCopyWith<$Res> {
-  __$$PostResponseImplCopyWithImpl(
-      _$PostResponseImpl _value, $Res Function(_$PostResponseImpl) _then)
+class __$$_PostResponseCopyWithImpl<$Res>
+    extends _$PostResponseCopyWithImpl<$Res, _$_PostResponse>
+    implements _$$_PostResponseCopyWith<$Res> {
+  __$$_PostResponseCopyWithImpl(
+      _$_PostResponse _value, $Res Function(_$_PostResponse) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -98,7 +98,7 @@ class __$$PostResponseImplCopyWithImpl<$Res>
   $Res call({
     Object? postView = null,
   }) {
-    return _then(_$PostResponseImpl(
+    return _then(_$_PostResponse(
       postView: null == postView
           ? _value.postView
           : postView // ignore: cast_nullable_to_non_nullable
@@ -110,11 +110,11 @@ class __$$PostResponseImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$PostResponseImpl extends _PostResponse {
-  const _$PostResponseImpl({required this.postView}) : super._();
+class _$_PostResponse extends _PostResponse {
+  const _$_PostResponse({required this.postView}) : super._();
 
-  factory _$PostResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PostResponseImplFromJson(json);
+  factory _$_PostResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_PostResponseFromJson(json);
 
   @override
   final PostView postView;
@@ -128,7 +128,7 @@ class _$PostResponseImpl extends _PostResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PostResponseImpl &&
+            other is _$_PostResponse &&
             (identical(other.postView, postView) ||
                 other.postView == postView));
   }
@@ -140,12 +140,12 @@ class _$PostResponseImpl extends _PostResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PostResponseImplCopyWith<_$PostResponseImpl> get copyWith =>
-      __$$PostResponseImplCopyWithImpl<_$PostResponseImpl>(this, _$identity);
+  _$$_PostResponseCopyWith<_$_PostResponse> get copyWith =>
+      __$$_PostResponseCopyWithImpl<_$_PostResponse>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PostResponseImplToJson(
+    return _$$_PostResponseToJson(
       this,
     );
   }
@@ -153,16 +153,16 @@ class _$PostResponseImpl extends _PostResponse {
 
 abstract class _PostResponse extends PostResponse {
   const factory _PostResponse({required final PostView postView}) =
-      _$PostResponseImpl;
+      _$_PostResponse;
   const _PostResponse._() : super._();
 
   factory _PostResponse.fromJson(Map<String, dynamic> json) =
-      _$PostResponseImpl.fromJson;
+      _$_PostResponse.fromJson;
 
   @override
   PostView get postView;
   @override
   @JsonKey(ignore: true)
-  _$$PostResponseImplCopyWith<_$PostResponseImpl> get copyWith =>
+  _$$_PostResponseCopyWith<_$_PostResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }

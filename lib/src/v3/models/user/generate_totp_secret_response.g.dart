@@ -6,14 +6,14 @@ part of 'generate_totp_secret_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GenerateTotpSecretResponseImpl _$$GenerateTotpSecretResponseImplFromJson(
+_$_GenerateTotpSecretResponse _$$_GenerateTotpSecretResponseFromJson(
         Map<String, dynamic> json) =>
-    _$GenerateTotpSecretResponseImpl(
+    _$_GenerateTotpSecretResponse(
       totpSecretUrl: json['totp_secret_url'] as String,
     );
 
-Map<String, dynamic> _$$GenerateTotpSecretResponseImplToJson(
-        _$GenerateTotpSecretResponseImpl instance) =>
+Map<String, dynamic> _$$_GenerateTotpSecretResponseToJson(
+        _$_GenerateTotpSecretResponse instance) =>
     <String, dynamic>{
       'totp_secret_url': instance.totpSecretUrl,
     };

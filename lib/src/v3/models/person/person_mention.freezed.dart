@@ -87,11 +87,11 @@ class _$PersonMentionCopyWithImpl<$Res, $Val extends PersonMention>
 }
 
 /// @nodoc
-abstract class _$$PersonMentionImplCopyWith<$Res>
+abstract class _$$_PersonMentionCopyWith<$Res>
     implements $PersonMentionCopyWith<$Res> {
-  factory _$$PersonMentionImplCopyWith(
-          _$PersonMentionImpl value, $Res Function(_$PersonMentionImpl) then) =
-      __$$PersonMentionImplCopyWithImpl<$Res>;
+  factory _$$_PersonMentionCopyWith(
+          _$_PersonMention value, $Res Function(_$_PersonMention) then) =
+      __$$_PersonMentionCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -99,11 +99,11 @@ abstract class _$$PersonMentionImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PersonMentionImplCopyWithImpl<$Res>
-    extends _$PersonMentionCopyWithImpl<$Res, _$PersonMentionImpl>
-    implements _$$PersonMentionImplCopyWith<$Res> {
-  __$$PersonMentionImplCopyWithImpl(
-      _$PersonMentionImpl _value, $Res Function(_$PersonMentionImpl) _then)
+class __$$_PersonMentionCopyWithImpl<$Res>
+    extends _$PersonMentionCopyWithImpl<$Res, _$_PersonMention>
+    implements _$$_PersonMentionCopyWith<$Res> {
+  __$$_PersonMentionCopyWithImpl(
+      _$_PersonMention _value, $Res Function(_$_PersonMention) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -115,7 +115,7 @@ class __$$PersonMentionImplCopyWithImpl<$Res>
     Object? read = null,
     Object? published = null,
   }) {
-    return _then(_$PersonMentionImpl(
+    return _then(_$_PersonMention(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -143,8 +143,8 @@ class __$$PersonMentionImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$PersonMentionImpl extends _PersonMention {
-  const _$PersonMentionImpl(
+class _$_PersonMention extends _PersonMention {
+  const _$_PersonMention(
       {required this.id,
       required this.recipientId,
       required this.commentId,
@@ -152,8 +152,8 @@ class _$PersonMentionImpl extends _PersonMention {
       required this.published})
       : super._();
 
-  factory _$PersonMentionImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PersonMentionImplFromJson(json);
+  factory _$_PersonMention.fromJson(Map<String, dynamic> json) =>
+      _$$_PersonMentionFromJson(json);
 
   @override
   final int id;
@@ -175,7 +175,7 @@ class _$PersonMentionImpl extends _PersonMention {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PersonMentionImpl &&
+            other is _$_PersonMention &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.recipientId, recipientId) ||
                 other.recipientId == recipientId) &&
@@ -194,12 +194,12 @@ class _$PersonMentionImpl extends _PersonMention {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PersonMentionImplCopyWith<_$PersonMentionImpl> get copyWith =>
-      __$$PersonMentionImplCopyWithImpl<_$PersonMentionImpl>(this, _$identity);
+  _$$_PersonMentionCopyWith<_$_PersonMention> get copyWith =>
+      __$$_PersonMentionCopyWithImpl<_$_PersonMention>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PersonMentionImplToJson(
+    return _$$_PersonMentionToJson(
       this,
     );
   }
@@ -211,11 +211,11 @@ abstract class _PersonMention extends PersonMention {
       required final int recipientId,
       required final int commentId,
       required final bool read,
-      required final DateTime published}) = _$PersonMentionImpl;
+      required final DateTime published}) = _$_PersonMention;
   const _PersonMention._() : super._();
 
   factory _PersonMention.fromJson(Map<String, dynamic> json) =
-      _$PersonMentionImpl.fromJson;
+      _$_PersonMention.fromJson;
 
   @override
   int get id;
@@ -229,6 +229,6 @@ abstract class _PersonMention extends PersonMention {
   DateTime get published;
   @override
   @JsonKey(ignore: true)
-  _$$PersonMentionImplCopyWith<_$PersonMentionImpl> get copyWith =>
+  _$$_PersonMentionCopyWith<_$_PersonMention> get copyWith =>
       throw _privateConstructorUsedError;
 }

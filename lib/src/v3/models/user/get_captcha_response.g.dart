@@ -6,16 +6,16 @@ part of 'get_captcha_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GetCaptchaResponseImpl _$$GetCaptchaResponseImplFromJson(
+_$_GetCaptchaResponse _$$_GetCaptchaResponseFromJson(
         Map<String, dynamic> json) =>
-    _$GetCaptchaResponseImpl(
+    _$_GetCaptchaResponse(
       ok: json['ok'] == null
           ? null
           : CaptchaResponse.fromJson(json['ok'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$GetCaptchaResponseImplToJson(
-        _$GetCaptchaResponseImpl instance) =>
+Map<String, dynamic> _$$_GetCaptchaResponseToJson(
+        _$_GetCaptchaResponse instance) =>
     <String, dynamic>{
       'ok': instance.ok?.toJson(),
     };

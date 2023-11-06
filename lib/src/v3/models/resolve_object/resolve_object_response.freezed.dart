@@ -139,12 +139,11 @@ class _$ResolveObjectResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$ResolveObjectResponseImplCopyWith<$Res>
+abstract class _$$_ResolveObjectResponseCopyWith<$Res>
     implements $ResolveObjectResponseCopyWith<$Res> {
-  factory _$$ResolveObjectResponseImplCopyWith(
-          _$ResolveObjectResponseImpl value,
-          $Res Function(_$ResolveObjectResponseImpl) then) =
-      __$$ResolveObjectResponseImplCopyWithImpl<$Res>;
+  factory _$$_ResolveObjectResponseCopyWith(_$_ResolveObjectResponse value,
+          $Res Function(_$_ResolveObjectResponse) then) =
+      __$$_ResolveObjectResponseCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -164,12 +163,11 @@ abstract class _$$ResolveObjectResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ResolveObjectResponseImplCopyWithImpl<$Res>
-    extends _$ResolveObjectResponseCopyWithImpl<$Res,
-        _$ResolveObjectResponseImpl>
-    implements _$$ResolveObjectResponseImplCopyWith<$Res> {
-  __$$ResolveObjectResponseImplCopyWithImpl(_$ResolveObjectResponseImpl _value,
-      $Res Function(_$ResolveObjectResponseImpl) _then)
+class __$$_ResolveObjectResponseCopyWithImpl<$Res>
+    extends _$ResolveObjectResponseCopyWithImpl<$Res, _$_ResolveObjectResponse>
+    implements _$$_ResolveObjectResponseCopyWith<$Res> {
+  __$$_ResolveObjectResponseCopyWithImpl(_$_ResolveObjectResponse _value,
+      $Res Function(_$_ResolveObjectResponse) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -180,7 +178,7 @@ class __$$ResolveObjectResponseImplCopyWithImpl<$Res>
     Object? community = freezed,
     Object? person = freezed,
   }) {
-    return _then(_$ResolveObjectResponseImpl(
+    return _then(_$_ResolveObjectResponse(
       comment: freezed == comment
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
@@ -204,13 +202,13 @@ class __$$ResolveObjectResponseImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$ResolveObjectResponseImpl extends _ResolveObjectResponse {
-  const _$ResolveObjectResponseImpl(
+class _$_ResolveObjectResponse extends _ResolveObjectResponse {
+  const _$_ResolveObjectResponse(
       {this.comment, this.post, this.community, this.person})
       : super._();
 
-  factory _$ResolveObjectResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ResolveObjectResponseImplFromJson(json);
+  factory _$_ResolveObjectResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_ResolveObjectResponseFromJson(json);
 
   @override
   final CommentView? comment;
@@ -230,7 +228,7 @@ class _$ResolveObjectResponseImpl extends _ResolveObjectResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ResolveObjectResponseImpl &&
+            other is _$_ResolveObjectResponse &&
             (identical(other.comment, comment) || other.comment == comment) &&
             (identical(other.post, post) || other.post == post) &&
             (identical(other.community, community) ||
@@ -246,13 +244,13 @@ class _$ResolveObjectResponseImpl extends _ResolveObjectResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ResolveObjectResponseImplCopyWith<_$ResolveObjectResponseImpl>
-      get copyWith => __$$ResolveObjectResponseImplCopyWithImpl<
-          _$ResolveObjectResponseImpl>(this, _$identity);
+  _$$_ResolveObjectResponseCopyWith<_$_ResolveObjectResponse> get copyWith =>
+      __$$_ResolveObjectResponseCopyWithImpl<_$_ResolveObjectResponse>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ResolveObjectResponseImplToJson(
+    return _$$_ResolveObjectResponseToJson(
       this,
     );
   }
@@ -263,11 +261,11 @@ abstract class _ResolveObjectResponse extends ResolveObjectResponse {
       {final CommentView? comment,
       final PostView? post,
       final CommunityView? community,
-      final PersonView? person}) = _$ResolveObjectResponseImpl;
+      final PersonView? person}) = _$_ResolveObjectResponse;
   const _ResolveObjectResponse._() : super._();
 
   factory _ResolveObjectResponse.fromJson(Map<String, dynamic> json) =
-      _$ResolveObjectResponseImpl.fromJson;
+      _$_ResolveObjectResponse.fromJson;
 
   @override
   CommentView? get comment;
@@ -279,6 +277,6 @@ abstract class _ResolveObjectResponse extends ResolveObjectResponse {
   PersonView? get person;
   @override
   @JsonKey(ignore: true)
-  _$$ResolveObjectResponseImplCopyWith<_$ResolveObjectResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$_ResolveObjectResponseCopyWith<_$_ResolveObjectResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }

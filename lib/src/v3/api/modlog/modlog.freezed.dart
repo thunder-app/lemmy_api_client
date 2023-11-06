@@ -105,11 +105,10 @@ class _$GetModlogCopyWithImpl<$Res, $Val extends GetModlog>
 }
 
 /// @nodoc
-abstract class _$$GetModlogImplCopyWith<$Res>
-    implements $GetModlogCopyWith<$Res> {
-  factory _$$GetModlogImplCopyWith(
-          _$GetModlogImpl value, $Res Function(_$GetModlogImpl) then) =
-      __$$GetModlogImplCopyWithImpl<$Res>;
+abstract class _$$_GetModlogCopyWith<$Res> implements $GetModlogCopyWith<$Res> {
+  factory _$$_GetModlogCopyWith(
+          _$_GetModlog value, $Res Function(_$_GetModlog) then) =
+      __$$_GetModlogCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -123,11 +122,11 @@ abstract class _$$GetModlogImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$GetModlogImplCopyWithImpl<$Res>
-    extends _$GetModlogCopyWithImpl<$Res, _$GetModlogImpl>
-    implements _$$GetModlogImplCopyWith<$Res> {
-  __$$GetModlogImplCopyWithImpl(
-      _$GetModlogImpl _value, $Res Function(_$GetModlogImpl) _then)
+class __$$_GetModlogCopyWithImpl<$Res>
+    extends _$GetModlogCopyWithImpl<$Res, _$_GetModlog>
+    implements _$$_GetModlogCopyWith<$Res> {
+  __$$_GetModlogCopyWithImpl(
+      _$_GetModlog _value, $Res Function(_$_GetModlog) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -141,7 +140,7 @@ class __$$GetModlogImplCopyWithImpl<$Res>
     Object? otherPersonId = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_$GetModlogImpl(
+    return _then(_$_GetModlog(
       modPersonId: freezed == modPersonId
           ? _value.modPersonId
           : modPersonId // ignore: cast_nullable_to_non_nullable
@@ -177,8 +176,8 @@ class __$$GetModlogImplCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$GetModlogImpl extends _GetModlog {
-  const _$GetModlogImpl(
+class _$_GetModlog extends _GetModlog {
+  const _$_GetModlog(
       {this.modPersonId,
       this.communityId,
       this.page,
@@ -188,8 +187,8 @@ class _$GetModlogImpl extends _GetModlog {
       this.auth})
       : super._();
 
-  factory _$GetModlogImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GetModlogImplFromJson(json);
+  factory _$_GetModlog.fromJson(Map<String, dynamic> json) =>
+      _$$_GetModlogFromJson(json);
 
   @override
   final int? modPersonId;
@@ -216,7 +215,7 @@ class _$GetModlogImpl extends _GetModlog {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GetModlogImpl &&
+            other is _$_GetModlog &&
             (identical(other.modPersonId, modPersonId) ||
                 other.modPersonId == modPersonId) &&
             (identical(other.communityId, communityId) ||
@@ -237,12 +236,12 @@ class _$GetModlogImpl extends _GetModlog {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetModlogImplCopyWith<_$GetModlogImpl> get copyWith =>
-      __$$GetModlogImplCopyWithImpl<_$GetModlogImpl>(this, _$identity);
+  _$$_GetModlogCopyWith<_$_GetModlog> get copyWith =>
+      __$$_GetModlogCopyWithImpl<_$_GetModlog>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetModlogImplToJson(
+    return _$$_GetModlogToJson(
       this,
     );
   }
@@ -256,11 +255,11 @@ abstract class _GetModlog extends GetModlog {
       final int? limit,
       @JsonKey(name: 'type_') final ModlogActionType? type,
       final int? otherPersonId,
-      final String? auth}) = _$GetModlogImpl;
+      final String? auth}) = _$_GetModlog;
   const _GetModlog._() : super._();
 
   factory _GetModlog.fromJson(Map<String, dynamic> json) =
-      _$GetModlogImpl.fromJson;
+      _$_GetModlog.fromJson;
 
   @override
   int? get modPersonId;
@@ -279,6 +278,6 @@ abstract class _GetModlog extends GetModlog {
   String? get auth;
   @override
   @JsonKey(ignore: true)
-  _$$GetModlogImplCopyWith<_$GetModlogImpl> get copyWith =>
+  _$$_GetModlogCopyWith<_$_GetModlog> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -6,9 +6,9 @@ part of 'admin_purge_person_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AdminPurgePersonViewImpl _$$AdminPurgePersonViewImplFromJson(
+_$_AdminPurgePersonView _$$_AdminPurgePersonViewFromJson(
         Map<String, dynamic> json) =>
-    _$AdminPurgePersonViewImpl(
+    _$_AdminPurgePersonView(
       adminPurgePerson: AdminPurgePerson.fromJson(
           json['admin_purge_person'] as Map<String, dynamic>),
       admin: json['admin'] == null
@@ -16,8 +16,8 @@ _$AdminPurgePersonViewImpl _$$AdminPurgePersonViewImplFromJson(
           : Person.fromJson(json['admin'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$AdminPurgePersonViewImplToJson(
-        _$AdminPurgePersonViewImpl instance) =>
+Map<String, dynamic> _$$_AdminPurgePersonViewToJson(
+        _$_AdminPurgePersonView instance) =>
     <String, dynamic>{
       'admin_purge_person': instance.adminPurgePerson.toJson(),
       'admin': instance.admin?.toJson(),

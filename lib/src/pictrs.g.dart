@@ -6,22 +6,20 @@ part of 'pictrs.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PictrsUploadFileImpl _$$PictrsUploadFileImplFromJson(
-        Map<String, dynamic> json) =>
-    _$PictrsUploadFileImpl(
+_$_PictrsUploadFile _$$_PictrsUploadFileFromJson(Map<String, dynamic> json) =>
+    _$_PictrsUploadFile(
       deleteToken: json['delete_token'] as String,
       file: json['file'] as String,
     );
 
-Map<String, dynamic> _$$PictrsUploadFileImplToJson(
-        _$PictrsUploadFileImpl instance) =>
+Map<String, dynamic> _$$_PictrsUploadFileToJson(_$_PictrsUploadFile instance) =>
     <String, dynamic>{
       'delete_token': instance.deleteToken,
       'file': instance.file,
     };
 
-_$PictrsUploadImpl _$$PictrsUploadImplFromJson(Map<String, dynamic> json) =>
-    _$PictrsUploadImpl(
+_$_PictrsUpload _$$_PictrsUploadFromJson(Map<String, dynamic> json) =>
+    _$_PictrsUpload(
       msg: json['msg'] as String,
       files: (json['files'] as List<dynamic>)
           .map((e) => PictrsUploadFile.fromJson(e as Map<String, dynamic>))
@@ -29,7 +27,7 @@ _$PictrsUploadImpl _$$PictrsUploadImplFromJson(Map<String, dynamic> json) =>
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$PictrsUploadImplToJson(_$PictrsUploadImpl instance) =>
+Map<String, dynamic> _$$_PictrsUploadToJson(_$_PictrsUpload instance) =>
     <String, dynamic>{
       'msg': instance.msg,
       'files': instance.files.map((e) => e.toJson()).toList(),

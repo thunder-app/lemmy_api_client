@@ -6,16 +6,16 @@ part of 'get_comments_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GetCommentsResponseImpl _$$GetCommentsResponseImplFromJson(
+_$_GetCommentsResponse _$$_GetCommentsResponseFromJson(
         Map<String, dynamic> json) =>
-    _$GetCommentsResponseImpl(
+    _$_GetCommentsResponse(
       comments: (json['comments'] as List<dynamic>)
           .map((e) => CommentView.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$GetCommentsResponseImplToJson(
-        _$GetCommentsResponseImpl instance) =>
+Map<String, dynamic> _$$_GetCommentsResponseToJson(
+        _$_GetCommentsResponse instance) =>
     <String, dynamic>{
       'comments': instance.comments.map((e) => e.toJson()).toList(),
     };

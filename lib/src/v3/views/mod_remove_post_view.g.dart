@@ -6,9 +6,8 @@ part of 'mod_remove_post_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ModRemovePostViewImpl _$$ModRemovePostViewImplFromJson(
-        Map<String, dynamic> json) =>
-    _$ModRemovePostViewImpl(
+_$_ModRemovePostView _$$_ModRemovePostViewFromJson(Map<String, dynamic> json) =>
+    _$_ModRemovePostView(
       modRemovePost: ModRemovePost.fromJson(
           json['mod_remove_post'] as Map<String, dynamic>),
       moderator: json['moderator'] == null
@@ -18,8 +17,8 @@ _$ModRemovePostViewImpl _$$ModRemovePostViewImplFromJson(
       community: Community.fromJson(json['community'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$ModRemovePostViewImplToJson(
-        _$ModRemovePostViewImpl instance) =>
+Map<String, dynamic> _$$_ModRemovePostViewToJson(
+        _$_ModRemovePostView instance) =>
     <String, dynamic>{
       'mod_remove_post': instance.modRemovePost.toJson(),
       'moderator': instance.moderator?.toJson(),

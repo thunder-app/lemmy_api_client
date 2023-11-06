@@ -106,11 +106,11 @@ class _$ModAddViewCopyWithImpl<$Res, $Val extends ModAddView>
 }
 
 /// @nodoc
-abstract class _$$ModAddViewImplCopyWith<$Res>
+abstract class _$$_ModAddViewCopyWith<$Res>
     implements $ModAddViewCopyWith<$Res> {
-  factory _$$ModAddViewImplCopyWith(
-          _$ModAddViewImpl value, $Res Function(_$ModAddViewImpl) then) =
-      __$$ModAddViewImplCopyWithImpl<$Res>;
+  factory _$$_ModAddViewCopyWith(
+          _$_ModAddView value, $Res Function(_$_ModAddView) then) =
+      __$$_ModAddViewCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({ModAdd modAdd, Person? moderator, Person moddedPerson});
@@ -124,11 +124,11 @@ abstract class _$$ModAddViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ModAddViewImplCopyWithImpl<$Res>
-    extends _$ModAddViewCopyWithImpl<$Res, _$ModAddViewImpl>
-    implements _$$ModAddViewImplCopyWith<$Res> {
-  __$$ModAddViewImplCopyWithImpl(
-      _$ModAddViewImpl _value, $Res Function(_$ModAddViewImpl) _then)
+class __$$_ModAddViewCopyWithImpl<$Res>
+    extends _$ModAddViewCopyWithImpl<$Res, _$_ModAddView>
+    implements _$$_ModAddViewCopyWith<$Res> {
+  __$$_ModAddViewCopyWithImpl(
+      _$_ModAddView _value, $Res Function(_$_ModAddView) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -138,7 +138,7 @@ class __$$ModAddViewImplCopyWithImpl<$Res>
     Object? moderator = freezed,
     Object? moddedPerson = null,
   }) {
-    return _then(_$ModAddViewImpl(
+    return _then(_$_ModAddView(
       modAdd: null == modAdd
           ? _value.modAdd
           : modAdd // ignore: cast_nullable_to_non_nullable
@@ -158,13 +158,13 @@ class __$$ModAddViewImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$ModAddViewImpl extends _ModAddView {
-  const _$ModAddViewImpl(
+class _$_ModAddView extends _ModAddView {
+  const _$_ModAddView(
       {required this.modAdd, this.moderator, required this.moddedPerson})
       : super._();
 
-  factory _$ModAddViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ModAddViewImplFromJson(json);
+  factory _$_ModAddView.fromJson(Map<String, dynamic> json) =>
+      _$$_ModAddViewFromJson(json);
 
   @override
   final ModAdd modAdd;
@@ -182,7 +182,7 @@ class _$ModAddViewImpl extends _ModAddView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ModAddViewImpl &&
+            other is _$_ModAddView &&
             (identical(other.modAdd, modAdd) || other.modAdd == modAdd) &&
             (identical(other.moderator, moderator) ||
                 other.moderator == moderator) &&
@@ -197,12 +197,12 @@ class _$ModAddViewImpl extends _ModAddView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ModAddViewImplCopyWith<_$ModAddViewImpl> get copyWith =>
-      __$$ModAddViewImplCopyWithImpl<_$ModAddViewImpl>(this, _$identity);
+  _$$_ModAddViewCopyWith<_$_ModAddView> get copyWith =>
+      __$$_ModAddViewCopyWithImpl<_$_ModAddView>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ModAddViewImplToJson(
+    return _$$_ModAddViewToJson(
       this,
     );
   }
@@ -212,11 +212,11 @@ abstract class _ModAddView extends ModAddView {
   const factory _ModAddView(
       {required final ModAdd modAdd,
       final Person? moderator,
-      required final Person moddedPerson}) = _$ModAddViewImpl;
+      required final Person moddedPerson}) = _$_ModAddView;
   const _ModAddView._() : super._();
 
   factory _ModAddView.fromJson(Map<String, dynamic> json) =
-      _$ModAddViewImpl.fromJson;
+      _$_ModAddView.fromJson;
 
   @override
   ModAdd get modAdd;
@@ -226,6 +226,6 @@ abstract class _ModAddView extends ModAddView {
   Person get moddedPerson;
   @override
   @JsonKey(ignore: true)
-  _$$ModAddViewImplCopyWith<_$ModAddViewImpl> get copyWith =>
+  _$$_ModAddViewCopyWith<_$_ModAddView> get copyWith =>
       throw _privateConstructorUsedError;
 }

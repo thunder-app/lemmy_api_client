@@ -6,9 +6,9 @@ part of 'registration_application.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$RegistrationApplicationImpl _$$RegistrationApplicationImplFromJson(
+_$_RegistrationApplication _$$_RegistrationApplicationFromJson(
         Map<String, dynamic> json) =>
-    _$RegistrationApplicationImpl(
+    _$_RegistrationApplication(
       id: json['id'] as int,
       localUserId: json['local_user_id'] as int,
       answer: json['answer'] as String,
@@ -17,8 +17,8 @@ _$RegistrationApplicationImpl _$$RegistrationApplicationImplFromJson(
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
     );
 
-Map<String, dynamic> _$$RegistrationApplicationImplToJson(
-        _$RegistrationApplicationImpl instance) =>
+Map<String, dynamic> _$$_RegistrationApplicationToJson(
+        _$_RegistrationApplication instance) =>
     <String, dynamic>{
       'id': instance.id,
       'local_user_id': instance.localUserId,

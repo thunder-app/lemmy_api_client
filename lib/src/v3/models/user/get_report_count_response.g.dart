@@ -6,17 +6,17 @@ part of 'get_report_count_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GetReportCountResponseImpl _$$GetReportCountResponseImplFromJson(
+_$_GetReportCountResponse _$$_GetReportCountResponseFromJson(
         Map<String, dynamic> json) =>
-    _$GetReportCountResponseImpl(
+    _$_GetReportCountResponse(
       communityId: json['community_id'] as int?,
       commentReports: json['comment_reports'] as int,
       postReports: json['post_reports'] as int,
       privateMessageReports: json['private_message_reports'] as int?,
     );
 
-Map<String, dynamic> _$$GetReportCountResponseImplToJson(
-        _$GetReportCountResponseImpl instance) =>
+Map<String, dynamic> _$$_GetReportCountResponseToJson(
+        _$_GetReportCountResponse instance) =>
     <String, dynamic>{
       'community_id': instance.communityId,
       'comment_reports': instance.commentReports,

@@ -6,9 +6,9 @@ part of 'resolve_object_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ResolveObjectResponseImpl _$$ResolveObjectResponseImplFromJson(
+_$_ResolveObjectResponse _$$_ResolveObjectResponseFromJson(
         Map<String, dynamic> json) =>
-    _$ResolveObjectResponseImpl(
+    _$_ResolveObjectResponse(
       comment: json['comment'] == null
           ? null
           : CommentView.fromJson(json['comment'] as Map<String, dynamic>),
@@ -23,8 +23,8 @@ _$ResolveObjectResponseImpl _$$ResolveObjectResponseImplFromJson(
           : PersonView.fromJson(json['person'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$ResolveObjectResponseImplToJson(
-        _$ResolveObjectResponseImpl instance) =>
+Map<String, dynamic> _$$_ResolveObjectResponseToJson(
+        _$_ResolveObjectResponse instance) =>
     <String, dynamic>{
       'comment': instance.comment?.toJson(),
       'post': instance.post?.toJson(),

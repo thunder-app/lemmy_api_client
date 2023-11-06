@@ -122,11 +122,10 @@ class _$SiteViewCopyWithImpl<$Res, $Val extends SiteView>
 }
 
 /// @nodoc
-abstract class _$$SiteViewImplCopyWith<$Res>
-    implements $SiteViewCopyWith<$Res> {
-  factory _$$SiteViewImplCopyWith(
-          _$SiteViewImpl value, $Res Function(_$SiteViewImpl) then) =
-      __$$SiteViewImplCopyWithImpl<$Res>;
+abstract class _$$_SiteViewCopyWith<$Res> implements $SiteViewCopyWith<$Res> {
+  factory _$$_SiteViewCopyWith(
+          _$_SiteView value, $Res Function(_$_SiteView) then) =
+      __$$_SiteViewCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -146,11 +145,11 @@ abstract class _$$SiteViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$SiteViewImplCopyWithImpl<$Res>
-    extends _$SiteViewCopyWithImpl<$Res, _$SiteViewImpl>
-    implements _$$SiteViewImplCopyWith<$Res> {
-  __$$SiteViewImplCopyWithImpl(
-      _$SiteViewImpl _value, $Res Function(_$SiteViewImpl) _then)
+class __$$_SiteViewCopyWithImpl<$Res>
+    extends _$SiteViewCopyWithImpl<$Res, _$_SiteView>
+    implements _$$_SiteViewCopyWith<$Res> {
+  __$$_SiteViewCopyWithImpl(
+      _$_SiteView _value, $Res Function(_$_SiteView) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -161,7 +160,7 @@ class __$$SiteViewImplCopyWithImpl<$Res>
     Object? localSiteRateLimit = null,
     Object? counts = null,
   }) {
-    return _then(_$SiteViewImpl(
+    return _then(_$_SiteView(
       site: null == site
           ? _value.site
           : site // ignore: cast_nullable_to_non_nullable
@@ -185,16 +184,16 @@ class __$$SiteViewImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$SiteViewImpl extends _SiteView {
-  const _$SiteViewImpl(
+class _$_SiteView extends _SiteView {
+  const _$_SiteView(
       {required this.site,
       required this.localSite,
       required this.localSiteRateLimit,
       required this.counts})
       : super._();
 
-  factory _$SiteViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SiteViewImplFromJson(json);
+  factory _$_SiteView.fromJson(Map<String, dynamic> json) =>
+      _$$_SiteViewFromJson(json);
 
   @override
   final Site site;
@@ -214,7 +213,7 @@ class _$SiteViewImpl extends _SiteView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SiteViewImpl &&
+            other is _$_SiteView &&
             (identical(other.site, site) || other.site == site) &&
             (identical(other.localSite, localSite) ||
                 other.localSite == localSite) &&
@@ -231,12 +230,12 @@ class _$SiteViewImpl extends _SiteView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$SiteViewImplCopyWith<_$SiteViewImpl> get copyWith =>
-      __$$SiteViewImplCopyWithImpl<_$SiteViewImpl>(this, _$identity);
+  _$$_SiteViewCopyWith<_$_SiteView> get copyWith =>
+      __$$_SiteViewCopyWithImpl<_$_SiteView>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SiteViewImplToJson(
+    return _$$_SiteViewToJson(
       this,
     );
   }
@@ -247,11 +246,10 @@ abstract class _SiteView extends SiteView {
       {required final Site site,
       required final LocalSite localSite,
       required final LocalSiteRateLimit localSiteRateLimit,
-      required final SiteAggregates counts}) = _$SiteViewImpl;
+      required final SiteAggregates counts}) = _$_SiteView;
   const _SiteView._() : super._();
 
-  factory _SiteView.fromJson(Map<String, dynamic> json) =
-      _$SiteViewImpl.fromJson;
+  factory _SiteView.fromJson(Map<String, dynamic> json) = _$_SiteView.fromJson;
 
   @override
   Site get site;
@@ -263,6 +261,6 @@ abstract class _SiteView extends SiteView {
   SiteAggregates get counts;
   @override
   @JsonKey(ignore: true)
-  _$$SiteViewImplCopyWith<_$SiteViewImpl> get copyWith =>
+  _$$_SiteViewCopyWith<_$_SiteView> get copyWith =>
       throw _privateConstructorUsedError;
 }

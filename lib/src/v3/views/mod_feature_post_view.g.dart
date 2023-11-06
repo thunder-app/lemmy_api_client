@@ -6,9 +6,9 @@ part of 'mod_feature_post_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ModFeaturePostViewImpl _$$ModFeaturePostViewImplFromJson(
+_$_ModFeaturePostView _$$_ModFeaturePostViewFromJson(
         Map<String, dynamic> json) =>
-    _$ModFeaturePostViewImpl(
+    _$_ModFeaturePostView(
       modFeaturePost: ModFeaturePost.fromJson(
           json['mod_feature_post'] as Map<String, dynamic>),
       moderator: json['moderator'] == null
@@ -18,8 +18,8 @@ _$ModFeaturePostViewImpl _$$ModFeaturePostViewImplFromJson(
       community: Community.fromJson(json['community'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$ModFeaturePostViewImplToJson(
-        _$ModFeaturePostViewImpl instance) =>
+Map<String, dynamic> _$$_ModFeaturePostViewToJson(
+        _$_ModFeaturePostView instance) =>
     <String, dynamic>{
       'mod_feature_post': instance.modFeaturePost.toJson(),
       'moderator': instance.moderator?.toJson(),

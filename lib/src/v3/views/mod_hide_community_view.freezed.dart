@@ -108,11 +108,11 @@ class _$ModHideCommunityViewCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$ModHideCommunityViewImplCopyWith<$Res>
+abstract class _$$_ModHideCommunityViewCopyWith<$Res>
     implements $ModHideCommunityViewCopyWith<$Res> {
-  factory _$$ModHideCommunityViewImplCopyWith(_$ModHideCommunityViewImpl value,
-          $Res Function(_$ModHideCommunityViewImpl) then) =
-      __$$ModHideCommunityViewImplCopyWithImpl<$Res>;
+  factory _$$_ModHideCommunityViewCopyWith(_$_ModHideCommunityView value,
+          $Res Function(_$_ModHideCommunityView) then) =
+      __$$_ModHideCommunityViewCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -127,11 +127,11 @@ abstract class _$$ModHideCommunityViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ModHideCommunityViewImplCopyWithImpl<$Res>
-    extends _$ModHideCommunityViewCopyWithImpl<$Res, _$ModHideCommunityViewImpl>
-    implements _$$ModHideCommunityViewImplCopyWith<$Res> {
-  __$$ModHideCommunityViewImplCopyWithImpl(_$ModHideCommunityViewImpl _value,
-      $Res Function(_$ModHideCommunityViewImpl) _then)
+class __$$_ModHideCommunityViewCopyWithImpl<$Res>
+    extends _$ModHideCommunityViewCopyWithImpl<$Res, _$_ModHideCommunityView>
+    implements _$$_ModHideCommunityViewCopyWith<$Res> {
+  __$$_ModHideCommunityViewCopyWithImpl(_$_ModHideCommunityView _value,
+      $Res Function(_$_ModHideCommunityView) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -141,7 +141,7 @@ class __$$ModHideCommunityViewImplCopyWithImpl<$Res>
     Object? admin = freezed,
     Object? community = null,
   }) {
-    return _then(_$ModHideCommunityViewImpl(
+    return _then(_$_ModHideCommunityView(
       modHideCommunity: null == modHideCommunity
           ? _value.modHideCommunity
           : modHideCommunity // ignore: cast_nullable_to_non_nullable
@@ -161,13 +161,13 @@ class __$$ModHideCommunityViewImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$ModHideCommunityViewImpl extends _ModHideCommunityView {
-  const _$ModHideCommunityViewImpl(
+class _$_ModHideCommunityView extends _ModHideCommunityView {
+  const _$_ModHideCommunityView(
       {required this.modHideCommunity, this.admin, required this.community})
       : super._();
 
-  factory _$ModHideCommunityViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ModHideCommunityViewImplFromJson(json);
+  factory _$_ModHideCommunityView.fromJson(Map<String, dynamic> json) =>
+      _$$_ModHideCommunityViewFromJson(json);
 
   @override
   final ModHideCommunity modHideCommunity;
@@ -185,7 +185,7 @@ class _$ModHideCommunityViewImpl extends _ModHideCommunityView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ModHideCommunityViewImpl &&
+            other is _$_ModHideCommunityView &&
             (identical(other.modHideCommunity, modHideCommunity) ||
                 other.modHideCommunity == modHideCommunity) &&
             (identical(other.admin, admin) || other.admin == admin) &&
@@ -201,14 +201,13 @@ class _$ModHideCommunityViewImpl extends _ModHideCommunityView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ModHideCommunityViewImplCopyWith<_$ModHideCommunityViewImpl>
-      get copyWith =>
-          __$$ModHideCommunityViewImplCopyWithImpl<_$ModHideCommunityViewImpl>(
-              this, _$identity);
+  _$$_ModHideCommunityViewCopyWith<_$_ModHideCommunityView> get copyWith =>
+      __$$_ModHideCommunityViewCopyWithImpl<_$_ModHideCommunityView>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ModHideCommunityViewImplToJson(
+    return _$$_ModHideCommunityViewToJson(
       this,
     );
   }
@@ -218,11 +217,11 @@ abstract class _ModHideCommunityView extends ModHideCommunityView {
   const factory _ModHideCommunityView(
       {required final ModHideCommunity modHideCommunity,
       final Person? admin,
-      required final Community community}) = _$ModHideCommunityViewImpl;
+      required final Community community}) = _$_ModHideCommunityView;
   const _ModHideCommunityView._() : super._();
 
   factory _ModHideCommunityView.fromJson(Map<String, dynamic> json) =
-      _$ModHideCommunityViewImpl.fromJson;
+      _$_ModHideCommunityView.fromJson;
 
   @override
   ModHideCommunity get modHideCommunity;
@@ -232,6 +231,6 @@ abstract class _ModHideCommunityView extends ModHideCommunityView {
   Community get community;
   @override
   @JsonKey(ignore: true)
-  _$$ModHideCommunityViewImplCopyWith<_$ModHideCommunityViewImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$_ModHideCommunityViewCopyWith<_$_ModHideCommunityView> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -6,9 +6,8 @@ part of 'person_aggregates.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PersonAggregatesImpl _$$PersonAggregatesImplFromJson(
-        Map<String, dynamic> json) =>
-    _$PersonAggregatesImpl(
+_$_PersonAggregates _$$_PersonAggregatesFromJson(Map<String, dynamic> json) =>
+    _$_PersonAggregates(
       id: json['id'] as int,
       personId: json['person_id'] as int,
       postCount: json['post_count'] as int,
@@ -17,8 +16,7 @@ _$PersonAggregatesImpl _$$PersonAggregatesImplFromJson(
       commentScore: json['comment_score'] as int?,
     );
 
-Map<String, dynamic> _$$PersonAggregatesImplToJson(
-        _$PersonAggregatesImpl instance) =>
+Map<String, dynamic> _$$_PersonAggregatesToJson(_$_PersonAggregates instance) =>
     <String, dynamic>{
       'id': instance.id,
       'person_id': instance.personId,

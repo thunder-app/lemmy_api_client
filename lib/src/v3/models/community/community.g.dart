@@ -6,8 +6,7 @@ part of 'community.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$CommunityImpl _$$CommunityImplFromJson(Map<String, dynamic> json) =>
-    _$CommunityImpl(
+_$_Community _$$_CommunityFromJson(Map<String, dynamic> json) => _$_Community(
       id: json['id'] as int,
       name: json['name'] as String,
       title: json['title'] as String,
@@ -29,7 +28,7 @@ _$CommunityImpl _$$CommunityImplFromJson(Map<String, dynamic> json) =>
       instanceId: json['instance_id'] as int,
     );
 
-Map<String, dynamic> _$$CommunityImplToJson(_$CommunityImpl instance) =>
+Map<String, dynamic> _$$_CommunityToJson(_$_Community instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,

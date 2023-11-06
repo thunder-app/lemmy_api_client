@@ -6,16 +6,14 @@ part of 'add_admin_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AddAdminResponseImpl _$$AddAdminResponseImplFromJson(
-        Map<String, dynamic> json) =>
-    _$AddAdminResponseImpl(
+_$_AddAdminResponse _$$_AddAdminResponseFromJson(Map<String, dynamic> json) =>
+    _$_AddAdminResponse(
       admins: (json['admins'] as List<dynamic>)
           .map((e) => PersonView.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$AddAdminResponseImplToJson(
-        _$AddAdminResponseImpl instance) =>
+Map<String, dynamic> _$$_AddAdminResponseToJson(_$_AddAdminResponse instance) =>
     <String, dynamic>{
       'admins': instance.admins.map((e) => e.toJson()).toList(),
     };

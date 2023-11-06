@@ -113,12 +113,11 @@ class _$ModRemoveCommunityViewCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$ModRemoveCommunityViewImplCopyWith<$Res>
+abstract class _$$_ModRemoveCommunityViewCopyWith<$Res>
     implements $ModRemoveCommunityViewCopyWith<$Res> {
-  factory _$$ModRemoveCommunityViewImplCopyWith(
-          _$ModRemoveCommunityViewImpl value,
-          $Res Function(_$ModRemoveCommunityViewImpl) then) =
-      __$$ModRemoveCommunityViewImplCopyWithImpl<$Res>;
+  factory _$$_ModRemoveCommunityViewCopyWith(_$_ModRemoveCommunityView value,
+          $Res Function(_$_ModRemoveCommunityView) then) =
+      __$$_ModRemoveCommunityViewCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -135,13 +134,12 @@ abstract class _$$ModRemoveCommunityViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ModRemoveCommunityViewImplCopyWithImpl<$Res>
+class __$$_ModRemoveCommunityViewCopyWithImpl<$Res>
     extends _$ModRemoveCommunityViewCopyWithImpl<$Res,
-        _$ModRemoveCommunityViewImpl>
-    implements _$$ModRemoveCommunityViewImplCopyWith<$Res> {
-  __$$ModRemoveCommunityViewImplCopyWithImpl(
-      _$ModRemoveCommunityViewImpl _value,
-      $Res Function(_$ModRemoveCommunityViewImpl) _then)
+        _$_ModRemoveCommunityView>
+    implements _$$_ModRemoveCommunityViewCopyWith<$Res> {
+  __$$_ModRemoveCommunityViewCopyWithImpl(_$_ModRemoveCommunityView _value,
+      $Res Function(_$_ModRemoveCommunityView) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -151,7 +149,7 @@ class __$$ModRemoveCommunityViewImplCopyWithImpl<$Res>
     Object? moderator = freezed,
     Object? community = null,
   }) {
-    return _then(_$ModRemoveCommunityViewImpl(
+    return _then(_$_ModRemoveCommunityView(
       modRemoveCommunity: null == modRemoveCommunity
           ? _value.modRemoveCommunity
           : modRemoveCommunity // ignore: cast_nullable_to_non_nullable
@@ -171,15 +169,15 @@ class __$$ModRemoveCommunityViewImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$ModRemoveCommunityViewImpl extends _ModRemoveCommunityView {
-  const _$ModRemoveCommunityViewImpl(
+class _$_ModRemoveCommunityView extends _ModRemoveCommunityView {
+  const _$_ModRemoveCommunityView(
       {required this.modRemoveCommunity,
       this.moderator,
       required this.community})
       : super._();
 
-  factory _$ModRemoveCommunityViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ModRemoveCommunityViewImplFromJson(json);
+  factory _$_ModRemoveCommunityView.fromJson(Map<String, dynamic> json) =>
+      _$$_ModRemoveCommunityViewFromJson(json);
 
   @override
   final ModRemoveCommunity modRemoveCommunity;
@@ -197,7 +195,7 @@ class _$ModRemoveCommunityViewImpl extends _ModRemoveCommunityView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ModRemoveCommunityViewImpl &&
+            other is _$_ModRemoveCommunityView &&
             (identical(other.modRemoveCommunity, modRemoveCommunity) ||
                 other.modRemoveCommunity == modRemoveCommunity) &&
             (identical(other.moderator, moderator) ||
@@ -214,13 +212,13 @@ class _$ModRemoveCommunityViewImpl extends _ModRemoveCommunityView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ModRemoveCommunityViewImplCopyWith<_$ModRemoveCommunityViewImpl>
-      get copyWith => __$$ModRemoveCommunityViewImplCopyWithImpl<
-          _$ModRemoveCommunityViewImpl>(this, _$identity);
+  _$$_ModRemoveCommunityViewCopyWith<_$_ModRemoveCommunityView> get copyWith =>
+      __$$_ModRemoveCommunityViewCopyWithImpl<_$_ModRemoveCommunityView>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ModRemoveCommunityViewImplToJson(
+    return _$$_ModRemoveCommunityViewToJson(
       this,
     );
   }
@@ -230,11 +228,11 @@ abstract class _ModRemoveCommunityView extends ModRemoveCommunityView {
   const factory _ModRemoveCommunityView(
       {required final ModRemoveCommunity modRemoveCommunity,
       final Person? moderator,
-      required final Community community}) = _$ModRemoveCommunityViewImpl;
+      required final Community community}) = _$_ModRemoveCommunityView;
   const _ModRemoveCommunityView._() : super._();
 
   factory _ModRemoveCommunityView.fromJson(Map<String, dynamic> json) =
-      _$ModRemoveCommunityViewImpl.fromJson;
+      _$_ModRemoveCommunityView.fromJson;
 
   @override
   ModRemoveCommunity get modRemoveCommunity;
@@ -244,6 +242,6 @@ abstract class _ModRemoveCommunityView extends ModRemoveCommunityView {
   Community get community;
   @override
   @JsonKey(ignore: true)
-  _$$ModRemoveCommunityViewImplCopyWith<_$ModRemoveCommunityViewImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$_ModRemoveCommunityViewCopyWith<_$_ModRemoveCommunityView> get copyWith =>
+      throw _privateConstructorUsedError;
 }

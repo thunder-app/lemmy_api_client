@@ -87,11 +87,11 @@ class _$CommunityBlockViewCopyWithImpl<$Res, $Val extends CommunityBlockView>
 }
 
 /// @nodoc
-abstract class _$$CommunityBlockViewImplCopyWith<$Res>
+abstract class _$$_CommunityBlockViewCopyWith<$Res>
     implements $CommunityBlockViewCopyWith<$Res> {
-  factory _$$CommunityBlockViewImplCopyWith(_$CommunityBlockViewImpl value,
-          $Res Function(_$CommunityBlockViewImpl) then) =
-      __$$CommunityBlockViewImplCopyWithImpl<$Res>;
+  factory _$$_CommunityBlockViewCopyWith(_$_CommunityBlockView value,
+          $Res Function(_$_CommunityBlockView) then) =
+      __$$_CommunityBlockViewCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Person person, Community community});
@@ -103,11 +103,11 @@ abstract class _$$CommunityBlockViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CommunityBlockViewImplCopyWithImpl<$Res>
-    extends _$CommunityBlockViewCopyWithImpl<$Res, _$CommunityBlockViewImpl>
-    implements _$$CommunityBlockViewImplCopyWith<$Res> {
-  __$$CommunityBlockViewImplCopyWithImpl(_$CommunityBlockViewImpl _value,
-      $Res Function(_$CommunityBlockViewImpl) _then)
+class __$$_CommunityBlockViewCopyWithImpl<$Res>
+    extends _$CommunityBlockViewCopyWithImpl<$Res, _$_CommunityBlockView>
+    implements _$$_CommunityBlockViewCopyWith<$Res> {
+  __$$_CommunityBlockViewCopyWithImpl(
+      _$_CommunityBlockView _value, $Res Function(_$_CommunityBlockView) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -116,7 +116,7 @@ class __$$CommunityBlockViewImplCopyWithImpl<$Res>
     Object? person = null,
     Object? community = null,
   }) {
-    return _then(_$CommunityBlockViewImpl(
+    return _then(_$_CommunityBlockView(
       person: null == person
           ? _value.person
           : person // ignore: cast_nullable_to_non_nullable
@@ -132,13 +132,12 @@ class __$$CommunityBlockViewImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$CommunityBlockViewImpl extends _CommunityBlockView {
-  const _$CommunityBlockViewImpl(
-      {required this.person, required this.community})
+class _$_CommunityBlockView extends _CommunityBlockView {
+  const _$_CommunityBlockView({required this.person, required this.community})
       : super._();
 
-  factory _$CommunityBlockViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CommunityBlockViewImplFromJson(json);
+  factory _$_CommunityBlockView.fromJson(Map<String, dynamic> json) =>
+      _$$_CommunityBlockViewFromJson(json);
 
   @override
   final Person person;
@@ -154,7 +153,7 @@ class _$CommunityBlockViewImpl extends _CommunityBlockView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CommunityBlockViewImpl &&
+            other is _$_CommunityBlockView &&
             (identical(other.person, person) || other.person == person) &&
             (identical(other.community, community) ||
                 other.community == community));
@@ -167,13 +166,13 @@ class _$CommunityBlockViewImpl extends _CommunityBlockView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CommunityBlockViewImplCopyWith<_$CommunityBlockViewImpl> get copyWith =>
-      __$$CommunityBlockViewImplCopyWithImpl<_$CommunityBlockViewImpl>(
+  _$$_CommunityBlockViewCopyWith<_$_CommunityBlockView> get copyWith =>
+      __$$_CommunityBlockViewCopyWithImpl<_$_CommunityBlockView>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CommunityBlockViewImplToJson(
+    return _$$_CommunityBlockViewToJson(
       this,
     );
   }
@@ -182,11 +181,11 @@ class _$CommunityBlockViewImpl extends _CommunityBlockView {
 abstract class _CommunityBlockView extends CommunityBlockView {
   const factory _CommunityBlockView(
       {required final Person person,
-      required final Community community}) = _$CommunityBlockViewImpl;
+      required final Community community}) = _$_CommunityBlockView;
   const _CommunityBlockView._() : super._();
 
   factory _CommunityBlockView.fromJson(Map<String, dynamic> json) =
-      _$CommunityBlockViewImpl.fromJson;
+      _$_CommunityBlockView.fromJson;
 
   @override
   Person get person;
@@ -194,6 +193,6 @@ abstract class _CommunityBlockView extends CommunityBlockView {
   Community get community;
   @override
   @JsonKey(ignore: true)
-  _$$CommunityBlockViewImplCopyWith<_$CommunityBlockViewImpl> get copyWith =>
+  _$$_CommunityBlockViewCopyWith<_$_CommunityBlockView> get copyWith =>
       throw _privateConstructorUsedError;
 }

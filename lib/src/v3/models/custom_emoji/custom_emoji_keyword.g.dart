@@ -6,16 +6,16 @@ part of 'custom_emoji_keyword.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$CustomEmojiKeywordImpl _$$CustomEmojiKeywordImplFromJson(
+_$_CustomEmojiKeyword _$$_CustomEmojiKeywordFromJson(
         Map<String, dynamic> json) =>
-    _$CustomEmojiKeywordImpl(
+    _$_CustomEmojiKeyword(
       id: json['id'] as int,
       customEmojiId: json['custom_emoji_id'] as int,
       keyword: json['keyword'] as String,
     );
 
-Map<String, dynamic> _$$CustomEmojiKeywordImplToJson(
-        _$CustomEmojiKeywordImpl instance) =>
+Map<String, dynamic> _$$_CustomEmojiKeywordToJson(
+        _$_CustomEmojiKeyword instance) =>
     <String, dynamic>{
       'id': instance.id,
       'custom_emoji_id': instance.customEmojiId,

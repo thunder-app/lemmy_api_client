@@ -187,11 +187,11 @@ class _$PostReportViewCopyWithImpl<$Res, $Val extends PostReportView>
 }
 
 /// @nodoc
-abstract class _$$PostReportViewImplCopyWith<$Res>
+abstract class _$$_PostReportViewCopyWith<$Res>
     implements $PostReportViewCopyWith<$Res> {
-  factory _$$PostReportViewImplCopyWith(_$PostReportViewImpl value,
-          $Res Function(_$PostReportViewImpl) then) =
-      __$$PostReportViewImplCopyWithImpl<$Res>;
+  factory _$$_PostReportViewCopyWith(
+          _$_PostReportView value, $Res Function(_$_PostReportView) then) =
+      __$$_PostReportViewCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -222,11 +222,11 @@ abstract class _$$PostReportViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PostReportViewImplCopyWithImpl<$Res>
-    extends _$PostReportViewCopyWithImpl<$Res, _$PostReportViewImpl>
-    implements _$$PostReportViewImplCopyWith<$Res> {
-  __$$PostReportViewImplCopyWithImpl(
-      _$PostReportViewImpl _value, $Res Function(_$PostReportViewImpl) _then)
+class __$$_PostReportViewCopyWithImpl<$Res>
+    extends _$PostReportViewCopyWithImpl<$Res, _$_PostReportView>
+    implements _$$_PostReportViewCopyWith<$Res> {
+  __$$_PostReportViewCopyWithImpl(
+      _$_PostReportView _value, $Res Function(_$_PostReportView) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -242,7 +242,7 @@ class __$$PostReportViewImplCopyWithImpl<$Res>
     Object? counts = null,
     Object? resolver = freezed,
   }) {
-    return _then(_$PostReportViewImpl(
+    return _then(_$_PostReportView(
       postReport: null == postReport
           ? _value.postReport
           : postReport // ignore: cast_nullable_to_non_nullable
@@ -286,8 +286,8 @@ class __$$PostReportViewImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$PostReportViewImpl extends _PostReportView {
-  const _$PostReportViewImpl(
+class _$_PostReportView extends _PostReportView {
+  const _$_PostReportView(
       {required this.postReport,
       required this.post,
       required this.community,
@@ -299,8 +299,8 @@ class _$PostReportViewImpl extends _PostReportView {
       this.resolver})
       : super._();
 
-  factory _$PostReportViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PostReportViewImplFromJson(json);
+  factory _$_PostReportView.fromJson(Map<String, dynamic> json) =>
+      _$$_PostReportViewFromJson(json);
 
   @override
   final PostReport postReport;
@@ -330,7 +330,7 @@ class _$PostReportViewImpl extends _PostReportView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PostReportViewImpl &&
+            other is _$_PostReportView &&
             (identical(other.postReport, postReport) ||
                 other.postReport == postReport) &&
             (identical(other.post, post) || other.post == post) &&
@@ -366,13 +366,12 @@ class _$PostReportViewImpl extends _PostReportView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PostReportViewImplCopyWith<_$PostReportViewImpl> get copyWith =>
-      __$$PostReportViewImplCopyWithImpl<_$PostReportViewImpl>(
-          this, _$identity);
+  _$$_PostReportViewCopyWith<_$_PostReportView> get copyWith =>
+      __$$_PostReportViewCopyWithImpl<_$_PostReportView>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PostReportViewImplToJson(
+    return _$$_PostReportViewToJson(
       this,
     );
   }
@@ -388,11 +387,11 @@ abstract class _PostReportView extends PostReportView {
       required final bool creatorBannedFromCommunity,
       final num? myVote,
       required final PostAggregates counts,
-      final Person? resolver}) = _$PostReportViewImpl;
+      final Person? resolver}) = _$_PostReportView;
   const _PostReportView._() : super._();
 
   factory _PostReportView.fromJson(Map<String, dynamic> json) =
-      _$PostReportViewImpl.fromJson;
+      _$_PostReportView.fromJson;
 
   @override
   PostReport get postReport;
@@ -414,6 +413,6 @@ abstract class _PostReportView extends PostReportView {
   Person? get resolver;
   @override
   @JsonKey(ignore: true)
-  _$$PostReportViewImplCopyWith<_$PostReportViewImpl> get copyWith =>
+  _$$_PostReportViewCopyWith<_$_PostReportView> get copyWith =>
       throw _privateConstructorUsedError;
 }

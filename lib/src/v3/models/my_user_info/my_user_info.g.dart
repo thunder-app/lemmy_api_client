@@ -6,8 +6,8 @@ part of 'my_user_info.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$MyUserInfoImpl _$$MyUserInfoImplFromJson(Map<String, dynamic> json) =>
-    _$MyUserInfoImpl(
+_$_MyUserInfo _$$_MyUserInfoFromJson(Map<String, dynamic> json) =>
+    _$_MyUserInfo(
       localUserView: LocalUserView.fromJson(
           json['local_user_view'] as Map<String, dynamic>),
       follows: (json['follows'] as List<dynamic>)
@@ -31,7 +31,7 @@ _$MyUserInfoImpl _$$MyUserInfoImplFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$MyUserInfoImplToJson(_$MyUserInfoImpl instance) =>
+Map<String, dynamic> _$$_MyUserInfoToJson(_$_MyUserInfo instance) =>
     <String, dynamic>{
       'local_user_view': instance.localUserView.toJson(),
       'follows': instance.follows.map((e) => e.toJson()).toList(),

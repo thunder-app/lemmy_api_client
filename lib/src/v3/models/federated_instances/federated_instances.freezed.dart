@@ -75,11 +75,11 @@ class _$FederatedInstancesCopyWithImpl<$Res, $Val extends FederatedInstances>
 }
 
 /// @nodoc
-abstract class _$$FederatedInstancesImplCopyWith<$Res>
+abstract class _$$_FederatedInstancesCopyWith<$Res>
     implements $FederatedInstancesCopyWith<$Res> {
-  factory _$$FederatedInstancesImplCopyWith(_$FederatedInstancesImpl value,
-          $Res Function(_$FederatedInstancesImpl) then) =
-      __$$FederatedInstancesImplCopyWithImpl<$Res>;
+  factory _$$_FederatedInstancesCopyWith(_$_FederatedInstances value,
+          $Res Function(_$_FederatedInstances) then) =
+      __$$_FederatedInstancesCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -87,11 +87,11 @@ abstract class _$$FederatedInstancesImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$FederatedInstancesImplCopyWithImpl<$Res>
-    extends _$FederatedInstancesCopyWithImpl<$Res, _$FederatedInstancesImpl>
-    implements _$$FederatedInstancesImplCopyWith<$Res> {
-  __$$FederatedInstancesImplCopyWithImpl(_$FederatedInstancesImpl _value,
-      $Res Function(_$FederatedInstancesImpl) _then)
+class __$$_FederatedInstancesCopyWithImpl<$Res>
+    extends _$FederatedInstancesCopyWithImpl<$Res, _$_FederatedInstances>
+    implements _$$_FederatedInstancesCopyWith<$Res> {
+  __$$_FederatedInstancesCopyWithImpl(
+      _$_FederatedInstances _value, $Res Function(_$_FederatedInstances) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -101,7 +101,7 @@ class __$$FederatedInstancesImplCopyWithImpl<$Res>
     Object? allowed = null,
     Object? blocked = null,
   }) {
-    return _then(_$FederatedInstancesImpl(
+    return _then(_$_FederatedInstances(
       linked: null == linked
           ? _value._linked
           : linked // ignore: cast_nullable_to_non_nullable
@@ -121,8 +121,8 @@ class __$$FederatedInstancesImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$FederatedInstancesImpl extends _FederatedInstances {
-  const _$FederatedInstancesImpl(
+class _$_FederatedInstances extends _FederatedInstances {
+  const _$_FederatedInstances(
       {required final List<Instance> linked,
       required final List<Instance> allowed,
       required final List<Instance> blocked})
@@ -131,8 +131,8 @@ class _$FederatedInstancesImpl extends _FederatedInstances {
         _blocked = blocked,
         super._();
 
-  factory _$FederatedInstancesImpl.fromJson(Map<String, dynamic> json) =>
-      _$$FederatedInstancesImplFromJson(json);
+  factory _$_FederatedInstances.fromJson(Map<String, dynamic> json) =>
+      _$$_FederatedInstancesFromJson(json);
 
   final List<Instance> _linked;
   @override
@@ -167,7 +167,7 @@ class _$FederatedInstancesImpl extends _FederatedInstances {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FederatedInstancesImpl &&
+            other is _$_FederatedInstances &&
             const DeepCollectionEquality().equals(other._linked, _linked) &&
             const DeepCollectionEquality().equals(other._allowed, _allowed) &&
             const DeepCollectionEquality().equals(other._blocked, _blocked));
@@ -184,13 +184,13 @@ class _$FederatedInstancesImpl extends _FederatedInstances {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$FederatedInstancesImplCopyWith<_$FederatedInstancesImpl> get copyWith =>
-      __$$FederatedInstancesImplCopyWithImpl<_$FederatedInstancesImpl>(
+  _$$_FederatedInstancesCopyWith<_$_FederatedInstances> get copyWith =>
+      __$$_FederatedInstancesCopyWithImpl<_$_FederatedInstances>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FederatedInstancesImplToJson(
+    return _$$_FederatedInstancesToJson(
       this,
     );
   }
@@ -200,11 +200,11 @@ abstract class _FederatedInstances extends FederatedInstances {
   const factory _FederatedInstances(
       {required final List<Instance> linked,
       required final List<Instance> allowed,
-      required final List<Instance> blocked}) = _$FederatedInstancesImpl;
+      required final List<Instance> blocked}) = _$_FederatedInstances;
   const _FederatedInstances._() : super._();
 
   factory _FederatedInstances.fromJson(Map<String, dynamic> json) =
-      _$FederatedInstancesImpl.fromJson;
+      _$_FederatedInstances.fromJson;
 
   @override
   List<Instance> get linked;
@@ -214,6 +214,6 @@ abstract class _FederatedInstances extends FederatedInstances {
   List<Instance> get blocked;
   @override
   @JsonKey(ignore: true)
-  _$$FederatedInstancesImplCopyWith<_$FederatedInstancesImpl> get copyWith =>
+  _$$_FederatedInstancesCopyWith<_$_FederatedInstances> get copyWith =>
       throw _privateConstructorUsedError;
 }

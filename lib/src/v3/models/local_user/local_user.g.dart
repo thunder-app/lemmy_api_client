@@ -6,8 +6,7 @@ part of 'local_user.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$LocalUserImpl _$$LocalUserImplFromJson(Map<String, dynamic> json) =>
-    _$LocalUserImpl(
+_$_LocalUser _$$_LocalUserFromJson(Map<String, dynamic> json) => _$_LocalUser(
       id: json['id'] as int,
       personId: json['person_id'] as int,
       email: json['email'] as String?,
@@ -37,7 +36,7 @@ _$LocalUserImpl _$$LocalUserImplFromJson(Map<String, dynamic> json) =>
       enableAnimatedImages: json['enable_animated_images'] as bool?,
     );
 
-Map<String, dynamic> _$$LocalUserImplToJson(_$LocalUserImpl instance) =>
+Map<String, dynamic> _$$_LocalUserToJson(_$_LocalUser instance) =>
     <String, dynamic>{
       'id': instance.id,
       'person_id': instance.personId,

@@ -212,11 +212,11 @@ class _$PersonMentionViewCopyWithImpl<$Res, $Val extends PersonMentionView>
 }
 
 /// @nodoc
-abstract class _$$PersonMentionViewImplCopyWith<$Res>
+abstract class _$$_PersonMentionViewCopyWith<$Res>
     implements $PersonMentionViewCopyWith<$Res> {
-  factory _$$PersonMentionViewImplCopyWith(_$PersonMentionViewImpl value,
-          $Res Function(_$PersonMentionViewImpl) then) =
-      __$$PersonMentionViewImplCopyWithImpl<$Res>;
+  factory _$$_PersonMentionViewCopyWith(_$_PersonMentionView value,
+          $Res Function(_$_PersonMentionView) then) =
+      __$$_PersonMentionViewCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -251,11 +251,11 @@ abstract class _$$PersonMentionViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PersonMentionViewImplCopyWithImpl<$Res>
-    extends _$PersonMentionViewCopyWithImpl<$Res, _$PersonMentionViewImpl>
-    implements _$$PersonMentionViewImplCopyWith<$Res> {
-  __$$PersonMentionViewImplCopyWithImpl(_$PersonMentionViewImpl _value,
-      $Res Function(_$PersonMentionViewImpl) _then)
+class __$$_PersonMentionViewCopyWithImpl<$Res>
+    extends _$PersonMentionViewCopyWithImpl<$Res, _$_PersonMentionView>
+    implements _$$_PersonMentionViewCopyWith<$Res> {
+  __$$_PersonMentionViewCopyWithImpl(
+      _$_PersonMentionView _value, $Res Function(_$_PersonMentionView) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -275,7 +275,7 @@ class __$$PersonMentionViewImplCopyWithImpl<$Res>
     Object? creatorBlocked = null,
     Object? myVote = freezed,
   }) {
-    return _then(_$PersonMentionViewImpl(
+    return _then(_$_PersonMentionView(
       personMention: null == personMention
           ? _value.personMention
           : personMention // ignore: cast_nullable_to_non_nullable
@@ -335,8 +335,8 @@ class __$$PersonMentionViewImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$PersonMentionViewImpl extends _PersonMentionView {
-  const _$PersonMentionViewImpl(
+class _$_PersonMentionView extends _PersonMentionView {
+  const _$_PersonMentionView(
       {required this.personMention,
       required this.comment,
       required this.creator,
@@ -352,8 +352,8 @@ class _$PersonMentionViewImpl extends _PersonMentionView {
       required this.myVote})
       : super._();
 
-  factory _$PersonMentionViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PersonMentionViewImplFromJson(json);
+  factory _$_PersonMentionView.fromJson(Map<String, dynamic> json) =>
+      _$$_PersonMentionViewFromJson(json);
 
   @override
   final PersonMention personMention;
@@ -392,7 +392,7 @@ class _$PersonMentionViewImpl extends _PersonMentionView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PersonMentionViewImpl &&
+            other is _$_PersonMentionView &&
             (identical(other.personMention, personMention) ||
                 other.personMention == personMention) &&
             (identical(other.comment, comment) || other.comment == comment) &&
@@ -438,13 +438,13 @@ class _$PersonMentionViewImpl extends _PersonMentionView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PersonMentionViewImplCopyWith<_$PersonMentionViewImpl> get copyWith =>
-      __$$PersonMentionViewImplCopyWithImpl<_$PersonMentionViewImpl>(
+  _$$_PersonMentionViewCopyWith<_$_PersonMentionView> get copyWith =>
+      __$$_PersonMentionViewCopyWithImpl<_$_PersonMentionView>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PersonMentionViewImplToJson(
+    return _$$_PersonMentionViewToJson(
       this,
     );
   }
@@ -464,11 +464,11 @@ abstract class _PersonMentionView extends PersonMentionView {
       required final SubscribedType subscribed,
       required final bool saved,
       required final bool creatorBlocked,
-      required final int? myVote}) = _$PersonMentionViewImpl;
+      required final int? myVote}) = _$_PersonMentionView;
   const _PersonMentionView._() : super._();
 
   factory _PersonMentionView.fromJson(Map<String, dynamic> json) =
-      _$PersonMentionViewImpl.fromJson;
+      _$_PersonMentionView.fromJson;
 
   @override
   PersonMention get personMention;
@@ -498,6 +498,6 @@ abstract class _PersonMentionView extends PersonMentionView {
   int? get myVote;
   @override
   @JsonKey(ignore: true)
-  _$$PersonMentionViewImplCopyWith<_$PersonMentionViewImpl> get copyWith =>
+  _$$_PersonMentionViewCopyWith<_$_PersonMentionView> get copyWith =>
       throw _privateConstructorUsedError;
 }

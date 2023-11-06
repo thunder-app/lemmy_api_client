@@ -177,11 +177,10 @@ class _$PostViewCopyWithImpl<$Res, $Val extends PostView>
 }
 
 /// @nodoc
-abstract class _$$PostViewImplCopyWith<$Res>
-    implements $PostViewCopyWith<$Res> {
-  factory _$$PostViewImplCopyWith(
-          _$PostViewImpl value, $Res Function(_$PostViewImpl) then) =
-      __$$PostViewImplCopyWithImpl<$Res>;
+abstract class _$$_PostViewCopyWith<$Res> implements $PostViewCopyWith<$Res> {
+  factory _$$_PostViewCopyWith(
+          _$_PostView value, $Res Function(_$_PostView) then) =
+      __$$_PostViewCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -209,11 +208,11 @@ abstract class _$$PostViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PostViewImplCopyWithImpl<$Res>
-    extends _$PostViewCopyWithImpl<$Res, _$PostViewImpl>
-    implements _$$PostViewImplCopyWith<$Res> {
-  __$$PostViewImplCopyWithImpl(
-      _$PostViewImpl _value, $Res Function(_$PostViewImpl) _then)
+class __$$_PostViewCopyWithImpl<$Res>
+    extends _$PostViewCopyWithImpl<$Res, _$_PostView>
+    implements _$$_PostViewCopyWith<$Res> {
+  __$$_PostViewCopyWithImpl(
+      _$_PostView _value, $Res Function(_$_PostView) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -232,7 +231,7 @@ class __$$PostViewImplCopyWithImpl<$Res>
     Object? myVote = freezed,
     Object? unreadComments = null,
   }) {
-    return _then(_$PostViewImpl(
+    return _then(_$_PostView(
       post: null == post
           ? _value.post
           : post // ignore: cast_nullable_to_non_nullable
@@ -288,8 +287,8 @@ class __$$PostViewImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$PostViewImpl extends _PostView {
-  const _$PostViewImpl(
+class _$_PostView extends _PostView {
+  const _$_PostView(
       {required this.post,
       required this.creator,
       required this.community,
@@ -304,8 +303,8 @@ class _$PostViewImpl extends _PostView {
       required this.unreadComments})
       : super._();
 
-  factory _$PostViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PostViewImplFromJson(json);
+  factory _$_PostView.fromJson(Map<String, dynamic> json) =>
+      _$$_PostViewFromJson(json);
 
   @override
   final Post post;
@@ -342,7 +341,7 @@ class _$PostViewImpl extends _PostView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PostViewImpl &&
+            other is _$_PostView &&
             (identical(other.post, post) || other.post == post) &&
             (identical(other.creator, creator) || other.creator == creator) &&
             (identical(other.community, community) ||
@@ -385,12 +384,12 @@ class _$PostViewImpl extends _PostView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PostViewImplCopyWith<_$PostViewImpl> get copyWith =>
-      __$$PostViewImplCopyWithImpl<_$PostViewImpl>(this, _$identity);
+  _$$_PostViewCopyWith<_$_PostView> get copyWith =>
+      __$$_PostViewCopyWithImpl<_$_PostView>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PostViewImplToJson(
+    return _$$_PostViewToJson(
       this,
     );
   }
@@ -409,11 +408,10 @@ abstract class _PostView extends PostView {
       required final bool read,
       required final bool creatorBlocked,
       final int? myVote,
-      required final int unreadComments}) = _$PostViewImpl;
+      required final int unreadComments}) = _$_PostView;
   const _PostView._() : super._();
 
-  factory _PostView.fromJson(Map<String, dynamic> json) =
-      _$PostViewImpl.fromJson;
+  factory _PostView.fromJson(Map<String, dynamic> json) = _$_PostView.fromJson;
 
   @override
   Post get post;
@@ -441,6 +439,6 @@ abstract class _PostView extends PostView {
   int get unreadComments;
   @override
   @JsonKey(ignore: true)
-  _$$PostViewImplCopyWith<_$PostViewImpl> get copyWith =>
+  _$$_PostViewCopyWith<_$_PostView> get copyWith =>
       throw _privateConstructorUsedError;
 }

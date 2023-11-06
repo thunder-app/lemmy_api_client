@@ -6,14 +6,14 @@ part of 'federated_instances.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GetFederatedInstancesImpl _$$GetFederatedInstancesImplFromJson(
+_$_GetFederatedInstances _$$_GetFederatedInstancesFromJson(
         Map<String, dynamic> json) =>
-    _$GetFederatedInstancesImpl(
+    _$_GetFederatedInstances(
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$GetFederatedInstancesImplToJson(
-    _$GetFederatedInstancesImpl instance) {
+Map<String, dynamic> _$$_GetFederatedInstancesToJson(
+    _$_GetFederatedInstances instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

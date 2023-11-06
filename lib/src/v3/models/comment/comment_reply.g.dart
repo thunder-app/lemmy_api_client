@@ -6,8 +6,8 @@ part of 'comment_reply.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$CommentReplyImpl _$$CommentReplyImplFromJson(Map<String, dynamic> json) =>
-    _$CommentReplyImpl(
+_$_CommentReply _$$_CommentReplyFromJson(Map<String, dynamic> json) =>
+    _$_CommentReply(
       id: json['id'] as int,
       recipientId: json['recipient_id'] as int,
       commentId: json['comment_id'] as int,
@@ -15,7 +15,7 @@ _$CommentReplyImpl _$$CommentReplyImplFromJson(Map<String, dynamic> json) =>
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
     );
 
-Map<String, dynamic> _$$CommentReplyImplToJson(_$CommentReplyImpl instance) =>
+Map<String, dynamic> _$$_CommentReplyToJson(_$_CommentReply instance) =>
     <String, dynamic>{
       'id': instance.id,
       'recipient_id': instance.recipientId,

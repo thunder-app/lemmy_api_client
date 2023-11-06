@@ -216,11 +216,10 @@ class _$LocalSiteCopyWithImpl<$Res, $Val extends LocalSite>
 }
 
 /// @nodoc
-abstract class _$$LocalSiteImplCopyWith<$Res>
-    implements $LocalSiteCopyWith<$Res> {
-  factory _$$LocalSiteImplCopyWith(
-          _$LocalSiteImpl value, $Res Function(_$LocalSiteImpl) then) =
-      __$$LocalSiteImplCopyWithImpl<$Res>;
+abstract class _$$_LocalSiteCopyWith<$Res> implements $LocalSiteCopyWith<$Res> {
+  factory _$$_LocalSiteCopyWith(
+          _$_LocalSite value, $Res Function(_$_LocalSite) then) =
+      __$$_LocalSiteCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -250,11 +249,11 @@ abstract class _$$LocalSiteImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$LocalSiteImplCopyWithImpl<$Res>
-    extends _$LocalSiteCopyWithImpl<$Res, _$LocalSiteImpl>
-    implements _$$LocalSiteImplCopyWith<$Res> {
-  __$$LocalSiteImplCopyWithImpl(
-      _$LocalSiteImpl _value, $Res Function(_$LocalSiteImpl) _then)
+class __$$_LocalSiteCopyWithImpl<$Res>
+    extends _$LocalSiteCopyWithImpl<$Res, _$_LocalSite>
+    implements _$$_LocalSiteCopyWith<$Res> {
+  __$$_LocalSiteCopyWithImpl(
+      _$_LocalSite _value, $Res Function(_$_LocalSite) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -284,7 +283,7 @@ class __$$LocalSiteImplCopyWithImpl<$Res>
     Object? registrationMode = null,
     Object? reportsEmailAdmins = null,
   }) {
-    return _then(_$LocalSiteImpl(
+    return _then(_$_LocalSite(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -384,8 +383,8 @@ class __$$LocalSiteImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$LocalSiteImpl extends _LocalSite {
-  const _$LocalSiteImpl(
+class _$_LocalSite extends _LocalSite {
+  const _$_LocalSite(
       {required this.id,
       required this.siteId,
       required this.siteSetup,
@@ -411,8 +410,8 @@ class _$LocalSiteImpl extends _LocalSite {
       required this.reportsEmailAdmins})
       : super._();
 
-  factory _$LocalSiteImpl.fromJson(Map<String, dynamic> json) =>
-      _$$LocalSiteImplFromJson(json);
+  factory _$_LocalSite.fromJson(Map<String, dynamic> json) =>
+      _$$_LocalSiteFromJson(json);
 
   @override
   final int id;
@@ -470,7 +469,7 @@ class _$LocalSiteImpl extends _LocalSite {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LocalSiteImpl &&
+            other is _$_LocalSite &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.siteId, siteId) || other.siteId == siteId) &&
             (identical(other.siteSetup, siteSetup) ||
@@ -551,12 +550,12 @@ class _$LocalSiteImpl extends _LocalSite {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$LocalSiteImplCopyWith<_$LocalSiteImpl> get copyWith =>
-      __$$LocalSiteImplCopyWithImpl<_$LocalSiteImpl>(this, _$identity);
+  _$$_LocalSiteCopyWith<_$_LocalSite> get copyWith =>
+      __$$_LocalSiteCopyWithImpl<_$_LocalSite>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$LocalSiteImplToJson(
+    return _$$_LocalSiteToJson(
       this,
     );
   }
@@ -586,11 +585,11 @@ abstract class _LocalSite extends LocalSite {
       required final DateTime published,
       final DateTime? updated,
       required final RegistrationMode registrationMode,
-      required final bool reportsEmailAdmins}) = _$LocalSiteImpl;
+      required final bool reportsEmailAdmins}) = _$_LocalSite;
   const _LocalSite._() : super._();
 
   factory _LocalSite.fromJson(Map<String, dynamic> json) =
-      _$LocalSiteImpl.fromJson;
+      _$_LocalSite.fromJson;
 
   @override
   int get id;
@@ -640,6 +639,6 @@ abstract class _LocalSite extends LocalSite {
   bool get reportsEmailAdmins;
   @override
   @JsonKey(ignore: true)
-  _$$LocalSiteImplCopyWith<_$LocalSiteImpl> get copyWith =>
+  _$$_LocalSiteCopyWith<_$_LocalSite> get copyWith =>
       throw _privateConstructorUsedError;
 }

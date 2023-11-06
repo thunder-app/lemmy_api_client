@@ -6,8 +6,8 @@ part of 'post_aggregates.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PostAggregatesImpl _$$PostAggregatesImplFromJson(Map<String, dynamic> json) =>
-    _$PostAggregatesImpl(
+_$_PostAggregates _$$_PostAggregatesFromJson(Map<String, dynamic> json) =>
+    _$_PostAggregates(
       id: json['id'] as int,
       postId: json['post_id'] as int,
       comments: json['comments'] as int,
@@ -23,8 +23,7 @@ _$PostAggregatesImpl _$$PostAggregatesImplFromJson(Map<String, dynamic> json) =>
       hotRankActive: json['hot_rank_active'] as int?,
     );
 
-Map<String, dynamic> _$$PostAggregatesImplToJson(
-        _$PostAggregatesImpl instance) =>
+Map<String, dynamic> _$$_PostAggregatesToJson(_$_PostAggregates instance) =>
     <String, dynamic>{
       'id': instance.id,
       'post_id': instance.postId,

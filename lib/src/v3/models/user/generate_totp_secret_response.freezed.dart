@@ -65,25 +65,25 @@ class _$GenerateTotpSecretResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$GenerateTotpSecretResponseImplCopyWith<$Res>
+abstract class _$$_GenerateTotpSecretResponseCopyWith<$Res>
     implements $GenerateTotpSecretResponseCopyWith<$Res> {
-  factory _$$GenerateTotpSecretResponseImplCopyWith(
-          _$GenerateTotpSecretResponseImpl value,
-          $Res Function(_$GenerateTotpSecretResponseImpl) then) =
-      __$$GenerateTotpSecretResponseImplCopyWithImpl<$Res>;
+  factory _$$_GenerateTotpSecretResponseCopyWith(
+          _$_GenerateTotpSecretResponse value,
+          $Res Function(_$_GenerateTotpSecretResponse) then) =
+      __$$_GenerateTotpSecretResponseCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String totpSecretUrl});
 }
 
 /// @nodoc
-class __$$GenerateTotpSecretResponseImplCopyWithImpl<$Res>
+class __$$_GenerateTotpSecretResponseCopyWithImpl<$Res>
     extends _$GenerateTotpSecretResponseCopyWithImpl<$Res,
-        _$GenerateTotpSecretResponseImpl>
-    implements _$$GenerateTotpSecretResponseImplCopyWith<$Res> {
-  __$$GenerateTotpSecretResponseImplCopyWithImpl(
-      _$GenerateTotpSecretResponseImpl _value,
-      $Res Function(_$GenerateTotpSecretResponseImpl) _then)
+        _$_GenerateTotpSecretResponse>
+    implements _$$_GenerateTotpSecretResponseCopyWith<$Res> {
+  __$$_GenerateTotpSecretResponseCopyWithImpl(
+      _$_GenerateTotpSecretResponse _value,
+      $Res Function(_$_GenerateTotpSecretResponse) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -91,7 +91,7 @@ class __$$GenerateTotpSecretResponseImplCopyWithImpl<$Res>
   $Res call({
     Object? totpSecretUrl = null,
   }) {
-    return _then(_$GenerateTotpSecretResponseImpl(
+    return _then(_$_GenerateTotpSecretResponse(
       totpSecretUrl: null == totpSecretUrl
           ? _value.totpSecretUrl
           : totpSecretUrl // ignore: cast_nullable_to_non_nullable
@@ -103,13 +103,12 @@ class __$$GenerateTotpSecretResponseImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$GenerateTotpSecretResponseImpl extends _GenerateTotpSecretResponse {
-  const _$GenerateTotpSecretResponseImpl({required this.totpSecretUrl})
+class _$_GenerateTotpSecretResponse extends _GenerateTotpSecretResponse {
+  const _$_GenerateTotpSecretResponse({required this.totpSecretUrl})
       : super._();
 
-  factory _$GenerateTotpSecretResponseImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$GenerateTotpSecretResponseImplFromJson(json);
+  factory _$_GenerateTotpSecretResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_GenerateTotpSecretResponseFromJson(json);
 
   @override
   final String totpSecretUrl;
@@ -123,7 +122,7 @@ class _$GenerateTotpSecretResponseImpl extends _GenerateTotpSecretResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GenerateTotpSecretResponseImpl &&
+            other is _$_GenerateTotpSecretResponse &&
             (identical(other.totpSecretUrl, totpSecretUrl) ||
                 other.totpSecretUrl == totpSecretUrl));
   }
@@ -135,13 +134,13 @@ class _$GenerateTotpSecretResponseImpl extends _GenerateTotpSecretResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GenerateTotpSecretResponseImplCopyWith<_$GenerateTotpSecretResponseImpl>
-      get copyWith => __$$GenerateTotpSecretResponseImplCopyWithImpl<
-          _$GenerateTotpSecretResponseImpl>(this, _$identity);
+  _$$_GenerateTotpSecretResponseCopyWith<_$_GenerateTotpSecretResponse>
+      get copyWith => __$$_GenerateTotpSecretResponseCopyWithImpl<
+          _$_GenerateTotpSecretResponse>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GenerateTotpSecretResponseImplToJson(
+    return _$$_GenerateTotpSecretResponseToJson(
       this,
     );
   }
@@ -149,16 +148,16 @@ class _$GenerateTotpSecretResponseImpl extends _GenerateTotpSecretResponse {
 
 abstract class _GenerateTotpSecretResponse extends GenerateTotpSecretResponse {
   const factory _GenerateTotpSecretResponse(
-      {required final String totpSecretUrl}) = _$GenerateTotpSecretResponseImpl;
+      {required final String totpSecretUrl}) = _$_GenerateTotpSecretResponse;
   const _GenerateTotpSecretResponse._() : super._();
 
   factory _GenerateTotpSecretResponse.fromJson(Map<String, dynamic> json) =
-      _$GenerateTotpSecretResponseImpl.fromJson;
+      _$_GenerateTotpSecretResponse.fromJson;
 
   @override
   String get totpSecretUrl;
   @override
   @JsonKey(ignore: true)
-  _$$GenerateTotpSecretResponseImplCopyWith<_$GenerateTotpSecretResponseImpl>
+  _$$_GenerateTotpSecretResponseCopyWith<_$_GenerateTotpSecretResponse>
       get copyWith => throw _privateConstructorUsedError;
 }

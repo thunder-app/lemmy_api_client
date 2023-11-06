@@ -145,12 +145,12 @@ class _$PrivateMessageReportViewCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$PrivateMessageReportViewImplCopyWith<$Res>
+abstract class _$$_PrivateMessageReportViewCopyWith<$Res>
     implements $PrivateMessageReportViewCopyWith<$Res> {
-  factory _$$PrivateMessageReportViewImplCopyWith(
-          _$PrivateMessageReportViewImpl value,
-          $Res Function(_$PrivateMessageReportViewImpl) then) =
-      __$$PrivateMessageReportViewImplCopyWithImpl<$Res>;
+  factory _$$_PrivateMessageReportViewCopyWith(
+          _$_PrivateMessageReportView value,
+          $Res Function(_$_PrivateMessageReportView) then) =
+      __$$_PrivateMessageReportViewCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -173,13 +173,12 @@ abstract class _$$PrivateMessageReportViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PrivateMessageReportViewImplCopyWithImpl<$Res>
+class __$$_PrivateMessageReportViewCopyWithImpl<$Res>
     extends _$PrivateMessageReportViewCopyWithImpl<$Res,
-        _$PrivateMessageReportViewImpl>
-    implements _$$PrivateMessageReportViewImplCopyWith<$Res> {
-  __$$PrivateMessageReportViewImplCopyWithImpl(
-      _$PrivateMessageReportViewImpl _value,
-      $Res Function(_$PrivateMessageReportViewImpl) _then)
+        _$_PrivateMessageReportView>
+    implements _$$_PrivateMessageReportViewCopyWith<$Res> {
+  __$$_PrivateMessageReportViewCopyWithImpl(_$_PrivateMessageReportView _value,
+      $Res Function(_$_PrivateMessageReportView) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -191,7 +190,7 @@ class __$$PrivateMessageReportViewImplCopyWithImpl<$Res>
     Object? creator = null,
     Object? resolver = freezed,
   }) {
-    return _then(_$PrivateMessageReportViewImpl(
+    return _then(_$_PrivateMessageReportView(
       privateMessageReport: null == privateMessageReport
           ? _value.privateMessageReport
           : privateMessageReport // ignore: cast_nullable_to_non_nullable
@@ -219,8 +218,8 @@ class __$$PrivateMessageReportViewImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$PrivateMessageReportViewImpl extends _PrivateMessageReportView {
-  const _$PrivateMessageReportViewImpl(
+class _$_PrivateMessageReportView extends _PrivateMessageReportView {
+  const _$_PrivateMessageReportView(
       {required this.privateMessageReport,
       required this.privateMessage,
       required this.privateMessageCreator,
@@ -228,8 +227,8 @@ class _$PrivateMessageReportViewImpl extends _PrivateMessageReportView {
       this.resolver})
       : super._();
 
-  factory _$PrivateMessageReportViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PrivateMessageReportViewImplFromJson(json);
+  factory _$_PrivateMessageReportView.fromJson(Map<String, dynamic> json) =>
+      _$$_PrivateMessageReportViewFromJson(json);
 
   @override
   final PrivateMessageReport privateMessageReport;
@@ -251,7 +250,7 @@ class _$PrivateMessageReportViewImpl extends _PrivateMessageReportView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PrivateMessageReportViewImpl &&
+            other is _$_PrivateMessageReportView &&
             (identical(other.privateMessageReport, privateMessageReport) ||
                 other.privateMessageReport == privateMessageReport) &&
             (identical(other.privateMessage, privateMessage) ||
@@ -271,13 +270,13 @@ class _$PrivateMessageReportViewImpl extends _PrivateMessageReportView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PrivateMessageReportViewImplCopyWith<_$PrivateMessageReportViewImpl>
-      get copyWith => __$$PrivateMessageReportViewImplCopyWithImpl<
-          _$PrivateMessageReportViewImpl>(this, _$identity);
+  _$$_PrivateMessageReportViewCopyWith<_$_PrivateMessageReportView>
+      get copyWith => __$$_PrivateMessageReportViewCopyWithImpl<
+          _$_PrivateMessageReportView>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PrivateMessageReportViewImplToJson(
+    return _$$_PrivateMessageReportViewToJson(
       this,
     );
   }
@@ -289,11 +288,11 @@ abstract class _PrivateMessageReportView extends PrivateMessageReportView {
       required final PrivateMessage privateMessage,
       required final Person privateMessageCreator,
       required final Person creator,
-      final Person? resolver}) = _$PrivateMessageReportViewImpl;
+      final Person? resolver}) = _$_PrivateMessageReportView;
   const _PrivateMessageReportView._() : super._();
 
   factory _PrivateMessageReportView.fromJson(Map<String, dynamic> json) =
-      _$PrivateMessageReportViewImpl.fromJson;
+      _$_PrivateMessageReportView.fromJson;
 
   @override
   PrivateMessageReport get privateMessageReport;
@@ -307,6 +306,6 @@ abstract class _PrivateMessageReportView extends PrivateMessageReportView {
   Person? get resolver;
   @override
   @JsonKey(ignore: true)
-  _$$PrivateMessageReportViewImplCopyWith<_$PrivateMessageReportViewImpl>
+  _$$_PrivateMessageReportViewCopyWith<_$_PrivateMessageReportView>
       get copyWith => throw _privateConstructorUsedError;
 }

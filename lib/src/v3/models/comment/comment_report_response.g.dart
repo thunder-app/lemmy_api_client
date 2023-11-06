@@ -6,15 +6,15 @@ part of 'comment_report_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$CommentReportResponseImpl _$$CommentReportResponseImplFromJson(
+_$_CommentReportResponse _$$_CommentReportResponseFromJson(
         Map<String, dynamic> json) =>
-    _$CommentReportResponseImpl(
+    _$_CommentReportResponse(
       commentReportView: CommentReportView.fromJson(
           json['comment_report_view'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$CommentReportResponseImplToJson(
-        _$CommentReportResponseImpl instance) =>
+Map<String, dynamic> _$$_CommentReportResponseToJson(
+        _$_CommentReportResponse instance) =>
     <String, dynamic>{
       'comment_report_view': instance.commentReportView.toJson(),
     };

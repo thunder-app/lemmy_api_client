@@ -6,14 +6,13 @@ part of 'purge_item_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PurgeItemResponseImpl _$$PurgeItemResponseImplFromJson(
-        Map<String, dynamic> json) =>
-    _$PurgeItemResponseImpl(
+_$_PurgeItemResponse _$$_PurgeItemResponseFromJson(Map<String, dynamic> json) =>
+    _$_PurgeItemResponse(
       success: json['success'] as bool?,
     );
 
-Map<String, dynamic> _$$PurgeItemResponseImplToJson(
-        _$PurgeItemResponseImpl instance) =>
+Map<String, dynamic> _$$_PurgeItemResponseToJson(
+        _$_PurgeItemResponse instance) =>
     <String, dynamic>{
       'success': instance.success,
     };

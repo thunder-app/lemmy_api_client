@@ -78,11 +78,11 @@ class _$BlockPersonResponseCopyWithImpl<$Res, $Val extends BlockPersonResponse>
 }
 
 /// @nodoc
-abstract class _$$BlockPersonResponseImplCopyWith<$Res>
+abstract class _$$_BlockPersonResponseCopyWith<$Res>
     implements $BlockPersonResponseCopyWith<$Res> {
-  factory _$$BlockPersonResponseImplCopyWith(_$BlockPersonResponseImpl value,
-          $Res Function(_$BlockPersonResponseImpl) then) =
-      __$$BlockPersonResponseImplCopyWithImpl<$Res>;
+  factory _$$_BlockPersonResponseCopyWith(_$_BlockPersonResponse value,
+          $Res Function(_$_BlockPersonResponse) then) =
+      __$$_BlockPersonResponseCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({PersonView personView, bool blocked});
@@ -92,11 +92,11 @@ abstract class _$$BlockPersonResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$BlockPersonResponseImplCopyWithImpl<$Res>
-    extends _$BlockPersonResponseCopyWithImpl<$Res, _$BlockPersonResponseImpl>
-    implements _$$BlockPersonResponseImplCopyWith<$Res> {
-  __$$BlockPersonResponseImplCopyWithImpl(_$BlockPersonResponseImpl _value,
-      $Res Function(_$BlockPersonResponseImpl) _then)
+class __$$_BlockPersonResponseCopyWithImpl<$Res>
+    extends _$BlockPersonResponseCopyWithImpl<$Res, _$_BlockPersonResponse>
+    implements _$$_BlockPersonResponseCopyWith<$Res> {
+  __$$_BlockPersonResponseCopyWithImpl(_$_BlockPersonResponse _value,
+      $Res Function(_$_BlockPersonResponse) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -105,7 +105,7 @@ class __$$BlockPersonResponseImplCopyWithImpl<$Res>
     Object? personView = null,
     Object? blocked = null,
   }) {
-    return _then(_$BlockPersonResponseImpl(
+    return _then(_$_BlockPersonResponse(
       personView: null == personView
           ? _value.personView
           : personView // ignore: cast_nullable_to_non_nullable
@@ -121,13 +121,13 @@ class __$$BlockPersonResponseImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$BlockPersonResponseImpl extends _BlockPersonResponse {
-  const _$BlockPersonResponseImpl(
+class _$_BlockPersonResponse extends _BlockPersonResponse {
+  const _$_BlockPersonResponse(
       {required this.personView, required this.blocked})
       : super._();
 
-  factory _$BlockPersonResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$BlockPersonResponseImplFromJson(json);
+  factory _$_BlockPersonResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_BlockPersonResponseFromJson(json);
 
   @override
   final PersonView personView;
@@ -143,7 +143,7 @@ class _$BlockPersonResponseImpl extends _BlockPersonResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$BlockPersonResponseImpl &&
+            other is _$_BlockPersonResponse &&
             (identical(other.personView, personView) ||
                 other.personView == personView) &&
             (identical(other.blocked, blocked) || other.blocked == blocked));
@@ -156,13 +156,13 @@ class _$BlockPersonResponseImpl extends _BlockPersonResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$BlockPersonResponseImplCopyWith<_$BlockPersonResponseImpl> get copyWith =>
-      __$$BlockPersonResponseImplCopyWithImpl<_$BlockPersonResponseImpl>(
+  _$$_BlockPersonResponseCopyWith<_$_BlockPersonResponse> get copyWith =>
+      __$$_BlockPersonResponseCopyWithImpl<_$_BlockPersonResponse>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BlockPersonResponseImplToJson(
+    return _$$_BlockPersonResponseToJson(
       this,
     );
   }
@@ -171,11 +171,11 @@ class _$BlockPersonResponseImpl extends _BlockPersonResponse {
 abstract class _BlockPersonResponse extends BlockPersonResponse {
   const factory _BlockPersonResponse(
       {required final PersonView personView,
-      required final bool blocked}) = _$BlockPersonResponseImpl;
+      required final bool blocked}) = _$_BlockPersonResponse;
   const _BlockPersonResponse._() : super._();
 
   factory _BlockPersonResponse.fromJson(Map<String, dynamic> json) =
-      _$BlockPersonResponseImpl.fromJson;
+      _$_BlockPersonResponse.fromJson;
 
   @override
   PersonView get personView;
@@ -183,6 +183,6 @@ abstract class _BlockPersonResponse extends BlockPersonResponse {
   bool get blocked;
   @override
   @JsonKey(ignore: true)
-  _$$BlockPersonResponseImplCopyWith<_$BlockPersonResponseImpl> get copyWith =>
+  _$$_BlockPersonResponseCopyWith<_$_BlockPersonResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }

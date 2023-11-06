@@ -6,8 +6,8 @@ part of 'custom_emoji.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$CustomEmojiImpl _$$CustomEmojiImplFromJson(Map<String, dynamic> json) =>
-    _$CustomEmojiImpl(
+_$_CustomEmoji _$$_CustomEmojiFromJson(Map<String, dynamic> json) =>
+    _$_CustomEmoji(
       id: json['id'] as int,
       localSiteId: json['local_site_id'] as int,
       shortcode: json['shortcode'] as String,
@@ -19,7 +19,7 @@ _$CustomEmojiImpl _$$CustomEmojiImplFromJson(Map<String, dynamic> json) =>
           json['updated'], const ForceUtcDateTime().fromJson),
     );
 
-Map<String, dynamic> _$$CustomEmojiImplToJson(_$CustomEmojiImpl instance) =>
+Map<String, dynamic> _$$_CustomEmojiToJson(_$_CustomEmoji instance) =>
     <String, dynamic>{
       'id': instance.id,
       'local_site_id': instance.localSiteId,

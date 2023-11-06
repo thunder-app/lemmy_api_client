@@ -125,11 +125,11 @@ class _$ModLockPostViewCopyWithImpl<$Res, $Val extends ModLockPostView>
 }
 
 /// @nodoc
-abstract class _$$ModLockPostViewImplCopyWith<$Res>
+abstract class _$$_ModLockPostViewCopyWith<$Res>
     implements $ModLockPostViewCopyWith<$Res> {
-  factory _$$ModLockPostViewImplCopyWith(_$ModLockPostViewImpl value,
-          $Res Function(_$ModLockPostViewImpl) then) =
-      __$$ModLockPostViewImplCopyWithImpl<$Res>;
+  factory _$$_ModLockPostViewCopyWith(
+          _$_ModLockPostView value, $Res Function(_$_ModLockPostView) then) =
+      __$$_ModLockPostViewCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -149,11 +149,11 @@ abstract class _$$ModLockPostViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ModLockPostViewImplCopyWithImpl<$Res>
-    extends _$ModLockPostViewCopyWithImpl<$Res, _$ModLockPostViewImpl>
-    implements _$$ModLockPostViewImplCopyWith<$Res> {
-  __$$ModLockPostViewImplCopyWithImpl(
-      _$ModLockPostViewImpl _value, $Res Function(_$ModLockPostViewImpl) _then)
+class __$$_ModLockPostViewCopyWithImpl<$Res>
+    extends _$ModLockPostViewCopyWithImpl<$Res, _$_ModLockPostView>
+    implements _$$_ModLockPostViewCopyWith<$Res> {
+  __$$_ModLockPostViewCopyWithImpl(
+      _$_ModLockPostView _value, $Res Function(_$_ModLockPostView) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -164,7 +164,7 @@ class __$$ModLockPostViewImplCopyWithImpl<$Res>
     Object? post = null,
     Object? community = null,
   }) {
-    return _then(_$ModLockPostViewImpl(
+    return _then(_$_ModLockPostView(
       modLockPost: null == modLockPost
           ? _value.modLockPost
           : modLockPost // ignore: cast_nullable_to_non_nullable
@@ -188,16 +188,16 @@ class __$$ModLockPostViewImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$ModLockPostViewImpl extends _ModLockPostView {
-  const _$ModLockPostViewImpl(
+class _$_ModLockPostView extends _ModLockPostView {
+  const _$_ModLockPostView(
       {required this.modLockPost,
       this.moderator,
       required this.post,
       required this.community})
       : super._();
 
-  factory _$ModLockPostViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ModLockPostViewImplFromJson(json);
+  factory _$_ModLockPostView.fromJson(Map<String, dynamic> json) =>
+      _$$_ModLockPostViewFromJson(json);
 
   @override
   final ModLockPost modLockPost;
@@ -217,7 +217,7 @@ class _$ModLockPostViewImpl extends _ModLockPostView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ModLockPostViewImpl &&
+            other is _$_ModLockPostView &&
             (identical(other.modLockPost, modLockPost) ||
                 other.modLockPost == modLockPost) &&
             (identical(other.moderator, moderator) ||
@@ -235,13 +235,12 @@ class _$ModLockPostViewImpl extends _ModLockPostView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ModLockPostViewImplCopyWith<_$ModLockPostViewImpl> get copyWith =>
-      __$$ModLockPostViewImplCopyWithImpl<_$ModLockPostViewImpl>(
-          this, _$identity);
+  _$$_ModLockPostViewCopyWith<_$_ModLockPostView> get copyWith =>
+      __$$_ModLockPostViewCopyWithImpl<_$_ModLockPostView>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ModLockPostViewImplToJson(
+    return _$$_ModLockPostViewToJson(
       this,
     );
   }
@@ -252,11 +251,11 @@ abstract class _ModLockPostView extends ModLockPostView {
       {required final ModLockPost modLockPost,
       final Person? moderator,
       required final Post post,
-      required final Community community}) = _$ModLockPostViewImpl;
+      required final Community community}) = _$_ModLockPostView;
   const _ModLockPostView._() : super._();
 
   factory _ModLockPostView.fromJson(Map<String, dynamic> json) =
-      _$ModLockPostViewImpl.fromJson;
+      _$_ModLockPostView.fromJson;
 
   @override
   ModLockPost get modLockPost;
@@ -268,6 +267,6 @@ abstract class _ModLockPostView extends ModLockPostView {
   Community get community;
   @override
   @JsonKey(ignore: true)
-  _$$ModLockPostViewImplCopyWith<_$ModLockPostViewImpl> get copyWith =>
+  _$$_ModLockPostViewCopyWith<_$_ModLockPostView> get copyWith =>
       throw _privateConstructorUsedError;
 }

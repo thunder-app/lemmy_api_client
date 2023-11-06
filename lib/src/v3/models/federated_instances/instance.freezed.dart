@@ -97,11 +97,10 @@ class _$InstanceCopyWithImpl<$Res, $Val extends Instance>
 }
 
 /// @nodoc
-abstract class _$$InstanceImplCopyWith<$Res>
-    implements $InstanceCopyWith<$Res> {
-  factory _$$InstanceImplCopyWith(
-          _$InstanceImpl value, $Res Function(_$InstanceImpl) then) =
-      __$$InstanceImplCopyWithImpl<$Res>;
+abstract class _$$_InstanceCopyWith<$Res> implements $InstanceCopyWith<$Res> {
+  factory _$$_InstanceCopyWith(
+          _$_Instance value, $Res Function(_$_Instance) then) =
+      __$$_InstanceCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -114,11 +113,11 @@ abstract class _$$InstanceImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$InstanceImplCopyWithImpl<$Res>
-    extends _$InstanceCopyWithImpl<$Res, _$InstanceImpl>
-    implements _$$InstanceImplCopyWith<$Res> {
-  __$$InstanceImplCopyWithImpl(
-      _$InstanceImpl _value, $Res Function(_$InstanceImpl) _then)
+class __$$_InstanceCopyWithImpl<$Res>
+    extends _$InstanceCopyWithImpl<$Res, _$_Instance>
+    implements _$$_InstanceCopyWith<$Res> {
+  __$$_InstanceCopyWithImpl(
+      _$_Instance _value, $Res Function(_$_Instance) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -131,7 +130,7 @@ class __$$InstanceImplCopyWithImpl<$Res>
     Object? software = freezed,
     Object? version = freezed,
   }) {
-    return _then(_$InstanceImpl(
+    return _then(_$_Instance(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -163,8 +162,8 @@ class __$$InstanceImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$InstanceImpl extends _Instance {
-  const _$InstanceImpl(
+class _$_Instance extends _Instance {
+  const _$_Instance(
       {required this.id,
       required this.domain,
       required this.published,
@@ -173,8 +172,8 @@ class _$InstanceImpl extends _Instance {
       this.version})
       : super._();
 
-  factory _$InstanceImpl.fromJson(Map<String, dynamic> json) =>
-      _$$InstanceImplFromJson(json);
+  factory _$_Instance.fromJson(Map<String, dynamic> json) =>
+      _$$_InstanceFromJson(json);
 
   @override
   final int id;
@@ -198,7 +197,7 @@ class _$InstanceImpl extends _Instance {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$InstanceImpl &&
+            other is _$_Instance &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.domain, domain) || other.domain == domain) &&
             (identical(other.published, published) ||
@@ -217,12 +216,12 @@ class _$InstanceImpl extends _Instance {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$InstanceImplCopyWith<_$InstanceImpl> get copyWith =>
-      __$$InstanceImplCopyWithImpl<_$InstanceImpl>(this, _$identity);
+  _$$_InstanceCopyWith<_$_Instance> get copyWith =>
+      __$$_InstanceCopyWithImpl<_$_Instance>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$InstanceImplToJson(
+    return _$$_InstanceToJson(
       this,
     );
   }
@@ -235,11 +234,10 @@ abstract class _Instance extends Instance {
       required final DateTime published,
       final DateTime? updated,
       final String? software,
-      final String? version}) = _$InstanceImpl;
+      final String? version}) = _$_Instance;
   const _Instance._() : super._();
 
-  factory _Instance.fromJson(Map<String, dynamic> json) =
-      _$InstanceImpl.fromJson;
+  factory _Instance.fromJson(Map<String, dynamic> json) = _$_Instance.fromJson;
 
   @override
   int get id;
@@ -255,6 +253,6 @@ abstract class _Instance extends Instance {
   String? get version;
   @override
   @JsonKey(ignore: true)
-  _$$InstanceImplCopyWith<_$InstanceImpl> get copyWith =>
+  _$$_InstanceCopyWith<_$_Instance> get copyWith =>
       throw _privateConstructorUsedError;
 }

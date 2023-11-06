@@ -74,22 +74,22 @@ class _$CustomEmojiKeywordCopyWithImpl<$Res, $Val extends CustomEmojiKeyword>
 }
 
 /// @nodoc
-abstract class _$$CustomEmojiKeywordImplCopyWith<$Res>
+abstract class _$$_CustomEmojiKeywordCopyWith<$Res>
     implements $CustomEmojiKeywordCopyWith<$Res> {
-  factory _$$CustomEmojiKeywordImplCopyWith(_$CustomEmojiKeywordImpl value,
-          $Res Function(_$CustomEmojiKeywordImpl) then) =
-      __$$CustomEmojiKeywordImplCopyWithImpl<$Res>;
+  factory _$$_CustomEmojiKeywordCopyWith(_$_CustomEmojiKeyword value,
+          $Res Function(_$_CustomEmojiKeyword) then) =
+      __$$_CustomEmojiKeywordCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int id, int customEmojiId, String keyword});
 }
 
 /// @nodoc
-class __$$CustomEmojiKeywordImplCopyWithImpl<$Res>
-    extends _$CustomEmojiKeywordCopyWithImpl<$Res, _$CustomEmojiKeywordImpl>
-    implements _$$CustomEmojiKeywordImplCopyWith<$Res> {
-  __$$CustomEmojiKeywordImplCopyWithImpl(_$CustomEmojiKeywordImpl _value,
-      $Res Function(_$CustomEmojiKeywordImpl) _then)
+class __$$_CustomEmojiKeywordCopyWithImpl<$Res>
+    extends _$CustomEmojiKeywordCopyWithImpl<$Res, _$_CustomEmojiKeyword>
+    implements _$$_CustomEmojiKeywordCopyWith<$Res> {
+  __$$_CustomEmojiKeywordCopyWithImpl(
+      _$_CustomEmojiKeyword _value, $Res Function(_$_CustomEmojiKeyword) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -99,7 +99,7 @@ class __$$CustomEmojiKeywordImplCopyWithImpl<$Res>
     Object? customEmojiId = null,
     Object? keyword = null,
   }) {
-    return _then(_$CustomEmojiKeywordImpl(
+    return _then(_$_CustomEmojiKeyword(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -119,13 +119,13 @@ class __$$CustomEmojiKeywordImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$CustomEmojiKeywordImpl extends _CustomEmojiKeyword {
-  const _$CustomEmojiKeywordImpl(
+class _$_CustomEmojiKeyword extends _CustomEmojiKeyword {
+  const _$_CustomEmojiKeyword(
       {required this.id, required this.customEmojiId, required this.keyword})
       : super._();
 
-  factory _$CustomEmojiKeywordImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CustomEmojiKeywordImplFromJson(json);
+  factory _$_CustomEmojiKeyword.fromJson(Map<String, dynamic> json) =>
+      _$$_CustomEmojiKeywordFromJson(json);
 
   @override
   final int id;
@@ -143,7 +143,7 @@ class _$CustomEmojiKeywordImpl extends _CustomEmojiKeyword {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CustomEmojiKeywordImpl &&
+            other is _$_CustomEmojiKeyword &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.customEmojiId, customEmojiId) ||
                 other.customEmojiId == customEmojiId) &&
@@ -157,13 +157,13 @@ class _$CustomEmojiKeywordImpl extends _CustomEmojiKeyword {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CustomEmojiKeywordImplCopyWith<_$CustomEmojiKeywordImpl> get copyWith =>
-      __$$CustomEmojiKeywordImplCopyWithImpl<_$CustomEmojiKeywordImpl>(
+  _$$_CustomEmojiKeywordCopyWith<_$_CustomEmojiKeyword> get copyWith =>
+      __$$_CustomEmojiKeywordCopyWithImpl<_$_CustomEmojiKeyword>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CustomEmojiKeywordImplToJson(
+    return _$$_CustomEmojiKeywordToJson(
       this,
     );
   }
@@ -173,11 +173,11 @@ abstract class _CustomEmojiKeyword extends CustomEmojiKeyword {
   const factory _CustomEmojiKeyword(
       {required final int id,
       required final int customEmojiId,
-      required final String keyword}) = _$CustomEmojiKeywordImpl;
+      required final String keyword}) = _$_CustomEmojiKeyword;
   const _CustomEmojiKeyword._() : super._();
 
   factory _CustomEmojiKeyword.fromJson(Map<String, dynamic> json) =
-      _$CustomEmojiKeywordImpl.fromJson;
+      _$_CustomEmojiKeyword.fromJson;
 
   @override
   int get id;
@@ -187,6 +187,6 @@ abstract class _CustomEmojiKeyword extends CustomEmojiKeyword {
   String get keyword;
   @override
   @JsonKey(ignore: true)
-  _$$CustomEmojiKeywordImplCopyWith<_$CustomEmojiKeywordImpl> get copyWith =>
+  _$$_CustomEmojiKeywordCopyWith<_$_CustomEmojiKeyword> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -6,9 +6,9 @@ part of 'get_person_details_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GetPersonDetailsResponseImpl _$$GetPersonDetailsResponseImplFromJson(
+_$_GetPersonDetailsResponse _$$_GetPersonDetailsResponseFromJson(
         Map<String, dynamic> json) =>
-    _$GetPersonDetailsResponseImpl(
+    _$_GetPersonDetailsResponse(
       personView:
           PersonView.fromJson(json['person_view'] as Map<String, dynamic>),
       comments: (json['comments'] as List<dynamic>)
@@ -23,8 +23,8 @@ _$GetPersonDetailsResponseImpl _$$GetPersonDetailsResponseImplFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$GetPersonDetailsResponseImplToJson(
-        _$GetPersonDetailsResponseImpl instance) =>
+Map<String, dynamic> _$$_GetPersonDetailsResponseToJson(
+        _$_GetPersonDetailsResponse instance) =>
     <String, dynamic>{
       'person_view': instance.personView.toJson(),
       'comments': instance.comments.map((e) => e.toJson()).toList(),

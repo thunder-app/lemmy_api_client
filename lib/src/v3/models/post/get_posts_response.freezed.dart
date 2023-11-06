@@ -68,22 +68,22 @@ class _$GetPostsResponseCopyWithImpl<$Res, $Val extends GetPostsResponse>
 }
 
 /// @nodoc
-abstract class _$$GetPostsResponseImplCopyWith<$Res>
+abstract class _$$_GetPostsResponseCopyWith<$Res>
     implements $GetPostsResponseCopyWith<$Res> {
-  factory _$$GetPostsResponseImplCopyWith(_$GetPostsResponseImpl value,
-          $Res Function(_$GetPostsResponseImpl) then) =
-      __$$GetPostsResponseImplCopyWithImpl<$Res>;
+  factory _$$_GetPostsResponseCopyWith(
+          _$_GetPostsResponse value, $Res Function(_$_GetPostsResponse) then) =
+      __$$_GetPostsResponseCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<PostView> posts, String? nextPage});
 }
 
 /// @nodoc
-class __$$GetPostsResponseImplCopyWithImpl<$Res>
-    extends _$GetPostsResponseCopyWithImpl<$Res, _$GetPostsResponseImpl>
-    implements _$$GetPostsResponseImplCopyWith<$Res> {
-  __$$GetPostsResponseImplCopyWithImpl(_$GetPostsResponseImpl _value,
-      $Res Function(_$GetPostsResponseImpl) _then)
+class __$$_GetPostsResponseCopyWithImpl<$Res>
+    extends _$GetPostsResponseCopyWithImpl<$Res, _$_GetPostsResponse>
+    implements _$$_GetPostsResponseCopyWith<$Res> {
+  __$$_GetPostsResponseCopyWithImpl(
+      _$_GetPostsResponse _value, $Res Function(_$_GetPostsResponse) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -92,7 +92,7 @@ class __$$GetPostsResponseImplCopyWithImpl<$Res>
     Object? posts = null,
     Object? nextPage = freezed,
   }) {
-    return _then(_$GetPostsResponseImpl(
+    return _then(_$_GetPostsResponse(
       posts: null == posts
           ? _value._posts
           : posts // ignore: cast_nullable_to_non_nullable
@@ -108,14 +108,14 @@ class __$$GetPostsResponseImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$GetPostsResponseImpl extends _GetPostsResponse {
-  const _$GetPostsResponseImpl(
+class _$_GetPostsResponse extends _GetPostsResponse {
+  const _$_GetPostsResponse(
       {required final List<PostView> posts, this.nextPage})
       : _posts = posts,
         super._();
 
-  factory _$GetPostsResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GetPostsResponseImplFromJson(json);
+  factory _$_GetPostsResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_GetPostsResponseFromJson(json);
 
   final List<PostView> _posts;
   @override
@@ -137,7 +137,7 @@ class _$GetPostsResponseImpl extends _GetPostsResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GetPostsResponseImpl &&
+            other is _$_GetPostsResponse &&
             const DeepCollectionEquality().equals(other._posts, _posts) &&
             (identical(other.nextPage, nextPage) ||
                 other.nextPage == nextPage));
@@ -151,13 +151,12 @@ class _$GetPostsResponseImpl extends _GetPostsResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetPostsResponseImplCopyWith<_$GetPostsResponseImpl> get copyWith =>
-      __$$GetPostsResponseImplCopyWithImpl<_$GetPostsResponseImpl>(
-          this, _$identity);
+  _$$_GetPostsResponseCopyWith<_$_GetPostsResponse> get copyWith =>
+      __$$_GetPostsResponseCopyWithImpl<_$_GetPostsResponse>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetPostsResponseImplToJson(
+    return _$$_GetPostsResponseToJson(
       this,
     );
   }
@@ -166,11 +165,11 @@ class _$GetPostsResponseImpl extends _GetPostsResponse {
 abstract class _GetPostsResponse extends GetPostsResponse {
   const factory _GetPostsResponse(
       {required final List<PostView> posts,
-      final String? nextPage}) = _$GetPostsResponseImpl;
+      final String? nextPage}) = _$_GetPostsResponse;
   const _GetPostsResponse._() : super._();
 
   factory _GetPostsResponse.fromJson(Map<String, dynamic> json) =
-      _$GetPostsResponseImpl.fromJson;
+      _$_GetPostsResponse.fromJson;
 
   @override
   List<PostView> get posts;
@@ -178,6 +177,6 @@ abstract class _GetPostsResponse extends GetPostsResponse {
   String? get nextPage;
   @override
   @JsonKey(ignore: true)
-  _$$GetPostsResponseImplCopyWith<_$GetPostsResponseImpl> get copyWith =>
+  _$$_GetPostsResponseCopyWith<_$_GetPostsResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }

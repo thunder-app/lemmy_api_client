@@ -6,8 +6,8 @@ part of 'post_report.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PostReportImpl _$$PostReportImplFromJson(Map<String, dynamic> json) =>
-    _$PostReportImpl(
+_$_PostReport _$$_PostReportFromJson(Map<String, dynamic> json) =>
+    _$_PostReport(
       id: json['id'] as int,
       creatorId: json['creator_id'] as int,
       postId: json['post_id'] as int,
@@ -22,7 +22,7 @@ _$PostReportImpl _$$PostReportImplFromJson(Map<String, dynamic> json) =>
           json['updated'], const ForceUtcDateTime().fromJson),
     );
 
-Map<String, dynamic> _$$PostReportImplToJson(_$PostReportImpl instance) =>
+Map<String, dynamic> _$$_PostReportToJson(_$_PostReport instance) =>
     <String, dynamic>{
       'id': instance.id,
       'creator_id': instance.creatorId,

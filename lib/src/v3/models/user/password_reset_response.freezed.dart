@@ -64,24 +64,22 @@ class _$PasswordResetResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$PasswordResetResponseImplCopyWith<$Res>
+abstract class _$$_PasswordResetResponseCopyWith<$Res>
     implements $PasswordResetResponseCopyWith<$Res> {
-  factory _$$PasswordResetResponseImplCopyWith(
-          _$PasswordResetResponseImpl value,
-          $Res Function(_$PasswordResetResponseImpl) then) =
-      __$$PasswordResetResponseImplCopyWithImpl<$Res>;
+  factory _$$_PasswordResetResponseCopyWith(_$_PasswordResetResponse value,
+          $Res Function(_$_PasswordResetResponse) then) =
+      __$$_PasswordResetResponseCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool? success});
 }
 
 /// @nodoc
-class __$$PasswordResetResponseImplCopyWithImpl<$Res>
-    extends _$PasswordResetResponseCopyWithImpl<$Res,
-        _$PasswordResetResponseImpl>
-    implements _$$PasswordResetResponseImplCopyWith<$Res> {
-  __$$PasswordResetResponseImplCopyWithImpl(_$PasswordResetResponseImpl _value,
-      $Res Function(_$PasswordResetResponseImpl) _then)
+class __$$_PasswordResetResponseCopyWithImpl<$Res>
+    extends _$PasswordResetResponseCopyWithImpl<$Res, _$_PasswordResetResponse>
+    implements _$$_PasswordResetResponseCopyWith<$Res> {
+  __$$_PasswordResetResponseCopyWithImpl(_$_PasswordResetResponse _value,
+      $Res Function(_$_PasswordResetResponse) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -89,7 +87,7 @@ class __$$PasswordResetResponseImplCopyWithImpl<$Res>
   $Res call({
     Object? success = freezed,
   }) {
-    return _then(_$PasswordResetResponseImpl(
+    return _then(_$_PasswordResetResponse(
       success: freezed == success
           ? _value.success
           : success // ignore: cast_nullable_to_non_nullable
@@ -101,11 +99,11 @@ class __$$PasswordResetResponseImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$PasswordResetResponseImpl extends _PasswordResetResponse {
-  const _$PasswordResetResponseImpl({this.success}) : super._();
+class _$_PasswordResetResponse extends _PasswordResetResponse {
+  const _$_PasswordResetResponse({this.success}) : super._();
 
-  factory _$PasswordResetResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PasswordResetResponseImplFromJson(json);
+  factory _$_PasswordResetResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_PasswordResetResponseFromJson(json);
 
   @override
   final bool? success;
@@ -119,7 +117,7 @@ class _$PasswordResetResponseImpl extends _PasswordResetResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PasswordResetResponseImpl &&
+            other is _$_PasswordResetResponse &&
             (identical(other.success, success) || other.success == success));
   }
 
@@ -130,13 +128,13 @@ class _$PasswordResetResponseImpl extends _PasswordResetResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PasswordResetResponseImplCopyWith<_$PasswordResetResponseImpl>
-      get copyWith => __$$PasswordResetResponseImplCopyWithImpl<
-          _$PasswordResetResponseImpl>(this, _$identity);
+  _$$_PasswordResetResponseCopyWith<_$_PasswordResetResponse> get copyWith =>
+      __$$_PasswordResetResponseCopyWithImpl<_$_PasswordResetResponse>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PasswordResetResponseImplToJson(
+    return _$$_PasswordResetResponseToJson(
       this,
     );
   }
@@ -144,16 +142,16 @@ class _$PasswordResetResponseImpl extends _PasswordResetResponse {
 
 abstract class _PasswordResetResponse extends PasswordResetResponse {
   const factory _PasswordResetResponse({final bool? success}) =
-      _$PasswordResetResponseImpl;
+      _$_PasswordResetResponse;
   const _PasswordResetResponse._() : super._();
 
   factory _PasswordResetResponse.fromJson(Map<String, dynamic> json) =
-      _$PasswordResetResponseImpl.fromJson;
+      _$_PasswordResetResponse.fromJson;
 
   @override
   bool? get success;
   @override
   @JsonKey(ignore: true)
-  _$$PasswordResetResponseImplCopyWith<_$PasswordResetResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$_PasswordResetResponseCopyWith<_$_PasswordResetResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }

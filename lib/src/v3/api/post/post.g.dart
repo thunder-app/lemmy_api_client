@@ -6,8 +6,8 @@ part of 'post.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$CreatePostImpl _$$CreatePostImplFromJson(Map<String, dynamic> json) =>
-    _$CreatePostImpl(
+_$_CreatePost _$$_CreatePostFromJson(Map<String, dynamic> json) =>
+    _$_CreatePost(
       name: json['name'] as String,
       communityId: json['community_id'] as int,
       url: json['url'] as String?,
@@ -18,7 +18,7 @@ _$CreatePostImpl _$$CreatePostImplFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$CreatePostImplToJson(_$CreatePostImpl instance) {
+Map<String, dynamic> _$$_CreatePostToJson(_$_CreatePost instance) {
   final val = <String, dynamic>{
     'name': instance.name,
     'community_id': instance.communityId,
@@ -39,14 +39,13 @@ Map<String, dynamic> _$$CreatePostImplToJson(_$CreatePostImpl instance) {
   return val;
 }
 
-_$GetPostImpl _$$GetPostImplFromJson(Map<String, dynamic> json) =>
-    _$GetPostImpl(
+_$_GetPost _$$_GetPostFromJson(Map<String, dynamic> json) => _$_GetPost(
       id: json['id'] as int?,
       commentId: json['comment_id'] as int?,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$GetPostImplToJson(_$GetPostImpl instance) {
+Map<String, dynamic> _$$_GetPostToJson(_$_GetPost instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -61,8 +60,7 @@ Map<String, dynamic> _$$GetPostImplToJson(_$GetPostImpl instance) {
   return val;
 }
 
-_$EditPostImpl _$$EditPostImplFromJson(Map<String, dynamic> json) =>
-    _$EditPostImpl(
+_$_EditPost _$$_EditPostFromJson(Map<String, dynamic> json) => _$_EditPost(
       postId: json['post_id'] as int,
       name: json['name'] as String?,
       url: json['url'] as String?,
@@ -72,7 +70,7 @@ _$EditPostImpl _$$EditPostImplFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$EditPostImplToJson(_$EditPostImpl instance) {
+Map<String, dynamic> _$$_EditPostToJson(_$_EditPost instance) {
   final val = <String, dynamic>{
     'post_id': instance.postId,
   };
@@ -92,14 +90,14 @@ Map<String, dynamic> _$$EditPostImplToJson(_$EditPostImpl instance) {
   return val;
 }
 
-_$DeletePostImpl _$$DeletePostImplFromJson(Map<String, dynamic> json) =>
-    _$DeletePostImpl(
+_$_DeletePost _$$_DeletePostFromJson(Map<String, dynamic> json) =>
+    _$_DeletePost(
       postId: json['post_id'] as int,
       deleted: json['deleted'] as bool,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$DeletePostImplToJson(_$DeletePostImpl instance) {
+Map<String, dynamic> _$$_DeletePostToJson(_$_DeletePost instance) {
   final val = <String, dynamic>{
     'post_id': instance.postId,
     'deleted': instance.deleted,
@@ -115,15 +113,15 @@ Map<String, dynamic> _$$DeletePostImplToJson(_$DeletePostImpl instance) {
   return val;
 }
 
-_$RemovePostImpl _$$RemovePostImplFromJson(Map<String, dynamic> json) =>
-    _$RemovePostImpl(
+_$_RemovePost _$$_RemovePostFromJson(Map<String, dynamic> json) =>
+    _$_RemovePost(
       postId: json['post_id'] as int,
       removed: json['removed'] as bool,
       reason: json['reason'] as String?,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$RemovePostImplToJson(_$RemovePostImpl instance) {
+Map<String, dynamic> _$$_RemovePostToJson(_$_RemovePost instance) {
   final val = <String, dynamic>{
     'post_id': instance.postId,
     'removed': instance.removed,
@@ -140,8 +138,8 @@ Map<String, dynamic> _$$RemovePostImplToJson(_$RemovePostImpl instance) {
   return val;
 }
 
-_$MarkPostAsReadImpl _$$MarkPostAsReadImplFromJson(Map<String, dynamic> json) =>
-    _$MarkPostAsReadImpl(
+_$_MarkPostAsRead _$$_MarkPostAsReadFromJson(Map<String, dynamic> json) =>
+    _$_MarkPostAsRead(
       postId: json['post_id'] as int?,
       postIds:
           (json['post_ids'] as List<dynamic>?)?.map((e) => e as int).toList(),
@@ -149,8 +147,7 @@ _$MarkPostAsReadImpl _$$MarkPostAsReadImplFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$MarkPostAsReadImplToJson(
-    _$MarkPostAsReadImpl instance) {
+Map<String, dynamic> _$$_MarkPostAsReadToJson(_$_MarkPostAsRead instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -166,14 +163,13 @@ Map<String, dynamic> _$$MarkPostAsReadImplToJson(
   return val;
 }
 
-_$LockPostImpl _$$LockPostImplFromJson(Map<String, dynamic> json) =>
-    _$LockPostImpl(
+_$_LockPost _$$_LockPostFromJson(Map<String, dynamic> json) => _$_LockPost(
       postId: json['post_id'] as int,
       locked: json['locked'] as bool,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$LockPostImplToJson(_$LockPostImpl instance) {
+Map<String, dynamic> _$$_LockPostToJson(_$_LockPost instance) {
   final val = <String, dynamic>{
     'post_id': instance.postId,
     'locked': instance.locked,
@@ -189,15 +185,15 @@ Map<String, dynamic> _$$LockPostImplToJson(_$LockPostImpl instance) {
   return val;
 }
 
-_$FeaturePostImpl _$$FeaturePostImplFromJson(Map<String, dynamic> json) =>
-    _$FeaturePostImpl(
+_$_FeaturePost _$$_FeaturePostFromJson(Map<String, dynamic> json) =>
+    _$_FeaturePost(
       postId: json['post_id'] as int,
       featured: json['featured'] as bool,
       featureType: PostFeatureType.fromJson(json['feature_type'] as String),
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$FeaturePostImplToJson(_$FeaturePostImpl instance) {
+Map<String, dynamic> _$$_FeaturePostToJson(_$_FeaturePost instance) {
   final val = <String, dynamic>{
     'post_id': instance.postId,
     'featured': instance.featured,
@@ -214,8 +210,7 @@ Map<String, dynamic> _$$FeaturePostImplToJson(_$FeaturePostImpl instance) {
   return val;
 }
 
-_$GetPostsImpl _$$GetPostsImplFromJson(Map<String, dynamic> json) =>
-    _$GetPostsImpl(
+_$_GetPosts _$$_GetPostsFromJson(Map<String, dynamic> json) => _$_GetPosts(
       type: json['type_'] == null ? null : ListingType.fromJson(json['type_']),
       sort: json['sort'] == null ? null : SortType.fromJson(json['sort']),
       page: json['page'] as int?,
@@ -230,7 +225,7 @@ _$GetPostsImpl _$$GetPostsImplFromJson(Map<String, dynamic> json) =>
       pageCursor: json['page_cursor'] as String?,
     );
 
-Map<String, dynamic> _$$GetPostsImplToJson(_$GetPostsImpl instance) {
+Map<String, dynamic> _$$_GetPostsToJson(_$_GetPosts instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -254,15 +249,14 @@ Map<String, dynamic> _$$GetPostsImplToJson(_$GetPostsImpl instance) {
   return val;
 }
 
-_$CreatePostLikeImpl _$$CreatePostLikeImplFromJson(Map<String, dynamic> json) =>
-    _$CreatePostLikeImpl(
+_$_CreatePostLike _$$_CreatePostLikeFromJson(Map<String, dynamic> json) =>
+    _$_CreatePostLike(
       postId: json['post_id'] as int,
       score: json['score'] as num,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$CreatePostLikeImplToJson(
-    _$CreatePostLikeImpl instance) {
+Map<String, dynamic> _$$_CreatePostLikeToJson(_$_CreatePostLike instance) {
   final val = <String, dynamic>{
     'post_id': instance.postId,
     'score': instance.score,
@@ -278,14 +272,13 @@ Map<String, dynamic> _$$CreatePostLikeImplToJson(
   return val;
 }
 
-_$SavePostImpl _$$SavePostImplFromJson(Map<String, dynamic> json) =>
-    _$SavePostImpl(
+_$_SavePost _$$_SavePostFromJson(Map<String, dynamic> json) => _$_SavePost(
       postId: json['post_id'] as int,
       save: json['save'] as bool,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$SavePostImplToJson(_$SavePostImpl instance) {
+Map<String, dynamic> _$$_SavePostToJson(_$_SavePost instance) {
   final val = <String, dynamic>{
     'post_id': instance.postId,
     'save': instance.save,
@@ -301,16 +294,14 @@ Map<String, dynamic> _$$SavePostImplToJson(_$SavePostImpl instance) {
   return val;
 }
 
-_$CreatePostReportImpl _$$CreatePostReportImplFromJson(
-        Map<String, dynamic> json) =>
-    _$CreatePostReportImpl(
+_$_CreatePostReport _$$_CreatePostReportFromJson(Map<String, dynamic> json) =>
+    _$_CreatePostReport(
       postId: json['post_id'] as int,
       reason: json['reason'] as String,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$CreatePostReportImplToJson(
-    _$CreatePostReportImpl instance) {
+Map<String, dynamic> _$$_CreatePostReportToJson(_$_CreatePostReport instance) {
   final val = <String, dynamic>{
     'post_id': instance.postId,
     'reason': instance.reason,
@@ -326,16 +317,15 @@ Map<String, dynamic> _$$CreatePostReportImplToJson(
   return val;
 }
 
-_$ResolvePostReportImpl _$$ResolvePostReportImplFromJson(
-        Map<String, dynamic> json) =>
-    _$ResolvePostReportImpl(
+_$_ResolvePostReport _$$_ResolvePostReportFromJson(Map<String, dynamic> json) =>
+    _$_ResolvePostReport(
       reportId: json['report_id'] as int,
       resolved: json['resolved'] as bool,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$ResolvePostReportImplToJson(
-    _$ResolvePostReportImpl instance) {
+Map<String, dynamic> _$$_ResolvePostReportToJson(
+    _$_ResolvePostReport instance) {
   final val = <String, dynamic>{
     'report_id': instance.reportId,
     'resolved': instance.resolved,
@@ -351,9 +341,8 @@ Map<String, dynamic> _$$ResolvePostReportImplToJson(
   return val;
 }
 
-_$ListPostReportsImpl _$$ListPostReportsImplFromJson(
-        Map<String, dynamic> json) =>
-    _$ListPostReportsImpl(
+_$_ListPostReports _$$_ListPostReportsFromJson(Map<String, dynamic> json) =>
+    _$_ListPostReports(
       page: json['page'] as int?,
       limit: json['limit'] as int?,
       unresolvedOnly: json['unresolved_only'] as bool?,
@@ -361,8 +350,7 @@ _$ListPostReportsImpl _$$ListPostReportsImplFromJson(
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$ListPostReportsImplToJson(
-    _$ListPostReportsImpl instance) {
+Map<String, dynamic> _$$_ListPostReportsToJson(_$_ListPostReports instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -379,14 +367,12 @@ Map<String, dynamic> _$$ListPostReportsImplToJson(
   return val;
 }
 
-_$GetSiteMetadataImpl _$$GetSiteMetadataImplFromJson(
-        Map<String, dynamic> json) =>
-    _$GetSiteMetadataImpl(
+_$_GetSiteMetadata _$$_GetSiteMetadataFromJson(Map<String, dynamic> json) =>
+    _$_GetSiteMetadata(
       url: json['url'] as String,
     );
 
-Map<String, dynamic> _$$GetSiteMetadataImplToJson(
-        _$GetSiteMetadataImpl instance) =>
+Map<String, dynamic> _$$_GetSiteMetadataToJson(_$_GetSiteMetadata instance) =>
     <String, dynamic>{
       'url': instance.url,
     };

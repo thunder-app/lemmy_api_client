@@ -62,22 +62,22 @@ class _$UpdateTotpResponseCopyWithImpl<$Res, $Val extends UpdateTotpResponse>
 }
 
 /// @nodoc
-abstract class _$$UpdateTotpResponseImplCopyWith<$Res>
+abstract class _$$_UpdateTotpResponseCopyWith<$Res>
     implements $UpdateTotpResponseCopyWith<$Res> {
-  factory _$$UpdateTotpResponseImplCopyWith(_$UpdateTotpResponseImpl value,
-          $Res Function(_$UpdateTotpResponseImpl) then) =
-      __$$UpdateTotpResponseImplCopyWithImpl<$Res>;
+  factory _$$_UpdateTotpResponseCopyWith(_$_UpdateTotpResponse value,
+          $Res Function(_$_UpdateTotpResponse) then) =
+      __$$_UpdateTotpResponseCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool enabled});
 }
 
 /// @nodoc
-class __$$UpdateTotpResponseImplCopyWithImpl<$Res>
-    extends _$UpdateTotpResponseCopyWithImpl<$Res, _$UpdateTotpResponseImpl>
-    implements _$$UpdateTotpResponseImplCopyWith<$Res> {
-  __$$UpdateTotpResponseImplCopyWithImpl(_$UpdateTotpResponseImpl _value,
-      $Res Function(_$UpdateTotpResponseImpl) _then)
+class __$$_UpdateTotpResponseCopyWithImpl<$Res>
+    extends _$UpdateTotpResponseCopyWithImpl<$Res, _$_UpdateTotpResponse>
+    implements _$$_UpdateTotpResponseCopyWith<$Res> {
+  __$$_UpdateTotpResponseCopyWithImpl(
+      _$_UpdateTotpResponse _value, $Res Function(_$_UpdateTotpResponse) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -85,7 +85,7 @@ class __$$UpdateTotpResponseImplCopyWithImpl<$Res>
   $Res call({
     Object? enabled = null,
   }) {
-    return _then(_$UpdateTotpResponseImpl(
+    return _then(_$_UpdateTotpResponse(
       enabled: null == enabled
           ? _value.enabled
           : enabled // ignore: cast_nullable_to_non_nullable
@@ -97,11 +97,11 @@ class __$$UpdateTotpResponseImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$UpdateTotpResponseImpl extends _UpdateTotpResponse {
-  const _$UpdateTotpResponseImpl({required this.enabled}) : super._();
+class _$_UpdateTotpResponse extends _UpdateTotpResponse {
+  const _$_UpdateTotpResponse({required this.enabled}) : super._();
 
-  factory _$UpdateTotpResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$UpdateTotpResponseImplFromJson(json);
+  factory _$_UpdateTotpResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_UpdateTotpResponseFromJson(json);
 
   @override
   final bool enabled;
@@ -115,7 +115,7 @@ class _$UpdateTotpResponseImpl extends _UpdateTotpResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$UpdateTotpResponseImpl &&
+            other is _$_UpdateTotpResponse &&
             (identical(other.enabled, enabled) || other.enabled == enabled));
   }
 
@@ -126,13 +126,13 @@ class _$UpdateTotpResponseImpl extends _UpdateTotpResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$UpdateTotpResponseImplCopyWith<_$UpdateTotpResponseImpl> get copyWith =>
-      __$$UpdateTotpResponseImplCopyWithImpl<_$UpdateTotpResponseImpl>(
+  _$$_UpdateTotpResponseCopyWith<_$_UpdateTotpResponse> get copyWith =>
+      __$$_UpdateTotpResponseCopyWithImpl<_$_UpdateTotpResponse>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$UpdateTotpResponseImplToJson(
+    return _$$_UpdateTotpResponseToJson(
       this,
     );
   }
@@ -140,16 +140,16 @@ class _$UpdateTotpResponseImpl extends _UpdateTotpResponse {
 
 abstract class _UpdateTotpResponse extends UpdateTotpResponse {
   const factory _UpdateTotpResponse({required final bool enabled}) =
-      _$UpdateTotpResponseImpl;
+      _$_UpdateTotpResponse;
   const _UpdateTotpResponse._() : super._();
 
   factory _UpdateTotpResponse.fromJson(Map<String, dynamic> json) =
-      _$UpdateTotpResponseImpl.fromJson;
+      _$_UpdateTotpResponse.fromJson;
 
   @override
   bool get enabled;
   @override
   @JsonKey(ignore: true)
-  _$$UpdateTotpResponseImplCopyWith<_$UpdateTotpResponseImpl> get copyWith =>
+  _$$_UpdateTotpResponseCopyWith<_$_UpdateTotpResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -95,12 +95,11 @@ class _$HideCommunityResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$HideCommunityResponseImplCopyWith<$Res>
+abstract class _$$_HideCommunityResponseCopyWith<$Res>
     implements $HideCommunityResponseCopyWith<$Res> {
-  factory _$$HideCommunityResponseImplCopyWith(
-          _$HideCommunityResponseImpl value,
-          $Res Function(_$HideCommunityResponseImpl) then) =
-      __$$HideCommunityResponseImplCopyWithImpl<$Res>;
+  factory _$$_HideCommunityResponseCopyWith(_$_HideCommunityResponse value,
+          $Res Function(_$_HideCommunityResponse) then) =
+      __$$_HideCommunityResponseCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -113,12 +112,11 @@ abstract class _$$HideCommunityResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$HideCommunityResponseImplCopyWithImpl<$Res>
-    extends _$HideCommunityResponseCopyWithImpl<$Res,
-        _$HideCommunityResponseImpl>
-    implements _$$HideCommunityResponseImplCopyWith<$Res> {
-  __$$HideCommunityResponseImplCopyWithImpl(_$HideCommunityResponseImpl _value,
-      $Res Function(_$HideCommunityResponseImpl) _then)
+class __$$_HideCommunityResponseCopyWithImpl<$Res>
+    extends _$HideCommunityResponseCopyWithImpl<$Res, _$_HideCommunityResponse>
+    implements _$$_HideCommunityResponseCopyWith<$Res> {
+  __$$_HideCommunityResponseCopyWithImpl(_$_HideCommunityResponse _value,
+      $Res Function(_$_HideCommunityResponse) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -128,7 +126,7 @@ class __$$HideCommunityResponseImplCopyWithImpl<$Res>
     Object? discussionLanguages = freezed,
     Object? success = freezed,
   }) {
-    return _then(_$HideCommunityResponseImpl(
+    return _then(_$_HideCommunityResponse(
       communityView: freezed == communityView
           ? _value.communityView
           : communityView // ignore: cast_nullable_to_non_nullable
@@ -148,16 +146,16 @@ class __$$HideCommunityResponseImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$HideCommunityResponseImpl extends _HideCommunityResponse {
-  const _$HideCommunityResponseImpl(
+class _$_HideCommunityResponse extends _HideCommunityResponse {
+  const _$_HideCommunityResponse(
       {@deprecated this.communityView,
       @deprecated final List<int>? discussionLanguages,
       this.success})
       : _discussionLanguages = discussionLanguages,
         super._();
 
-  factory _$HideCommunityResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$HideCommunityResponseImplFromJson(json);
+  factory _$_HideCommunityResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_HideCommunityResponseFromJson(json);
 
   @override
   @deprecated
@@ -186,7 +184,7 @@ class _$HideCommunityResponseImpl extends _HideCommunityResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$HideCommunityResponseImpl &&
+            other is _$_HideCommunityResponse &&
             (identical(other.communityView, communityView) ||
                 other.communityView == communityView) &&
             const DeepCollectionEquality()
@@ -202,13 +200,13 @@ class _$HideCommunityResponseImpl extends _HideCommunityResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$HideCommunityResponseImplCopyWith<_$HideCommunityResponseImpl>
-      get copyWith => __$$HideCommunityResponseImplCopyWithImpl<
-          _$HideCommunityResponseImpl>(this, _$identity);
+  _$$_HideCommunityResponseCopyWith<_$_HideCommunityResponse> get copyWith =>
+      __$$_HideCommunityResponseCopyWithImpl<_$_HideCommunityResponse>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$HideCommunityResponseImplToJson(
+    return _$$_HideCommunityResponseToJson(
       this,
     );
   }
@@ -218,11 +216,11 @@ abstract class _HideCommunityResponse extends HideCommunityResponse {
   const factory _HideCommunityResponse(
       {@deprecated final CommunityView? communityView,
       @deprecated final List<int>? discussionLanguages,
-      final bool? success}) = _$HideCommunityResponseImpl;
+      final bool? success}) = _$_HideCommunityResponse;
   const _HideCommunityResponse._() : super._();
 
   factory _HideCommunityResponse.fromJson(Map<String, dynamic> json) =
-      _$HideCommunityResponseImpl.fromJson;
+      _$_HideCommunityResponse.fromJson;
 
   @override
   @deprecated
@@ -234,6 +232,6 @@ abstract class _HideCommunityResponse extends HideCommunityResponse {
   bool? get success;
   @override
   @JsonKey(ignore: true)
-  _$$HideCommunityResponseImplCopyWith<_$HideCommunityResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$_HideCommunityResponseCopyWith<_$_HideCommunityResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }

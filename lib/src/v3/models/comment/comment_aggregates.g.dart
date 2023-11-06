@@ -6,9 +6,8 @@ part of 'comment_aggregates.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$CommentAggregatesImpl _$$CommentAggregatesImplFromJson(
-        Map<String, dynamic> json) =>
-    _$CommentAggregatesImpl(
+_$_CommentAggregates _$$_CommentAggregatesFromJson(Map<String, dynamic> json) =>
+    _$_CommentAggregates(
       id: json['id'] as int,
       commentId: json['comment_id'] as int,
       score: json['score'] as int,
@@ -19,8 +18,8 @@ _$CommentAggregatesImpl _$$CommentAggregatesImplFromJson(
       hotRank: json['hot_rank'] as int?,
     );
 
-Map<String, dynamic> _$$CommentAggregatesImplToJson(
-        _$CommentAggregatesImpl instance) =>
+Map<String, dynamic> _$$_CommentAggregatesToJson(
+        _$_CommentAggregates instance) =>
     <String, dynamic>{
       'id': instance.id,
       'comment_id': instance.commentId,

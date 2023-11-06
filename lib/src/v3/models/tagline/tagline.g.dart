@@ -6,8 +6,7 @@ part of 'tagline.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$TaglineImpl _$$TaglineImplFromJson(Map<String, dynamic> json) =>
-    _$TaglineImpl(
+_$_Tagline _$$_TaglineFromJson(Map<String, dynamic> json) => _$_Tagline(
       id: json['id'] as int,
       localSiteId: json['local_site_id'] as int,
       content: json['content'] as String,
@@ -16,7 +15,7 @@ _$TaglineImpl _$$TaglineImplFromJson(Map<String, dynamic> json) =>
           json['updated'], const ForceUtcDateTime().fromJson),
     );
 
-Map<String, dynamic> _$$TaglineImplToJson(_$TaglineImpl instance) =>
+Map<String, dynamic> _$$_TaglineToJson(_$_Tagline instance) =>
     <String, dynamic>{
       'id': instance.id,
       'local_site_id': instance.localSiteId,

@@ -91,12 +91,12 @@ class _$PasswordChangeAfterResetResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$PasswordChangeAfterResetResponseImplCopyWith<$Res>
+abstract class _$$_PasswordChangeAfterResetResponseCopyWith<$Res>
     implements $PasswordChangeAfterResetResponseCopyWith<$Res> {
-  factory _$$PasswordChangeAfterResetResponseImplCopyWith(
-          _$PasswordChangeAfterResetResponseImpl value,
-          $Res Function(_$PasswordChangeAfterResetResponseImpl) then) =
-      __$$PasswordChangeAfterResetResponseImplCopyWithImpl<$Res>;
+  factory _$$_PasswordChangeAfterResetResponseCopyWith(
+          _$_PasswordChangeAfterResetResponse value,
+          $Res Function(_$_PasswordChangeAfterResetResponse) then) =
+      __$$_PasswordChangeAfterResetResponseCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -107,13 +107,13 @@ abstract class _$$PasswordChangeAfterResetResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PasswordChangeAfterResetResponseImplCopyWithImpl<$Res>
+class __$$_PasswordChangeAfterResetResponseCopyWithImpl<$Res>
     extends _$PasswordChangeAfterResetResponseCopyWithImpl<$Res,
-        _$PasswordChangeAfterResetResponseImpl>
-    implements _$$PasswordChangeAfterResetResponseImplCopyWith<$Res> {
-  __$$PasswordChangeAfterResetResponseImplCopyWithImpl(
-      _$PasswordChangeAfterResetResponseImpl _value,
-      $Res Function(_$PasswordChangeAfterResetResponseImpl) _then)
+        _$_PasswordChangeAfterResetResponse>
+    implements _$$_PasswordChangeAfterResetResponseCopyWith<$Res> {
+  __$$_PasswordChangeAfterResetResponseCopyWithImpl(
+      _$_PasswordChangeAfterResetResponse _value,
+      $Res Function(_$_PasswordChangeAfterResetResponse) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -124,7 +124,7 @@ class __$$PasswordChangeAfterResetResponseImplCopyWithImpl<$Res>
     Object? verifyEmailSent = freezed,
     Object? success = freezed,
   }) {
-    return _then(_$PasswordChangeAfterResetResponseImpl(
+    return _then(_$_PasswordChangeAfterResetResponse(
       jwt: freezed == jwt
           ? _value.jwt
           : jwt // ignore: cast_nullable_to_non_nullable
@@ -148,18 +148,18 @@ class __$$PasswordChangeAfterResetResponseImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$PasswordChangeAfterResetResponseImpl
+class _$_PasswordChangeAfterResetResponse
     extends _PasswordChangeAfterResetResponse {
-  const _$PasswordChangeAfterResetResponseImpl(
+  const _$_PasswordChangeAfterResetResponse(
       {@deprecated this.jwt,
       @deprecated this.registrationCreated,
       @deprecated this.verifyEmailSent,
       this.success})
       : super._();
 
-  factory _$PasswordChangeAfterResetResponseImpl.fromJson(
+  factory _$_PasswordChangeAfterResetResponse.fromJson(
           Map<String, dynamic> json) =>
-      _$$PasswordChangeAfterResetResponseImplFromJson(json);
+      _$$_PasswordChangeAfterResetResponseFromJson(json);
 
   @override
   @deprecated
@@ -182,7 +182,7 @@ class _$PasswordChangeAfterResetResponseImpl
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PasswordChangeAfterResetResponseImpl &&
+            other is _$_PasswordChangeAfterResetResponse &&
             (identical(other.jwt, jwt) || other.jwt == jwt) &&
             (identical(other.registrationCreated, registrationCreated) ||
                 other.registrationCreated == registrationCreated) &&
@@ -199,14 +199,14 @@ class _$PasswordChangeAfterResetResponseImpl
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PasswordChangeAfterResetResponseImplCopyWith<
-          _$PasswordChangeAfterResetResponseImpl>
-      get copyWith => __$$PasswordChangeAfterResetResponseImplCopyWithImpl<
-          _$PasswordChangeAfterResetResponseImpl>(this, _$identity);
+  _$$_PasswordChangeAfterResetResponseCopyWith<
+          _$_PasswordChangeAfterResetResponse>
+      get copyWith => __$$_PasswordChangeAfterResetResponseCopyWithImpl<
+          _$_PasswordChangeAfterResetResponse>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PasswordChangeAfterResetResponseImplToJson(
+    return _$$_PasswordChangeAfterResetResponseToJson(
       this,
     );
   }
@@ -218,12 +218,11 @@ abstract class _PasswordChangeAfterResetResponse
       {@deprecated final String? jwt,
       @deprecated final bool? registrationCreated,
       @deprecated final bool? verifyEmailSent,
-      final bool? success}) = _$PasswordChangeAfterResetResponseImpl;
+      final bool? success}) = _$_PasswordChangeAfterResetResponse;
   const _PasswordChangeAfterResetResponse._() : super._();
 
   factory _PasswordChangeAfterResetResponse.fromJson(
-          Map<String, dynamic> json) =
-      _$PasswordChangeAfterResetResponseImpl.fromJson;
+      Map<String, dynamic> json) = _$_PasswordChangeAfterResetResponse.fromJson;
 
   @override
   @deprecated
@@ -238,7 +237,7 @@ abstract class _PasswordChangeAfterResetResponse
   bool? get success;
   @override
   @JsonKey(ignore: true)
-  _$$PasswordChangeAfterResetResponseImplCopyWith<
-          _$PasswordChangeAfterResetResponseImpl>
+  _$$_PasswordChangeAfterResetResponseCopyWith<
+          _$_PasswordChangeAfterResetResponse>
       get copyWith => throw _privateConstructorUsedError;
 }

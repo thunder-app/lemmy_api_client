@@ -6,8 +6,8 @@ part of 'comment_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$CommentViewImpl _$$CommentViewImplFromJson(Map<String, dynamic> json) =>
-    _$CommentViewImpl(
+_$_CommentView _$$_CommentViewFromJson(Map<String, dynamic> json) =>
+    _$_CommentView(
       comment: Comment.fromJson(json['comment'] as Map<String, dynamic>),
       creator: Person.fromJson(json['creator'] as Map<String, dynamic>),
       post: Post.fromJson(json['post'] as Map<String, dynamic>),
@@ -22,7 +22,7 @@ _$CommentViewImpl _$$CommentViewImplFromJson(Map<String, dynamic> json) =>
       myVote: json['my_vote'] as int?,
     );
 
-Map<String, dynamic> _$$CommentViewImplToJson(_$CommentViewImpl instance) =>
+Map<String, dynamic> _$$_CommentViewToJson(_$_CommentView instance) =>
     <String, dynamic>{
       'comment': instance.comment.toJson(),
       'creator': instance.creator.toJson(),

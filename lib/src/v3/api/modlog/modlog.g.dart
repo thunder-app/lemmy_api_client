@@ -6,8 +6,7 @@ part of 'modlog.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GetModlogImpl _$$GetModlogImplFromJson(Map<String, dynamic> json) =>
-    _$GetModlogImpl(
+_$_GetModlog _$$_GetModlogFromJson(Map<String, dynamic> json) => _$_GetModlog(
       modPersonId: json['mod_person_id'] as int?,
       communityId: json['community_id'] as int?,
       page: json['page'] as int?,
@@ -19,7 +18,7 @@ _$GetModlogImpl _$$GetModlogImplFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$GetModlogImplToJson(_$GetModlogImpl instance) {
+Map<String, dynamic> _$$_GetModlogToJson(_$_GetModlog instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

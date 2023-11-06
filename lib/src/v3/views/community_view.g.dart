@@ -6,8 +6,8 @@ part of 'community_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$CommunityViewImpl _$$CommunityViewImplFromJson(Map<String, dynamic> json) =>
-    _$CommunityViewImpl(
+_$_CommunityView _$$_CommunityViewFromJson(Map<String, dynamic> json) =>
+    _$_CommunityView(
       community: Community.fromJson(json['community'] as Map<String, dynamic>),
       subscribed: SubscribedType.fromJson(json['subscribed'] as String),
       blocked: json['blocked'] as bool,
@@ -15,7 +15,7 @@ _$CommunityViewImpl _$$CommunityViewImplFromJson(Map<String, dynamic> json) =>
           CommunityAggregates.fromJson(json['counts'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$CommunityViewImplToJson(_$CommunityViewImpl instance) =>
+Map<String, dynamic> _$$_CommunityViewToJson(_$_CommunityView instance) =>
     <String, dynamic>{
       'community': instance.community.toJson(),
       'subscribed': instance.subscribed.toJson(),

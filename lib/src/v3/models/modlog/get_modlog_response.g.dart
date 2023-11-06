@@ -6,9 +6,8 @@ part of 'get_modlog_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GetModlogResponseImpl _$$GetModlogResponseImplFromJson(
-        Map<String, dynamic> json) =>
-    _$GetModlogResponseImpl(
+_$_GetModlogResponse _$$_GetModlogResponseFromJson(Map<String, dynamic> json) =>
+    _$_GetModlogResponse(
       removedPosts: (json['removed_posts'] as List<dynamic>)
           .map((e) => ModRemovePostView.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -62,8 +61,8 @@ _$GetModlogResponseImpl _$$GetModlogResponseImplFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$GetModlogResponseImplToJson(
-        _$GetModlogResponseImpl instance) =>
+Map<String, dynamic> _$$_GetModlogResponseToJson(
+        _$_GetModlogResponse instance) =>
     <String, dynamic>{
       'removed_posts': instance.removedPosts.map((e) => e.toJson()).toList(),
       'locked_posts': instance.lockedPosts.map((e) => e.toJson()).toList(),

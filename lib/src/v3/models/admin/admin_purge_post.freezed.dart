@@ -92,11 +92,11 @@ class _$AdminPurgePostCopyWithImpl<$Res, $Val extends AdminPurgePost>
 }
 
 /// @nodoc
-abstract class _$$AdminPurgePostImplCopyWith<$Res>
+abstract class _$$_AdminPurgePostCopyWith<$Res>
     implements $AdminPurgePostCopyWith<$Res> {
-  factory _$$AdminPurgePostImplCopyWith(_$AdminPurgePostImpl value,
-          $Res Function(_$AdminPurgePostImpl) then) =
-      __$$AdminPurgePostImplCopyWithImpl<$Res>;
+  factory _$$_AdminPurgePostCopyWith(
+          _$_AdminPurgePost value, $Res Function(_$_AdminPurgePost) then) =
+      __$$_AdminPurgePostCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -108,11 +108,11 @@ abstract class _$$AdminPurgePostImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$AdminPurgePostImplCopyWithImpl<$Res>
-    extends _$AdminPurgePostCopyWithImpl<$Res, _$AdminPurgePostImpl>
-    implements _$$AdminPurgePostImplCopyWith<$Res> {
-  __$$AdminPurgePostImplCopyWithImpl(
-      _$AdminPurgePostImpl _value, $Res Function(_$AdminPurgePostImpl) _then)
+class __$$_AdminPurgePostCopyWithImpl<$Res>
+    extends _$AdminPurgePostCopyWithImpl<$Res, _$_AdminPurgePost>
+    implements _$$_AdminPurgePostCopyWith<$Res> {
+  __$$_AdminPurgePostCopyWithImpl(
+      _$_AdminPurgePost _value, $Res Function(_$_AdminPurgePost) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -124,7 +124,7 @@ class __$$AdminPurgePostImplCopyWithImpl<$Res>
     Object? reason = freezed,
     Object? when = null,
   }) {
-    return _then(_$AdminPurgePostImpl(
+    return _then(_$_AdminPurgePost(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -152,8 +152,8 @@ class __$$AdminPurgePostImplCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$AdminPurgePostImpl extends _AdminPurgePost {
-  const _$AdminPurgePostImpl(
+class _$_AdminPurgePost extends _AdminPurgePost {
+  const _$_AdminPurgePost(
       {required this.id,
       required this.adminPersonId,
       required this.communityId,
@@ -161,8 +161,8 @@ class _$AdminPurgePostImpl extends _AdminPurgePost {
       @JsonKey(name: 'when_') required this.when})
       : super._();
 
-  factory _$AdminPurgePostImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AdminPurgePostImplFromJson(json);
+  factory _$_AdminPurgePost.fromJson(Map<String, dynamic> json) =>
+      _$$_AdminPurgePostFromJson(json);
 
   @override
   final int id;
@@ -185,7 +185,7 @@ class _$AdminPurgePostImpl extends _AdminPurgePost {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AdminPurgePostImpl &&
+            other is _$_AdminPurgePost &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.adminPersonId, adminPersonId) ||
                 other.adminPersonId == adminPersonId) &&
@@ -203,13 +203,12 @@ class _$AdminPurgePostImpl extends _AdminPurgePost {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$AdminPurgePostImplCopyWith<_$AdminPurgePostImpl> get copyWith =>
-      __$$AdminPurgePostImplCopyWithImpl<_$AdminPurgePostImpl>(
-          this, _$identity);
+  _$$_AdminPurgePostCopyWith<_$_AdminPurgePost> get copyWith =>
+      __$$_AdminPurgePostCopyWithImpl<_$_AdminPurgePost>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AdminPurgePostImplToJson(
+    return _$$_AdminPurgePostToJson(
       this,
     );
   }
@@ -217,16 +216,15 @@ class _$AdminPurgePostImpl extends _AdminPurgePost {
 
 abstract class _AdminPurgePost extends AdminPurgePost {
   const factory _AdminPurgePost(
-          {required final int id,
-          required final int adminPersonId,
-          required final int communityId,
-          final String? reason,
-          @JsonKey(name: 'when_') required final String when}) =
-      _$AdminPurgePostImpl;
+      {required final int id,
+      required final int adminPersonId,
+      required final int communityId,
+      final String? reason,
+      @JsonKey(name: 'when_') required final String when}) = _$_AdminPurgePost;
   const _AdminPurgePost._() : super._();
 
   factory _AdminPurgePost.fromJson(Map<String, dynamic> json) =
-      _$AdminPurgePostImpl.fromJson;
+      _$_AdminPurgePost.fromJson;
 
   @override
   int get id;
@@ -241,6 +239,6 @@ abstract class _AdminPurgePost extends AdminPurgePost {
   String get when;
   @override
   @JsonKey(ignore: true)
-  _$$AdminPurgePostImplCopyWith<_$AdminPurgePostImpl> get copyWith =>
+  _$$_AdminPurgePostCopyWith<_$_AdminPurgePost> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -6,17 +6,17 @@ part of 'add_mod_to_community_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AddModToCommunityResponseImpl _$$AddModToCommunityResponseImplFromJson(
+_$_AddModToCommunityResponse _$$_AddModToCommunityResponseFromJson(
         Map<String, dynamic> json) =>
-    _$AddModToCommunityResponseImpl(
+    _$_AddModToCommunityResponse(
       moderators: (json['moderators'] as List<dynamic>)
           .map(
               (e) => CommunityModeratorView.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$AddModToCommunityResponseImplToJson(
-        _$AddModToCommunityResponseImpl instance) =>
+Map<String, dynamic> _$$_AddModToCommunityResponseToJson(
+        _$_AddModToCommunityResponse instance) =>
     <String, dynamic>{
       'moderators': instance.moderators.map((e) => e.toJson()).toList(),
     };
