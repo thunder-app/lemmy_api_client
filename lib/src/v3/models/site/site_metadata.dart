@@ -16,5 +16,6 @@ class SiteMetadata with _$SiteMetadata {
   }) = _SiteMetadata;
 
   const SiteMetadata._();
-  factory SiteMetadata.fromJson(Map<String, dynamic> json) => _$SiteMetadataFromJson(json);
+  factory SiteMetadata.fromJson(Map<String, dynamic> json) =>
+      _$SiteMetadataFromJson(json);
 }

@@ -13,5 +13,6 @@ class PasswordResetResponse with _$PasswordResetResponse {
   }) = _PasswordResetResponse;
 
   const PasswordResetResponse._();
-  factory PasswordResetResponse.fromJson(Map<String, dynamic> json) => _$PasswordResetResponseFromJson(json);
+  factory PasswordResetResponse.fromJson(Map<String, dynamic> json) =>
+      _$PasswordResetResponseFromJson(json);
 }

@@ -16,5 +16,6 @@ class GetReportCountResponse with _$GetReportCountResponse {
   }) = _GetReportCountResponse;
 
   const GetReportCountResponse._();
-  factory GetReportCountResponse.fromJson(Map<String, dynamic> json) => _$GetReportCountResponseFromJson(json);
+  factory GetReportCountResponse.fromJson(Map<String, dynamic> json) =>
+      _$GetReportCountResponseFromJson(json);
 }

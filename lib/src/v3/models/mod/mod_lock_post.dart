@@ -17,5 +17,6 @@ class ModLockPost with _$ModLockPost {
   }) = _ModLockPost;
 
   const ModLockPost._();
-  factory ModLockPost.fromJson(Map<String, dynamic> json) => _$ModLockPostFromJson(json);
+  factory ModLockPost.fromJson(Map<String, dynamic> json) =>
+      _$ModLockPostFromJson(json);
 }

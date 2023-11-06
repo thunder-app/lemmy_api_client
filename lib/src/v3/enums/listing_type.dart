@@ -8,7 +8,9 @@ enum ListingType {
   const ListingType(this.value);
 
   factory ListingType.fromJson(dynamic value) {
-    return value is int ? values[value] : values.firstWhere((e) => e.value == value);
+    return value is int
+        ? values[value]
+        : values.firstWhere((e) => e.value == value);
   }
 
   String toJson() => value;

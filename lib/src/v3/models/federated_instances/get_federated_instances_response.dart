@@ -14,5 +14,6 @@ class GetFederatedInstancesResponse with _$GetFederatedInstancesResponse {
   }) = _GetFederatedInstancesResponse;
 
   const GetFederatedInstancesResponse._();
-  factory GetFederatedInstancesResponse.fromJson(Map<String, dynamic> json) => _$GetFederatedInstancesResponseFromJson(json);
+  factory GetFederatedInstancesResponse.fromJson(Map<String, dynamic> json) =>
+      _$GetFederatedInstancesResponseFromJson(json);
 }

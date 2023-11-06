@@ -14,5 +14,6 @@ class AddModToCommunityResponse with _$AddModToCommunityResponse {
   }) = _AddModToCommunityResponse;
 
   const AddModToCommunityResponse._();
-  factory AddModToCommunityResponse.fromJson(Map<String, dynamic> json) => _$AddModToCommunityResponseFromJson(json);
+  factory AddModToCommunityResponse.fromJson(Map<String, dynamic> json) =>
+      _$AddModToCommunityResponseFromJson(json);
 }

@@ -14,5 +14,6 @@ class RegistrationApplicationResponse with _$RegistrationApplicationResponse {
   }) = _RegistrationApplicationResponse;
 
   const RegistrationApplicationResponse._();
-  factory RegistrationApplicationResponse.fromJson(Map<String, dynamic> json) => _$RegistrationApplicationResponseFromJson(json);
+  factory RegistrationApplicationResponse.fromJson(Map<String, dynamic> json) =>
+      _$RegistrationApplicationResponseFromJson(json);
 }

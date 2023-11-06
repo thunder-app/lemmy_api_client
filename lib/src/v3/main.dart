@@ -30,7 +30,10 @@ class LemmyApiV3 {
             Uri.https(
               host,
               '$extraPath${query.path}',
-              <String, String>{for (final entry in query.toJson().entries) entry.key: entry.value.toString()},
+              <String, String>{
+                for (final entry in query.toJson().entries)
+                  entry.key: entry.value.toString()
+              },
             ),
             headers: (auth != null) ? {'Authorization': 'Bearer $auth'} : null,
           );
@@ -38,13 +41,19 @@ class LemmyApiV3 {
           return http.post(
             Uri.https(host, '$extraPath${query.path}'),
             body: jsonEncode(query.toJson()),
-            headers: {'Content-Type': 'application/json', if (auth != null) 'Authorization': 'Bearer $auth'},
+            headers: {
+              'Content-Type': 'application/json',
+              if (auth != null) 'Authorization': 'Bearer $auth'
+            },
           );
         case HttpMethod.put:
           return http.put(
             Uri.https(host, '$extraPath${query.path}'),
             body: jsonEncode(query.toJson()),
-            headers: {'Content-Type': 'application/json', if (auth != null) 'Authorization': 'Bearer $auth'},
+            headers: {
+              'Content-Type': 'application/json',
+              if (auth != null) 'Authorization': 'Bearer $auth'
+            },
           );
       }
     }();

@@ -9,7 +9,9 @@ enum CommentSortType {
   const CommentSortType(this.value);
 
   factory CommentSortType.fromJson(dynamic value) {
-    return value is int ? values[value] : values.firstWhere((e) => e.value == value);
+    return value is int
+        ? values[value]
+        : values.firstWhere((e) => e.value == value);
   }
 
   String toJson() => value;

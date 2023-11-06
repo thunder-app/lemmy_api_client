@@ -14,11 +14,13 @@ class MyUserInfo with _$MyUserInfo {
     required List<CommunityFollowerView> follows,
     required List<CommunityModeratorView> moderates,
     required List<CommunityBlockView> communityBlocks,
-    List<InstanceBlockView>? instanceBlocks, // Only available in lemmy v0.19.0 and above
+    List<InstanceBlockView>?
+        instanceBlocks, // Only available in lemmy v0.19.0 and above
     required List<PersonBlockView> personBlocks,
     required List<int> discussionLanguages,
   }) = _MyUserInfo;
 
   const MyUserInfo._();
-  factory MyUserInfo.fromJson(Map<String, dynamic> json) => _$MyUserInfoFromJson(json);
+  factory MyUserInfo.fromJson(Map<String, dynamic> json) =>
+      _$MyUserInfoFromJson(json);
 }

@@ -17,5 +17,6 @@ class ModFeaturePostView with _$ModFeaturePostView {
   }) = _ModFeaturePostView;
 
   const ModFeaturePostView._();
-  factory ModFeaturePostView.fromJson(Map<String, dynamic> json) => _$ModFeaturePostViewFromJson(json);
+  factory ModFeaturePostView.fromJson(Map<String, dynamic> json) =>
+      _$ModFeaturePostViewFromJson(json);
 }

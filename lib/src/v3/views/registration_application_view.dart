@@ -17,5 +17,6 @@ class RegistrationApplicationView with _$RegistrationApplicationView {
   }) = _RegistrationApplicationView;
 
   const RegistrationApplicationView._();
-  factory RegistrationApplicationView.fromJson(Map<String, dynamic> json) => _$RegistrationApplicationViewFromJson(json);
+  factory RegistrationApplicationView.fromJson(Map<String, dynamic> json) =>
+      _$RegistrationApplicationViewFromJson(json);
 }

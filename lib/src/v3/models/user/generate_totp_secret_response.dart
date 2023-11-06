@@ -13,5 +13,6 @@ class GenerateTotpSecretResponse with _$GenerateTotpSecretResponse {
   }) = _GenerateTotpSecretResponse;
 
   const GenerateTotpSecretResponse._();
-  factory GenerateTotpSecretResponse.fromJson(Map<String, dynamic> json) => _$GenerateTotpSecretResponseFromJson(json);
+  factory GenerateTotpSecretResponse.fromJson(Map<String, dynamic> json) =>
+      _$GenerateTotpSecretResponseFromJson(json);
 }

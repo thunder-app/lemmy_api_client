@@ -15,5 +15,6 @@ class CommunityModeratorView with _$CommunityModeratorView {
   }) = _CommunityModeratorView;
 
   const CommunityModeratorView._();
-  factory CommunityModeratorView.fromJson(Map<String, dynamic> json) => _$CommunityModeratorViewFromJson(json);
+  factory CommunityModeratorView.fromJson(Map<String, dynamic> json) =>
+      _$CommunityModeratorViewFromJson(json);
 }

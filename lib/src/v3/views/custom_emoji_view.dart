@@ -15,5 +15,6 @@ class CustomEmojiView with _$CustomEmojiView {
   }) = _CustomEmojiView;
 
   const CustomEmojiView._();
-  factory CustomEmojiView.fromJson(Map<String, dynamic> json) => _$CustomEmojiViewFromJson(json);
+  factory CustomEmojiView.fromJson(Map<String, dynamic> json) =>
+      _$CustomEmojiViewFromJson(json);
 }

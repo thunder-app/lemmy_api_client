@@ -15,5 +15,6 @@ class CommunityFollowerView with _$CommunityFollowerView {
   }) = _CommunityFollowerView;
 
   const CommunityFollowerView._();
-  factory CommunityFollowerView.fromJson(Map<String, dynamic> json) => _$CommunityFollowerViewFromJson(json);
+  factory CommunityFollowerView.fromJson(Map<String, dynamic> json) =>
+      _$CommunityFollowerViewFromJson(json);
 }

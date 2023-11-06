@@ -16,5 +16,6 @@ class AdminPurgeCommentView with _$AdminPurgeCommentView {
   }) = _AdminPurgeCommentView;
 
   const AdminPurgeCommentView._();
-  factory AdminPurgeCommentView.fromJson(Map<String, dynamic> json) => _$AdminPurgeCommentViewFromJson(json);
+  factory AdminPurgeCommentView.fromJson(Map<String, dynamic> json) =>
+      _$AdminPurgeCommentViewFromJson(json);
 }

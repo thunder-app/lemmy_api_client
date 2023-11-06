@@ -17,5 +17,6 @@ class ModTransferCommunity with _$ModTransferCommunity {
   }) = _ModTransferCommunity;
 
   const ModTransferCommunity._();
-  factory ModTransferCommunity.fromJson(Map<String, dynamic> json) => _$ModTransferCommunityFromJson(json);
+  factory ModTransferCommunity.fromJson(Map<String, dynamic> json) =>
+      _$ModTransferCommunityFromJson(json);
 }

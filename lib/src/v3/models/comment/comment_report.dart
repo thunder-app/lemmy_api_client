@@ -22,5 +22,6 @@ class CommentReport with _$CommentReport {
   }) = _CommentReport;
 
   const CommentReport._();
-  factory CommentReport.fromJson(Map<String, dynamic> json) => _$CommentReportFromJson(json);
+  factory CommentReport.fromJson(Map<String, dynamic> json) =>
+      _$CommentReportFromJson(json);
 }

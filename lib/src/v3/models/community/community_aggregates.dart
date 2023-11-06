@@ -24,5 +24,6 @@ class CommunityAggregates with _$CommunityAggregates {
   }) = _CommunityAggregates;
 
   const CommunityAggregates._();
-  factory CommunityAggregates.fromJson(Map<String, dynamic> json) => _$CommunityAggregatesFromJson(json);
+  factory CommunityAggregates.fromJson(Map<String, dynamic> json) =>
+      _$CommunityAggregatesFromJson(json);
 }

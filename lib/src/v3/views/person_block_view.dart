@@ -15,5 +15,6 @@ class PersonBlockView with _$PersonBlockView {
   }) = _PersonBlockView;
 
   const PersonBlockView._();
-  factory PersonBlockView.fromJson(Map<String, dynamic> json) => _$PersonBlockViewFromJson(json);
+  factory PersonBlockView.fromJson(Map<String, dynamic> json) =>
+      _$PersonBlockViewFromJson(json);
 }

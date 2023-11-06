@@ -27,9 +27,11 @@ class LocalSiteRateLimit with _$LocalSiteRateLimit {
     required DateTime published,
     DateTime? updated,
     int? importUserSettings, // Only available in lemmy v0.19.0 and above
-    int? importUserSettingsPerSecond, // Only available in lemmy v0.19.0 and above
+    int?
+        importUserSettingsPerSecond, // Only available in lemmy v0.19.0 and above
   }) = _LocalSiteRateLimit;
 
   const LocalSiteRateLimit._();
-  factory LocalSiteRateLimit.fromJson(Map<String, dynamic> json) => _$LocalSiteRateLimitFromJson(json);
+  factory LocalSiteRateLimit.fromJson(Map<String, dynamic> json) =>
+      _$LocalSiteRateLimitFromJson(json);
 }

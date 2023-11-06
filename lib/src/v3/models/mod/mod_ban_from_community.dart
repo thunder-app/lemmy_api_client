@@ -20,5 +20,6 @@ class ModBanFromCommunity with _$ModBanFromCommunity {
   }) = _ModBanFromCommunity;
 
   const ModBanFromCommunity._();
-  factory ModBanFromCommunity.fromJson(Map<String, dynamic> json) => _$ModBanFromCommunityFromJson(json);
+  factory ModBanFromCommunity.fromJson(Map<String, dynamic> json) =>
+      _$ModBanFromCommunityFromJson(json);
 }

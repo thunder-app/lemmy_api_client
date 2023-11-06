@@ -13,5 +13,6 @@ class VerifyEmailResponse with _$VerifyEmailResponse {
   }) = _VerifyEmailResponse;
 
   const VerifyEmailResponse._();
-  factory VerifyEmailResponse.fromJson(Map<String, dynamic> json) => _$VerifyEmailResponseFromJson(json);
+  factory VerifyEmailResponse.fromJson(Map<String, dynamic> json) =>
+      _$VerifyEmailResponseFromJson(json);
 }

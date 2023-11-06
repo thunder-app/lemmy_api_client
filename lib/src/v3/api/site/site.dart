@@ -12,28 +12,34 @@ part 'site.g.dart';
 ///
 /// `HTTP.GET /site`
 @freezed
-class GetSite with _$GetSite implements LemmyApiQuery<GetSiteResponse>, LemmyApiAuthenticatedQuery {
+class GetSite
+    with _$GetSite
+    implements LemmyApiQuery<GetSiteResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetSite({
     String? auth,
   }) = _GetSite;
 
   const GetSite._();
-  factory GetSite.fromJson(Map<String, dynamic> json) => _$GetSiteFromJson(json);
+  factory GetSite.fromJson(Map<String, dynamic> json) =>
+      _$GetSiteFromJson(json);
 
   final path = '/site';
 
   final httpMethod = HttpMethod.get;
 
   @override
-  GetSiteResponse responseFactory(Map<String, dynamic> json) => GetSiteResponse.fromJson(json);
+  GetSiteResponse responseFactory(Map<String, dynamic> json) =>
+      GetSiteResponse.fromJson(json);
 }
 
 /// Create your site.
 ///
 /// `HTTP.POST /site`
 @freezed
-class CreateSite with _$CreateSite implements LemmyApiQuery<SiteResponse>, LemmyApiAuthenticatedQuery {
+class CreateSite
+    with _$CreateSite
+    implements LemmyApiQuery<SiteResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory CreateSite({
     required String name,
@@ -79,21 +85,25 @@ class CreateSite with _$CreateSite implements LemmyApiQuery<SiteResponse>, Lemmy
   }) = _CreateSite;
 
   const CreateSite._();
-  factory CreateSite.fromJson(Map<String, dynamic> json) => _$CreateSiteFromJson(json);
+  factory CreateSite.fromJson(Map<String, dynamic> json) =>
+      _$CreateSiteFromJson(json);
 
   final path = '/site';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  SiteResponse responseFactory(Map<String, dynamic> json) => SiteResponse.fromJson(json);
+  SiteResponse responseFactory(Map<String, dynamic> json) =>
+      SiteResponse.fromJson(json);
 }
 
 /// Edit your site.
 ///
 /// `HTTP.PUT /site`
 @freezed
-class EditSite with _$EditSite implements LemmyApiQuery<SiteResponse>, LemmyApiAuthenticatedQuery {
+class EditSite
+    with _$EditSite
+    implements LemmyApiQuery<SiteResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory EditSite({
     String? name,
@@ -140,14 +150,16 @@ class EditSite with _$EditSite implements LemmyApiQuery<SiteResponse>, LemmyApiA
   }) = _EditSite;
 
   const EditSite._();
-  factory EditSite.fromJson(Map<String, dynamic> json) => _$EditSiteFromJson(json);
+  factory EditSite.fromJson(Map<String, dynamic> json) =>
+      _$EditSiteFromJson(json);
 
   final path = '/site';
 
   final httpMethod = HttpMethod.put;
 
   @override
-  SiteResponse responseFactory(Map<String, dynamic> json) => SiteResponse.fromJson(json);
+  SiteResponse responseFactory(Map<String, dynamic> json) =>
+      SiteResponse.fromJson(json);
 }
 
 /// Only available in lemmy v0.19.0 and above
@@ -156,7 +168,11 @@ class EditSite with _$EditSite implements LemmyApiQuery<SiteResponse>, LemmyApiA
 ///
 /// `HTTP.Post /site/block`
 @freezed
-class BlockInstance with _$BlockInstance implements LemmyApiQuery<BlockInstanceResponse>, LemmyApiAuthenticatedQuery {
+class BlockInstance
+    with _$BlockInstance
+    implements
+        LemmyApiQuery<BlockInstanceResponse>,
+        LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory BlockInstance({
     String? auth,
@@ -165,12 +181,14 @@ class BlockInstance with _$BlockInstance implements LemmyApiQuery<BlockInstanceR
   }) = _BlockInstance;
 
   const BlockInstance._();
-  factory BlockInstance.fromJson(Map<String, dynamic> json) => _$BlockInstanceFromJson(json);
+  factory BlockInstance.fromJson(Map<String, dynamic> json) =>
+      _$BlockInstanceFromJson(json);
 
   final path = '/site/block';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  BlockInstanceResponse responseFactory(Map<String, dynamic> json) => BlockInstanceResponse.fromJson(json);
+  BlockInstanceResponse responseFactory(Map<String, dynamic> json) =>
+      BlockInstanceResponse.fromJson(json);
 }

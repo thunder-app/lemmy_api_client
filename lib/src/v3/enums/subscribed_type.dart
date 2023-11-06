@@ -6,7 +6,8 @@ enum SubscribedType {
   final String value;
   const SubscribedType(this.value);
 
-  factory SubscribedType.fromJson(String value) => values.firstWhere((e) => e.value == value);
+  factory SubscribedType.fromJson(String value) =>
+      values.firstWhere((e) => e.value == value);
 
   String toJson() => value;
 

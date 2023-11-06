@@ -17,5 +17,6 @@ class GetPersonDetailsResponse with _$GetPersonDetailsResponse {
   }) = _GetPersonDetailsResponse;
 
   const GetPersonDetailsResponse._();
-  factory GetPersonDetailsResponse.fromJson(Map<String, dynamic> json) => _$GetPersonDetailsResponseFromJson(json);
+  factory GetPersonDetailsResponse.fromJson(Map<String, dynamic> json) =>
+      _$GetPersonDetailsResponseFromJson(json);
 }

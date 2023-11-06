@@ -15,5 +15,6 @@ class BlockCommunityResponse with _$BlockCommunityResponse {
   }) = _BlockCommunityResponse;
 
   const BlockCommunityResponse._();
-  factory BlockCommunityResponse.fromJson(Map<String, dynamic> json) => _$BlockCommunityResponseFromJson(json);
+  factory BlockCommunityResponse.fromJson(Map<String, dynamic> json) =>
+      _$BlockCommunityResponseFromJson(json);
 }

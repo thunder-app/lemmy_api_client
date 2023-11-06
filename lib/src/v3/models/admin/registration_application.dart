@@ -19,5 +19,6 @@ class RegistrationApplication with _$RegistrationApplication {
   }) = _RegistrationApplication;
 
   const RegistrationApplication._();
-  factory RegistrationApplication.fromJson(Map<String, dynamic> json) => _$RegistrationApplicationFromJson(json);
+  factory RegistrationApplication.fromJson(Map<String, dynamic> json) =>
+      _$RegistrationApplicationFromJson(json);
 }

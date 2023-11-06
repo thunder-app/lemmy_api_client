@@ -15,5 +15,6 @@ class PersonView with _$PersonView {
   }) = _PersonView;
 
   const PersonView._();
-  factory PersonView.fromJson(Map<String, dynamic> json) => _$PersonViewFromJson(json);
+  factory PersonView.fromJson(Map<String, dynamic> json) =>
+      _$PersonViewFromJson(json);
 }

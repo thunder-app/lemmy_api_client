@@ -18,5 +18,6 @@ class ModFeaturePost with _$ModFeaturePost {
   }) = _ModFeaturePost;
 
   const ModFeaturePost._();
-  factory ModFeaturePost.fromJson(Map<String, dynamic> json) => _$ModFeaturePostFromJson(json);
+  factory ModFeaturePost.fromJson(Map<String, dynamic> json) =>
+      _$ModFeaturePostFromJson(json);
 }

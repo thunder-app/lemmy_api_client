@@ -14,5 +14,6 @@ class DeleteCustomEmojiResponse with _$DeleteCustomEmojiResponse {
   }) = _DeleteCustomEmojiResponse;
 
   const DeleteCustomEmojiResponse._();
-  factory DeleteCustomEmojiResponse.fromJson(Map<String, dynamic> json) => _$DeleteCustomEmojiResponseFromJson(json);
+  factory DeleteCustomEmojiResponse.fromJson(Map<String, dynamic> json) =>
+      _$DeleteCustomEmojiResponseFromJson(json);
 }

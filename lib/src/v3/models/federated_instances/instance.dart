@@ -19,5 +19,6 @@ class Instance with _$Instance {
   }) = _Instance;
 
   const Instance._();
-  factory Instance.fromJson(Map<String, dynamic> json) => _$InstanceFromJson(json);
+  factory Instance.fromJson(Map<String, dynamic> json) =>
+      _$InstanceFromJson(json);
 }

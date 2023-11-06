@@ -19,11 +19,13 @@ class PictrsApi {
     required String filePath,
     String? auth,
   }) async {
-    final req = http.MultipartRequest('POST', Uri.https(host, extraPath))..files.add(await http.MultipartFile.fromPath('images[]', filePath));
+    final req = http.MultipartRequest('POST', Uri.https(host, extraPath))
+      ..files.add(await http.MultipartFile.fromPath('images[]', filePath));
     req.headers['Cookie'] = 'jwt=$auth';
 
     final res = await req.send();
-    final Map<String, dynamic> body = jsonDecode(utf8.decode(await res.stream.toBytes()));
+    final Map<String, dynamic> body =
+        jsonDecode(utf8.decode(await res.stream.toBytes()));
     body['instance_host'] = host;
 
     return PictrsUpload.fromJson(body);
@@ -61,7 +63,8 @@ class PictrsUploadFile with _$PictrsUploadFile {
   }) = _PictrsUploadFile;
 
   const PictrsUploadFile._();
-  factory PictrsUploadFile.fromJson(Map<String, dynamic> json) => _$PictrsUploadFileFromJson(json);
+  factory PictrsUploadFile.fromJson(Map<String, dynamic> json) =>
+      _$PictrsUploadFileFromJson(json);
 }
 
 @freezed
@@ -74,5 +77,6 @@ class PictrsUpload with _$PictrsUpload {
   }) = _PictrsUpload;
 
   const PictrsUpload._();
-  factory PictrsUpload.fromJson(Map<String, dynamic> json) => _$PictrsUploadFromJson(json);
+  factory PictrsUpload.fromJson(Map<String, dynamic> json) =>
+      _$PictrsUploadFromJson(json);
 }

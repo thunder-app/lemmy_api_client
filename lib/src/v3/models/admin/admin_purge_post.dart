@@ -17,5 +17,6 @@ class AdminPurgePost with _$AdminPurgePost {
   }) = _AdminPurgePost;
 
   const AdminPurgePost._();
-  factory AdminPurgePost.fromJson(Map<String, dynamic> json) => _$AdminPurgePostFromJson(json);
+  factory AdminPurgePost.fromJson(Map<String, dynamic> json) =>
+      _$AdminPurgePostFromJson(json);
 }

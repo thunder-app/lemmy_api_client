@@ -13,5 +13,6 @@ class PurgeItemResponse with _$PurgeItemResponse {
   }) = _PurgeItemResponse;
 
   const PurgeItemResponse._();
-  factory PurgeItemResponse.fromJson(Map<String, dynamic> json) => _$PurgeItemResponseFromJson(json);
+  factory PurgeItemResponse.fromJson(Map<String, dynamic> json) =>
+      _$PurgeItemResponseFromJson(json);
 }

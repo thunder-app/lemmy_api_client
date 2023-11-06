@@ -16,5 +16,6 @@ class HideCommunityResponse with _$HideCommunityResponse {
   }) = _HideCommunityResponse;
 
   const HideCommunityResponse._();
-  factory HideCommunityResponse.fromJson(Map<String, dynamic> json) => _$HideCommunityResponseFromJson(json);
+  factory HideCommunityResponse.fromJson(Map<String, dynamic> json) =>
+      _$HideCommunityResponseFromJson(json);
 }

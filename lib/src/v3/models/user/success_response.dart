@@ -13,5 +13,6 @@ class SuccessResponse with _$SuccessResponse {
   }) = _SuccessResponse;
 
   const SuccessResponse._();
-  factory SuccessResponse.fromJson(Map<String, dynamic> json) => _$SuccessResponseFromJson(json);
+  factory SuccessResponse.fromJson(Map<String, dynamic> json) =>
+      _$SuccessResponseFromJson(json);
 }

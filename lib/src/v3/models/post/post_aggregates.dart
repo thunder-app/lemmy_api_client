@@ -26,5 +26,6 @@ class PostAggregates with _$PostAggregates {
   }) = _PostAggregates;
 
   const PostAggregates._();
-  factory PostAggregates.fromJson(Map<String, dynamic> json) => _$PostAggregatesFromJson(json);
+  factory PostAggregates.fromJson(Map<String, dynamic> json) =>
+      _$PostAggregatesFromJson(json);
 }

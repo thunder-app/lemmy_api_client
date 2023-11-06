@@ -27,5 +27,6 @@ class CommentReplyView with _$CommentReplyView {
   }) = _CommentReplyView;
 
   const CommentReplyView._();
-  factory CommentReplyView.fromJson(Map<String, dynamic> json) => _$CommentReplyViewFromJson(json);
+  factory CommentReplyView.fromJson(Map<String, dynamic> json) =>
+      _$CommentReplyViewFromJson(json);
 }
