@@ -15,6 +15,7 @@ class PostView with _$PostView {
     required Person creator,
     required Community community,
     required bool creatorBannedFromCommunity,
+    bool? creatorIsModerator, // Only available in lemmy v0.19.0 and above
     required PostAggregates counts,
     required SubscribedType subscribed,
     required bool saved,
@@ -25,5 +26,6 @@ class PostView with _$PostView {
   }) = _PostView;
 
   const PostView._();
-  factory PostView.fromJson(Map<String, dynamic> json) => _$PostViewFromJson(json);
+  factory PostView.fromJson(Map<String, dynamic> json) =>
+      _$PostViewFromJson(json);
 }

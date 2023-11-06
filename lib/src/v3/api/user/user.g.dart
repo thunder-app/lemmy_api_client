@@ -178,6 +178,11 @@ Map<String, dynamic> _$$_LoginToJson(_$_Login instance) {
   return val;
 }
 
+_$_Logout _$$_LogoutFromJson(Map<String, dynamic> json) => _$_Logout();
+
+Map<String, dynamic> _$$_LogoutToJson(_$_Logout instance) =>
+    <String, dynamic>{};
+
 _$_GetPersonDetails _$$_GetPersonDetailsFromJson(Map<String, dynamic> json) =>
     _$_GetPersonDetails(
       personId: json['person_id'] as int?,

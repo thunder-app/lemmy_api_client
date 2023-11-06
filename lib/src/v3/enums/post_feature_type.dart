@@ -6,7 +6,8 @@ enum PostFeatureType {
   final String value;
   const PostFeatureType(this.value);
 
-  factory PostFeatureType.fromJson(String value) => values.firstWhere((e) => e.value == value);
+  factory PostFeatureType.fromJson(String value) =>
+      values.firstWhere((e) => e.value == value);
 
   String toJson() => value;
 

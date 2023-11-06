@@ -17,5 +17,6 @@ class GetPostResponse with _$GetPostResponse {
   }) = _GetPostResponse;
 
   const GetPostResponse._();
-  factory GetPostResponse.fromJson(Map<String, dynamic> json) => _$GetPostResponseFromJson(json);
+  factory GetPostResponse.fromJson(Map<String, dynamic> json) =>
+      _$GetPostResponseFromJson(json);
 }

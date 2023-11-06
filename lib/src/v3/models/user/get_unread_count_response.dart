@@ -15,5 +15,6 @@ class GetUnreadCountResponse with _$GetUnreadCountResponse {
   }) = _GetUnreadCountResponse;
 
   const GetUnreadCountResponse._();
-  factory GetUnreadCountResponse.fromJson(Map<String, dynamic> json) => _$GetUnreadCountResponseFromJson(json);
+  factory GetUnreadCountResponse.fromJson(Map<String, dynamic> json) =>
+      _$GetUnreadCountResponseFromJson(json);
 }

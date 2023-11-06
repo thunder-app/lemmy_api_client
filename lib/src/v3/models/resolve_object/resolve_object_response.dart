@@ -17,5 +17,6 @@ class ResolveObjectResponse with _$ResolveObjectResponse {
   }) = _ResolveObjectResponse;
 
   const ResolveObjectResponse._();
-  factory ResolveObjectResponse.fromJson(Map<String, dynamic> json) => _$ResolveObjectResponseFromJson(json);
+  factory ResolveObjectResponse.fromJson(Map<String, dynamic> json) =>
+      _$ResolveObjectResponseFromJson(json);
 }

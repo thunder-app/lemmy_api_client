@@ -8,7 +8,7 @@ part of 'purge_item_response.dart';
 
 _$_PurgeItemResponse _$$_PurgeItemResponseFromJson(Map<String, dynamic> json) =>
     _$_PurgeItemResponse(
-      success: json['success'] as bool,
+      success: json['success'] as bool?,
     );
 
 Map<String, dynamic> _$$_PurgeItemResponseToJson(

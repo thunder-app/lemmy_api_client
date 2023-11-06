@@ -15,5 +15,6 @@ class BanFromCommunityResponse with _$BanFromCommunityResponse {
   }) = _BanFromCommunityResponse;
 
   const BanFromCommunityResponse._();
-  factory BanFromCommunityResponse.fromJson(Map<String, dynamic> json) => _$BanFromCommunityResponseFromJson(json);
+  factory BanFromCommunityResponse.fromJson(Map<String, dynamic> json) =>
+      _$BanFromCommunityResponseFromJson(json);
 }

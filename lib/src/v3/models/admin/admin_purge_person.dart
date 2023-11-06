@@ -16,5 +16,6 @@ class AdminPurgePerson with _$AdminPurgePerson {
   }) = _AdminPurgePerson;
 
   const AdminPurgePerson._();
-  factory AdminPurgePerson.fromJson(Map<String, dynamic> json) => _$AdminPurgePersonFromJson(json);
+  factory AdminPurgePerson.fromJson(Map<String, dynamic> json) =>
+      _$AdminPurgePersonFromJson(json);
 }

@@ -21,7 +21,12 @@ PasswordResetResponse _$PasswordResetResponseFromJson(
 
 /// @nodoc
 mixin _$PasswordResetResponse {
+  bool? get success => throw _privateConstructorUsedError;
+
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PasswordResetResponseCopyWith<PasswordResetResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -29,6 +34,8 @@ abstract class $PasswordResetResponseCopyWith<$Res> {
   factory $PasswordResetResponseCopyWith(PasswordResetResponse value,
           $Res Function(PasswordResetResponse) then) =
       _$PasswordResetResponseCopyWithImpl<$Res, PasswordResetResponse>;
+  @useResult
+  $Res call({bool? success});
 }
 
 /// @nodoc
@@ -41,13 +48,30 @@ class _$PasswordResetResponseCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? success = freezed,
+  }) {
+    return _then(_value.copyWith(
+      success: freezed == success
+          ? _value.success
+          : success // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ) as $Val);
+  }
 }
 
 /// @nodoc
-abstract class _$$_PasswordResetResponseCopyWith<$Res> {
+abstract class _$$_PasswordResetResponseCopyWith<$Res>
+    implements $PasswordResetResponseCopyWith<$Res> {
   factory _$$_PasswordResetResponseCopyWith(_$_PasswordResetResponse value,
           $Res Function(_$_PasswordResetResponse) then) =
       __$$_PasswordResetResponseCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({bool? success});
 }
 
 /// @nodoc
@@ -57,31 +81,56 @@ class __$$_PasswordResetResponseCopyWithImpl<$Res>
   __$$_PasswordResetResponseCopyWithImpl(_$_PasswordResetResponse _value,
       $Res Function(_$_PasswordResetResponse) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? success = freezed,
+  }) {
+    return _then(_$_PasswordResetResponse(
+      success: freezed == success
+          ? _value.success
+          : success // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ));
+  }
 }
 
 /// @nodoc
 
 @modelSerde
 class _$_PasswordResetResponse extends _PasswordResetResponse {
-  const _$_PasswordResetResponse() : super._();
+  const _$_PasswordResetResponse({this.success}) : super._();
 
   factory _$_PasswordResetResponse.fromJson(Map<String, dynamic> json) =>
       _$$_PasswordResetResponseFromJson(json);
 
   @override
+  final bool? success;
+
+  @override
   String toString() {
-    return 'PasswordResetResponse()';
+    return 'PasswordResetResponse(success: $success)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_PasswordResetResponse);
+        (other.runtimeType == runtimeType &&
+            other is _$_PasswordResetResponse &&
+            (identical(other.success, success) || other.success == success));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, success);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_PasswordResetResponseCopyWith<_$_PasswordResetResponse> get copyWith =>
+      __$$_PasswordResetResponseCopyWithImpl<_$_PasswordResetResponse>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -92,9 +141,17 @@ class _$_PasswordResetResponse extends _PasswordResetResponse {
 }
 
 abstract class _PasswordResetResponse extends PasswordResetResponse {
-  const factory _PasswordResetResponse() = _$_PasswordResetResponse;
+  const factory _PasswordResetResponse({final bool? success}) =
+      _$_PasswordResetResponse;
   const _PasswordResetResponse._() : super._();
 
   factory _PasswordResetResponse.fromJson(Map<String, dynamic> json) =
       _$_PasswordResetResponse.fromJson;
+
+  @override
+  bool? get success;
+  @override
+  @JsonKey(ignore: true)
+  _$$_PasswordResetResponseCopyWith<_$_PasswordResetResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }

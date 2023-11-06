@@ -19,5 +19,6 @@ class ModRemoveCommentView with _$ModRemoveCommentView {
   }) = _ModRemoveCommentView;
 
   const ModRemoveCommentView._();
-  factory ModRemoveCommentView.fromJson(Map<String, dynamic> json) => _$ModRemoveCommentViewFromJson(json);
+  factory ModRemoveCommentView.fromJson(Map<String, dynamic> json) =>
+      _$ModRemoveCommentViewFromJson(json);
 }

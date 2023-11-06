@@ -18,5 +18,6 @@ class ModRemovePost with _$ModRemovePost {
   }) = _ModRemovePost;
 
   const ModRemovePost._();
-  factory ModRemovePost.fromJson(Map<String, dynamic> json) => _$ModRemovePostFromJson(json);
+  factory ModRemovePost.fromJson(Map<String, dynamic> json) =>
+      _$ModRemovePostFromJson(json);
 }

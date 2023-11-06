@@ -28,6 +28,8 @@ mixin _$PersonMentionView {
   Person get recipient => throw _privateConstructorUsedError;
   CommentAggregates get counts => throw _privateConstructorUsedError;
   bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
+  bool? get creatorIsModerator =>
+      throw _privateConstructorUsedError; // Only available in lemmy v0.19.0 and above
   SubscribedType get subscribed => throw _privateConstructorUsedError;
   bool get saved => throw _privateConstructorUsedError;
   bool get creatorBlocked => throw _privateConstructorUsedError;
@@ -54,6 +56,7 @@ abstract class $PersonMentionViewCopyWith<$Res> {
       Person recipient,
       CommentAggregates counts,
       bool creatorBannedFromCommunity,
+      bool? creatorIsModerator,
       SubscribedType subscribed,
       bool saved,
       bool creatorBlocked,
@@ -89,6 +92,7 @@ class _$PersonMentionViewCopyWithImpl<$Res, $Val extends PersonMentionView>
     Object? recipient = null,
     Object? counts = null,
     Object? creatorBannedFromCommunity = null,
+    Object? creatorIsModerator = freezed,
     Object? subscribed = null,
     Object? saved = null,
     Object? creatorBlocked = null,
@@ -127,6 +131,10 @@ class _$PersonMentionViewCopyWithImpl<$Res, $Val extends PersonMentionView>
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
               as bool,
+      creatorIsModerator: freezed == creatorIsModerator
+          ? _value.creatorIsModerator
+          : creatorIsModerator // ignore: cast_nullable_to_non_nullable
+              as bool?,
       subscribed: null == subscribed
           ? _value.subscribed
           : subscribed // ignore: cast_nullable_to_non_nullable
@@ -220,6 +228,7 @@ abstract class _$$_PersonMentionViewCopyWith<$Res>
       Person recipient,
       CommentAggregates counts,
       bool creatorBannedFromCommunity,
+      bool? creatorIsModerator,
       SubscribedType subscribed,
       bool saved,
       bool creatorBlocked,
@@ -260,6 +269,7 @@ class __$$_PersonMentionViewCopyWithImpl<$Res>
     Object? recipient = null,
     Object? counts = null,
     Object? creatorBannedFromCommunity = null,
+    Object? creatorIsModerator = freezed,
     Object? subscribed = null,
     Object? saved = null,
     Object? creatorBlocked = null,
@@ -298,6 +308,10 @@ class __$$_PersonMentionViewCopyWithImpl<$Res>
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
               as bool,
+      creatorIsModerator: freezed == creatorIsModerator
+          ? _value.creatorIsModerator
+          : creatorIsModerator // ignore: cast_nullable_to_non_nullable
+              as bool?,
       subscribed: null == subscribed
           ? _value.subscribed
           : subscribed // ignore: cast_nullable_to_non_nullable
@@ -331,6 +345,7 @@ class _$_PersonMentionView extends _PersonMentionView {
       required this.recipient,
       required this.counts,
       required this.creatorBannedFromCommunity,
+      this.creatorIsModerator,
       required this.subscribed,
       required this.saved,
       required this.creatorBlocked,
@@ -357,6 +372,9 @@ class _$_PersonMentionView extends _PersonMentionView {
   @override
   final bool creatorBannedFromCommunity;
   @override
+  final bool? creatorIsModerator;
+// Only available in lemmy v0.19.0 and above
+  @override
   final SubscribedType subscribed;
   @override
   final bool saved;
@@ -367,7 +385,7 @@ class _$_PersonMentionView extends _PersonMentionView {
 
   @override
   String toString() {
-    return 'PersonMentionView(personMention: $personMention, comment: $comment, creator: $creator, post: $post, community: $community, recipient: $recipient, counts: $counts, creatorBannedFromCommunity: $creatorBannedFromCommunity, subscribed: $subscribed, saved: $saved, creatorBlocked: $creatorBlocked, myVote: $myVote)';
+    return 'PersonMentionView(personMention: $personMention, comment: $comment, creator: $creator, post: $post, community: $community, recipient: $recipient, counts: $counts, creatorBannedFromCommunity: $creatorBannedFromCommunity, creatorIsModerator: $creatorIsModerator, subscribed: $subscribed, saved: $saved, creatorBlocked: $creatorBlocked, myVote: $myVote)';
   }
 
   @override
@@ -389,6 +407,8 @@ class _$_PersonMentionView extends _PersonMentionView {
                     creatorBannedFromCommunity) ||
                 other.creatorBannedFromCommunity ==
                     creatorBannedFromCommunity) &&
+            (identical(other.creatorIsModerator, creatorIsModerator) ||
+                other.creatorIsModerator == creatorIsModerator) &&
             (identical(other.subscribed, subscribed) ||
                 other.subscribed == subscribed) &&
             (identical(other.saved, saved) || other.saved == saved) &&
@@ -409,6 +429,7 @@ class _$_PersonMentionView extends _PersonMentionView {
       recipient,
       counts,
       creatorBannedFromCommunity,
+      creatorIsModerator,
       subscribed,
       saved,
       creatorBlocked,
@@ -439,6 +460,7 @@ abstract class _PersonMentionView extends PersonMentionView {
       required final Person recipient,
       required final CommentAggregates counts,
       required final bool creatorBannedFromCommunity,
+      final bool? creatorIsModerator,
       required final SubscribedType subscribed,
       required final bool saved,
       required final bool creatorBlocked,
@@ -465,6 +487,8 @@ abstract class _PersonMentionView extends PersonMentionView {
   @override
   bool get creatorBannedFromCommunity;
   @override
+  bool? get creatorIsModerator;
+  @override // Only available in lemmy v0.19.0 and above
   SubscribedType get subscribed;
   @override
   bool get saved;

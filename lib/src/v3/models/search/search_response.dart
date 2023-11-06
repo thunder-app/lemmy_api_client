@@ -19,5 +19,6 @@ class SearchResponse with _$SearchResponse {
   }) = _SearchResponse;
 
   const SearchResponse._();
-  factory SearchResponse.fromJson(Map<String, dynamic> json) => _$SearchResponseFromJson(json);
+  factory SearchResponse.fromJson(Map<String, dynamic> json) =>
+      _$SearchResponseFromJson(json);
 }

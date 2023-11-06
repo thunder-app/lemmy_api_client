@@ -15,5 +15,6 @@ class BlockPersonResponse with _$BlockPersonResponse {
   }) = _BlockPersonResponse;
 
   const BlockPersonResponse._();
-  factory BlockPersonResponse.fromJson(Map<String, dynamic> json) => _$BlockPersonResponseFromJson(json);
+  factory BlockPersonResponse.fromJson(Map<String, dynamic> json) =>
+      _$BlockPersonResponseFromJson(json);
 }

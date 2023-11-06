@@ -16,5 +16,6 @@ class LocalUserView with _$LocalUserView {
   }) = _LocalUserView;
 
   const LocalUserView._();
-  factory LocalUserView.fromJson(Map<String, dynamic> json) => _$LocalUserViewFromJson(json);
+  factory LocalUserView.fromJson(Map<String, dynamic> json) =>
+      _$LocalUserViewFromJson(json);
 }

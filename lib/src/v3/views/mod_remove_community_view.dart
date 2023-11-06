@@ -16,5 +16,6 @@ class ModRemoveCommunityView with _$ModRemoveCommunityView {
   }) = _ModRemoveCommunityView;
 
   const ModRemoveCommunityView._();
-  factory ModRemoveCommunityView.fromJson(Map<String, dynamic> json) => _$ModRemoveCommunityViewFromJson(json);
+  factory ModRemoveCommunityView.fromJson(Map<String, dynamic> json) =>
+      _$ModRemoveCommunityViewFromJson(json);
 }

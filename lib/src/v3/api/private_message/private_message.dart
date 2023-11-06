@@ -11,7 +11,11 @@ part 'private_message.g.dart';
 ///
 /// `HTTP.GET /private_message/list`
 @freezed
-class GetPrivateMessages with _$GetPrivateMessages implements LemmyApiQuery<PrivateMessagesResponse>, LemmyApiAuthenticatedQuery {
+class GetPrivateMessages
+    with _$GetPrivateMessages
+    implements
+        LemmyApiQuery<PrivateMessagesResponse>,
+        LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetPrivateMessages({
     bool? unreadOnly,
@@ -22,21 +26,27 @@ class GetPrivateMessages with _$GetPrivateMessages implements LemmyApiQuery<Priv
   }) = _GetPrivateMessages;
 
   const GetPrivateMessages._();
-  factory GetPrivateMessages.fromJson(Map<String, dynamic> json) => _$GetPrivateMessagesFromJson(json);
+  factory GetPrivateMessages.fromJson(Map<String, dynamic> json) =>
+      _$GetPrivateMessagesFromJson(json);
 
   final path = '/private_message/list';
 
   final httpMethod = HttpMethod.get;
 
   @override
-  PrivateMessagesResponse responseFactory(Map<String, dynamic> json) => PrivateMessagesResponse.fromJson(json);
+  PrivateMessagesResponse responseFactory(Map<String, dynamic> json) =>
+      PrivateMessagesResponse.fromJson(json);
 }
 
 /// Create a private_message.
 ///
 /// `HTTP.POST /private_message`
 @freezed
-class CreatePrivateMessage with _$CreatePrivateMessage implements LemmyApiQuery<PrivateMessageResponse>, LemmyApiAuthenticatedQuery {
+class CreatePrivateMessage
+    with _$CreatePrivateMessage
+    implements
+        LemmyApiQuery<PrivateMessageResponse>,
+        LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory CreatePrivateMessage({
     required String content,
@@ -45,21 +55,27 @@ class CreatePrivateMessage with _$CreatePrivateMessage implements LemmyApiQuery<
   }) = _CreatePrivateMessage;
 
   const CreatePrivateMessage._();
-  factory CreatePrivateMessage.fromJson(Map<String, dynamic> json) => _$CreatePrivateMessageFromJson(json);
+  factory CreatePrivateMessage.fromJson(Map<String, dynamic> json) =>
+      _$CreatePrivateMessageFromJson(json);
 
   final path = '/private_message';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  PrivateMessageResponse responseFactory(Map<String, dynamic> json) => PrivateMessageResponse.fromJson(json);
+  PrivateMessageResponse responseFactory(Map<String, dynamic> json) =>
+      PrivateMessageResponse.fromJson(json);
 }
 
 /// Edit a private_message.
 ///
 /// `HTTP.PUT /private_message`
 @freezed
-class EditPrivateMessage with _$EditPrivateMessage implements LemmyApiQuery<PrivateMessageResponse>, LemmyApiAuthenticatedQuery {
+class EditPrivateMessage
+    with _$EditPrivateMessage
+    implements
+        LemmyApiQuery<PrivateMessageResponse>,
+        LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory EditPrivateMessage({
     required int privateMessageId,
@@ -68,21 +84,27 @@ class EditPrivateMessage with _$EditPrivateMessage implements LemmyApiQuery<Priv
   }) = _EditPrivateMessage;
 
   const EditPrivateMessage._();
-  factory EditPrivateMessage.fromJson(Map<String, dynamic> json) => _$EditPrivateMessageFromJson(json);
+  factory EditPrivateMessage.fromJson(Map<String, dynamic> json) =>
+      _$EditPrivateMessageFromJson(json);
 
   final path = '/private_message';
 
   final httpMethod = HttpMethod.put;
 
   @override
-  PrivateMessageResponse responseFactory(Map<String, dynamic> json) => PrivateMessageResponse.fromJson(json);
+  PrivateMessageResponse responseFactory(Map<String, dynamic> json) =>
+      PrivateMessageResponse.fromJson(json);
 }
 
 /// Delete a private_message.
 ///
 /// `HTTP.POST /private_message/delete`
 @freezed
-class DeletePrivateMessage with _$DeletePrivateMessage implements LemmyApiQuery<PrivateMessageResponse>, LemmyApiAuthenticatedQuery {
+class DeletePrivateMessage
+    with _$DeletePrivateMessage
+    implements
+        LemmyApiQuery<PrivateMessageResponse>,
+        LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory DeletePrivateMessage({
     required int privateMessageId,
@@ -91,21 +113,27 @@ class DeletePrivateMessage with _$DeletePrivateMessage implements LemmyApiQuery<
   }) = _DeletePrivateMessage;
 
   const DeletePrivateMessage._();
-  factory DeletePrivateMessage.fromJson(Map<String, dynamic> json) => _$DeletePrivateMessageFromJson(json);
+  factory DeletePrivateMessage.fromJson(Map<String, dynamic> json) =>
+      _$DeletePrivateMessageFromJson(json);
 
   final path = '/private_message/delete';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  PrivateMessageResponse responseFactory(Map<String, dynamic> json) => PrivateMessageResponse.fromJson(json);
+  PrivateMessageResponse responseFactory(Map<String, dynamic> json) =>
+      PrivateMessageResponse.fromJson(json);
 }
 
 /// Mark a private_message as read.
 ///
 /// `HTTP.POST /private_message/mark_as_read`
 @freezed
-class MarkPrivateMessageAsRead with _$MarkPrivateMessageAsRead implements LemmyApiQuery<PrivateMessageResponse>, LemmyApiAuthenticatedQuery {
+class MarkPrivateMessageAsRead
+    with _$MarkPrivateMessageAsRead
+    implements
+        LemmyApiQuery<PrivateMessageResponse>,
+        LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory MarkPrivateMessageAsRead({
     required int privateMessageId,
@@ -114,21 +142,27 @@ class MarkPrivateMessageAsRead with _$MarkPrivateMessageAsRead implements LemmyA
   }) = _MarkPrivateMessageAsRead;
 
   const MarkPrivateMessageAsRead._();
-  factory MarkPrivateMessageAsRead.fromJson(Map<String, dynamic> json) => _$MarkPrivateMessageAsReadFromJson(json);
+  factory MarkPrivateMessageAsRead.fromJson(Map<String, dynamic> json) =>
+      _$MarkPrivateMessageAsReadFromJson(json);
 
   final path = '/private_message/mark_as_read';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  PrivateMessageResponse responseFactory(Map<String, dynamic> json) => PrivateMessageResponse.fromJson(json);
+  PrivateMessageResponse responseFactory(Map<String, dynamic> json) =>
+      PrivateMessageResponse.fromJson(json);
 }
 
 /// Create a report for a private message.
 ///
 /// `HTTP.POST /private_message/report`
 @freezed
-class CreatePrivateMessageReport with _$CreatePrivateMessageReport implements LemmyApiQuery<PrivateMessageReportResponse>, LemmyApiAuthenticatedQuery {
+class CreatePrivateMessageReport
+    with _$CreatePrivateMessageReport
+    implements
+        LemmyApiQuery<PrivateMessageReportResponse>,
+        LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory CreatePrivateMessageReport({
     required int privateMessageId,
@@ -137,21 +171,27 @@ class CreatePrivateMessageReport with _$CreatePrivateMessageReport implements Le
   }) = _CreatePrivateMessageReport;
 
   const CreatePrivateMessageReport._();
-  factory CreatePrivateMessageReport.fromJson(Map<String, dynamic> json) => _$CreatePrivateMessageReportFromJson(json);
+  factory CreatePrivateMessageReport.fromJson(Map<String, dynamic> json) =>
+      _$CreatePrivateMessageReportFromJson(json);
 
   final path = '/private_message/report';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  PrivateMessageReportResponse responseFactory(Map<String, dynamic> json) => PrivateMessageReportResponse.fromJson(json);
+  PrivateMessageReportResponse responseFactory(Map<String, dynamic> json) =>
+      PrivateMessageReportResponse.fromJson(json);
 }
 
 /// Resolve a report for a private message.
 ///
 /// `HTTP.PUT /private_message/report/resolve`
 @freezed
-class ResolvePrivateMessageReport with _$ResolvePrivateMessageReport implements LemmyApiQuery<PrivateMessageReportResponse>, LemmyApiAuthenticatedQuery {
+class ResolvePrivateMessageReport
+    with _$ResolvePrivateMessageReport
+    implements
+        LemmyApiQuery<PrivateMessageReportResponse>,
+        LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ResolvePrivateMessageReport({
     required int reportId,
@@ -160,21 +200,27 @@ class ResolvePrivateMessageReport with _$ResolvePrivateMessageReport implements 
   }) = _ResolvePrivateMessageReport;
 
   const ResolvePrivateMessageReport._();
-  factory ResolvePrivateMessageReport.fromJson(Map<String, dynamic> json) => _$ResolvePrivateMessageReportFromJson(json);
+  factory ResolvePrivateMessageReport.fromJson(Map<String, dynamic> json) =>
+      _$ResolvePrivateMessageReportFromJson(json);
 
   final path = '/private_message/report/resolve';
 
   final httpMethod = HttpMethod.put;
 
   @override
-  PrivateMessageReportResponse responseFactory(Map<String, dynamic> json) => PrivateMessageReportResponse.fromJson(json);
+  PrivateMessageReportResponse responseFactory(Map<String, dynamic> json) =>
+      PrivateMessageReportResponse.fromJson(json);
 }
 
 /// List private_message reports.
 ///
 /// `HTTP.GET /private_message/report/list`
 @freezed
-class ListPrivateMessageReports with _$ListPrivateMessageReports implements LemmyApiQuery<ListPrivateMessageReportsResponse>, LemmyApiAuthenticatedQuery {
+class ListPrivateMessageReports
+    with _$ListPrivateMessageReports
+    implements
+        LemmyApiQuery<ListPrivateMessageReportsResponse>,
+        LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ListPrivateMessageReports({
     int? page,
@@ -185,12 +231,15 @@ class ListPrivateMessageReports with _$ListPrivateMessageReports implements Lemm
   }) = _ListPrivateMessageReports;
 
   const ListPrivateMessageReports._();
-  factory ListPrivateMessageReports.fromJson(Map<String, dynamic> json) => _$ListPrivateMessageReportsFromJson(json);
+  factory ListPrivateMessageReports.fromJson(Map<String, dynamic> json) =>
+      _$ListPrivateMessageReportsFromJson(json);
 
   final path = '/private_message/report/list';
 
   final httpMethod = HttpMethod.get;
 
   @override
-  ListPrivateMessageReportsResponse responseFactory(Map<String, dynamic> json) => ListPrivateMessageReportsResponse.fromJson(json);
+  ListPrivateMessageReportsResponse responseFactory(
+          Map<String, dynamic> json) =>
+      ListPrivateMessageReportsResponse.fromJson(json);
 }

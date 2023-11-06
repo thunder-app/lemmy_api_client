@@ -26,6 +26,8 @@ mixin _$CommentView {
   Community get community => throw _privateConstructorUsedError;
   CommentAggregates get counts => throw _privateConstructorUsedError;
   bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
+  bool? get creatorIsModerator =>
+      throw _privateConstructorUsedError; // Only available in lemmy v0.19.0 and above
   SubscribedType get subscribed => throw _privateConstructorUsedError;
   bool get saved => throw _privateConstructorUsedError;
   bool get creatorBlocked => throw _privateConstructorUsedError;
@@ -50,6 +52,7 @@ abstract class $CommentViewCopyWith<$Res> {
       Community community,
       CommentAggregates counts,
       bool creatorBannedFromCommunity,
+      bool? creatorIsModerator,
       SubscribedType subscribed,
       bool saved,
       bool creatorBlocked,
@@ -81,6 +84,7 @@ class _$CommentViewCopyWithImpl<$Res, $Val extends CommentView>
     Object? community = null,
     Object? counts = null,
     Object? creatorBannedFromCommunity = null,
+    Object? creatorIsModerator = freezed,
     Object? subscribed = null,
     Object? saved = null,
     Object? creatorBlocked = null,
@@ -111,6 +115,10 @@ class _$CommentViewCopyWithImpl<$Res, $Val extends CommentView>
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
               as bool,
+      creatorIsModerator: freezed == creatorIsModerator
+          ? _value.creatorIsModerator
+          : creatorIsModerator // ignore: cast_nullable_to_non_nullable
+              as bool?,
       subscribed: null == subscribed
           ? _value.subscribed
           : subscribed // ignore: cast_nullable_to_non_nullable
@@ -186,6 +194,7 @@ abstract class _$$_CommentViewCopyWith<$Res>
       Community community,
       CommentAggregates counts,
       bool creatorBannedFromCommunity,
+      bool? creatorIsModerator,
       SubscribedType subscribed,
       bool saved,
       bool creatorBlocked,
@@ -220,6 +229,7 @@ class __$$_CommentViewCopyWithImpl<$Res>
     Object? community = null,
     Object? counts = null,
     Object? creatorBannedFromCommunity = null,
+    Object? creatorIsModerator = freezed,
     Object? subscribed = null,
     Object? saved = null,
     Object? creatorBlocked = null,
@@ -250,6 +260,10 @@ class __$$_CommentViewCopyWithImpl<$Res>
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
               as bool,
+      creatorIsModerator: freezed == creatorIsModerator
+          ? _value.creatorIsModerator
+          : creatorIsModerator // ignore: cast_nullable_to_non_nullable
+              as bool?,
       subscribed: null == subscribed
           ? _value.subscribed
           : subscribed // ignore: cast_nullable_to_non_nullable
@@ -281,6 +295,7 @@ class _$_CommentView extends _CommentView {
       required this.community,
       required this.counts,
       required this.creatorBannedFromCommunity,
+      this.creatorIsModerator,
       required this.subscribed,
       required this.saved,
       required this.creatorBlocked,
@@ -303,6 +318,9 @@ class _$_CommentView extends _CommentView {
   @override
   final bool creatorBannedFromCommunity;
   @override
+  final bool? creatorIsModerator;
+// Only available in lemmy v0.19.0 and above
+  @override
   final SubscribedType subscribed;
   @override
   final bool saved;
@@ -313,7 +331,7 @@ class _$_CommentView extends _CommentView {
 
   @override
   String toString() {
-    return 'CommentView(comment: $comment, creator: $creator, post: $post, community: $community, counts: $counts, creatorBannedFromCommunity: $creatorBannedFromCommunity, subscribed: $subscribed, saved: $saved, creatorBlocked: $creatorBlocked, myVote: $myVote)';
+    return 'CommentView(comment: $comment, creator: $creator, post: $post, community: $community, counts: $counts, creatorBannedFromCommunity: $creatorBannedFromCommunity, creatorIsModerator: $creatorIsModerator, subscribed: $subscribed, saved: $saved, creatorBlocked: $creatorBlocked, myVote: $myVote)';
   }
 
   @override
@@ -331,6 +349,8 @@ class _$_CommentView extends _CommentView {
                     creatorBannedFromCommunity) ||
                 other.creatorBannedFromCommunity ==
                     creatorBannedFromCommunity) &&
+            (identical(other.creatorIsModerator, creatorIsModerator) ||
+                other.creatorIsModerator == creatorIsModerator) &&
             (identical(other.subscribed, subscribed) ||
                 other.subscribed == subscribed) &&
             (identical(other.saved, saved) || other.saved == saved) &&
@@ -349,6 +369,7 @@ class _$_CommentView extends _CommentView {
       community,
       counts,
       creatorBannedFromCommunity,
+      creatorIsModerator,
       subscribed,
       saved,
       creatorBlocked,
@@ -376,6 +397,7 @@ abstract class _CommentView extends CommentView {
       required final Community community,
       required final CommentAggregates counts,
       required final bool creatorBannedFromCommunity,
+      final bool? creatorIsModerator,
       required final SubscribedType subscribed,
       required final bool saved,
       required final bool creatorBlocked,
@@ -398,6 +420,8 @@ abstract class _CommentView extends CommentView {
   @override
   bool get creatorBannedFromCommunity;
   @override
+  bool? get creatorIsModerator;
+  @override // Only available in lemmy v0.19.0 and above
   SubscribedType get subscribed;
   @override
   bool get saved;

@@ -8,8 +8,12 @@ part of 'verify_email_response.dart';
 
 _$_VerifyEmailResponse _$$_VerifyEmailResponseFromJson(
         Map<String, dynamic> json) =>
-    _$_VerifyEmailResponse();
+    _$_VerifyEmailResponse(
+      success: json['success'] as bool?,
+    );
 
 Map<String, dynamic> _$$_VerifyEmailResponseToJson(
         _$_VerifyEmailResponse instance) =>
-    <String, dynamic>{};
+    <String, dynamic>{
+      'success': instance.success,
+    };

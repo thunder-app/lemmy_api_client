@@ -14,5 +14,6 @@ class CustomEmojiResponse with _$CustomEmojiResponse {
   }) = _CustomEmojiResponse;
 
   const CustomEmojiResponse._();
-  factory CustomEmojiResponse.fromJson(Map<String, dynamic> json) => _$CustomEmojiResponseFromJson(json);
+  factory CustomEmojiResponse.fromJson(Map<String, dynamic> json) =>
+      _$CustomEmojiResponseFromJson(json);
 }

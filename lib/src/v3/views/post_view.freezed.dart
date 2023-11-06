@@ -24,6 +24,8 @@ mixin _$PostView {
   Person get creator => throw _privateConstructorUsedError;
   Community get community => throw _privateConstructorUsedError;
   bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
+  bool? get creatorIsModerator =>
+      throw _privateConstructorUsedError; // Only available in lemmy v0.19.0 and above
   PostAggregates get counts => throw _privateConstructorUsedError;
   SubscribedType get subscribed => throw _privateConstructorUsedError;
   bool get saved => throw _privateConstructorUsedError;
@@ -48,6 +50,7 @@ abstract class $PostViewCopyWith<$Res> {
       Person creator,
       Community community,
       bool creatorBannedFromCommunity,
+      bool? creatorIsModerator,
       PostAggregates counts,
       SubscribedType subscribed,
       bool saved,
@@ -79,6 +82,7 @@ class _$PostViewCopyWithImpl<$Res, $Val extends PostView>
     Object? creator = null,
     Object? community = null,
     Object? creatorBannedFromCommunity = null,
+    Object? creatorIsModerator = freezed,
     Object? counts = null,
     Object? subscribed = null,
     Object? saved = null,
@@ -104,6 +108,10 @@ class _$PostViewCopyWithImpl<$Res, $Val extends PostView>
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
               as bool,
+      creatorIsModerator: freezed == creatorIsModerator
+          ? _value.creatorIsModerator
+          : creatorIsModerator // ignore: cast_nullable_to_non_nullable
+              as bool?,
       counts: null == counts
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
@@ -180,6 +188,7 @@ abstract class _$$_PostViewCopyWith<$Res> implements $PostViewCopyWith<$Res> {
       Person creator,
       Community community,
       bool creatorBannedFromCommunity,
+      bool? creatorIsModerator,
       PostAggregates counts,
       SubscribedType subscribed,
       bool saved,
@@ -213,6 +222,7 @@ class __$$_PostViewCopyWithImpl<$Res>
     Object? creator = null,
     Object? community = null,
     Object? creatorBannedFromCommunity = null,
+    Object? creatorIsModerator = freezed,
     Object? counts = null,
     Object? subscribed = null,
     Object? saved = null,
@@ -238,6 +248,10 @@ class __$$_PostViewCopyWithImpl<$Res>
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
               as bool,
+      creatorIsModerator: freezed == creatorIsModerator
+          ? _value.creatorIsModerator
+          : creatorIsModerator // ignore: cast_nullable_to_non_nullable
+              as bool?,
       counts: null == counts
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
@@ -279,6 +293,7 @@ class _$_PostView extends _PostView {
       required this.creator,
       required this.community,
       required this.creatorBannedFromCommunity,
+      this.creatorIsModerator,
       required this.counts,
       required this.subscribed,
       required this.saved,
@@ -300,6 +315,9 @@ class _$_PostView extends _PostView {
   @override
   final bool creatorBannedFromCommunity;
   @override
+  final bool? creatorIsModerator;
+// Only available in lemmy v0.19.0 and above
+  @override
   final PostAggregates counts;
   @override
   final SubscribedType subscribed;
@@ -316,7 +334,7 @@ class _$_PostView extends _PostView {
 
   @override
   String toString() {
-    return 'PostView(post: $post, creator: $creator, community: $community, creatorBannedFromCommunity: $creatorBannedFromCommunity, counts: $counts, subscribed: $subscribed, saved: $saved, read: $read, creatorBlocked: $creatorBlocked, myVote: $myVote, unreadComments: $unreadComments)';
+    return 'PostView(post: $post, creator: $creator, community: $community, creatorBannedFromCommunity: $creatorBannedFromCommunity, creatorIsModerator: $creatorIsModerator, counts: $counts, subscribed: $subscribed, saved: $saved, read: $read, creatorBlocked: $creatorBlocked, myVote: $myVote, unreadComments: $unreadComments)';
   }
 
   @override
@@ -332,6 +350,8 @@ class _$_PostView extends _PostView {
                     creatorBannedFromCommunity) ||
                 other.creatorBannedFromCommunity ==
                     creatorBannedFromCommunity) &&
+            (identical(other.creatorIsModerator, creatorIsModerator) ||
+                other.creatorIsModerator == creatorIsModerator) &&
             (identical(other.counts, counts) || other.counts == counts) &&
             (identical(other.subscribed, subscribed) ||
                 other.subscribed == subscribed) &&
@@ -352,6 +372,7 @@ class _$_PostView extends _PostView {
       creator,
       community,
       creatorBannedFromCommunity,
+      creatorIsModerator,
       counts,
       subscribed,
       saved,
@@ -380,6 +401,7 @@ abstract class _PostView extends PostView {
       required final Person creator,
       required final Community community,
       required final bool creatorBannedFromCommunity,
+      final bool? creatorIsModerator,
       required final PostAggregates counts,
       required final SubscribedType subscribed,
       required final bool saved,
@@ -400,6 +422,8 @@ abstract class _PostView extends PostView {
   @override
   bool get creatorBannedFromCommunity;
   @override
+  bool? get creatorIsModerator;
+  @override // Only available in lemmy v0.19.0 and above
   PostAggregates get counts;
   @override
   SubscribedType get subscribed;

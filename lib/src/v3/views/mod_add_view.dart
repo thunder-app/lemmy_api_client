@@ -16,5 +16,6 @@ class ModAddView with _$ModAddView {
   }) = _ModAddView;
 
   const ModAddView._();
-  factory ModAddView.fromJson(Map<String, dynamic> json) => _$ModAddViewFromJson(json);
+  factory ModAddView.fromJson(Map<String, dynamic> json) =>
+      _$ModAddViewFromJson(json);
 }

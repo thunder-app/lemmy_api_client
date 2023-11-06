@@ -13,5 +13,6 @@ class UpdateTotpResponse with _$UpdateTotpResponse {
   }) = _UpdateTotpResponse;
 
   const UpdateTotpResponse._();
-  factory UpdateTotpResponse.fromJson(Map<String, dynamic> json) => _$UpdateTotpResponseFromJson(json);
+  factory UpdateTotpResponse.fromJson(Map<String, dynamic> json) =>
+      _$UpdateTotpResponseFromJson(json);
 }

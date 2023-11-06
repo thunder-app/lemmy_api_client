@@ -12,7 +12,9 @@ part 'modlog.g.dart';
 ///
 /// `HTTP.GET /modlog`
 @freezed
-class GetModlog with _$GetModlog implements LemmyApiQuery<GetModlogResponse>, LemmyApiAuthenticatedQuery {
+class GetModlog
+    with _$GetModlog
+    implements LemmyApiQuery<GetModlogResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetModlog({
     int? modPersonId,
@@ -25,12 +27,14 @@ class GetModlog with _$GetModlog implements LemmyApiQuery<GetModlogResponse>, Le
   }) = _GetModlog;
 
   const GetModlog._();
-  factory GetModlog.fromJson(Map<String, dynamic> json) => _$GetModlogFromJson(json);
+  factory GetModlog.fromJson(Map<String, dynamic> json) =>
+      _$GetModlogFromJson(json);
 
   final path = '/modlog';
 
   final httpMethod = HttpMethod.get;
 
   @override
-  GetModlogResponse responseFactory(Map<String, dynamic> json) => GetModlogResponse.fromJson(json);
+  GetModlogResponse responseFactory(Map<String, dynamic> json) =>
+      GetModlogResponse.fromJson(json);
 }

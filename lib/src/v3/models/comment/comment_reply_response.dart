@@ -14,5 +14,6 @@ class CommentReplyResponse with _$CommentReplyResponse {
   }) = _CommentReplyResponse;
 
   const CommentReplyResponse._();
-  factory CommentReplyResponse.fromJson(Map<String, dynamic> json) => _$CommentReplyResponseFromJson(json);
+  factory CommentReplyResponse.fromJson(Map<String, dynamic> json) =>
+      _$CommentReplyResponseFromJson(json);
 }

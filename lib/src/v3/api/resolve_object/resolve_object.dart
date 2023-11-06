@@ -11,7 +11,11 @@ part 'resolve_object.g.dart';
 ///
 /// `HTTP.GET /resolve_object`
 @freezed
-class ResolveObject with _$ResolveObject implements LemmyApiQuery<ResolveObjectResponse>, LemmyApiAuthenticatedQuery {
+class ResolveObject
+    with _$ResolveObject
+    implements
+        LemmyApiQuery<ResolveObjectResponse>,
+        LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ResolveObject({
     required String q,
@@ -19,12 +23,14 @@ class ResolveObject with _$ResolveObject implements LemmyApiQuery<ResolveObjectR
   }) = _ResolveObject;
 
   const ResolveObject._();
-  factory ResolveObject.fromJson(Map<String, dynamic> json) => _$ResolveObjectFromJson(json);
+  factory ResolveObject.fromJson(Map<String, dynamic> json) =>
+      _$ResolveObjectFromJson(json);
 
   final path = '/resolve_object';
 
   final httpMethod = HttpMethod.get;
 
   @override
-  ResolveObjectResponse responseFactory(Map<String, dynamic> json) => ResolveObjectResponse.fromJson(json);
+  ResolveObjectResponse responseFactory(Map<String, dynamic> json) =>
+      ResolveObjectResponse.fromJson(json);
 }

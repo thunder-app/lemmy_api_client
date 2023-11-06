@@ -1391,6 +1391,85 @@ abstract class _Login extends Login {
       throw _privateConstructorUsedError;
 }
 
+Logout _$LogoutFromJson(Map<String, dynamic> json) {
+  return _Logout.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Logout {
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $LogoutCopyWith<$Res> {
+  factory $LogoutCopyWith(Logout value, $Res Function(Logout) then) =
+      _$LogoutCopyWithImpl<$Res, Logout>;
+}
+
+/// @nodoc
+class _$LogoutCopyWithImpl<$Res, $Val extends Logout>
+    implements $LogoutCopyWith<$Res> {
+  _$LogoutCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+}
+
+/// @nodoc
+abstract class _$$_LogoutCopyWith<$Res> {
+  factory _$$_LogoutCopyWith(_$_Logout value, $Res Function(_$_Logout) then) =
+      __$$_LogoutCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_LogoutCopyWithImpl<$Res>
+    extends _$LogoutCopyWithImpl<$Res, _$_Logout>
+    implements _$$_LogoutCopyWith<$Res> {
+  __$$_LogoutCopyWithImpl(_$_Logout _value, $Res Function(_$_Logout) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+@apiSerde
+class _$_Logout extends _Logout {
+  const _$_Logout() : super._();
+
+  factory _$_Logout.fromJson(Map<String, dynamic> json) =>
+      _$$_LogoutFromJson(json);
+
+  @override
+  String toString() {
+    return 'Logout()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_Logout);
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_LogoutToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Logout extends Logout {
+  const factory _Logout() = _$_Logout;
+  const _Logout._() : super._();
+
+  factory _Logout.fromJson(Map<String, dynamic> json) = _$_Logout.fromJson;
+}
+
 GetPersonDetails _$GetPersonDetailsFromJson(Map<String, dynamic> json) {
   return _GetPersonDetails.fromJson(json);
 }

@@ -9,10 +9,11 @@ part 'delete_custom_emoji_response.g.dart';
 class DeleteCustomEmojiResponse with _$DeleteCustomEmojiResponse {
   @modelSerde
   const factory DeleteCustomEmojiResponse({
-    required int id,
-    required bool success,
+    @deprecated int? id,
+    bool? success,
   }) = _DeleteCustomEmojiResponse;
 
   const DeleteCustomEmojiResponse._();
-  factory DeleteCustomEmojiResponse.fromJson(Map<String, dynamic> json) => _$DeleteCustomEmojiResponseFromJson(json);
+  factory DeleteCustomEmojiResponse.fromJson(Map<String, dynamic> json) =>
+      _$DeleteCustomEmojiResponseFromJson(json);
 }

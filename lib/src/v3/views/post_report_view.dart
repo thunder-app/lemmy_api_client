@@ -22,5 +22,6 @@ class PostReportView with _$PostReportView {
   }) = _PostReportView;
 
   const PostReportView._();
-  factory PostReportView.fromJson(Map<String, dynamic> json) => _$PostReportViewFromJson(json);
+  factory PostReportView.fromJson(Map<String, dynamic> json) =>
+      _$PostReportViewFromJson(json);
 }

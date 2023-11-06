@@ -18,5 +18,6 @@ class PersonMention with _$PersonMention {
   }) = _PersonMention;
 
   const PersonMention._();
-  factory PersonMention.fromJson(Map<String, dynamic> json) => _$PersonMentionFromJson(json);
+  factory PersonMention.fromJson(Map<String, dynamic> json) =>
+      _$PersonMentionFromJson(json);
 }

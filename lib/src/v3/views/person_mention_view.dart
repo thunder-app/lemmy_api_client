@@ -19,6 +19,7 @@ class PersonMentionView with _$PersonMentionView {
     required Person recipient,
     required CommentAggregates counts,
     required bool creatorBannedFromCommunity,
+    bool? creatorIsModerator, // Only available in lemmy v0.19.0 and above
     required SubscribedType subscribed,
     required bool saved,
     required bool creatorBlocked,
@@ -26,5 +27,6 @@ class PersonMentionView with _$PersonMentionView {
   }) = _PersonMentionView;
 
   const PersonMentionView._();
-  factory PersonMentionView.fromJson(Map<String, dynamic> json) => _$PersonMentionViewFromJson(json);
+  factory PersonMentionView.fromJson(Map<String, dynamic> json) =>
+      _$PersonMentionViewFromJson(json);
 }

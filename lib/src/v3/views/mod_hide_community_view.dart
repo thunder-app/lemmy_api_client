@@ -16,5 +16,6 @@ class ModHideCommunityView with _$ModHideCommunityView {
   }) = _ModHideCommunityView;
 
   const ModHideCommunityView._();
-  factory ModHideCommunityView.fromJson(Map<String, dynamic> json) => _$ModHideCommunityViewFromJson(json);
+  factory ModHideCommunityView.fromJson(Map<String, dynamic> json) =>
+      _$ModHideCommunityViewFromJson(json);
 }

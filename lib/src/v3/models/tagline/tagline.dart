@@ -18,5 +18,6 @@ class Tagline with _$Tagline {
   }) = _Tagline;
 
   const Tagline._();
-  factory Tagline.fromJson(Map<String, dynamic> json) => _$TaglineFromJson(json);
+  factory Tagline.fromJson(Map<String, dynamic> json) =>
+      _$TaglineFromJson(json);
 }

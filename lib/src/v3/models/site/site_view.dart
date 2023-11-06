@@ -17,5 +17,6 @@ class SiteView with _$SiteView {
   }) = _SiteView;
 
   const SiteView._();
-  factory SiteView.fromJson(Map<String, dynamic> json) => _$SiteViewFromJson(json);
+  factory SiteView.fromJson(Map<String, dynamic> json) =>
+      _$SiteViewFromJson(json);
 }

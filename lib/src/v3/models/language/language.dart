@@ -15,5 +15,6 @@ class Language with _$Language {
   }) = _Language;
 
   const Language._();
-  factory Language.fromJson(Map<String, dynamic> json) => _$LanguageFromJson(json);
+  factory Language.fromJson(Map<String, dynamic> json) =>
+      _$LanguageFromJson(json);
 }

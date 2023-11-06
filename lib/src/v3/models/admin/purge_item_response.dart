@@ -9,9 +9,10 @@ part 'purge_item_response.g.dart';
 class PurgeItemResponse with _$PurgeItemResponse {
   @modelSerde
   const factory PurgeItemResponse({
-    required bool success,
+    bool? success,
   }) = _PurgeItemResponse;
 
   const PurgeItemResponse._();
-  factory PurgeItemResponse.fromJson(Map<String, dynamic> json) => _$PurgeItemResponseFromJson(json);
+  factory PurgeItemResponse.fromJson(Map<String, dynamic> json) =>
+      _$PurgeItemResponseFromJson(json);
 }

@@ -15,6 +15,7 @@ _$_CommentView _$$_CommentViewFromJson(Map<String, dynamic> json) =>
       counts:
           CommentAggregates.fromJson(json['counts'] as Map<String, dynamic>),
       creatorBannedFromCommunity: json['creator_banned_from_community'] as bool,
+      creatorIsModerator: json['creator_is_moderator'] as bool?,
       subscribed: SubscribedType.fromJson(json['subscribed'] as String),
       saved: json['saved'] as bool,
       creatorBlocked: json['creator_blocked'] as bool,
@@ -29,6 +30,7 @@ Map<String, dynamic> _$$_CommentViewToJson(_$_CommentView instance) =>
       'community': instance.community.toJson(),
       'counts': instance.counts.toJson(),
       'creator_banned_from_community': instance.creatorBannedFromCommunity,
+      'creator_is_moderator': instance.creatorIsModerator,
       'subscribed': instance.subscribed.toJson(),
       'saved': instance.saved,
       'creator_blocked': instance.creatorBlocked,
