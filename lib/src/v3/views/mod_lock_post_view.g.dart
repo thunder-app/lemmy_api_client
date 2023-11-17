@@ -6,8 +6,9 @@ part of 'mod_lock_post_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ModLockPostView _$$_ModLockPostViewFromJson(Map<String, dynamic> json) =>
-    _$_ModLockPostView(
+_$ModLockPostViewImpl _$$ModLockPostViewImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ModLockPostViewImpl(
       modLockPost:
           ModLockPost.fromJson(json['mod_lock_post'] as Map<String, dynamic>),
       moderator: json['moderator'] == null
@@ -17,7 +18,8 @@ _$_ModLockPostView _$$_ModLockPostViewFromJson(Map<String, dynamic> json) =>
       community: Community.fromJson(json['community'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ModLockPostViewToJson(_$_ModLockPostView instance) =>
+Map<String, dynamic> _$$ModLockPostViewImplToJson(
+        _$ModLockPostViewImpl instance) =>
     <String, dynamic>{
       'mod_lock_post': instance.modLockPost.toJson(),
       'moderator': instance.moderator?.toJson(),

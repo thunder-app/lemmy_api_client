@@ -6,15 +6,15 @@ part of 'custom_emoji_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CustomEmojiResponse _$$_CustomEmojiResponseFromJson(
+_$CustomEmojiResponseImpl _$$CustomEmojiResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CustomEmojiResponse(
+    _$CustomEmojiResponseImpl(
       customEmoji: CustomEmojiView.fromJson(
           json['custom_emoji'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CustomEmojiResponseToJson(
-        _$_CustomEmojiResponse instance) =>
+Map<String, dynamic> _$$CustomEmojiResponseImplToJson(
+        _$CustomEmojiResponseImpl instance) =>
     <String, dynamic>{
       'custom_emoji': instance.customEmoji.toJson(),
     };

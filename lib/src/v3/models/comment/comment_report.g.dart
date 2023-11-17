@@ -6,8 +6,8 @@ part of 'comment_report.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CommentReport _$$_CommentReportFromJson(Map<String, dynamic> json) =>
-    _$_CommentReport(
+_$CommentReportImpl _$$CommentReportImplFromJson(Map<String, dynamic> json) =>
+    _$CommentReportImpl(
       id: json['id'] as int,
       creatorId: json['creator_id'] as int,
       commentId: json['comment_id'] as int,
@@ -20,7 +20,7 @@ _$_CommentReport _$$_CommentReportFromJson(Map<String, dynamic> json) =>
           json['updated'], const ForceUtcDateTime().fromJson),
     );
 
-Map<String, dynamic> _$$_CommentReportToJson(_$_CommentReport instance) =>
+Map<String, dynamic> _$$CommentReportImplToJson(_$CommentReportImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'creator_id': instance.creatorId,

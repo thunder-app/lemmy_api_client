@@ -6,9 +6,9 @@ part of 'mod_ban_from_community.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ModBanFromCommunity _$$_ModBanFromCommunityFromJson(
+_$ModBanFromCommunityImpl _$$ModBanFromCommunityImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ModBanFromCommunity(
+    _$ModBanFromCommunityImpl(
       id: json['id'] as int,
       modPersonId: json['mod_person_id'] as int,
       otherPersonId: json['other_person_id'] as int,
@@ -19,8 +19,8 @@ _$_ModBanFromCommunity _$$_ModBanFromCommunityFromJson(
       when: json['when_'] as String,
     );
 
-Map<String, dynamic> _$$_ModBanFromCommunityToJson(
-        _$_ModBanFromCommunity instance) =>
+Map<String, dynamic> _$$ModBanFromCommunityImplToJson(
+        _$ModBanFromCommunityImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'mod_person_id': instance.modPersonId,

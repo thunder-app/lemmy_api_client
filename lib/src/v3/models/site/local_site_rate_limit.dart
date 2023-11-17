@@ -10,7 +10,7 @@ part 'local_site_rate_limit.g.dart';
 class LocalSiteRateLimit with _$LocalSiteRateLimit {
   @modelSerde
   const factory LocalSiteRateLimit({
-    required int id,
+    @deprecated int? id,
     required int localSiteId,
     required int message,
     required int messagePerSecond,

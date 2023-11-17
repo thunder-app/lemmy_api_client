@@ -6,9 +6,9 @@ part of 'mod_remove_comment_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ModRemoveCommentView _$$_ModRemoveCommentViewFromJson(
+_$ModRemoveCommentViewImpl _$$ModRemoveCommentViewImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ModRemoveCommentView(
+    _$ModRemoveCommentViewImpl(
       modRemoveComment: ModRemoveComment.fromJson(
           json['mod_remove_comment'] as Map<String, dynamic>),
       moderator: json['moderator'] == null
@@ -20,8 +20,8 @@ _$_ModRemoveCommentView _$$_ModRemoveCommentViewFromJson(
       community: Community.fromJson(json['community'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ModRemoveCommentViewToJson(
-        _$_ModRemoveCommentView instance) =>
+Map<String, dynamic> _$$ModRemoveCommentViewImplToJson(
+        _$ModRemoveCommentViewImpl instance) =>
     <String, dynamic>{
       'mod_remove_comment': instance.modRemoveComment.toJson(),
       'moderator': instance.moderator?.toJson(),

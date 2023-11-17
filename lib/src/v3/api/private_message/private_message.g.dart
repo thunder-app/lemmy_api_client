@@ -6,9 +6,9 @@ part of 'private_message.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetPrivateMessages _$$_GetPrivateMessagesFromJson(
+_$GetPrivateMessagesImpl _$$GetPrivateMessagesImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetPrivateMessages(
+    _$GetPrivateMessagesImpl(
       unreadOnly: json['unread_only'] as bool?,
       page: json['page'] as int?,
       limit: json['limit'] as int?,
@@ -16,8 +16,8 @@ _$_GetPrivateMessages _$$_GetPrivateMessagesFromJson(
       creatorId: json['creator_id'] as int?,
     );
 
-Map<String, dynamic> _$$_GetPrivateMessagesToJson(
-    _$_GetPrivateMessages instance) {
+Map<String, dynamic> _$$GetPrivateMessagesImplToJson(
+    _$GetPrivateMessagesImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -34,16 +34,16 @@ Map<String, dynamic> _$$_GetPrivateMessagesToJson(
   return val;
 }
 
-_$_CreatePrivateMessage _$$_CreatePrivateMessageFromJson(
+_$CreatePrivateMessageImpl _$$CreatePrivateMessageImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CreatePrivateMessage(
+    _$CreatePrivateMessageImpl(
       content: json['content'] as String,
       recipientId: json['recipient_id'] as int,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_CreatePrivateMessageToJson(
-    _$_CreatePrivateMessage instance) {
+Map<String, dynamic> _$$CreatePrivateMessageImplToJson(
+    _$CreatePrivateMessageImpl instance) {
   final val = <String, dynamic>{
     'content': instance.content,
     'recipient_id': instance.recipientId,
@@ -59,16 +59,16 @@ Map<String, dynamic> _$$_CreatePrivateMessageToJson(
   return val;
 }
 
-_$_EditPrivateMessage _$$_EditPrivateMessageFromJson(
+_$EditPrivateMessageImpl _$$EditPrivateMessageImplFromJson(
         Map<String, dynamic> json) =>
-    _$_EditPrivateMessage(
+    _$EditPrivateMessageImpl(
       privateMessageId: json['private_message_id'] as int,
       content: json['content'] as String,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_EditPrivateMessageToJson(
-    _$_EditPrivateMessage instance) {
+Map<String, dynamic> _$$EditPrivateMessageImplToJson(
+    _$EditPrivateMessageImpl instance) {
   final val = <String, dynamic>{
     'private_message_id': instance.privateMessageId,
     'content': instance.content,
@@ -84,16 +84,16 @@ Map<String, dynamic> _$$_EditPrivateMessageToJson(
   return val;
 }
 
-_$_DeletePrivateMessage _$$_DeletePrivateMessageFromJson(
+_$DeletePrivateMessageImpl _$$DeletePrivateMessageImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DeletePrivateMessage(
+    _$DeletePrivateMessageImpl(
       privateMessageId: json['private_message_id'] as int,
       deleted: json['deleted'] as bool,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_DeletePrivateMessageToJson(
-    _$_DeletePrivateMessage instance) {
+Map<String, dynamic> _$$DeletePrivateMessageImplToJson(
+    _$DeletePrivateMessageImpl instance) {
   final val = <String, dynamic>{
     'private_message_id': instance.privateMessageId,
     'deleted': instance.deleted,
@@ -109,16 +109,16 @@ Map<String, dynamic> _$$_DeletePrivateMessageToJson(
   return val;
 }
 
-_$_MarkPrivateMessageAsRead _$$_MarkPrivateMessageAsReadFromJson(
+_$MarkPrivateMessageAsReadImpl _$$MarkPrivateMessageAsReadImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MarkPrivateMessageAsRead(
+    _$MarkPrivateMessageAsReadImpl(
       privateMessageId: json['private_message_id'] as int,
       read: json['read'] as bool,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_MarkPrivateMessageAsReadToJson(
-    _$_MarkPrivateMessageAsRead instance) {
+Map<String, dynamic> _$$MarkPrivateMessageAsReadImplToJson(
+    _$MarkPrivateMessageAsReadImpl instance) {
   final val = <String, dynamic>{
     'private_message_id': instance.privateMessageId,
     'read': instance.read,
@@ -134,16 +134,16 @@ Map<String, dynamic> _$$_MarkPrivateMessageAsReadToJson(
   return val;
 }
 
-_$_CreatePrivateMessageReport _$$_CreatePrivateMessageReportFromJson(
+_$CreatePrivateMessageReportImpl _$$CreatePrivateMessageReportImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CreatePrivateMessageReport(
+    _$CreatePrivateMessageReportImpl(
       privateMessageId: json['private_message_id'] as int,
       reason: json['reason'] as String,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_CreatePrivateMessageReportToJson(
-    _$_CreatePrivateMessageReport instance) {
+Map<String, dynamic> _$$CreatePrivateMessageReportImplToJson(
+    _$CreatePrivateMessageReportImpl instance) {
   final val = <String, dynamic>{
     'private_message_id': instance.privateMessageId,
     'reason': instance.reason,
@@ -159,16 +159,16 @@ Map<String, dynamic> _$$_CreatePrivateMessageReportToJson(
   return val;
 }
 
-_$_ResolvePrivateMessageReport _$$_ResolvePrivateMessageReportFromJson(
+_$ResolvePrivateMessageReportImpl _$$ResolvePrivateMessageReportImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ResolvePrivateMessageReport(
+    _$ResolvePrivateMessageReportImpl(
       reportId: json['report_id'] as int,
       resolved: json['resolved'] as bool,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_ResolvePrivateMessageReportToJson(
-    _$_ResolvePrivateMessageReport instance) {
+Map<String, dynamic> _$$ResolvePrivateMessageReportImplToJson(
+    _$ResolvePrivateMessageReportImpl instance) {
   final val = <String, dynamic>{
     'report_id': instance.reportId,
     'resolved': instance.resolved,
@@ -184,9 +184,9 @@ Map<String, dynamic> _$$_ResolvePrivateMessageReportToJson(
   return val;
 }
 
-_$_ListPrivateMessageReports _$$_ListPrivateMessageReportsFromJson(
+_$ListPrivateMessageReportsImpl _$$ListPrivateMessageReportsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ListPrivateMessageReports(
+    _$ListPrivateMessageReportsImpl(
       page: json['page'] as int?,
       limit: json['limit'] as int?,
       unresolvedOnly: json['unresolved_only'] as bool?,
@@ -194,8 +194,8 @@ _$_ListPrivateMessageReports _$$_ListPrivateMessageReportsFromJson(
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_ListPrivateMessageReportsToJson(
-    _$_ListPrivateMessageReports instance) {
+Map<String, dynamic> _$$ListPrivateMessageReportsImplToJson(
+    _$ListPrivateMessageReportsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

@@ -6,12 +6,12 @@ part of 'user.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_LeaveAdmin _$$_LeaveAdminFromJson(Map<String, dynamic> json) =>
-    _$_LeaveAdmin(
+_$LeaveAdminImpl _$$LeaveAdminImplFromJson(Map<String, dynamic> json) =>
+    _$LeaveAdminImpl(
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_LeaveAdminToJson(_$_LeaveAdmin instance) {
+Map<String, dynamic> _$$LeaveAdminImplToJson(_$LeaveAdminImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -24,14 +24,14 @@ Map<String, dynamic> _$$_LeaveAdminToJson(_$_LeaveAdmin instance) {
   return val;
 }
 
-_$_GenerateTotpSecret _$$_GenerateTotpSecretFromJson(
+_$GenerateTotpSecretImpl _$$GenerateTotpSecretImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GenerateTotpSecret(
+    _$GenerateTotpSecretImpl(
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_GenerateTotpSecretToJson(
-    _$_GenerateTotpSecret instance) {
+Map<String, dynamic> _$$GenerateTotpSecretImplToJson(
+    _$GenerateTotpSecretImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -44,12 +44,13 @@ Map<String, dynamic> _$$_GenerateTotpSecretToJson(
   return val;
 }
 
-_$_ExportSettings _$$_ExportSettingsFromJson(Map<String, dynamic> json) =>
-    _$_ExportSettings(
+_$ExportSettingsImpl _$$ExportSettingsImplFromJson(Map<String, dynamic> json) =>
+    _$ExportSettingsImpl(
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_ExportSettingsToJson(_$_ExportSettings instance) {
+Map<String, dynamic> _$$ExportSettingsImplToJson(
+    _$ExportSettingsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -62,13 +63,14 @@ Map<String, dynamic> _$$_ExportSettingsToJson(_$_ExportSettings instance) {
   return val;
 }
 
-_$_ImportSettings _$$_ImportSettingsFromJson(Map<String, dynamic> json) =>
-    _$_ImportSettings(
+_$ImportSettingsImpl _$$ImportSettingsImplFromJson(Map<String, dynamic> json) =>
+    _$ImportSettingsImpl(
       auth: json['auth'] as String?,
       data: json['data'],
     );
 
-Map<String, dynamic> _$$_ImportSettingsToJson(_$_ImportSettings instance) {
+Map<String, dynamic> _$$ImportSettingsImplToJson(
+    _$ImportSettingsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -82,12 +84,12 @@ Map<String, dynamic> _$$_ImportSettingsToJson(_$_ImportSettings instance) {
   return val;
 }
 
-_$_ValidateAuth _$$_ValidateAuthFromJson(Map<String, dynamic> json) =>
-    _$_ValidateAuth(
+_$ValidateAuthImpl _$$ValidateAuthImplFromJson(Map<String, dynamic> json) =>
+    _$ValidateAuthImpl(
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_ValidateAuthToJson(_$_ValidateAuth instance) {
+Map<String, dynamic> _$$ValidateAuthImplToJson(_$ValidateAuthImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -100,14 +102,14 @@ Map<String, dynamic> _$$_ValidateAuthToJson(_$_ValidateAuth instance) {
   return val;
 }
 
-_$_UpdateTotp _$$_UpdateTotpFromJson(Map<String, dynamic> json) =>
-    _$_UpdateTotp(
+_$UpdateTotpImpl _$$UpdateTotpImplFromJson(Map<String, dynamic> json) =>
+    _$UpdateTotpImpl(
       auth: json['auth'] as String?,
       totpToken: json['totp_token'] as String,
       enabled: json['enabled'] as bool,
     );
 
-Map<String, dynamic> _$$_UpdateTotpToJson(_$_UpdateTotp instance) {
+Map<String, dynamic> _$$UpdateTotpImplToJson(_$UpdateTotpImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -122,7 +124,8 @@ Map<String, dynamic> _$$_UpdateTotpToJson(_$_UpdateTotp instance) {
   return val;
 }
 
-_$_Register _$$_RegisterFromJson(Map<String, dynamic> json) => _$_Register(
+_$RegisterImpl _$$RegisterImplFromJson(Map<String, dynamic> json) =>
+    _$RegisterImpl(
       username: json['username'] as String,
       password: json['password'] as String,
       passwordVerify: json['password_verify'] as String,
@@ -134,7 +137,7 @@ _$_Register _$$_RegisterFromJson(Map<String, dynamic> json) => _$_Register(
       answer: json['answer'] as String?,
     );
 
-Map<String, dynamic> _$$_RegisterToJson(_$_Register instance) {
+Map<String, dynamic> _$$RegisterImplToJson(_$RegisterImpl instance) {
   final val = <String, dynamic>{
     'username': instance.username,
     'password': instance.password,
@@ -156,13 +159,13 @@ Map<String, dynamic> _$$_RegisterToJson(_$_Register instance) {
   return val;
 }
 
-_$_Login _$$_LoginFromJson(Map<String, dynamic> json) => _$_Login(
+_$LoginImpl _$$LoginImplFromJson(Map<String, dynamic> json) => _$LoginImpl(
       usernameOrEmail: json['username_or_email'] as String,
       password: json['password'] as String,
       totp2faToken: json['totp2fa_token'] as String?,
     );
 
-Map<String, dynamic> _$$_LoginToJson(_$_Login instance) {
+Map<String, dynamic> _$$LoginImplToJson(_$LoginImpl instance) {
   final val = <String, dynamic>{
     'username_or_email': instance.usernameOrEmail,
     'password': instance.password,
@@ -178,13 +181,14 @@ Map<String, dynamic> _$$_LoginToJson(_$_Login instance) {
   return val;
 }
 
-_$_Logout _$$_LogoutFromJson(Map<String, dynamic> json) => _$_Logout();
+_$LogoutImpl _$$LogoutImplFromJson(Map<String, dynamic> json) => _$LogoutImpl();
 
-Map<String, dynamic> _$$_LogoutToJson(_$_Logout instance) =>
+Map<String, dynamic> _$$LogoutImplToJson(_$LogoutImpl instance) =>
     <String, dynamic>{};
 
-_$_GetPersonDetails _$$_GetPersonDetailsFromJson(Map<String, dynamic> json) =>
-    _$_GetPersonDetails(
+_$GetPersonDetailsImpl _$$GetPersonDetailsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetPersonDetailsImpl(
       personId: json['person_id'] as int?,
       username: json['username'] as String?,
       sort: json['sort'] == null ? null : SortType.fromJson(json['sort']),
@@ -195,7 +199,8 @@ _$_GetPersonDetails _$$_GetPersonDetailsFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_GetPersonDetailsToJson(_$_GetPersonDetails instance) {
+Map<String, dynamic> _$$GetPersonDetailsImplToJson(
+    _$GetPersonDetailsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -215,8 +220,9 @@ Map<String, dynamic> _$$_GetPersonDetailsToJson(_$_GetPersonDetails instance) {
   return val;
 }
 
-_$_GetPersonMentions _$$_GetPersonMentionsFromJson(Map<String, dynamic> json) =>
-    _$_GetPersonMentions(
+_$GetPersonMentionsImpl _$$GetPersonMentionsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetPersonMentionsImpl(
       sort:
           json['sort'] == null ? null : CommentSortType.fromJson(json['sort']),
       page: json['page'] as int?,
@@ -225,8 +231,8 @@ _$_GetPersonMentions _$$_GetPersonMentionsFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_GetPersonMentionsToJson(
-    _$_GetPersonMentions instance) {
+Map<String, dynamic> _$$GetPersonMentionsImplToJson(
+    _$GetPersonMentionsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -243,16 +249,16 @@ Map<String, dynamic> _$$_GetPersonMentionsToJson(
   return val;
 }
 
-_$_MarkPersonMentionAsRead _$$_MarkPersonMentionAsReadFromJson(
+_$MarkPersonMentionAsReadImpl _$$MarkPersonMentionAsReadImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MarkPersonMentionAsRead(
+    _$MarkPersonMentionAsReadImpl(
       personMentionId: json['person_mention_id'] as int,
       read: json['read'] as bool,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_MarkPersonMentionAsReadToJson(
-    _$_MarkPersonMentionAsRead instance) {
+Map<String, dynamic> _$$MarkPersonMentionAsReadImplToJson(
+    _$MarkPersonMentionAsReadImpl instance) {
   final val = <String, dynamic>{
     'person_mention_id': instance.personMentionId,
     'read': instance.read,
@@ -268,8 +274,8 @@ Map<String, dynamic> _$$_MarkPersonMentionAsReadToJson(
   return val;
 }
 
-_$_GetReplies _$$_GetRepliesFromJson(Map<String, dynamic> json) =>
-    _$_GetReplies(
+_$GetRepliesImpl _$$GetRepliesImplFromJson(Map<String, dynamic> json) =>
+    _$GetRepliesImpl(
       sort:
           json['sort'] == null ? null : CommentSortType.fromJson(json['sort']),
       page: json['page'] as int?,
@@ -278,7 +284,7 @@ _$_GetReplies _$$_GetRepliesFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_GetRepliesToJson(_$_GetReplies instance) {
+Map<String, dynamic> _$$GetRepliesImplToJson(_$GetRepliesImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -295,7 +301,8 @@ Map<String, dynamic> _$$_GetRepliesToJson(_$_GetReplies instance) {
   return val;
 }
 
-_$_BanPerson _$$_BanPersonFromJson(Map<String, dynamic> json) => _$_BanPerson(
+_$BanPersonImpl _$$BanPersonImplFromJson(Map<String, dynamic> json) =>
+    _$BanPersonImpl(
       personId: json['person_id'] as int,
       ban: json['ban'] as bool,
       removeData: json['remove_data'] as bool?,
@@ -304,7 +311,7 @@ _$_BanPerson _$$_BanPersonFromJson(Map<String, dynamic> json) => _$_BanPerson(
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_BanPersonToJson(_$_BanPerson instance) {
+Map<String, dynamic> _$$BanPersonImplToJson(_$BanPersonImpl instance) {
   final val = <String, dynamic>{
     'person_id': instance.personId,
     'ban': instance.ban,
@@ -323,12 +330,14 @@ Map<String, dynamic> _$$_BanPersonToJson(_$_BanPerson instance) {
   return val;
 }
 
-_$_GetBannedPersons _$$_GetBannedPersonsFromJson(Map<String, dynamic> json) =>
-    _$_GetBannedPersons(
+_$GetBannedPersonsImpl _$$GetBannedPersonsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetBannedPersonsImpl(
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_GetBannedPersonsToJson(_$_GetBannedPersons instance) {
+Map<String, dynamic> _$$GetBannedPersonsImplToJson(
+    _$GetBannedPersonsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -341,14 +350,14 @@ Map<String, dynamic> _$$_GetBannedPersonsToJson(_$_GetBannedPersons instance) {
   return val;
 }
 
-_$_BlockPerson _$$_BlockPersonFromJson(Map<String, dynamic> json) =>
-    _$_BlockPerson(
+_$BlockPersonImpl _$$BlockPersonImplFromJson(Map<String, dynamic> json) =>
+    _$BlockPersonImpl(
       personId: json['person_id'] as int,
       block: json['block'] as bool,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_BlockPersonToJson(_$_BlockPerson instance) {
+Map<String, dynamic> _$$BlockPersonImplToJson(_$BlockPersonImpl instance) {
   final val = <String, dynamic>{
     'person_id': instance.personId,
     'block': instance.block,
@@ -364,12 +373,12 @@ Map<String, dynamic> _$$_BlockPersonToJson(_$_BlockPerson instance) {
   return val;
 }
 
-_$_GetCaptcha _$$_GetCaptchaFromJson(Map<String, dynamic> json) =>
-    _$_GetCaptcha(
+_$GetCaptchaImpl _$$GetCaptchaImplFromJson(Map<String, dynamic> json) =>
+    _$GetCaptchaImpl(
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_GetCaptchaToJson(_$_GetCaptcha instance) {
+Map<String, dynamic> _$$GetCaptchaImplToJson(_$GetCaptchaImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -382,14 +391,14 @@ Map<String, dynamic> _$$_GetCaptchaToJson(_$_GetCaptcha instance) {
   return val;
 }
 
-_$_DeleteAccount _$$_DeleteAccountFromJson(Map<String, dynamic> json) =>
-    _$_DeleteAccount(
+_$DeleteAccountImpl _$$DeleteAccountImplFromJson(Map<String, dynamic> json) =>
+    _$DeleteAccountImpl(
       password: json['password'] as String,
       deleteContent: json['delete_content'] as bool?,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_DeleteAccountToJson(_$_DeleteAccount instance) {
+Map<String, dynamic> _$$DeleteAccountImplToJson(_$DeleteAccountImpl instance) {
   final val = <String, dynamic>{
     'password': instance.password,
   };
@@ -405,38 +414,38 @@ Map<String, dynamic> _$$_DeleteAccountToJson(_$_DeleteAccount instance) {
   return val;
 }
 
-_$_PasswordReset _$$_PasswordResetFromJson(Map<String, dynamic> json) =>
-    _$_PasswordReset(
+_$PasswordResetImpl _$$PasswordResetImplFromJson(Map<String, dynamic> json) =>
+    _$PasswordResetImpl(
       email: json['email'] as String,
     );
 
-Map<String, dynamic> _$$_PasswordResetToJson(_$_PasswordReset instance) =>
+Map<String, dynamic> _$$PasswordResetImplToJson(_$PasswordResetImpl instance) =>
     <String, dynamic>{
       'email': instance.email,
     };
 
-_$_PasswordChangeAfterReset _$$_PasswordChangeAfterResetFromJson(
+_$PasswordChangeAfterResetImpl _$$PasswordChangeAfterResetImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PasswordChangeAfterReset(
+    _$PasswordChangeAfterResetImpl(
       token: json['token'] as String,
       password: json['password'] as String,
       passwordVerify: json['password_verify'] as String,
     );
 
-Map<String, dynamic> _$$_PasswordChangeAfterResetToJson(
-        _$_PasswordChangeAfterReset instance) =>
+Map<String, dynamic> _$$PasswordChangeAfterResetImplToJson(
+        _$PasswordChangeAfterResetImpl instance) =>
     <String, dynamic>{
       'token': instance.token,
       'password': instance.password,
       'password_verify': instance.passwordVerify,
     };
 
-_$_MarkAllAsRead _$$_MarkAllAsReadFromJson(Map<String, dynamic> json) =>
-    _$_MarkAllAsRead(
+_$MarkAllAsReadImpl _$$MarkAllAsReadImplFromJson(Map<String, dynamic> json) =>
+    _$MarkAllAsReadImpl(
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_MarkAllAsReadToJson(_$_MarkAllAsRead instance) {
+Map<String, dynamic> _$$MarkAllAsReadImplToJson(_$MarkAllAsReadImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -449,8 +458,9 @@ Map<String, dynamic> _$$_MarkAllAsReadToJson(_$_MarkAllAsRead instance) {
   return val;
 }
 
-_$_SaveUserSettings _$$_SaveUserSettingsFromJson(Map<String, dynamic> json) =>
-    _$_SaveUserSettings(
+_$SaveUserSettingsImpl _$$SaveUserSettingsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SaveUserSettingsImpl(
       showNsfw: json['show_nsfw'] as bool?,
       blurNsfw: json['blur_nsfw'] as bool?,
       autoExpand: json['auto_expand'] as bool?,
@@ -485,9 +495,11 @@ _$_SaveUserSettings _$$_SaveUserSettingsFromJson(Map<String, dynamic> json) =>
       postListingMode: json['post_listing_mode'] as String?,
       enableKeyboardNavigation: json['enable_keyboard_navigation'] as bool?,
       enableAnimatedImages: json['enable_animated_images'] as bool?,
+      collapseBotComments: json['collapse_bot_comments'] as bool?,
     );
 
-Map<String, dynamic> _$$_SaveUserSettingsToJson(_$_SaveUserSettings instance) {
+Map<String, dynamic> _$$SaveUserSettingsImplToJson(
+    _$SaveUserSettingsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -525,18 +537,20 @@ Map<String, dynamic> _$$_SaveUserSettingsToJson(_$_SaveUserSettings instance) {
   writeNotNull('post_listing_mode', instance.postListingMode);
   writeNotNull('enable_keyboard_navigation', instance.enableKeyboardNavigation);
   writeNotNull('enable_animated_images', instance.enableAnimatedImages);
+  writeNotNull('collapse_bot_comments', instance.collapseBotComments);
   return val;
 }
 
-_$_ChangePassword _$$_ChangePasswordFromJson(Map<String, dynamic> json) =>
-    _$_ChangePassword(
+_$ChangePasswordImpl _$$ChangePasswordImplFromJson(Map<String, dynamic> json) =>
+    _$ChangePasswordImpl(
       newPassword: json['new_password'] as String,
       newPasswordVerify: json['new_password_verify'] as String,
       oldPassword: json['old_password'] as String,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_ChangePasswordToJson(_$_ChangePassword instance) {
+Map<String, dynamic> _$$ChangePasswordImplToJson(
+    _$ChangePasswordImpl instance) {
   final val = <String, dynamic>{
     'new_password': instance.newPassword,
     'new_password_verify': instance.newPasswordVerify,
@@ -553,13 +567,14 @@ Map<String, dynamic> _$$_ChangePasswordToJson(_$_ChangePassword instance) {
   return val;
 }
 
-_$_GetReportCount _$$_GetReportCountFromJson(Map<String, dynamic> json) =>
-    _$_GetReportCount(
+_$GetReportCountImpl _$$GetReportCountImplFromJson(Map<String, dynamic> json) =>
+    _$GetReportCountImpl(
       communityId: json['community_id'] as int?,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_GetReportCountToJson(_$_GetReportCount instance) {
+Map<String, dynamic> _$$GetReportCountImplToJson(
+    _$GetReportCountImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -573,12 +588,13 @@ Map<String, dynamic> _$$_GetReportCountToJson(_$_GetReportCount instance) {
   return val;
 }
 
-_$_GetUnreadCount _$$_GetUnreadCountFromJson(Map<String, dynamic> json) =>
-    _$_GetUnreadCount(
+_$GetUnreadCountImpl _$$GetUnreadCountImplFromJson(Map<String, dynamic> json) =>
+    _$GetUnreadCountImpl(
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_GetUnreadCountToJson(_$_GetUnreadCount instance) {
+Map<String, dynamic> _$$GetUnreadCountImplToJson(
+    _$GetUnreadCountImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -591,12 +607,12 @@ Map<String, dynamic> _$$_GetUnreadCountToJson(_$_GetUnreadCount instance) {
   return val;
 }
 
-_$_VerifyEmail _$$_VerifyEmailFromJson(Map<String, dynamic> json) =>
-    _$_VerifyEmail(
+_$VerifyEmailImpl _$$VerifyEmailImplFromJson(Map<String, dynamic> json) =>
+    _$VerifyEmailImpl(
       token: json['token'] as String,
     );
 
-Map<String, dynamic> _$$_VerifyEmailToJson(_$_VerifyEmail instance) =>
+Map<String, dynamic> _$$VerifyEmailImplToJson(_$VerifyEmailImpl instance) =>
     <String, dynamic>{
       'token': instance.token,
     };

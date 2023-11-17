@@ -9,7 +9,7 @@ part 'site_aggregates.g.dart';
 class SiteAggregates with _$SiteAggregates {
   @modelSerde
   const factory SiteAggregates({
-    required int id,
+    @deprecated int? id,
     required int siteId,
     required int users,
     required int posts,

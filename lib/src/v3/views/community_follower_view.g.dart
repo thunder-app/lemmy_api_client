@@ -6,15 +6,15 @@ part of 'community_follower_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CommunityFollowerView _$$_CommunityFollowerViewFromJson(
+_$CommunityFollowerViewImpl _$$CommunityFollowerViewImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CommunityFollowerView(
+    _$CommunityFollowerViewImpl(
       community: Community.fromJson(json['community'] as Map<String, dynamic>),
       follower: Person.fromJson(json['follower'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CommunityFollowerViewToJson(
-        _$_CommunityFollowerView instance) =>
+Map<String, dynamic> _$$CommunityFollowerViewImplToJson(
+        _$CommunityFollowerViewImpl instance) =>
     <String, dynamic>{
       'community': instance.community.toJson(),
       'follower': instance.follower.toJson(),

@@ -76,23 +76,25 @@ class _$GetUnreadCountResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetUnreadCountResponseCopyWith<$Res>
+abstract class _$$GetUnreadCountResponseImplCopyWith<$Res>
     implements $GetUnreadCountResponseCopyWith<$Res> {
-  factory _$$_GetUnreadCountResponseCopyWith(_$_GetUnreadCountResponse value,
-          $Res Function(_$_GetUnreadCountResponse) then) =
-      __$$_GetUnreadCountResponseCopyWithImpl<$Res>;
+  factory _$$GetUnreadCountResponseImplCopyWith(
+          _$GetUnreadCountResponseImpl value,
+          $Res Function(_$GetUnreadCountResponseImpl) then) =
+      __$$GetUnreadCountResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int replies, int mentions, int privateMessages});
 }
 
 /// @nodoc
-class __$$_GetUnreadCountResponseCopyWithImpl<$Res>
+class __$$GetUnreadCountResponseImplCopyWithImpl<$Res>
     extends _$GetUnreadCountResponseCopyWithImpl<$Res,
-        _$_GetUnreadCountResponse>
-    implements _$$_GetUnreadCountResponseCopyWith<$Res> {
-  __$$_GetUnreadCountResponseCopyWithImpl(_$_GetUnreadCountResponse _value,
-      $Res Function(_$_GetUnreadCountResponse) _then)
+        _$GetUnreadCountResponseImpl>
+    implements _$$GetUnreadCountResponseImplCopyWith<$Res> {
+  __$$GetUnreadCountResponseImplCopyWithImpl(
+      _$GetUnreadCountResponseImpl _value,
+      $Res Function(_$GetUnreadCountResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -102,7 +104,7 @@ class __$$_GetUnreadCountResponseCopyWithImpl<$Res>
     Object? mentions = null,
     Object? privateMessages = null,
   }) {
-    return _then(_$_GetUnreadCountResponse(
+    return _then(_$GetUnreadCountResponseImpl(
       replies: null == replies
           ? _value.replies
           : replies // ignore: cast_nullable_to_non_nullable
@@ -122,15 +124,15 @@ class __$$_GetUnreadCountResponseCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_GetUnreadCountResponse extends _GetUnreadCountResponse {
-  const _$_GetUnreadCountResponse(
+class _$GetUnreadCountResponseImpl extends _GetUnreadCountResponse {
+  const _$GetUnreadCountResponseImpl(
       {required this.replies,
       required this.mentions,
       required this.privateMessages})
       : super._();
 
-  factory _$_GetUnreadCountResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_GetUnreadCountResponseFromJson(json);
+  factory _$GetUnreadCountResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetUnreadCountResponseImplFromJson(json);
 
   @override
   final int replies;
@@ -148,7 +150,7 @@ class _$_GetUnreadCountResponse extends _GetUnreadCountResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetUnreadCountResponse &&
+            other is _$GetUnreadCountResponseImpl &&
             (identical(other.replies, replies) || other.replies == replies) &&
             (identical(other.mentions, mentions) ||
                 other.mentions == mentions) &&
@@ -164,13 +166,13 @@ class _$_GetUnreadCountResponse extends _GetUnreadCountResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetUnreadCountResponseCopyWith<_$_GetUnreadCountResponse> get copyWith =>
-      __$$_GetUnreadCountResponseCopyWithImpl<_$_GetUnreadCountResponse>(
-          this, _$identity);
+  _$$GetUnreadCountResponseImplCopyWith<_$GetUnreadCountResponseImpl>
+      get copyWith => __$$GetUnreadCountResponseImplCopyWithImpl<
+          _$GetUnreadCountResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetUnreadCountResponseToJson(
+    return _$$GetUnreadCountResponseImplToJson(
       this,
     );
   }
@@ -180,11 +182,11 @@ abstract class _GetUnreadCountResponse extends GetUnreadCountResponse {
   const factory _GetUnreadCountResponse(
       {required final int replies,
       required final int mentions,
-      required final int privateMessages}) = _$_GetUnreadCountResponse;
+      required final int privateMessages}) = _$GetUnreadCountResponseImpl;
   const _GetUnreadCountResponse._() : super._();
 
   factory _GetUnreadCountResponse.fromJson(Map<String, dynamic> json) =
-      _$_GetUnreadCountResponse.fromJson;
+      _$GetUnreadCountResponseImpl.fromJson;
 
   @override
   int get replies;
@@ -194,6 +196,6 @@ abstract class _GetUnreadCountResponse extends GetUnreadCountResponse {
   int get privateMessages;
   @override
   @JsonKey(ignore: true)
-  _$$_GetUnreadCountResponseCopyWith<_$_GetUnreadCountResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetUnreadCountResponseImplCopyWith<_$GetUnreadCountResponseImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

@@ -20,7 +20,8 @@ SiteAggregates _$SiteAggregatesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SiteAggregates {
-  int get id => throw _privateConstructorUsedError;
+  @deprecated
+  int? get id => throw _privateConstructorUsedError;
   int get siteId => throw _privateConstructorUsedError;
   int get users => throw _privateConstructorUsedError;
   int get posts => throw _privateConstructorUsedError;
@@ -44,7 +45,7 @@ abstract class $SiteAggregatesCopyWith<$Res> {
       _$SiteAggregatesCopyWithImpl<$Res, SiteAggregates>;
   @useResult
   $Res call(
-      {int id,
+      {@deprecated int? id,
       int siteId,
       int users,
       int posts,
@@ -69,7 +70,7 @@ class _$SiteAggregatesCopyWithImpl<$Res, $Val extends SiteAggregates>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? siteId = null,
     Object? users = null,
     Object? posts = null,
@@ -81,10 +82,10 @@ class _$SiteAggregatesCopyWithImpl<$Res, $Val extends SiteAggregates>
     Object? usersActiveHalfYear = null,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       siteId: null == siteId
           ? _value.siteId
           : siteId // ignore: cast_nullable_to_non_nullable
@@ -126,15 +127,15 @@ class _$SiteAggregatesCopyWithImpl<$Res, $Val extends SiteAggregates>
 }
 
 /// @nodoc
-abstract class _$$_SiteAggregatesCopyWith<$Res>
+abstract class _$$SiteAggregatesImplCopyWith<$Res>
     implements $SiteAggregatesCopyWith<$Res> {
-  factory _$$_SiteAggregatesCopyWith(
-          _$_SiteAggregates value, $Res Function(_$_SiteAggregates) then) =
-      __$$_SiteAggregatesCopyWithImpl<$Res>;
+  factory _$$SiteAggregatesImplCopyWith(_$SiteAggregatesImpl value,
+          $Res Function(_$SiteAggregatesImpl) then) =
+      __$$SiteAggregatesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {int id,
+      {@deprecated int? id,
       int siteId,
       int users,
       int posts,
@@ -147,17 +148,17 @@ abstract class _$$_SiteAggregatesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SiteAggregatesCopyWithImpl<$Res>
-    extends _$SiteAggregatesCopyWithImpl<$Res, _$_SiteAggregates>
-    implements _$$_SiteAggregatesCopyWith<$Res> {
-  __$$_SiteAggregatesCopyWithImpl(
-      _$_SiteAggregates _value, $Res Function(_$_SiteAggregates) _then)
+class __$$SiteAggregatesImplCopyWithImpl<$Res>
+    extends _$SiteAggregatesCopyWithImpl<$Res, _$SiteAggregatesImpl>
+    implements _$$SiteAggregatesImplCopyWith<$Res> {
+  __$$SiteAggregatesImplCopyWithImpl(
+      _$SiteAggregatesImpl _value, $Res Function(_$SiteAggregatesImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? siteId = null,
     Object? users = null,
     Object? posts = null,
@@ -168,11 +169,11 @@ class __$$_SiteAggregatesCopyWithImpl<$Res>
     Object? usersActiveMonth = null,
     Object? usersActiveHalfYear = null,
   }) {
-    return _then(_$_SiteAggregates(
-      id: null == id
+    return _then(_$SiteAggregatesImpl(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       siteId: null == siteId
           ? _value.siteId
           : siteId // ignore: cast_nullable_to_non_nullable
@@ -216,9 +217,9 @@ class __$$_SiteAggregatesCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_SiteAggregates extends _SiteAggregates {
-  const _$_SiteAggregates(
-      {required this.id,
+class _$SiteAggregatesImpl extends _SiteAggregates {
+  const _$SiteAggregatesImpl(
+      {@deprecated this.id,
       required this.siteId,
       required this.users,
       required this.posts,
@@ -230,11 +231,12 @@ class _$_SiteAggregates extends _SiteAggregates {
       required this.usersActiveHalfYear})
       : super._();
 
-  factory _$_SiteAggregates.fromJson(Map<String, dynamic> json) =>
-      _$$_SiteAggregatesFromJson(json);
+  factory _$SiteAggregatesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SiteAggregatesImplFromJson(json);
 
   @override
-  final int id;
+  @deprecated
+  final int? id;
   @override
   final int siteId;
   @override
@@ -263,7 +265,7 @@ class _$_SiteAggregates extends _SiteAggregates {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SiteAggregates &&
+            other is _$SiteAggregatesImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.siteId, siteId) || other.siteId == siteId) &&
             (identical(other.users, users) || other.users == users) &&
@@ -300,12 +302,13 @@ class _$_SiteAggregates extends _SiteAggregates {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SiteAggregatesCopyWith<_$_SiteAggregates> get copyWith =>
-      __$$_SiteAggregatesCopyWithImpl<_$_SiteAggregates>(this, _$identity);
+  _$$SiteAggregatesImplCopyWith<_$SiteAggregatesImpl> get copyWith =>
+      __$$SiteAggregatesImplCopyWithImpl<_$SiteAggregatesImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SiteAggregatesToJson(
+    return _$$SiteAggregatesImplToJson(
       this,
     );
   }
@@ -313,7 +316,7 @@ class _$_SiteAggregates extends _SiteAggregates {
 
 abstract class _SiteAggregates extends SiteAggregates {
   const factory _SiteAggregates(
-      {required final int id,
+      {@deprecated final int? id,
       required final int siteId,
       required final int users,
       required final int posts,
@@ -322,14 +325,15 @@ abstract class _SiteAggregates extends SiteAggregates {
       required final int usersActiveDay,
       required final int usersActiveWeek,
       required final int usersActiveMonth,
-      required final int usersActiveHalfYear}) = _$_SiteAggregates;
+      required final int usersActiveHalfYear}) = _$SiteAggregatesImpl;
   const _SiteAggregates._() : super._();
 
   factory _SiteAggregates.fromJson(Map<String, dynamic> json) =
-      _$_SiteAggregates.fromJson;
+      _$SiteAggregatesImpl.fromJson;
 
   @override
-  int get id;
+  @deprecated
+  int? get id;
   @override
   int get siteId;
   @override
@@ -350,6 +354,6 @@ abstract class _SiteAggregates extends SiteAggregates {
   int get usersActiveHalfYear;
   @override
   @JsonKey(ignore: true)
-  _$$_SiteAggregatesCopyWith<_$_SiteAggregates> get copyWith =>
+  _$$SiteAggregatesImplCopyWith<_$SiteAggregatesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

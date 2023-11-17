@@ -65,25 +65,25 @@ class _$AddModToCommunityResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_AddModToCommunityResponseCopyWith<$Res>
+abstract class _$$AddModToCommunityResponseImplCopyWith<$Res>
     implements $AddModToCommunityResponseCopyWith<$Res> {
-  factory _$$_AddModToCommunityResponseCopyWith(
-          _$_AddModToCommunityResponse value,
-          $Res Function(_$_AddModToCommunityResponse) then) =
-      __$$_AddModToCommunityResponseCopyWithImpl<$Res>;
+  factory _$$AddModToCommunityResponseImplCopyWith(
+          _$AddModToCommunityResponseImpl value,
+          $Res Function(_$AddModToCommunityResponseImpl) then) =
+      __$$AddModToCommunityResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<CommunityModeratorView> moderators});
 }
 
 /// @nodoc
-class __$$_AddModToCommunityResponseCopyWithImpl<$Res>
+class __$$AddModToCommunityResponseImplCopyWithImpl<$Res>
     extends _$AddModToCommunityResponseCopyWithImpl<$Res,
-        _$_AddModToCommunityResponse>
-    implements _$$_AddModToCommunityResponseCopyWith<$Res> {
-  __$$_AddModToCommunityResponseCopyWithImpl(
-      _$_AddModToCommunityResponse _value,
-      $Res Function(_$_AddModToCommunityResponse) _then)
+        _$AddModToCommunityResponseImpl>
+    implements _$$AddModToCommunityResponseImplCopyWith<$Res> {
+  __$$AddModToCommunityResponseImplCopyWithImpl(
+      _$AddModToCommunityResponseImpl _value,
+      $Res Function(_$AddModToCommunityResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -91,7 +91,7 @@ class __$$_AddModToCommunityResponseCopyWithImpl<$Res>
   $Res call({
     Object? moderators = null,
   }) {
-    return _then(_$_AddModToCommunityResponse(
+    return _then(_$AddModToCommunityResponseImpl(
       moderators: null == moderators
           ? _value._moderators
           : moderators // ignore: cast_nullable_to_non_nullable
@@ -103,14 +103,14 @@ class __$$_AddModToCommunityResponseCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_AddModToCommunityResponse extends _AddModToCommunityResponse {
-  const _$_AddModToCommunityResponse(
+class _$AddModToCommunityResponseImpl extends _AddModToCommunityResponse {
+  const _$AddModToCommunityResponseImpl(
       {required final List<CommunityModeratorView> moderators})
       : _moderators = moderators,
         super._();
 
-  factory _$_AddModToCommunityResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_AddModToCommunityResponseFromJson(json);
+  factory _$AddModToCommunityResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AddModToCommunityResponseImplFromJson(json);
 
   final List<CommunityModeratorView> _moderators;
   @override
@@ -129,7 +129,7 @@ class _$_AddModToCommunityResponse extends _AddModToCommunityResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AddModToCommunityResponse &&
+            other is _$AddModToCommunityResponseImpl &&
             const DeepCollectionEquality()
                 .equals(other._moderators, _moderators));
   }
@@ -142,13 +142,13 @@ class _$_AddModToCommunityResponse extends _AddModToCommunityResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AddModToCommunityResponseCopyWith<_$_AddModToCommunityResponse>
-      get copyWith => __$$_AddModToCommunityResponseCopyWithImpl<
-          _$_AddModToCommunityResponse>(this, _$identity);
+  _$$AddModToCommunityResponseImplCopyWith<_$AddModToCommunityResponseImpl>
+      get copyWith => __$$AddModToCommunityResponseImplCopyWithImpl<
+          _$AddModToCommunityResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AddModToCommunityResponseToJson(
+    return _$$AddModToCommunityResponseImplToJson(
       this,
     );
   }
@@ -157,16 +157,16 @@ class _$_AddModToCommunityResponse extends _AddModToCommunityResponse {
 abstract class _AddModToCommunityResponse extends AddModToCommunityResponse {
   const factory _AddModToCommunityResponse(
           {required final List<CommunityModeratorView> moderators}) =
-      _$_AddModToCommunityResponse;
+      _$AddModToCommunityResponseImpl;
   const _AddModToCommunityResponse._() : super._();
 
   factory _AddModToCommunityResponse.fromJson(Map<String, dynamic> json) =
-      _$_AddModToCommunityResponse.fromJson;
+      _$AddModToCommunityResponseImpl.fromJson;
 
   @override
   List<CommunityModeratorView> get moderators;
   @override
   @JsonKey(ignore: true)
-  _$$_AddModToCommunityResponseCopyWith<_$_AddModToCommunityResponse>
+  _$$AddModToCommunityResponseImplCopyWith<_$AddModToCommunityResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

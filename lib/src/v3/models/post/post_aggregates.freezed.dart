@@ -20,7 +20,8 @@ PostAggregates _$PostAggregatesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PostAggregates {
-  int get id => throw _privateConstructorUsedError;
+  @deprecated
+  int? get id => throw _privateConstructorUsedError;
   int get postId => throw _privateConstructorUsedError;
   int get comments => throw _privateConstructorUsedError;
   int get score => throw _privateConstructorUsedError;
@@ -53,7 +54,7 @@ abstract class $PostAggregatesCopyWith<$Res> {
       _$PostAggregatesCopyWithImpl<$Res, PostAggregates>;
   @useResult
   $Res call(
-      {int id,
+      {@deprecated int? id,
       int postId,
       int comments,
       int score,
@@ -81,7 +82,7 @@ class _$PostAggregatesCopyWithImpl<$Res, $Val extends PostAggregates>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? postId = null,
     Object? comments = null,
     Object? score = null,
@@ -96,10 +97,10 @@ class _$PostAggregatesCopyWithImpl<$Res, $Val extends PostAggregates>
     Object? hotRankActive = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
@@ -153,15 +154,15 @@ class _$PostAggregatesCopyWithImpl<$Res, $Val extends PostAggregates>
 }
 
 /// @nodoc
-abstract class _$$_PostAggregatesCopyWith<$Res>
+abstract class _$$PostAggregatesImplCopyWith<$Res>
     implements $PostAggregatesCopyWith<$Res> {
-  factory _$$_PostAggregatesCopyWith(
-          _$_PostAggregates value, $Res Function(_$_PostAggregates) then) =
-      __$$_PostAggregatesCopyWithImpl<$Res>;
+  factory _$$PostAggregatesImplCopyWith(_$PostAggregatesImpl value,
+          $Res Function(_$PostAggregatesImpl) then) =
+      __$$PostAggregatesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {int id,
+      {@deprecated int? id,
       int postId,
       int comments,
       int score,
@@ -177,17 +178,17 @@ abstract class _$$_PostAggregatesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PostAggregatesCopyWithImpl<$Res>
-    extends _$PostAggregatesCopyWithImpl<$Res, _$_PostAggregates>
-    implements _$$_PostAggregatesCopyWith<$Res> {
-  __$$_PostAggregatesCopyWithImpl(
-      _$_PostAggregates _value, $Res Function(_$_PostAggregates) _then)
+class __$$PostAggregatesImplCopyWithImpl<$Res>
+    extends _$PostAggregatesCopyWithImpl<$Res, _$PostAggregatesImpl>
+    implements _$$PostAggregatesImplCopyWith<$Res> {
+  __$$PostAggregatesImplCopyWithImpl(
+      _$PostAggregatesImpl _value, $Res Function(_$PostAggregatesImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? postId = null,
     Object? comments = null,
     Object? score = null,
@@ -201,11 +202,11 @@ class __$$_PostAggregatesCopyWithImpl<$Res>
     Object? hotRank = freezed,
     Object? hotRankActive = freezed,
   }) {
-    return _then(_$_PostAggregates(
-      id: null == id
+    return _then(_$PostAggregatesImpl(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
@@ -261,9 +262,9 @@ class __$$_PostAggregatesCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_PostAggregates extends _PostAggregates {
-  const _$_PostAggregates(
-      {required this.id,
+class _$PostAggregatesImpl extends _PostAggregates {
+  const _$PostAggregatesImpl(
+      {@deprecated this.id,
       required this.postId,
       required this.comments,
       required this.score,
@@ -278,11 +279,12 @@ class _$_PostAggregates extends _PostAggregates {
       @deprecated this.hotRankActive})
       : super._();
 
-  factory _$_PostAggregates.fromJson(Map<String, dynamic> json) =>
-      _$$_PostAggregatesFromJson(json);
+  factory _$PostAggregatesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PostAggregatesImplFromJson(json);
 
   @override
-  final int id;
+  @deprecated
+  final int? id;
   @override
   final int postId;
   @override
@@ -323,7 +325,7 @@ class _$_PostAggregates extends _PostAggregates {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PostAggregates &&
+            other is _$PostAggregatesImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.postId, postId) || other.postId == postId) &&
             (identical(other.comments, comments) ||
@@ -368,12 +370,13 @@ class _$_PostAggregates extends _PostAggregates {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PostAggregatesCopyWith<_$_PostAggregates> get copyWith =>
-      __$$_PostAggregatesCopyWithImpl<_$_PostAggregates>(this, _$identity);
+  _$$PostAggregatesImplCopyWith<_$PostAggregatesImpl> get copyWith =>
+      __$$PostAggregatesImplCopyWithImpl<_$PostAggregatesImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PostAggregatesToJson(
+    return _$$PostAggregatesImplToJson(
       this,
     );
   }
@@ -381,7 +384,7 @@ class _$_PostAggregates extends _PostAggregates {
 
 abstract class _PostAggregates extends PostAggregates {
   const factory _PostAggregates(
-      {required final int id,
+      {@deprecated final int? id,
       required final int postId,
       required final int comments,
       required final int score,
@@ -393,14 +396,15 @@ abstract class _PostAggregates extends PostAggregates {
       @deprecated final bool? featuredCommunity,
       @deprecated final bool? featuredLocal,
       @deprecated final int? hotRank,
-      @deprecated final int? hotRankActive}) = _$_PostAggregates;
+      @deprecated final int? hotRankActive}) = _$PostAggregatesImpl;
   const _PostAggregates._() : super._();
 
   factory _PostAggregates.fromJson(Map<String, dynamic> json) =
-      _$_PostAggregates.fromJson;
+      _$PostAggregatesImpl.fromJson;
 
   @override
-  int get id;
+  @deprecated
+  int? get id;
   @override
   int get postId;
   @override
@@ -433,6 +437,6 @@ abstract class _PostAggregates extends PostAggregates {
   int? get hotRankActive;
   @override
   @JsonKey(ignore: true)
-  _$$_PostAggregatesCopyWith<_$_PostAggregates> get copyWith =>
+  _$$PostAggregatesImplCopyWith<_$PostAggregatesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

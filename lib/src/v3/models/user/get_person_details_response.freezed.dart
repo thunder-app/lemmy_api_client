@@ -97,12 +97,12 @@ class _$GetPersonDetailsResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetPersonDetailsResponseCopyWith<$Res>
+abstract class _$$GetPersonDetailsResponseImplCopyWith<$Res>
     implements $GetPersonDetailsResponseCopyWith<$Res> {
-  factory _$$_GetPersonDetailsResponseCopyWith(
-          _$_GetPersonDetailsResponse value,
-          $Res Function(_$_GetPersonDetailsResponse) then) =
-      __$$_GetPersonDetailsResponseCopyWithImpl<$Res>;
+  factory _$$GetPersonDetailsResponseImplCopyWith(
+          _$GetPersonDetailsResponseImpl value,
+          $Res Function(_$GetPersonDetailsResponseImpl) then) =
+      __$$GetPersonDetailsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -116,12 +116,13 @@ abstract class _$$_GetPersonDetailsResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetPersonDetailsResponseCopyWithImpl<$Res>
+class __$$GetPersonDetailsResponseImplCopyWithImpl<$Res>
     extends _$GetPersonDetailsResponseCopyWithImpl<$Res,
-        _$_GetPersonDetailsResponse>
-    implements _$$_GetPersonDetailsResponseCopyWith<$Res> {
-  __$$_GetPersonDetailsResponseCopyWithImpl(_$_GetPersonDetailsResponse _value,
-      $Res Function(_$_GetPersonDetailsResponse) _then)
+        _$GetPersonDetailsResponseImpl>
+    implements _$$GetPersonDetailsResponseImplCopyWith<$Res> {
+  __$$GetPersonDetailsResponseImplCopyWithImpl(
+      _$GetPersonDetailsResponseImpl _value,
+      $Res Function(_$GetPersonDetailsResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -132,7 +133,7 @@ class __$$_GetPersonDetailsResponseCopyWithImpl<$Res>
     Object? posts = null,
     Object? moderates = null,
   }) {
-    return _then(_$_GetPersonDetailsResponse(
+    return _then(_$GetPersonDetailsResponseImpl(
       personView: null == personView
           ? _value.personView
           : personView // ignore: cast_nullable_to_non_nullable
@@ -156,8 +157,8 @@ class __$$_GetPersonDetailsResponseCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_GetPersonDetailsResponse extends _GetPersonDetailsResponse {
-  const _$_GetPersonDetailsResponse(
+class _$GetPersonDetailsResponseImpl extends _GetPersonDetailsResponse {
+  const _$GetPersonDetailsResponseImpl(
       {required this.personView,
       required final List<CommentView> comments,
       required final List<PostView> posts,
@@ -167,8 +168,8 @@ class _$_GetPersonDetailsResponse extends _GetPersonDetailsResponse {
         _moderates = moderates,
         super._();
 
-  factory _$_GetPersonDetailsResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_GetPersonDetailsResponseFromJson(json);
+  factory _$GetPersonDetailsResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetPersonDetailsResponseImplFromJson(json);
 
   @override
   final PersonView personView;
@@ -205,7 +206,7 @@ class _$_GetPersonDetailsResponse extends _GetPersonDetailsResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetPersonDetailsResponse &&
+            other is _$GetPersonDetailsResponseImpl &&
             (identical(other.personView, personView) ||
                 other.personView == personView) &&
             const DeepCollectionEquality().equals(other._comments, _comments) &&
@@ -226,13 +227,13 @@ class _$_GetPersonDetailsResponse extends _GetPersonDetailsResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetPersonDetailsResponseCopyWith<_$_GetPersonDetailsResponse>
-      get copyWith => __$$_GetPersonDetailsResponseCopyWithImpl<
-          _$_GetPersonDetailsResponse>(this, _$identity);
+  _$$GetPersonDetailsResponseImplCopyWith<_$GetPersonDetailsResponseImpl>
+      get copyWith => __$$GetPersonDetailsResponseImplCopyWithImpl<
+          _$GetPersonDetailsResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetPersonDetailsResponseToJson(
+    return _$$GetPersonDetailsResponseImplToJson(
       this,
     );
   }
@@ -244,11 +245,11 @@ abstract class _GetPersonDetailsResponse extends GetPersonDetailsResponse {
           required final List<CommentView> comments,
           required final List<PostView> posts,
           required final List<CommunityModeratorView> moderates}) =
-      _$_GetPersonDetailsResponse;
+      _$GetPersonDetailsResponseImpl;
   const _GetPersonDetailsResponse._() : super._();
 
   factory _GetPersonDetailsResponse.fromJson(Map<String, dynamic> json) =
-      _$_GetPersonDetailsResponse.fromJson;
+      _$GetPersonDetailsResponseImpl.fromJson;
 
   @override
   PersonView get personView;
@@ -260,6 +261,6 @@ abstract class _GetPersonDetailsResponse extends GetPersonDetailsResponse {
   List<CommunityModeratorView> get moderates;
   @override
   @JsonKey(ignore: true)
-  _$$_GetPersonDetailsResponseCopyWith<_$_GetPersonDetailsResponse>
+  _$$GetPersonDetailsResponseImplCopyWith<_$GetPersonDetailsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

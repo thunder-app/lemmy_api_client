@@ -6,14 +6,14 @@ part of 'verify_email_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_VerifyEmailResponse _$$_VerifyEmailResponseFromJson(
+_$VerifyEmailResponseImpl _$$VerifyEmailResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_VerifyEmailResponse(
+    _$VerifyEmailResponseImpl(
       success: json['success'] as bool?,
     );
 
-Map<String, dynamic> _$$_VerifyEmailResponseToJson(
-        _$_VerifyEmailResponse instance) =>
+Map<String, dynamic> _$$VerifyEmailResponseImplToJson(
+        _$VerifyEmailResponseImpl instance) =>
     <String, dynamic>{
       'success': instance.success,
     };

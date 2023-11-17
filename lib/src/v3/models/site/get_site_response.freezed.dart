@@ -135,11 +135,11 @@ class _$GetSiteResponseCopyWithImpl<$Res, $Val extends GetSiteResponse>
 }
 
 /// @nodoc
-abstract class _$$_GetSiteResponseCopyWith<$Res>
+abstract class _$$GetSiteResponseImplCopyWith<$Res>
     implements $GetSiteResponseCopyWith<$Res> {
-  factory _$$_GetSiteResponseCopyWith(
-          _$_GetSiteResponse value, $Res Function(_$_GetSiteResponse) then) =
-      __$$_GetSiteResponseCopyWithImpl<$Res>;
+  factory _$$GetSiteResponseImplCopyWith(_$GetSiteResponseImpl value,
+          $Res Function(_$GetSiteResponseImpl) then) =
+      __$$GetSiteResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -159,11 +159,11 @@ abstract class _$$_GetSiteResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetSiteResponseCopyWithImpl<$Res>
-    extends _$GetSiteResponseCopyWithImpl<$Res, _$_GetSiteResponse>
-    implements _$$_GetSiteResponseCopyWith<$Res> {
-  __$$_GetSiteResponseCopyWithImpl(
-      _$_GetSiteResponse _value, $Res Function(_$_GetSiteResponse) _then)
+class __$$GetSiteResponseImplCopyWithImpl<$Res>
+    extends _$GetSiteResponseCopyWithImpl<$Res, _$GetSiteResponseImpl>
+    implements _$$GetSiteResponseImplCopyWith<$Res> {
+  __$$GetSiteResponseImplCopyWithImpl(
+      _$GetSiteResponseImpl _value, $Res Function(_$GetSiteResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -178,7 +178,7 @@ class __$$_GetSiteResponseCopyWithImpl<$Res>
     Object? taglines = null,
     Object? customEmojis = null,
   }) {
-    return _then(_$_GetSiteResponse(
+    return _then(_$GetSiteResponseImpl(
       siteView: null == siteView
           ? _value.siteView
           : siteView // ignore: cast_nullable_to_non_nullable
@@ -218,8 +218,8 @@ class __$$_GetSiteResponseCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_GetSiteResponse extends _GetSiteResponse {
-  const _$_GetSiteResponse(
+class _$GetSiteResponseImpl extends _GetSiteResponse {
+  const _$GetSiteResponseImpl(
       {required this.siteView,
       required final List<PersonView> admins,
       required this.version,
@@ -235,8 +235,8 @@ class _$_GetSiteResponse extends _GetSiteResponse {
         _customEmojis = customEmojis,
         super._();
 
-  factory _$_GetSiteResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_GetSiteResponseFromJson(json);
+  factory _$GetSiteResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetSiteResponseImplFromJson(json);
 
   @override
   final SiteView siteView;
@@ -294,7 +294,7 @@ class _$_GetSiteResponse extends _GetSiteResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetSiteResponse &&
+            other is _$GetSiteResponseImpl &&
             (identical(other.siteView, siteView) ||
                 other.siteView == siteView) &&
             const DeepCollectionEquality().equals(other._admins, _admins) &&
@@ -325,12 +325,13 @@ class _$_GetSiteResponse extends _GetSiteResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetSiteResponseCopyWith<_$_GetSiteResponse> get copyWith =>
-      __$$_GetSiteResponseCopyWithImpl<_$_GetSiteResponse>(this, _$identity);
+  _$$GetSiteResponseImplCopyWith<_$GetSiteResponseImpl> get copyWith =>
+      __$$GetSiteResponseImplCopyWithImpl<_$GetSiteResponseImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetSiteResponseToJson(
+    return _$$GetSiteResponseImplToJson(
       this,
     );
   }
@@ -338,18 +339,19 @@ class _$_GetSiteResponse extends _GetSiteResponse {
 
 abstract class _GetSiteResponse extends GetSiteResponse {
   const factory _GetSiteResponse(
-      {required final SiteView siteView,
-      required final List<PersonView> admins,
-      required final String version,
-      final MyUserInfo? myUser,
-      required final List<Language> allLanguages,
-      required final List<int> discussionLanguages,
-      required final List<Tagline> taglines,
-      required final List<CustomEmojiView> customEmojis}) = _$_GetSiteResponse;
+          {required final SiteView siteView,
+          required final List<PersonView> admins,
+          required final String version,
+          final MyUserInfo? myUser,
+          required final List<Language> allLanguages,
+          required final List<int> discussionLanguages,
+          required final List<Tagline> taglines,
+          required final List<CustomEmojiView> customEmojis}) =
+      _$GetSiteResponseImpl;
   const _GetSiteResponse._() : super._();
 
   factory _GetSiteResponse.fromJson(Map<String, dynamic> json) =
-      _$_GetSiteResponse.fromJson;
+      _$GetSiteResponseImpl.fromJson;
 
   @override
   SiteView get siteView;
@@ -369,6 +371,6 @@ abstract class _GetSiteResponse extends GetSiteResponse {
   List<CustomEmojiView> get customEmojis;
   @override
   @JsonKey(ignore: true)
-  _$$_GetSiteResponseCopyWith<_$_GetSiteResponse> get copyWith =>
+  _$$GetSiteResponseImplCopyWith<_$GetSiteResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

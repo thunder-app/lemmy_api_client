@@ -85,11 +85,11 @@ class _$AdminPurgeCommunityCopyWithImpl<$Res, $Val extends AdminPurgeCommunity>
 }
 
 /// @nodoc
-abstract class _$$_AdminPurgeCommunityCopyWith<$Res>
+abstract class _$$AdminPurgeCommunityImplCopyWith<$Res>
     implements $AdminPurgeCommunityCopyWith<$Res> {
-  factory _$$_AdminPurgeCommunityCopyWith(_$_AdminPurgeCommunity value,
-          $Res Function(_$_AdminPurgeCommunity) then) =
-      __$$_AdminPurgeCommunityCopyWithImpl<$Res>;
+  factory _$$AdminPurgeCommunityImplCopyWith(_$AdminPurgeCommunityImpl value,
+          $Res Function(_$AdminPurgeCommunityImpl) then) =
+      __$$AdminPurgeCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -100,11 +100,11 @@ abstract class _$$_AdminPurgeCommunityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AdminPurgeCommunityCopyWithImpl<$Res>
-    extends _$AdminPurgeCommunityCopyWithImpl<$Res, _$_AdminPurgeCommunity>
-    implements _$$_AdminPurgeCommunityCopyWith<$Res> {
-  __$$_AdminPurgeCommunityCopyWithImpl(_$_AdminPurgeCommunity _value,
-      $Res Function(_$_AdminPurgeCommunity) _then)
+class __$$AdminPurgeCommunityImplCopyWithImpl<$Res>
+    extends _$AdminPurgeCommunityCopyWithImpl<$Res, _$AdminPurgeCommunityImpl>
+    implements _$$AdminPurgeCommunityImplCopyWith<$Res> {
+  __$$AdminPurgeCommunityImplCopyWithImpl(_$AdminPurgeCommunityImpl _value,
+      $Res Function(_$AdminPurgeCommunityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -115,7 +115,7 @@ class __$$_AdminPurgeCommunityCopyWithImpl<$Res>
     Object? reason = freezed,
     Object? when = null,
   }) {
-    return _then(_$_AdminPurgeCommunity(
+    return _then(_$AdminPurgeCommunityImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -139,16 +139,16 @@ class __$$_AdminPurgeCommunityCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_AdminPurgeCommunity extends _AdminPurgeCommunity {
-  const _$_AdminPurgeCommunity(
+class _$AdminPurgeCommunityImpl extends _AdminPurgeCommunity {
+  const _$AdminPurgeCommunityImpl(
       {required this.id,
       required this.adminPersonId,
       this.reason,
       @JsonKey(name: 'when_') required this.when})
       : super._();
 
-  factory _$_AdminPurgeCommunity.fromJson(Map<String, dynamic> json) =>
-      _$$_AdminPurgeCommunityFromJson(json);
+  factory _$AdminPurgeCommunityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AdminPurgeCommunityImplFromJson(json);
 
   @override
   final int id;
@@ -169,7 +169,7 @@ class _$_AdminPurgeCommunity extends _AdminPurgeCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AdminPurgeCommunity &&
+            other is _$AdminPurgeCommunityImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.adminPersonId, adminPersonId) ||
                 other.adminPersonId == adminPersonId) &&
@@ -184,13 +184,13 @@ class _$_AdminPurgeCommunity extends _AdminPurgeCommunity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AdminPurgeCommunityCopyWith<_$_AdminPurgeCommunity> get copyWith =>
-      __$$_AdminPurgeCommunityCopyWithImpl<_$_AdminPurgeCommunity>(
+  _$$AdminPurgeCommunityImplCopyWith<_$AdminPurgeCommunityImpl> get copyWith =>
+      __$$AdminPurgeCommunityImplCopyWithImpl<_$AdminPurgeCommunityImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AdminPurgeCommunityToJson(
+    return _$$AdminPurgeCommunityImplToJson(
       this,
     );
   }
@@ -202,11 +202,11 @@ abstract class _AdminPurgeCommunity extends AdminPurgeCommunity {
           required final int adminPersonId,
           final String? reason,
           @JsonKey(name: 'when_') required final String when}) =
-      _$_AdminPurgeCommunity;
+      _$AdminPurgeCommunityImpl;
   const _AdminPurgeCommunity._() : super._();
 
   factory _AdminPurgeCommunity.fromJson(Map<String, dynamic> json) =
-      _$_AdminPurgeCommunity.fromJson;
+      _$AdminPurgeCommunityImpl.fromJson;
 
   @override
   int get id;
@@ -219,6 +219,6 @@ abstract class _AdminPurgeCommunity extends AdminPurgeCommunity {
   String get when;
   @override
   @JsonKey(ignore: true)
-  _$$_AdminPurgeCommunityCopyWith<_$_AdminPurgeCommunity> get copyWith =>
+  _$$AdminPurgeCommunityImplCopyWith<_$AdminPurgeCommunityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

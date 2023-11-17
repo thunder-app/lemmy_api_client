@@ -6,8 +6,8 @@ part of 'search_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SearchResponse _$$_SearchResponseFromJson(Map<String, dynamic> json) =>
-    _$_SearchResponse(
+_$SearchResponseImpl _$$SearchResponseImplFromJson(Map<String, dynamic> json) =>
+    _$SearchResponseImpl(
       type: SearchType.fromJson(json['type_'] as String),
       comments: (json['comments'] as List<dynamic>)
           .map((e) => CommentView.fromJson(e as Map<String, dynamic>))
@@ -23,7 +23,8 @@ _$_SearchResponse _$$_SearchResponseFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_SearchResponseToJson(_$_SearchResponse instance) =>
+Map<String, dynamic> _$$SearchResponseImplToJson(
+        _$SearchResponseImpl instance) =>
     <String, dynamic>{
       'type_': instance.type.toJson(),
       'comments': instance.comments.map((e) => e.toJson()).toList(),

@@ -37,6 +37,7 @@ class LocalUser with _$LocalUser {
     bool? totp2faEnabled, // Only available in lemmy v0.19.0 and above
     bool? enableKeyboardNavigation, // Only available in lemmy v0.19.0 and above
     bool? enableAnimatedImages, // Only available in lemmy v0.19.0 and above
+    bool? collapseBotComments, // Only available in lemmy v0.19.0 and above
   }) = _LocalUser;
 
   const LocalUser._();

@@ -72,11 +72,11 @@ class _$CustomEmojiResponseCopyWithImpl<$Res, $Val extends CustomEmojiResponse>
 }
 
 /// @nodoc
-abstract class _$$_CustomEmojiResponseCopyWith<$Res>
+abstract class _$$CustomEmojiResponseImplCopyWith<$Res>
     implements $CustomEmojiResponseCopyWith<$Res> {
-  factory _$$_CustomEmojiResponseCopyWith(_$_CustomEmojiResponse value,
-          $Res Function(_$_CustomEmojiResponse) then) =
-      __$$_CustomEmojiResponseCopyWithImpl<$Res>;
+  factory _$$CustomEmojiResponseImplCopyWith(_$CustomEmojiResponseImpl value,
+          $Res Function(_$CustomEmojiResponseImpl) then) =
+      __$$CustomEmojiResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({CustomEmojiView customEmoji});
@@ -86,11 +86,11 @@ abstract class _$$_CustomEmojiResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CustomEmojiResponseCopyWithImpl<$Res>
-    extends _$CustomEmojiResponseCopyWithImpl<$Res, _$_CustomEmojiResponse>
-    implements _$$_CustomEmojiResponseCopyWith<$Res> {
-  __$$_CustomEmojiResponseCopyWithImpl(_$_CustomEmojiResponse _value,
-      $Res Function(_$_CustomEmojiResponse) _then)
+class __$$CustomEmojiResponseImplCopyWithImpl<$Res>
+    extends _$CustomEmojiResponseCopyWithImpl<$Res, _$CustomEmojiResponseImpl>
+    implements _$$CustomEmojiResponseImplCopyWith<$Res> {
+  __$$CustomEmojiResponseImplCopyWithImpl(_$CustomEmojiResponseImpl _value,
+      $Res Function(_$CustomEmojiResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -98,7 +98,7 @@ class __$$_CustomEmojiResponseCopyWithImpl<$Res>
   $Res call({
     Object? customEmoji = null,
   }) {
-    return _then(_$_CustomEmojiResponse(
+    return _then(_$CustomEmojiResponseImpl(
       customEmoji: null == customEmoji
           ? _value.customEmoji
           : customEmoji // ignore: cast_nullable_to_non_nullable
@@ -110,11 +110,11 @@ class __$$_CustomEmojiResponseCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_CustomEmojiResponse extends _CustomEmojiResponse {
-  const _$_CustomEmojiResponse({required this.customEmoji}) : super._();
+class _$CustomEmojiResponseImpl extends _CustomEmojiResponse {
+  const _$CustomEmojiResponseImpl({required this.customEmoji}) : super._();
 
-  factory _$_CustomEmojiResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_CustomEmojiResponseFromJson(json);
+  factory _$CustomEmojiResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CustomEmojiResponseImplFromJson(json);
 
   @override
   final CustomEmojiView customEmoji;
@@ -128,7 +128,7 @@ class _$_CustomEmojiResponse extends _CustomEmojiResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CustomEmojiResponse &&
+            other is _$CustomEmojiResponseImpl &&
             (identical(other.customEmoji, customEmoji) ||
                 other.customEmoji == customEmoji));
   }
@@ -140,13 +140,13 @@ class _$_CustomEmojiResponse extends _CustomEmojiResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CustomEmojiResponseCopyWith<_$_CustomEmojiResponse> get copyWith =>
-      __$$_CustomEmojiResponseCopyWithImpl<_$_CustomEmojiResponse>(
+  _$$CustomEmojiResponseImplCopyWith<_$CustomEmojiResponseImpl> get copyWith =>
+      __$$CustomEmojiResponseImplCopyWithImpl<_$CustomEmojiResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CustomEmojiResponseToJson(
+    return _$$CustomEmojiResponseImplToJson(
       this,
     );
   }
@@ -154,16 +154,16 @@ class _$_CustomEmojiResponse extends _CustomEmojiResponse {
 
 abstract class _CustomEmojiResponse extends CustomEmojiResponse {
   const factory _CustomEmojiResponse(
-      {required final CustomEmojiView customEmoji}) = _$_CustomEmojiResponse;
+      {required final CustomEmojiView customEmoji}) = _$CustomEmojiResponseImpl;
   const _CustomEmojiResponse._() : super._();
 
   factory _CustomEmojiResponse.fromJson(Map<String, dynamic> json) =
-      _$_CustomEmojiResponse.fromJson;
+      _$CustomEmojiResponseImpl.fromJson;
 
   @override
   CustomEmojiView get customEmoji;
   @override
   @JsonKey(ignore: true)
-  _$$_CustomEmojiResponseCopyWith<_$_CustomEmojiResponse> get copyWith =>
+  _$$CustomEmojiResponseImplCopyWith<_$CustomEmojiResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

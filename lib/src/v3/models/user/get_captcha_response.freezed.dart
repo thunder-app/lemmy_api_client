@@ -76,11 +76,11 @@ class _$GetCaptchaResponseCopyWithImpl<$Res, $Val extends GetCaptchaResponse>
 }
 
 /// @nodoc
-abstract class _$$_GetCaptchaResponseCopyWith<$Res>
+abstract class _$$GetCaptchaResponseImplCopyWith<$Res>
     implements $GetCaptchaResponseCopyWith<$Res> {
-  factory _$$_GetCaptchaResponseCopyWith(_$_GetCaptchaResponse value,
-          $Res Function(_$_GetCaptchaResponse) then) =
-      __$$_GetCaptchaResponseCopyWithImpl<$Res>;
+  factory _$$GetCaptchaResponseImplCopyWith(_$GetCaptchaResponseImpl value,
+          $Res Function(_$GetCaptchaResponseImpl) then) =
+      __$$GetCaptchaResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({CaptchaResponse? ok});
@@ -90,11 +90,11 @@ abstract class _$$_GetCaptchaResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetCaptchaResponseCopyWithImpl<$Res>
-    extends _$GetCaptchaResponseCopyWithImpl<$Res, _$_GetCaptchaResponse>
-    implements _$$_GetCaptchaResponseCopyWith<$Res> {
-  __$$_GetCaptchaResponseCopyWithImpl(
-      _$_GetCaptchaResponse _value, $Res Function(_$_GetCaptchaResponse) _then)
+class __$$GetCaptchaResponseImplCopyWithImpl<$Res>
+    extends _$GetCaptchaResponseCopyWithImpl<$Res, _$GetCaptchaResponseImpl>
+    implements _$$GetCaptchaResponseImplCopyWith<$Res> {
+  __$$GetCaptchaResponseImplCopyWithImpl(_$GetCaptchaResponseImpl _value,
+      $Res Function(_$GetCaptchaResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -102,7 +102,7 @@ class __$$_GetCaptchaResponseCopyWithImpl<$Res>
   $Res call({
     Object? ok = freezed,
   }) {
-    return _then(_$_GetCaptchaResponse(
+    return _then(_$GetCaptchaResponseImpl(
       ok: freezed == ok
           ? _value.ok
           : ok // ignore: cast_nullable_to_non_nullable
@@ -114,11 +114,11 @@ class __$$_GetCaptchaResponseCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_GetCaptchaResponse extends _GetCaptchaResponse {
-  const _$_GetCaptchaResponse({this.ok}) : super._();
+class _$GetCaptchaResponseImpl extends _GetCaptchaResponse {
+  const _$GetCaptchaResponseImpl({this.ok}) : super._();
 
-  factory _$_GetCaptchaResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_GetCaptchaResponseFromJson(json);
+  factory _$GetCaptchaResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetCaptchaResponseImplFromJson(json);
 
   @override
   final CaptchaResponse? ok;
@@ -132,7 +132,7 @@ class _$_GetCaptchaResponse extends _GetCaptchaResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetCaptchaResponse &&
+            other is _$GetCaptchaResponseImpl &&
             (identical(other.ok, ok) || other.ok == ok));
   }
 
@@ -143,13 +143,13 @@ class _$_GetCaptchaResponse extends _GetCaptchaResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetCaptchaResponseCopyWith<_$_GetCaptchaResponse> get copyWith =>
-      __$$_GetCaptchaResponseCopyWithImpl<_$_GetCaptchaResponse>(
+  _$$GetCaptchaResponseImplCopyWith<_$GetCaptchaResponseImpl> get copyWith =>
+      __$$GetCaptchaResponseImplCopyWithImpl<_$GetCaptchaResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetCaptchaResponseToJson(
+    return _$$GetCaptchaResponseImplToJson(
       this,
     );
   }
@@ -157,16 +157,16 @@ class _$_GetCaptchaResponse extends _GetCaptchaResponse {
 
 abstract class _GetCaptchaResponse extends GetCaptchaResponse {
   const factory _GetCaptchaResponse({final CaptchaResponse? ok}) =
-      _$_GetCaptchaResponse;
+      _$GetCaptchaResponseImpl;
   const _GetCaptchaResponse._() : super._();
 
   factory _GetCaptchaResponse.fromJson(Map<String, dynamic> json) =
-      _$_GetCaptchaResponse.fromJson;
+      _$GetCaptchaResponseImpl.fromJson;
 
   @override
   CaptchaResponse? get ok;
   @override
   @JsonKey(ignore: true)
-  _$$_GetCaptchaResponseCopyWith<_$_GetCaptchaResponse> get copyWith =>
+  _$$GetCaptchaResponseImplCopyWith<_$GetCaptchaResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

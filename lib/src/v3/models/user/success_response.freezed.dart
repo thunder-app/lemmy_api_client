@@ -62,22 +62,22 @@ class _$SuccessResponseCopyWithImpl<$Res, $Val extends SuccessResponse>
 }
 
 /// @nodoc
-abstract class _$$_SuccessResponseCopyWith<$Res>
+abstract class _$$SuccessResponseImplCopyWith<$Res>
     implements $SuccessResponseCopyWith<$Res> {
-  factory _$$_SuccessResponseCopyWith(
-          _$_SuccessResponse value, $Res Function(_$_SuccessResponse) then) =
-      __$$_SuccessResponseCopyWithImpl<$Res>;
+  factory _$$SuccessResponseImplCopyWith(_$SuccessResponseImpl value,
+          $Res Function(_$SuccessResponseImpl) then) =
+      __$$SuccessResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool success});
 }
 
 /// @nodoc
-class __$$_SuccessResponseCopyWithImpl<$Res>
-    extends _$SuccessResponseCopyWithImpl<$Res, _$_SuccessResponse>
-    implements _$$_SuccessResponseCopyWith<$Res> {
-  __$$_SuccessResponseCopyWithImpl(
-      _$_SuccessResponse _value, $Res Function(_$_SuccessResponse) _then)
+class __$$SuccessResponseImplCopyWithImpl<$Res>
+    extends _$SuccessResponseCopyWithImpl<$Res, _$SuccessResponseImpl>
+    implements _$$SuccessResponseImplCopyWith<$Res> {
+  __$$SuccessResponseImplCopyWithImpl(
+      _$SuccessResponseImpl _value, $Res Function(_$SuccessResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -85,7 +85,7 @@ class __$$_SuccessResponseCopyWithImpl<$Res>
   $Res call({
     Object? success = null,
   }) {
-    return _then(_$_SuccessResponse(
+    return _then(_$SuccessResponseImpl(
       success: null == success
           ? _value.success
           : success // ignore: cast_nullable_to_non_nullable
@@ -97,11 +97,11 @@ class __$$_SuccessResponseCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_SuccessResponse extends _SuccessResponse {
-  const _$_SuccessResponse({required this.success}) : super._();
+class _$SuccessResponseImpl extends _SuccessResponse {
+  const _$SuccessResponseImpl({required this.success}) : super._();
 
-  factory _$_SuccessResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_SuccessResponseFromJson(json);
+  factory _$SuccessResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SuccessResponseImplFromJson(json);
 
   @override
   final bool success;
@@ -115,7 +115,7 @@ class _$_SuccessResponse extends _SuccessResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SuccessResponse &&
+            other is _$SuccessResponseImpl &&
             (identical(other.success, success) || other.success == success));
   }
 
@@ -126,12 +126,13 @@ class _$_SuccessResponse extends _SuccessResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SuccessResponseCopyWith<_$_SuccessResponse> get copyWith =>
-      __$$_SuccessResponseCopyWithImpl<_$_SuccessResponse>(this, _$identity);
+  _$$SuccessResponseImplCopyWith<_$SuccessResponseImpl> get copyWith =>
+      __$$SuccessResponseImplCopyWithImpl<_$SuccessResponseImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SuccessResponseToJson(
+    return _$$SuccessResponseImplToJson(
       this,
     );
   }
@@ -139,16 +140,16 @@ class _$_SuccessResponse extends _SuccessResponse {
 
 abstract class _SuccessResponse extends SuccessResponse {
   const factory _SuccessResponse({required final bool success}) =
-      _$_SuccessResponse;
+      _$SuccessResponseImpl;
   const _SuccessResponse._() : super._();
 
   factory _SuccessResponse.fromJson(Map<String, dynamic> json) =
-      _$_SuccessResponse.fromJson;
+      _$SuccessResponseImpl.fromJson;
 
   @override
   bool get success;
   @override
   @JsonKey(ignore: true)
-  _$$_SuccessResponseCopyWith<_$_SuccessResponse> get copyWith =>
+  _$$SuccessResponseImplCopyWith<_$SuccessResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

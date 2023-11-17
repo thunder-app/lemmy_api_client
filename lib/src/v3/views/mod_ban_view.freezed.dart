@@ -106,11 +106,11 @@ class _$ModBanViewCopyWithImpl<$Res, $Val extends ModBanView>
 }
 
 /// @nodoc
-abstract class _$$_ModBanViewCopyWith<$Res>
+abstract class _$$ModBanViewImplCopyWith<$Res>
     implements $ModBanViewCopyWith<$Res> {
-  factory _$$_ModBanViewCopyWith(
-          _$_ModBanView value, $Res Function(_$_ModBanView) then) =
-      __$$_ModBanViewCopyWithImpl<$Res>;
+  factory _$$ModBanViewImplCopyWith(
+          _$ModBanViewImpl value, $Res Function(_$ModBanViewImpl) then) =
+      __$$ModBanViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({ModBan modBan, Person? moderator, Person bannedPerson});
@@ -124,11 +124,11 @@ abstract class _$$_ModBanViewCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ModBanViewCopyWithImpl<$Res>
-    extends _$ModBanViewCopyWithImpl<$Res, _$_ModBanView>
-    implements _$$_ModBanViewCopyWith<$Res> {
-  __$$_ModBanViewCopyWithImpl(
-      _$_ModBanView _value, $Res Function(_$_ModBanView) _then)
+class __$$ModBanViewImplCopyWithImpl<$Res>
+    extends _$ModBanViewCopyWithImpl<$Res, _$ModBanViewImpl>
+    implements _$$ModBanViewImplCopyWith<$Res> {
+  __$$ModBanViewImplCopyWithImpl(
+      _$ModBanViewImpl _value, $Res Function(_$ModBanViewImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -138,7 +138,7 @@ class __$$_ModBanViewCopyWithImpl<$Res>
     Object? moderator = freezed,
     Object? bannedPerson = null,
   }) {
-    return _then(_$_ModBanView(
+    return _then(_$ModBanViewImpl(
       modBan: null == modBan
           ? _value.modBan
           : modBan // ignore: cast_nullable_to_non_nullable
@@ -158,13 +158,13 @@ class __$$_ModBanViewCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ModBanView extends _ModBanView {
-  const _$_ModBanView(
+class _$ModBanViewImpl extends _ModBanView {
+  const _$ModBanViewImpl(
       {required this.modBan, this.moderator, required this.bannedPerson})
       : super._();
 
-  factory _$_ModBanView.fromJson(Map<String, dynamic> json) =>
-      _$$_ModBanViewFromJson(json);
+  factory _$ModBanViewImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModBanViewImplFromJson(json);
 
   @override
   final ModBan modBan;
@@ -182,7 +182,7 @@ class _$_ModBanView extends _ModBanView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ModBanView &&
+            other is _$ModBanViewImpl &&
             (identical(other.modBan, modBan) || other.modBan == modBan) &&
             (identical(other.moderator, moderator) ||
                 other.moderator == moderator) &&
@@ -197,12 +197,12 @@ class _$_ModBanView extends _ModBanView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ModBanViewCopyWith<_$_ModBanView> get copyWith =>
-      __$$_ModBanViewCopyWithImpl<_$_ModBanView>(this, _$identity);
+  _$$ModBanViewImplCopyWith<_$ModBanViewImpl> get copyWith =>
+      __$$ModBanViewImplCopyWithImpl<_$ModBanViewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModBanViewToJson(
+    return _$$ModBanViewImplToJson(
       this,
     );
   }
@@ -212,11 +212,11 @@ abstract class _ModBanView extends ModBanView {
   const factory _ModBanView(
       {required final ModBan modBan,
       final Person? moderator,
-      required final Person bannedPerson}) = _$_ModBanView;
+      required final Person bannedPerson}) = _$ModBanViewImpl;
   const _ModBanView._() : super._();
 
   factory _ModBanView.fromJson(Map<String, dynamic> json) =
-      _$_ModBanView.fromJson;
+      _$ModBanViewImpl.fromJson;
 
   @override
   ModBan get modBan;
@@ -226,6 +226,6 @@ abstract class _ModBanView extends ModBanView {
   Person get bannedPerson;
   @override
   @JsonKey(ignore: true)
-  _$$_ModBanViewCopyWith<_$_ModBanView> get copyWith =>
+  _$$ModBanViewImplCopyWith<_$ModBanViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -73,21 +73,22 @@ class _$AddAdminCopyWithImpl<$Res, $Val extends AddAdmin>
 }
 
 /// @nodoc
-abstract class _$$_AddAdminCopyWith<$Res> implements $AddAdminCopyWith<$Res> {
-  factory _$$_AddAdminCopyWith(
-          _$_AddAdmin value, $Res Function(_$_AddAdmin) then) =
-      __$$_AddAdminCopyWithImpl<$Res>;
+abstract class _$$AddAdminImplCopyWith<$Res>
+    implements $AddAdminCopyWith<$Res> {
+  factory _$$AddAdminImplCopyWith(
+          _$AddAdminImpl value, $Res Function(_$AddAdminImpl) then) =
+      __$$AddAdminImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int personId, bool added, String? auth});
 }
 
 /// @nodoc
-class __$$_AddAdminCopyWithImpl<$Res>
-    extends _$AddAdminCopyWithImpl<$Res, _$_AddAdmin>
-    implements _$$_AddAdminCopyWith<$Res> {
-  __$$_AddAdminCopyWithImpl(
-      _$_AddAdmin _value, $Res Function(_$_AddAdmin) _then)
+class __$$AddAdminImplCopyWithImpl<$Res>
+    extends _$AddAdminCopyWithImpl<$Res, _$AddAdminImpl>
+    implements _$$AddAdminImplCopyWith<$Res> {
+  __$$AddAdminImplCopyWithImpl(
+      _$AddAdminImpl _value, $Res Function(_$AddAdminImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -97,7 +98,7 @@ class __$$_AddAdminCopyWithImpl<$Res>
     Object? added = null,
     Object? auth = freezed,
   }) {
-    return _then(_$_AddAdmin(
+    return _then(_$AddAdminImpl(
       personId: null == personId
           ? _value.personId
           : personId // ignore: cast_nullable_to_non_nullable
@@ -117,12 +118,12 @@ class __$$_AddAdminCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$_AddAdmin extends _AddAdmin {
-  const _$_AddAdmin({required this.personId, required this.added, this.auth})
+class _$AddAdminImpl extends _AddAdmin {
+  const _$AddAdminImpl({required this.personId, required this.added, this.auth})
       : super._();
 
-  factory _$_AddAdmin.fromJson(Map<String, dynamic> json) =>
-      _$$_AddAdminFromJson(json);
+  factory _$AddAdminImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AddAdminImplFromJson(json);
 
   @override
   final int personId;
@@ -140,7 +141,7 @@ class _$_AddAdmin extends _AddAdmin {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AddAdmin &&
+            other is _$AddAdminImpl &&
             (identical(other.personId, personId) ||
                 other.personId == personId) &&
             (identical(other.added, added) || other.added == added) &&
@@ -154,12 +155,12 @@ class _$_AddAdmin extends _AddAdmin {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AddAdminCopyWith<_$_AddAdmin> get copyWith =>
-      __$$_AddAdminCopyWithImpl<_$_AddAdmin>(this, _$identity);
+  _$$AddAdminImplCopyWith<_$AddAdminImpl> get copyWith =>
+      __$$AddAdminImplCopyWithImpl<_$AddAdminImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AddAdminToJson(
+    return _$$AddAdminImplToJson(
       this,
     );
   }
@@ -169,10 +170,11 @@ abstract class _AddAdmin extends AddAdmin {
   const factory _AddAdmin(
       {required final int personId,
       required final bool added,
-      final String? auth}) = _$_AddAdmin;
+      final String? auth}) = _$AddAdminImpl;
   const _AddAdmin._() : super._();
 
-  factory _AddAdmin.fromJson(Map<String, dynamic> json) = _$_AddAdmin.fromJson;
+  factory _AddAdmin.fromJson(Map<String, dynamic> json) =
+      _$AddAdminImpl.fromJson;
 
   @override
   int get personId;
@@ -182,7 +184,7 @@ abstract class _AddAdmin extends AddAdmin {
   String? get auth;
   @override
   @JsonKey(ignore: true)
-  _$$_AddAdminCopyWith<_$_AddAdmin> get copyWith =>
+  _$$AddAdminImplCopyWith<_$AddAdminImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -239,25 +241,25 @@ class _$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetUnreadRegistrationApplicationCountCopyWith<$Res>
+abstract class _$$GetUnreadRegistrationApplicationCountImplCopyWith<$Res>
     implements $GetUnreadRegistrationApplicationCountCopyWith<$Res> {
-  factory _$$_GetUnreadRegistrationApplicationCountCopyWith(
-          _$_GetUnreadRegistrationApplicationCount value,
-          $Res Function(_$_GetUnreadRegistrationApplicationCount) then) =
-      __$$_GetUnreadRegistrationApplicationCountCopyWithImpl<$Res>;
+  factory _$$GetUnreadRegistrationApplicationCountImplCopyWith(
+          _$GetUnreadRegistrationApplicationCountImpl value,
+          $Res Function(_$GetUnreadRegistrationApplicationCountImpl) then) =
+      __$$GetUnreadRegistrationApplicationCountImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? auth});
 }
 
 /// @nodoc
-class __$$_GetUnreadRegistrationApplicationCountCopyWithImpl<$Res>
+class __$$GetUnreadRegistrationApplicationCountImplCopyWithImpl<$Res>
     extends _$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res,
-        _$_GetUnreadRegistrationApplicationCount>
-    implements _$$_GetUnreadRegistrationApplicationCountCopyWith<$Res> {
-  __$$_GetUnreadRegistrationApplicationCountCopyWithImpl(
-      _$_GetUnreadRegistrationApplicationCount _value,
-      $Res Function(_$_GetUnreadRegistrationApplicationCount) _then)
+        _$GetUnreadRegistrationApplicationCountImpl>
+    implements _$$GetUnreadRegistrationApplicationCountImplCopyWith<$Res> {
+  __$$GetUnreadRegistrationApplicationCountImplCopyWithImpl(
+      _$GetUnreadRegistrationApplicationCountImpl _value,
+      $Res Function(_$GetUnreadRegistrationApplicationCountImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -265,7 +267,7 @@ class __$$_GetUnreadRegistrationApplicationCountCopyWithImpl<$Res>
   $Res call({
     Object? auth = freezed,
   }) {
-    return _then(_$_GetUnreadRegistrationApplicationCount(
+    return _then(_$GetUnreadRegistrationApplicationCountImpl(
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -277,13 +279,13 @@ class __$$_GetUnreadRegistrationApplicationCountCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$_GetUnreadRegistrationApplicationCount
+class _$GetUnreadRegistrationApplicationCountImpl
     extends _GetUnreadRegistrationApplicationCount {
-  const _$_GetUnreadRegistrationApplicationCount({this.auth}) : super._();
+  const _$GetUnreadRegistrationApplicationCountImpl({this.auth}) : super._();
 
-  factory _$_GetUnreadRegistrationApplicationCount.fromJson(
+  factory _$GetUnreadRegistrationApplicationCountImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_GetUnreadRegistrationApplicationCountFromJson(json);
+      _$$GetUnreadRegistrationApplicationCountImplFromJson(json);
 
   @override
   final String? auth;
@@ -297,7 +299,7 @@ class _$_GetUnreadRegistrationApplicationCount
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetUnreadRegistrationApplicationCount &&
+            other is _$GetUnreadRegistrationApplicationCountImpl &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
@@ -308,14 +310,14 @@ class _$_GetUnreadRegistrationApplicationCount
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetUnreadRegistrationApplicationCountCopyWith<
-          _$_GetUnreadRegistrationApplicationCount>
-      get copyWith => __$$_GetUnreadRegistrationApplicationCountCopyWithImpl<
-          _$_GetUnreadRegistrationApplicationCount>(this, _$identity);
+  _$$GetUnreadRegistrationApplicationCountImplCopyWith<
+          _$GetUnreadRegistrationApplicationCountImpl>
+      get copyWith => __$$GetUnreadRegistrationApplicationCountImplCopyWithImpl<
+          _$GetUnreadRegistrationApplicationCountImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetUnreadRegistrationApplicationCountToJson(
+    return _$$GetUnreadRegistrationApplicationCountImplToJson(
       this,
     );
   }
@@ -324,19 +326,19 @@ class _$_GetUnreadRegistrationApplicationCount
 abstract class _GetUnreadRegistrationApplicationCount
     extends GetUnreadRegistrationApplicationCount {
   const factory _GetUnreadRegistrationApplicationCount({final String? auth}) =
-      _$_GetUnreadRegistrationApplicationCount;
+      _$GetUnreadRegistrationApplicationCountImpl;
   const _GetUnreadRegistrationApplicationCount._() : super._();
 
   factory _GetUnreadRegistrationApplicationCount.fromJson(
           Map<String, dynamic> json) =
-      _$_GetUnreadRegistrationApplicationCount.fromJson;
+      _$GetUnreadRegistrationApplicationCountImpl.fromJson;
 
   @override
   String? get auth;
   @override
   @JsonKey(ignore: true)
-  _$$_GetUnreadRegistrationApplicationCountCopyWith<
-          _$_GetUnreadRegistrationApplicationCount>
+  _$$GetUnreadRegistrationApplicationCountImplCopyWith<
+          _$GetUnreadRegistrationApplicationCountImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -410,25 +412,25 @@ class _$ListRegistrationApplicationsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ListRegistrationApplicationsCopyWith<$Res>
+abstract class _$$ListRegistrationApplicationsImplCopyWith<$Res>
     implements $ListRegistrationApplicationsCopyWith<$Res> {
-  factory _$$_ListRegistrationApplicationsCopyWith(
-          _$_ListRegistrationApplications value,
-          $Res Function(_$_ListRegistrationApplications) then) =
-      __$$_ListRegistrationApplicationsCopyWithImpl<$Res>;
+  factory _$$ListRegistrationApplicationsImplCopyWith(
+          _$ListRegistrationApplicationsImpl value,
+          $Res Function(_$ListRegistrationApplicationsImpl) then) =
+      __$$ListRegistrationApplicationsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool? unreadOnly, int? page, int? limit, String? auth});
 }
 
 /// @nodoc
-class __$$_ListRegistrationApplicationsCopyWithImpl<$Res>
+class __$$ListRegistrationApplicationsImplCopyWithImpl<$Res>
     extends _$ListRegistrationApplicationsCopyWithImpl<$Res,
-        _$_ListRegistrationApplications>
-    implements _$$_ListRegistrationApplicationsCopyWith<$Res> {
-  __$$_ListRegistrationApplicationsCopyWithImpl(
-      _$_ListRegistrationApplications _value,
-      $Res Function(_$_ListRegistrationApplications) _then)
+        _$ListRegistrationApplicationsImpl>
+    implements _$$ListRegistrationApplicationsImplCopyWith<$Res> {
+  __$$ListRegistrationApplicationsImplCopyWithImpl(
+      _$ListRegistrationApplicationsImpl _value,
+      $Res Function(_$ListRegistrationApplicationsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -439,7 +441,7 @@ class __$$_ListRegistrationApplicationsCopyWithImpl<$Res>
     Object? limit = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_$_ListRegistrationApplications(
+    return _then(_$ListRegistrationApplicationsImpl(
       unreadOnly: freezed == unreadOnly
           ? _value.unreadOnly
           : unreadOnly // ignore: cast_nullable_to_non_nullable
@@ -463,13 +465,14 @@ class __$$_ListRegistrationApplicationsCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$_ListRegistrationApplications extends _ListRegistrationApplications {
-  const _$_ListRegistrationApplications(
+class _$ListRegistrationApplicationsImpl extends _ListRegistrationApplications {
+  const _$ListRegistrationApplicationsImpl(
       {this.unreadOnly, this.page, this.limit, this.auth})
       : super._();
 
-  factory _$_ListRegistrationApplications.fromJson(Map<String, dynamic> json) =>
-      _$$_ListRegistrationApplicationsFromJson(json);
+  factory _$ListRegistrationApplicationsImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$ListRegistrationApplicationsImplFromJson(json);
 
   @override
   final bool? unreadOnly;
@@ -489,7 +492,7 @@ class _$_ListRegistrationApplications extends _ListRegistrationApplications {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ListRegistrationApplications &&
+            other is _$ListRegistrationApplicationsImpl &&
             (identical(other.unreadOnly, unreadOnly) ||
                 other.unreadOnly == unreadOnly) &&
             (identical(other.page, page) || other.page == page) &&
@@ -504,13 +507,14 @@ class _$_ListRegistrationApplications extends _ListRegistrationApplications {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ListRegistrationApplicationsCopyWith<_$_ListRegistrationApplications>
-      get copyWith => __$$_ListRegistrationApplicationsCopyWithImpl<
-          _$_ListRegistrationApplications>(this, _$identity);
+  _$$ListRegistrationApplicationsImplCopyWith<
+          _$ListRegistrationApplicationsImpl>
+      get copyWith => __$$ListRegistrationApplicationsImplCopyWithImpl<
+          _$ListRegistrationApplicationsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ListRegistrationApplicationsToJson(
+    return _$$ListRegistrationApplicationsImplToJson(
       this,
     );
   }
@@ -522,11 +526,11 @@ abstract class _ListRegistrationApplications
       {final bool? unreadOnly,
       final int? page,
       final int? limit,
-      final String? auth}) = _$_ListRegistrationApplications;
+      final String? auth}) = _$ListRegistrationApplicationsImpl;
   const _ListRegistrationApplications._() : super._();
 
   factory _ListRegistrationApplications.fromJson(Map<String, dynamic> json) =
-      _$_ListRegistrationApplications.fromJson;
+      _$ListRegistrationApplicationsImpl.fromJson;
 
   @override
   bool? get unreadOnly;
@@ -538,7 +542,8 @@ abstract class _ListRegistrationApplications
   String? get auth;
   @override
   @JsonKey(ignore: true)
-  _$$_ListRegistrationApplicationsCopyWith<_$_ListRegistrationApplications>
+  _$$ListRegistrationApplicationsImplCopyWith<
+          _$ListRegistrationApplicationsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -612,25 +617,25 @@ class _$ApproveRegistrationApplicationCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ApproveRegistrationApplicationCopyWith<$Res>
+abstract class _$$ApproveRegistrationApplicationImplCopyWith<$Res>
     implements $ApproveRegistrationApplicationCopyWith<$Res> {
-  factory _$$_ApproveRegistrationApplicationCopyWith(
-          _$_ApproveRegistrationApplication value,
-          $Res Function(_$_ApproveRegistrationApplication) then) =
-      __$$_ApproveRegistrationApplicationCopyWithImpl<$Res>;
+  factory _$$ApproveRegistrationApplicationImplCopyWith(
+          _$ApproveRegistrationApplicationImpl value,
+          $Res Function(_$ApproveRegistrationApplicationImpl) then) =
+      __$$ApproveRegistrationApplicationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int id, bool approve, String? denyReason, String? auth});
 }
 
 /// @nodoc
-class __$$_ApproveRegistrationApplicationCopyWithImpl<$Res>
+class __$$ApproveRegistrationApplicationImplCopyWithImpl<$Res>
     extends _$ApproveRegistrationApplicationCopyWithImpl<$Res,
-        _$_ApproveRegistrationApplication>
-    implements _$$_ApproveRegistrationApplicationCopyWith<$Res> {
-  __$$_ApproveRegistrationApplicationCopyWithImpl(
-      _$_ApproveRegistrationApplication _value,
-      $Res Function(_$_ApproveRegistrationApplication) _then)
+        _$ApproveRegistrationApplicationImpl>
+    implements _$$ApproveRegistrationApplicationImplCopyWith<$Res> {
+  __$$ApproveRegistrationApplicationImplCopyWithImpl(
+      _$ApproveRegistrationApplicationImpl _value,
+      $Res Function(_$ApproveRegistrationApplicationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -641,7 +646,7 @@ class __$$_ApproveRegistrationApplicationCopyWithImpl<$Res>
     Object? denyReason = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_$_ApproveRegistrationApplication(
+    return _then(_$ApproveRegistrationApplicationImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -665,15 +670,15 @@ class __$$_ApproveRegistrationApplicationCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$_ApproveRegistrationApplication
+class _$ApproveRegistrationApplicationImpl
     extends _ApproveRegistrationApplication {
-  const _$_ApproveRegistrationApplication(
+  const _$ApproveRegistrationApplicationImpl(
       {required this.id, required this.approve, this.denyReason, this.auth})
       : super._();
 
-  factory _$_ApproveRegistrationApplication.fromJson(
+  factory _$ApproveRegistrationApplicationImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_ApproveRegistrationApplicationFromJson(json);
+      _$$ApproveRegistrationApplicationImplFromJson(json);
 
   @override
   final int id;
@@ -693,7 +698,7 @@ class _$_ApproveRegistrationApplication
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ApproveRegistrationApplication &&
+            other is _$ApproveRegistrationApplicationImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.approve, approve) || other.approve == approve) &&
             (identical(other.denyReason, denyReason) ||
@@ -708,13 +713,14 @@ class _$_ApproveRegistrationApplication
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ApproveRegistrationApplicationCopyWith<_$_ApproveRegistrationApplication>
-      get copyWith => __$$_ApproveRegistrationApplicationCopyWithImpl<
-          _$_ApproveRegistrationApplication>(this, _$identity);
+  _$$ApproveRegistrationApplicationImplCopyWith<
+          _$ApproveRegistrationApplicationImpl>
+      get copyWith => __$$ApproveRegistrationApplicationImplCopyWithImpl<
+          _$ApproveRegistrationApplicationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ApproveRegistrationApplicationToJson(
+    return _$$ApproveRegistrationApplicationImplToJson(
       this,
     );
   }
@@ -726,11 +732,11 @@ abstract class _ApproveRegistrationApplication
       {required final int id,
       required final bool approve,
       final String? denyReason,
-      final String? auth}) = _$_ApproveRegistrationApplication;
+      final String? auth}) = _$ApproveRegistrationApplicationImpl;
   const _ApproveRegistrationApplication._() : super._();
 
   factory _ApproveRegistrationApplication.fromJson(Map<String, dynamic> json) =
-      _$_ApproveRegistrationApplication.fromJson;
+      _$ApproveRegistrationApplicationImpl.fromJson;
 
   @override
   int get id;
@@ -742,7 +748,8 @@ abstract class _ApproveRegistrationApplication
   String? get auth;
   @override
   @JsonKey(ignore: true)
-  _$$_ApproveRegistrationApplicationCopyWith<_$_ApproveRegistrationApplication>
+  _$$ApproveRegistrationApplicationImplCopyWith<
+          _$ApproveRegistrationApplicationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -806,22 +813,22 @@ class _$PurgePersonCopyWithImpl<$Res, $Val extends PurgePerson>
 }
 
 /// @nodoc
-abstract class _$$_PurgePersonCopyWith<$Res>
+abstract class _$$PurgePersonImplCopyWith<$Res>
     implements $PurgePersonCopyWith<$Res> {
-  factory _$$_PurgePersonCopyWith(
-          _$_PurgePerson value, $Res Function(_$_PurgePerson) then) =
-      __$$_PurgePersonCopyWithImpl<$Res>;
+  factory _$$PurgePersonImplCopyWith(
+          _$PurgePersonImpl value, $Res Function(_$PurgePersonImpl) then) =
+      __$$PurgePersonImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int personId, String? reason, String? auth});
 }
 
 /// @nodoc
-class __$$_PurgePersonCopyWithImpl<$Res>
-    extends _$PurgePersonCopyWithImpl<$Res, _$_PurgePerson>
-    implements _$$_PurgePersonCopyWith<$Res> {
-  __$$_PurgePersonCopyWithImpl(
-      _$_PurgePerson _value, $Res Function(_$_PurgePerson) _then)
+class __$$PurgePersonImplCopyWithImpl<$Res>
+    extends _$PurgePersonCopyWithImpl<$Res, _$PurgePersonImpl>
+    implements _$$PurgePersonImplCopyWith<$Res> {
+  __$$PurgePersonImplCopyWithImpl(
+      _$PurgePersonImpl _value, $Res Function(_$PurgePersonImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -831,7 +838,7 @@ class __$$_PurgePersonCopyWithImpl<$Res>
     Object? reason = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_$_PurgePerson(
+    return _then(_$PurgePersonImpl(
       personId: null == personId
           ? _value.personId
           : personId // ignore: cast_nullable_to_non_nullable
@@ -851,12 +858,12 @@ class __$$_PurgePersonCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$_PurgePerson extends _PurgePerson {
-  const _$_PurgePerson({required this.personId, this.reason, this.auth})
+class _$PurgePersonImpl extends _PurgePerson {
+  const _$PurgePersonImpl({required this.personId, this.reason, this.auth})
       : super._();
 
-  factory _$_PurgePerson.fromJson(Map<String, dynamic> json) =>
-      _$$_PurgePersonFromJson(json);
+  factory _$PurgePersonImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PurgePersonImplFromJson(json);
 
   @override
   final int personId;
@@ -874,7 +881,7 @@ class _$_PurgePerson extends _PurgePerson {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PurgePerson &&
+            other is _$PurgePersonImpl &&
             (identical(other.personId, personId) ||
                 other.personId == personId) &&
             (identical(other.reason, reason) || other.reason == reason) &&
@@ -888,12 +895,12 @@ class _$_PurgePerson extends _PurgePerson {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PurgePersonCopyWith<_$_PurgePerson> get copyWith =>
-      __$$_PurgePersonCopyWithImpl<_$_PurgePerson>(this, _$identity);
+  _$$PurgePersonImplCopyWith<_$PurgePersonImpl> get copyWith =>
+      __$$PurgePersonImplCopyWithImpl<_$PurgePersonImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PurgePersonToJson(
+    return _$$PurgePersonImplToJson(
       this,
     );
   }
@@ -903,11 +910,11 @@ abstract class _PurgePerson extends PurgePerson {
   const factory _PurgePerson(
       {required final int personId,
       final String? reason,
-      final String? auth}) = _$_PurgePerson;
+      final String? auth}) = _$PurgePersonImpl;
   const _PurgePerson._() : super._();
 
   factory _PurgePerson.fromJson(Map<String, dynamic> json) =
-      _$_PurgePerson.fromJson;
+      _$PurgePersonImpl.fromJson;
 
   @override
   int get personId;
@@ -917,7 +924,7 @@ abstract class _PurgePerson extends PurgePerson {
   String? get auth;
   @override
   @JsonKey(ignore: true)
-  _$$_PurgePersonCopyWith<_$_PurgePerson> get copyWith =>
+  _$$PurgePersonImplCopyWith<_$PurgePersonImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -981,22 +988,22 @@ class _$PurgeCommunityCopyWithImpl<$Res, $Val extends PurgeCommunity>
 }
 
 /// @nodoc
-abstract class _$$_PurgeCommunityCopyWith<$Res>
+abstract class _$$PurgeCommunityImplCopyWith<$Res>
     implements $PurgeCommunityCopyWith<$Res> {
-  factory _$$_PurgeCommunityCopyWith(
-          _$_PurgeCommunity value, $Res Function(_$_PurgeCommunity) then) =
-      __$$_PurgeCommunityCopyWithImpl<$Res>;
+  factory _$$PurgeCommunityImplCopyWith(_$PurgeCommunityImpl value,
+          $Res Function(_$PurgeCommunityImpl) then) =
+      __$$PurgeCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int communityId, String? reason, String? auth});
 }
 
 /// @nodoc
-class __$$_PurgeCommunityCopyWithImpl<$Res>
-    extends _$PurgeCommunityCopyWithImpl<$Res, _$_PurgeCommunity>
-    implements _$$_PurgeCommunityCopyWith<$Res> {
-  __$$_PurgeCommunityCopyWithImpl(
-      _$_PurgeCommunity _value, $Res Function(_$_PurgeCommunity) _then)
+class __$$PurgeCommunityImplCopyWithImpl<$Res>
+    extends _$PurgeCommunityCopyWithImpl<$Res, _$PurgeCommunityImpl>
+    implements _$$PurgeCommunityImplCopyWith<$Res> {
+  __$$PurgeCommunityImplCopyWithImpl(
+      _$PurgeCommunityImpl _value, $Res Function(_$PurgeCommunityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1006,7 +1013,7 @@ class __$$_PurgeCommunityCopyWithImpl<$Res>
     Object? reason = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_$_PurgeCommunity(
+    return _then(_$PurgeCommunityImpl(
       communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -1026,12 +1033,13 @@ class __$$_PurgeCommunityCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$_PurgeCommunity extends _PurgeCommunity {
-  const _$_PurgeCommunity({required this.communityId, this.reason, this.auth})
+class _$PurgeCommunityImpl extends _PurgeCommunity {
+  const _$PurgeCommunityImpl(
+      {required this.communityId, this.reason, this.auth})
       : super._();
 
-  factory _$_PurgeCommunity.fromJson(Map<String, dynamic> json) =>
-      _$$_PurgeCommunityFromJson(json);
+  factory _$PurgeCommunityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PurgeCommunityImplFromJson(json);
 
   @override
   final int communityId;
@@ -1049,7 +1057,7 @@ class _$_PurgeCommunity extends _PurgeCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PurgeCommunity &&
+            other is _$PurgeCommunityImpl &&
             (identical(other.communityId, communityId) ||
                 other.communityId == communityId) &&
             (identical(other.reason, reason) || other.reason == reason) &&
@@ -1063,12 +1071,13 @@ class _$_PurgeCommunity extends _PurgeCommunity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PurgeCommunityCopyWith<_$_PurgeCommunity> get copyWith =>
-      __$$_PurgeCommunityCopyWithImpl<_$_PurgeCommunity>(this, _$identity);
+  _$$PurgeCommunityImplCopyWith<_$PurgeCommunityImpl> get copyWith =>
+      __$$PurgeCommunityImplCopyWithImpl<_$PurgeCommunityImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PurgeCommunityToJson(
+    return _$$PurgeCommunityImplToJson(
       this,
     );
   }
@@ -1078,11 +1087,11 @@ abstract class _PurgeCommunity extends PurgeCommunity {
   const factory _PurgeCommunity(
       {required final int communityId,
       final String? reason,
-      final String? auth}) = _$_PurgeCommunity;
+      final String? auth}) = _$PurgeCommunityImpl;
   const _PurgeCommunity._() : super._();
 
   factory _PurgeCommunity.fromJson(Map<String, dynamic> json) =
-      _$_PurgeCommunity.fromJson;
+      _$PurgeCommunityImpl.fromJson;
 
   @override
   int get communityId;
@@ -1092,7 +1101,7 @@ abstract class _PurgeCommunity extends PurgeCommunity {
   String? get auth;
   @override
   @JsonKey(ignore: true)
-  _$$_PurgeCommunityCopyWith<_$_PurgeCommunity> get copyWith =>
+  _$$PurgeCommunityImplCopyWith<_$PurgeCommunityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1155,21 +1164,22 @@ class _$PurgePostCopyWithImpl<$Res, $Val extends PurgePost>
 }
 
 /// @nodoc
-abstract class _$$_PurgePostCopyWith<$Res> implements $PurgePostCopyWith<$Res> {
-  factory _$$_PurgePostCopyWith(
-          _$_PurgePost value, $Res Function(_$_PurgePost) then) =
-      __$$_PurgePostCopyWithImpl<$Res>;
+abstract class _$$PurgePostImplCopyWith<$Res>
+    implements $PurgePostCopyWith<$Res> {
+  factory _$$PurgePostImplCopyWith(
+          _$PurgePostImpl value, $Res Function(_$PurgePostImpl) then) =
+      __$$PurgePostImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int postId, String? reason, String? auth});
 }
 
 /// @nodoc
-class __$$_PurgePostCopyWithImpl<$Res>
-    extends _$PurgePostCopyWithImpl<$Res, _$_PurgePost>
-    implements _$$_PurgePostCopyWith<$Res> {
-  __$$_PurgePostCopyWithImpl(
-      _$_PurgePost _value, $Res Function(_$_PurgePost) _then)
+class __$$PurgePostImplCopyWithImpl<$Res>
+    extends _$PurgePostCopyWithImpl<$Res, _$PurgePostImpl>
+    implements _$$PurgePostImplCopyWith<$Res> {
+  __$$PurgePostImplCopyWithImpl(
+      _$PurgePostImpl _value, $Res Function(_$PurgePostImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1179,7 +1189,7 @@ class __$$_PurgePostCopyWithImpl<$Res>
     Object? reason = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_$_PurgePost(
+    return _then(_$PurgePostImpl(
       postId: null == postId
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
@@ -1199,12 +1209,12 @@ class __$$_PurgePostCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$_PurgePost extends _PurgePost {
-  const _$_PurgePost({required this.postId, this.reason, this.auth})
+class _$PurgePostImpl extends _PurgePost {
+  const _$PurgePostImpl({required this.postId, this.reason, this.auth})
       : super._();
 
-  factory _$_PurgePost.fromJson(Map<String, dynamic> json) =>
-      _$$_PurgePostFromJson(json);
+  factory _$PurgePostImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PurgePostImplFromJson(json);
 
   @override
   final int postId;
@@ -1222,7 +1232,7 @@ class _$_PurgePost extends _PurgePost {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PurgePost &&
+            other is _$PurgePostImpl &&
             (identical(other.postId, postId) || other.postId == postId) &&
             (identical(other.reason, reason) || other.reason == reason) &&
             (identical(other.auth, auth) || other.auth == auth));
@@ -1235,12 +1245,12 @@ class _$_PurgePost extends _PurgePost {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PurgePostCopyWith<_$_PurgePost> get copyWith =>
-      __$$_PurgePostCopyWithImpl<_$_PurgePost>(this, _$identity);
+  _$$PurgePostImplCopyWith<_$PurgePostImpl> get copyWith =>
+      __$$PurgePostImplCopyWithImpl<_$PurgePostImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PurgePostToJson(
+    return _$$PurgePostImplToJson(
       this,
     );
   }
@@ -1250,11 +1260,11 @@ abstract class _PurgePost extends PurgePost {
   const factory _PurgePost(
       {required final int postId,
       final String? reason,
-      final String? auth}) = _$_PurgePost;
+      final String? auth}) = _$PurgePostImpl;
   const _PurgePost._() : super._();
 
   factory _PurgePost.fromJson(Map<String, dynamic> json) =
-      _$_PurgePost.fromJson;
+      _$PurgePostImpl.fromJson;
 
   @override
   int get postId;
@@ -1264,7 +1274,7 @@ abstract class _PurgePost extends PurgePost {
   String? get auth;
   @override
   @JsonKey(ignore: true)
-  _$$_PurgePostCopyWith<_$_PurgePost> get copyWith =>
+  _$$PurgePostImplCopyWith<_$PurgePostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1328,22 +1338,22 @@ class _$PurgeCommentCopyWithImpl<$Res, $Val extends PurgeComment>
 }
 
 /// @nodoc
-abstract class _$$_PurgeCommentCopyWith<$Res>
+abstract class _$$PurgeCommentImplCopyWith<$Res>
     implements $PurgeCommentCopyWith<$Res> {
-  factory _$$_PurgeCommentCopyWith(
-          _$_PurgeComment value, $Res Function(_$_PurgeComment) then) =
-      __$$_PurgeCommentCopyWithImpl<$Res>;
+  factory _$$PurgeCommentImplCopyWith(
+          _$PurgeCommentImpl value, $Res Function(_$PurgeCommentImpl) then) =
+      __$$PurgeCommentImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int commentId, String? reason, String? auth});
 }
 
 /// @nodoc
-class __$$_PurgeCommentCopyWithImpl<$Res>
-    extends _$PurgeCommentCopyWithImpl<$Res, _$_PurgeComment>
-    implements _$$_PurgeCommentCopyWith<$Res> {
-  __$$_PurgeCommentCopyWithImpl(
-      _$_PurgeComment _value, $Res Function(_$_PurgeComment) _then)
+class __$$PurgeCommentImplCopyWithImpl<$Res>
+    extends _$PurgeCommentCopyWithImpl<$Res, _$PurgeCommentImpl>
+    implements _$$PurgeCommentImplCopyWith<$Res> {
+  __$$PurgeCommentImplCopyWithImpl(
+      _$PurgeCommentImpl _value, $Res Function(_$PurgeCommentImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1353,7 +1363,7 @@ class __$$_PurgeCommentCopyWithImpl<$Res>
     Object? reason = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_$_PurgeComment(
+    return _then(_$PurgeCommentImpl(
       commentId: null == commentId
           ? _value.commentId
           : commentId // ignore: cast_nullable_to_non_nullable
@@ -1373,12 +1383,12 @@ class __$$_PurgeCommentCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$_PurgeComment extends _PurgeComment {
-  const _$_PurgeComment({required this.commentId, this.reason, this.auth})
+class _$PurgeCommentImpl extends _PurgeComment {
+  const _$PurgeCommentImpl({required this.commentId, this.reason, this.auth})
       : super._();
 
-  factory _$_PurgeComment.fromJson(Map<String, dynamic> json) =>
-      _$$_PurgeCommentFromJson(json);
+  factory _$PurgeCommentImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PurgeCommentImplFromJson(json);
 
   @override
   final int commentId;
@@ -1396,7 +1406,7 @@ class _$_PurgeComment extends _PurgeComment {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PurgeComment &&
+            other is _$PurgeCommentImpl &&
             (identical(other.commentId, commentId) ||
                 other.commentId == commentId) &&
             (identical(other.reason, reason) || other.reason == reason) &&
@@ -1410,12 +1420,12 @@ class _$_PurgeComment extends _PurgeComment {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PurgeCommentCopyWith<_$_PurgeComment> get copyWith =>
-      __$$_PurgeCommentCopyWithImpl<_$_PurgeComment>(this, _$identity);
+  _$$PurgeCommentImplCopyWith<_$PurgeCommentImpl> get copyWith =>
+      __$$PurgeCommentImplCopyWithImpl<_$PurgeCommentImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PurgeCommentToJson(
+    return _$$PurgeCommentImplToJson(
       this,
     );
   }
@@ -1425,11 +1435,11 @@ abstract class _PurgeComment extends PurgeComment {
   const factory _PurgeComment(
       {required final int commentId,
       final String? reason,
-      final String? auth}) = _$_PurgeComment;
+      final String? auth}) = _$PurgeCommentImpl;
   const _PurgeComment._() : super._();
 
   factory _PurgeComment.fromJson(Map<String, dynamic> json) =
-      _$_PurgeComment.fromJson;
+      _$PurgeCommentImpl.fromJson;
 
   @override
   int get commentId;
@@ -1439,6 +1449,6 @@ abstract class _PurgeComment extends PurgeComment {
   String? get auth;
   @override
   @JsonKey(ignore: true)
-  _$$_PurgeCommentCopyWith<_$_PurgeComment> get copyWith =>
+  _$$PurgeCommentImplCopyWith<_$PurgeCommentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -6,15 +6,15 @@ part of 'get_unread_registration_application_count_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetUnreadRegistrationApplicationCountResponse
-    _$$_GetUnreadRegistrationApplicationCountResponseFromJson(
+_$GetUnreadRegistrationApplicationCountResponseImpl
+    _$$GetUnreadRegistrationApplicationCountResponseImplFromJson(
             Map<String, dynamic> json) =>
-        _$_GetUnreadRegistrationApplicationCountResponse(
+        _$GetUnreadRegistrationApplicationCountResponseImpl(
           registrationApplications: json['registration_applications'] as int,
         );
 
-Map<String, dynamic> _$$_GetUnreadRegistrationApplicationCountResponseToJson(
-        _$_GetUnreadRegistrationApplicationCountResponse instance) =>
+Map<String, dynamic> _$$GetUnreadRegistrationApplicationCountResponseImplToJson(
+        _$GetUnreadRegistrationApplicationCountResponseImpl instance) =>
     <String, dynamic>{
       'registration_applications': instance.registrationApplications,
     };

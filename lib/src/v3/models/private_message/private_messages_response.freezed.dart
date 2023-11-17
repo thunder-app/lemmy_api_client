@@ -65,23 +65,25 @@ class _$PrivateMessagesResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PrivateMessagesResponseCopyWith<$Res>
+abstract class _$$PrivateMessagesResponseImplCopyWith<$Res>
     implements $PrivateMessagesResponseCopyWith<$Res> {
-  factory _$$_PrivateMessagesResponseCopyWith(_$_PrivateMessagesResponse value,
-          $Res Function(_$_PrivateMessagesResponse) then) =
-      __$$_PrivateMessagesResponseCopyWithImpl<$Res>;
+  factory _$$PrivateMessagesResponseImplCopyWith(
+          _$PrivateMessagesResponseImpl value,
+          $Res Function(_$PrivateMessagesResponseImpl) then) =
+      __$$PrivateMessagesResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<PrivateMessageView> privateMessages});
 }
 
 /// @nodoc
-class __$$_PrivateMessagesResponseCopyWithImpl<$Res>
+class __$$PrivateMessagesResponseImplCopyWithImpl<$Res>
     extends _$PrivateMessagesResponseCopyWithImpl<$Res,
-        _$_PrivateMessagesResponse>
-    implements _$$_PrivateMessagesResponseCopyWith<$Res> {
-  __$$_PrivateMessagesResponseCopyWithImpl(_$_PrivateMessagesResponse _value,
-      $Res Function(_$_PrivateMessagesResponse) _then)
+        _$PrivateMessagesResponseImpl>
+    implements _$$PrivateMessagesResponseImplCopyWith<$Res> {
+  __$$PrivateMessagesResponseImplCopyWithImpl(
+      _$PrivateMessagesResponseImpl _value,
+      $Res Function(_$PrivateMessagesResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -89,7 +91,7 @@ class __$$_PrivateMessagesResponseCopyWithImpl<$Res>
   $Res call({
     Object? privateMessages = null,
   }) {
-    return _then(_$_PrivateMessagesResponse(
+    return _then(_$PrivateMessagesResponseImpl(
       privateMessages: null == privateMessages
           ? _value._privateMessages
           : privateMessages // ignore: cast_nullable_to_non_nullable
@@ -101,14 +103,14 @@ class __$$_PrivateMessagesResponseCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_PrivateMessagesResponse extends _PrivateMessagesResponse {
-  const _$_PrivateMessagesResponse(
+class _$PrivateMessagesResponseImpl extends _PrivateMessagesResponse {
+  const _$PrivateMessagesResponseImpl(
       {required final List<PrivateMessageView> privateMessages})
       : _privateMessages = privateMessages,
         super._();
 
-  factory _$_PrivateMessagesResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_PrivateMessagesResponseFromJson(json);
+  factory _$PrivateMessagesResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PrivateMessagesResponseImplFromJson(json);
 
   final List<PrivateMessageView> _privateMessages;
   @override
@@ -127,7 +129,7 @@ class _$_PrivateMessagesResponse extends _PrivateMessagesResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PrivateMessagesResponse &&
+            other is _$PrivateMessagesResponseImpl &&
             const DeepCollectionEquality()
                 .equals(other._privateMessages, _privateMessages));
   }
@@ -140,14 +142,13 @@ class _$_PrivateMessagesResponse extends _PrivateMessagesResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PrivateMessagesResponseCopyWith<_$_PrivateMessagesResponse>
-      get copyWith =>
-          __$$_PrivateMessagesResponseCopyWithImpl<_$_PrivateMessagesResponse>(
-              this, _$identity);
+  _$$PrivateMessagesResponseImplCopyWith<_$PrivateMessagesResponseImpl>
+      get copyWith => __$$PrivateMessagesResponseImplCopyWithImpl<
+          _$PrivateMessagesResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PrivateMessagesResponseToJson(
+    return _$$PrivateMessagesResponseImplToJson(
       this,
     );
   }
@@ -156,16 +157,16 @@ class _$_PrivateMessagesResponse extends _PrivateMessagesResponse {
 abstract class _PrivateMessagesResponse extends PrivateMessagesResponse {
   const factory _PrivateMessagesResponse(
           {required final List<PrivateMessageView> privateMessages}) =
-      _$_PrivateMessagesResponse;
+      _$PrivateMessagesResponseImpl;
   const _PrivateMessagesResponse._() : super._();
 
   factory _PrivateMessagesResponse.fromJson(Map<String, dynamic> json) =
-      _$_PrivateMessagesResponse.fromJson;
+      _$PrivateMessagesResponseImpl.fromJson;
 
   @override
   List<PrivateMessageView> get privateMessages;
   @override
   @JsonKey(ignore: true)
-  _$$_PrivateMessagesResponseCopyWith<_$_PrivateMessagesResponse>
+  _$$PrivateMessagesResponseImplCopyWith<_$PrivateMessagesResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -6,11 +6,12 @@ part of 'site.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetSite _$$_GetSiteFromJson(Map<String, dynamic> json) => _$_GetSite(
+_$GetSiteImpl _$$GetSiteImplFromJson(Map<String, dynamic> json) =>
+    _$GetSiteImpl(
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_GetSiteToJson(_$_GetSite instance) {
+Map<String, dynamic> _$$GetSiteImplToJson(_$GetSiteImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -23,8 +24,8 @@ Map<String, dynamic> _$$_GetSiteToJson(_$_GetSite instance) {
   return val;
 }
 
-_$_CreateSite _$$_CreateSiteFromJson(Map<String, dynamic> json) =>
-    _$_CreateSite(
+_$CreateSiteImpl _$$CreateSiteImplFromJson(Map<String, dynamic> json) =>
+    _$CreateSiteImpl(
       name: json['name'] as String,
       sidebar: json['sidebar'] as String?,
       description: json['description'] as String?,
@@ -80,7 +81,7 @@ _$_CreateSite _$$_CreateSiteFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_CreateSiteToJson(_$_CreateSite instance) {
+Map<String, dynamic> _$$CreateSiteImplToJson(_$CreateSiteImpl instance) {
   final val = <String, dynamic>{
     'name': instance.name,
   };
@@ -139,7 +140,8 @@ Map<String, dynamic> _$$_CreateSiteToJson(_$_CreateSite instance) {
   return val;
 }
 
-_$_EditSite _$$_EditSiteFromJson(Map<String, dynamic> json) => _$_EditSite(
+_$EditSiteImpl _$$EditSiteImplFromJson(Map<String, dynamic> json) =>
+    _$EditSiteImpl(
       name: json['name'] as String?,
       sidebar: json['sidebar'] as String?,
       description: json['description'] as String?,
@@ -197,7 +199,7 @@ _$_EditSite _$$_EditSiteFromJson(Map<String, dynamic> json) => _$_EditSite(
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_EditSiteToJson(_$_EditSite instance) {
+Map<String, dynamic> _$$EditSiteImplToJson(_$EditSiteImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -256,14 +258,14 @@ Map<String, dynamic> _$$_EditSiteToJson(_$_EditSite instance) {
   return val;
 }
 
-_$_BlockInstance _$$_BlockInstanceFromJson(Map<String, dynamic> json) =>
-    _$_BlockInstance(
+_$BlockInstanceImpl _$$BlockInstanceImplFromJson(Map<String, dynamic> json) =>
+    _$BlockInstanceImpl(
       auth: json['auth'] as String?,
       instanceId: json['instance_id'] as int,
       block: json['block'] as bool,
     );
 
-Map<String, dynamic> _$$_BlockInstanceToJson(_$_BlockInstance instance) {
+Map<String, dynamic> _$$BlockInstanceImplToJson(_$BlockInstanceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

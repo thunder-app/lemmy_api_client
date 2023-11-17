@@ -68,22 +68,22 @@ class _$ResolveObjectCopyWithImpl<$Res, $Val extends ResolveObject>
 }
 
 /// @nodoc
-abstract class _$$_ResolveObjectCopyWith<$Res>
+abstract class _$$ResolveObjectImplCopyWith<$Res>
     implements $ResolveObjectCopyWith<$Res> {
-  factory _$$_ResolveObjectCopyWith(
-          _$_ResolveObject value, $Res Function(_$_ResolveObject) then) =
-      __$$_ResolveObjectCopyWithImpl<$Res>;
+  factory _$$ResolveObjectImplCopyWith(
+          _$ResolveObjectImpl value, $Res Function(_$ResolveObjectImpl) then) =
+      __$$ResolveObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String q, String? auth});
 }
 
 /// @nodoc
-class __$$_ResolveObjectCopyWithImpl<$Res>
-    extends _$ResolveObjectCopyWithImpl<$Res, _$_ResolveObject>
-    implements _$$_ResolveObjectCopyWith<$Res> {
-  __$$_ResolveObjectCopyWithImpl(
-      _$_ResolveObject _value, $Res Function(_$_ResolveObject) _then)
+class __$$ResolveObjectImplCopyWithImpl<$Res>
+    extends _$ResolveObjectCopyWithImpl<$Res, _$ResolveObjectImpl>
+    implements _$$ResolveObjectImplCopyWith<$Res> {
+  __$$ResolveObjectImplCopyWithImpl(
+      _$ResolveObjectImpl _value, $Res Function(_$ResolveObjectImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -92,7 +92,7 @@ class __$$_ResolveObjectCopyWithImpl<$Res>
     Object? q = null,
     Object? auth = freezed,
   }) {
-    return _then(_$_ResolveObject(
+    return _then(_$ResolveObjectImpl(
       q: null == q
           ? _value.q
           : q // ignore: cast_nullable_to_non_nullable
@@ -108,11 +108,11 @@ class __$$_ResolveObjectCopyWithImpl<$Res>
 /// @nodoc
 
 @apiSerde
-class _$_ResolveObject extends _ResolveObject {
-  const _$_ResolveObject({required this.q, this.auth}) : super._();
+class _$ResolveObjectImpl extends _ResolveObject {
+  const _$ResolveObjectImpl({required this.q, this.auth}) : super._();
 
-  factory _$_ResolveObject.fromJson(Map<String, dynamic> json) =>
-      _$$_ResolveObjectFromJson(json);
+  factory _$ResolveObjectImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ResolveObjectImplFromJson(json);
 
   @override
   final String q;
@@ -128,7 +128,7 @@ class _$_ResolveObject extends _ResolveObject {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ResolveObject &&
+            other is _$ResolveObjectImpl &&
             (identical(other.q, q) || other.q == q) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
@@ -140,12 +140,12 @@ class _$_ResolveObject extends _ResolveObject {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ResolveObjectCopyWith<_$_ResolveObject> get copyWith =>
-      __$$_ResolveObjectCopyWithImpl<_$_ResolveObject>(this, _$identity);
+  _$$ResolveObjectImplCopyWith<_$ResolveObjectImpl> get copyWith =>
+      __$$ResolveObjectImplCopyWithImpl<_$ResolveObjectImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResolveObjectToJson(
+    return _$$ResolveObjectImplToJson(
       this,
     );
   }
@@ -153,11 +153,11 @@ class _$_ResolveObject extends _ResolveObject {
 
 abstract class _ResolveObject extends ResolveObject {
   const factory _ResolveObject({required final String q, final String? auth}) =
-      _$_ResolveObject;
+      _$ResolveObjectImpl;
   const _ResolveObject._() : super._();
 
   factory _ResolveObject.fromJson(Map<String, dynamic> json) =
-      _$_ResolveObject.fromJson;
+      _$ResolveObjectImpl.fromJson;
 
   @override
   String get q;
@@ -165,6 +165,6 @@ abstract class _ResolveObject extends ResolveObject {
   String? get auth;
   @override
   @JsonKey(ignore: true)
-  _$$_ResolveObjectCopyWith<_$_ResolveObject> get copyWith =>
+  _$$ResolveObjectImplCopyWith<_$ResolveObjectImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

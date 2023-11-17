@@ -6,16 +6,16 @@ part of 'block_community_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_BlockCommunityResponse _$$_BlockCommunityResponseFromJson(
+_$BlockCommunityResponseImpl _$$BlockCommunityResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_BlockCommunityResponse(
+    _$BlockCommunityResponseImpl(
       communityView: CommunityView.fromJson(
           json['community_view'] as Map<String, dynamic>),
       blocked: json['blocked'] as bool,
     );
 
-Map<String, dynamic> _$$_BlockCommunityResponseToJson(
-        _$_BlockCommunityResponse instance) =>
+Map<String, dynamic> _$$BlockCommunityResponseImplToJson(
+        _$BlockCommunityResponseImpl instance) =>
     <String, dynamic>{
       'community_view': instance.communityView.toJson(),
       'blocked': instance.blocked,

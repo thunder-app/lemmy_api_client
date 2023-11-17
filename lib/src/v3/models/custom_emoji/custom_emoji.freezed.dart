@@ -112,11 +112,11 @@ class _$CustomEmojiCopyWithImpl<$Res, $Val extends CustomEmoji>
 }
 
 /// @nodoc
-abstract class _$$_CustomEmojiCopyWith<$Res>
+abstract class _$$CustomEmojiImplCopyWith<$Res>
     implements $CustomEmojiCopyWith<$Res> {
-  factory _$$_CustomEmojiCopyWith(
-          _$_CustomEmoji value, $Res Function(_$_CustomEmoji) then) =
-      __$$_CustomEmojiCopyWithImpl<$Res>;
+  factory _$$CustomEmojiImplCopyWith(
+          _$CustomEmojiImpl value, $Res Function(_$CustomEmojiImpl) then) =
+      __$$CustomEmojiImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -131,11 +131,11 @@ abstract class _$$_CustomEmojiCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CustomEmojiCopyWithImpl<$Res>
-    extends _$CustomEmojiCopyWithImpl<$Res, _$_CustomEmoji>
-    implements _$$_CustomEmojiCopyWith<$Res> {
-  __$$_CustomEmojiCopyWithImpl(
-      _$_CustomEmoji _value, $Res Function(_$_CustomEmoji) _then)
+class __$$CustomEmojiImplCopyWithImpl<$Res>
+    extends _$CustomEmojiCopyWithImpl<$Res, _$CustomEmojiImpl>
+    implements _$$CustomEmojiImplCopyWith<$Res> {
+  __$$CustomEmojiImplCopyWithImpl(
+      _$CustomEmojiImpl _value, $Res Function(_$CustomEmojiImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -150,7 +150,7 @@ class __$$_CustomEmojiCopyWithImpl<$Res>
     Object? published = null,
     Object? updated = freezed,
   }) {
-    return _then(_$_CustomEmoji(
+    return _then(_$CustomEmojiImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -190,8 +190,8 @@ class __$$_CustomEmojiCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_CustomEmoji extends _CustomEmoji {
-  const _$_CustomEmoji(
+class _$CustomEmojiImpl extends _CustomEmoji {
+  const _$CustomEmojiImpl(
       {required this.id,
       required this.localSiteId,
       required this.shortcode,
@@ -202,8 +202,8 @@ class _$_CustomEmoji extends _CustomEmoji {
       this.updated})
       : super._();
 
-  factory _$_CustomEmoji.fromJson(Map<String, dynamic> json) =>
-      _$$_CustomEmojiFromJson(json);
+  factory _$CustomEmojiImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CustomEmojiImplFromJson(json);
 
   @override
   final int id;
@@ -231,7 +231,7 @@ class _$_CustomEmoji extends _CustomEmoji {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CustomEmoji &&
+            other is _$CustomEmojiImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.localSiteId, localSiteId) ||
                 other.localSiteId == localSiteId) &&
@@ -255,12 +255,12 @@ class _$_CustomEmoji extends _CustomEmoji {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CustomEmojiCopyWith<_$_CustomEmoji> get copyWith =>
-      __$$_CustomEmojiCopyWithImpl<_$_CustomEmoji>(this, _$identity);
+  _$$CustomEmojiImplCopyWith<_$CustomEmojiImpl> get copyWith =>
+      __$$CustomEmojiImplCopyWithImpl<_$CustomEmojiImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CustomEmojiToJson(
+    return _$$CustomEmojiImplToJson(
       this,
     );
   }
@@ -275,11 +275,11 @@ abstract class _CustomEmoji extends CustomEmoji {
       required final String altText,
       required final String category,
       required final DateTime published,
-      final DateTime? updated}) = _$_CustomEmoji;
+      final DateTime? updated}) = _$CustomEmojiImpl;
   const _CustomEmoji._() : super._();
 
   factory _CustomEmoji.fromJson(Map<String, dynamic> json) =
-      _$_CustomEmoji.fromJson;
+      _$CustomEmojiImpl.fromJson;
 
   @override
   int get id;
@@ -299,6 +299,6 @@ abstract class _CustomEmoji extends CustomEmoji {
   DateTime? get updated;
   @override
   @JsonKey(ignore: true)
-  _$$_CustomEmojiCopyWith<_$_CustomEmoji> get copyWith =>
+  _$$CustomEmojiImplCopyWith<_$CustomEmojiImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

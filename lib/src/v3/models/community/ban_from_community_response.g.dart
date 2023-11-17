@@ -6,16 +6,16 @@ part of 'ban_from_community_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_BanFromCommunityResponse _$$_BanFromCommunityResponseFromJson(
+_$BanFromCommunityResponseImpl _$$BanFromCommunityResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_BanFromCommunityResponse(
+    _$BanFromCommunityResponseImpl(
       personView:
           PersonView.fromJson(json['person_view'] as Map<String, dynamic>),
       banned: json['banned'] as bool,
     );
 
-Map<String, dynamic> _$$_BanFromCommunityResponseToJson(
-        _$_BanFromCommunityResponse instance) =>
+Map<String, dynamic> _$$BanFromCommunityResponseImplToJson(
+        _$BanFromCommunityResponseImpl instance) =>
     <String, dynamic>{
       'person_view': instance.personView.toJson(),
       'banned': instance.banned,

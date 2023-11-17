@@ -6,9 +6,9 @@ part of 'mod_transfer_community_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ModTransferCommunityView _$$_ModTransferCommunityViewFromJson(
+_$ModTransferCommunityViewImpl _$$ModTransferCommunityViewImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ModTransferCommunityView(
+    _$ModTransferCommunityViewImpl(
       modTransferCommunity: ModTransferCommunity.fromJson(
           json['mod_transfer_community'] as Map<String, dynamic>),
       moderator: json['moderator'] == null
@@ -19,8 +19,8 @@ _$_ModTransferCommunityView _$$_ModTransferCommunityViewFromJson(
           Person.fromJson(json['modded_person'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ModTransferCommunityViewToJson(
-        _$_ModTransferCommunityView instance) =>
+Map<String, dynamic> _$$ModTransferCommunityViewImplToJson(
+        _$ModTransferCommunityViewImpl instance) =>
     <String, dynamic>{
       'mod_transfer_community': instance.modTransferCommunity.toJson(),
       'moderator': instance.moderator?.toJson(),

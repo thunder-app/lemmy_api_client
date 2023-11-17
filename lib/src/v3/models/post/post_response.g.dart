@@ -6,12 +6,12 @@ part of 'post_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PostResponse _$$_PostResponseFromJson(Map<String, dynamic> json) =>
-    _$_PostResponse(
+_$PostResponseImpl _$$PostResponseImplFromJson(Map<String, dynamic> json) =>
+    _$PostResponseImpl(
       postView: PostView.fromJson(json['post_view'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PostResponseToJson(_$_PostResponse instance) =>
+Map<String, dynamic> _$$PostResponseImplToJson(_$PostResponseImpl instance) =>
     <String, dynamic>{
       'post_view': instance.postView.toJson(),
     };

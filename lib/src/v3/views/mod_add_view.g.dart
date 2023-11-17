@@ -6,8 +6,8 @@ part of 'mod_add_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ModAddView _$$_ModAddViewFromJson(Map<String, dynamic> json) =>
-    _$_ModAddView(
+_$ModAddViewImpl _$$ModAddViewImplFromJson(Map<String, dynamic> json) =>
+    _$ModAddViewImpl(
       modAdd: ModAdd.fromJson(json['mod_add'] as Map<String, dynamic>),
       moderator: json['moderator'] == null
           ? null
@@ -16,7 +16,7 @@ _$_ModAddView _$$_ModAddViewFromJson(Map<String, dynamic> json) =>
           Person.fromJson(json['modded_person'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ModAddViewToJson(_$_ModAddView instance) =>
+Map<String, dynamic> _$$ModAddViewImplToJson(_$ModAddViewImpl instance) =>
     <String, dynamic>{
       'mod_add': instance.modAdd.toJson(),
       'moderator': instance.moderator?.toJson(),

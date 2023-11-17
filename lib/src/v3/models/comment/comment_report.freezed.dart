@@ -119,11 +119,11 @@ class _$CommentReportCopyWithImpl<$Res, $Val extends CommentReport>
 }
 
 /// @nodoc
-abstract class _$$_CommentReportCopyWith<$Res>
+abstract class _$$CommentReportImplCopyWith<$Res>
     implements $CommentReportCopyWith<$Res> {
-  factory _$$_CommentReportCopyWith(
-          _$_CommentReport value, $Res Function(_$_CommentReport) then) =
-      __$$_CommentReportCopyWithImpl<$Res>;
+  factory _$$CommentReportImplCopyWith(
+          _$CommentReportImpl value, $Res Function(_$CommentReportImpl) then) =
+      __$$CommentReportImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -139,11 +139,11 @@ abstract class _$$_CommentReportCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CommentReportCopyWithImpl<$Res>
-    extends _$CommentReportCopyWithImpl<$Res, _$_CommentReport>
-    implements _$$_CommentReportCopyWith<$Res> {
-  __$$_CommentReportCopyWithImpl(
-      _$_CommentReport _value, $Res Function(_$_CommentReport) _then)
+class __$$CommentReportImplCopyWithImpl<$Res>
+    extends _$CommentReportCopyWithImpl<$Res, _$CommentReportImpl>
+    implements _$$CommentReportImplCopyWith<$Res> {
+  __$$CommentReportImplCopyWithImpl(
+      _$CommentReportImpl _value, $Res Function(_$CommentReportImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -159,7 +159,7 @@ class __$$_CommentReportCopyWithImpl<$Res>
     Object? published = null,
     Object? updated = freezed,
   }) {
-    return _then(_$_CommentReport(
+    return _then(_$CommentReportImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -203,8 +203,8 @@ class __$$_CommentReportCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_CommentReport extends _CommentReport {
-  const _$_CommentReport(
+class _$CommentReportImpl extends _CommentReport {
+  const _$CommentReportImpl(
       {required this.id,
       required this.creatorId,
       required this.commentId,
@@ -216,8 +216,8 @@ class _$_CommentReport extends _CommentReport {
       this.updated})
       : super._();
 
-  factory _$_CommentReport.fromJson(Map<String, dynamic> json) =>
-      _$$_CommentReportFromJson(json);
+  factory _$CommentReportImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CommentReportImplFromJson(json);
 
   @override
   final int id;
@@ -247,7 +247,7 @@ class _$_CommentReport extends _CommentReport {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CommentReport &&
+            other is _$CommentReportImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.creatorId, creatorId) ||
                 other.creatorId == creatorId) &&
@@ -273,12 +273,12 @@ class _$_CommentReport extends _CommentReport {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CommentReportCopyWith<_$_CommentReport> get copyWith =>
-      __$$_CommentReportCopyWithImpl<_$_CommentReport>(this, _$identity);
+  _$$CommentReportImplCopyWith<_$CommentReportImpl> get copyWith =>
+      __$$CommentReportImplCopyWithImpl<_$CommentReportImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommentReportToJson(
+    return _$$CommentReportImplToJson(
       this,
     );
   }
@@ -294,11 +294,11 @@ abstract class _CommentReport extends CommentReport {
       required final bool resolved,
       final int? resolverId,
       required final DateTime published,
-      final DateTime? updated}) = _$_CommentReport;
+      final DateTime? updated}) = _$CommentReportImpl;
   const _CommentReport._() : super._();
 
   factory _CommentReport.fromJson(Map<String, dynamic> json) =
-      _$_CommentReport.fromJson;
+      _$CommentReportImpl.fromJson;
 
   @override
   int get id;
@@ -320,6 +320,6 @@ abstract class _CommentReport extends CommentReport {
   DateTime? get updated;
   @override
   @JsonKey(ignore: true)
-  _$$_CommentReportCopyWith<_$_CommentReport> get copyWith =>
+  _$$CommentReportImplCopyWith<_$CommentReportImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

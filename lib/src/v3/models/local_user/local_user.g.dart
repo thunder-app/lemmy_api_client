@@ -6,7 +6,8 @@ part of 'local_user.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_LocalUser _$$_LocalUserFromJson(Map<String, dynamic> json) => _$_LocalUser(
+_$LocalUserImpl _$$LocalUserImplFromJson(Map<String, dynamic> json) =>
+    _$LocalUserImpl(
       id: json['id'] as int,
       personId: json['person_id'] as int,
       email: json['email'] as String?,
@@ -34,9 +35,10 @@ _$_LocalUser _$$_LocalUserFromJson(Map<String, dynamic> json) => _$_LocalUser(
       totp2faEnabled: json['totp2fa_enabled'] as bool?,
       enableKeyboardNavigation: json['enable_keyboard_navigation'] as bool?,
       enableAnimatedImages: json['enable_animated_images'] as bool?,
+      collapseBotComments: json['collapse_bot_comments'] as bool?,
     );
 
-Map<String, dynamic> _$$_LocalUserToJson(_$_LocalUser instance) =>
+Map<String, dynamic> _$$LocalUserImplToJson(_$LocalUserImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'person_id': instance.personId,
@@ -65,4 +67,5 @@ Map<String, dynamic> _$$_LocalUserToJson(_$_LocalUser instance) =>
       'totp2fa_enabled': instance.totp2faEnabled,
       'enable_keyboard_navigation': instance.enableKeyboardNavigation,
       'enable_animated_images': instance.enableAnimatedImages,
+      'collapse_bot_comments': instance.collapseBotComments,
     };

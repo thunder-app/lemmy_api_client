@@ -68,25 +68,25 @@ class _$ListRegistrationApplicationsResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ListRegistrationApplicationsResponseCopyWith<$Res>
+abstract class _$$ListRegistrationApplicationsResponseImplCopyWith<$Res>
     implements $ListRegistrationApplicationsResponseCopyWith<$Res> {
-  factory _$$_ListRegistrationApplicationsResponseCopyWith(
-          _$_ListRegistrationApplicationsResponse value,
-          $Res Function(_$_ListRegistrationApplicationsResponse) then) =
-      __$$_ListRegistrationApplicationsResponseCopyWithImpl<$Res>;
+  factory _$$ListRegistrationApplicationsResponseImplCopyWith(
+          _$ListRegistrationApplicationsResponseImpl value,
+          $Res Function(_$ListRegistrationApplicationsResponseImpl) then) =
+      __$$ListRegistrationApplicationsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<RegistrationApplicationView> registrationApplications});
 }
 
 /// @nodoc
-class __$$_ListRegistrationApplicationsResponseCopyWithImpl<$Res>
+class __$$ListRegistrationApplicationsResponseImplCopyWithImpl<$Res>
     extends _$ListRegistrationApplicationsResponseCopyWithImpl<$Res,
-        _$_ListRegistrationApplicationsResponse>
-    implements _$$_ListRegistrationApplicationsResponseCopyWith<$Res> {
-  __$$_ListRegistrationApplicationsResponseCopyWithImpl(
-      _$_ListRegistrationApplicationsResponse _value,
-      $Res Function(_$_ListRegistrationApplicationsResponse) _then)
+        _$ListRegistrationApplicationsResponseImpl>
+    implements _$$ListRegistrationApplicationsResponseImplCopyWith<$Res> {
+  __$$ListRegistrationApplicationsResponseImplCopyWithImpl(
+      _$ListRegistrationApplicationsResponseImpl _value,
+      $Res Function(_$ListRegistrationApplicationsResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -94,7 +94,7 @@ class __$$_ListRegistrationApplicationsResponseCopyWithImpl<$Res>
   $Res call({
     Object? registrationApplications = null,
   }) {
-    return _then(_$_ListRegistrationApplicationsResponse(
+    return _then(_$ListRegistrationApplicationsResponseImpl(
       registrationApplications: null == registrationApplications
           ? _value._registrationApplications
           : registrationApplications // ignore: cast_nullable_to_non_nullable
@@ -106,17 +106,17 @@ class __$$_ListRegistrationApplicationsResponseCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ListRegistrationApplicationsResponse
+class _$ListRegistrationApplicationsResponseImpl
     extends _ListRegistrationApplicationsResponse {
-  const _$_ListRegistrationApplicationsResponse(
+  const _$ListRegistrationApplicationsResponseImpl(
       {required final List<RegistrationApplicationView>
           registrationApplications})
       : _registrationApplications = registrationApplications,
         super._();
 
-  factory _$_ListRegistrationApplicationsResponse.fromJson(
+  factory _$ListRegistrationApplicationsResponseImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_ListRegistrationApplicationsResponseFromJson(json);
+      _$$ListRegistrationApplicationsResponseImplFromJson(json);
 
   final List<RegistrationApplicationView> _registrationApplications;
   @override
@@ -136,7 +136,7 @@ class _$_ListRegistrationApplicationsResponse
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ListRegistrationApplicationsResponse &&
+            other is _$ListRegistrationApplicationsResponseImpl &&
             const DeepCollectionEquality().equals(
                 other._registrationApplications, _registrationApplications));
   }
@@ -149,14 +149,14 @@ class _$_ListRegistrationApplicationsResponse
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ListRegistrationApplicationsResponseCopyWith<
-          _$_ListRegistrationApplicationsResponse>
-      get copyWith => __$$_ListRegistrationApplicationsResponseCopyWithImpl<
-          _$_ListRegistrationApplicationsResponse>(this, _$identity);
+  _$$ListRegistrationApplicationsResponseImplCopyWith<
+          _$ListRegistrationApplicationsResponseImpl>
+      get copyWith => __$$ListRegistrationApplicationsResponseImplCopyWithImpl<
+          _$ListRegistrationApplicationsResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ListRegistrationApplicationsResponseToJson(
+    return _$$ListRegistrationApplicationsResponseImplToJson(
       this,
     );
   }
@@ -165,19 +165,20 @@ class _$_ListRegistrationApplicationsResponse
 abstract class _ListRegistrationApplicationsResponse
     extends ListRegistrationApplicationsResponse {
   const factory _ListRegistrationApplicationsResponse(
-      {required final List<RegistrationApplicationView>
-          registrationApplications}) = _$_ListRegistrationApplicationsResponse;
+          {required final List<RegistrationApplicationView>
+              registrationApplications}) =
+      _$ListRegistrationApplicationsResponseImpl;
   const _ListRegistrationApplicationsResponse._() : super._();
 
   factory _ListRegistrationApplicationsResponse.fromJson(
           Map<String, dynamic> json) =
-      _$_ListRegistrationApplicationsResponse.fromJson;
+      _$ListRegistrationApplicationsResponseImpl.fromJson;
 
   @override
   List<RegistrationApplicationView> get registrationApplications;
   @override
   @JsonKey(ignore: true)
-  _$$_ListRegistrationApplicationsResponseCopyWith<
-          _$_ListRegistrationApplicationsResponse>
+  _$$ListRegistrationApplicationsResponseImplCopyWith<
+          _$ListRegistrationApplicationsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

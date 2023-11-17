@@ -99,11 +99,11 @@ class _$ModHideCommunityCopyWithImpl<$Res, $Val extends ModHideCommunity>
 }
 
 /// @nodoc
-abstract class _$$_ModHideCommunityCopyWith<$Res>
+abstract class _$$ModHideCommunityImplCopyWith<$Res>
     implements $ModHideCommunityCopyWith<$Res> {
-  factory _$$_ModHideCommunityCopyWith(
-          _$_ModHideCommunity value, $Res Function(_$_ModHideCommunity) then) =
-      __$$_ModHideCommunityCopyWithImpl<$Res>;
+  factory _$$ModHideCommunityImplCopyWith(_$ModHideCommunityImpl value,
+          $Res Function(_$ModHideCommunityImpl) then) =
+      __$$ModHideCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -116,11 +116,11 @@ abstract class _$$_ModHideCommunityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ModHideCommunityCopyWithImpl<$Res>
-    extends _$ModHideCommunityCopyWithImpl<$Res, _$_ModHideCommunity>
-    implements _$$_ModHideCommunityCopyWith<$Res> {
-  __$$_ModHideCommunityCopyWithImpl(
-      _$_ModHideCommunity _value, $Res Function(_$_ModHideCommunity) _then)
+class __$$ModHideCommunityImplCopyWithImpl<$Res>
+    extends _$ModHideCommunityCopyWithImpl<$Res, _$ModHideCommunityImpl>
+    implements _$$ModHideCommunityImplCopyWith<$Res> {
+  __$$ModHideCommunityImplCopyWithImpl(_$ModHideCommunityImpl _value,
+      $Res Function(_$ModHideCommunityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -133,7 +133,7 @@ class __$$_ModHideCommunityCopyWithImpl<$Res>
     Object? reason = freezed,
     Object? hidden = null,
   }) {
-    return _then(_$_ModHideCommunity(
+    return _then(_$ModHideCommunityImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -165,8 +165,8 @@ class __$$_ModHideCommunityCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ModHideCommunity extends _ModHideCommunity {
-  const _$_ModHideCommunity(
+class _$ModHideCommunityImpl extends _ModHideCommunity {
+  const _$ModHideCommunityImpl(
       {required this.id,
       required this.communityId,
       required this.modPersonId,
@@ -175,8 +175,8 @@ class _$_ModHideCommunity extends _ModHideCommunity {
       required this.hidden})
       : super._();
 
-  factory _$_ModHideCommunity.fromJson(Map<String, dynamic> json) =>
-      _$$_ModHideCommunityFromJson(json);
+  factory _$ModHideCommunityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModHideCommunityImplFromJson(json);
 
   @override
   final int id;
@@ -201,7 +201,7 @@ class _$_ModHideCommunity extends _ModHideCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ModHideCommunity &&
+            other is _$ModHideCommunityImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.communityId, communityId) ||
                 other.communityId == communityId) &&
@@ -220,12 +220,13 @@ class _$_ModHideCommunity extends _ModHideCommunity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ModHideCommunityCopyWith<_$_ModHideCommunity> get copyWith =>
-      __$$_ModHideCommunityCopyWithImpl<_$_ModHideCommunity>(this, _$identity);
+  _$$ModHideCommunityImplCopyWith<_$ModHideCommunityImpl> get copyWith =>
+      __$$ModHideCommunityImplCopyWithImpl<_$ModHideCommunityImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModHideCommunityToJson(
+    return _$$ModHideCommunityImplToJson(
       this,
     );
   }
@@ -238,11 +239,11 @@ abstract class _ModHideCommunity extends ModHideCommunity {
       required final int modPersonId,
       @JsonKey(name: 'when_') required final String when,
       final String? reason,
-      required final bool hidden}) = _$_ModHideCommunity;
+      required final bool hidden}) = _$ModHideCommunityImpl;
   const _ModHideCommunity._() : super._();
 
   factory _ModHideCommunity.fromJson(Map<String, dynamic> json) =
-      _$_ModHideCommunity.fromJson;
+      _$ModHideCommunityImpl.fromJson;
 
   @override
   int get id;
@@ -259,6 +260,6 @@ abstract class _ModHideCommunity extends ModHideCommunity {
   bool get hidden;
   @override
   @JsonKey(ignore: true)
-  _$$_ModHideCommunityCopyWith<_$_ModHideCommunity> get copyWith =>
+  _$$ModHideCommunityImplCopyWith<_$ModHideCommunityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

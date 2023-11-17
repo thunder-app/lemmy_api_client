@@ -6,9 +6,9 @@ part of 'hide_community_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_HideCommunityResponse _$$_HideCommunityResponseFromJson(
+_$HideCommunityResponseImpl _$$HideCommunityResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_HideCommunityResponse(
+    _$HideCommunityResponseImpl(
       communityView: json['community_view'] == null
           ? null
           : CommunityView.fromJson(
@@ -19,8 +19,8 @@ _$_HideCommunityResponse _$$_HideCommunityResponseFromJson(
       success: json['success'] as bool?,
     );
 
-Map<String, dynamic> _$$_HideCommunityResponseToJson(
-        _$_HideCommunityResponse instance) =>
+Map<String, dynamic> _$$HideCommunityResponseImplToJson(
+        _$HideCommunityResponseImpl instance) =>
     <String, dynamic>{
       'community_view': instance.communityView?.toJson(),
       'discussion_languages': instance.discussionLanguages,

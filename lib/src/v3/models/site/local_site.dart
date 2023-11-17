@@ -34,6 +34,7 @@ class LocalSite with _$LocalSite {
     DateTime? updated,
     required RegistrationMode registrationMode,
     required bool reportsEmailAdmins,
+    bool? federationSignedFetch, // Only available in lemmy v0.19.0 and above
   }) = _LocalSite;
 
   const LocalSite._();

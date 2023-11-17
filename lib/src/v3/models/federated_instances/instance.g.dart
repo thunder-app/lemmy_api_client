@@ -6,7 +6,8 @@ part of 'instance.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Instance _$$_InstanceFromJson(Map<String, dynamic> json) => _$_Instance(
+_$InstanceImpl _$$InstanceImplFromJson(Map<String, dynamic> json) =>
+    _$InstanceImpl(
       id: json['id'] as int,
       domain: json['domain'] as String,
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
@@ -16,7 +17,7 @@ _$_Instance _$$_InstanceFromJson(Map<String, dynamic> json) => _$_Instance(
       version: json['version'] as String?,
     );
 
-Map<String, dynamic> _$$_InstanceToJson(_$_Instance instance) =>
+Map<String, dynamic> _$$InstanceImplToJson(_$InstanceImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'domain': instance.domain,

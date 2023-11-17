@@ -6,8 +6,9 @@ part of 'person_mention_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PersonMentionView _$$_PersonMentionViewFromJson(Map<String, dynamic> json) =>
-    _$_PersonMentionView(
+_$PersonMentionViewImpl _$$PersonMentionViewImplFromJson(
+        Map<String, dynamic> json) =>
+    _$PersonMentionViewImpl(
       personMention: PersonMention.fromJson(
           json['person_mention'] as Map<String, dynamic>),
       comment: Comment.fromJson(json['comment'] as Map<String, dynamic>),
@@ -25,8 +26,8 @@ _$_PersonMentionView _$$_PersonMentionViewFromJson(Map<String, dynamic> json) =>
       myVote: json['my_vote'] as int?,
     );
 
-Map<String, dynamic> _$$_PersonMentionViewToJson(
-        _$_PersonMentionView instance) =>
+Map<String, dynamic> _$$PersonMentionViewImplToJson(
+        _$PersonMentionViewImpl instance) =>
     <String, dynamic>{
       'person_mention': instance.personMention.toJson(),
       'comment': instance.comment.toJson(),

@@ -93,11 +93,11 @@ class _$ModTransferCommunityCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ModTransferCommunityCopyWith<$Res>
+abstract class _$$ModTransferCommunityImplCopyWith<$Res>
     implements $ModTransferCommunityCopyWith<$Res> {
-  factory _$$_ModTransferCommunityCopyWith(_$_ModTransferCommunity value,
-          $Res Function(_$_ModTransferCommunity) then) =
-      __$$_ModTransferCommunityCopyWithImpl<$Res>;
+  factory _$$ModTransferCommunityImplCopyWith(_$ModTransferCommunityImpl value,
+          $Res Function(_$ModTransferCommunityImpl) then) =
+      __$$ModTransferCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -109,11 +109,11 @@ abstract class _$$_ModTransferCommunityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ModTransferCommunityCopyWithImpl<$Res>
-    extends _$ModTransferCommunityCopyWithImpl<$Res, _$_ModTransferCommunity>
-    implements _$$_ModTransferCommunityCopyWith<$Res> {
-  __$$_ModTransferCommunityCopyWithImpl(_$_ModTransferCommunity _value,
-      $Res Function(_$_ModTransferCommunity) _then)
+class __$$ModTransferCommunityImplCopyWithImpl<$Res>
+    extends _$ModTransferCommunityCopyWithImpl<$Res, _$ModTransferCommunityImpl>
+    implements _$$ModTransferCommunityImplCopyWith<$Res> {
+  __$$ModTransferCommunityImplCopyWithImpl(_$ModTransferCommunityImpl _value,
+      $Res Function(_$ModTransferCommunityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -125,7 +125,7 @@ class __$$_ModTransferCommunityCopyWithImpl<$Res>
     Object? communityId = null,
     Object? when = null,
   }) {
-    return _then(_$_ModTransferCommunity(
+    return _then(_$ModTransferCommunityImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -153,8 +153,8 @@ class __$$_ModTransferCommunityCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ModTransferCommunity extends _ModTransferCommunity {
-  const _$_ModTransferCommunity(
+class _$ModTransferCommunityImpl extends _ModTransferCommunity {
+  const _$ModTransferCommunityImpl(
       {required this.id,
       required this.modPersonId,
       required this.otherPersonId,
@@ -162,8 +162,8 @@ class _$_ModTransferCommunity extends _ModTransferCommunity {
       @JsonKey(name: 'when_') required this.when})
       : super._();
 
-  factory _$_ModTransferCommunity.fromJson(Map<String, dynamic> json) =>
-      _$$_ModTransferCommunityFromJson(json);
+  factory _$ModTransferCommunityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModTransferCommunityImplFromJson(json);
 
   @override
   final int id;
@@ -186,7 +186,7 @@ class _$_ModTransferCommunity extends _ModTransferCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ModTransferCommunity &&
+            other is _$ModTransferCommunityImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.modPersonId, modPersonId) ||
                 other.modPersonId == modPersonId) &&
@@ -205,13 +205,14 @@ class _$_ModTransferCommunity extends _ModTransferCommunity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ModTransferCommunityCopyWith<_$_ModTransferCommunity> get copyWith =>
-      __$$_ModTransferCommunityCopyWithImpl<_$_ModTransferCommunity>(
-          this, _$identity);
+  _$$ModTransferCommunityImplCopyWith<_$ModTransferCommunityImpl>
+      get copyWith =>
+          __$$ModTransferCommunityImplCopyWithImpl<_$ModTransferCommunityImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModTransferCommunityToJson(
+    return _$$ModTransferCommunityImplToJson(
       this,
     );
   }
@@ -224,11 +225,11 @@ abstract class _ModTransferCommunity extends ModTransferCommunity {
           required final int otherPersonId,
           required final int communityId,
           @JsonKey(name: 'when_') required final String when}) =
-      _$_ModTransferCommunity;
+      _$ModTransferCommunityImpl;
   const _ModTransferCommunity._() : super._();
 
   factory _ModTransferCommunity.fromJson(Map<String, dynamic> json) =
-      _$_ModTransferCommunity.fromJson;
+      _$ModTransferCommunityImpl.fromJson;
 
   @override
   int get id;
@@ -243,6 +244,6 @@ abstract class _ModTransferCommunity extends ModTransferCommunity {
   String get when;
   @override
   @JsonKey(ignore: true)
-  _$$_ModTransferCommunityCopyWith<_$_ModTransferCommunity> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ModTransferCommunityImplCopyWith<_$ModTransferCommunityImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

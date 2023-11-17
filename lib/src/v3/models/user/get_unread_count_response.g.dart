@@ -6,16 +6,16 @@ part of 'get_unread_count_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetUnreadCountResponse _$$_GetUnreadCountResponseFromJson(
+_$GetUnreadCountResponseImpl _$$GetUnreadCountResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetUnreadCountResponse(
+    _$GetUnreadCountResponseImpl(
       replies: json['replies'] as int,
       mentions: json['mentions'] as int,
       privateMessages: json['private_messages'] as int,
     );
 
-Map<String, dynamic> _$$_GetUnreadCountResponseToJson(
-        _$_GetUnreadCountResponse instance) =>
+Map<String, dynamic> _$$GetUnreadCountResponseImplToJson(
+        _$GetUnreadCountResponseImpl instance) =>
     <String, dynamic>{
       'replies': instance.replies,
       'mentions': instance.mentions,
