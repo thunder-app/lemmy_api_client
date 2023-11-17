@@ -6,9 +6,9 @@ part of 'get_community_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetCommunityResponse _$$_GetCommunityResponseFromJson(
+_$GetCommunityResponseImpl _$$GetCommunityResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetCommunityResponse(
+    _$GetCommunityResponseImpl(
       communityView: CommunityView.fromJson(
           json['community_view'] as Map<String, dynamic>),
       site: json['site'] == null
@@ -23,8 +23,8 @@ _$_GetCommunityResponse _$$_GetCommunityResponseFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_GetCommunityResponseToJson(
-        _$_GetCommunityResponse instance) =>
+Map<String, dynamic> _$$GetCommunityResponseImplToJson(
+        _$GetCommunityResponseImpl instance) =>
     <String, dynamic>{
       'community_view': instance.communityView.toJson(),
       'site': instance.site?.toJson(),

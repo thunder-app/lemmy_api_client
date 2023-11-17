@@ -126,11 +126,11 @@ class _$PrivateMessageCopyWithImpl<$Res, $Val extends PrivateMessage>
 }
 
 /// @nodoc
-abstract class _$$_PrivateMessageCopyWith<$Res>
+abstract class _$$PrivateMessageImplCopyWith<$Res>
     implements $PrivateMessageCopyWith<$Res> {
-  factory _$$_PrivateMessageCopyWith(
-          _$_PrivateMessage value, $Res Function(_$_PrivateMessage) then) =
-      __$$_PrivateMessageCopyWithImpl<$Res>;
+  factory _$$PrivateMessageImplCopyWith(_$PrivateMessageImpl value,
+          $Res Function(_$PrivateMessageImpl) then) =
+      __$$PrivateMessageImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -147,11 +147,11 @@ abstract class _$$_PrivateMessageCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PrivateMessageCopyWithImpl<$Res>
-    extends _$PrivateMessageCopyWithImpl<$Res, _$_PrivateMessage>
-    implements _$$_PrivateMessageCopyWith<$Res> {
-  __$$_PrivateMessageCopyWithImpl(
-      _$_PrivateMessage _value, $Res Function(_$_PrivateMessage) _then)
+class __$$PrivateMessageImplCopyWithImpl<$Res>
+    extends _$PrivateMessageCopyWithImpl<$Res, _$PrivateMessageImpl>
+    implements _$$PrivateMessageImplCopyWith<$Res> {
+  __$$PrivateMessageImplCopyWithImpl(
+      _$PrivateMessageImpl _value, $Res Function(_$PrivateMessageImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -168,7 +168,7 @@ class __$$_PrivateMessageCopyWithImpl<$Res>
     Object? apId = null,
     Object? local = null,
   }) {
-    return _then(_$_PrivateMessage(
+    return _then(_$PrivateMessageImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -216,8 +216,8 @@ class __$$_PrivateMessageCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_PrivateMessage extends _PrivateMessage {
-  const _$_PrivateMessage(
+class _$PrivateMessageImpl extends _PrivateMessage {
+  const _$PrivateMessageImpl(
       {required this.id,
       required this.creatorId,
       required this.recipientId,
@@ -230,8 +230,8 @@ class _$_PrivateMessage extends _PrivateMessage {
       required this.local})
       : super._();
 
-  factory _$_PrivateMessage.fromJson(Map<String, dynamic> json) =>
-      _$$_PrivateMessageFromJson(json);
+  factory _$PrivateMessageImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PrivateMessageImplFromJson(json);
 
   @override
   final int id;
@@ -263,7 +263,7 @@ class _$_PrivateMessage extends _PrivateMessage {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PrivateMessage &&
+            other is _$PrivateMessageImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.creatorId, creatorId) ||
                 other.creatorId == creatorId) &&
@@ -287,12 +287,13 @@ class _$_PrivateMessage extends _PrivateMessage {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PrivateMessageCopyWith<_$_PrivateMessage> get copyWith =>
-      __$$_PrivateMessageCopyWithImpl<_$_PrivateMessage>(this, _$identity);
+  _$$PrivateMessageImplCopyWith<_$PrivateMessageImpl> get copyWith =>
+      __$$PrivateMessageImplCopyWithImpl<_$PrivateMessageImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PrivateMessageToJson(
+    return _$$PrivateMessageImplToJson(
       this,
     );
   }
@@ -309,11 +310,11 @@ abstract class _PrivateMessage extends PrivateMessage {
       required final DateTime published,
       final DateTime? updated,
       required final String apId,
-      required final bool local}) = _$_PrivateMessage;
+      required final bool local}) = _$PrivateMessageImpl;
   const _PrivateMessage._() : super._();
 
   factory _PrivateMessage.fromJson(Map<String, dynamic> json) =
-      _$_PrivateMessage.fromJson;
+      _$PrivateMessageImpl.fromJson;
 
   @override
   int get id;
@@ -337,6 +338,6 @@ abstract class _PrivateMessage extends PrivateMessage {
   bool get local;
   @override
   @JsonKey(ignore: true)
-  _$$_PrivateMessageCopyWith<_$_PrivateMessage> get copyWith =>
+  _$$PrivateMessageImplCopyWith<_$PrivateMessageImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

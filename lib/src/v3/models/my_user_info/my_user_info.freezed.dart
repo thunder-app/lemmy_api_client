@@ -118,11 +118,11 @@ class _$MyUserInfoCopyWithImpl<$Res, $Val extends MyUserInfo>
 }
 
 /// @nodoc
-abstract class _$$_MyUserInfoCopyWith<$Res>
+abstract class _$$MyUserInfoImplCopyWith<$Res>
     implements $MyUserInfoCopyWith<$Res> {
-  factory _$$_MyUserInfoCopyWith(
-          _$_MyUserInfo value, $Res Function(_$_MyUserInfo) then) =
-      __$$_MyUserInfoCopyWithImpl<$Res>;
+  factory _$$MyUserInfoImplCopyWith(
+          _$MyUserInfoImpl value, $Res Function(_$MyUserInfoImpl) then) =
+      __$$MyUserInfoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -139,11 +139,11 @@ abstract class _$$_MyUserInfoCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MyUserInfoCopyWithImpl<$Res>
-    extends _$MyUserInfoCopyWithImpl<$Res, _$_MyUserInfo>
-    implements _$$_MyUserInfoCopyWith<$Res> {
-  __$$_MyUserInfoCopyWithImpl(
-      _$_MyUserInfo _value, $Res Function(_$_MyUserInfo) _then)
+class __$$MyUserInfoImplCopyWithImpl<$Res>
+    extends _$MyUserInfoCopyWithImpl<$Res, _$MyUserInfoImpl>
+    implements _$$MyUserInfoImplCopyWith<$Res> {
+  __$$MyUserInfoImplCopyWithImpl(
+      _$MyUserInfoImpl _value, $Res Function(_$MyUserInfoImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -157,7 +157,7 @@ class __$$_MyUserInfoCopyWithImpl<$Res>
     Object? personBlocks = null,
     Object? discussionLanguages = null,
   }) {
-    return _then(_$_MyUserInfo(
+    return _then(_$MyUserInfoImpl(
       localUserView: null == localUserView
           ? _value.localUserView
           : localUserView // ignore: cast_nullable_to_non_nullable
@@ -193,8 +193,8 @@ class __$$_MyUserInfoCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_MyUserInfo extends _MyUserInfo {
-  const _$_MyUserInfo(
+class _$MyUserInfoImpl extends _MyUserInfo {
+  const _$MyUserInfoImpl(
       {required this.localUserView,
       required final List<CommunityFollowerView> follows,
       required final List<CommunityModeratorView> moderates,
@@ -210,8 +210,8 @@ class _$_MyUserInfo extends _MyUserInfo {
         _discussionLanguages = discussionLanguages,
         super._();
 
-  factory _$_MyUserInfo.fromJson(Map<String, dynamic> json) =>
-      _$$_MyUserInfoFromJson(json);
+  factory _$MyUserInfoImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MyUserInfoImplFromJson(json);
 
   @override
   final LocalUserView localUserView;
@@ -277,7 +277,7 @@ class _$_MyUserInfo extends _MyUserInfo {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MyUserInfo &&
+            other is _$MyUserInfoImpl &&
             (identical(other.localUserView, localUserView) ||
                 other.localUserView == localUserView) &&
             const DeepCollectionEquality().equals(other._follows, _follows) &&
@@ -308,12 +308,12 @@ class _$_MyUserInfo extends _MyUserInfo {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MyUserInfoCopyWith<_$_MyUserInfo> get copyWith =>
-      __$$_MyUserInfoCopyWithImpl<_$_MyUserInfo>(this, _$identity);
+  _$$MyUserInfoImplCopyWith<_$MyUserInfoImpl> get copyWith =>
+      __$$MyUserInfoImplCopyWithImpl<_$MyUserInfoImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MyUserInfoToJson(
+    return _$$MyUserInfoImplToJson(
       this,
     );
   }
@@ -327,11 +327,11 @@ abstract class _MyUserInfo extends MyUserInfo {
       required final List<CommunityBlockView> communityBlocks,
       final List<InstanceBlockView>? instanceBlocks,
       required final List<PersonBlockView> personBlocks,
-      required final List<int> discussionLanguages}) = _$_MyUserInfo;
+      required final List<int> discussionLanguages}) = _$MyUserInfoImpl;
   const _MyUserInfo._() : super._();
 
   factory _MyUserInfo.fromJson(Map<String, dynamic> json) =
-      _$_MyUserInfo.fromJson;
+      _$MyUserInfoImpl.fromJson;
 
   @override
   LocalUserView get localUserView;
@@ -349,6 +349,6 @@ abstract class _MyUserInfo extends MyUserInfo {
   List<int> get discussionLanguages;
   @override
   @JsonKey(ignore: true)
-  _$$_MyUserInfoCopyWith<_$_MyUserInfo> get copyWith =>
+  _$$MyUserInfoImplCopyWith<_$MyUserInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

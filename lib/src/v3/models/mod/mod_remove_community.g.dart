@@ -6,9 +6,9 @@ part of 'mod_remove_community.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ModRemoveCommunity _$$_ModRemoveCommunityFromJson(
+_$ModRemoveCommunityImpl _$$ModRemoveCommunityImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ModRemoveCommunity(
+    _$ModRemoveCommunityImpl(
       id: json['id'] as int,
       modPersonId: json['mod_person_id'] as int,
       communityId: json['community_id'] as int,
@@ -18,8 +18,8 @@ _$_ModRemoveCommunity _$$_ModRemoveCommunityFromJson(
       when: json['when_'] as String,
     );
 
-Map<String, dynamic> _$$_ModRemoveCommunityToJson(
-        _$_ModRemoveCommunity instance) =>
+Map<String, dynamic> _$$ModRemoveCommunityImplToJson(
+        _$ModRemoveCommunityImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'mod_person_id': instance.modPersonId,

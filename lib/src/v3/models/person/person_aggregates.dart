@@ -9,7 +9,7 @@ part 'person_aggregates.g.dart';
 class PersonAggregates with _$PersonAggregates {
   @modelSerde
   const factory PersonAggregates({
-    required int id,
+    @deprecated int? id,
     required int personId,
     required int postCount,
     @deprecated int? postScore,

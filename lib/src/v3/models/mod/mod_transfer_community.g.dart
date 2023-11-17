@@ -6,9 +6,9 @@ part of 'mod_transfer_community.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ModTransferCommunity _$$_ModTransferCommunityFromJson(
+_$ModTransferCommunityImpl _$$ModTransferCommunityImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ModTransferCommunity(
+    _$ModTransferCommunityImpl(
       id: json['id'] as int,
       modPersonId: json['mod_person_id'] as int,
       otherPersonId: json['other_person_id'] as int,
@@ -16,8 +16,8 @@ _$_ModTransferCommunity _$$_ModTransferCommunityFromJson(
       when: json['when_'] as String,
     );
 
-Map<String, dynamic> _$$_ModTransferCommunityToJson(
-        _$_ModTransferCommunity instance) =>
+Map<String, dynamic> _$$ModTransferCommunityImplToJson(
+        _$ModTransferCommunityImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'mod_person_id': instance.modPersonId,

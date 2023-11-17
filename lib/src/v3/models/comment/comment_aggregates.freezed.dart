@@ -20,7 +20,8 @@ CommentAggregates _$CommentAggregatesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CommentAggregates {
-  int get id => throw _privateConstructorUsedError;
+  @deprecated
+  int? get id => throw _privateConstructorUsedError;
   int get commentId => throw _privateConstructorUsedError;
   int get score => throw _privateConstructorUsedError;
   int get upvotes => throw _privateConstructorUsedError;
@@ -43,7 +44,7 @@ abstract class $CommentAggregatesCopyWith<$Res> {
       _$CommentAggregatesCopyWithImpl<$Res, CommentAggregates>;
   @useResult
   $Res call(
-      {int id,
+      {@deprecated int? id,
       int commentId,
       int score,
       int upvotes,
@@ -66,7 +67,7 @@ class _$CommentAggregatesCopyWithImpl<$Res, $Val extends CommentAggregates>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? commentId = null,
     Object? score = null,
     Object? upvotes = null,
@@ -76,10 +77,10 @@ class _$CommentAggregatesCopyWithImpl<$Res, $Val extends CommentAggregates>
     Object? hotRank = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       commentId: null == commentId
           ? _value.commentId
           : commentId // ignore: cast_nullable_to_non_nullable
@@ -113,15 +114,15 @@ class _$CommentAggregatesCopyWithImpl<$Res, $Val extends CommentAggregates>
 }
 
 /// @nodoc
-abstract class _$$_CommentAggregatesCopyWith<$Res>
+abstract class _$$CommentAggregatesImplCopyWith<$Res>
     implements $CommentAggregatesCopyWith<$Res> {
-  factory _$$_CommentAggregatesCopyWith(_$_CommentAggregates value,
-          $Res Function(_$_CommentAggregates) then) =
-      __$$_CommentAggregatesCopyWithImpl<$Res>;
+  factory _$$CommentAggregatesImplCopyWith(_$CommentAggregatesImpl value,
+          $Res Function(_$CommentAggregatesImpl) then) =
+      __$$CommentAggregatesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {int id,
+      {@deprecated int? id,
       int commentId,
       int score,
       int upvotes,
@@ -132,17 +133,17 @@ abstract class _$$_CommentAggregatesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CommentAggregatesCopyWithImpl<$Res>
-    extends _$CommentAggregatesCopyWithImpl<$Res, _$_CommentAggregates>
-    implements _$$_CommentAggregatesCopyWith<$Res> {
-  __$$_CommentAggregatesCopyWithImpl(
-      _$_CommentAggregates _value, $Res Function(_$_CommentAggregates) _then)
+class __$$CommentAggregatesImplCopyWithImpl<$Res>
+    extends _$CommentAggregatesCopyWithImpl<$Res, _$CommentAggregatesImpl>
+    implements _$$CommentAggregatesImplCopyWith<$Res> {
+  __$$CommentAggregatesImplCopyWithImpl(_$CommentAggregatesImpl _value,
+      $Res Function(_$CommentAggregatesImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? commentId = null,
     Object? score = null,
     Object? upvotes = null,
@@ -151,11 +152,11 @@ class __$$_CommentAggregatesCopyWithImpl<$Res>
     Object? childCount = null,
     Object? hotRank = freezed,
   }) {
-    return _then(_$_CommentAggregates(
-      id: null == id
+    return _then(_$CommentAggregatesImpl(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       commentId: null == commentId
           ? _value.commentId
           : commentId // ignore: cast_nullable_to_non_nullable
@@ -191,9 +192,9 @@ class __$$_CommentAggregatesCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_CommentAggregates extends _CommentAggregates {
-  const _$_CommentAggregates(
-      {required this.id,
+class _$CommentAggregatesImpl extends _CommentAggregates {
+  const _$CommentAggregatesImpl(
+      {@deprecated this.id,
       required this.commentId,
       required this.score,
       required this.upvotes,
@@ -203,11 +204,12 @@ class _$_CommentAggregates extends _CommentAggregates {
       @deprecated this.hotRank})
       : super._();
 
-  factory _$_CommentAggregates.fromJson(Map<String, dynamic> json) =>
-      _$$_CommentAggregatesFromJson(json);
+  factory _$CommentAggregatesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CommentAggregatesImplFromJson(json);
 
   @override
-  final int id;
+  @deprecated
+  final int? id;
   @override
   final int commentId;
   @override
@@ -233,7 +235,7 @@ class _$_CommentAggregates extends _CommentAggregates {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CommentAggregates &&
+            other is _$CommentAggregatesImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.commentId, commentId) ||
                 other.commentId == commentId) &&
@@ -256,13 +258,13 @@ class _$_CommentAggregates extends _CommentAggregates {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CommentAggregatesCopyWith<_$_CommentAggregates> get copyWith =>
-      __$$_CommentAggregatesCopyWithImpl<_$_CommentAggregates>(
+  _$$CommentAggregatesImplCopyWith<_$CommentAggregatesImpl> get copyWith =>
+      __$$CommentAggregatesImplCopyWithImpl<_$CommentAggregatesImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommentAggregatesToJson(
+    return _$$CommentAggregatesImplToJson(
       this,
     );
   }
@@ -270,21 +272,22 @@ class _$_CommentAggregates extends _CommentAggregates {
 
 abstract class _CommentAggregates extends CommentAggregates {
   const factory _CommentAggregates(
-      {required final int id,
+      {@deprecated final int? id,
       required final int commentId,
       required final int score,
       required final int upvotes,
       required final int downvotes,
       required final DateTime published,
       required final int childCount,
-      @deprecated final int? hotRank}) = _$_CommentAggregates;
+      @deprecated final int? hotRank}) = _$CommentAggregatesImpl;
   const _CommentAggregates._() : super._();
 
   factory _CommentAggregates.fromJson(Map<String, dynamic> json) =
-      _$_CommentAggregates.fromJson;
+      _$CommentAggregatesImpl.fromJson;
 
   @override
-  int get id;
+  @deprecated
+  int? get id;
   @override
   int get commentId;
   @override
@@ -302,6 +305,6 @@ abstract class _CommentAggregates extends CommentAggregates {
   int? get hotRank;
   @override
   @JsonKey(ignore: true)
-  _$$_CommentAggregatesCopyWith<_$_CommentAggregates> get copyWith =>
+  _$$CommentAggregatesImplCopyWith<_$CommentAggregatesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

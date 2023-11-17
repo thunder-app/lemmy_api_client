@@ -6,9 +6,9 @@ part of 'mod_hide_community_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ModHideCommunityView _$$_ModHideCommunityViewFromJson(
+_$ModHideCommunityViewImpl _$$ModHideCommunityViewImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ModHideCommunityView(
+    _$ModHideCommunityViewImpl(
       modHideCommunity: ModHideCommunity.fromJson(
           json['mod_hide_community'] as Map<String, dynamic>),
       admin: json['admin'] == null
@@ -17,8 +17,8 @@ _$_ModHideCommunityView _$$_ModHideCommunityViewFromJson(
       community: Community.fromJson(json['community'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ModHideCommunityViewToJson(
-        _$_ModHideCommunityView instance) =>
+Map<String, dynamic> _$$ModHideCommunityViewImplToJson(
+        _$ModHideCommunityViewImpl instance) =>
     <String, dynamic>{
       'mod_hide_community': instance.modHideCommunity.toJson(),
       'admin': instance.admin?.toJson(),

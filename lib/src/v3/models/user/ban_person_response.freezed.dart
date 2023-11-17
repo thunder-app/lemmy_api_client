@@ -78,11 +78,11 @@ class _$BanPersonResponseCopyWithImpl<$Res, $Val extends BanPersonResponse>
 }
 
 /// @nodoc
-abstract class _$$_BanPersonResponseCopyWith<$Res>
+abstract class _$$BanPersonResponseImplCopyWith<$Res>
     implements $BanPersonResponseCopyWith<$Res> {
-  factory _$$_BanPersonResponseCopyWith(_$_BanPersonResponse value,
-          $Res Function(_$_BanPersonResponse) then) =
-      __$$_BanPersonResponseCopyWithImpl<$Res>;
+  factory _$$BanPersonResponseImplCopyWith(_$BanPersonResponseImpl value,
+          $Res Function(_$BanPersonResponseImpl) then) =
+      __$$BanPersonResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({PersonView personView, bool banned});
@@ -92,11 +92,11 @@ abstract class _$$_BanPersonResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_BanPersonResponseCopyWithImpl<$Res>
-    extends _$BanPersonResponseCopyWithImpl<$Res, _$_BanPersonResponse>
-    implements _$$_BanPersonResponseCopyWith<$Res> {
-  __$$_BanPersonResponseCopyWithImpl(
-      _$_BanPersonResponse _value, $Res Function(_$_BanPersonResponse) _then)
+class __$$BanPersonResponseImplCopyWithImpl<$Res>
+    extends _$BanPersonResponseCopyWithImpl<$Res, _$BanPersonResponseImpl>
+    implements _$$BanPersonResponseImplCopyWith<$Res> {
+  __$$BanPersonResponseImplCopyWithImpl(_$BanPersonResponseImpl _value,
+      $Res Function(_$BanPersonResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -105,7 +105,7 @@ class __$$_BanPersonResponseCopyWithImpl<$Res>
     Object? personView = null,
     Object? banned = null,
   }) {
-    return _then(_$_BanPersonResponse(
+    return _then(_$BanPersonResponseImpl(
       personView: null == personView
           ? _value.personView
           : personView // ignore: cast_nullable_to_non_nullable
@@ -121,12 +121,13 @@ class __$$_BanPersonResponseCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_BanPersonResponse extends _BanPersonResponse {
-  const _$_BanPersonResponse({required this.personView, required this.banned})
+class _$BanPersonResponseImpl extends _BanPersonResponse {
+  const _$BanPersonResponseImpl(
+      {required this.personView, required this.banned})
       : super._();
 
-  factory _$_BanPersonResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_BanPersonResponseFromJson(json);
+  factory _$BanPersonResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$BanPersonResponseImplFromJson(json);
 
   @override
   final PersonView personView;
@@ -142,7 +143,7 @@ class _$_BanPersonResponse extends _BanPersonResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_BanPersonResponse &&
+            other is _$BanPersonResponseImpl &&
             (identical(other.personView, personView) ||
                 other.personView == personView) &&
             (identical(other.banned, banned) || other.banned == banned));
@@ -155,13 +156,13 @@ class _$_BanPersonResponse extends _BanPersonResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_BanPersonResponseCopyWith<_$_BanPersonResponse> get copyWith =>
-      __$$_BanPersonResponseCopyWithImpl<_$_BanPersonResponse>(
+  _$$BanPersonResponseImplCopyWith<_$BanPersonResponseImpl> get copyWith =>
+      __$$BanPersonResponseImplCopyWithImpl<_$BanPersonResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BanPersonResponseToJson(
+    return _$$BanPersonResponseImplToJson(
       this,
     );
   }
@@ -170,11 +171,11 @@ class _$_BanPersonResponse extends _BanPersonResponse {
 abstract class _BanPersonResponse extends BanPersonResponse {
   const factory _BanPersonResponse(
       {required final PersonView personView,
-      required final bool banned}) = _$_BanPersonResponse;
+      required final bool banned}) = _$BanPersonResponseImpl;
   const _BanPersonResponse._() : super._();
 
   factory _BanPersonResponse.fromJson(Map<String, dynamic> json) =
-      _$_BanPersonResponse.fromJson;
+      _$BanPersonResponseImpl.fromJson;
 
   @override
   PersonView get personView;
@@ -182,6 +183,6 @@ abstract class _BanPersonResponse extends BanPersonResponse {
   bool get banned;
   @override
   @JsonKey(ignore: true)
-  _$$_BanPersonResponseCopyWith<_$_BanPersonResponse> get copyWith =>
+  _$$BanPersonResponseImplCopyWith<_$BanPersonResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

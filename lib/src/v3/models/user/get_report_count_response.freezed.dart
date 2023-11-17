@@ -86,11 +86,12 @@ class _$GetReportCountResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetReportCountResponseCopyWith<$Res>
+abstract class _$$GetReportCountResponseImplCopyWith<$Res>
     implements $GetReportCountResponseCopyWith<$Res> {
-  factory _$$_GetReportCountResponseCopyWith(_$_GetReportCountResponse value,
-          $Res Function(_$_GetReportCountResponse) then) =
-      __$$_GetReportCountResponseCopyWithImpl<$Res>;
+  factory _$$GetReportCountResponseImplCopyWith(
+          _$GetReportCountResponseImpl value,
+          $Res Function(_$GetReportCountResponseImpl) then) =
+      __$$GetReportCountResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -101,12 +102,13 @@ abstract class _$$_GetReportCountResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetReportCountResponseCopyWithImpl<$Res>
+class __$$GetReportCountResponseImplCopyWithImpl<$Res>
     extends _$GetReportCountResponseCopyWithImpl<$Res,
-        _$_GetReportCountResponse>
-    implements _$$_GetReportCountResponseCopyWith<$Res> {
-  __$$_GetReportCountResponseCopyWithImpl(_$_GetReportCountResponse _value,
-      $Res Function(_$_GetReportCountResponse) _then)
+        _$GetReportCountResponseImpl>
+    implements _$$GetReportCountResponseImplCopyWith<$Res> {
+  __$$GetReportCountResponseImplCopyWithImpl(
+      _$GetReportCountResponseImpl _value,
+      $Res Function(_$GetReportCountResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -117,7 +119,7 @@ class __$$_GetReportCountResponseCopyWithImpl<$Res>
     Object? postReports = null,
     Object? privateMessageReports = freezed,
   }) {
-    return _then(_$_GetReportCountResponse(
+    return _then(_$GetReportCountResponseImpl(
       communityId: freezed == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -141,16 +143,16 @@ class __$$_GetReportCountResponseCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_GetReportCountResponse extends _GetReportCountResponse {
-  const _$_GetReportCountResponse(
+class _$GetReportCountResponseImpl extends _GetReportCountResponse {
+  const _$GetReportCountResponseImpl(
       {this.communityId,
       required this.commentReports,
       required this.postReports,
       this.privateMessageReports})
       : super._();
 
-  factory _$_GetReportCountResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_GetReportCountResponseFromJson(json);
+  factory _$GetReportCountResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetReportCountResponseImplFromJson(json);
 
   @override
   final int? communityId;
@@ -170,7 +172,7 @@ class _$_GetReportCountResponse extends _GetReportCountResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetReportCountResponse &&
+            other is _$GetReportCountResponseImpl &&
             (identical(other.communityId, communityId) ||
                 other.communityId == communityId) &&
             (identical(other.commentReports, commentReports) ||
@@ -189,13 +191,13 @@ class _$_GetReportCountResponse extends _GetReportCountResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetReportCountResponseCopyWith<_$_GetReportCountResponse> get copyWith =>
-      __$$_GetReportCountResponseCopyWithImpl<_$_GetReportCountResponse>(
-          this, _$identity);
+  _$$GetReportCountResponseImplCopyWith<_$GetReportCountResponseImpl>
+      get copyWith => __$$GetReportCountResponseImplCopyWithImpl<
+          _$GetReportCountResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetReportCountResponseToJson(
+    return _$$GetReportCountResponseImplToJson(
       this,
     );
   }
@@ -206,11 +208,11 @@ abstract class _GetReportCountResponse extends GetReportCountResponse {
       {final int? communityId,
       required final int commentReports,
       required final int postReports,
-      final int? privateMessageReports}) = _$_GetReportCountResponse;
+      final int? privateMessageReports}) = _$GetReportCountResponseImpl;
   const _GetReportCountResponse._() : super._();
 
   factory _GetReportCountResponse.fromJson(Map<String, dynamic> json) =
-      _$_GetReportCountResponse.fromJson;
+      _$GetReportCountResponseImpl.fromJson;
 
   @override
   int? get communityId;
@@ -222,6 +224,6 @@ abstract class _GetReportCountResponse extends GetReportCountResponse {
   int? get privateMessageReports;
   @override
   @JsonKey(ignore: true)
-  _$$_GetReportCountResponseCopyWith<_$_GetReportCountResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetReportCountResponseImplCopyWith<_$GetReportCountResponseImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

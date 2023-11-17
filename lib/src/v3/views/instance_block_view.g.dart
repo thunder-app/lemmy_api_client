@@ -6,8 +6,9 @@ part of 'instance_block_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_InstanceBlockView _$$_InstanceBlockViewFromJson(Map<String, dynamic> json) =>
-    _$_InstanceBlockView(
+_$InstanceBlockViewImpl _$$InstanceBlockViewImplFromJson(
+        Map<String, dynamic> json) =>
+    _$InstanceBlockViewImpl(
       person: Person.fromJson(json['person'] as Map<String, dynamic>),
       instance: Instance.fromJson(json['instance'] as Map<String, dynamic>),
       site: json['site'] == null
@@ -15,8 +16,8 @@ _$_InstanceBlockView _$$_InstanceBlockViewFromJson(Map<String, dynamic> json) =>
           : Site.fromJson(json['site'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_InstanceBlockViewToJson(
-        _$_InstanceBlockView instance) =>
+Map<String, dynamic> _$$InstanceBlockViewImplToJson(
+        _$InstanceBlockViewImpl instance) =>
     <String, dynamic>{
       'person': instance.person.toJson(),
       'instance': instance.instance.toJson(),

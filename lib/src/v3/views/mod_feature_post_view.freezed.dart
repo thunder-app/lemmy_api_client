@@ -125,11 +125,11 @@ class _$ModFeaturePostViewCopyWithImpl<$Res, $Val extends ModFeaturePostView>
 }
 
 /// @nodoc
-abstract class _$$_ModFeaturePostViewCopyWith<$Res>
+abstract class _$$ModFeaturePostViewImplCopyWith<$Res>
     implements $ModFeaturePostViewCopyWith<$Res> {
-  factory _$$_ModFeaturePostViewCopyWith(_$_ModFeaturePostView value,
-          $Res Function(_$_ModFeaturePostView) then) =
-      __$$_ModFeaturePostViewCopyWithImpl<$Res>;
+  factory _$$ModFeaturePostViewImplCopyWith(_$ModFeaturePostViewImpl value,
+          $Res Function(_$ModFeaturePostViewImpl) then) =
+      __$$ModFeaturePostViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -149,11 +149,11 @@ abstract class _$$_ModFeaturePostViewCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ModFeaturePostViewCopyWithImpl<$Res>
-    extends _$ModFeaturePostViewCopyWithImpl<$Res, _$_ModFeaturePostView>
-    implements _$$_ModFeaturePostViewCopyWith<$Res> {
-  __$$_ModFeaturePostViewCopyWithImpl(
-      _$_ModFeaturePostView _value, $Res Function(_$_ModFeaturePostView) _then)
+class __$$ModFeaturePostViewImplCopyWithImpl<$Res>
+    extends _$ModFeaturePostViewCopyWithImpl<$Res, _$ModFeaturePostViewImpl>
+    implements _$$ModFeaturePostViewImplCopyWith<$Res> {
+  __$$ModFeaturePostViewImplCopyWithImpl(_$ModFeaturePostViewImpl _value,
+      $Res Function(_$ModFeaturePostViewImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -164,7 +164,7 @@ class __$$_ModFeaturePostViewCopyWithImpl<$Res>
     Object? post = null,
     Object? community = null,
   }) {
-    return _then(_$_ModFeaturePostView(
+    return _then(_$ModFeaturePostViewImpl(
       modFeaturePost: null == modFeaturePost
           ? _value.modFeaturePost
           : modFeaturePost // ignore: cast_nullable_to_non_nullable
@@ -188,16 +188,16 @@ class __$$_ModFeaturePostViewCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ModFeaturePostView extends _ModFeaturePostView {
-  const _$_ModFeaturePostView(
+class _$ModFeaturePostViewImpl extends _ModFeaturePostView {
+  const _$ModFeaturePostViewImpl(
       {required this.modFeaturePost,
       this.moderator,
       required this.post,
       required this.community})
       : super._();
 
-  factory _$_ModFeaturePostView.fromJson(Map<String, dynamic> json) =>
-      _$$_ModFeaturePostViewFromJson(json);
+  factory _$ModFeaturePostViewImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModFeaturePostViewImplFromJson(json);
 
   @override
   final ModFeaturePost modFeaturePost;
@@ -217,7 +217,7 @@ class _$_ModFeaturePostView extends _ModFeaturePostView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ModFeaturePostView &&
+            other is _$ModFeaturePostViewImpl &&
             (identical(other.modFeaturePost, modFeaturePost) ||
                 other.modFeaturePost == modFeaturePost) &&
             (identical(other.moderator, moderator) ||
@@ -235,13 +235,13 @@ class _$_ModFeaturePostView extends _ModFeaturePostView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ModFeaturePostViewCopyWith<_$_ModFeaturePostView> get copyWith =>
-      __$$_ModFeaturePostViewCopyWithImpl<_$_ModFeaturePostView>(
+  _$$ModFeaturePostViewImplCopyWith<_$ModFeaturePostViewImpl> get copyWith =>
+      __$$ModFeaturePostViewImplCopyWithImpl<_$ModFeaturePostViewImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModFeaturePostViewToJson(
+    return _$$ModFeaturePostViewImplToJson(
       this,
     );
   }
@@ -252,11 +252,11 @@ abstract class _ModFeaturePostView extends ModFeaturePostView {
       {required final ModFeaturePost modFeaturePost,
       final Person? moderator,
       required final Post post,
-      required final Community community}) = _$_ModFeaturePostView;
+      required final Community community}) = _$ModFeaturePostViewImpl;
   const _ModFeaturePostView._() : super._();
 
   factory _ModFeaturePostView.fromJson(Map<String, dynamic> json) =
-      _$_ModFeaturePostView.fromJson;
+      _$ModFeaturePostViewImpl.fromJson;
 
   @override
   ModFeaturePost get modFeaturePost;
@@ -268,6 +268,6 @@ abstract class _ModFeaturePostView extends ModFeaturePostView {
   Community get community;
   @override
   @JsonKey(ignore: true)
-  _$$_ModFeaturePostViewCopyWith<_$_ModFeaturePostView> get copyWith =>
+  _$$ModFeaturePostViewImplCopyWith<_$ModFeaturePostViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -43,6 +43,7 @@ mixin _$LocalSite {
   DateTime? get updated => throw _privateConstructorUsedError;
   RegistrationMode get registrationMode => throw _privateConstructorUsedError;
   bool get reportsEmailAdmins => throw _privateConstructorUsedError;
+  bool? get federationSignedFetch => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -78,7 +79,8 @@ abstract class $LocalSiteCopyWith<$Res> {
       DateTime published,
       DateTime? updated,
       RegistrationMode registrationMode,
-      bool reportsEmailAdmins});
+      bool reportsEmailAdmins,
+      bool? federationSignedFetch});
 }
 
 /// @nodoc
@@ -117,6 +119,7 @@ class _$LocalSiteCopyWithImpl<$Res, $Val extends LocalSite>
     Object? updated = freezed,
     Object? registrationMode = null,
     Object? reportsEmailAdmins = null,
+    Object? federationSignedFetch = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -211,15 +214,20 @@ class _$LocalSiteCopyWithImpl<$Res, $Val extends LocalSite>
           ? _value.reportsEmailAdmins
           : reportsEmailAdmins // ignore: cast_nullable_to_non_nullable
               as bool,
+      federationSignedFetch: freezed == federationSignedFetch
+          ? _value.federationSignedFetch
+          : federationSignedFetch // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_LocalSiteCopyWith<$Res> implements $LocalSiteCopyWith<$Res> {
-  factory _$$_LocalSiteCopyWith(
-          _$_LocalSite value, $Res Function(_$_LocalSite) then) =
-      __$$_LocalSiteCopyWithImpl<$Res>;
+abstract class _$$LocalSiteImplCopyWith<$Res>
+    implements $LocalSiteCopyWith<$Res> {
+  factory _$$LocalSiteImplCopyWith(
+          _$LocalSiteImpl value, $Res Function(_$LocalSiteImpl) then) =
+      __$$LocalSiteImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -245,15 +253,16 @@ abstract class _$$_LocalSiteCopyWith<$Res> implements $LocalSiteCopyWith<$Res> {
       DateTime published,
       DateTime? updated,
       RegistrationMode registrationMode,
-      bool reportsEmailAdmins});
+      bool reportsEmailAdmins,
+      bool? federationSignedFetch});
 }
 
 /// @nodoc
-class __$$_LocalSiteCopyWithImpl<$Res>
-    extends _$LocalSiteCopyWithImpl<$Res, _$_LocalSite>
-    implements _$$_LocalSiteCopyWith<$Res> {
-  __$$_LocalSiteCopyWithImpl(
-      _$_LocalSite _value, $Res Function(_$_LocalSite) _then)
+class __$$LocalSiteImplCopyWithImpl<$Res>
+    extends _$LocalSiteCopyWithImpl<$Res, _$LocalSiteImpl>
+    implements _$$LocalSiteImplCopyWith<$Res> {
+  __$$LocalSiteImplCopyWithImpl(
+      _$LocalSiteImpl _value, $Res Function(_$LocalSiteImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -282,8 +291,9 @@ class __$$_LocalSiteCopyWithImpl<$Res>
     Object? updated = freezed,
     Object? registrationMode = null,
     Object? reportsEmailAdmins = null,
+    Object? federationSignedFetch = freezed,
   }) {
-    return _then(_$_LocalSite(
+    return _then(_$LocalSiteImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -376,6 +386,10 @@ class __$$_LocalSiteCopyWithImpl<$Res>
           ? _value.reportsEmailAdmins
           : reportsEmailAdmins // ignore: cast_nullable_to_non_nullable
               as bool,
+      federationSignedFetch: freezed == federationSignedFetch
+          ? _value.federationSignedFetch
+          : federationSignedFetch // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
@@ -383,8 +397,8 @@ class __$$_LocalSiteCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_LocalSite extends _LocalSite {
-  const _$_LocalSite(
+class _$LocalSiteImpl extends _LocalSite {
+  const _$LocalSiteImpl(
       {required this.id,
       required this.siteId,
       required this.siteSetup,
@@ -407,11 +421,12 @@ class _$_LocalSite extends _LocalSite {
       required this.published,
       this.updated,
       required this.registrationMode,
-      required this.reportsEmailAdmins})
+      required this.reportsEmailAdmins,
+      this.federationSignedFetch})
       : super._();
 
-  factory _$_LocalSite.fromJson(Map<String, dynamic> json) =>
-      _$$_LocalSiteFromJson(json);
+  factory _$LocalSiteImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LocalSiteImplFromJson(json);
 
   @override
   final int id;
@@ -459,17 +474,19 @@ class _$_LocalSite extends _LocalSite {
   final RegistrationMode registrationMode;
   @override
   final bool reportsEmailAdmins;
+  @override
+  final bool? federationSignedFetch;
 
   @override
   String toString() {
-    return 'LocalSite(id: $id, siteId: $siteId, siteSetup: $siteSetup, enableDownvotes: $enableDownvotes, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, requireEmailVerification: $requireEmailVerification, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, defaultTheme: $defaultTheme, defaultPostListingType: $defaultPostListingType, legalInformation: $legalInformation, hideModlogModNames: $hideModlogModNames, applicationEmailAdmins: $applicationEmailAdmins, slurFilterRegex: $slurFilterRegex, actorNameMaxLength: $actorNameMaxLength, federationEnabled: $federationEnabled, captchaEnabled: $captchaEnabled, captchaDifficulty: $captchaDifficulty, published: $published, updated: $updated, registrationMode: $registrationMode, reportsEmailAdmins: $reportsEmailAdmins)';
+    return 'LocalSite(id: $id, siteId: $siteId, siteSetup: $siteSetup, enableDownvotes: $enableDownvotes, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, requireEmailVerification: $requireEmailVerification, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, defaultTheme: $defaultTheme, defaultPostListingType: $defaultPostListingType, legalInformation: $legalInformation, hideModlogModNames: $hideModlogModNames, applicationEmailAdmins: $applicationEmailAdmins, slurFilterRegex: $slurFilterRegex, actorNameMaxLength: $actorNameMaxLength, federationEnabled: $federationEnabled, captchaEnabled: $captchaEnabled, captchaDifficulty: $captchaDifficulty, published: $published, updated: $updated, registrationMode: $registrationMode, reportsEmailAdmins: $reportsEmailAdmins, federationSignedFetch: $federationSignedFetch)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LocalSite &&
+            other is _$LocalSiteImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.siteId, siteId) || other.siteId == siteId) &&
             (identical(other.siteSetup, siteSetup) ||
@@ -515,7 +532,9 @@ class _$_LocalSite extends _LocalSite {
             (identical(other.registrationMode, registrationMode) ||
                 other.registrationMode == registrationMode) &&
             (identical(other.reportsEmailAdmins, reportsEmailAdmins) ||
-                other.reportsEmailAdmins == reportsEmailAdmins));
+                other.reportsEmailAdmins == reportsEmailAdmins) &&
+            (identical(other.federationSignedFetch, federationSignedFetch) ||
+                other.federationSignedFetch == federationSignedFetch));
   }
 
   @JsonKey(ignore: true)
@@ -544,18 +563,19 @@ class _$_LocalSite extends _LocalSite {
         published,
         updated,
         registrationMode,
-        reportsEmailAdmins
+        reportsEmailAdmins,
+        federationSignedFetch
       ]);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LocalSiteCopyWith<_$_LocalSite> get copyWith =>
-      __$$_LocalSiteCopyWithImpl<_$_LocalSite>(this, _$identity);
+  _$$LocalSiteImplCopyWith<_$LocalSiteImpl> get copyWith =>
+      __$$LocalSiteImplCopyWithImpl<_$LocalSiteImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LocalSiteToJson(
+    return _$$LocalSiteImplToJson(
       this,
     );
   }
@@ -585,11 +605,12 @@ abstract class _LocalSite extends LocalSite {
       required final DateTime published,
       final DateTime? updated,
       required final RegistrationMode registrationMode,
-      required final bool reportsEmailAdmins}) = _$_LocalSite;
+      required final bool reportsEmailAdmins,
+      final bool? federationSignedFetch}) = _$LocalSiteImpl;
   const _LocalSite._() : super._();
 
   factory _LocalSite.fromJson(Map<String, dynamic> json) =
-      _$_LocalSite.fromJson;
+      _$LocalSiteImpl.fromJson;
 
   @override
   int get id;
@@ -638,7 +659,9 @@ abstract class _LocalSite extends LocalSite {
   @override
   bool get reportsEmailAdmins;
   @override
+  bool? get federationSignedFetch;
+  @override
   @JsonKey(ignore: true)
-  _$$_LocalSiteCopyWith<_$_LocalSite> get copyWith =>
+  _$$LocalSiteImplCopyWith<_$LocalSiteImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

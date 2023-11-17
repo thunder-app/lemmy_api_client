@@ -92,11 +92,11 @@ class _$ModLockPostCopyWithImpl<$Res, $Val extends ModLockPost>
 }
 
 /// @nodoc
-abstract class _$$_ModLockPostCopyWith<$Res>
+abstract class _$$ModLockPostImplCopyWith<$Res>
     implements $ModLockPostCopyWith<$Res> {
-  factory _$$_ModLockPostCopyWith(
-          _$_ModLockPost value, $Res Function(_$_ModLockPost) then) =
-      __$$_ModLockPostCopyWithImpl<$Res>;
+  factory _$$ModLockPostImplCopyWith(
+          _$ModLockPostImpl value, $Res Function(_$ModLockPostImpl) then) =
+      __$$ModLockPostImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -108,11 +108,11 @@ abstract class _$$_ModLockPostCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ModLockPostCopyWithImpl<$Res>
-    extends _$ModLockPostCopyWithImpl<$Res, _$_ModLockPost>
-    implements _$$_ModLockPostCopyWith<$Res> {
-  __$$_ModLockPostCopyWithImpl(
-      _$_ModLockPost _value, $Res Function(_$_ModLockPost) _then)
+class __$$ModLockPostImplCopyWithImpl<$Res>
+    extends _$ModLockPostCopyWithImpl<$Res, _$ModLockPostImpl>
+    implements _$$ModLockPostImplCopyWith<$Res> {
+  __$$ModLockPostImplCopyWithImpl(
+      _$ModLockPostImpl _value, $Res Function(_$ModLockPostImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -124,7 +124,7 @@ class __$$_ModLockPostCopyWithImpl<$Res>
     Object? locked = null,
     Object? when = null,
   }) {
-    return _then(_$_ModLockPost(
+    return _then(_$ModLockPostImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -152,8 +152,8 @@ class __$$_ModLockPostCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ModLockPost extends _ModLockPost {
-  const _$_ModLockPost(
+class _$ModLockPostImpl extends _ModLockPost {
+  const _$ModLockPostImpl(
       {required this.id,
       required this.modPersonId,
       required this.postId,
@@ -161,8 +161,8 @@ class _$_ModLockPost extends _ModLockPost {
       @JsonKey(name: 'when_') required this.when})
       : super._();
 
-  factory _$_ModLockPost.fromJson(Map<String, dynamic> json) =>
-      _$$_ModLockPostFromJson(json);
+  factory _$ModLockPostImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ModLockPostImplFromJson(json);
 
   @override
   final int id;
@@ -185,7 +185,7 @@ class _$_ModLockPost extends _ModLockPost {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ModLockPost &&
+            other is _$ModLockPostImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.modPersonId, modPersonId) ||
                 other.modPersonId == modPersonId) &&
@@ -202,12 +202,12 @@ class _$_ModLockPost extends _ModLockPost {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ModLockPostCopyWith<_$_ModLockPost> get copyWith =>
-      __$$_ModLockPostCopyWithImpl<_$_ModLockPost>(this, _$identity);
+  _$$ModLockPostImplCopyWith<_$ModLockPostImpl> get copyWith =>
+      __$$ModLockPostImplCopyWithImpl<_$ModLockPostImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModLockPostToJson(
+    return _$$ModLockPostImplToJson(
       this,
     );
   }
@@ -219,11 +219,11 @@ abstract class _ModLockPost extends ModLockPost {
       required final int modPersonId,
       required final int postId,
       required final bool locked,
-      @JsonKey(name: 'when_') required final String when}) = _$_ModLockPost;
+      @JsonKey(name: 'when_') required final String when}) = _$ModLockPostImpl;
   const _ModLockPost._() : super._();
 
   factory _ModLockPost.fromJson(Map<String, dynamic> json) =
-      _$_ModLockPost.fromJson;
+      _$ModLockPostImpl.fromJson;
 
   @override
   int get id;
@@ -238,6 +238,6 @@ abstract class _ModLockPost extends ModLockPost {
   String get when;
   @override
   @JsonKey(ignore: true)
-  _$$_ModLockPostCopyWith<_$_ModLockPost> get copyWith =>
+  _$$ModLockPostImplCopyWith<_$ModLockPostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -67,25 +67,25 @@ class _$ListPrivateMessageReportsResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ListPrivateMessageReportsResponseCopyWith<$Res>
+abstract class _$$ListPrivateMessageReportsResponseImplCopyWith<$Res>
     implements $ListPrivateMessageReportsResponseCopyWith<$Res> {
-  factory _$$_ListPrivateMessageReportsResponseCopyWith(
-          _$_ListPrivateMessageReportsResponse value,
-          $Res Function(_$_ListPrivateMessageReportsResponse) then) =
-      __$$_ListPrivateMessageReportsResponseCopyWithImpl<$Res>;
+  factory _$$ListPrivateMessageReportsResponseImplCopyWith(
+          _$ListPrivateMessageReportsResponseImpl value,
+          $Res Function(_$ListPrivateMessageReportsResponseImpl) then) =
+      __$$ListPrivateMessageReportsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<PrivateMessageReportView> privateMessageReports});
 }
 
 /// @nodoc
-class __$$_ListPrivateMessageReportsResponseCopyWithImpl<$Res>
+class __$$ListPrivateMessageReportsResponseImplCopyWithImpl<$Res>
     extends _$ListPrivateMessageReportsResponseCopyWithImpl<$Res,
-        _$_ListPrivateMessageReportsResponse>
-    implements _$$_ListPrivateMessageReportsResponseCopyWith<$Res> {
-  __$$_ListPrivateMessageReportsResponseCopyWithImpl(
-      _$_ListPrivateMessageReportsResponse _value,
-      $Res Function(_$_ListPrivateMessageReportsResponse) _then)
+        _$ListPrivateMessageReportsResponseImpl>
+    implements _$$ListPrivateMessageReportsResponseImplCopyWith<$Res> {
+  __$$ListPrivateMessageReportsResponseImplCopyWithImpl(
+      _$ListPrivateMessageReportsResponseImpl _value,
+      $Res Function(_$ListPrivateMessageReportsResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -93,7 +93,7 @@ class __$$_ListPrivateMessageReportsResponseCopyWithImpl<$Res>
   $Res call({
     Object? privateMessageReports = null,
   }) {
-    return _then(_$_ListPrivateMessageReportsResponse(
+    return _then(_$ListPrivateMessageReportsResponseImpl(
       privateMessageReports: null == privateMessageReports
           ? _value._privateMessageReports
           : privateMessageReports // ignore: cast_nullable_to_non_nullable
@@ -105,16 +105,16 @@ class __$$_ListPrivateMessageReportsResponseCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ListPrivateMessageReportsResponse
+class _$ListPrivateMessageReportsResponseImpl
     extends _ListPrivateMessageReportsResponse {
-  const _$_ListPrivateMessageReportsResponse(
+  const _$ListPrivateMessageReportsResponseImpl(
       {required final List<PrivateMessageReportView> privateMessageReports})
       : _privateMessageReports = privateMessageReports,
         super._();
 
-  factory _$_ListPrivateMessageReportsResponse.fromJson(
+  factory _$ListPrivateMessageReportsResponseImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_ListPrivateMessageReportsResponseFromJson(json);
+      _$$ListPrivateMessageReportsResponseImplFromJson(json);
 
   final List<PrivateMessageReportView> _privateMessageReports;
   @override
@@ -134,7 +134,7 @@ class _$_ListPrivateMessageReportsResponse
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ListPrivateMessageReportsResponse &&
+            other is _$ListPrivateMessageReportsResponseImpl &&
             const DeepCollectionEquality()
                 .equals(other._privateMessageReports, _privateMessageReports));
   }
@@ -147,14 +147,14 @@ class _$_ListPrivateMessageReportsResponse
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ListPrivateMessageReportsResponseCopyWith<
-          _$_ListPrivateMessageReportsResponse>
-      get copyWith => __$$_ListPrivateMessageReportsResponseCopyWithImpl<
-          _$_ListPrivateMessageReportsResponse>(this, _$identity);
+  _$$ListPrivateMessageReportsResponseImplCopyWith<
+          _$ListPrivateMessageReportsResponseImpl>
+      get copyWith => __$$ListPrivateMessageReportsResponseImplCopyWithImpl<
+          _$ListPrivateMessageReportsResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ListPrivateMessageReportsResponseToJson(
+    return _$$ListPrivateMessageReportsResponseImplToJson(
       this,
     );
   }
@@ -164,18 +164,18 @@ abstract class _ListPrivateMessageReportsResponse
     extends ListPrivateMessageReportsResponse {
   const factory _ListPrivateMessageReportsResponse(
       {required final List<PrivateMessageReportView>
-          privateMessageReports}) = _$_ListPrivateMessageReportsResponse;
+          privateMessageReports}) = _$ListPrivateMessageReportsResponseImpl;
   const _ListPrivateMessageReportsResponse._() : super._();
 
   factory _ListPrivateMessageReportsResponse.fromJson(
           Map<String, dynamic> json) =
-      _$_ListPrivateMessageReportsResponse.fromJson;
+      _$ListPrivateMessageReportsResponseImpl.fromJson;
 
   @override
   List<PrivateMessageReportView> get privateMessageReports;
   @override
   @JsonKey(ignore: true)
-  _$$_ListPrivateMessageReportsResponseCopyWith<
-          _$_ListPrivateMessageReportsResponse>
+  _$$ListPrivateMessageReportsResponseImplCopyWith<
+          _$ListPrivateMessageReportsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

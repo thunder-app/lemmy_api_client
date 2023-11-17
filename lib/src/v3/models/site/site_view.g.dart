@@ -6,7 +6,8 @@ part of 'site_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SiteView _$$_SiteViewFromJson(Map<String, dynamic> json) => _$_SiteView(
+_$SiteViewImpl _$$SiteViewImplFromJson(Map<String, dynamic> json) =>
+    _$SiteViewImpl(
       site: Site.fromJson(json['site'] as Map<String, dynamic>),
       localSite: LocalSite.fromJson(json['local_site'] as Map<String, dynamic>),
       localSiteRateLimit: LocalSiteRateLimit.fromJson(
@@ -14,7 +15,7 @@ _$_SiteView _$$_SiteViewFromJson(Map<String, dynamic> json) => _$_SiteView(
       counts: SiteAggregates.fromJson(json['counts'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SiteViewToJson(_$_SiteView instance) =>
+Map<String, dynamic> _$$SiteViewImplToJson(_$SiteViewImpl instance) =>
     <String, dynamic>{
       'site': instance.site.toJson(),
       'local_site': instance.localSite.toJson(),

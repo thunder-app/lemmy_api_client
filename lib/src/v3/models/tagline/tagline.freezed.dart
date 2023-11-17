@@ -89,10 +89,10 @@ class _$TaglineCopyWithImpl<$Res, $Val extends Tagline>
 }
 
 /// @nodoc
-abstract class _$$_TaglineCopyWith<$Res> implements $TaglineCopyWith<$Res> {
-  factory _$$_TaglineCopyWith(
-          _$_Tagline value, $Res Function(_$_Tagline) then) =
-      __$$_TaglineCopyWithImpl<$Res>;
+abstract class _$$TaglineImplCopyWith<$Res> implements $TaglineCopyWith<$Res> {
+  factory _$$TaglineImplCopyWith(
+          _$TaglineImpl value, $Res Function(_$TaglineImpl) then) =
+      __$$TaglineImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -104,10 +104,11 @@ abstract class _$$_TaglineCopyWith<$Res> implements $TaglineCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_TaglineCopyWithImpl<$Res>
-    extends _$TaglineCopyWithImpl<$Res, _$_Tagline>
-    implements _$$_TaglineCopyWith<$Res> {
-  __$$_TaglineCopyWithImpl(_$_Tagline _value, $Res Function(_$_Tagline) _then)
+class __$$TaglineImplCopyWithImpl<$Res>
+    extends _$TaglineCopyWithImpl<$Res, _$TaglineImpl>
+    implements _$$TaglineImplCopyWith<$Res> {
+  __$$TaglineImplCopyWithImpl(
+      _$TaglineImpl _value, $Res Function(_$TaglineImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -119,7 +120,7 @@ class __$$_TaglineCopyWithImpl<$Res>
     Object? published = null,
     Object? updated = freezed,
   }) {
-    return _then(_$_Tagline(
+    return _then(_$TaglineImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -147,8 +148,8 @@ class __$$_TaglineCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_Tagline extends _Tagline {
-  const _$_Tagline(
+class _$TaglineImpl extends _Tagline {
+  const _$TaglineImpl(
       {required this.id,
       required this.localSiteId,
       required this.content,
@@ -156,8 +157,8 @@ class _$_Tagline extends _Tagline {
       this.updated})
       : super._();
 
-  factory _$_Tagline.fromJson(Map<String, dynamic> json) =>
-      _$$_TaglineFromJson(json);
+  factory _$TaglineImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TaglineImplFromJson(json);
 
   @override
   final int id;
@@ -179,7 +180,7 @@ class _$_Tagline extends _Tagline {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Tagline &&
+            other is _$TaglineImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.localSiteId, localSiteId) ||
                 other.localSiteId == localSiteId) &&
@@ -197,12 +198,12 @@ class _$_Tagline extends _Tagline {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TaglineCopyWith<_$_Tagline> get copyWith =>
-      __$$_TaglineCopyWithImpl<_$_Tagline>(this, _$identity);
+  _$$TaglineImplCopyWith<_$TaglineImpl> get copyWith =>
+      __$$TaglineImplCopyWithImpl<_$TaglineImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TaglineToJson(
+    return _$$TaglineImplToJson(
       this,
     );
   }
@@ -214,10 +215,10 @@ abstract class _Tagline extends Tagline {
       required final int localSiteId,
       required final String content,
       required final DateTime published,
-      final DateTime? updated}) = _$_Tagline;
+      final DateTime? updated}) = _$TaglineImpl;
   const _Tagline._() : super._();
 
-  factory _Tagline.fromJson(Map<String, dynamic> json) = _$_Tagline.fromJson;
+  factory _Tagline.fromJson(Map<String, dynamic> json) = _$TaglineImpl.fromJson;
 
   @override
   int get id;
@@ -231,6 +232,6 @@ abstract class _Tagline extends Tagline {
   DateTime? get updated;
   @override
   @JsonKey(ignore: true)
-  _$$_TaglineCopyWith<_$_Tagline> get copyWith =>
+  _$$TaglineImplCopyWith<_$TaglineImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

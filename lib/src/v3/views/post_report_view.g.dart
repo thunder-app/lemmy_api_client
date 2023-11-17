@@ -6,8 +6,8 @@ part of 'post_report_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PostReportView _$$_PostReportViewFromJson(Map<String, dynamic> json) =>
-    _$_PostReportView(
+_$PostReportViewImpl _$$PostReportViewImplFromJson(Map<String, dynamic> json) =>
+    _$PostReportViewImpl(
       postReport:
           PostReport.fromJson(json['post_report'] as Map<String, dynamic>),
       post: Post.fromJson(json['post'] as Map<String, dynamic>),
@@ -23,7 +23,8 @@ _$_PostReportView _$$_PostReportViewFromJson(Map<String, dynamic> json) =>
           : Person.fromJson(json['resolver'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PostReportViewToJson(_$_PostReportView instance) =>
+Map<String, dynamic> _$$PostReportViewImplToJson(
+        _$PostReportViewImpl instance) =>
     <String, dynamic>{
       'post_report': instance.postReport.toJson(),
       'post': instance.post.toJson(),

@@ -10,7 +10,7 @@ part 'community_aggregates.g.dart';
 class CommunityAggregates with _$CommunityAggregates {
   @modelSerde
   const factory CommunityAggregates({
-    required int id,
+    @deprecated int? id,
     required int communityId,
     required int subscribers,
     required int posts,

@@ -6,9 +6,9 @@ part of 'private_message_report_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PrivateMessageReportView _$$_PrivateMessageReportViewFromJson(
+_$PrivateMessageReportViewImpl _$$PrivateMessageReportViewImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PrivateMessageReportView(
+    _$PrivateMessageReportViewImpl(
       privateMessageReport: PrivateMessageReport.fromJson(
           json['private_message_report'] as Map<String, dynamic>),
       privateMessage: PrivateMessage.fromJson(
@@ -21,8 +21,8 @@ _$_PrivateMessageReportView _$$_PrivateMessageReportViewFromJson(
           : Person.fromJson(json['resolver'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PrivateMessageReportViewToJson(
-        _$_PrivateMessageReportView instance) =>
+Map<String, dynamic> _$$PrivateMessageReportViewImplToJson(
+        _$PrivateMessageReportViewImpl instance) =>
     <String, dynamic>{
       'private_message_report': instance.privateMessageReport.toJson(),
       'private_message': instance.privateMessage.toJson(),

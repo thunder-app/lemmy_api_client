@@ -74,22 +74,22 @@ class _$CaptchaResponseCopyWithImpl<$Res, $Val extends CaptchaResponse>
 }
 
 /// @nodoc
-abstract class _$$_CaptchaResponseCopyWith<$Res>
+abstract class _$$CaptchaResponseImplCopyWith<$Res>
     implements $CaptchaResponseCopyWith<$Res> {
-  factory _$$_CaptchaResponseCopyWith(
-          _$_CaptchaResponse value, $Res Function(_$_CaptchaResponse) then) =
-      __$$_CaptchaResponseCopyWithImpl<$Res>;
+  factory _$$CaptchaResponseImplCopyWith(_$CaptchaResponseImpl value,
+          $Res Function(_$CaptchaResponseImpl) then) =
+      __$$CaptchaResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String png, String wav, String uuid});
 }
 
 /// @nodoc
-class __$$_CaptchaResponseCopyWithImpl<$Res>
-    extends _$CaptchaResponseCopyWithImpl<$Res, _$_CaptchaResponse>
-    implements _$$_CaptchaResponseCopyWith<$Res> {
-  __$$_CaptchaResponseCopyWithImpl(
-      _$_CaptchaResponse _value, $Res Function(_$_CaptchaResponse) _then)
+class __$$CaptchaResponseImplCopyWithImpl<$Res>
+    extends _$CaptchaResponseCopyWithImpl<$Res, _$CaptchaResponseImpl>
+    implements _$$CaptchaResponseImplCopyWith<$Res> {
+  __$$CaptchaResponseImplCopyWithImpl(
+      _$CaptchaResponseImpl _value, $Res Function(_$CaptchaResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -99,7 +99,7 @@ class __$$_CaptchaResponseCopyWithImpl<$Res>
     Object? wav = null,
     Object? uuid = null,
   }) {
-    return _then(_$_CaptchaResponse(
+    return _then(_$CaptchaResponseImpl(
       png: null == png
           ? _value.png
           : png // ignore: cast_nullable_to_non_nullable
@@ -119,13 +119,13 @@ class __$$_CaptchaResponseCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_CaptchaResponse extends _CaptchaResponse {
-  const _$_CaptchaResponse(
+class _$CaptchaResponseImpl extends _CaptchaResponse {
+  const _$CaptchaResponseImpl(
       {required this.png, required this.wav, required this.uuid})
       : super._();
 
-  factory _$_CaptchaResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_CaptchaResponseFromJson(json);
+  factory _$CaptchaResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CaptchaResponseImplFromJson(json);
 
   @override
   final String png;
@@ -143,7 +143,7 @@ class _$_CaptchaResponse extends _CaptchaResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CaptchaResponse &&
+            other is _$CaptchaResponseImpl &&
             (identical(other.png, png) || other.png == png) &&
             (identical(other.wav, wav) || other.wav == wav) &&
             (identical(other.uuid, uuid) || other.uuid == uuid));
@@ -156,12 +156,13 @@ class _$_CaptchaResponse extends _CaptchaResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CaptchaResponseCopyWith<_$_CaptchaResponse> get copyWith =>
-      __$$_CaptchaResponseCopyWithImpl<_$_CaptchaResponse>(this, _$identity);
+  _$$CaptchaResponseImplCopyWith<_$CaptchaResponseImpl> get copyWith =>
+      __$$CaptchaResponseImplCopyWithImpl<_$CaptchaResponseImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CaptchaResponseToJson(
+    return _$$CaptchaResponseImplToJson(
       this,
     );
   }
@@ -171,11 +172,11 @@ abstract class _CaptchaResponse extends CaptchaResponse {
   const factory _CaptchaResponse(
       {required final String png,
       required final String wav,
-      required final String uuid}) = _$_CaptchaResponse;
+      required final String uuid}) = _$CaptchaResponseImpl;
   const _CaptchaResponse._() : super._();
 
   factory _CaptchaResponse.fromJson(Map<String, dynamic> json) =
-      _$_CaptchaResponse.fromJson;
+      _$CaptchaResponseImpl.fromJson;
 
   @override
   String get png;
@@ -185,6 +186,6 @@ abstract class _CaptchaResponse extends CaptchaResponse {
   String get uuid;
   @override
   @JsonKey(ignore: true)
-  _$$_CaptchaResponseCopyWith<_$_CaptchaResponse> get copyWith =>
+  _$$CaptchaResponseImplCopyWith<_$CaptchaResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

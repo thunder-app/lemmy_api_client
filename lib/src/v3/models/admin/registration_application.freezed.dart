@@ -100,11 +100,12 @@ class _$RegistrationApplicationCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_RegistrationApplicationCopyWith<$Res>
+abstract class _$$RegistrationApplicationImplCopyWith<$Res>
     implements $RegistrationApplicationCopyWith<$Res> {
-  factory _$$_RegistrationApplicationCopyWith(_$_RegistrationApplication value,
-          $Res Function(_$_RegistrationApplication) then) =
-      __$$_RegistrationApplicationCopyWithImpl<$Res>;
+  factory _$$RegistrationApplicationImplCopyWith(
+          _$RegistrationApplicationImpl value,
+          $Res Function(_$RegistrationApplicationImpl) then) =
+      __$$RegistrationApplicationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -117,12 +118,13 @@ abstract class _$$_RegistrationApplicationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_RegistrationApplicationCopyWithImpl<$Res>
+class __$$RegistrationApplicationImplCopyWithImpl<$Res>
     extends _$RegistrationApplicationCopyWithImpl<$Res,
-        _$_RegistrationApplication>
-    implements _$$_RegistrationApplicationCopyWith<$Res> {
-  __$$_RegistrationApplicationCopyWithImpl(_$_RegistrationApplication _value,
-      $Res Function(_$_RegistrationApplication) _then)
+        _$RegistrationApplicationImpl>
+    implements _$$RegistrationApplicationImplCopyWith<$Res> {
+  __$$RegistrationApplicationImplCopyWithImpl(
+      _$RegistrationApplicationImpl _value,
+      $Res Function(_$RegistrationApplicationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -135,7 +137,7 @@ class __$$_RegistrationApplicationCopyWithImpl<$Res>
     Object? denyReason = freezed,
     Object? published = null,
   }) {
-    return _then(_$_RegistrationApplication(
+    return _then(_$RegistrationApplicationImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -167,8 +169,8 @@ class __$$_RegistrationApplicationCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_RegistrationApplication extends _RegistrationApplication {
-  const _$_RegistrationApplication(
+class _$RegistrationApplicationImpl extends _RegistrationApplication {
+  const _$RegistrationApplicationImpl(
       {required this.id,
       required this.localUserId,
       required this.answer,
@@ -177,8 +179,8 @@ class _$_RegistrationApplication extends _RegistrationApplication {
       required this.published})
       : super._();
 
-  factory _$_RegistrationApplication.fromJson(Map<String, dynamic> json) =>
-      _$$_RegistrationApplicationFromJson(json);
+  factory _$RegistrationApplicationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RegistrationApplicationImplFromJson(json);
 
   @override
   final int id;
@@ -202,7 +204,7 @@ class _$_RegistrationApplication extends _RegistrationApplication {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RegistrationApplication &&
+            other is _$RegistrationApplicationImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.localUserId, localUserId) ||
                 other.localUserId == localUserId) &&
@@ -222,14 +224,13 @@ class _$_RegistrationApplication extends _RegistrationApplication {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RegistrationApplicationCopyWith<_$_RegistrationApplication>
-      get copyWith =>
-          __$$_RegistrationApplicationCopyWithImpl<_$_RegistrationApplication>(
-              this, _$identity);
+  _$$RegistrationApplicationImplCopyWith<_$RegistrationApplicationImpl>
+      get copyWith => __$$RegistrationApplicationImplCopyWithImpl<
+          _$RegistrationApplicationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RegistrationApplicationToJson(
+    return _$$RegistrationApplicationImplToJson(
       this,
     );
   }
@@ -242,11 +243,11 @@ abstract class _RegistrationApplication extends RegistrationApplication {
       required final String answer,
       final int? adminId,
       final String? denyReason,
-      required final DateTime published}) = _$_RegistrationApplication;
+      required final DateTime published}) = _$RegistrationApplicationImpl;
   const _RegistrationApplication._() : super._();
 
   factory _RegistrationApplication.fromJson(Map<String, dynamic> json) =
-      _$_RegistrationApplication.fromJson;
+      _$RegistrationApplicationImpl.fromJson;
 
   @override
   int get id;
@@ -262,6 +263,6 @@ abstract class _RegistrationApplication extends RegistrationApplication {
   DateTime get published;
   @override
   @JsonKey(ignore: true)
-  _$$_RegistrationApplicationCopyWith<_$_RegistrationApplication>
+  _$$RegistrationApplicationImplCopyWith<_$RegistrationApplicationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

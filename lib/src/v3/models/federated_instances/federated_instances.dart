@@ -10,9 +10,9 @@ part 'federated_instances.g.dart';
 class FederatedInstances with _$FederatedInstances {
   @modelSerde
   const factory FederatedInstances({
-    required List<Instance> linked,
-    required List<Instance> allowed,
-    required List<Instance> blocked,
+    required List<InstanceWithFederationState> linked,
+    required List<InstanceWithFederationState> allowed,
+    required List<InstanceWithFederationState> blocked,
   }) = _FederatedInstances;
 
   const FederatedInstances._();

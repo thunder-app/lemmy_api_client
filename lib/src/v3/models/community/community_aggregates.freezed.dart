@@ -20,7 +20,8 @@ CommunityAggregates _$CommunityAggregatesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CommunityAggregates {
-  int get id => throw _privateConstructorUsedError;
+  @deprecated
+  int? get id => throw _privateConstructorUsedError;
   int get communityId => throw _privateConstructorUsedError;
   int get subscribers => throw _privateConstructorUsedError;
   int get posts => throw _privateConstructorUsedError;
@@ -46,7 +47,7 @@ abstract class $CommunityAggregatesCopyWith<$Res> {
       _$CommunityAggregatesCopyWithImpl<$Res, CommunityAggregates>;
   @useResult
   $Res call(
-      {int id,
+      {@deprecated int? id,
       int communityId,
       int subscribers,
       int posts,
@@ -72,7 +73,7 @@ class _$CommunityAggregatesCopyWithImpl<$Res, $Val extends CommunityAggregates>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? communityId = null,
     Object? subscribers = null,
     Object? posts = null,
@@ -85,10 +86,10 @@ class _$CommunityAggregatesCopyWithImpl<$Res, $Val extends CommunityAggregates>
     Object? hotRank = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -134,15 +135,15 @@ class _$CommunityAggregatesCopyWithImpl<$Res, $Val extends CommunityAggregates>
 }
 
 /// @nodoc
-abstract class _$$_CommunityAggregatesCopyWith<$Res>
+abstract class _$$CommunityAggregatesImplCopyWith<$Res>
     implements $CommunityAggregatesCopyWith<$Res> {
-  factory _$$_CommunityAggregatesCopyWith(_$_CommunityAggregates value,
-          $Res Function(_$_CommunityAggregates) then) =
-      __$$_CommunityAggregatesCopyWithImpl<$Res>;
+  factory _$$CommunityAggregatesImplCopyWith(_$CommunityAggregatesImpl value,
+          $Res Function(_$CommunityAggregatesImpl) then) =
+      __$$CommunityAggregatesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {int id,
+      {@deprecated int? id,
       int communityId,
       int subscribers,
       int posts,
@@ -156,17 +157,17 @@ abstract class _$$_CommunityAggregatesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CommunityAggregatesCopyWithImpl<$Res>
-    extends _$CommunityAggregatesCopyWithImpl<$Res, _$_CommunityAggregates>
-    implements _$$_CommunityAggregatesCopyWith<$Res> {
-  __$$_CommunityAggregatesCopyWithImpl(_$_CommunityAggregates _value,
-      $Res Function(_$_CommunityAggregates) _then)
+class __$$CommunityAggregatesImplCopyWithImpl<$Res>
+    extends _$CommunityAggregatesCopyWithImpl<$Res, _$CommunityAggregatesImpl>
+    implements _$$CommunityAggregatesImplCopyWith<$Res> {
+  __$$CommunityAggregatesImplCopyWithImpl(_$CommunityAggregatesImpl _value,
+      $Res Function(_$CommunityAggregatesImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? communityId = null,
     Object? subscribers = null,
     Object? posts = null,
@@ -178,11 +179,11 @@ class __$$_CommunityAggregatesCopyWithImpl<$Res>
     Object? usersActiveHalfYear = null,
     Object? hotRank = freezed,
   }) {
-    return _then(_$_CommunityAggregates(
-      id: null == id
+    return _then(_$CommunityAggregatesImpl(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -230,9 +231,9 @@ class __$$_CommunityAggregatesCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_CommunityAggregates extends _CommunityAggregates {
-  const _$_CommunityAggregates(
-      {required this.id,
+class _$CommunityAggregatesImpl extends _CommunityAggregates {
+  const _$CommunityAggregatesImpl(
+      {@deprecated this.id,
       required this.communityId,
       required this.subscribers,
       required this.posts,
@@ -245,11 +246,12 @@ class _$_CommunityAggregates extends _CommunityAggregates {
       @deprecated this.hotRank})
       : super._();
 
-  factory _$_CommunityAggregates.fromJson(Map<String, dynamic> json) =>
-      _$$_CommunityAggregatesFromJson(json);
+  factory _$CommunityAggregatesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CommunityAggregatesImplFromJson(json);
 
   @override
-  final int id;
+  @deprecated
+  final int? id;
   @override
   final int communityId;
   @override
@@ -281,7 +283,7 @@ class _$_CommunityAggregates extends _CommunityAggregates {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CommunityAggregates &&
+            other is _$CommunityAggregatesImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.communityId, communityId) ||
                 other.communityId == communityId) &&
@@ -322,13 +324,13 @@ class _$_CommunityAggregates extends _CommunityAggregates {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CommunityAggregatesCopyWith<_$_CommunityAggregates> get copyWith =>
-      __$$_CommunityAggregatesCopyWithImpl<_$_CommunityAggregates>(
+  _$$CommunityAggregatesImplCopyWith<_$CommunityAggregatesImpl> get copyWith =>
+      __$$CommunityAggregatesImplCopyWithImpl<_$CommunityAggregatesImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunityAggregatesToJson(
+    return _$$CommunityAggregatesImplToJson(
       this,
     );
   }
@@ -336,7 +338,7 @@ class _$_CommunityAggregates extends _CommunityAggregates {
 
 abstract class _CommunityAggregates extends CommunityAggregates {
   const factory _CommunityAggregates(
-      {required final int id,
+      {@deprecated final int? id,
       required final int communityId,
       required final int subscribers,
       required final int posts,
@@ -346,14 +348,15 @@ abstract class _CommunityAggregates extends CommunityAggregates {
       required final int usersActiveWeek,
       required final int usersActiveMonth,
       required final int usersActiveHalfYear,
-      @deprecated final int? hotRank}) = _$_CommunityAggregates;
+      @deprecated final int? hotRank}) = _$CommunityAggregatesImpl;
   const _CommunityAggregates._() : super._();
 
   factory _CommunityAggregates.fromJson(Map<String, dynamic> json) =
-      _$_CommunityAggregates.fromJson;
+      _$CommunityAggregatesImpl.fromJson;
 
   @override
-  int get id;
+  @deprecated
+  int? get id;
   @override
   int get communityId;
   @override
@@ -377,6 +380,6 @@ abstract class _CommunityAggregates extends CommunityAggregates {
   int? get hotRank;
   @override
   @JsonKey(ignore: true)
-  _$$_CommunityAggregatesCopyWith<_$_CommunityAggregates> get copyWith =>
+  _$$CommunityAggregatesImplCopyWith<_$CommunityAggregatesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

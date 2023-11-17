@@ -6,7 +6,8 @@ part of 'local_site.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_LocalSite _$$_LocalSiteFromJson(Map<String, dynamic> json) => _$_LocalSite(
+_$LocalSiteImpl _$$LocalSiteImplFromJson(Map<String, dynamic> json) =>
+    _$LocalSiteImpl(
       id: json['id'] as int,
       siteId: json['site_id'] as int,
       siteSetup: json['site_setup'] as bool,
@@ -33,9 +34,10 @@ _$_LocalSite _$$_LocalSiteFromJson(Map<String, dynamic> json) => _$_LocalSite(
       registrationMode:
           RegistrationMode.fromJson(json['registration_mode'] as String),
       reportsEmailAdmins: json['reports_email_admins'] as bool,
+      federationSignedFetch: json['federation_signed_fetch'] as bool?,
     );
 
-Map<String, dynamic> _$$_LocalSiteToJson(_$_LocalSite instance) =>
+Map<String, dynamic> _$$LocalSiteImplToJson(_$LocalSiteImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'site_id': instance.siteId,
@@ -61,6 +63,7 @@ Map<String, dynamic> _$$_LocalSiteToJson(_$_LocalSite instance) =>
           instance.updated, const ForceUtcDateTime().toJson),
       'registration_mode': instance.registrationMode.toJson(),
       'reports_email_admins': instance.reportsEmailAdmins,
+      'federation_signed_fetch': instance.federationSignedFetch,
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(

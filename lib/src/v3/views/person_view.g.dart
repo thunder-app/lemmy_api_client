@@ -6,13 +6,13 @@ part of 'person_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PersonView _$$_PersonViewFromJson(Map<String, dynamic> json) =>
-    _$_PersonView(
+_$PersonViewImpl _$$PersonViewImplFromJson(Map<String, dynamic> json) =>
+    _$PersonViewImpl(
       person: Person.fromJson(json['person'] as Map<String, dynamic>),
       counts: PersonAggregates.fromJson(json['counts'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PersonViewToJson(_$_PersonView instance) =>
+Map<String, dynamic> _$$PersonViewImplToJson(_$PersonViewImpl instance) =>
     <String, dynamic>{
       'person': instance.person.toJson(),
       'counts': instance.counts.toJson(),

@@ -6,8 +6,8 @@ part of 'comment.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CreateComment _$$_CreateCommentFromJson(Map<String, dynamic> json) =>
-    _$_CreateComment(
+_$CreateCommentImpl _$$CreateCommentImplFromJson(Map<String, dynamic> json) =>
+    _$CreateCommentImpl(
       content: json['content'] as String,
       postId: json['post_id'] as int,
       parentId: json['parent_id'] as int?,
@@ -16,7 +16,7 @@ _$_CreateComment _$$_CreateCommentFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_CreateCommentToJson(_$_CreateComment instance) {
+Map<String, dynamic> _$$CreateCommentImplToJson(_$CreateCommentImpl instance) {
   final val = <String, dynamic>{
     'content': instance.content,
     'post_id': instance.postId,
@@ -35,8 +35,8 @@ Map<String, dynamic> _$$_CreateCommentToJson(_$_CreateComment instance) {
   return val;
 }
 
-_$_EditComment _$$_EditCommentFromJson(Map<String, dynamic> json) =>
-    _$_EditComment(
+_$EditCommentImpl _$$EditCommentImplFromJson(Map<String, dynamic> json) =>
+    _$EditCommentImpl(
       commentId: json['comment_id'] as int,
       content: json['content'] as String?,
       languageId: json['language_id'] as int?,
@@ -44,7 +44,7 @@ _$_EditComment _$$_EditCommentFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_EditCommentToJson(_$_EditComment instance) {
+Map<String, dynamic> _$$EditCommentImplToJson(_$EditCommentImpl instance) {
   final val = <String, dynamic>{
     'comment_id': instance.commentId,
   };
@@ -62,14 +62,14 @@ Map<String, dynamic> _$$_EditCommentToJson(_$_EditComment instance) {
   return val;
 }
 
-_$_DeleteComment _$$_DeleteCommentFromJson(Map<String, dynamic> json) =>
-    _$_DeleteComment(
+_$DeleteCommentImpl _$$DeleteCommentImplFromJson(Map<String, dynamic> json) =>
+    _$DeleteCommentImpl(
       commentId: json['comment_id'] as int,
       deleted: json['deleted'] as bool,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_DeleteCommentToJson(_$_DeleteComment instance) {
+Map<String, dynamic> _$$DeleteCommentImplToJson(_$DeleteCommentImpl instance) {
   final val = <String, dynamic>{
     'comment_id': instance.commentId,
     'deleted': instance.deleted,
@@ -85,15 +85,15 @@ Map<String, dynamic> _$$_DeleteCommentToJson(_$_DeleteComment instance) {
   return val;
 }
 
-_$_RemoveComment _$$_RemoveCommentFromJson(Map<String, dynamic> json) =>
-    _$_RemoveComment(
+_$RemoveCommentImpl _$$RemoveCommentImplFromJson(Map<String, dynamic> json) =>
+    _$RemoveCommentImpl(
       commentId: json['comment_id'] as int,
       removed: json['removed'] as bool,
       reason: json['reason'] as String?,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_RemoveCommentToJson(_$_RemoveComment instance) {
+Map<String, dynamic> _$$RemoveCommentImplToJson(_$RemoveCommentImpl instance) {
   final val = <String, dynamic>{
     'comment_id': instance.commentId,
     'removed': instance.removed,
@@ -110,16 +110,16 @@ Map<String, dynamic> _$$_RemoveCommentToJson(_$_RemoveComment instance) {
   return val;
 }
 
-_$_MarkCommentReplyAsRead _$$_MarkCommentReplyAsReadFromJson(
+_$MarkCommentReplyAsReadImpl _$$MarkCommentReplyAsReadImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MarkCommentReplyAsRead(
+    _$MarkCommentReplyAsReadImpl(
       commentReplyId: json['comment_reply_id'] as int,
       read: json['read'] as bool,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_MarkCommentReplyAsReadToJson(
-    _$_MarkCommentReplyAsRead instance) {
+Map<String, dynamic> _$$MarkCommentReplyAsReadImplToJson(
+    _$MarkCommentReplyAsReadImpl instance) {
   final val = <String, dynamic>{
     'comment_reply_id': instance.commentReplyId,
     'read': instance.read,
@@ -135,15 +135,16 @@ Map<String, dynamic> _$$_MarkCommentReplyAsReadToJson(
   return val;
 }
 
-_$_CreateCommentLike _$$_CreateCommentLikeFromJson(Map<String, dynamic> json) =>
-    _$_CreateCommentLike(
+_$CreateCommentLikeImpl _$$CreateCommentLikeImplFromJson(
+        Map<String, dynamic> json) =>
+    _$CreateCommentLikeImpl(
       commentId: json['comment_id'] as int,
       score: json['score'] as num,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_CreateCommentLikeToJson(
-    _$_CreateCommentLike instance) {
+Map<String, dynamic> _$$CreateCommentLikeImplToJson(
+    _$CreateCommentLikeImpl instance) {
   final val = <String, dynamic>{
     'comment_id': instance.commentId,
     'score': instance.score,
@@ -159,14 +160,14 @@ Map<String, dynamic> _$$_CreateCommentLikeToJson(
   return val;
 }
 
-_$_SaveComment _$$_SaveCommentFromJson(Map<String, dynamic> json) =>
-    _$_SaveComment(
+_$SaveCommentImpl _$$SaveCommentImplFromJson(Map<String, dynamic> json) =>
+    _$SaveCommentImpl(
       commentId: json['comment_id'] as int,
       save: json['save'] as bool,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_SaveCommentToJson(_$_SaveComment instance) {
+Map<String, dynamic> _$$SaveCommentImplToJson(_$SaveCommentImpl instance) {
   final val = <String, dynamic>{
     'comment_id': instance.commentId,
     'save': instance.save,
@@ -182,16 +183,16 @@ Map<String, dynamic> _$$_SaveCommentToJson(_$_SaveComment instance) {
   return val;
 }
 
-_$_DistinguishComment _$$_DistinguishCommentFromJson(
+_$DistinguishCommentImpl _$$DistinguishCommentImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DistinguishComment(
+    _$DistinguishCommentImpl(
       commentId: json['comment_id'] as int,
       distinguished: json['distinguished'] as bool,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_DistinguishCommentToJson(
-    _$_DistinguishComment instance) {
+Map<String, dynamic> _$$DistinguishCommentImplToJson(
+    _$DistinguishCommentImpl instance) {
   final val = <String, dynamic>{
     'comment_id': instance.commentId,
     'distinguished': instance.distinguished,
@@ -207,8 +208,8 @@ Map<String, dynamic> _$$_DistinguishCommentToJson(
   return val;
 }
 
-_$_GetComments _$$_GetCommentsFromJson(Map<String, dynamic> json) =>
-    _$_GetComments(
+_$GetCommentsImpl _$$GetCommentsImplFromJson(Map<String, dynamic> json) =>
+    _$GetCommentsImpl(
       type: json['type_'] == null ? null : ListingType.fromJson(json['type_']),
       sort:
           json['sort'] == null ? null : CommentSortType.fromJson(json['sort']),
@@ -225,7 +226,7 @@ _$_GetComments _$$_GetCommentsFromJson(Map<String, dynamic> json) =>
       dislikedOnly: json['disliked_only'] as bool?,
     );
 
-Map<String, dynamic> _$$_GetCommentsToJson(_$_GetComments instance) {
+Map<String, dynamic> _$$GetCommentsImplToJson(_$GetCommentsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -250,13 +251,13 @@ Map<String, dynamic> _$$_GetCommentsToJson(_$_GetComments instance) {
   return val;
 }
 
-_$_GetComment _$$_GetCommentFromJson(Map<String, dynamic> json) =>
-    _$_GetComment(
+_$GetCommentImpl _$$GetCommentImplFromJson(Map<String, dynamic> json) =>
+    _$GetCommentImpl(
       id: json['id'] as int,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_GetCommentToJson(_$_GetComment instance) {
+Map<String, dynamic> _$$GetCommentImplToJson(_$GetCommentImpl instance) {
   final val = <String, dynamic>{
     'id': instance.id,
   };
@@ -271,16 +272,16 @@ Map<String, dynamic> _$$_GetCommentToJson(_$_GetComment instance) {
   return val;
 }
 
-_$_CreateCommentReport _$$_CreateCommentReportFromJson(
+_$CreateCommentReportImpl _$$CreateCommentReportImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CreateCommentReport(
+    _$CreateCommentReportImpl(
       commentId: json['comment_id'] as int,
       reason: json['reason'] as String,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_CreateCommentReportToJson(
-    _$_CreateCommentReport instance) {
+Map<String, dynamic> _$$CreateCommentReportImplToJson(
+    _$CreateCommentReportImpl instance) {
   final val = <String, dynamic>{
     'comment_id': instance.commentId,
     'reason': instance.reason,
@@ -296,16 +297,16 @@ Map<String, dynamic> _$$_CreateCommentReportToJson(
   return val;
 }
 
-_$_ResolveCommentReport _$$_ResolveCommentReportFromJson(
+_$ResolveCommentReportImpl _$$ResolveCommentReportImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ResolveCommentReport(
+    _$ResolveCommentReportImpl(
       reportId: json['report_id'] as int,
       resolved: json['resolved'] as bool,
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_ResolveCommentReportToJson(
-    _$_ResolveCommentReport instance) {
+Map<String, dynamic> _$$ResolveCommentReportImplToJson(
+    _$ResolveCommentReportImpl instance) {
   final val = <String, dynamic>{
     'report_id': instance.reportId,
     'resolved': instance.resolved,
@@ -321,9 +322,9 @@ Map<String, dynamic> _$$_ResolveCommentReportToJson(
   return val;
 }
 
-_$_ListCommentReports _$$_ListCommentReportsFromJson(
+_$ListCommentReportsImpl _$$ListCommentReportsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ListCommentReports(
+    _$ListCommentReportsImpl(
       page: json['page'] as int?,
       limit: json['limit'] as int?,
       unresolvedOnly: json['unresolved_only'] as bool?,
@@ -331,8 +332,8 @@ _$_ListCommentReports _$$_ListCommentReportsFromJson(
       auth: json['auth'] as String?,
     );
 
-Map<String, dynamic> _$$_ListCommentReportsToJson(
-    _$_ListCommentReports instance) {
+Map<String, dynamic> _$$ListCommentReportsImplToJson(
+    _$ListCommentReportsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

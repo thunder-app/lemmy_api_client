@@ -88,11 +88,11 @@ class _$CommentResponseCopyWithImpl<$Res, $Val extends CommentResponse>
 }
 
 /// @nodoc
-abstract class _$$_CommentResponseCopyWith<$Res>
+abstract class _$$CommentResponseImplCopyWith<$Res>
     implements $CommentResponseCopyWith<$Res> {
-  factory _$$_CommentResponseCopyWith(
-          _$_CommentResponse value, $Res Function(_$_CommentResponse) then) =
-      __$$_CommentResponseCopyWithImpl<$Res>;
+  factory _$$CommentResponseImplCopyWith(_$CommentResponseImpl value,
+          $Res Function(_$CommentResponseImpl) then) =
+      __$$CommentResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -105,11 +105,11 @@ abstract class _$$_CommentResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CommentResponseCopyWithImpl<$Res>
-    extends _$CommentResponseCopyWithImpl<$Res, _$_CommentResponse>
-    implements _$$_CommentResponseCopyWith<$Res> {
-  __$$_CommentResponseCopyWithImpl(
-      _$_CommentResponse _value, $Res Function(_$_CommentResponse) _then)
+class __$$CommentResponseImplCopyWithImpl<$Res>
+    extends _$CommentResponseCopyWithImpl<$Res, _$CommentResponseImpl>
+    implements _$$CommentResponseImplCopyWith<$Res> {
+  __$$CommentResponseImplCopyWithImpl(
+      _$CommentResponseImpl _value, $Res Function(_$CommentResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -119,7 +119,7 @@ class __$$_CommentResponseCopyWithImpl<$Res>
     Object? recipientIds = null,
     Object? formId = freezed,
   }) {
-    return _then(_$_CommentResponse(
+    return _then(_$CommentResponseImpl(
       commentView: null == commentView
           ? _value.commentView
           : commentView // ignore: cast_nullable_to_non_nullable
@@ -139,16 +139,16 @@ class __$$_CommentResponseCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_CommentResponse extends _CommentResponse {
-  const _$_CommentResponse(
+class _$CommentResponseImpl extends _CommentResponse {
+  const _$CommentResponseImpl(
       {required this.commentView,
       required final List<int> recipientIds,
       @deprecated this.formId})
       : _recipientIds = recipientIds,
         super._();
 
-  factory _$_CommentResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_CommentResponseFromJson(json);
+  factory _$CommentResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CommentResponseImplFromJson(json);
 
   @override
   final CommentView commentView;
@@ -173,7 +173,7 @@ class _$_CommentResponse extends _CommentResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CommentResponse &&
+            other is _$CommentResponseImpl &&
             (identical(other.commentView, commentView) ||
                 other.commentView == commentView) &&
             const DeepCollectionEquality()
@@ -189,12 +189,13 @@ class _$_CommentResponse extends _CommentResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CommentResponseCopyWith<_$_CommentResponse> get copyWith =>
-      __$$_CommentResponseCopyWithImpl<_$_CommentResponse>(this, _$identity);
+  _$$CommentResponseImplCopyWith<_$CommentResponseImpl> get copyWith =>
+      __$$CommentResponseImplCopyWithImpl<_$CommentResponseImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommentResponseToJson(
+    return _$$CommentResponseImplToJson(
       this,
     );
   }
@@ -204,11 +205,11 @@ abstract class _CommentResponse extends CommentResponse {
   const factory _CommentResponse(
       {required final CommentView commentView,
       required final List<int> recipientIds,
-      @deprecated final String? formId}) = _$_CommentResponse;
+      @deprecated final String? formId}) = _$CommentResponseImpl;
   const _CommentResponse._() : super._();
 
   factory _CommentResponse.fromJson(Map<String, dynamic> json) =
-      _$_CommentResponse.fromJson;
+      _$CommentResponseImpl.fromJson;
 
   @override
   CommentView get commentView;
@@ -219,6 +220,6 @@ abstract class _CommentResponse extends CommentResponse {
   String? get formId;
   @override
   @JsonKey(ignore: true)
-  _$$_CommentResponseCopyWith<_$_CommentResponse> get copyWith =>
+  _$$CommentResponseImplCopyWith<_$CommentResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

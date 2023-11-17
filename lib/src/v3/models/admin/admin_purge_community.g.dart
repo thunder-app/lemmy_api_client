@@ -6,17 +6,17 @@ part of 'admin_purge_community.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AdminPurgeCommunity _$$_AdminPurgeCommunityFromJson(
+_$AdminPurgeCommunityImpl _$$AdminPurgeCommunityImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AdminPurgeCommunity(
+    _$AdminPurgeCommunityImpl(
       id: json['id'] as int,
       adminPersonId: json['admin_person_id'] as int,
       reason: json['reason'] as String?,
       when: json['when_'] as String,
     );
 
-Map<String, dynamic> _$$_AdminPurgeCommunityToJson(
-        _$_AdminPurgeCommunity instance) =>
+Map<String, dynamic> _$$AdminPurgeCommunityImplToJson(
+        _$AdminPurgeCommunityImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'admin_person_id': instance.adminPersonId,

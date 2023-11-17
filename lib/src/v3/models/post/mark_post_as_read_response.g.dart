@@ -6,17 +6,17 @@ part of 'mark_post_as_read_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MarkPostAsReadResponse _$$_MarkPostAsReadResponseFromJson(
+_$MarkPostAsReadResponseImpl _$$MarkPostAsReadResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MarkPostAsReadResponse(
+    _$MarkPostAsReadResponseImpl(
       postView: json['post_view'] == null
           ? null
           : PostView.fromJson(json['post_view'] as Map<String, dynamic>),
       success: json['success'] as bool?,
     );
 
-Map<String, dynamic> _$$_MarkPostAsReadResponseToJson(
-        _$_MarkPostAsReadResponse instance) =>
+Map<String, dynamic> _$$MarkPostAsReadResponseImplToJson(
+        _$MarkPostAsReadResponseImpl instance) =>
     <String, dynamic>{
       'post_view': instance.postView?.toJson(),
       'success': instance.success,

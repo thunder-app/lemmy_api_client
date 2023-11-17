@@ -20,9 +20,12 @@ FederatedInstances _$FederatedInstancesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$FederatedInstances {
-  List<Instance> get linked => throw _privateConstructorUsedError;
-  List<Instance> get allowed => throw _privateConstructorUsedError;
-  List<Instance> get blocked => throw _privateConstructorUsedError;
+  List<InstanceWithFederationState> get linked =>
+      throw _privateConstructorUsedError;
+  List<InstanceWithFederationState> get allowed =>
+      throw _privateConstructorUsedError;
+  List<InstanceWithFederationState> get blocked =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -37,7 +40,9 @@ abstract class $FederatedInstancesCopyWith<$Res> {
       _$FederatedInstancesCopyWithImpl<$Res, FederatedInstances>;
   @useResult
   $Res call(
-      {List<Instance> linked, List<Instance> allowed, List<Instance> blocked});
+      {List<InstanceWithFederationState> linked,
+      List<InstanceWithFederationState> allowed,
+      List<InstanceWithFederationState> blocked});
 }
 
 /// @nodoc
@@ -61,37 +66,39 @@ class _$FederatedInstancesCopyWithImpl<$Res, $Val extends FederatedInstances>
       linked: null == linked
           ? _value.linked
           : linked // ignore: cast_nullable_to_non_nullable
-              as List<Instance>,
+              as List<InstanceWithFederationState>,
       allowed: null == allowed
           ? _value.allowed
           : allowed // ignore: cast_nullable_to_non_nullable
-              as List<Instance>,
+              as List<InstanceWithFederationState>,
       blocked: null == blocked
           ? _value.blocked
           : blocked // ignore: cast_nullable_to_non_nullable
-              as List<Instance>,
+              as List<InstanceWithFederationState>,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_FederatedInstancesCopyWith<$Res>
+abstract class _$$FederatedInstancesImplCopyWith<$Res>
     implements $FederatedInstancesCopyWith<$Res> {
-  factory _$$_FederatedInstancesCopyWith(_$_FederatedInstances value,
-          $Res Function(_$_FederatedInstances) then) =
-      __$$_FederatedInstancesCopyWithImpl<$Res>;
+  factory _$$FederatedInstancesImplCopyWith(_$FederatedInstancesImpl value,
+          $Res Function(_$FederatedInstancesImpl) then) =
+      __$$FederatedInstancesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {List<Instance> linked, List<Instance> allowed, List<Instance> blocked});
+      {List<InstanceWithFederationState> linked,
+      List<InstanceWithFederationState> allowed,
+      List<InstanceWithFederationState> blocked});
 }
 
 /// @nodoc
-class __$$_FederatedInstancesCopyWithImpl<$Res>
-    extends _$FederatedInstancesCopyWithImpl<$Res, _$_FederatedInstances>
-    implements _$$_FederatedInstancesCopyWith<$Res> {
-  __$$_FederatedInstancesCopyWithImpl(
-      _$_FederatedInstances _value, $Res Function(_$_FederatedInstances) _then)
+class __$$FederatedInstancesImplCopyWithImpl<$Res>
+    extends _$FederatedInstancesCopyWithImpl<$Res, _$FederatedInstancesImpl>
+    implements _$$FederatedInstancesImplCopyWith<$Res> {
+  __$$FederatedInstancesImplCopyWithImpl(_$FederatedInstancesImpl _value,
+      $Res Function(_$FederatedInstancesImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -101,19 +108,19 @@ class __$$_FederatedInstancesCopyWithImpl<$Res>
     Object? allowed = null,
     Object? blocked = null,
   }) {
-    return _then(_$_FederatedInstances(
+    return _then(_$FederatedInstancesImpl(
       linked: null == linked
           ? _value._linked
           : linked // ignore: cast_nullable_to_non_nullable
-              as List<Instance>,
+              as List<InstanceWithFederationState>,
       allowed: null == allowed
           ? _value._allowed
           : allowed // ignore: cast_nullable_to_non_nullable
-              as List<Instance>,
+              as List<InstanceWithFederationState>,
       blocked: null == blocked
           ? _value._blocked
           : blocked // ignore: cast_nullable_to_non_nullable
-              as List<Instance>,
+              as List<InstanceWithFederationState>,
     ));
   }
 }
@@ -121,38 +128,38 @@ class __$$_FederatedInstancesCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_FederatedInstances extends _FederatedInstances {
-  const _$_FederatedInstances(
-      {required final List<Instance> linked,
-      required final List<Instance> allowed,
-      required final List<Instance> blocked})
+class _$FederatedInstancesImpl extends _FederatedInstances {
+  const _$FederatedInstancesImpl(
+      {required final List<InstanceWithFederationState> linked,
+      required final List<InstanceWithFederationState> allowed,
+      required final List<InstanceWithFederationState> blocked})
       : _linked = linked,
         _allowed = allowed,
         _blocked = blocked,
         super._();
 
-  factory _$_FederatedInstances.fromJson(Map<String, dynamic> json) =>
-      _$$_FederatedInstancesFromJson(json);
+  factory _$FederatedInstancesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$FederatedInstancesImplFromJson(json);
 
-  final List<Instance> _linked;
+  final List<InstanceWithFederationState> _linked;
   @override
-  List<Instance> get linked {
+  List<InstanceWithFederationState> get linked {
     if (_linked is EqualUnmodifiableListView) return _linked;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_linked);
   }
 
-  final List<Instance> _allowed;
+  final List<InstanceWithFederationState> _allowed;
   @override
-  List<Instance> get allowed {
+  List<InstanceWithFederationState> get allowed {
     if (_allowed is EqualUnmodifiableListView) return _allowed;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_allowed);
   }
 
-  final List<Instance> _blocked;
+  final List<InstanceWithFederationState> _blocked;
   @override
-  List<Instance> get blocked {
+  List<InstanceWithFederationState> get blocked {
     if (_blocked is EqualUnmodifiableListView) return _blocked;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_blocked);
@@ -167,7 +174,7 @@ class _$_FederatedInstances extends _FederatedInstances {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FederatedInstances &&
+            other is _$FederatedInstancesImpl &&
             const DeepCollectionEquality().equals(other._linked, _linked) &&
             const DeepCollectionEquality().equals(other._allowed, _allowed) &&
             const DeepCollectionEquality().equals(other._blocked, _blocked));
@@ -184,13 +191,13 @@ class _$_FederatedInstances extends _FederatedInstances {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FederatedInstancesCopyWith<_$_FederatedInstances> get copyWith =>
-      __$$_FederatedInstancesCopyWithImpl<_$_FederatedInstances>(
+  _$$FederatedInstancesImplCopyWith<_$FederatedInstancesImpl> get copyWith =>
+      __$$FederatedInstancesImplCopyWithImpl<_$FederatedInstancesImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FederatedInstancesToJson(
+    return _$$FederatedInstancesImplToJson(
       this,
     );
   }
@@ -198,22 +205,23 @@ class _$_FederatedInstances extends _FederatedInstances {
 
 abstract class _FederatedInstances extends FederatedInstances {
   const factory _FederatedInstances(
-      {required final List<Instance> linked,
-      required final List<Instance> allowed,
-      required final List<Instance> blocked}) = _$_FederatedInstances;
+          {required final List<InstanceWithFederationState> linked,
+          required final List<InstanceWithFederationState> allowed,
+          required final List<InstanceWithFederationState> blocked}) =
+      _$FederatedInstancesImpl;
   const _FederatedInstances._() : super._();
 
   factory _FederatedInstances.fromJson(Map<String, dynamic> json) =
-      _$_FederatedInstances.fromJson;
+      _$FederatedInstancesImpl.fromJson;
 
   @override
-  List<Instance> get linked;
+  List<InstanceWithFederationState> get linked;
   @override
-  List<Instance> get allowed;
+  List<InstanceWithFederationState> get allowed;
   @override
-  List<Instance> get blocked;
+  List<InstanceWithFederationState> get blocked;
   @override
   @JsonKey(ignore: true)
-  _$$_FederatedInstancesCopyWith<_$_FederatedInstances> get copyWith =>
+  _$$FederatedInstancesImplCopyWith<_$FederatedInstancesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

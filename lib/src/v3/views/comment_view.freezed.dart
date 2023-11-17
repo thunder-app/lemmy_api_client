@@ -180,11 +180,11 @@ class _$CommentViewCopyWithImpl<$Res, $Val extends CommentView>
 }
 
 /// @nodoc
-abstract class _$$_CommentViewCopyWith<$Res>
+abstract class _$$CommentViewImplCopyWith<$Res>
     implements $CommentViewCopyWith<$Res> {
-  factory _$$_CommentViewCopyWith(
-          _$_CommentView value, $Res Function(_$_CommentView) then) =
-      __$$_CommentViewCopyWithImpl<$Res>;
+  factory _$$CommentViewImplCopyWith(
+          _$CommentViewImpl value, $Res Function(_$CommentViewImpl) then) =
+      __$$CommentViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -213,11 +213,11 @@ abstract class _$$_CommentViewCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CommentViewCopyWithImpl<$Res>
-    extends _$CommentViewCopyWithImpl<$Res, _$_CommentView>
-    implements _$$_CommentViewCopyWith<$Res> {
-  __$$_CommentViewCopyWithImpl(
-      _$_CommentView _value, $Res Function(_$_CommentView) _then)
+class __$$CommentViewImplCopyWithImpl<$Res>
+    extends _$CommentViewCopyWithImpl<$Res, _$CommentViewImpl>
+    implements _$$CommentViewImplCopyWith<$Res> {
+  __$$CommentViewImplCopyWithImpl(
+      _$CommentViewImpl _value, $Res Function(_$CommentViewImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -235,7 +235,7 @@ class __$$_CommentViewCopyWithImpl<$Res>
     Object? creatorBlocked = null,
     Object? myVote = freezed,
   }) {
-    return _then(_$_CommentView(
+    return _then(_$CommentViewImpl(
       comment: null == comment
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
@@ -287,8 +287,8 @@ class __$$_CommentViewCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_CommentView extends _CommentView {
-  const _$_CommentView(
+class _$CommentViewImpl extends _CommentView {
+  const _$CommentViewImpl(
       {required this.comment,
       required this.creator,
       required this.post,
@@ -302,8 +302,8 @@ class _$_CommentView extends _CommentView {
       this.myVote})
       : super._();
 
-  factory _$_CommentView.fromJson(Map<String, dynamic> json) =>
-      _$$_CommentViewFromJson(json);
+  factory _$CommentViewImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CommentViewImplFromJson(json);
 
   @override
   final Comment comment;
@@ -338,7 +338,7 @@ class _$_CommentView extends _CommentView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CommentView &&
+            other is _$CommentViewImpl &&
             (identical(other.comment, comment) || other.comment == comment) &&
             (identical(other.creator, creator) || other.creator == creator) &&
             (identical(other.post, post) || other.post == post) &&
@@ -378,12 +378,12 @@ class _$_CommentView extends _CommentView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CommentViewCopyWith<_$_CommentView> get copyWith =>
-      __$$_CommentViewCopyWithImpl<_$_CommentView>(this, _$identity);
+  _$$CommentViewImplCopyWith<_$CommentViewImpl> get copyWith =>
+      __$$CommentViewImplCopyWithImpl<_$CommentViewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommentViewToJson(
+    return _$$CommentViewImplToJson(
       this,
     );
   }
@@ -401,11 +401,11 @@ abstract class _CommentView extends CommentView {
       required final SubscribedType subscribed,
       required final bool saved,
       required final bool creatorBlocked,
-      final int? myVote}) = _$_CommentView;
+      final int? myVote}) = _$CommentViewImpl;
   const _CommentView._() : super._();
 
   factory _CommentView.fromJson(Map<String, dynamic> json) =
-      _$_CommentView.fromJson;
+      _$CommentViewImpl.fromJson;
 
   @override
   Comment get comment;
@@ -431,6 +431,6 @@ abstract class _CommentView extends CommentView {
   int? get myVote;
   @override
   @JsonKey(ignore: true)
-  _$$_CommentViewCopyWith<_$_CommentView> get copyWith =>
+  _$$CommentViewImplCopyWith<_$CommentViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -85,11 +85,11 @@ class _$AdminPurgePersonCopyWithImpl<$Res, $Val extends AdminPurgePerson>
 }
 
 /// @nodoc
-abstract class _$$_AdminPurgePersonCopyWith<$Res>
+abstract class _$$AdminPurgePersonImplCopyWith<$Res>
     implements $AdminPurgePersonCopyWith<$Res> {
-  factory _$$_AdminPurgePersonCopyWith(
-          _$_AdminPurgePerson value, $Res Function(_$_AdminPurgePerson) then) =
-      __$$_AdminPurgePersonCopyWithImpl<$Res>;
+  factory _$$AdminPurgePersonImplCopyWith(_$AdminPurgePersonImpl value,
+          $Res Function(_$AdminPurgePersonImpl) then) =
+      __$$AdminPurgePersonImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -100,11 +100,11 @@ abstract class _$$_AdminPurgePersonCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AdminPurgePersonCopyWithImpl<$Res>
-    extends _$AdminPurgePersonCopyWithImpl<$Res, _$_AdminPurgePerson>
-    implements _$$_AdminPurgePersonCopyWith<$Res> {
-  __$$_AdminPurgePersonCopyWithImpl(
-      _$_AdminPurgePerson _value, $Res Function(_$_AdminPurgePerson) _then)
+class __$$AdminPurgePersonImplCopyWithImpl<$Res>
+    extends _$AdminPurgePersonCopyWithImpl<$Res, _$AdminPurgePersonImpl>
+    implements _$$AdminPurgePersonImplCopyWith<$Res> {
+  __$$AdminPurgePersonImplCopyWithImpl(_$AdminPurgePersonImpl _value,
+      $Res Function(_$AdminPurgePersonImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -115,7 +115,7 @@ class __$$_AdminPurgePersonCopyWithImpl<$Res>
     Object? reason = freezed,
     Object? when = null,
   }) {
-    return _then(_$_AdminPurgePerson(
+    return _then(_$AdminPurgePersonImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -139,16 +139,16 @@ class __$$_AdminPurgePersonCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_AdminPurgePerson extends _AdminPurgePerson {
-  const _$_AdminPurgePerson(
+class _$AdminPurgePersonImpl extends _AdminPurgePerson {
+  const _$AdminPurgePersonImpl(
       {required this.id,
       required this.adminPersonId,
       this.reason,
       @JsonKey(name: 'when_') required this.when})
       : super._();
 
-  factory _$_AdminPurgePerson.fromJson(Map<String, dynamic> json) =>
-      _$$_AdminPurgePersonFromJson(json);
+  factory _$AdminPurgePersonImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AdminPurgePersonImplFromJson(json);
 
   @override
   final int id;
@@ -169,7 +169,7 @@ class _$_AdminPurgePerson extends _AdminPurgePerson {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AdminPurgePerson &&
+            other is _$AdminPurgePersonImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.adminPersonId, adminPersonId) ||
                 other.adminPersonId == adminPersonId) &&
@@ -184,12 +184,13 @@ class _$_AdminPurgePerson extends _AdminPurgePerson {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AdminPurgePersonCopyWith<_$_AdminPurgePerson> get copyWith =>
-      __$$_AdminPurgePersonCopyWithImpl<_$_AdminPurgePerson>(this, _$identity);
+  _$$AdminPurgePersonImplCopyWith<_$AdminPurgePersonImpl> get copyWith =>
+      __$$AdminPurgePersonImplCopyWithImpl<_$AdminPurgePersonImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AdminPurgePersonToJson(
+    return _$$AdminPurgePersonImplToJson(
       this,
     );
   }
@@ -201,11 +202,11 @@ abstract class _AdminPurgePerson extends AdminPurgePerson {
           required final int adminPersonId,
           final String? reason,
           @JsonKey(name: 'when_') required final String when}) =
-      _$_AdminPurgePerson;
+      _$AdminPurgePersonImpl;
   const _AdminPurgePerson._() : super._();
 
   factory _AdminPurgePerson.fromJson(Map<String, dynamic> json) =
-      _$_AdminPurgePerson.fromJson;
+      _$AdminPurgePersonImpl.fromJson;
 
   @override
   int get id;
@@ -218,6 +219,6 @@ abstract class _AdminPurgePerson extends AdminPurgePerson {
   String get when;
   @override
   @JsonKey(ignore: true)
-  _$$_AdminPurgePersonCopyWith<_$_AdminPurgePerson> get copyWith =>
+  _$$AdminPurgePersonImplCopyWith<_$AdminPurgePersonImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

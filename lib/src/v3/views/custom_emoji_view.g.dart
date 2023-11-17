@@ -6,8 +6,9 @@ part of 'custom_emoji_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CustomEmojiView _$$_CustomEmojiViewFromJson(Map<String, dynamic> json) =>
-    _$_CustomEmojiView(
+_$CustomEmojiViewImpl _$$CustomEmojiViewImplFromJson(
+        Map<String, dynamic> json) =>
+    _$CustomEmojiViewImpl(
       customEmoji:
           CustomEmoji.fromJson(json['custom_emoji'] as Map<String, dynamic>),
       keywords: (json['keywords'] as List<dynamic>)
@@ -15,7 +16,8 @@ _$_CustomEmojiView _$$_CustomEmojiViewFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_CustomEmojiViewToJson(_$_CustomEmojiView instance) =>
+Map<String, dynamic> _$$CustomEmojiViewImplToJson(
+        _$CustomEmojiViewImpl instance) =>
     <String, dynamic>{
       'custom_emoji': instance.customEmoji.toJson(),
       'keywords': instance.keywords.map((e) => e.toJson()).toList(),

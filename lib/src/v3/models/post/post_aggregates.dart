@@ -10,7 +10,7 @@ part 'post_aggregates.g.dart';
 class PostAggregates with _$PostAggregates {
   @modelSerde
   const factory PostAggregates({
-    required int id,
+    @deprecated int? id,
     required int postId,
     required int comments,
     required int score,

@@ -62,22 +62,22 @@ class _$UpdateTotpResponseCopyWithImpl<$Res, $Val extends UpdateTotpResponse>
 }
 
 /// @nodoc
-abstract class _$$_UpdateTotpResponseCopyWith<$Res>
+abstract class _$$UpdateTotpResponseImplCopyWith<$Res>
     implements $UpdateTotpResponseCopyWith<$Res> {
-  factory _$$_UpdateTotpResponseCopyWith(_$_UpdateTotpResponse value,
-          $Res Function(_$_UpdateTotpResponse) then) =
-      __$$_UpdateTotpResponseCopyWithImpl<$Res>;
+  factory _$$UpdateTotpResponseImplCopyWith(_$UpdateTotpResponseImpl value,
+          $Res Function(_$UpdateTotpResponseImpl) then) =
+      __$$UpdateTotpResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool enabled});
 }
 
 /// @nodoc
-class __$$_UpdateTotpResponseCopyWithImpl<$Res>
-    extends _$UpdateTotpResponseCopyWithImpl<$Res, _$_UpdateTotpResponse>
-    implements _$$_UpdateTotpResponseCopyWith<$Res> {
-  __$$_UpdateTotpResponseCopyWithImpl(
-      _$_UpdateTotpResponse _value, $Res Function(_$_UpdateTotpResponse) _then)
+class __$$UpdateTotpResponseImplCopyWithImpl<$Res>
+    extends _$UpdateTotpResponseCopyWithImpl<$Res, _$UpdateTotpResponseImpl>
+    implements _$$UpdateTotpResponseImplCopyWith<$Res> {
+  __$$UpdateTotpResponseImplCopyWithImpl(_$UpdateTotpResponseImpl _value,
+      $Res Function(_$UpdateTotpResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -85,7 +85,7 @@ class __$$_UpdateTotpResponseCopyWithImpl<$Res>
   $Res call({
     Object? enabled = null,
   }) {
-    return _then(_$_UpdateTotpResponse(
+    return _then(_$UpdateTotpResponseImpl(
       enabled: null == enabled
           ? _value.enabled
           : enabled // ignore: cast_nullable_to_non_nullable
@@ -97,11 +97,11 @@ class __$$_UpdateTotpResponseCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_UpdateTotpResponse extends _UpdateTotpResponse {
-  const _$_UpdateTotpResponse({required this.enabled}) : super._();
+class _$UpdateTotpResponseImpl extends _UpdateTotpResponse {
+  const _$UpdateTotpResponseImpl({required this.enabled}) : super._();
 
-  factory _$_UpdateTotpResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_UpdateTotpResponseFromJson(json);
+  factory _$UpdateTotpResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UpdateTotpResponseImplFromJson(json);
 
   @override
   final bool enabled;
@@ -115,7 +115,7 @@ class _$_UpdateTotpResponse extends _UpdateTotpResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UpdateTotpResponse &&
+            other is _$UpdateTotpResponseImpl &&
             (identical(other.enabled, enabled) || other.enabled == enabled));
   }
 
@@ -126,13 +126,13 @@ class _$_UpdateTotpResponse extends _UpdateTotpResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UpdateTotpResponseCopyWith<_$_UpdateTotpResponse> get copyWith =>
-      __$$_UpdateTotpResponseCopyWithImpl<_$_UpdateTotpResponse>(
+  _$$UpdateTotpResponseImplCopyWith<_$UpdateTotpResponseImpl> get copyWith =>
+      __$$UpdateTotpResponseImplCopyWithImpl<_$UpdateTotpResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UpdateTotpResponseToJson(
+    return _$$UpdateTotpResponseImplToJson(
       this,
     );
   }
@@ -140,16 +140,16 @@ class _$_UpdateTotpResponse extends _UpdateTotpResponse {
 
 abstract class _UpdateTotpResponse extends UpdateTotpResponse {
   const factory _UpdateTotpResponse({required final bool enabled}) =
-      _$_UpdateTotpResponse;
+      _$UpdateTotpResponseImpl;
   const _UpdateTotpResponse._() : super._();
 
   factory _UpdateTotpResponse.fromJson(Map<String, dynamic> json) =
-      _$_UpdateTotpResponse.fromJson;
+      _$UpdateTotpResponseImpl.fromJson;
 
   @override
   bool get enabled;
   @override
   @JsonKey(ignore: true)
-  _$$_UpdateTotpResponseCopyWith<_$_UpdateTotpResponse> get copyWith =>
+  _$$UpdateTotpResponseImplCopyWith<_$UpdateTotpResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

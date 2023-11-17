@@ -6,7 +6,8 @@ part of 'post_view.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PostView _$$_PostViewFromJson(Map<String, dynamic> json) => _$_PostView(
+_$PostViewImpl _$$PostViewImplFromJson(Map<String, dynamic> json) =>
+    _$PostViewImpl(
       post: Post.fromJson(json['post'] as Map<String, dynamic>),
       creator: Person.fromJson(json['creator'] as Map<String, dynamic>),
       community: Community.fromJson(json['community'] as Map<String, dynamic>),
@@ -21,7 +22,7 @@ _$_PostView _$$_PostViewFromJson(Map<String, dynamic> json) => _$_PostView(
       unreadComments: json['unread_comments'] as int,
     );
 
-Map<String, dynamic> _$$_PostViewToJson(_$_PostView instance) =>
+Map<String, dynamic> _$$PostViewImplToJson(_$PostViewImpl instance) =>
     <String, dynamic>{
       'post': instance.post.toJson(),
       'creator': instance.creator.toJson(),

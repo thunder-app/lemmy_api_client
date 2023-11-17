@@ -106,11 +106,11 @@ class _$InstanceBlockViewCopyWithImpl<$Res, $Val extends InstanceBlockView>
 }
 
 /// @nodoc
-abstract class _$$_InstanceBlockViewCopyWith<$Res>
+abstract class _$$InstanceBlockViewImplCopyWith<$Res>
     implements $InstanceBlockViewCopyWith<$Res> {
-  factory _$$_InstanceBlockViewCopyWith(_$_InstanceBlockView value,
-          $Res Function(_$_InstanceBlockView) then) =
-      __$$_InstanceBlockViewCopyWithImpl<$Res>;
+  factory _$$InstanceBlockViewImplCopyWith(_$InstanceBlockViewImpl value,
+          $Res Function(_$InstanceBlockViewImpl) then) =
+      __$$InstanceBlockViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Person person, Instance instance, Site? site});
@@ -124,11 +124,11 @@ abstract class _$$_InstanceBlockViewCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_InstanceBlockViewCopyWithImpl<$Res>
-    extends _$InstanceBlockViewCopyWithImpl<$Res, _$_InstanceBlockView>
-    implements _$$_InstanceBlockViewCopyWith<$Res> {
-  __$$_InstanceBlockViewCopyWithImpl(
-      _$_InstanceBlockView _value, $Res Function(_$_InstanceBlockView) _then)
+class __$$InstanceBlockViewImplCopyWithImpl<$Res>
+    extends _$InstanceBlockViewCopyWithImpl<$Res, _$InstanceBlockViewImpl>
+    implements _$$InstanceBlockViewImplCopyWith<$Res> {
+  __$$InstanceBlockViewImplCopyWithImpl(_$InstanceBlockViewImpl _value,
+      $Res Function(_$InstanceBlockViewImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -138,7 +138,7 @@ class __$$_InstanceBlockViewCopyWithImpl<$Res>
     Object? instance = null,
     Object? site = freezed,
   }) {
-    return _then(_$_InstanceBlockView(
+    return _then(_$InstanceBlockViewImpl(
       person: null == person
           ? _value.person
           : person // ignore: cast_nullable_to_non_nullable
@@ -158,13 +158,13 @@ class __$$_InstanceBlockViewCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_InstanceBlockView extends _InstanceBlockView {
-  const _$_InstanceBlockView(
+class _$InstanceBlockViewImpl extends _InstanceBlockView {
+  const _$InstanceBlockViewImpl(
       {required this.person, required this.instance, this.site})
       : super._();
 
-  factory _$_InstanceBlockView.fromJson(Map<String, dynamic> json) =>
-      _$$_InstanceBlockViewFromJson(json);
+  factory _$InstanceBlockViewImpl.fromJson(Map<String, dynamic> json) =>
+      _$$InstanceBlockViewImplFromJson(json);
 
   @override
   final Person person;
@@ -182,7 +182,7 @@ class _$_InstanceBlockView extends _InstanceBlockView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InstanceBlockView &&
+            other is _$InstanceBlockViewImpl &&
             (identical(other.person, person) || other.person == person) &&
             (identical(other.instance, instance) ||
                 other.instance == instance) &&
@@ -196,13 +196,13 @@ class _$_InstanceBlockView extends _InstanceBlockView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InstanceBlockViewCopyWith<_$_InstanceBlockView> get copyWith =>
-      __$$_InstanceBlockViewCopyWithImpl<_$_InstanceBlockView>(
+  _$$InstanceBlockViewImplCopyWith<_$InstanceBlockViewImpl> get copyWith =>
+      __$$InstanceBlockViewImplCopyWithImpl<_$InstanceBlockViewImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_InstanceBlockViewToJson(
+    return _$$InstanceBlockViewImplToJson(
       this,
     );
   }
@@ -212,11 +212,11 @@ abstract class _InstanceBlockView extends InstanceBlockView {
   const factory _InstanceBlockView(
       {required final Person person,
       required final Instance instance,
-      final Site? site}) = _$_InstanceBlockView;
+      final Site? site}) = _$InstanceBlockViewImpl;
   const _InstanceBlockView._() : super._();
 
   factory _InstanceBlockView.fromJson(Map<String, dynamic> json) =
-      _$_InstanceBlockView.fromJson;
+      _$InstanceBlockViewImpl.fromJson;
 
   @override
   Person get person;
@@ -226,6 +226,6 @@ abstract class _InstanceBlockView extends InstanceBlockView {
   Site? get site;
   @override
   @JsonKey(ignore: true)
-  _$$_InstanceBlockViewCopyWith<_$_InstanceBlockView> get copyWith =>
+  _$$InstanceBlockViewImplCopyWith<_$InstanceBlockViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

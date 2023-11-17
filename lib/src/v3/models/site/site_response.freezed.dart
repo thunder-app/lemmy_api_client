@@ -78,11 +78,11 @@ class _$SiteResponseCopyWithImpl<$Res, $Val extends SiteResponse>
 }
 
 /// @nodoc
-abstract class _$$_SiteResponseCopyWith<$Res>
+abstract class _$$SiteResponseImplCopyWith<$Res>
     implements $SiteResponseCopyWith<$Res> {
-  factory _$$_SiteResponseCopyWith(
-          _$_SiteResponse value, $Res Function(_$_SiteResponse) then) =
-      __$$_SiteResponseCopyWithImpl<$Res>;
+  factory _$$SiteResponseImplCopyWith(
+          _$SiteResponseImpl value, $Res Function(_$SiteResponseImpl) then) =
+      __$$SiteResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({SiteView siteView, List<Tagline> taglines});
@@ -92,11 +92,11 @@ abstract class _$$_SiteResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SiteResponseCopyWithImpl<$Res>
-    extends _$SiteResponseCopyWithImpl<$Res, _$_SiteResponse>
-    implements _$$_SiteResponseCopyWith<$Res> {
-  __$$_SiteResponseCopyWithImpl(
-      _$_SiteResponse _value, $Res Function(_$_SiteResponse) _then)
+class __$$SiteResponseImplCopyWithImpl<$Res>
+    extends _$SiteResponseCopyWithImpl<$Res, _$SiteResponseImpl>
+    implements _$$SiteResponseImplCopyWith<$Res> {
+  __$$SiteResponseImplCopyWithImpl(
+      _$SiteResponseImpl _value, $Res Function(_$SiteResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -105,7 +105,7 @@ class __$$_SiteResponseCopyWithImpl<$Res>
     Object? siteView = null,
     Object? taglines = null,
   }) {
-    return _then(_$_SiteResponse(
+    return _then(_$SiteResponseImpl(
       siteView: null == siteView
           ? _value.siteView
           : siteView // ignore: cast_nullable_to_non_nullable
@@ -121,14 +121,14 @@ class __$$_SiteResponseCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_SiteResponse extends _SiteResponse {
-  const _$_SiteResponse(
+class _$SiteResponseImpl extends _SiteResponse {
+  const _$SiteResponseImpl(
       {required this.siteView, required final List<Tagline> taglines})
       : _taglines = taglines,
         super._();
 
-  factory _$_SiteResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_SiteResponseFromJson(json);
+  factory _$SiteResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SiteResponseImplFromJson(json);
 
   @override
   final SiteView siteView;
@@ -149,7 +149,7 @@ class _$_SiteResponse extends _SiteResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SiteResponse &&
+            other is _$SiteResponseImpl &&
             (identical(other.siteView, siteView) ||
                 other.siteView == siteView) &&
             const DeepCollectionEquality().equals(other._taglines, _taglines));
@@ -163,12 +163,12 @@ class _$_SiteResponse extends _SiteResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SiteResponseCopyWith<_$_SiteResponse> get copyWith =>
-      __$$_SiteResponseCopyWithImpl<_$_SiteResponse>(this, _$identity);
+  _$$SiteResponseImplCopyWith<_$SiteResponseImpl> get copyWith =>
+      __$$SiteResponseImplCopyWithImpl<_$SiteResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SiteResponseToJson(
+    return _$$SiteResponseImplToJson(
       this,
     );
   }
@@ -177,11 +177,11 @@ class _$_SiteResponse extends _SiteResponse {
 abstract class _SiteResponse extends SiteResponse {
   const factory _SiteResponse(
       {required final SiteView siteView,
-      required final List<Tagline> taglines}) = _$_SiteResponse;
+      required final List<Tagline> taglines}) = _$SiteResponseImpl;
   const _SiteResponse._() : super._();
 
   factory _SiteResponse.fromJson(Map<String, dynamic> json) =
-      _$_SiteResponse.fromJson;
+      _$SiteResponseImpl.fromJson;
 
   @override
   SiteView get siteView;
@@ -189,6 +189,6 @@ abstract class _SiteResponse extends SiteResponse {
   List<Tagline> get taglines;
   @override
   @JsonKey(ignore: true)
-  _$$_SiteResponseCopyWith<_$_SiteResponse> get copyWith =>
+  _$$SiteResponseImplCopyWith<_$SiteResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

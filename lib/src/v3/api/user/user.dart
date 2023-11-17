@@ -644,6 +644,7 @@ class SaveUserSettings
     String? postListingMode, // Available in lemmy v0.19.0 and above
     bool? enableKeyboardNavigation, // Available in lemmy v0.19.0 and above
     bool? enableAnimatedImages, // Available in lemmy v0.19.0 and above
+    bool? collapseBotComments, // Available in lemmy v0.19.0 and above
   }) = _SaveUserSettings;
 
   const SaveUserSettings._();

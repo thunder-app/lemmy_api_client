@@ -203,11 +203,11 @@ class _$CommentReportViewCopyWithImpl<$Res, $Val extends CommentReportView>
 }
 
 /// @nodoc
-abstract class _$$_CommentReportViewCopyWith<$Res>
+abstract class _$$CommentReportViewImplCopyWith<$Res>
     implements $CommentReportViewCopyWith<$Res> {
-  factory _$$_CommentReportViewCopyWith(_$_CommentReportView value,
-          $Res Function(_$_CommentReportView) then) =
-      __$$_CommentReportViewCopyWithImpl<$Res>;
+  factory _$$CommentReportViewImplCopyWith(_$CommentReportViewImpl value,
+          $Res Function(_$CommentReportViewImpl) then) =
+      __$$CommentReportViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -241,11 +241,11 @@ abstract class _$$_CommentReportViewCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CommentReportViewCopyWithImpl<$Res>
-    extends _$CommentReportViewCopyWithImpl<$Res, _$_CommentReportView>
-    implements _$$_CommentReportViewCopyWith<$Res> {
-  __$$_CommentReportViewCopyWithImpl(
-      _$_CommentReportView _value, $Res Function(_$_CommentReportView) _then)
+class __$$CommentReportViewImplCopyWithImpl<$Res>
+    extends _$CommentReportViewCopyWithImpl<$Res, _$CommentReportViewImpl>
+    implements _$$CommentReportViewImplCopyWith<$Res> {
+  __$$CommentReportViewImplCopyWithImpl(_$CommentReportViewImpl _value,
+      $Res Function(_$CommentReportViewImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -262,7 +262,7 @@ class __$$_CommentReportViewCopyWithImpl<$Res>
     Object? myVote = freezed,
     Object? resolver = freezed,
   }) {
-    return _then(_$_CommentReportView(
+    return _then(_$CommentReportViewImpl(
       commentReport: null == commentReport
           ? _value.commentReport
           : commentReport // ignore: cast_nullable_to_non_nullable
@@ -310,8 +310,8 @@ class __$$_CommentReportViewCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_CommentReportView extends _CommentReportView {
-  const _$_CommentReportView(
+class _$CommentReportViewImpl extends _CommentReportView {
+  const _$CommentReportViewImpl(
       {required this.commentReport,
       required this.comment,
       required this.post,
@@ -324,8 +324,8 @@ class _$_CommentReportView extends _CommentReportView {
       this.resolver})
       : super._();
 
-  factory _$_CommentReportView.fromJson(Map<String, dynamic> json) =>
-      _$$_CommentReportViewFromJson(json);
+  factory _$CommentReportViewImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CommentReportViewImplFromJson(json);
 
   @override
   final CommentReport commentReport;
@@ -357,7 +357,7 @@ class _$_CommentReportView extends _CommentReportView {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CommentReportView &&
+            other is _$CommentReportViewImpl &&
             (identical(other.commentReport, commentReport) ||
                 other.commentReport == commentReport) &&
             (identical(other.comment, comment) || other.comment == comment) &&
@@ -395,13 +395,13 @@ class _$_CommentReportView extends _CommentReportView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CommentReportViewCopyWith<_$_CommentReportView> get copyWith =>
-      __$$_CommentReportViewCopyWithImpl<_$_CommentReportView>(
+  _$$CommentReportViewImplCopyWith<_$CommentReportViewImpl> get copyWith =>
+      __$$CommentReportViewImplCopyWithImpl<_$CommentReportViewImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommentReportViewToJson(
+    return _$$CommentReportViewImplToJson(
       this,
     );
   }
@@ -418,11 +418,11 @@ abstract class _CommentReportView extends CommentReportView {
       required final CommentAggregates counts,
       required final bool creatorBannedFromCommunity,
       final num? myVote,
-      final Person? resolver}) = _$_CommentReportView;
+      final Person? resolver}) = _$CommentReportViewImpl;
   const _CommentReportView._() : super._();
 
   factory _CommentReportView.fromJson(Map<String, dynamic> json) =
-      _$_CommentReportView.fromJson;
+      _$CommentReportViewImpl.fromJson;
 
   @override
   CommentReport get commentReport;
@@ -446,6 +446,6 @@ abstract class _CommentReportView extends CommentReportView {
   Person? get resolver;
   @override
   @JsonKey(ignore: true)
-  _$$_CommentReportViewCopyWith<_$_CommentReportView> get copyWith =>
+  _$$CommentReportViewImplCopyWith<_$CommentReportViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

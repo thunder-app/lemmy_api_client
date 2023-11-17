@@ -6,10 +6,10 @@ part of 'local_site_rate_limit.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_LocalSiteRateLimit _$$_LocalSiteRateLimitFromJson(
+_$LocalSiteRateLimitImpl _$$LocalSiteRateLimitImplFromJson(
         Map<String, dynamic> json) =>
-    _$_LocalSiteRateLimit(
-      id: json['id'] as int,
+    _$LocalSiteRateLimitImpl(
+      id: json['id'] as int?,
       localSiteId: json['local_site_id'] as int,
       message: json['message'] as int,
       messagePerSecond: json['message_per_second'] as int,
@@ -31,8 +31,8 @@ _$_LocalSiteRateLimit _$$_LocalSiteRateLimitFromJson(
           json['import_user_settings_per_second'] as int?,
     );
 
-Map<String, dynamic> _$$_LocalSiteRateLimitToJson(
-        _$_LocalSiteRateLimit instance) =>
+Map<String, dynamic> _$$LocalSiteRateLimitImplToJson(
+        _$LocalSiteRateLimitImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'local_site_id': instance.localSiteId,

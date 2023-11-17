@@ -33,6 +33,8 @@ export 'custom_emoji/delete_custom_emoji_response.dart';
 export 'federated_instances/federated_instances.dart';
 export 'federated_instances/get_federated_instances_response.dart';
 export 'federated_instances/instance.dart';
+export 'federated_instances/instance_with_federation_state.dart';
+export 'federated_instances/readable_federation_state.dart';
 export 'language/language.dart';
 export 'local_user/local_user.dart';
 export 'mod/mod_add.dart';
