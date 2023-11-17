@@ -22,12 +22,12 @@ ReadableFederationState _$ReadableFederationStateFromJson(
 /// @nodoc
 mixin _$ReadableFederationState {
   int get instanceId => throw _privateConstructorUsedError;
-  int get lastSuccessfulId => throw _privateConstructorUsedError;
-  DateTime get lastSuccessfulPublishedTime =>
+  int? get lastSuccessfulId => throw _privateConstructorUsedError;
+  DateTime? get lastSuccessfulPublishedTime =>
       throw _privateConstructorUsedError;
   int get failCount => throw _privateConstructorUsedError;
-  DateTime get lastRetry => throw _privateConstructorUsedError;
-  DateTime get nextRetry => throw _privateConstructorUsedError;
+  DateTime? get lastRetry => throw _privateConstructorUsedError;
+  DateTime? get nextRetry => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -43,11 +43,11 @@ abstract class $ReadableFederationStateCopyWith<$Res> {
   @useResult
   $Res call(
       {int instanceId,
-      int lastSuccessfulId,
-      DateTime lastSuccessfulPublishedTime,
+      int? lastSuccessfulId,
+      DateTime? lastSuccessfulPublishedTime,
       int failCount,
-      DateTime lastRetry,
-      DateTime nextRetry});
+      DateTime? lastRetry,
+      DateTime? nextRetry});
 }
 
 /// @nodoc
@@ -65,37 +65,37 @@ class _$ReadableFederationStateCopyWithImpl<$Res,
   @override
   $Res call({
     Object? instanceId = null,
-    Object? lastSuccessfulId = null,
-    Object? lastSuccessfulPublishedTime = null,
+    Object? lastSuccessfulId = freezed,
+    Object? lastSuccessfulPublishedTime = freezed,
     Object? failCount = null,
-    Object? lastRetry = null,
-    Object? nextRetry = null,
+    Object? lastRetry = freezed,
+    Object? nextRetry = freezed,
   }) {
     return _then(_value.copyWith(
       instanceId: null == instanceId
           ? _value.instanceId
           : instanceId // ignore: cast_nullable_to_non_nullable
               as int,
-      lastSuccessfulId: null == lastSuccessfulId
+      lastSuccessfulId: freezed == lastSuccessfulId
           ? _value.lastSuccessfulId
           : lastSuccessfulId // ignore: cast_nullable_to_non_nullable
-              as int,
-      lastSuccessfulPublishedTime: null == lastSuccessfulPublishedTime
+              as int?,
+      lastSuccessfulPublishedTime: freezed == lastSuccessfulPublishedTime
           ? _value.lastSuccessfulPublishedTime
           : lastSuccessfulPublishedTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       failCount: null == failCount
           ? _value.failCount
           : failCount // ignore: cast_nullable_to_non_nullable
               as int,
-      lastRetry: null == lastRetry
+      lastRetry: freezed == lastRetry
           ? _value.lastRetry
           : lastRetry // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      nextRetry: null == nextRetry
+              as DateTime?,
+      nextRetry: freezed == nextRetry
           ? _value.nextRetry
           : nextRetry // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
     ) as $Val);
   }
 }
@@ -111,11 +111,11 @@ abstract class _$$ReadableFederationStateImplCopyWith<$Res>
   @useResult
   $Res call(
       {int instanceId,
-      int lastSuccessfulId,
-      DateTime lastSuccessfulPublishedTime,
+      int? lastSuccessfulId,
+      DateTime? lastSuccessfulPublishedTime,
       int failCount,
-      DateTime lastRetry,
-      DateTime nextRetry});
+      DateTime? lastRetry,
+      DateTime? nextRetry});
 }
 
 /// @nodoc
@@ -132,37 +132,37 @@ class __$$ReadableFederationStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? instanceId = null,
-    Object? lastSuccessfulId = null,
-    Object? lastSuccessfulPublishedTime = null,
+    Object? lastSuccessfulId = freezed,
+    Object? lastSuccessfulPublishedTime = freezed,
     Object? failCount = null,
-    Object? lastRetry = null,
-    Object? nextRetry = null,
+    Object? lastRetry = freezed,
+    Object? nextRetry = freezed,
   }) {
     return _then(_$ReadableFederationStateImpl(
       instanceId: null == instanceId
           ? _value.instanceId
           : instanceId // ignore: cast_nullable_to_non_nullable
               as int,
-      lastSuccessfulId: null == lastSuccessfulId
+      lastSuccessfulId: freezed == lastSuccessfulId
           ? _value.lastSuccessfulId
           : lastSuccessfulId // ignore: cast_nullable_to_non_nullable
-              as int,
-      lastSuccessfulPublishedTime: null == lastSuccessfulPublishedTime
+              as int?,
+      lastSuccessfulPublishedTime: freezed == lastSuccessfulPublishedTime
           ? _value.lastSuccessfulPublishedTime
           : lastSuccessfulPublishedTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       failCount: null == failCount
           ? _value.failCount
           : failCount // ignore: cast_nullable_to_non_nullable
               as int,
-      lastRetry: null == lastRetry
+      lastRetry: freezed == lastRetry
           ? _value.lastRetry
           : lastRetry // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      nextRetry: null == nextRetry
+              as DateTime?,
+      nextRetry: freezed == nextRetry
           ? _value.nextRetry
           : nextRetry // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
     ));
   }
 }
@@ -173,11 +173,11 @@ class __$$ReadableFederationStateImplCopyWithImpl<$Res>
 class _$ReadableFederationStateImpl extends _ReadableFederationState {
   const _$ReadableFederationStateImpl(
       {required this.instanceId,
-      required this.lastSuccessfulId,
-      required this.lastSuccessfulPublishedTime,
+      this.lastSuccessfulId,
+      this.lastSuccessfulPublishedTime,
       required this.failCount,
-      required this.lastRetry,
-      required this.nextRetry})
+      this.lastRetry,
+      this.nextRetry})
       : super._();
 
   factory _$ReadableFederationStateImpl.fromJson(Map<String, dynamic> json) =>
@@ -186,15 +186,15 @@ class _$ReadableFederationStateImpl extends _ReadableFederationState {
   @override
   final int instanceId;
   @override
-  final int lastSuccessfulId;
+  final int? lastSuccessfulId;
   @override
-  final DateTime lastSuccessfulPublishedTime;
+  final DateTime? lastSuccessfulPublishedTime;
   @override
   final int failCount;
   @override
-  final DateTime lastRetry;
+  final DateTime? lastRetry;
   @override
-  final DateTime nextRetry;
+  final DateTime? nextRetry;
 
   @override
   String toString() {
@@ -245,11 +245,11 @@ class _$ReadableFederationStateImpl extends _ReadableFederationState {
 abstract class _ReadableFederationState extends ReadableFederationState {
   const factory _ReadableFederationState(
       {required final int instanceId,
-      required final int lastSuccessfulId,
-      required final DateTime lastSuccessfulPublishedTime,
+      final int? lastSuccessfulId,
+      final DateTime? lastSuccessfulPublishedTime,
       required final int failCount,
-      required final DateTime lastRetry,
-      required final DateTime nextRetry}) = _$ReadableFederationStateImpl;
+      final DateTime? lastRetry,
+      final DateTime? nextRetry}) = _$ReadableFederationStateImpl;
   const _ReadableFederationState._() : super._();
 
   factory _ReadableFederationState.fromJson(Map<String, dynamic> json) =
@@ -258,15 +258,15 @@ abstract class _ReadableFederationState extends ReadableFederationState {
   @override
   int get instanceId;
   @override
-  int get lastSuccessfulId;
+  int? get lastSuccessfulId;
   @override
-  DateTime get lastSuccessfulPublishedTime;
+  DateTime? get lastSuccessfulPublishedTime;
   @override
   int get failCount;
   @override
-  DateTime get lastRetry;
+  DateTime? get lastRetry;
   @override
-  DateTime get nextRetry;
+  DateTime? get nextRetry;
   @override
   @JsonKey(ignore: true)
   _$$ReadableFederationStateImplCopyWith<_$ReadableFederationStateImpl>

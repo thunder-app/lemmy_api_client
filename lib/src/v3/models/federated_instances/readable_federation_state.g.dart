@@ -10,14 +10,15 @@ _$ReadableFederationStateImpl _$$ReadableFederationStateImplFromJson(
         Map<String, dynamic> json) =>
     _$ReadableFederationStateImpl(
       instanceId: json['instance_id'] as int,
-      lastSuccessfulId: json['last_successful_id'] as int,
-      lastSuccessfulPublishedTime: const ForceUtcDateTime()
-          .fromJson(json['last_successful_published_time'] as String),
+      lastSuccessfulId: json['last_successful_id'] as int?,
+      lastSuccessfulPublishedTime: _$JsonConverterFromJson<String, DateTime>(
+          json['last_successful_published_time'],
+          const ForceUtcDateTime().fromJson),
       failCount: json['fail_count'] as int,
-      lastRetry:
-          const ForceUtcDateTime().fromJson(json['last_retry'] as String),
-      nextRetry:
-          const ForceUtcDateTime().fromJson(json['next_retry'] as String),
+      lastRetry: _$JsonConverterFromJson<String, DateTime>(
+          json['last_retry'], const ForceUtcDateTime().fromJson),
+      nextRetry: _$JsonConverterFromJson<String, DateTime>(
+          json['next_retry'], const ForceUtcDateTime().fromJson),
     );
 
 Map<String, dynamic> _$$ReadableFederationStateImplToJson(
@@ -25,9 +26,24 @@ Map<String, dynamic> _$$ReadableFederationStateImplToJson(
     <String, dynamic>{
       'instance_id': instance.instanceId,
       'last_successful_id': instance.lastSuccessfulId,
-      'last_successful_published_time':
-          const ForceUtcDateTime().toJson(instance.lastSuccessfulPublishedTime),
+      'last_successful_published_time': _$JsonConverterToJson<String, DateTime>(
+          instance.lastSuccessfulPublishedTime,
+          const ForceUtcDateTime().toJson),
       'fail_count': instance.failCount,
-      'last_retry': const ForceUtcDateTime().toJson(instance.lastRetry),
-      'next_retry': const ForceUtcDateTime().toJson(instance.nextRetry),
+      'last_retry': _$JsonConverterToJson<String, DateTime>(
+          instance.lastRetry, const ForceUtcDateTime().toJson),
+      'next_retry': _$JsonConverterToJson<String, DateTime>(
+          instance.nextRetry, const ForceUtcDateTime().toJson),
     };
+
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) =>
+    json == null ? null : fromJson(json as Json);
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) =>
+    value == null ? null : toJson(value);

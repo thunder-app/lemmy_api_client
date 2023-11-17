@@ -11,11 +11,11 @@ class ReadableFederationState with _$ReadableFederationState {
   @modelSerde
   const factory ReadableFederationState({
     required int instanceId,
-    required int lastSuccessfulId,
-    required DateTime lastSuccessfulPublishedTime,
+    int? lastSuccessfulId,
+    DateTime? lastSuccessfulPublishedTime,
     required int failCount,
-    required DateTime lastRetry,
-    required DateTime nextRetry,
+    DateTime? lastRetry,
+    DateTime? nextRetry,
   }) = _ReadableFederationState;
 
   const ReadableFederationState._();
