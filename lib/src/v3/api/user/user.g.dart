@@ -162,7 +162,7 @@ Map<String, dynamic> _$$RegisterImplToJson(_$RegisterImpl instance) {
 _$LoginImpl _$$LoginImplFromJson(Map<String, dynamic> json) => _$LoginImpl(
       usernameOrEmail: json['username_or_email'] as String,
       password: json['password'] as String,
-      totp2faToken: json['totp2fa_token'] as String?,
+      totp2faToken: json['totp_2fa_token'] as String?,
     );
 
 Map<String, dynamic> _$$LoginImplToJson(_$LoginImpl instance) {
@@ -177,7 +177,7 @@ Map<String, dynamic> _$$LoginImplToJson(_$LoginImpl instance) {
     }
   }
 
-  writeNotNull('totp2fa_token', instance.totp2faToken);
+  writeNotNull('totp_2fa_token', instance.totp2faToken);
   return val;
 }
 
