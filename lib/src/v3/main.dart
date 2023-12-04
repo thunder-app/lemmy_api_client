@@ -23,6 +23,10 @@ class LemmyApiV3 {
       auth = (query as LemmyApiAuthenticatedQuery).auth;
     }
 
+    print(
+      '${DateTime.now().toIso8601String()}: ${query.httpMethod} ${query.path}',
+    );
+
     final res = await () {
       switch (query.httpMethod) {
         case HttpMethod.get:
