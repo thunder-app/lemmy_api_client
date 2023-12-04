@@ -12,7 +12,9 @@ class LemmyApiV3 {
   final String host;
   static const extraPath = '/api/v3';
 
-  const LemmyApiV3(this.host);
+  final bool debug;
+
+  const LemmyApiV3(this.host, {this.debug = false});
 
   /// Run a given query
   Future<T> run<T>(LemmyApiQuery<T> query) async {
@@ -23,9 +25,11 @@ class LemmyApiV3 {
       auth = (query as LemmyApiAuthenticatedQuery).auth;
     }
 
-    print(
-      '${DateTime.now().toIso8601String()}: ${query.httpMethod} ${query.path}',
-    );
+    if (debug) {
+      print(
+        '${DateTime.now().toIso8601String()}: ${query.httpMethod} ${query.path}',
+      );
+    }
 
     final res = await () {
       switch (query.httpMethod) {
