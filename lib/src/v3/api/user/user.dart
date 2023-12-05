@@ -635,7 +635,7 @@ class SaveUserSettings
     bool? botAccount,
     bool? showBotAccounts,
     bool? showReadPosts,
-    bool? showNewPostNotifs,
+    @deprecated bool? showNewPostNotifs,
     List<int>? discussionLanguages,
     @deprecated bool? generateTotp2fa,
     String? auth,
