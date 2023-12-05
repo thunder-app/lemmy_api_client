@@ -3768,6 +3768,7 @@ mixin _$SaveUserSettings {
   bool? get botAccount => throw _privateConstructorUsedError;
   bool? get showBotAccounts => throw _privateConstructorUsedError;
   bool? get showReadPosts => throw _privateConstructorUsedError;
+  @deprecated
   bool? get showNewPostNotifs => throw _privateConstructorUsedError;
   List<int>? get discussionLanguages => throw _privateConstructorUsedError;
   @deprecated
@@ -3816,7 +3817,7 @@ abstract class $SaveUserSettingsCopyWith<$Res> {
       bool? botAccount,
       bool? showBotAccounts,
       bool? showReadPosts,
-      bool? showNewPostNotifs,
+      @deprecated bool? showNewPostNotifs,
       List<int>? discussionLanguages,
       @deprecated bool? generateTotp2fa,
       String? auth,
@@ -4020,7 +4021,7 @@ abstract class _$$SaveUserSettingsImplCopyWith<$Res>
       bool? botAccount,
       bool? showBotAccounts,
       bool? showReadPosts,
-      bool? showNewPostNotifs,
+      @deprecated bool? showNewPostNotifs,
       List<int>? discussionLanguages,
       @deprecated bool? generateTotp2fa,
       String? auth,
@@ -4218,7 +4219,7 @@ class _$SaveUserSettingsImpl extends _SaveUserSettings {
       this.botAccount,
       this.showBotAccounts,
       this.showReadPosts,
-      this.showNewPostNotifs,
+      @deprecated this.showNewPostNotifs,
       final List<int>? discussionLanguages,
       @deprecated this.generateTotp2fa,
       this.auth,
@@ -4273,6 +4274,7 @@ class _$SaveUserSettingsImpl extends _SaveUserSettings {
   @override
   final bool? showReadPosts;
   @override
+  @deprecated
   final bool? showNewPostNotifs;
   final List<int>? _discussionLanguages;
   @override
@@ -4444,7 +4446,7 @@ abstract class _SaveUserSettings extends SaveUserSettings {
       final bool? botAccount,
       final bool? showBotAccounts,
       final bool? showReadPosts,
-      final bool? showNewPostNotifs,
+      @deprecated final bool? showNewPostNotifs,
       final List<int>? discussionLanguages,
       @deprecated final bool? generateTotp2fa,
       final String? auth,
@@ -4498,6 +4500,7 @@ abstract class _SaveUserSettings extends SaveUserSettings {
   @override
   bool? get showReadPosts;
   @override
+  @deprecated
   bool? get showNewPostNotifs;
   @override
   List<int>? get discussionLanguages;

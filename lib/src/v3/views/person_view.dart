@@ -12,6 +12,7 @@ class PersonView with _$PersonView {
   const factory PersonView({
     required Person person,
     required PersonAggregates counts,
+    bool? isAdmin, // Only available in lemmy v0.19.0 and above
   }) = _PersonView;
 
   const PersonView._();

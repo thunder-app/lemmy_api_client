@@ -22,6 +22,7 @@ PersonView _$PersonViewFromJson(Map<String, dynamic> json) {
 mixin _$PersonView {
   Person get person => throw _privateConstructorUsedError;
   PersonAggregates get counts => throw _privateConstructorUsedError;
+  bool? get isAdmin => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +36,7 @@ abstract class $PersonViewCopyWith<$Res> {
           PersonView value, $Res Function(PersonView) then) =
       _$PersonViewCopyWithImpl<$Res, PersonView>;
   @useResult
-  $Res call({Person person, PersonAggregates counts});
+  $Res call({Person person, PersonAggregates counts, bool? isAdmin});
 
   $PersonCopyWith<$Res> get person;
   $PersonAggregatesCopyWith<$Res> get counts;
@@ -56,6 +57,7 @@ class _$PersonViewCopyWithImpl<$Res, $Val extends PersonView>
   $Res call({
     Object? person = null,
     Object? counts = null,
+    Object? isAdmin = freezed,
   }) {
     return _then(_value.copyWith(
       person: null == person
@@ -66,6 +68,10 @@ class _$PersonViewCopyWithImpl<$Res, $Val extends PersonView>
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
               as PersonAggregates,
+      isAdmin: freezed == isAdmin
+          ? _value.isAdmin
+          : isAdmin // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ) as $Val);
   }
 
@@ -94,7 +100,7 @@ abstract class _$$PersonViewImplCopyWith<$Res>
       __$$PersonViewImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Person person, PersonAggregates counts});
+  $Res call({Person person, PersonAggregates counts, bool? isAdmin});
 
   @override
   $PersonCopyWith<$Res> get person;
@@ -115,6 +121,7 @@ class __$$PersonViewImplCopyWithImpl<$Res>
   $Res call({
     Object? person = null,
     Object? counts = null,
+    Object? isAdmin = freezed,
   }) {
     return _then(_$PersonViewImpl(
       person: null == person
@@ -125,6 +132,10 @@ class __$$PersonViewImplCopyWithImpl<$Res>
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
               as PersonAggregates,
+      isAdmin: freezed == isAdmin
+          ? _value.isAdmin
+          : isAdmin // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
@@ -133,7 +144,8 @@ class __$$PersonViewImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$PersonViewImpl extends _PersonView {
-  const _$PersonViewImpl({required this.person, required this.counts})
+  const _$PersonViewImpl(
+      {required this.person, required this.counts, this.isAdmin})
       : super._();
 
   factory _$PersonViewImpl.fromJson(Map<String, dynamic> json) =>
@@ -143,10 +155,12 @@ class _$PersonViewImpl extends _PersonView {
   final Person person;
   @override
   final PersonAggregates counts;
+  @override
+  final bool? isAdmin;
 
   @override
   String toString() {
-    return 'PersonView(person: $person, counts: $counts)';
+    return 'PersonView(person: $person, counts: $counts, isAdmin: $isAdmin)';
   }
 
   @override
@@ -155,12 +169,13 @@ class _$PersonViewImpl extends _PersonView {
         (other.runtimeType == runtimeType &&
             other is _$PersonViewImpl &&
             (identical(other.person, person) || other.person == person) &&
-            (identical(other.counts, counts) || other.counts == counts));
+            (identical(other.counts, counts) || other.counts == counts) &&
+            (identical(other.isAdmin, isAdmin) || other.isAdmin == isAdmin));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, person, counts);
+  int get hashCode => Object.hash(runtimeType, person, counts, isAdmin);
 
   @JsonKey(ignore: true)
   @override
@@ -179,7 +194,8 @@ class _$PersonViewImpl extends _PersonView {
 abstract class _PersonView extends PersonView {
   const factory _PersonView(
       {required final Person person,
-      required final PersonAggregates counts}) = _$PersonViewImpl;
+      required final PersonAggregates counts,
+      final bool? isAdmin}) = _$PersonViewImpl;
   const _PersonView._() : super._();
 
   factory _PersonView.fromJson(Map<String, dynamic> json) =
@@ -189,6 +205,8 @@ abstract class _PersonView extends PersonView {
   Person get person;
   @override
   PersonAggregates get counts;
+  @override
+  bool? get isAdmin;
   @override
   @JsonKey(ignore: true)
   _$$PersonViewImplCopyWith<_$PersonViewImpl> get copyWith =>
