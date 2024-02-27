@@ -25,7 +25,7 @@ mixin _$ModBan {
   int get otherPersonId => throw _privateConstructorUsedError;
   String? get reason => throw _privateConstructorUsedError;
   bool get banned => throw _privateConstructorUsedError;
-  int? get expires => throw _privateConstructorUsedError;
+  String? get expires => throw _privateConstructorUsedError;
   @JsonKey(name: 'when_')
   String get when => throw _privateConstructorUsedError;
 
@@ -45,7 +45,7 @@ abstract class $ModBanCopyWith<$Res> {
       int otherPersonId,
       String? reason,
       bool banned,
-      int? expires,
+      String? expires,
       @JsonKey(name: 'when_') String when});
 }
 
@@ -94,7 +94,7 @@ class _$ModBanCopyWithImpl<$Res, $Val extends ModBan>
       expires: freezed == expires
           ? _value.expires
           : expires // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
@@ -116,7 +116,7 @@ abstract class _$$ModBanImplCopyWith<$Res> implements $ModBanCopyWith<$Res> {
       int otherPersonId,
       String? reason,
       bool banned,
-      int? expires,
+      String? expires,
       @JsonKey(name: 'when_') String when});
 }
 
@@ -163,7 +163,7 @@ class __$$ModBanImplCopyWithImpl<$Res>
       expires: freezed == expires
           ? _value.expires
           : expires // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
@@ -200,7 +200,7 @@ class _$ModBanImpl extends _ModBan {
   @override
   final bool banned;
   @override
-  final int? expires;
+  final String? expires;
   @override
   @JsonKey(name: 'when_')
   final String when;
@@ -252,7 +252,7 @@ abstract class _ModBan extends ModBan {
       required final int otherPersonId,
       final String? reason,
       required final bool banned,
-      final int? expires,
+      final String? expires,
       @JsonKey(name: 'when_') required final String when}) = _$ModBanImpl;
   const _ModBan._() : super._();
 
@@ -269,7 +269,7 @@ abstract class _ModBan extends ModBan {
   @override
   bool get banned;
   @override
-  int? get expires;
+  String? get expires;
   @override
   @JsonKey(name: 'when_')
   String get when;

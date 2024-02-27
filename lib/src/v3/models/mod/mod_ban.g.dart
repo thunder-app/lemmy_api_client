@@ -12,7 +12,7 @@ _$ModBanImpl _$$ModBanImplFromJson(Map<String, dynamic> json) => _$ModBanImpl(
       otherPersonId: json['other_person_id'] as int,
       reason: json['reason'] as String?,
       banned: json['banned'] as bool,
-      expires: json['expires'] as int?,
+      expires: json['expires'] as String?,
       when: json['when_'] as String,
     );
 
