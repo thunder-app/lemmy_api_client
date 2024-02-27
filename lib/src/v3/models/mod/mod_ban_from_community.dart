@@ -15,7 +15,7 @@ class ModBanFromCommunity with _$ModBanFromCommunity {
     required int communityId,
     String? reason,
     required bool banned,
-    int? expires,
+    String? expires,
     @JsonKey(name: 'when_') required String when,
   }) = _ModBanFromCommunity;
 
