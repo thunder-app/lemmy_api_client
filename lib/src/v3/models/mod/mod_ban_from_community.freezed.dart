@@ -26,7 +26,7 @@ mixin _$ModBanFromCommunity {
   int get communityId => throw _privateConstructorUsedError;
   String? get reason => throw _privateConstructorUsedError;
   bool get banned => throw _privateConstructorUsedError;
-  int? get expires => throw _privateConstructorUsedError;
+  String? get expires => throw _privateConstructorUsedError;
   @JsonKey(name: 'when_')
   String get when => throw _privateConstructorUsedError;
 
@@ -49,7 +49,7 @@ abstract class $ModBanFromCommunityCopyWith<$Res> {
       int communityId,
       String? reason,
       bool banned,
-      int? expires,
+      String? expires,
       @JsonKey(name: 'when_') String when});
 }
 
@@ -103,7 +103,7 @@ class _$ModBanFromCommunityCopyWithImpl<$Res, $Val extends ModBanFromCommunity>
       expires: freezed == expires
           ? _value.expires
           : expires // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
@@ -127,7 +127,7 @@ abstract class _$$ModBanFromCommunityImplCopyWith<$Res>
       int communityId,
       String? reason,
       bool banned,
-      int? expires,
+      String? expires,
       @JsonKey(name: 'when_') String when});
 }
 
@@ -179,7 +179,7 @@ class __$$ModBanFromCommunityImplCopyWithImpl<$Res>
       expires: freezed == expires
           ? _value.expires
           : expires // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
@@ -219,7 +219,7 @@ class _$ModBanFromCommunityImpl extends _ModBanFromCommunity {
   @override
   final bool banned;
   @override
-  final int? expires;
+  final String? expires;
   @override
   @JsonKey(name: 'when_')
   final String when;
@@ -275,7 +275,7 @@ abstract class _ModBanFromCommunity extends ModBanFromCommunity {
           required final int communityId,
           final String? reason,
           required final bool banned,
-          final int? expires,
+          final String? expires,
           @JsonKey(name: 'when_') required final String when}) =
       _$ModBanFromCommunityImpl;
   const _ModBanFromCommunity._() : super._();
@@ -296,7 +296,7 @@ abstract class _ModBanFromCommunity extends ModBanFromCommunity {
   @override
   bool get banned;
   @override
-  int? get expires;
+  String? get expires;
   @override
   @JsonKey(name: 'when_')
   String get when;

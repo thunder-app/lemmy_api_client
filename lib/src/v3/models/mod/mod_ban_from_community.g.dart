@@ -15,7 +15,7 @@ _$ModBanFromCommunityImpl _$$ModBanFromCommunityImplFromJson(
       communityId: json['community_id'] as int,
       reason: json['reason'] as String?,
       banned: json['banned'] as bool,
-      expires: json['expires'] as int?,
+      expires: json['expires'] as String?,
       when: json['when_'] as String,
     );
 
