@@ -3,7 +3,7 @@
 <div align="center">
 <img width=200px height=200px src="https://raw.githubusercontent.com/LemmurOrg/lemmy_api_client/master/logo.svg"/>
 
-A Lemmy API Client built with Dart. Continuation of the original [Lemmy Dart API](https://github.com/LemmurOrg/lemmy_api_client).
+A Lemmy API Client built with Dart. Continuation of the original [Lemmy Dart API](https://github.com/LemmurOrg/lemmy_api_client) and [Liftoff Dart API](https://github.com/liftoff-app/lemmy_api_client).
 
 <img alt="Unsupported version" src="https://img.shields.io/badge/0.17.x-no_official_support-red">
 <img alt="Supported version" src="https://img.shields.io/badge/0.18.x-supported:_major_version-blue">
