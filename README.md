@@ -5,14 +5,14 @@
 
 A Lemmy API Client built with Dart. Continuation of the original [Lemmy Dart API](https://github.com/LemmurOrg/lemmy_api_client) and [Liftoff Dart API](https://github.com/liftoff-app/lemmy_api_client).
 
-<img alt="Unsupported version" src="https://img.shields.io/badge/0.17.x-no_official_support-red">
-<img alt="Supported version" src="https://img.shields.io/badge/0.18.x-supported:_major_version-blue">
-<img alt="Supported version" src="https://img.shields.io/badge/0.19.x-supported:_alpha_version-yellow">
+<img alt="Unsupported" src="https://img.shields.io/badge/0.17.x-unsupported-red">
+<img alt="Limited support" src="https://img.shields.io/badge/0.18.x-limited_support-yellow">
+<img alt="Supported version" src="https://img.shields.io/badge/0.19.x-supported-blue">
 
 </div>
 
 ## Information
-Updates are done at a best-effort basis to ensure compatibility with at least two versions of Lemmy. This generally means compatibility with the current major version, and the upcoming version of Lemmy.
+Updates are done at a best-effort basis to ensure compatibility with the current major version of Lemmy. Due to the unstable nature of Lemmy API, there will be limited support for the last major version.
 
 Notice: While efforts are made to keep as much parity as possible with the Lemmy API, it is not guaranteed. If a particular endpoint or feature is missing, feel free to create a feature request or a pull request implementing that endpoint.
 
@@ -54,7 +54,7 @@ const factory CommunityView({
 
 ```dart
 const factory CommunityView({
-  @deprecated Community? community, // Deprecated in version 0.43.0
+  @deprecated Community? community, // v0.18.0 (required) [deprecated in v0.43.0]
   required SubscribedType subscribed,
   required bool blocked,
   required CommunityAggregates counts,
@@ -62,7 +62,7 @@ const factory CommunityView({
 ```
 
 ### Adding Fields
-When a field or attribute is introduced in an upcoming version of Lemmy, keep that attribute **optional** regardless of what the Lemmy API version denotes. This is to ensure compatibility with the current and upcoming version of Lemmy. Furthermore, add a comment to denote which version introduces that field.
+When a field or attribute is introduced in an upcoming version of Lemmy, keep that attribute **optional** regardless of what the Lemmy API version denotes, and denote whether the field is optional/required. This is to ensure compatibility with the current and upcoming version of Lemmy. Furthermore, add a comment to denote which version introduces that field.
 
 This example shows addition for the `follow` field:
 ```dart
@@ -80,7 +80,7 @@ const factory CommunityView({
   required SubscribedType subscribed,
   required bool blocked,
   required CommunityAggregates counts,
-  bool? follow, // Introduced in version 0.64.0
+  bool? follow, // v0.64.0 (required)
 }) = _CommunityView;
 ```
 
