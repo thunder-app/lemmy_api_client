@@ -12,7 +12,7 @@ part of 'mod_transfer_community.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ModTransferCommunity _$ModTransferCommunityFromJson(Map<String, dynamic> json) {
   return _ModTransferCommunity.fromJson(json);
@@ -20,10 +20,10 @@ ModTransferCommunity _$ModTransferCommunityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ModTransferCommunity {
-  int get id => throw _privateConstructorUsedError;
-  int get modPersonId => throw _privateConstructorUsedError;
-  int get otherPersonId => throw _privateConstructorUsedError;
-  int get communityId => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
+  int get modPersonId => throw _privateConstructorUsedError; // v0.18.0
+  int get otherPersonId => throw _privateConstructorUsedError; // v0.18.0
+  int get communityId => throw _privateConstructorUsedError; // v0.18.0
   @JsonKey(name: 'when_')
   String get when => throw _privateConstructorUsedError;
 
@@ -167,12 +167,16 @@ class _$ModTransferCommunityImpl extends _ModTransferCommunity {
 
   @override
   final int id;
+// v0.18.0
   @override
   final int modPersonId;
+// v0.18.0
   @override
   final int otherPersonId;
+// v0.18.0
   @override
   final int communityId;
+// v0.18.0
   @override
   @JsonKey(name: 'when_')
   final String when;
@@ -183,7 +187,7 @@ class _$ModTransferCommunityImpl extends _ModTransferCommunity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ModTransferCommunityImpl &&
@@ -233,13 +237,13 @@ abstract class _ModTransferCommunity extends ModTransferCommunity {
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   int get modPersonId;
-  @override
+  @override // v0.18.0
   int get otherPersonId;
-  @override
+  @override // v0.18.0
   int get communityId;
-  @override
+  @override // v0.18.0
   @JsonKey(name: 'when_')
   String get when;
   @override

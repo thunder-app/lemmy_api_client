@@ -12,7 +12,7 @@ part of 'community_block_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CommunityBlockView _$CommunityBlockViewFromJson(Map<String, dynamic> json) {
   return _CommunityBlockView.fromJson(json);
@@ -20,7 +20,7 @@ CommunityBlockView _$CommunityBlockViewFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CommunityBlockView {
-  Person get person => throw _privateConstructorUsedError;
+  Person get person => throw _privateConstructorUsedError; // v0.18.0
   Community get community => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -142,6 +142,7 @@ class _$CommunityBlockViewImpl extends _CommunityBlockView {
 
   @override
   final Person person;
+// v0.18.0
   @override
   final Community community;
 
@@ -151,7 +152,7 @@ class _$CommunityBlockViewImpl extends _CommunityBlockView {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CommunityBlockViewImpl &&
@@ -190,7 +191,7 @@ abstract class _CommunityBlockView extends CommunityBlockView {
 
   @override
   Person get person;
-  @override
+  @override // v0.18.0
   Community get community;
   @override
   @JsonKey(ignore: true)

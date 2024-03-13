@@ -11,30 +11,33 @@ part 'local_site.g.dart';
 class LocalSite with _$LocalSite {
   @modelSerde
   const factory LocalSite({
-    required int id,
-    required int siteId,
-    required bool siteSetup,
-    required bool enableDownvotes,
-    required bool enableNsfw,
-    required bool communityCreationAdminOnly,
-    required bool requireEmailVerification,
-    String? applicationQuestion,
-    required bool privateInstance,
-    required String defaultTheme,
-    required ListingType defaultPostListingType,
-    String? legalInformation,
-    required bool hideModlogModNames,
-    required bool applicationEmailAdmins,
-    String? slurFilterRegex,
-    required int actorNameMaxLength,
-    required bool federationEnabled,
-    required bool captchaEnabled,
-    required String captchaDifficulty,
-    required DateTime published,
-    DateTime? updated,
-    required RegistrationMode registrationMode,
-    required bool reportsEmailAdmins,
-    bool? federationSignedFetch, // Only available in lemmy v0.19.0 and above
+    required int id, // v0.18.0
+    required int siteId, // v0.18.0
+    required bool siteSetup, // v0.18.0
+    required bool enableDownvotes, // v0.18.0
+    required bool enableNsfw, // v0.18.0
+    required bool communityCreationAdminOnly, // v0.18.0
+    required bool requireEmailVerification, // v0.18.0
+    String? applicationQuestion, // v0.18.0
+    required bool privateInstance, // v0.18.0
+    required String defaultTheme, // v0.18.0
+    required ListingType defaultPostListingType, // v0.18.0
+    String? legalInformation, // v0.18.0
+    required bool hideModlogModNames, // v0.18.0
+    required bool applicationEmailAdmins, // v0.18.0
+    String? slurFilterRegex, // v0.18.0
+    required int actorNameMaxLength, // v0.18.0
+    required bool federationEnabled, // v0.18.0
+    @deprecated int? federationWorkerCount, // v0.18.0 [deprecated in v0.18.1]
+    required bool captchaEnabled, // v0.18.0
+    required String captchaDifficulty, // v0.18.0
+    required DateTime published, // v0.18.0
+    DateTime? updated, // v0.18.0
+    required RegistrationMode registrationMode, // v0.18.0
+    required bool reportsEmailAdmins, // v0.18.0
+    bool? federationSignedFetch, // v0.19.0 (required)
+    String? defaultPostListingMode, // v0.19.4 (required)
+    SortType? defaultSortType, // v0.19.4 (required)
   }) = _LocalSite;
 
   const LocalSite._();

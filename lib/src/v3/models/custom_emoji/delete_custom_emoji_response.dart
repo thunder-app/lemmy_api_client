@@ -9,8 +9,8 @@ part 'delete_custom_emoji_response.g.dart';
 class DeleteCustomEmojiResponse with _$DeleteCustomEmojiResponse {
   @modelSerde
   const factory DeleteCustomEmojiResponse({
-    @deprecated int? id,
-    bool? success,
+    @deprecated int? id, // v0.18.0 [deprecated in v0.19.0]
+    required bool success, // v0.18.0
   }) = _DeleteCustomEmojiResponse;
 
   const DeleteCustomEmojiResponse._();

@@ -17,12 +17,14 @@ class GetModlog
     implements LemmyApiQuery<GetModlogResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetModlog({
-    int? modPersonId,
-    int? communityId,
-    int? page,
-    int? limit,
-    @JsonKey(name: 'type_') ModlogActionType? type,
-    int? otherPersonId,
+    int? modPersonId, // v0.18.0
+    int? communityId, // v0.18.0
+    int? page, // v0.18.0
+    int? limit, // v0.18.0
+    @JsonKey(name: 'type_') ModlogActionType? type, // v0.18.0
+    int? otherPersonId, // v0.18.0
+    int? postId, // v0.19.4 (optional)
+    int? commentId, // v0.19.4 (optional)
     String? auth,
   }) = _GetModlog;
 

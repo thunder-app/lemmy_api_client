@@ -12,7 +12,7 @@ part of 'language.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Language _$LanguageFromJson(Map<String, dynamic> json) {
   return _Language.fromJson(json);
@@ -20,8 +20,8 @@ Language _$LanguageFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Language {
-  int get id => throw _privateConstructorUsedError;
-  String get code => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
+  String get code => throw _privateConstructorUsedError; // v0.18.0
   String get name => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -128,8 +128,10 @@ class _$LanguageImpl extends _Language {
 
   @override
   final int id;
+// v0.18.0
   @override
   final String code;
+// v0.18.0
   @override
   final String name;
 
@@ -139,7 +141,7 @@ class _$LanguageImpl extends _Language {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LanguageImpl &&
@@ -178,9 +180,9 @@ abstract class _Language extends Language {
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   String get code;
-  @override
+  @override // v0.18.0
   String get name;
   @override
   @JsonKey(ignore: true)

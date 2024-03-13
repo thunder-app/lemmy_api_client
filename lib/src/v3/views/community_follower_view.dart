@@ -10,8 +10,8 @@ part 'community_follower_view.g.dart';
 class CommunityFollowerView with _$CommunityFollowerView {
   @modelSerde
   const factory CommunityFollowerView({
-    required Community community,
-    required Person follower,
+    required Community community, // v0.18.0
+    required Person follower, // v0.18.0
   }) = _CommunityFollowerView;
 
   const CommunityFollowerView._();

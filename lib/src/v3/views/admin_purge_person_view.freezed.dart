@@ -12,7 +12,7 @@ part of 'admin_purge_person_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 AdminPurgePersonView _$AdminPurgePersonViewFromJson(Map<String, dynamic> json) {
   return _AdminPurgePersonView.fromJson(json);
@@ -20,7 +20,8 @@ AdminPurgePersonView _$AdminPurgePersonViewFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AdminPurgePersonView {
-  AdminPurgePerson get adminPurgePerson => throw _privateConstructorUsedError;
+  AdminPurgePerson get adminPurgePerson =>
+      throw _privateConstructorUsedError; // v0.18.0
   Person? get admin => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -138,8 +139,7 @@ class __$$AdminPurgePersonViewImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$AdminPurgePersonViewImpl extends _AdminPurgePersonView {
-  const _$AdminPurgePersonViewImpl(
-      {required this.adminPurgePerson, required this.admin})
+  const _$AdminPurgePersonViewImpl({required this.adminPurgePerson, this.admin})
       : super._();
 
   factory _$AdminPurgePersonViewImpl.fromJson(Map<String, dynamic> json) =>
@@ -147,6 +147,7 @@ class _$AdminPurgePersonViewImpl extends _AdminPurgePersonView {
 
   @override
   final AdminPurgePerson adminPurgePerson;
+// v0.18.0
   @override
   final Person? admin;
 
@@ -156,7 +157,7 @@ class _$AdminPurgePersonViewImpl extends _AdminPurgePersonView {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AdminPurgePersonViewImpl &&
@@ -188,7 +189,7 @@ class _$AdminPurgePersonViewImpl extends _AdminPurgePersonView {
 abstract class _AdminPurgePersonView extends AdminPurgePersonView {
   const factory _AdminPurgePersonView(
       {required final AdminPurgePerson adminPurgePerson,
-      required final Person? admin}) = _$AdminPurgePersonViewImpl;
+      final Person? admin}) = _$AdminPurgePersonViewImpl;
   const _AdminPurgePersonView._() : super._();
 
   factory _AdminPurgePersonView.fromJson(Map<String, dynamic> json) =
@@ -196,7 +197,7 @@ abstract class _AdminPurgePersonView extends AdminPurgePersonView {
 
   @override
   AdminPurgePerson get adminPurgePerson;
-  @override
+  @override // v0.18.0
   Person? get admin;
   @override
   @JsonKey(ignore: true)

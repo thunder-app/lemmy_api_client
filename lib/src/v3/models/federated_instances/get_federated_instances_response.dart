@@ -10,7 +10,7 @@ part 'get_federated_instances_response.g.dart';
 class GetFederatedInstancesResponse with _$GetFederatedInstancesResponse {
   @modelSerde
   const factory GetFederatedInstancesResponse({
-    FederatedInstances? federatedInstances,
+    FederatedInstances? federatedInstances, // v0.18.0
   }) = _GetFederatedInstancesResponse;
 
   const GetFederatedInstancesResponse._();

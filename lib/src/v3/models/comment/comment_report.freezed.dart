@@ -12,7 +12,7 @@ part of 'comment_report.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CommentReport _$CommentReportFromJson(Map<String, dynamic> json) {
   return _CommentReport.fromJson(json);
@@ -20,14 +20,15 @@ CommentReport _$CommentReportFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CommentReport {
-  int get id => throw _privateConstructorUsedError;
-  int get creatorId => throw _privateConstructorUsedError;
-  int get commentId => throw _privateConstructorUsedError;
-  String get originalCommentText => throw _privateConstructorUsedError;
-  String get reason => throw _privateConstructorUsedError;
-  bool get resolved => throw _privateConstructorUsedError;
-  int? get resolverId => throw _privateConstructorUsedError;
-  DateTime get published => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
+  int get creatorId => throw _privateConstructorUsedError; // v0.18.0
+  int get commentId => throw _privateConstructorUsedError; // v0.18.0
+  String get originalCommentText =>
+      throw _privateConstructorUsedError; // v0.18.0
+  String get reason => throw _privateConstructorUsedError; // v0.18.0
+  bool get resolved => throw _privateConstructorUsedError; // v0.18.0
+  int? get resolverId => throw _privateConstructorUsedError; // v0.18.0
+  DateTime get published => throw _privateConstructorUsedError; // v0.18.0
   DateTime? get updated => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -221,20 +222,28 @@ class _$CommentReportImpl extends _CommentReport {
 
   @override
   final int id;
+// v0.18.0
   @override
   final int creatorId;
+// v0.18.0
   @override
   final int commentId;
+// v0.18.0
   @override
   final String originalCommentText;
+// v0.18.0
   @override
   final String reason;
+// v0.18.0
   @override
   final bool resolved;
+// v0.18.0
   @override
   final int? resolverId;
+// v0.18.0
   @override
   final DateTime published;
+// v0.18.0
   @override
   final DateTime? updated;
 
@@ -244,7 +253,7 @@ class _$CommentReportImpl extends _CommentReport {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CommentReportImpl &&
@@ -302,21 +311,21 @@ abstract class _CommentReport extends CommentReport {
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   int get creatorId;
-  @override
+  @override // v0.18.0
   int get commentId;
-  @override
+  @override // v0.18.0
   String get originalCommentText;
-  @override
+  @override // v0.18.0
   String get reason;
-  @override
+  @override // v0.18.0
   bool get resolved;
-  @override
+  @override // v0.18.0
   int? get resolverId;
-  @override
+  @override // v0.18.0
   DateTime get published;
-  @override
+  @override // v0.18.0
   DateTime? get updated;
   @override
   @JsonKey(ignore: true)

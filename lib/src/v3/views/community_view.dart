@@ -11,10 +11,11 @@ part 'community_view.g.dart';
 class CommunityView with _$CommunityView {
   @modelSerde
   const factory CommunityView({
-    required Community community,
-    required SubscribedType subscribed,
-    required bool blocked,
-    required CommunityAggregates counts,
+    required Community community, // v0.18.0
+    required SubscribedType subscribed, // v0.18.0
+    required bool blocked, // v0.18.0
+    required CommunityAggregates counts, // v0.18.0
+    bool? bannedFromCommunity, // v0.19.4 (required)
   }) = _CommunityView;
 
   const CommunityView._();

@@ -12,7 +12,7 @@ part of 'comment_report_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CommentReportView _$CommentReportViewFromJson(Map<String, dynamic> json) {
   return _CommentReportView.fromJson(json);
@@ -20,15 +20,17 @@ CommentReportView _$CommentReportViewFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CommentReportView {
-  CommentReport get commentReport => throw _privateConstructorUsedError;
-  Comment get comment => throw _privateConstructorUsedError;
-  Post get post => throw _privateConstructorUsedError;
-  Community get community => throw _privateConstructorUsedError;
-  Person get creator => throw _privateConstructorUsedError;
-  Person get commentCreator => throw _privateConstructorUsedError;
-  CommentAggregates get counts => throw _privateConstructorUsedError;
-  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
-  num? get myVote => throw _privateConstructorUsedError;
+  CommentReport get commentReport =>
+      throw _privateConstructorUsedError; // v0.18.0
+  Comment get comment => throw _privateConstructorUsedError; // v0.18.0
+  Post get post => throw _privateConstructorUsedError; // v0.18.0
+  Community get community => throw _privateConstructorUsedError; // v0.18.0
+  Person get creator => throw _privateConstructorUsedError; // v0.18.0
+  Person get commentCreator => throw _privateConstructorUsedError; // v0.18.0
+  CommentAggregates get counts => throw _privateConstructorUsedError; // v0.18.0
+  bool get creatorBannedFromCommunity =>
+      throw _privateConstructorUsedError; // v0.18.0
+  num? get myVote => throw _privateConstructorUsedError; // v0.18.0
   Person? get resolver => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -329,22 +331,31 @@ class _$CommentReportViewImpl extends _CommentReportView {
 
   @override
   final CommentReport commentReport;
+// v0.18.0
   @override
   final Comment comment;
+// v0.18.0
   @override
   final Post post;
+// v0.18.0
   @override
   final Community community;
+// v0.18.0
   @override
   final Person creator;
+// v0.18.0
   @override
   final Person commentCreator;
+// v0.18.0
   @override
   final CommentAggregates counts;
+// v0.18.0
   @override
   final bool creatorBannedFromCommunity;
+// v0.18.0
   @override
   final num? myVote;
+// v0.18.0
   @override
   final Person? resolver;
 
@@ -354,7 +365,7 @@ class _$CommentReportViewImpl extends _CommentReportView {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CommentReportViewImpl &&
@@ -426,23 +437,23 @@ abstract class _CommentReportView extends CommentReportView {
 
   @override
   CommentReport get commentReport;
-  @override
+  @override // v0.18.0
   Comment get comment;
-  @override
+  @override // v0.18.0
   Post get post;
-  @override
+  @override // v0.18.0
   Community get community;
-  @override
+  @override // v0.18.0
   Person get creator;
-  @override
+  @override // v0.18.0
   Person get commentCreator;
-  @override
+  @override // v0.18.0
   CommentAggregates get counts;
-  @override
+  @override // v0.18.0
   bool get creatorBannedFromCommunity;
-  @override
+  @override // v0.18.0
   num? get myVote;
-  @override
+  @override // v0.18.0
   Person? get resolver;
   @override
   @JsonKey(ignore: true)

@@ -10,8 +10,8 @@ part 'community_block_view.g.dart';
 class CommunityBlockView with _$CommunityBlockView {
   @modelSerde
   const factory CommunityBlockView({
-    required Person person,
-    required Community community,
+    required Person person, // v0.18.0
+    required Community community, // v0.18.0
   }) = _CommunityBlockView;
 
   const CommunityBlockView._();

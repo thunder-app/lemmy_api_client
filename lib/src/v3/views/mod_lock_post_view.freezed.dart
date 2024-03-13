@@ -12,7 +12,7 @@ part of 'mod_lock_post_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ModLockPostView _$ModLockPostViewFromJson(Map<String, dynamic> json) {
   return _ModLockPostView.fromJson(json);
@@ -20,9 +20,9 @@ ModLockPostView _$ModLockPostViewFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ModLockPostView {
-  ModLockPost get modLockPost => throw _privateConstructorUsedError;
-  Person? get moderator => throw _privateConstructorUsedError;
-  Post get post => throw _privateConstructorUsedError;
+  ModLockPost get modLockPost => throw _privateConstructorUsedError; // v0.18.0
+  Person? get moderator => throw _privateConstructorUsedError; // v0.18.0
+  Post get post => throw _privateConstructorUsedError; // v0.18.0
   Community get community => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -201,10 +201,13 @@ class _$ModLockPostViewImpl extends _ModLockPostView {
 
   @override
   final ModLockPost modLockPost;
+// v0.18.0
   @override
   final Person? moderator;
+// v0.18.0
   @override
   final Post post;
+// v0.18.0
   @override
   final Community community;
 
@@ -214,7 +217,7 @@ class _$ModLockPostViewImpl extends _ModLockPostView {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ModLockPostViewImpl &&
@@ -260,11 +263,11 @@ abstract class _ModLockPostView extends ModLockPostView {
 
   @override
   ModLockPost get modLockPost;
-  @override
+  @override // v0.18.0
   Person? get moderator;
-  @override
+  @override // v0.18.0
   Post get post;
-  @override
+  @override // v0.18.0
   Community get community;
   @override
   @JsonKey(ignore: true)

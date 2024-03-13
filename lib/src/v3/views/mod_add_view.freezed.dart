@@ -12,7 +12,7 @@ part of 'mod_add_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ModAddView _$ModAddViewFromJson(Map<String, dynamic> json) {
   return _ModAddView.fromJson(json);
@@ -20,8 +20,8 @@ ModAddView _$ModAddViewFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ModAddView {
-  ModAdd get modAdd => throw _privateConstructorUsedError;
-  Person? get moderator => throw _privateConstructorUsedError;
+  ModAdd get modAdd => throw _privateConstructorUsedError; // v0.18.0
+  Person? get moderator => throw _privateConstructorUsedError; // v0.18.0
   Person get moddedPerson => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -168,8 +168,10 @@ class _$ModAddViewImpl extends _ModAddView {
 
   @override
   final ModAdd modAdd;
+// v0.18.0
   @override
   final Person? moderator;
+// v0.18.0
   @override
   final Person moddedPerson;
 
@@ -179,7 +181,7 @@ class _$ModAddViewImpl extends _ModAddView {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ModAddViewImpl &&
@@ -220,9 +222,9 @@ abstract class _ModAddView extends ModAddView {
 
   @override
   ModAdd get modAdd;
-  @override
+  @override // v0.18.0
   Person? get moderator;
-  @override
+  @override // v0.18.0
   Person get moddedPerson;
   @override
   @JsonKey(ignore: true)

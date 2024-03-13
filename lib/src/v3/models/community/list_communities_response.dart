@@ -10,7 +10,7 @@ part 'list_communities_response.g.dart';
 class ListCommunitiesResponse with _$ListCommunitiesResponse {
   @modelSerde
   const factory ListCommunitiesResponse({
-    required List<CommunityView> communities,
+    required List<CommunityView> communities, // v0.18.0
   }) = _ListCommunitiesResponse;
 
   const ListCommunitiesResponse._();

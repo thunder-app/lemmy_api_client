@@ -10,9 +10,9 @@ part 'instance_block_view.g.dart';
 class InstanceBlockView with _$InstanceBlockView {
   @modelSerde
   const factory InstanceBlockView({
-    required Person person,
-    required Instance instance,
-    Site? site,
+    required Person person, // v0.19.0 (required)
+    required Instance instance, // v0.19.0 (required)
+    Site? site, // v0.19.0 (optional)
   }) = _InstanceBlockView;
 
   const InstanceBlockView._();

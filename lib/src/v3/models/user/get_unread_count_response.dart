@@ -9,9 +9,9 @@ part 'get_unread_count_response.g.dart';
 class GetUnreadCountResponse with _$GetUnreadCountResponse {
   @modelSerde
   const factory GetUnreadCountResponse({
-    required int replies,
-    required int mentions,
-    required int privateMessages,
+    required int replies, // v0.18.0
+    required int mentions, // v0.18.0
+    required int privateMessages, // v0.18.0
   }) = _GetUnreadCountResponse;
 
   const GetUnreadCountResponse._();

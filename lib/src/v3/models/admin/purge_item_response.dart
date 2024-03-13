@@ -9,7 +9,7 @@ part 'purge_item_response.g.dart';
 class PurgeItemResponse with _$PurgeItemResponse {
   @modelSerde
   const factory PurgeItemResponse({
-    bool? success,
+    required bool success, // v0.18.0
   }) = _PurgeItemResponse;
 
   const PurgeItemResponse._();

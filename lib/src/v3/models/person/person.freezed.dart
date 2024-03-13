@@ -12,7 +12,7 @@ part of 'person.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Person _$PersonFromJson(Map<String, dynamic> json) {
   return _Person.fromJson(json);
@@ -20,25 +20,27 @@ Person _$PersonFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Person {
-  int get id => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  String? get displayName => throw _privateConstructorUsedError;
-  String? get avatar => throw _privateConstructorUsedError;
-  bool get banned => throw _privateConstructorUsedError;
-  DateTime get published => throw _privateConstructorUsedError;
-  DateTime? get updated => throw _privateConstructorUsedError;
-  String get actorId => throw _privateConstructorUsedError;
-  String? get bio => throw _privateConstructorUsedError;
-  bool get local => throw _privateConstructorUsedError;
-  String? get banner => throw _privateConstructorUsedError;
-  bool get deleted => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
+  String get name => throw _privateConstructorUsedError; // v0.18.0
+  String? get displayName => throw _privateConstructorUsedError; // v0.18.0
+  String? get avatar => throw _privateConstructorUsedError; // v0.18.0
+  bool get banned => throw _privateConstructorUsedError; // v0.18.0
+  DateTime get published => throw _privateConstructorUsedError; // v0.18.0
+  DateTime? get updated => throw _privateConstructorUsedError; // v0.18.0
+  String get actorId => throw _privateConstructorUsedError; // v0.18.0
+  String? get bio => throw _privateConstructorUsedError; // v0.18.0
+  bool get local => throw _privateConstructorUsedError; // v0.18.0
+  String? get banner => throw _privateConstructorUsedError; // v0.18.0
+  bool get deleted => throw _privateConstructorUsedError; // v0.18.0
   @deprecated
-  String? get inboxUrl => throw _privateConstructorUsedError;
-  String? get matrixUserId => throw _privateConstructorUsedError;
+  String? get inboxUrl =>
+      throw _privateConstructorUsedError; // v0.18.1 [deprecated in v0.19.0]
+  String? get matrixUserId => throw _privateConstructorUsedError; // v0.18.0
   @deprecated
-  bool? get admin => throw _privateConstructorUsedError;
-  bool get botAccount => throw _privateConstructorUsedError;
-  String? get banExpires => throw _privateConstructorUsedError;
+  bool? get admin =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
+  bool get botAccount => throw _privateConstructorUsedError; // v0.18.0
+  String? get banExpires => throw _privateConstructorUsedError; // v0.18.0
   int get instanceId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -346,40 +348,57 @@ class _$PersonImpl extends _Person {
 
   @override
   final int id;
+// v0.18.0
   @override
   final String name;
+// v0.18.0
   @override
   final String? displayName;
+// v0.18.0
   @override
   final String? avatar;
+// v0.18.0
   @override
   final bool banned;
+// v0.18.0
   @override
   final DateTime published;
+// v0.18.0
   @override
   final DateTime? updated;
+// v0.18.0
   @override
   final String actorId;
+// v0.18.0
   @override
   final String? bio;
+// v0.18.0
   @override
   final bool local;
+// v0.18.0
   @override
   final String? banner;
+// v0.18.0
   @override
   final bool deleted;
+// v0.18.0
   @override
   @deprecated
   final String? inboxUrl;
+// v0.18.1 [deprecated in v0.19.0]
   @override
   final String? matrixUserId;
+// v0.18.0
   @override
   @deprecated
   final bool? admin;
+// v0.18.0 [deprecated in v0.19.0]
   @override
   final bool botAccount;
+// v0.18.0
   @override
   final String? banExpires;
+// v0.18.0
   @override
   final int instanceId;
 
@@ -389,7 +408,7 @@ class _$PersonImpl extends _Person {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PersonImpl &&
@@ -483,41 +502,41 @@ abstract class _Person extends Person {
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   String get name;
-  @override
+  @override // v0.18.0
   String? get displayName;
-  @override
+  @override // v0.18.0
   String? get avatar;
-  @override
+  @override // v0.18.0
   bool get banned;
-  @override
+  @override // v0.18.0
   DateTime get published;
-  @override
+  @override // v0.18.0
   DateTime? get updated;
-  @override
+  @override // v0.18.0
   String get actorId;
-  @override
+  @override // v0.18.0
   String? get bio;
-  @override
+  @override // v0.18.0
   bool get local;
-  @override
+  @override // v0.18.0
   String? get banner;
-  @override
+  @override // v0.18.0
   bool get deleted;
-  @override
+  @override // v0.18.0
   @deprecated
   String? get inboxUrl;
-  @override
+  @override // v0.18.1 [deprecated in v0.19.0]
   String? get matrixUserId;
-  @override
+  @override // v0.18.0
   @deprecated
   bool? get admin;
-  @override
+  @override // v0.18.0 [deprecated in v0.19.0]
   bool get botAccount;
-  @override
+  @override // v0.18.0
   String? get banExpires;
-  @override
+  @override // v0.18.0
   int get instanceId;
   @override
   @JsonKey(ignore: true)

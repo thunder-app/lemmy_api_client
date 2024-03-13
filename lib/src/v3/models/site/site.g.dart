@@ -23,6 +23,7 @@ _$SiteImpl _$$SiteImplFromJson(Map<String, dynamic> json) => _$SiteImpl(
       privateKey: json['private_key'] as String?,
       publicKey: json['public_key'] as String,
       instanceId: json['instance_id'] as int,
+      contentWarning: json['content_warning'] as String?,
     );
 
 Map<String, dynamic> _$$SiteImplToJson(_$SiteImpl instance) =>
@@ -43,6 +44,7 @@ Map<String, dynamic> _$$SiteImplToJson(_$SiteImpl instance) =>
       'private_key': instance.privateKey,
       'public_key': instance.publicKey,
       'instance_id': instance.instanceId,
+      'content_warning': instance.contentWarning,
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(

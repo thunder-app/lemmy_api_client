@@ -9,13 +9,13 @@ part 'mod_remove_community.g.dart';
 class ModRemoveCommunity with _$ModRemoveCommunity {
   @modelSerde
   const factory ModRemoveCommunity({
-    required int id,
-    required int modPersonId,
-    required int communityId,
-    String? reason,
-    required bool removed,
-    @deprecated int? expires,
-    @JsonKey(name: 'when_') required String when,
+    required int id, // v0.18.0
+    required int modPersonId, // v0.18.0
+    required int communityId, // v0.18.0
+    String? reason, // v0.18.0
+    required bool removed, // v0.18.0
+    @deprecated String? expires, // v0.18.0 [deprecated in v0.19.0]
+    @JsonKey(name: 'when_') required String when, // v0.18.0
   }) = _ModRemoveCommunity;
 
   const ModRemoveCommunity._();

@@ -12,7 +12,7 @@ part of 'admin_purge_community_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 AdminPurgeCommunityView _$AdminPurgeCommunityViewFromJson(
     Map<String, dynamic> json) {
@@ -22,7 +22,7 @@ AdminPurgeCommunityView _$AdminPurgeCommunityViewFromJson(
 /// @nodoc
 mixin _$AdminPurgeCommunityView {
   AdminPurgeCommunity get adminPurgeCommunity =>
-      throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
   Person? get admin => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -153,6 +153,7 @@ class _$AdminPurgeCommunityViewImpl extends _AdminPurgeCommunityView {
 
   @override
   final AdminPurgeCommunity adminPurgeCommunity;
+// v0.18.0
   @override
   final Person? admin;
 
@@ -162,7 +163,7 @@ class _$AdminPurgeCommunityViewImpl extends _AdminPurgeCommunityView {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AdminPurgeCommunityViewImpl &&
@@ -201,7 +202,7 @@ abstract class _AdminPurgeCommunityView extends AdminPurgeCommunityView {
 
   @override
   AdminPurgeCommunity get adminPurgeCommunity;
-  @override
+  @override // v0.18.0
   Person? get admin;
   @override
   @JsonKey(ignore: true)

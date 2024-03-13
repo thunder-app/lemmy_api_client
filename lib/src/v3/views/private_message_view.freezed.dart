@@ -12,7 +12,7 @@ part of 'private_message_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PrivateMessageView _$PrivateMessageViewFromJson(Map<String, dynamic> json) {
   return _PrivateMessageView.fromJson(json);
@@ -20,8 +20,9 @@ PrivateMessageView _$PrivateMessageViewFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PrivateMessageView {
-  PrivateMessage get privateMessage => throw _privateConstructorUsedError;
-  Person get creator => throw _privateConstructorUsedError;
+  PrivateMessage get privateMessage =>
+      throw _privateConstructorUsedError; // v0.18.0
+  Person get creator => throw _privateConstructorUsedError; // v0.18.0
   Person get recipient => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -166,8 +167,10 @@ class _$PrivateMessageViewImpl extends _PrivateMessageView {
 
   @override
   final PrivateMessage privateMessage;
+// v0.18.0
   @override
   final Person creator;
+// v0.18.0
   @override
   final Person recipient;
 
@@ -177,7 +180,7 @@ class _$PrivateMessageViewImpl extends _PrivateMessageView {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PrivateMessageViewImpl &&
@@ -220,9 +223,9 @@ abstract class _PrivateMessageView extends PrivateMessageView {
 
   @override
   PrivateMessage get privateMessage;
-  @override
+  @override // v0.18.0
   Person get creator;
-  @override
+  @override // v0.18.0
   Person get recipient;
   @override
   @JsonKey(ignore: true)

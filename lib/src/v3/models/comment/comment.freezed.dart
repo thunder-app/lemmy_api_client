@@ -12,7 +12,7 @@ part of 'comment.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Comment _$CommentFromJson(Map<String, dynamic> json) {
   return _Comment.fromJson(json);
@@ -20,18 +20,18 @@ Comment _$CommentFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Comment {
-  int get id => throw _privateConstructorUsedError;
-  int get creatorId => throw _privateConstructorUsedError;
-  int get postId => throw _privateConstructorUsedError;
-  String get content => throw _privateConstructorUsedError;
-  bool get removed => throw _privateConstructorUsedError;
-  DateTime get published => throw _privateConstructorUsedError;
-  DateTime? get updated => throw _privateConstructorUsedError;
-  bool get deleted => throw _privateConstructorUsedError;
-  String get apId => throw _privateConstructorUsedError;
-  bool get local => throw _privateConstructorUsedError;
-  String get path => throw _privateConstructorUsedError;
-  bool get distinguished => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
+  int get creatorId => throw _privateConstructorUsedError; // v0.18.0
+  int get postId => throw _privateConstructorUsedError; // v0.18.0
+  String get content => throw _privateConstructorUsedError; // v0.18.0
+  bool get removed => throw _privateConstructorUsedError; // v0.18.0
+  DateTime get published => throw _privateConstructorUsedError; // v0.18.0
+  DateTime? get updated => throw _privateConstructorUsedError; // v0.18.0
+  bool get deleted => throw _privateConstructorUsedError; // v0.18.0
+  String get apId => throw _privateConstructorUsedError; // v0.18.0
+  bool get local => throw _privateConstructorUsedError; // v0.18.0
+  String get path => throw _privateConstructorUsedError; // v0.18.0
+  bool get distinguished => throw _privateConstructorUsedError; // v0.18.0
   int get languageId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -274,28 +274,40 @@ class _$CommentImpl extends _Comment {
 
   @override
   final int id;
+// v0.18.0
   @override
   final int creatorId;
+// v0.18.0
   @override
   final int postId;
+// v0.18.0
   @override
   final String content;
+// v0.18.0
   @override
   final bool removed;
+// v0.18.0
   @override
   final DateTime published;
+// v0.18.0
   @override
   final DateTime? updated;
+// v0.18.0
   @override
   final bool deleted;
+// v0.18.0
   @override
   final String apId;
+// v0.18.0
   @override
   final bool local;
+// v0.18.0
   @override
   final String path;
+// v0.18.0
   @override
   final bool distinguished;
+// v0.18.0
   @override
   final int languageId;
 
@@ -305,7 +317,7 @@ class _$CommentImpl extends _Comment {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CommentImpl &&
@@ -381,29 +393,29 @@ abstract class _Comment extends Comment {
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   int get creatorId;
-  @override
+  @override // v0.18.0
   int get postId;
-  @override
+  @override // v0.18.0
   String get content;
-  @override
+  @override // v0.18.0
   bool get removed;
-  @override
+  @override // v0.18.0
   DateTime get published;
-  @override
+  @override // v0.18.0
   DateTime? get updated;
-  @override
+  @override // v0.18.0
   bool get deleted;
-  @override
+  @override // v0.18.0
   String get apId;
-  @override
+  @override // v0.18.0
   bool get local;
-  @override
+  @override // v0.18.0
   String get path;
-  @override
+  @override // v0.18.0
   bool get distinguished;
-  @override
+  @override // v0.18.0
   int get languageId;
   @override
   @JsonKey(ignore: true)

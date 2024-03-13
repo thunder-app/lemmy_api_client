@@ -12,7 +12,7 @@ part of 'admin.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 AddAdmin _$AddAdminFromJson(Map<String, dynamic> json) {
   return _AddAdmin.fromJson(json);
@@ -20,8 +20,8 @@ AddAdmin _$AddAdminFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AddAdmin {
-  int get personId => throw _privateConstructorUsedError;
-  bool get added => throw _privateConstructorUsedError;
+  int get personId => throw _privateConstructorUsedError; // v0.18.0
+  bool get added => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -127,8 +127,10 @@ class _$AddAdminImpl extends _AddAdmin {
 
   @override
   final int personId;
+// v0.18.0
   @override
   final bool added;
+// v0.18.0
   @override
   final String? auth;
 
@@ -138,7 +140,7 @@ class _$AddAdminImpl extends _AddAdmin {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AddAdminImpl &&
@@ -178,9 +180,9 @@ abstract class _AddAdmin extends AddAdmin {
 
   @override
   int get personId;
-  @override
+  @override // v0.18.0
   bool get added;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -296,7 +298,7 @@ class _$GetUnreadRegistrationApplicationCountImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetUnreadRegistrationApplicationCountImpl &&
@@ -349,9 +351,9 @@ ListRegistrationApplications _$ListRegistrationApplicationsFromJson(
 
 /// @nodoc
 mixin _$ListRegistrationApplications {
-  bool? get unreadOnly => throw _privateConstructorUsedError;
-  int? get page => throw _privateConstructorUsedError;
-  int? get limit => throw _privateConstructorUsedError;
+  bool? get unreadOnly => throw _privateConstructorUsedError; // v0.18.0
+  int? get page => throw _privateConstructorUsedError; // v0.18.0
+  int? get limit => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -476,10 +478,13 @@ class _$ListRegistrationApplicationsImpl extends _ListRegistrationApplications {
 
   @override
   final bool? unreadOnly;
+// v0.18.0
   @override
   final int? page;
+// v0.18.0
   @override
   final int? limit;
+// v0.18.0
   @override
   final String? auth;
 
@@ -489,7 +494,7 @@ class _$ListRegistrationApplicationsImpl extends _ListRegistrationApplications {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ListRegistrationApplicationsImpl &&
@@ -534,11 +539,11 @@ abstract class _ListRegistrationApplications
 
   @override
   bool? get unreadOnly;
-  @override
+  @override // v0.18.0
   int? get page;
-  @override
+  @override // v0.18.0
   int? get limit;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -554,9 +559,9 @@ ApproveRegistrationApplication _$ApproveRegistrationApplicationFromJson(
 
 /// @nodoc
 mixin _$ApproveRegistrationApplication {
-  int get id => throw _privateConstructorUsedError;
-  bool get approve => throw _privateConstructorUsedError;
-  String? get denyReason => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
+  bool get approve => throw _privateConstructorUsedError; // v0.18.0
+  String? get denyReason => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -682,10 +687,13 @@ class _$ApproveRegistrationApplicationImpl
 
   @override
   final int id;
+// v0.18.0
   @override
   final bool approve;
+// v0.18.0
   @override
   final String? denyReason;
+// v0.18.0
   @override
   final String? auth;
 
@@ -695,7 +703,7 @@ class _$ApproveRegistrationApplicationImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ApproveRegistrationApplicationImpl &&
@@ -740,11 +748,11 @@ abstract class _ApproveRegistrationApplication
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   bool get approve;
-  @override
+  @override // v0.18.0
   String? get denyReason;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -759,8 +767,8 @@ PurgePerson _$PurgePersonFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PurgePerson {
-  int get personId => throw _privateConstructorUsedError;
-  String? get reason => throw _privateConstructorUsedError;
+  int get personId => throw _privateConstructorUsedError; // v0.18.0
+  String? get reason => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -867,8 +875,10 @@ class _$PurgePersonImpl extends _PurgePerson {
 
   @override
   final int personId;
+// v0.18.0
   @override
   final String? reason;
+// v0.18.0
   @override
   final String? auth;
 
@@ -878,7 +888,7 @@ class _$PurgePersonImpl extends _PurgePerson {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PurgePersonImpl &&
@@ -918,9 +928,9 @@ abstract class _PurgePerson extends PurgePerson {
 
   @override
   int get personId;
-  @override
+  @override // v0.18.0
   String? get reason;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -934,8 +944,8 @@ PurgeCommunity _$PurgeCommunityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PurgeCommunity {
-  int get communityId => throw _privateConstructorUsedError;
-  String? get reason => throw _privateConstructorUsedError;
+  int get communityId => throw _privateConstructorUsedError; // v0.18.0
+  String? get reason => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1043,8 +1053,10 @@ class _$PurgeCommunityImpl extends _PurgeCommunity {
 
   @override
   final int communityId;
+// v0.18.0
   @override
   final String? reason;
+// v0.18.0
   @override
   final String? auth;
 
@@ -1054,7 +1066,7 @@ class _$PurgeCommunityImpl extends _PurgeCommunity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PurgeCommunityImpl &&
@@ -1095,9 +1107,9 @@ abstract class _PurgeCommunity extends PurgeCommunity {
 
   @override
   int get communityId;
-  @override
+  @override // v0.18.0
   String? get reason;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -1111,8 +1123,8 @@ PurgePost _$PurgePostFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PurgePost {
-  int get postId => throw _privateConstructorUsedError;
-  String? get reason => throw _privateConstructorUsedError;
+  int get postId => throw _privateConstructorUsedError; // v0.18.0
+  String? get reason => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1218,8 +1230,10 @@ class _$PurgePostImpl extends _PurgePost {
 
   @override
   final int postId;
+// v0.18.0
   @override
   final String? reason;
+// v0.18.0
   @override
   final String? auth;
 
@@ -1229,7 +1243,7 @@ class _$PurgePostImpl extends _PurgePost {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PurgePostImpl &&
@@ -1268,9 +1282,9 @@ abstract class _PurgePost extends PurgePost {
 
   @override
   int get postId;
-  @override
+  @override // v0.18.0
   String? get reason;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -1284,8 +1298,8 @@ PurgeComment _$PurgeCommentFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PurgeComment {
-  int get commentId => throw _privateConstructorUsedError;
-  String? get reason => throw _privateConstructorUsedError;
+  int get commentId => throw _privateConstructorUsedError; // v0.18.0
+  String? get reason => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1392,8 +1406,10 @@ class _$PurgeCommentImpl extends _PurgeComment {
 
   @override
   final int commentId;
+// v0.18.0
   @override
   final String? reason;
+// v0.18.0
   @override
   final String? auth;
 
@@ -1403,7 +1419,7 @@ class _$PurgeCommentImpl extends _PurgeComment {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PurgeCommentImpl &&
@@ -1443,9 +1459,9 @@ abstract class _PurgeComment extends PurgeComment {
 
   @override
   int get commentId;
-  @override
+  @override // v0.18.0
   String? get reason;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)

@@ -10,7 +10,7 @@ _$DeleteCustomEmojiResponseImpl _$$DeleteCustomEmojiResponseImplFromJson(
         Map<String, dynamic> json) =>
     _$DeleteCustomEmojiResponseImpl(
       id: json['id'] as int?,
-      success: json['success'] as bool?,
+      success: json['success'] as bool,
     );
 
 Map<String, dynamic> _$$DeleteCustomEmojiResponseImplToJson(

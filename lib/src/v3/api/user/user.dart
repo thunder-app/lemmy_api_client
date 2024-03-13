@@ -33,6 +33,35 @@ class LeaveAdmin
       GetSiteResponse.fromJson(json);
 }
 
+/// Only available in lemmy v0.19.4 and above
+///
+/// List all the media for your user
+///
+/// `HTTP.GET /user/list_media`
+@freezed
+class ListMedia
+    with _$ListMedia
+    implements LemmyApiQuery<ListMediaResponse>, LemmyApiAuthenticatedQuery {
+  @apiSerde
+  const factory ListMedia({
+    int? page, // v0.19.4 (optional)
+    int? limit, // v0.19.4 (optional)
+    String? auth,
+  }) = _ListMedia;
+
+  const ListMedia._();
+  factory ListMedia.fromJson(Map<String, dynamic> json) =>
+      _$ListMediaFromJson(json);
+
+  final path = '/user/list_media';
+
+  final httpMethod = HttpMethod.get;
+
+  @override
+  ListMediaResponse responseFactory(Map<String, dynamic> json) =>
+      ListMediaResponse.fromJson(json);
+}
+
 /// Only available in lemmy v0.19.0 and above
 ///
 /// Generate a TOTP / two-factor secret.
@@ -173,8 +202,8 @@ class UpdateTotp
   @apiSerde
   const factory UpdateTotp({
     String? auth,
-    required String totpToken,
-    required bool enabled,
+    required String totpToken, // v0.19.0 (required)
+    required bool enabled, // v0.19.0 (required)
   }) = _UpdateTotp;
 
   const UpdateTotp._();
@@ -197,15 +226,15 @@ class UpdateTotp
 class Register with _$Register implements LemmyApiQuery<LoginResponse> {
   @apiSerde
   const factory Register({
-    required String username,
-    required String password,
-    required String passwordVerify,
-    required bool showNsfw,
-    String? email,
-    String? captchaUuid,
-    String? captchaAnswer,
-    String? honeypot,
-    String? answer,
+    required String username, // v0.18.0
+    required String password, // v0.18.0
+    required String passwordVerify, // v0.18.0
+    required bool showNsfw, // v0.18.0
+    String? email, // v0.18.0
+    String? captchaUuid, // v0.18.0
+    String? captchaAnswer, // v0.18.0
+    String? honeypot, // v0.18.0
+    String? answer, // v0.18.0
   }) = _Register;
 
   const Register._();
@@ -228,9 +257,9 @@ class Register with _$Register implements LemmyApiQuery<LoginResponse> {
 class Login with _$Login implements LemmyApiQuery<LoginResponse> {
   @apiSerde
   const factory Login({
-    required String usernameOrEmail,
-    required String password,
-    @JsonKey(name: 'totp_2fa_token') String? totp2faToken,
+    required String usernameOrEmail, // v0.18.0
+    required String password, // v0.18.0
+    @JsonKey(name: 'totp_2fa_token') String? totp2faToken, // v0.18.0
   }) = _Login;
 
   const Login._();
@@ -278,13 +307,13 @@ class GetPersonDetails
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetPersonDetails({
-    int? personId,
-    String? username,
-    SortType? sort,
-    int? page,
-    int? limit,
-    int? communityId,
-    bool? savedOnly,
+    int? personId, // v0.18.0
+    String? username, // v0.18.0
+    SortType? sort, // v0.18.0
+    int? page, // v0.18.0
+    int? limit, // v0.18.0
+    int? communityId, // v0.18.0
+    bool? savedOnly, // v0.18.0
     String? auth,
   }) = _GetPersonDetails;
 
@@ -312,10 +341,10 @@ class GetPersonMentions
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetPersonMentions({
-    CommentSortType? sort,
-    int? page,
-    int? limit,
-    bool? unreadOnly,
+    CommentSortType? sort, // v0.18.0
+    int? page, // v0.18.0
+    int? limit, // v0.18.0
+    bool? unreadOnly, // v0.18.0
     String? auth,
   }) = _GetPersonMentions;
 
@@ -343,8 +372,8 @@ class MarkPersonMentionAsRead
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory MarkPersonMentionAsRead({
-    required int personMentionId,
-    required bool read,
+    required int personMentionId, // v0.18.0
+    required bool read, // v0.18.0
     String? auth,
   }) = _MarkPersonMentionAsRead;
 
@@ -370,10 +399,10 @@ class GetReplies
     implements LemmyApiQuery<GetRepliesResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetReplies({
-    CommentSortType? sort,
-    int? page,
-    int? limit,
-    bool? unreadOnly,
+    CommentSortType? sort, // v0.18.0
+    int? page, // v0.18.0
+    int? limit, // v0.18.0
+    bool? unreadOnly, // v0.18.0
     String? auth,
   }) = _GetReplies;
 
@@ -399,11 +428,11 @@ class BanPerson
     implements LemmyApiQuery<BanPersonResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory BanPerson({
-    required int personId,
-    required bool ban,
-    bool? removeData,
-    String? reason,
-    int? expires,
+    required int personId, // v0.18.0
+    required bool ban, // v0.18.0
+    bool? removeData, // v0.18.0
+    String? reason, // v0.18.0
+    int? expires, // v0.18.0
     String? auth,
   }) = _BanPerson;
 
@@ -456,8 +485,8 @@ class BlockPerson
     implements LemmyApiQuery<BlockPersonResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory BlockPerson({
-    required int personId,
-    required bool block,
+    required int personId, // v0.18.0
+    required bool block, // v0.18.0
     String? auth,
   }) = _BlockPerson;
 
@@ -510,8 +539,8 @@ class DeleteAccount
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory DeleteAccount({
-    required String password,
-    bool? deleteContent, // Required in lemmy v0.19.0 and above
+    required String password, // v0.18.0
+    bool? deleteContent, // v0.19.0 (required)
     String? auth,
   }) = _DeleteAccount;
 
@@ -537,7 +566,7 @@ class PasswordReset
     implements LemmyApiQuery<PasswordResetResponse> {
   @apiSerde
   const factory PasswordReset({
-    required String email,
+    required String email, // v0.18.0
   }) = _PasswordReset;
 
   const PasswordReset._();
@@ -562,9 +591,9 @@ class PasswordChangeAfterReset
     implements LemmyApiQuery<PasswordChangeAfterResetResponse> {
   @apiSerde
   const factory PasswordChangeAfterReset({
-    required String token,
-    required String password,
-    required String passwordVerify,
+    required String token, // v0.18.0
+    required String password, // v0.18.0
+    required String passwordVerify, // v0.18.0
   }) = _PasswordChangeAfterReset;
 
   const PasswordChangeAfterReset._();
@@ -616,35 +645,35 @@ class SaveUserSettings
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory SaveUserSettings({
-    bool? showNsfw,
-    bool? blurNsfw,
-    bool? autoExpand,
-    bool? showScores,
-    String? theme,
-    SortType? defaultSortType,
-    ListingType? defaultListingType,
-    String? interfaceLanguage,
-    String? avatar,
-    String? banner,
-    String? displayName,
-    String? email,
-    String? bio,
-    String? matrixUserId,
-    bool? showAvatars,
-    bool? sendNotificationsToEmail,
-    bool? botAccount,
-    bool? showBotAccounts,
-    bool? showReadPosts,
-    @deprecated bool? showNewPostNotifs,
-    List<int>? discussionLanguages,
-    @deprecated bool? generateTotp2fa,
+    bool? showNsfw, // v0.18.0
+    bool? blurNsfw, // v0.18.3
+    bool? autoExpand, // v0.18.3
+    bool? showScores, // v0.18.0
+    String? theme, // v0.18.0
+    SortType? defaultSortType, // v0.18.0
+    ListingType? defaultListingType, // v0.18.0
+    String? interfaceLanguage, // v0.18.0
+    String? avatar, // v0.18.0
+    String? banner, // v0.18.0
+    String? displayName, // v0.18.0
+    String? email, // v0.18.0
+    String? bio, // v0.18.0
+    String? matrixUserId, // v0.18.0
+    bool? showAvatars, // v0.18.0
+    bool? sendNotificationsToEmail, // v0.18.0
+    bool? botAccount, // v0.18.0
+    bool? showBotAccounts, // v0.18.0
+    bool? showReadPosts, // v0.18.0
+    @deprecated bool? showNewPostNotifs, // v0.18.0 [deprecated in v0.19.0]
+    List<int>? discussionLanguages, // v0.18.0
+    @deprecated bool? generateTotp2fa, // v0.18.0 [deprecated in v0.19.0]
     String? auth,
-    bool? openLinksInNewTab,
-    bool? infiniteScrollEnabled, // Available in lemmy v0.19.0 and above
-    String? postListingMode, // Available in lemmy v0.19.0 and above
-    bool? enableKeyboardNavigation, // Available in lemmy v0.19.0 and above
-    bool? enableAnimatedImages, // Available in lemmy v0.19.0 and above
-    bool? collapseBotComments, // Available in lemmy v0.19.0 and above
+    bool? openLinksInNewTab, // v0.18.1
+    bool? infiniteScrollEnabled, // v0.19.0 (optional)
+    String? postListingMode, // v0.19.0 (optional)
+    bool? enableKeyboardNavigation, // v0.19.0 (optional)
+    bool? enableAnimatedImages, // v0.19.0 (optional)
+    bool? collapseBotComments, // v0.19.0 (optional)
   }) = _SaveUserSettings;
 
   const SaveUserSettings._();
@@ -669,9 +698,9 @@ class ChangePassword
     implements LemmyApiQuery<LoginResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ChangePassword({
-    required String newPassword,
-    required String newPasswordVerify,
-    required String oldPassword,
+    required String newPassword, // v0.18.0
+    required String newPasswordVerify, // v0.18.0
+    required String oldPassword, // v0.18.0
     String? auth,
   }) = _ChangePassword;
 
@@ -699,7 +728,7 @@ class GetReportCount
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetReportCount({
-    int? communityId,
+    int? communityId, // v0.18.0
     String? auth,
   }) = _GetReportCount;
 
@@ -752,7 +781,7 @@ class VerifyEmail
     implements LemmyApiQuery<VerifyEmailResponse> {
   @apiSerde
   const factory VerifyEmail({
-    required String token,
+    required String token, // v0.18.0
   }) = _VerifyEmail;
 
   const VerifyEmail._();

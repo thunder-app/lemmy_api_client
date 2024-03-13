@@ -11,19 +11,20 @@ part 'post_view.g.dart';
 class PostView with _$PostView {
   @modelSerde
   const factory PostView({
-    required Post post,
-    required Person creator,
-    required Community community,
-    required bool creatorBannedFromCommunity,
-    bool? creatorIsModerator, // Only available in lemmy v0.19.0 and above
-    bool? creatorIsAdmin, // Only available in lemmy v0.19.0 and above
-    required PostAggregates counts,
-    required SubscribedType subscribed,
-    required bool saved,
-    required bool read,
-    required bool creatorBlocked,
-    int? myVote,
-    required int unreadComments,
+    required Post post, // v0.18.0
+    required Person creator, // v0.18.0
+    required Community community, // v0.18.0
+    required bool creatorBannedFromCommunity, // v0.18.0
+    bool? creatorIsModerator, // v0.19.0 (required)
+    bool? creatorIsAdmin, // v0.19.0 (required)
+    required PostAggregates counts, // v0.18.0
+    required SubscribedType subscribed, // v0.18.0
+    required bool saved, // v0.18.0
+    required bool read, // v0.18.0
+    bool? hidden, // v0.19.4 (required)
+    required bool creatorBlocked, // v0.18.0
+    int? myVote, // v0.18.0
+    required int unreadComments, // v0.18.0
   }) = _PostView;
 
   const PostView._();

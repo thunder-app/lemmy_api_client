@@ -9,13 +9,13 @@ part 'mod_ban.g.dart';
 class ModBan with _$ModBan {
   @modelSerde
   const factory ModBan({
-    required int id,
-    required int modPersonId,
-    required int otherPersonId,
-    String? reason,
-    required bool banned,
-    String? expires,
-    @JsonKey(name: 'when_') required String when,
+    required int id, // v0.18.0
+    required int modPersonId, // v0.18.0
+    required int otherPersonId, // v0.18.0
+    String? reason, // v0.18.0
+    required bool banned, // v0.18.0
+    String? expires, // v0.18.0
+    @JsonKey(name: 'when_') required String when, // v0.18.0
   }) = _ModBan;
 
   const ModBan._();

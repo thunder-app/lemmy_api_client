@@ -10,7 +10,7 @@ part 'private_message_report_response.g.dart';
 class PrivateMessageReportResponse with _$PrivateMessageReportResponse {
   @modelSerde
   const factory PrivateMessageReportResponse({
-    required PrivateMessageReportView privateMessageReportView,
+    required PrivateMessageReportView privateMessageReportView, // v0.18.0
   }) = _PrivateMessageReportResponse;
 
   const PrivateMessageReportResponse._();

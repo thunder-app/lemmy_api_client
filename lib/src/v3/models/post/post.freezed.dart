@@ -12,7 +12,7 @@ part of 'post.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Post _$PostFromJson(Map<String, dynamic> json) {
   return _Post.fromJson(json);
@@ -20,27 +20,30 @@ Post _$PostFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Post {
-  int get id => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  String? get url => throw _privateConstructorUsedError;
-  String? get body => throw _privateConstructorUsedError;
-  int get creatorId => throw _privateConstructorUsedError;
-  int get communityId => throw _privateConstructorUsedError;
-  bool get removed => throw _privateConstructorUsedError;
-  bool get locked => throw _privateConstructorUsedError;
-  DateTime get published => throw _privateConstructorUsedError;
-  DateTime? get updated => throw _privateConstructorUsedError;
-  bool get deleted => throw _privateConstructorUsedError;
-  bool get nsfw => throw _privateConstructorUsedError;
-  String? get embedTitle => throw _privateConstructorUsedError;
-  String? get embedDescription => throw _privateConstructorUsedError;
-  String? get thumbnailUrl => throw _privateConstructorUsedError;
-  String get apId => throw _privateConstructorUsedError;
-  bool get local => throw _privateConstructorUsedError;
-  String? get embedVideoUrl => throw _privateConstructorUsedError;
-  int get languageId => throw _privateConstructorUsedError;
-  bool get featuredCommunity => throw _privateConstructorUsedError;
-  bool get featuredLocal => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
+  String get name => throw _privateConstructorUsedError; // v0.18.0
+  String? get url => throw _privateConstructorUsedError; // v0.18.0
+  String? get body => throw _privateConstructorUsedError; // v0.18.0
+  int get creatorId => throw _privateConstructorUsedError; // v0.18.0
+  int get communityId => throw _privateConstructorUsedError; // v0.18.0
+  bool get removed => throw _privateConstructorUsedError; // v0.18.0
+  bool get locked => throw _privateConstructorUsedError; // v0.18.0
+  DateTime get published => throw _privateConstructorUsedError; // v0.18.0
+  DateTime? get updated => throw _privateConstructorUsedError; // v0.18.0
+  bool get deleted => throw _privateConstructorUsedError; // v0.18.0
+  bool get nsfw => throw _privateConstructorUsedError; // v0.18.0
+  String? get embedTitle => throw _privateConstructorUsedError; // v0.18.0
+  String? get embedDescription => throw _privateConstructorUsedError; // v0.18.0
+  String? get thumbnailUrl => throw _privateConstructorUsedError; // v0.18.0
+  String get apId => throw _privateConstructorUsedError; // v0.18.0
+  bool get local => throw _privateConstructorUsedError; // v0.18.0
+  String? get embedVideoUrl => throw _privateConstructorUsedError; // v0.18.0
+  int get languageId => throw _privateConstructorUsedError; // v0.18.0
+  bool get featuredCommunity => throw _privateConstructorUsedError; // v0.18.0
+  bool get featuredLocal => throw _privateConstructorUsedError; // v0.18.0
+  String? get urlContentType =>
+      throw _privateConstructorUsedError; // v0.19.4 (optional)
+  String? get altText => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -73,7 +76,9 @@ abstract class $PostCopyWith<$Res> {
       String? embedVideoUrl,
       int languageId,
       bool featuredCommunity,
-      bool featuredLocal});
+      bool featuredLocal,
+      String? urlContentType,
+      String? altText});
 }
 
 /// @nodoc
@@ -110,6 +115,8 @@ class _$PostCopyWithImpl<$Res, $Val extends Post>
     Object? languageId = null,
     Object? featuredCommunity = null,
     Object? featuredLocal = null,
+    Object? urlContentType = freezed,
+    Object? altText = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -196,6 +203,14 @@ class _$PostCopyWithImpl<$Res, $Val extends Post>
           ? _value.featuredLocal
           : featuredLocal // ignore: cast_nullable_to_non_nullable
               as bool,
+      urlContentType: freezed == urlContentType
+          ? _value.urlContentType
+          : urlContentType // ignore: cast_nullable_to_non_nullable
+              as String?,
+      altText: freezed == altText
+          ? _value.altText
+          : altText // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -228,7 +243,9 @@ abstract class _$$PostImplCopyWith<$Res> implements $PostCopyWith<$Res> {
       String? embedVideoUrl,
       int languageId,
       bool featuredCommunity,
-      bool featuredLocal});
+      bool featuredLocal,
+      String? urlContentType,
+      String? altText});
 }
 
 /// @nodoc
@@ -262,6 +279,8 @@ class __$$PostImplCopyWithImpl<$Res>
     Object? languageId = null,
     Object? featuredCommunity = null,
     Object? featuredLocal = null,
+    Object? urlContentType = freezed,
+    Object? altText = freezed,
   }) {
     return _then(_$PostImpl(
       id: null == id
@@ -348,6 +367,14 @@ class __$$PostImplCopyWithImpl<$Res>
           ? _value.featuredLocal
           : featuredLocal // ignore: cast_nullable_to_non_nullable
               as bool,
+      urlContentType: freezed == urlContentType
+          ? _value.urlContentType
+          : urlContentType // ignore: cast_nullable_to_non_nullable
+              as String?,
+      altText: freezed == altText
+          ? _value.altText
+          : altText // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -377,7 +404,9 @@ class _$PostImpl extends _Post {
       this.embedVideoUrl,
       required this.languageId,
       required this.featuredCommunity,
-      required this.featuredLocal})
+      required this.featuredLocal,
+      this.urlContentType,
+      this.altText})
       : super._();
 
   factory _$PostImpl.fromJson(Map<String, dynamic> json) =>
@@ -385,54 +414,80 @@ class _$PostImpl extends _Post {
 
   @override
   final int id;
+// v0.18.0
   @override
   final String name;
+// v0.18.0
   @override
   final String? url;
+// v0.18.0
   @override
   final String? body;
+// v0.18.0
   @override
   final int creatorId;
+// v0.18.0
   @override
   final int communityId;
+// v0.18.0
   @override
   final bool removed;
+// v0.18.0
   @override
   final bool locked;
+// v0.18.0
   @override
   final DateTime published;
+// v0.18.0
   @override
   final DateTime? updated;
+// v0.18.0
   @override
   final bool deleted;
+// v0.18.0
   @override
   final bool nsfw;
+// v0.18.0
   @override
   final String? embedTitle;
+// v0.18.0
   @override
   final String? embedDescription;
+// v0.18.0
   @override
   final String? thumbnailUrl;
+// v0.18.0
   @override
   final String apId;
+// v0.18.0
   @override
   final bool local;
+// v0.18.0
   @override
   final String? embedVideoUrl;
+// v0.18.0
   @override
   final int languageId;
+// v0.18.0
   @override
   final bool featuredCommunity;
+// v0.18.0
   @override
   final bool featuredLocal;
+// v0.18.0
+  @override
+  final String? urlContentType;
+// v0.19.4 (optional)
+  @override
+  final String? altText;
 
   @override
   String toString() {
-    return 'Post(id: $id, name: $name, url: $url, body: $body, creatorId: $creatorId, communityId: $communityId, removed: $removed, locked: $locked, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, embedTitle: $embedTitle, embedDescription: $embedDescription, thumbnailUrl: $thumbnailUrl, apId: $apId, local: $local, embedVideoUrl: $embedVideoUrl, languageId: $languageId, featuredCommunity: $featuredCommunity, featuredLocal: $featuredLocal)';
+    return 'Post(id: $id, name: $name, url: $url, body: $body, creatorId: $creatorId, communityId: $communityId, removed: $removed, locked: $locked, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, embedTitle: $embedTitle, embedDescription: $embedDescription, thumbnailUrl: $thumbnailUrl, apId: $apId, local: $local, embedVideoUrl: $embedVideoUrl, languageId: $languageId, featuredCommunity: $featuredCommunity, featuredLocal: $featuredLocal, urlContentType: $urlContentType, altText: $altText)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PostImpl &&
@@ -466,7 +521,10 @@ class _$PostImpl extends _Post {
             (identical(other.featuredCommunity, featuredCommunity) ||
                 other.featuredCommunity == featuredCommunity) &&
             (identical(other.featuredLocal, featuredLocal) ||
-                other.featuredLocal == featuredLocal));
+                other.featuredLocal == featuredLocal) &&
+            (identical(other.urlContentType, urlContentType) ||
+                other.urlContentType == urlContentType) &&
+            (identical(other.altText, altText) || other.altText == altText));
   }
 
   @JsonKey(ignore: true)
@@ -493,7 +551,9 @@ class _$PostImpl extends _Post {
         embedVideoUrl,
         languageId,
         featuredCommunity,
-        featuredLocal
+        featuredLocal,
+        urlContentType,
+        altText
       ]);
 
   @JsonKey(ignore: true)
@@ -532,53 +592,59 @@ abstract class _Post extends Post {
       final String? embedVideoUrl,
       required final int languageId,
       required final bool featuredCommunity,
-      required final bool featuredLocal}) = _$PostImpl;
+      required final bool featuredLocal,
+      final String? urlContentType,
+      final String? altText}) = _$PostImpl;
   const _Post._() : super._();
 
   factory _Post.fromJson(Map<String, dynamic> json) = _$PostImpl.fromJson;
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   String get name;
-  @override
+  @override // v0.18.0
   String? get url;
-  @override
+  @override // v0.18.0
   String? get body;
-  @override
+  @override // v0.18.0
   int get creatorId;
-  @override
+  @override // v0.18.0
   int get communityId;
-  @override
+  @override // v0.18.0
   bool get removed;
-  @override
+  @override // v0.18.0
   bool get locked;
-  @override
+  @override // v0.18.0
   DateTime get published;
-  @override
+  @override // v0.18.0
   DateTime? get updated;
-  @override
+  @override // v0.18.0
   bool get deleted;
-  @override
+  @override // v0.18.0
   bool get nsfw;
-  @override
+  @override // v0.18.0
   String? get embedTitle;
-  @override
+  @override // v0.18.0
   String? get embedDescription;
-  @override
+  @override // v0.18.0
   String? get thumbnailUrl;
-  @override
+  @override // v0.18.0
   String get apId;
-  @override
+  @override // v0.18.0
   bool get local;
-  @override
+  @override // v0.18.0
   String? get embedVideoUrl;
-  @override
+  @override // v0.18.0
   int get languageId;
-  @override
+  @override // v0.18.0
   bool get featuredCommunity;
-  @override
+  @override // v0.18.0
   bool get featuredLocal;
+  @override // v0.18.0
+  String? get urlContentType;
+  @override // v0.19.4 (optional)
+  String? get altText;
   @override
   @JsonKey(ignore: true)
   _$$PostImplCopyWith<_$PostImpl> get copyWith =>

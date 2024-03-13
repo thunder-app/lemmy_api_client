@@ -12,7 +12,7 @@ part of 'site_aggregates.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SiteAggregates _$SiteAggregatesFromJson(Map<String, dynamic> json) {
   return _SiteAggregates.fromJson(json);
@@ -21,15 +21,16 @@ SiteAggregates _$SiteAggregatesFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$SiteAggregates {
   @deprecated
-  int? get id => throw _privateConstructorUsedError;
-  int get siteId => throw _privateConstructorUsedError;
-  int get users => throw _privateConstructorUsedError;
-  int get posts => throw _privateConstructorUsedError;
-  int get comments => throw _privateConstructorUsedError;
-  int get communities => throw _privateConstructorUsedError;
-  int get usersActiveDay => throw _privateConstructorUsedError;
-  int get usersActiveWeek => throw _privateConstructorUsedError;
-  int get usersActiveMonth => throw _privateConstructorUsedError;
+  int? get id =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
+  int get siteId => throw _privateConstructorUsedError; // v0.18.0
+  int get users => throw _privateConstructorUsedError; // v0.18.0
+  int get posts => throw _privateConstructorUsedError; // v0.18.0
+  int get comments => throw _privateConstructorUsedError; // v0.18.0
+  int get communities => throw _privateConstructorUsedError; // v0.18.0
+  int get usersActiveDay => throw _privateConstructorUsedError; // v0.18.0
+  int get usersActiveWeek => throw _privateConstructorUsedError; // v0.18.0
+  int get usersActiveMonth => throw _privateConstructorUsedError; // v0.18.0
   int get usersActiveHalfYear => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -237,22 +238,31 @@ class _$SiteAggregatesImpl extends _SiteAggregates {
   @override
   @deprecated
   final int? id;
+// v0.18.0 [deprecated in v0.19.0]
   @override
   final int siteId;
+// v0.18.0
   @override
   final int users;
+// v0.18.0
   @override
   final int posts;
+// v0.18.0
   @override
   final int comments;
+// v0.18.0
   @override
   final int communities;
+// v0.18.0
   @override
   final int usersActiveDay;
+// v0.18.0
   @override
   final int usersActiveWeek;
+// v0.18.0
   @override
   final int usersActiveMonth;
+// v0.18.0
   @override
   final int usersActiveHalfYear;
 
@@ -262,7 +272,7 @@ class _$SiteAggregatesImpl extends _SiteAggregates {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SiteAggregatesImpl &&
@@ -334,23 +344,23 @@ abstract class _SiteAggregates extends SiteAggregates {
   @override
   @deprecated
   int? get id;
-  @override
+  @override // v0.18.0 [deprecated in v0.19.0]
   int get siteId;
-  @override
+  @override // v0.18.0
   int get users;
-  @override
+  @override // v0.18.0
   int get posts;
-  @override
+  @override // v0.18.0
   int get comments;
-  @override
+  @override // v0.18.0
   int get communities;
-  @override
+  @override // v0.18.0
   int get usersActiveDay;
-  @override
+  @override // v0.18.0
   int get usersActiveWeek;
-  @override
+  @override // v0.18.0
   int get usersActiveMonth;
-  @override
+  @override // v0.18.0
   int get usersActiveHalfYear;
   @override
   @JsonKey(ignore: true)

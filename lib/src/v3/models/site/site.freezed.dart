@@ -12,7 +12,7 @@ part of 'site.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Site _$SiteFromJson(Map<String, dynamic> json) {
   return _Site.fromJson(json);
@@ -20,20 +20,21 @@ Site _$SiteFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Site {
-  int get id => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  String? get sidebar => throw _privateConstructorUsedError;
-  DateTime get published => throw _privateConstructorUsedError;
-  DateTime? get updated => throw _privateConstructorUsedError;
-  String? get icon => throw _privateConstructorUsedError;
-  String? get banner => throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
-  String get actorId => throw _privateConstructorUsedError;
-  DateTime get lastRefreshedAt => throw _privateConstructorUsedError;
-  String get inboxUrl => throw _privateConstructorUsedError;
-  String? get privateKey => throw _privateConstructorUsedError;
-  String get publicKey => throw _privateConstructorUsedError;
-  int get instanceId => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
+  String get name => throw _privateConstructorUsedError; // v0.18.0
+  String? get sidebar => throw _privateConstructorUsedError; // v0.18.0
+  DateTime get published => throw _privateConstructorUsedError; // v0.18.0
+  DateTime? get updated => throw _privateConstructorUsedError; // v0.18.0
+  String? get icon => throw _privateConstructorUsedError; // v0.18.0
+  String? get banner => throw _privateConstructorUsedError; // v0.18.0
+  String? get description => throw _privateConstructorUsedError; // v0.18.0
+  String get actorId => throw _privateConstructorUsedError; // v0.18.0
+  DateTime get lastRefreshedAt => throw _privateConstructorUsedError; // v0.18.0
+  String get inboxUrl => throw _privateConstructorUsedError; // v0.18.0
+  String? get privateKey => throw _privateConstructorUsedError; // v0.18.0
+  String get publicKey => throw _privateConstructorUsedError; // v0.18.0
+  int get instanceId => throw _privateConstructorUsedError; // v0.18.0
+  String? get contentWarning => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -59,7 +60,8 @@ abstract class $SiteCopyWith<$Res> {
       String inboxUrl,
       String? privateKey,
       String publicKey,
-      int instanceId});
+      int instanceId,
+      String? contentWarning});
 }
 
 /// @nodoc
@@ -89,6 +91,7 @@ class _$SiteCopyWithImpl<$Res, $Val extends Site>
     Object? privateKey = freezed,
     Object? publicKey = null,
     Object? instanceId = null,
+    Object? contentWarning = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -147,6 +150,10 @@ class _$SiteCopyWithImpl<$Res, $Val extends Site>
           ? _value.instanceId
           : instanceId // ignore: cast_nullable_to_non_nullable
               as int,
+      contentWarning: freezed == contentWarning
+          ? _value.contentWarning
+          : contentWarning // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -172,7 +179,8 @@ abstract class _$$SiteImplCopyWith<$Res> implements $SiteCopyWith<$Res> {
       String inboxUrl,
       String? privateKey,
       String publicKey,
-      int instanceId});
+      int instanceId,
+      String? contentWarning});
 }
 
 /// @nodoc
@@ -199,6 +207,7 @@ class __$$SiteImplCopyWithImpl<$Res>
     Object? privateKey = freezed,
     Object? publicKey = null,
     Object? instanceId = null,
+    Object? contentWarning = freezed,
   }) {
     return _then(_$SiteImpl(
       id: null == id
@@ -257,6 +266,10 @@ class __$$SiteImplCopyWithImpl<$Res>
           ? _value.instanceId
           : instanceId // ignore: cast_nullable_to_non_nullable
               as int,
+      contentWarning: freezed == contentWarning
+          ? _value.contentWarning
+          : contentWarning // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -279,7 +292,8 @@ class _$SiteImpl extends _Site {
       required this.inboxUrl,
       this.privateKey,
       required this.publicKey,
-      required this.instanceId})
+      required this.instanceId,
+      this.contentWarning})
       : super._();
 
   factory _$SiteImpl.fromJson(Map<String, dynamic> json) =>
@@ -287,40 +301,56 @@ class _$SiteImpl extends _Site {
 
   @override
   final int id;
+// v0.18.0
   @override
   final String name;
+// v0.18.0
   @override
   final String? sidebar;
+// v0.18.0
   @override
   final DateTime published;
+// v0.18.0
   @override
   final DateTime? updated;
+// v0.18.0
   @override
   final String? icon;
+// v0.18.0
   @override
   final String? banner;
+// v0.18.0
   @override
   final String? description;
+// v0.18.0
   @override
   final String actorId;
+// v0.18.0
   @override
   final DateTime lastRefreshedAt;
+// v0.18.0
   @override
   final String inboxUrl;
+// v0.18.0
   @override
   final String? privateKey;
+// v0.18.0
   @override
   final String publicKey;
+// v0.18.0
   @override
   final int instanceId;
+// v0.18.0
+  @override
+  final String? contentWarning;
 
   @override
   String toString() {
-    return 'Site(id: $id, name: $name, sidebar: $sidebar, published: $published, updated: $updated, icon: $icon, banner: $banner, description: $description, actorId: $actorId, lastRefreshedAt: $lastRefreshedAt, inboxUrl: $inboxUrl, privateKey: $privateKey, publicKey: $publicKey, instanceId: $instanceId)';
+    return 'Site(id: $id, name: $name, sidebar: $sidebar, published: $published, updated: $updated, icon: $icon, banner: $banner, description: $description, actorId: $actorId, lastRefreshedAt: $lastRefreshedAt, inboxUrl: $inboxUrl, privateKey: $privateKey, publicKey: $publicKey, instanceId: $instanceId, contentWarning: $contentWarning)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SiteImpl &&
@@ -344,7 +374,9 @@ class _$SiteImpl extends _Site {
             (identical(other.publicKey, publicKey) ||
                 other.publicKey == publicKey) &&
             (identical(other.instanceId, instanceId) ||
-                other.instanceId == instanceId));
+                other.instanceId == instanceId) &&
+            (identical(other.contentWarning, contentWarning) ||
+                other.contentWarning == contentWarning));
   }
 
   @JsonKey(ignore: true)
@@ -364,7 +396,8 @@ class _$SiteImpl extends _Site {
       inboxUrl,
       privateKey,
       publicKey,
-      instanceId);
+      instanceId,
+      contentWarning);
 
   @JsonKey(ignore: true)
   @override
@@ -395,39 +428,42 @@ abstract class _Site extends Site {
       required final String inboxUrl,
       final String? privateKey,
       required final String publicKey,
-      required final int instanceId}) = _$SiteImpl;
+      required final int instanceId,
+      final String? contentWarning}) = _$SiteImpl;
   const _Site._() : super._();
 
   factory _Site.fromJson(Map<String, dynamic> json) = _$SiteImpl.fromJson;
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   String get name;
-  @override
+  @override // v0.18.0
   String? get sidebar;
-  @override
+  @override // v0.18.0
   DateTime get published;
-  @override
+  @override // v0.18.0
   DateTime? get updated;
-  @override
+  @override // v0.18.0
   String? get icon;
-  @override
+  @override // v0.18.0
   String? get banner;
-  @override
+  @override // v0.18.0
   String? get description;
-  @override
+  @override // v0.18.0
   String get actorId;
-  @override
+  @override // v0.18.0
   DateTime get lastRefreshedAt;
-  @override
+  @override // v0.18.0
   String get inboxUrl;
-  @override
+  @override // v0.18.0
   String? get privateKey;
-  @override
+  @override // v0.18.0
   String get publicKey;
-  @override
+  @override // v0.18.0
   int get instanceId;
+  @override // v0.18.0
+  String? get contentWarning;
   @override
   @JsonKey(ignore: true)
   _$$SiteImplCopyWith<_$SiteImpl> get copyWith =>

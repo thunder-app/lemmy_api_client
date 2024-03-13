@@ -10,7 +10,7 @@ class GetUnreadRegistrationApplicationCountResponse
     with _$GetUnreadRegistrationApplicationCountResponse {
   @modelSerde
   const factory GetUnreadRegistrationApplicationCountResponse({
-    required int registrationApplications,
+    required int registrationApplications, // v0.18.0
   }) = _GetUnreadRegistrationApplicationCountResponse;
 
   const GetUnreadRegistrationApplicationCountResponse._();

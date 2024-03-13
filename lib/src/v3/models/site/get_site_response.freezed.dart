@@ -12,7 +12,7 @@ part of 'get_site_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetSiteResponse _$GetSiteResponseFromJson(Map<String, dynamic> json) {
   return _GetSiteResponse.fromJson(json);
@@ -20,13 +20,15 @@ GetSiteResponse _$GetSiteResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetSiteResponse {
-  SiteView get siteView => throw _privateConstructorUsedError;
-  List<PersonView> get admins => throw _privateConstructorUsedError;
-  String get version => throw _privateConstructorUsedError;
-  MyUserInfo? get myUser => throw _privateConstructorUsedError;
-  List<Language> get allLanguages => throw _privateConstructorUsedError;
-  List<int> get discussionLanguages => throw _privateConstructorUsedError;
-  List<Tagline> get taglines => throw _privateConstructorUsedError;
+  SiteView get siteView => throw _privateConstructorUsedError; // v0.18.0
+  List<PersonView> get admins => throw _privateConstructorUsedError; // v0.18.0
+  String get version => throw _privateConstructorUsedError; // v0.18.0
+  MyUserInfo? get myUser => throw _privateConstructorUsedError; // v0.18.0
+  List<Language> get allLanguages =>
+      throw _privateConstructorUsedError; // v0.18.0
+  List<int> get discussionLanguages =>
+      throw _privateConstructorUsedError; // v0.18.0
+  List<Tagline> get taglines => throw _privateConstructorUsedError; // v0.18.0
   List<CustomEmojiView> get customEmojis => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -240,7 +242,9 @@ class _$GetSiteResponseImpl extends _GetSiteResponse {
 
   @override
   final SiteView siteView;
+// v0.18.0
   final List<PersonView> _admins;
+// v0.18.0
   @override
   List<PersonView> get admins {
     if (_admins is EqualUnmodifiableListView) return _admins;
@@ -248,11 +252,15 @@ class _$GetSiteResponseImpl extends _GetSiteResponse {
     return EqualUnmodifiableListView(_admins);
   }
 
+// v0.18.0
   @override
   final String version;
+// v0.18.0
   @override
   final MyUserInfo? myUser;
+// v0.18.0
   final List<Language> _allLanguages;
+// v0.18.0
   @override
   List<Language> get allLanguages {
     if (_allLanguages is EqualUnmodifiableListView) return _allLanguages;
@@ -260,7 +268,9 @@ class _$GetSiteResponseImpl extends _GetSiteResponse {
     return EqualUnmodifiableListView(_allLanguages);
   }
 
+// v0.18.0
   final List<int> _discussionLanguages;
+// v0.18.0
   @override
   List<int> get discussionLanguages {
     if (_discussionLanguages is EqualUnmodifiableListView)
@@ -269,7 +279,9 @@ class _$GetSiteResponseImpl extends _GetSiteResponse {
     return EqualUnmodifiableListView(_discussionLanguages);
   }
 
+// v0.18.0
   final List<Tagline> _taglines;
+// v0.18.0
   @override
   List<Tagline> get taglines {
     if (_taglines is EqualUnmodifiableListView) return _taglines;
@@ -277,7 +289,9 @@ class _$GetSiteResponseImpl extends _GetSiteResponse {
     return EqualUnmodifiableListView(_taglines);
   }
 
+// v0.18.0
   final List<CustomEmojiView> _customEmojis;
+// v0.18.0
   @override
   List<CustomEmojiView> get customEmojis {
     if (_customEmojis is EqualUnmodifiableListView) return _customEmojis;
@@ -291,7 +305,7 @@ class _$GetSiteResponseImpl extends _GetSiteResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetSiteResponseImpl &&
@@ -355,19 +369,19 @@ abstract class _GetSiteResponse extends GetSiteResponse {
 
   @override
   SiteView get siteView;
-  @override
+  @override // v0.18.0
   List<PersonView> get admins;
-  @override
+  @override // v0.18.0
   String get version;
-  @override
+  @override // v0.18.0
   MyUserInfo? get myUser;
-  @override
+  @override // v0.18.0
   List<Language> get allLanguages;
-  @override
+  @override // v0.18.0
   List<int> get discussionLanguages;
-  @override
+  @override // v0.18.0
   List<Tagline> get taglines;
-  @override
+  @override // v0.18.0
   List<CustomEmojiView> get customEmojis;
   @override
   @JsonKey(ignore: true)

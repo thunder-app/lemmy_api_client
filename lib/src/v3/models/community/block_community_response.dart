@@ -10,8 +10,8 @@ part 'block_community_response.g.dart';
 class BlockCommunityResponse with _$BlockCommunityResponse {
   @modelSerde
   const factory BlockCommunityResponse({
-    required CommunityView communityView,
-    required bool blocked,
+    required CommunityView communityView, // v0.18.0
+    required bool blocked, // v0.18.0
   }) = _BlockCommunityResponse;
 
   const BlockCommunityResponse._();

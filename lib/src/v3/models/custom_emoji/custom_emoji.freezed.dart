@@ -12,7 +12,7 @@ part of 'custom_emoji.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CustomEmoji _$CustomEmojiFromJson(Map<String, dynamic> json) {
   return _CustomEmoji.fromJson(json);
@@ -20,13 +20,13 @@ CustomEmoji _$CustomEmojiFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CustomEmoji {
-  int get id => throw _privateConstructorUsedError;
-  int get localSiteId => throw _privateConstructorUsedError;
-  String get shortcode => throw _privateConstructorUsedError;
-  String get imageUrl => throw _privateConstructorUsedError;
-  String get altText => throw _privateConstructorUsedError;
-  String get category => throw _privateConstructorUsedError;
-  DateTime get published => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
+  int get localSiteId => throw _privateConstructorUsedError; // v0.18.0
+  String get shortcode => throw _privateConstructorUsedError; // v0.18.0
+  String get imageUrl => throw _privateConstructorUsedError; // v0.18.0
+  String get altText => throw _privateConstructorUsedError; // v0.18.0
+  String get category => throw _privateConstructorUsedError; // v0.18.0
+  DateTime get published => throw _privateConstructorUsedError; // v0.18.0
   DateTime? get updated => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -207,18 +207,25 @@ class _$CustomEmojiImpl extends _CustomEmoji {
 
   @override
   final int id;
+// v0.18.0
   @override
   final int localSiteId;
+// v0.18.0
   @override
   final String shortcode;
+// v0.18.0
   @override
   final String imageUrl;
+// v0.18.0
   @override
   final String altText;
+// v0.18.0
   @override
   final String category;
+// v0.18.0
   @override
   final DateTime published;
+// v0.18.0
   @override
   final DateTime? updated;
 
@@ -228,7 +235,7 @@ class _$CustomEmojiImpl extends _CustomEmoji {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CustomEmojiImpl &&
@@ -283,19 +290,19 @@ abstract class _CustomEmoji extends CustomEmoji {
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   int get localSiteId;
-  @override
+  @override // v0.18.0
   String get shortcode;
-  @override
+  @override // v0.18.0
   String get imageUrl;
-  @override
+  @override // v0.18.0
   String get altText;
-  @override
+  @override // v0.18.0
   String get category;
-  @override
+  @override // v0.18.0
   DateTime get published;
-  @override
+  @override // v0.18.0
   DateTime? get updated;
   @override
   @JsonKey(ignore: true)

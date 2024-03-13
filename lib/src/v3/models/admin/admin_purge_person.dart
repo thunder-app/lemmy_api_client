@@ -9,10 +9,10 @@ part 'admin_purge_person.g.dart';
 class AdminPurgePerson with _$AdminPurgePerson {
   @modelSerde
   const factory AdminPurgePerson({
-    required int id,
-    required int adminPersonId,
-    String? reason,
-    @JsonKey(name: 'when_') required String when,
+    required int id, // v0.18.0
+    required int adminPersonId, // v0.18.0
+    String? reason, // v0.18.0
+    @JsonKey(name: 'when_') required String when, // v0.18.0
   }) = _AdminPurgePerson;
 
   const AdminPurgePerson._();

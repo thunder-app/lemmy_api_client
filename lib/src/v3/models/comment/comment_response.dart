@@ -10,9 +10,9 @@ part 'comment_response.g.dart';
 class CommentResponse with _$CommentResponse {
   @modelSerde
   const factory CommentResponse({
-    required CommentView commentView,
-    required List<int> recipientIds,
-    @deprecated String? formId,
+    required CommentView commentView, // v0.18.0
+    required List<int> recipientIds, // v0.18.0
+    @deprecated String? formId, // v0.18.0 [deprecated in v0.19.0]
   }) = _CommentResponse;
 
   const CommentResponse._();

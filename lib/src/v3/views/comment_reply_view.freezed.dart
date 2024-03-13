@@ -12,7 +12,7 @@ part of 'comment_reply_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CommentReplyView _$CommentReplyViewFromJson(Map<String, dynamic> json) {
   return _CommentReplyView.fromJson(json);
@@ -20,21 +20,24 @@ CommentReplyView _$CommentReplyViewFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CommentReplyView {
-  CommentReply get commentReply => throw _privateConstructorUsedError;
-  Comment get comment => throw _privateConstructorUsedError;
-  Person get creator => throw _privateConstructorUsedError;
-  Post get post => throw _privateConstructorUsedError;
-  Community get community => throw _privateConstructorUsedError;
-  Person get recipient => throw _privateConstructorUsedError;
-  CommentAggregates get counts => throw _privateConstructorUsedError;
-  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
+  CommentReply get commentReply =>
+      throw _privateConstructorUsedError; // v0.18.0
+  Comment get comment => throw _privateConstructorUsedError; // v0.18.0
+  Person get creator => throw _privateConstructorUsedError; // v0.18.0
+  Post get post => throw _privateConstructorUsedError; // v0.18.0
+  Community get community => throw _privateConstructorUsedError; // v0.18.0
+  Person get recipient => throw _privateConstructorUsedError; // v0.18.0
+  CommentAggregates get counts => throw _privateConstructorUsedError; // v0.18.0
+  bool get creatorBannedFromCommunity =>
+      throw _privateConstructorUsedError; // v0.18.0
   bool? get creatorIsModerator =>
-      throw _privateConstructorUsedError; // Only available in lemmy v0.19.0 and above
+      throw _privateConstructorUsedError; // v0.19.0 (required)
   bool? get creatorIsAdmin =>
-      throw _privateConstructorUsedError; // Only available in lemmy v0.19.0 and above
-  SubscribedType get subscribed => throw _privateConstructorUsedError;
-  bool get saved => throw _privateConstructorUsedError;
-  bool get creatorBlocked => throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.19.0 (required)
+  SubscribedType get subscribed =>
+      throw _privateConstructorUsedError; // v0.18.0
+  bool get saved => throw _privateConstructorUsedError; // v0.18.0
+  bool get creatorBlocked => throw _privateConstructorUsedError; // v0.18.0
   num? get myVote => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -372,32 +375,43 @@ class _$CommentReplyViewImpl extends _CommentReplyView {
 
   @override
   final CommentReply commentReply;
+// v0.18.0
   @override
   final Comment comment;
+// v0.18.0
   @override
   final Person creator;
+// v0.18.0
   @override
   final Post post;
+// v0.18.0
   @override
   final Community community;
+// v0.18.0
   @override
   final Person recipient;
+// v0.18.0
   @override
   final CommentAggregates counts;
+// v0.18.0
   @override
   final bool creatorBannedFromCommunity;
+// v0.18.0
   @override
   final bool? creatorIsModerator;
-// Only available in lemmy v0.19.0 and above
+// v0.19.0 (required)
   @override
   final bool? creatorIsAdmin;
-// Only available in lemmy v0.19.0 and above
+// v0.19.0 (required)
   @override
   final SubscribedType subscribed;
+// v0.18.0
   @override
   final bool saved;
+// v0.18.0
   @override
   final bool creatorBlocked;
+// v0.18.0
   @override
   final num? myVote;
 
@@ -407,7 +421,7 @@ class _$CommentReplyViewImpl extends _CommentReplyView {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CommentReplyViewImpl &&
@@ -494,31 +508,31 @@ abstract class _CommentReplyView extends CommentReplyView {
 
   @override
   CommentReply get commentReply;
-  @override
+  @override // v0.18.0
   Comment get comment;
-  @override
+  @override // v0.18.0
   Person get creator;
-  @override
+  @override // v0.18.0
   Post get post;
-  @override
+  @override // v0.18.0
   Community get community;
-  @override
+  @override // v0.18.0
   Person get recipient;
-  @override
+  @override // v0.18.0
   CommentAggregates get counts;
-  @override
+  @override // v0.18.0
   bool get creatorBannedFromCommunity;
-  @override
+  @override // v0.18.0
   bool? get creatorIsModerator;
-  @override // Only available in lemmy v0.19.0 and above
+  @override // v0.19.0 (required)
   bool? get creatorIsAdmin;
-  @override // Only available in lemmy v0.19.0 and above
+  @override // v0.19.0 (required)
   SubscribedType get subscribed;
-  @override
+  @override // v0.18.0
   bool get saved;
-  @override
+  @override // v0.18.0
   bool get creatorBlocked;
-  @override
+  @override // v0.18.0
   num? get myVote;
   @override
   @JsonKey(ignore: true)

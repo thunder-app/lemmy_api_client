@@ -12,7 +12,7 @@ part of 'get_person_details_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetPersonDetailsResponse _$GetPersonDetailsResponseFromJson(
     Map<String, dynamic> json) {
@@ -21,9 +21,11 @@ GetPersonDetailsResponse _$GetPersonDetailsResponseFromJson(
 
 /// @nodoc
 mixin _$GetPersonDetailsResponse {
-  PersonView get personView => throw _privateConstructorUsedError;
-  List<CommentView> get comments => throw _privateConstructorUsedError;
-  List<PostView> get posts => throw _privateConstructorUsedError;
+  PersonView get personView => throw _privateConstructorUsedError; // v0.18.0
+  Site? get site => throw _privateConstructorUsedError; // v0.19.2 (optional)
+  List<CommentView> get comments =>
+      throw _privateConstructorUsedError; // v0.18.0
+  List<PostView> get posts => throw _privateConstructorUsedError; // v0.18.0
   List<CommunityModeratorView> get moderates =>
       throw _privateConstructorUsedError;
 
@@ -41,11 +43,13 @@ abstract class $GetPersonDetailsResponseCopyWith<$Res> {
   @useResult
   $Res call(
       {PersonView personView,
+      Site? site,
       List<CommentView> comments,
       List<PostView> posts,
       List<CommunityModeratorView> moderates});
 
   $PersonViewCopyWith<$Res> get personView;
+  $SiteCopyWith<$Res>? get site;
 }
 
 /// @nodoc
@@ -63,6 +67,7 @@ class _$GetPersonDetailsResponseCopyWithImpl<$Res,
   @override
   $Res call({
     Object? personView = null,
+    Object? site = freezed,
     Object? comments = null,
     Object? posts = null,
     Object? moderates = null,
@@ -72,6 +77,10 @@ class _$GetPersonDetailsResponseCopyWithImpl<$Res,
           ? _value.personView
           : personView // ignore: cast_nullable_to_non_nullable
               as PersonView,
+      site: freezed == site
+          ? _value.site
+          : site // ignore: cast_nullable_to_non_nullable
+              as Site?,
       comments: null == comments
           ? _value.comments
           : comments // ignore: cast_nullable_to_non_nullable
@@ -94,6 +103,18 @@ class _$GetPersonDetailsResponseCopyWithImpl<$Res,
       return _then(_value.copyWith(personView: value) as $Val);
     });
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $SiteCopyWith<$Res>? get site {
+    if (_value.site == null) {
+      return null;
+    }
+
+    return $SiteCopyWith<$Res>(_value.site!, (value) {
+      return _then(_value.copyWith(site: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -107,12 +128,15 @@ abstract class _$$GetPersonDetailsResponseImplCopyWith<$Res>
   @useResult
   $Res call(
       {PersonView personView,
+      Site? site,
       List<CommentView> comments,
       List<PostView> posts,
       List<CommunityModeratorView> moderates});
 
   @override
   $PersonViewCopyWith<$Res> get personView;
+  @override
+  $SiteCopyWith<$Res>? get site;
 }
 
 /// @nodoc
@@ -129,6 +153,7 @@ class __$$GetPersonDetailsResponseImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? personView = null,
+    Object? site = freezed,
     Object? comments = null,
     Object? posts = null,
     Object? moderates = null,
@@ -138,6 +163,10 @@ class __$$GetPersonDetailsResponseImplCopyWithImpl<$Res>
           ? _value.personView
           : personView // ignore: cast_nullable_to_non_nullable
               as PersonView,
+      site: freezed == site
+          ? _value.site
+          : site // ignore: cast_nullable_to_non_nullable
+              as Site?,
       comments: null == comments
           ? _value._comments
           : comments // ignore: cast_nullable_to_non_nullable
@@ -160,6 +189,7 @@ class __$$GetPersonDetailsResponseImplCopyWithImpl<$Res>
 class _$GetPersonDetailsResponseImpl extends _GetPersonDetailsResponse {
   const _$GetPersonDetailsResponseImpl(
       {required this.personView,
+      this.site,
       required final List<CommentView> comments,
       required final List<PostView> posts,
       required final List<CommunityModeratorView> moderates})
@@ -173,7 +203,12 @@ class _$GetPersonDetailsResponseImpl extends _GetPersonDetailsResponse {
 
   @override
   final PersonView personView;
+// v0.18.0
+  @override
+  final Site? site;
+// v0.19.2 (optional)
   final List<CommentView> _comments;
+// v0.19.2 (optional)
   @override
   List<CommentView> get comments {
     if (_comments is EqualUnmodifiableListView) return _comments;
@@ -181,7 +216,9 @@ class _$GetPersonDetailsResponseImpl extends _GetPersonDetailsResponse {
     return EqualUnmodifiableListView(_comments);
   }
 
+// v0.18.0
   final List<PostView> _posts;
+// v0.18.0
   @override
   List<PostView> get posts {
     if (_posts is EqualUnmodifiableListView) return _posts;
@@ -189,7 +226,9 @@ class _$GetPersonDetailsResponseImpl extends _GetPersonDetailsResponse {
     return EqualUnmodifiableListView(_posts);
   }
 
+// v0.18.0
   final List<CommunityModeratorView> _moderates;
+// v0.18.0
   @override
   List<CommunityModeratorView> get moderates {
     if (_moderates is EqualUnmodifiableListView) return _moderates;
@@ -199,16 +238,17 @@ class _$GetPersonDetailsResponseImpl extends _GetPersonDetailsResponse {
 
   @override
   String toString() {
-    return 'GetPersonDetailsResponse(personView: $personView, comments: $comments, posts: $posts, moderates: $moderates)';
+    return 'GetPersonDetailsResponse(personView: $personView, site: $site, comments: $comments, posts: $posts, moderates: $moderates)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetPersonDetailsResponseImpl &&
             (identical(other.personView, personView) ||
                 other.personView == personView) &&
+            (identical(other.site, site) || other.site == site) &&
             const DeepCollectionEquality().equals(other._comments, _comments) &&
             const DeepCollectionEquality().equals(other._posts, _posts) &&
             const DeepCollectionEquality()
@@ -220,6 +260,7 @@ class _$GetPersonDetailsResponseImpl extends _GetPersonDetailsResponse {
   int get hashCode => Object.hash(
       runtimeType,
       personView,
+      site,
       const DeepCollectionEquality().hash(_comments),
       const DeepCollectionEquality().hash(_posts),
       const DeepCollectionEquality().hash(_moderates));
@@ -242,6 +283,7 @@ class _$GetPersonDetailsResponseImpl extends _GetPersonDetailsResponse {
 abstract class _GetPersonDetailsResponse extends GetPersonDetailsResponse {
   const factory _GetPersonDetailsResponse(
           {required final PersonView personView,
+          final Site? site,
           required final List<CommentView> comments,
           required final List<PostView> posts,
           required final List<CommunityModeratorView> moderates}) =
@@ -253,11 +295,13 @@ abstract class _GetPersonDetailsResponse extends GetPersonDetailsResponse {
 
   @override
   PersonView get personView;
-  @override
+  @override // v0.18.0
+  Site? get site;
+  @override // v0.19.2 (optional)
   List<CommentView> get comments;
-  @override
+  @override // v0.18.0
   List<PostView> get posts;
-  @override
+  @override // v0.18.0
   List<CommunityModeratorView> get moderates;
   @override
   @JsonKey(ignore: true)

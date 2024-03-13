@@ -17,13 +17,15 @@ class CreatePost
     implements LemmyApiQuery<PostResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory CreatePost({
-    required String name,
-    required int communityId,
-    String? url,
-    String? body,
-    String? honeypot,
-    bool? nsfw,
-    int? languageId,
+    required String name, // v0.18.0
+    required int communityId, // v0.18.0
+    String? url, // v0.18.0
+    String? body, // v0.18.0
+    String? altText, // v0.19.4 (optional)
+    String? honeypot, // v0.18.0
+    bool? nsfw, // v0.18.0
+    int? languageId, // v0.18.0
+    String? customThumbnail, // v0.19.4 (optional)
     String? auth,
   }) = _CreatePost;
 
@@ -49,8 +51,8 @@ class GetPost
     implements LemmyApiQuery<GetPostResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetPost({
-    int? id,
-    int? commentId,
+    int? id, // v0.18.0
+    int? commentId, // v0.18.0
     String? auth,
   }) = _GetPost;
 
@@ -76,12 +78,14 @@ class EditPost
     implements LemmyApiQuery<PostResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory EditPost({
-    required int postId,
-    String? name,
-    String? url,
-    String? body,
-    bool? nsfw,
-    int? languageId,
+    required int postId, // v0.18.0
+    String? name, // v0.18.0
+    String? url, // v0.18.0
+    String? body, // v0.18.0
+    String? altText, // v0.19.4 (optional)
+    bool? nsfw, // v0.18.0
+    int? languageId, // v0.18.0
+    String? customThumbnail, // v0.19.4 (optional)
     String? auth,
   }) = _EditPost;
 
@@ -107,8 +111,8 @@ class DeletePost
     implements LemmyApiQuery<PostResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory DeletePost({
-    required int postId,
-    required bool deleted,
+    required int postId, // v0.18.0
+    required bool deleted, // v0.18.0
     String? auth,
   }) = _DeletePost;
 
@@ -134,9 +138,9 @@ class RemovePost
     implements LemmyApiQuery<PostResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory RemovePost({
-    required int postId,
-    required bool removed,
-    String? reason,
+    required int postId, // v0.18.0
+    required bool removed, // v0.18.0
+    String? reason, // v0.18.0
     String? auth,
   }) = _RemovePost;
 
@@ -164,9 +168,11 @@ class MarkPostAsRead
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory MarkPostAsRead({
-    int? postId,
-    List<int>? postIds, // Available in lemmy v0.19.0 and above
-    required bool read,
+    @deprecated
+    int?
+        postId, // v0.18.0 (required), v0.19.0 (optional) [deprecated in v0.19.4]
+    List<int>? postIds, // v0.19.0 (optional)
+    required bool read, // v0.18.0
     String? auth,
   }) = _MarkPostAsRead;
 
@@ -183,6 +189,35 @@ class MarkPostAsRead
       MarkPostAsReadResponse.fromJson(json);
 }
 
+/// Only available in lemmy v0.19.4 and above
+///
+/// Hide a post from list views.
+///
+/// `HTTP.POST /post/hide`
+@freezed
+class HidePost
+    with _$HidePost
+    implements LemmyApiQuery<SuccessResponse>, LemmyApiAuthenticatedQuery {
+  @apiSerde
+  const factory HidePost({
+    required List<int> postIds, // v0.19.4 (required)
+    required bool hide, // v0.19.4 (required)
+    String? auth,
+  }) = _HidePost;
+
+  const HidePost._();
+  factory HidePost.fromJson(Map<String, dynamic> json) =>
+      _$HidePostFromJson(json);
+
+  final path = '/post/hide';
+
+  final httpMethod = HttpMethod.post;
+
+  @override
+  SuccessResponse responseFactory(Map<String, dynamic> json) =>
+      SuccessResponse.fromJson(json);
+}
+
 /// A moderator can lock a post ( IE disable new comments ).
 ///
 /// `HTTP.POST /post/lock`
@@ -192,8 +227,8 @@ class LockPost
     implements LemmyApiQuery<PostResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory LockPost({
-    required int postId,
-    required bool locked,
+    required int postId, // v0.18.0
+    required bool locked, // v0.18.0
     String? auth,
   }) = _LockPost;
 
@@ -219,9 +254,9 @@ class FeaturePost
     implements LemmyApiQuery<PostResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory FeaturePost({
-    required int postId,
-    required bool featured,
-    required PostFeatureType featureType,
+    required int postId, // v0.18.0
+    required bool featured, // v0.18.0
+    required PostFeatureType featureType, // v0.18.0
     String? auth,
   }) = _FeaturePost;
 
@@ -247,18 +282,19 @@ class GetPosts
     implements LemmyApiQuery<GetPostsResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetPosts({
-    @JsonKey(name: 'type_') ListingType? type,
-    SortType? sort,
-    int? page,
-    int? limit,
-    int? communityId,
-    String? communityName,
-    bool? savedOnly,
-    @deprecated bool? moderatorView,
+    @JsonKey(name: 'type_') ListingType? type, // v0.18.0
+    SortType? sort, // v0.18.0
+    int? page, // v0.18.0
+    int? limit, // v0.18.0
+    int? communityId, // v0.18.0
+    String? communityName, // v0.18.0
+    bool? savedOnly, // v0.18.0
+    @deprecated bool? moderatorView, // v0.18.3 [deprecated in v0.19.0]
     String? auth,
-    bool? likedOnly, // Only available in lemmy v0.19.0 and above
-    bool? dislikedOnly, // Only available in lemmy v0.19.0 and above
-    String? pageCursor, // Only available in lemmy v0.19.0 and above
+    bool? likedOnly, // v0.19.0 (optional)
+    bool? dislikedOnly, // v0.19.0 (optional)
+    bool? showHidden, // v0.19.4 (optional)
+    String? pageCursor, // v0.19.0 (optional)
   }) = _GetPosts;
 
   const GetPosts._();
@@ -283,8 +319,8 @@ class CreatePostLike
     implements LemmyApiQuery<PostResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory CreatePostLike({
-    required int postId,
-    required num score,
+    required int postId, // v0.18.0
+    required num score, // v0.18.0
     String? auth,
   }) = _CreatePostLike;
 
@@ -301,6 +337,38 @@ class CreatePostLike
       PostResponse.fromJson(json);
 }
 
+/// Only available in lemmy v0.19.2 and above
+///
+/// List a post's likes. Admin-only.
+///
+/// `HTTP.GET /post/like/list`
+@freezed
+class ListPostLikes
+    with _$ListPostLikes
+    implements
+        LemmyApiQuery<ListPostLikesResponse>,
+        LemmyApiAuthenticatedQuery {
+  @apiSerde
+  const factory ListPostLikes({
+    required int postId, // v0.19.2 (required)
+    int? page, // v0.19.2 (optional)
+    int? limit, // v0.19.2 (optional)
+    String? auth,
+  }) = _ListPostLikes;
+
+  const ListPostLikes._();
+  factory ListPostLikes.fromJson(Map<String, dynamic> json) =>
+      _$ListPostLikesFromJson(json);
+
+  final path = '/post/like/list';
+
+  final httpMethod = HttpMethod.get;
+
+  @override
+  ListPostLikesResponse responseFactory(Map<String, dynamic> json) =>
+      ListPostLikesResponse.fromJson(json);
+}
+
 /// Save a post.
 ///
 /// `HTTP.PUT /post/save`
@@ -310,8 +378,8 @@ class SavePost
     implements LemmyApiQuery<PostResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory SavePost({
-    required int postId,
-    required bool save,
+    required int postId, // v0.18.0
+    required bool save, // v0.18.0
     String? auth,
   }) = _SavePost;
 
@@ -337,8 +405,8 @@ class CreatePostReport
     implements LemmyApiQuery<PostReportResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory CreatePostReport({
-    required int postId,
-    required String reason,
+    required int postId, // v0.18.0
+    required String reason, // v0.18.0
     String? auth,
   }) = _CreatePostReport;
 
@@ -364,8 +432,8 @@ class ResolvePostReport
     implements LemmyApiQuery<PostReportResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ResolvePostReport({
-    required int reportId,
-    required bool resolved,
+    required int reportId, // v0.18.0
+    required bool resolved, // v0.18.0
     String? auth,
   }) = _ResolvePostReport;
 
@@ -393,10 +461,11 @@ class ListPostReports
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ListPostReports({
-    int? page,
-    int? limit,
-    bool? unresolvedOnly,
-    int? communityId,
+    int? page, // v0.18.0
+    int? limit, // v0.18.0
+    bool? unresolvedOnly, // v0.18.0
+    int? communityId, // v0.18.0
+    int? postId, // v0.19.4 (optional)
     String? auth,
   }) = _ListPostReports;
 
@@ -422,7 +491,7 @@ class GetSiteMetadata
     implements LemmyApiQuery<GetSiteMetadataResponse> {
   @apiSerde
   const factory GetSiteMetadata({
-    required String url,
+    required String url, // v0.18.0
   }) = _GetSiteMetadata;
 
   const GetSiteMetadata._();

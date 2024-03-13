@@ -12,7 +12,7 @@ part of 'custom_emoji_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CustomEmojiView _$CustomEmojiViewFromJson(Map<String, dynamic> json) {
   return _CustomEmojiView.fromJson(json);
@@ -20,7 +20,7 @@ CustomEmojiView _$CustomEmojiViewFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CustomEmojiView {
-  CustomEmoji get customEmoji => throw _privateConstructorUsedError;
+  CustomEmoji get customEmoji => throw _privateConstructorUsedError; // v0.18.0
   List<CustomEmojiKeyword> get keywords => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -133,7 +133,9 @@ class _$CustomEmojiViewImpl extends _CustomEmojiView {
 
   @override
   final CustomEmoji customEmoji;
+// v0.18.0
   final List<CustomEmojiKeyword> _keywords;
+// v0.18.0
   @override
   List<CustomEmojiKeyword> get keywords {
     if (_keywords is EqualUnmodifiableListView) return _keywords;
@@ -147,7 +149,7 @@ class _$CustomEmojiViewImpl extends _CustomEmojiView {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CustomEmojiViewImpl &&
@@ -188,7 +190,7 @@ abstract class _CustomEmojiView extends CustomEmojiView {
 
   @override
   CustomEmoji get customEmoji;
-  @override
+  @override // v0.18.0
   List<CustomEmojiKeyword> get keywords;
   @override
   @JsonKey(ignore: true)

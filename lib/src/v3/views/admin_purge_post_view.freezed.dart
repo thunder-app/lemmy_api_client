@@ -12,7 +12,7 @@ part of 'admin_purge_post_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 AdminPurgePostView _$AdminPurgePostViewFromJson(Map<String, dynamic> json) {
   return _AdminPurgePostView.fromJson(json);
@@ -20,8 +20,9 @@ AdminPurgePostView _$AdminPurgePostViewFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AdminPurgePostView {
-  AdminPurgePost get adminPurgePost => throw _privateConstructorUsedError;
-  Person? get admin => throw _privateConstructorUsedError;
+  AdminPurgePost get adminPurgePost =>
+      throw _privateConstructorUsedError; // v0.18.0
+  Person? get admin => throw _privateConstructorUsedError; // v0.18.0
   Community get community => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -170,8 +171,10 @@ class _$AdminPurgePostViewImpl extends _AdminPurgePostView {
 
   @override
   final AdminPurgePost adminPurgePost;
+// v0.18.0
   @override
   final Person? admin;
+// v0.18.0
   @override
   final Community community;
 
@@ -181,7 +184,7 @@ class _$AdminPurgePostViewImpl extends _AdminPurgePostView {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AdminPurgePostViewImpl &&
@@ -224,9 +227,9 @@ abstract class _AdminPurgePostView extends AdminPurgePostView {
 
   @override
   AdminPurgePost get adminPurgePost;
-  @override
+  @override // v0.18.0
   Person? get admin;
-  @override
+  @override // v0.18.0
   Community get community;
   @override
   @JsonKey(ignore: true)

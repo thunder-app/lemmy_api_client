@@ -12,7 +12,7 @@ part of 'mod_hide_community.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ModHideCommunity _$ModHideCommunityFromJson(Map<String, dynamic> json) {
   return _ModHideCommunity.fromJson(json);
@@ -20,12 +20,12 @@ ModHideCommunity _$ModHideCommunityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ModHideCommunity {
-  int get id => throw _privateConstructorUsedError;
-  int get communityId => throw _privateConstructorUsedError;
-  int get modPersonId => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
+  int get communityId => throw _privateConstructorUsedError; // v0.18.0
+  int get modPersonId => throw _privateConstructorUsedError; // v0.18.0
   @JsonKey(name: 'when_')
-  String get when => throw _privateConstructorUsedError;
-  String? get reason => throw _privateConstructorUsedError;
+  String get when => throw _privateConstructorUsedError; // v0.18.0
+  String? get reason => throw _privateConstructorUsedError; // v0.18.0
   bool get hidden => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -180,15 +180,20 @@ class _$ModHideCommunityImpl extends _ModHideCommunity {
 
   @override
   final int id;
+// v0.18.0
   @override
   final int communityId;
+// v0.18.0
   @override
   final int modPersonId;
+// v0.18.0
   @override
   @JsonKey(name: 'when_')
   final String when;
+// v0.18.0
   @override
   final String? reason;
+// v0.18.0
   @override
   final bool hidden;
 
@@ -198,7 +203,7 @@ class _$ModHideCommunityImpl extends _ModHideCommunity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ModHideCommunityImpl &&
@@ -247,16 +252,16 @@ abstract class _ModHideCommunity extends ModHideCommunity {
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   int get communityId;
-  @override
+  @override // v0.18.0
   int get modPersonId;
-  @override
+  @override // v0.18.0
   @JsonKey(name: 'when_')
   String get when;
-  @override
+  @override // v0.18.0
   String? get reason;
-  @override
+  @override // v0.18.0
   bool get hidden;
   @override
   @JsonKey(ignore: true)

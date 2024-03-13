@@ -12,7 +12,7 @@ part of 'comment_aggregates.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CommentAggregates _$CommentAggregatesFromJson(Map<String, dynamic> json) {
   return _CommentAggregates.fromJson(json);
@@ -21,13 +21,14 @@ CommentAggregates _$CommentAggregatesFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$CommentAggregates {
   @deprecated
-  int? get id => throw _privateConstructorUsedError;
-  int get commentId => throw _privateConstructorUsedError;
-  int get score => throw _privateConstructorUsedError;
-  int get upvotes => throw _privateConstructorUsedError;
-  int get downvotes => throw _privateConstructorUsedError;
-  DateTime get published => throw _privateConstructorUsedError;
-  int get childCount => throw _privateConstructorUsedError;
+  int? get id =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
+  int get commentId => throw _privateConstructorUsedError; // v0.18.0
+  int get score => throw _privateConstructorUsedError; // v0.18.0
+  int get upvotes => throw _privateConstructorUsedError; // v0.18.0
+  int get downvotes => throw _privateConstructorUsedError; // v0.18.0
+  DateTime get published => throw _privateConstructorUsedError; // v0.18.0
+  int get childCount => throw _privateConstructorUsedError; // v0.18.0
   @deprecated
   int? get hotRank => throw _privateConstructorUsedError;
 
@@ -210,18 +211,25 @@ class _$CommentAggregatesImpl extends _CommentAggregates {
   @override
   @deprecated
   final int? id;
+// v0.18.0 [deprecated in v0.19.0]
   @override
   final int commentId;
+// v0.18.0
   @override
   final int score;
+// v0.18.0
   @override
   final int upvotes;
+// v0.18.0
   @override
   final int downvotes;
+// v0.18.0
   @override
   final DateTime published;
+// v0.18.0
   @override
   final int childCount;
+// v0.18.0
   @override
   @deprecated
   final int? hotRank;
@@ -232,7 +240,7 @@ class _$CommentAggregatesImpl extends _CommentAggregates {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CommentAggregatesImpl &&
@@ -288,19 +296,19 @@ abstract class _CommentAggregates extends CommentAggregates {
   @override
   @deprecated
   int? get id;
-  @override
+  @override // v0.18.0 [deprecated in v0.19.0]
   int get commentId;
-  @override
+  @override // v0.18.0
   int get score;
-  @override
+  @override // v0.18.0
   int get upvotes;
-  @override
+  @override // v0.18.0
   int get downvotes;
-  @override
+  @override // v0.18.0
   DateTime get published;
-  @override
+  @override // v0.18.0
   int get childCount;
-  @override
+  @override // v0.18.0
   @deprecated
   int? get hotRank;
   @override

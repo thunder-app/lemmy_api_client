@@ -12,7 +12,7 @@ part of 'person_mention.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PersonMention _$PersonMentionFromJson(Map<String, dynamic> json) {
   return _PersonMention.fromJson(json);
@@ -20,10 +20,10 @@ PersonMention _$PersonMentionFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PersonMention {
-  int get id => throw _privateConstructorUsedError;
-  int get recipientId => throw _privateConstructorUsedError;
-  int get commentId => throw _privateConstructorUsedError;
-  bool get read => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
+  int get recipientId => throw _privateConstructorUsedError; // v0.18.0
+  int get commentId => throw _privateConstructorUsedError; // v0.18.0
+  bool get read => throw _privateConstructorUsedError; // v0.18.0
   DateTime get published => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -157,12 +157,16 @@ class _$PersonMentionImpl extends _PersonMention {
 
   @override
   final int id;
+// v0.18.0
   @override
   final int recipientId;
+// v0.18.0
   @override
   final int commentId;
+// v0.18.0
   @override
   final bool read;
+// v0.18.0
   @override
   final DateTime published;
 
@@ -172,7 +176,7 @@ class _$PersonMentionImpl extends _PersonMention {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PersonMentionImpl &&
@@ -219,13 +223,13 @@ abstract class _PersonMention extends PersonMention {
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   int get recipientId;
-  @override
+  @override // v0.18.0
   int get commentId;
-  @override
+  @override // v0.18.0
   bool get read;
-  @override
+  @override // v0.18.0
   DateTime get published;
   @override
   @JsonKey(ignore: true)

@@ -10,10 +10,10 @@ part 'registration_application_view.g.dart';
 class RegistrationApplicationView with _$RegistrationApplicationView {
   @modelSerde
   const factory RegistrationApplicationView({
-    required RegistrationApplication registrationApplication,
-    required LocalUser creatorLocalUser,
-    required Person creator,
-    Person? admin,
+    required RegistrationApplication registrationApplication, // v0.18.0
+    required LocalUser creatorLocalUser, // v0.18.0
+    required Person creator, // v0.18.0
+    Person? admin, // v0.18.0
   }) = _RegistrationApplicationView;
 
   const RegistrationApplicationView._();

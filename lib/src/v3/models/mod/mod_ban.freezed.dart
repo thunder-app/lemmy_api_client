@@ -12,7 +12,7 @@ part of 'mod_ban.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ModBan _$ModBanFromJson(Map<String, dynamic> json) {
   return _ModBan.fromJson(json);
@@ -20,12 +20,12 @@ ModBan _$ModBanFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ModBan {
-  int get id => throw _privateConstructorUsedError;
-  int get modPersonId => throw _privateConstructorUsedError;
-  int get otherPersonId => throw _privateConstructorUsedError;
-  String? get reason => throw _privateConstructorUsedError;
-  bool get banned => throw _privateConstructorUsedError;
-  String? get expires => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
+  int get modPersonId => throw _privateConstructorUsedError; // v0.18.0
+  int get otherPersonId => throw _privateConstructorUsedError; // v0.18.0
+  String? get reason => throw _privateConstructorUsedError; // v0.18.0
+  bool get banned => throw _privateConstructorUsedError; // v0.18.0
+  String? get expires => throw _privateConstructorUsedError; // v0.18.0
   @JsonKey(name: 'when_')
   String get when => throw _privateConstructorUsedError;
 
@@ -191,16 +191,22 @@ class _$ModBanImpl extends _ModBan {
 
   @override
   final int id;
+// v0.18.0
   @override
   final int modPersonId;
+// v0.18.0
   @override
   final int otherPersonId;
+// v0.18.0
   @override
   final String? reason;
+// v0.18.0
   @override
   final bool banned;
+// v0.18.0
   @override
   final String? expires;
+// v0.18.0
   @override
   @JsonKey(name: 'when_')
   final String when;
@@ -211,7 +217,7 @@ class _$ModBanImpl extends _ModBan {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ModBanImpl &&
@@ -260,17 +266,17 @@ abstract class _ModBan extends ModBan {
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   int get modPersonId;
-  @override
+  @override // v0.18.0
   int get otherPersonId;
-  @override
+  @override // v0.18.0
   String? get reason;
-  @override
+  @override // v0.18.0
   bool get banned;
-  @override
+  @override // v0.18.0
   String? get expires;
-  @override
+  @override // v0.18.0
   @JsonKey(name: 'when_')
   String get when;
   @override

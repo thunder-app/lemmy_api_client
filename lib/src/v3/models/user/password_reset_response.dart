@@ -9,7 +9,7 @@ part 'password_reset_response.g.dart';
 class PasswordResetResponse with _$PasswordResetResponse {
   @modelSerde
   const factory PasswordResetResponse({
-    bool? success, // Only available in lemmy v0.19.0 and above
+    bool? success, // v0.19.0 (required)
   }) = _PasswordResetResponse;
 
   const PasswordResetResponse._();

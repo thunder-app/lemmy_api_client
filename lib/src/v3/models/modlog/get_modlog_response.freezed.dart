@@ -12,7 +12,7 @@ part of 'get_modlog_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetModlogResponse _$GetModlogResponseFromJson(Map<String, dynamic> json) {
   return _GetModlogResponse.fromJson(json);
@@ -21,30 +21,31 @@ GetModlogResponse _$GetModlogResponseFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$GetModlogResponse {
   List<ModRemovePostView> get removedPosts =>
-      throw _privateConstructorUsedError;
-  List<ModLockPostView> get lockedPosts => throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
+  List<ModLockPostView> get lockedPosts =>
+      throw _privateConstructorUsedError; // v0.18.0
   List<ModFeaturePostView> get featuredPosts =>
-      throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
   List<ModRemoveCommentView> get removedComments =>
-      throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
   List<ModRemoveCommunityView> get removedCommunities =>
-      throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
   List<ModBanFromCommunityView> get bannedFromCommunity =>
-      throw _privateConstructorUsedError;
-  List<ModBanView> get banned => throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
+  List<ModBanView> get banned => throw _privateConstructorUsedError; // v0.18.0
   List<ModAddCommunityView> get addedToCommunity =>
-      throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
   List<ModTransferCommunityView> get transferredToCommunity =>
-      throw _privateConstructorUsedError;
-  List<ModAddView> get added => throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
+  List<ModAddView> get added => throw _privateConstructorUsedError; // v0.18.0
   List<AdminPurgePersonView> get adminPurgedPersons =>
-      throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
   List<AdminPurgeCommunityView> get adminPurgedCommunities =>
-      throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
   List<AdminPurgePostView> get adminPurgedPosts =>
-      throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
   List<AdminPurgeCommentView> get adminPurgedComments =>
-      throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
   List<ModHideCommunityView> get hiddenCommunities =>
       throw _privateConstructorUsedError;
 
@@ -338,7 +339,9 @@ class _$GetModlogResponseImpl extends _GetModlogResponse {
     return EqualUnmodifiableListView(_removedPosts);
   }
 
+// v0.18.0
   final List<ModLockPostView> _lockedPosts;
+// v0.18.0
   @override
   List<ModLockPostView> get lockedPosts {
     if (_lockedPosts is EqualUnmodifiableListView) return _lockedPosts;
@@ -346,7 +349,9 @@ class _$GetModlogResponseImpl extends _GetModlogResponse {
     return EqualUnmodifiableListView(_lockedPosts);
   }
 
+// v0.18.0
   final List<ModFeaturePostView> _featuredPosts;
+// v0.18.0
   @override
   List<ModFeaturePostView> get featuredPosts {
     if (_featuredPosts is EqualUnmodifiableListView) return _featuredPosts;
@@ -354,7 +359,9 @@ class _$GetModlogResponseImpl extends _GetModlogResponse {
     return EqualUnmodifiableListView(_featuredPosts);
   }
 
+// v0.18.0
   final List<ModRemoveCommentView> _removedComments;
+// v0.18.0
   @override
   List<ModRemoveCommentView> get removedComments {
     if (_removedComments is EqualUnmodifiableListView) return _removedComments;
@@ -362,7 +369,9 @@ class _$GetModlogResponseImpl extends _GetModlogResponse {
     return EqualUnmodifiableListView(_removedComments);
   }
 
+// v0.18.0
   final List<ModRemoveCommunityView> _removedCommunities;
+// v0.18.0
   @override
   List<ModRemoveCommunityView> get removedCommunities {
     if (_removedCommunities is EqualUnmodifiableListView)
@@ -371,7 +380,9 @@ class _$GetModlogResponseImpl extends _GetModlogResponse {
     return EqualUnmodifiableListView(_removedCommunities);
   }
 
+// v0.18.0
   final List<ModBanFromCommunityView> _bannedFromCommunity;
+// v0.18.0
   @override
   List<ModBanFromCommunityView> get bannedFromCommunity {
     if (_bannedFromCommunity is EqualUnmodifiableListView)
@@ -380,7 +391,9 @@ class _$GetModlogResponseImpl extends _GetModlogResponse {
     return EqualUnmodifiableListView(_bannedFromCommunity);
   }
 
+// v0.18.0
   final List<ModBanView> _banned;
+// v0.18.0
   @override
   List<ModBanView> get banned {
     if (_banned is EqualUnmodifiableListView) return _banned;
@@ -388,7 +401,9 @@ class _$GetModlogResponseImpl extends _GetModlogResponse {
     return EqualUnmodifiableListView(_banned);
   }
 
+// v0.18.0
   final List<ModAddCommunityView> _addedToCommunity;
+// v0.18.0
   @override
   List<ModAddCommunityView> get addedToCommunity {
     if (_addedToCommunity is EqualUnmodifiableListView)
@@ -397,7 +412,9 @@ class _$GetModlogResponseImpl extends _GetModlogResponse {
     return EqualUnmodifiableListView(_addedToCommunity);
   }
 
+// v0.18.0
   final List<ModTransferCommunityView> _transferredToCommunity;
+// v0.18.0
   @override
   List<ModTransferCommunityView> get transferredToCommunity {
     if (_transferredToCommunity is EqualUnmodifiableListView)
@@ -406,7 +423,9 @@ class _$GetModlogResponseImpl extends _GetModlogResponse {
     return EqualUnmodifiableListView(_transferredToCommunity);
   }
 
+// v0.18.0
   final List<ModAddView> _added;
+// v0.18.0
   @override
   List<ModAddView> get added {
     if (_added is EqualUnmodifiableListView) return _added;
@@ -414,7 +433,9 @@ class _$GetModlogResponseImpl extends _GetModlogResponse {
     return EqualUnmodifiableListView(_added);
   }
 
+// v0.18.0
   final List<AdminPurgePersonView> _adminPurgedPersons;
+// v0.18.0
   @override
   List<AdminPurgePersonView> get adminPurgedPersons {
     if (_adminPurgedPersons is EqualUnmodifiableListView)
@@ -423,7 +444,9 @@ class _$GetModlogResponseImpl extends _GetModlogResponse {
     return EqualUnmodifiableListView(_adminPurgedPersons);
   }
 
+// v0.18.0
   final List<AdminPurgeCommunityView> _adminPurgedCommunities;
+// v0.18.0
   @override
   List<AdminPurgeCommunityView> get adminPurgedCommunities {
     if (_adminPurgedCommunities is EqualUnmodifiableListView)
@@ -432,7 +455,9 @@ class _$GetModlogResponseImpl extends _GetModlogResponse {
     return EqualUnmodifiableListView(_adminPurgedCommunities);
   }
 
+// v0.18.0
   final List<AdminPurgePostView> _adminPurgedPosts;
+// v0.18.0
   @override
   List<AdminPurgePostView> get adminPurgedPosts {
     if (_adminPurgedPosts is EqualUnmodifiableListView)
@@ -441,7 +466,9 @@ class _$GetModlogResponseImpl extends _GetModlogResponse {
     return EqualUnmodifiableListView(_adminPurgedPosts);
   }
 
+// v0.18.0
   final List<AdminPurgeCommentView> _adminPurgedComments;
+// v0.18.0
   @override
   List<AdminPurgeCommentView> get adminPurgedComments {
     if (_adminPurgedComments is EqualUnmodifiableListView)
@@ -450,7 +477,9 @@ class _$GetModlogResponseImpl extends _GetModlogResponse {
     return EqualUnmodifiableListView(_adminPurgedComments);
   }
 
+// v0.18.0
   final List<ModHideCommunityView> _hiddenCommunities;
+// v0.18.0
   @override
   List<ModHideCommunityView> get hiddenCommunities {
     if (_hiddenCommunities is EqualUnmodifiableListView)
@@ -465,7 +494,7 @@ class _$GetModlogResponseImpl extends _GetModlogResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetModlogResponseImpl &&
@@ -559,33 +588,33 @@ abstract class _GetModlogResponse extends GetModlogResponse {
 
   @override
   List<ModRemovePostView> get removedPosts;
-  @override
+  @override // v0.18.0
   List<ModLockPostView> get lockedPosts;
-  @override
+  @override // v0.18.0
   List<ModFeaturePostView> get featuredPosts;
-  @override
+  @override // v0.18.0
   List<ModRemoveCommentView> get removedComments;
-  @override
+  @override // v0.18.0
   List<ModRemoveCommunityView> get removedCommunities;
-  @override
+  @override // v0.18.0
   List<ModBanFromCommunityView> get bannedFromCommunity;
-  @override
+  @override // v0.18.0
   List<ModBanView> get banned;
-  @override
+  @override // v0.18.0
   List<ModAddCommunityView> get addedToCommunity;
-  @override
+  @override // v0.18.0
   List<ModTransferCommunityView> get transferredToCommunity;
-  @override
+  @override // v0.18.0
   List<ModAddView> get added;
-  @override
+  @override // v0.18.0
   List<AdminPurgePersonView> get adminPurgedPersons;
-  @override
+  @override // v0.18.0
   List<AdminPurgeCommunityView> get adminPurgedCommunities;
-  @override
+  @override // v0.18.0
   List<AdminPurgePostView> get adminPurgedPosts;
-  @override
+  @override // v0.18.0
   List<AdminPurgeCommentView> get adminPurgedComments;
-  @override
+  @override // v0.18.0
   List<ModHideCommunityView> get hiddenCommunities;
   @override
   @JsonKey(ignore: true)

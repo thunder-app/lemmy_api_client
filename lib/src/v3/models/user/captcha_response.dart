@@ -9,9 +9,9 @@ part 'captcha_response.g.dart';
 class CaptchaResponse with _$CaptchaResponse {
   @modelSerde
   const factory CaptchaResponse({
-    required String png,
-    required String wav,
-    required String uuid,
+    required String png, // v0.18.0
+    required String wav, // v0.18.0
+    required String uuid, // v0.18.0
   }) = _CaptchaResponse;
 
   const CaptchaResponse._();

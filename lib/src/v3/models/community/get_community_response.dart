@@ -11,10 +11,10 @@ part 'get_community_response.g.dart';
 class GetCommunityResponse with _$GetCommunityResponse {
   @modelSerde
   const factory GetCommunityResponse({
-    required CommunityView communityView,
-    Site? site,
-    required List<CommunityModeratorView> moderators,
-    required List<int> discussionLanguages,
+    required CommunityView communityView, // v0.18.0
+    Site? site, // v0.18.0
+    required List<CommunityModeratorView> moderators, // v0.18.0
+    required List<int> discussionLanguages, // v0.18.0
   }) = _GetCommunityResponse;
 
   const GetCommunityResponse._();

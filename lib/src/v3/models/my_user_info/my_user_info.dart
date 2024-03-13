@@ -10,14 +10,13 @@ part 'my_user_info.g.dart';
 class MyUserInfo with _$MyUserInfo {
   @modelSerde
   const factory MyUserInfo({
-    required LocalUserView localUserView,
-    required List<CommunityFollowerView> follows,
-    required List<CommunityModeratorView> moderates,
-    required List<CommunityBlockView> communityBlocks,
-    List<InstanceBlockView>?
-        instanceBlocks, // Only available in lemmy v0.19.0 and above
-    required List<PersonBlockView> personBlocks,
-    required List<int> discussionLanguages,
+    required LocalUserView localUserView, // v0.18.0
+    required List<CommunityFollowerView> follows, // v0.18.0
+    required List<CommunityModeratorView> moderates, // v0.18.0
+    required List<CommunityBlockView> communityBlocks, // v0.18.0
+    List<InstanceBlockView>? instanceBlocks, // v0.19.0 (required)
+    required List<PersonBlockView> personBlocks, // v0.18.0
+    required List<int> discussionLanguages, // v0.18.0
   }) = _MyUserInfo;
 
   const MyUserInfo._();

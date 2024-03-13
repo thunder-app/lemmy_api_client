@@ -16,8 +16,8 @@ class AddAdmin
     implements LemmyApiQuery<AddAdminResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory AddAdmin({
-    required int personId,
-    required bool added,
+    required int personId, // v0.18.0
+    required bool added, // v0.18.0
     String? auth,
   }) = _AddAdmin;
 
@@ -74,9 +74,9 @@ class ListRegistrationApplications
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ListRegistrationApplications({
-    bool? unreadOnly,
-    int? page,
-    int? limit,
+    bool? unreadOnly, // v0.18.0
+    int? page, // v0.18.0
+    int? limit, // v0.18.0
     String? auth,
   }) = _ListRegistrationApplications;
 
@@ -105,9 +105,9 @@ class ApproveRegistrationApplication
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ApproveRegistrationApplication({
-    required int id,
-    required bool approve,
-    String? denyReason,
+    required int id, // v0.18.0
+    required bool approve, // v0.18.0
+    String? denyReason, // v0.18.0
     String? auth,
   }) = _ApproveRegistrationApplication;
 
@@ -133,8 +133,8 @@ class PurgePerson
     implements LemmyApiQuery<PurgeItemResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory PurgePerson({
-    required int personId,
-    String? reason,
+    required int personId, // v0.18.0
+    String? reason, // v0.18.0
     String? auth,
   }) = _PurgePerson;
 
@@ -160,8 +160,8 @@ class PurgeCommunity
     implements LemmyApiQuery<PurgeItemResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory PurgeCommunity({
-    required int communityId,
-    String? reason,
+    required int communityId, // v0.18.0
+    String? reason, // v0.18.0
     String? auth,
   }) = _PurgeCommunity;
 
@@ -187,8 +187,8 @@ class PurgePost
     implements LemmyApiQuery<PurgeItemResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory PurgePost({
-    required int postId,
-    String? reason,
+    required int postId, // v0.18.0
+    String? reason, // v0.18.0
     String? auth,
   }) = _PurgePost;
 
@@ -214,8 +214,8 @@ class PurgeComment
     implements LemmyApiQuery<PurgeItemResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory PurgeComment({
-    required int commentId,
-    String? reason,
+    required int commentId, // v0.18.0
+    String? reason, // v0.18.0
     String? auth,
   }) = _PurgeComment;
 

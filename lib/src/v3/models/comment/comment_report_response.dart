@@ -10,7 +10,7 @@ part 'comment_report_response.g.dart';
 class CommentReportResponse with _$CommentReportResponse {
   @modelSerde
   const factory CommentReportResponse({
-    required CommentReportView commentReportView,
+    required CommentReportView commentReportView, // v0.18.0
   }) = _CommentReportResponse;
 
   const CommentReportResponse._();

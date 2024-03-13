@@ -10,12 +10,12 @@ part 'instance.g.dart';
 class Instance with _$Instance {
   @modelSerde
   const factory Instance({
-    required int id,
-    required String domain,
-    required DateTime published,
-    DateTime? updated,
-    String? software,
-    String? version,
+    required int id, // v0.18.0
+    required String domain, // v0.18.0
+    required DateTime published, // v0.18.0
+    DateTime? updated, // v0.18.0
+    String? software, // v0.18.0
+    String? version, // v0.18.0
   }) = _Instance;
 
   const Instance._();

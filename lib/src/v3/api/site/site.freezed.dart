@@ -12,7 +12,7 @@ part of 'site.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetSite _$GetSiteFromJson(Map<String, dynamic> json) {
   return _GetSite.fromJson(json);
@@ -109,7 +109,7 @@ class _$GetSiteImpl extends _GetSite {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetSiteImpl &&
@@ -154,45 +154,70 @@ CreateSite _$CreateSiteFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CreateSite {
-  String get name => throw _privateConstructorUsedError;
-  String? get sidebar => throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
-  String? get icon => throw _privateConstructorUsedError;
-  String? get banner => throw _privateConstructorUsedError;
-  bool? get enableDownvotes => throw _privateConstructorUsedError;
-  bool? get enableNsfw => throw _privateConstructorUsedError;
-  bool? get communityCreationAdminOnly => throw _privateConstructorUsedError;
-  bool? get requireEmailVerification => throw _privateConstructorUsedError;
-  String? get applicationQuestion => throw _privateConstructorUsedError;
-  bool? get privateInstance => throw _privateConstructorUsedError;
-  String? get defaultTheme => throw _privateConstructorUsedError;
-  ListingType? get defaultPostListingType => throw _privateConstructorUsedError;
-  String? get legalInformation => throw _privateConstructorUsedError;
-  bool? get applicationEmailAdmins => throw _privateConstructorUsedError;
-  bool? get hideModlogModNames => throw _privateConstructorUsedError;
-  List<int>? get discussionLanguages => throw _privateConstructorUsedError;
-  String? get slurFilterRegex => throw _privateConstructorUsedError;
-  int? get actorNameMaxLength => throw _privateConstructorUsedError;
-  int? get rateLimitMessage => throw _privateConstructorUsedError;
-  int? get rateLimitMessagePerSecond => throw _privateConstructorUsedError;
-  int? get rateLimitPost => throw _privateConstructorUsedError;
-  int? get rateLimitPostPerSecond => throw _privateConstructorUsedError;
-  int? get rateLimitRegister => throw _privateConstructorUsedError;
-  int? get rateLimitRegisterPerSecond => throw _privateConstructorUsedError;
-  int? get rateLimitImage => throw _privateConstructorUsedError;
-  int? get rateLimitImagePerSecond => throw _privateConstructorUsedError;
-  int? get rateLimitComment => throw _privateConstructorUsedError;
-  int? get rateLimitCommentPerSecond => throw _privateConstructorUsedError;
-  int? get rateLimitSearch => throw _privateConstructorUsedError;
-  int? get rateLimitSearchPerSecond => throw _privateConstructorUsedError;
-  bool? get federationEnabled => throw _privateConstructorUsedError;
-  bool? get federationDebug => throw _privateConstructorUsedError;
-  bool? get captchaEnabled => throw _privateConstructorUsedError;
-  String? get captchaDifficulty => throw _privateConstructorUsedError;
-  List<String>? get allowedInstances => throw _privateConstructorUsedError;
-  List<String>? get blockedInstances => throw _privateConstructorUsedError;
-  List<String>? get taglines => throw _privateConstructorUsedError;
-  RegistrationMode get registrationMode => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError; // v0.18.0
+  String? get sidebar => throw _privateConstructorUsedError; // v0.18.0
+  String? get description => throw _privateConstructorUsedError; // v0.18.0
+  String? get icon => throw _privateConstructorUsedError; // v0.18.0
+  String? get banner => throw _privateConstructorUsedError; // v0.18.0
+  bool? get enableDownvotes => throw _privateConstructorUsedError; // v0.18.0
+  bool? get enableNsfw => throw _privateConstructorUsedError; // v0.18.0
+  bool? get communityCreationAdminOnly =>
+      throw _privateConstructorUsedError; // v0.18.0
+  bool? get requireEmailVerification =>
+      throw _privateConstructorUsedError; // v0.18.0
+  String? get applicationQuestion =>
+      throw _privateConstructorUsedError; // v0.18.0
+  bool? get privateInstance => throw _privateConstructorUsedError; // v0.18.0
+  String? get defaultTheme => throw _privateConstructorUsedError; // v0.18.0
+  ListingType? get defaultPostListingType =>
+      throw _privateConstructorUsedError; // v0.18.0
+  SortType? get defaultSortType =>
+      throw _privateConstructorUsedError; // v0.19.4 (optional)
+  String? get legalInformation => throw _privateConstructorUsedError; // v0.18.0
+  bool? get applicationEmailAdmins =>
+      throw _privateConstructorUsedError; // v0.18.0
+  bool? get hideModlogModNames => throw _privateConstructorUsedError; // v0.18.0
+  List<int>? get discussionLanguages =>
+      throw _privateConstructorUsedError; // v0.18.0
+  String? get slurFilterRegex => throw _privateConstructorUsedError; // v0.18.0
+  int? get actorNameMaxLength => throw _privateConstructorUsedError; // v0.18.0
+  int? get rateLimitMessage => throw _privateConstructorUsedError; // v0.18.0
+  int? get rateLimitMessagePerSecond =>
+      throw _privateConstructorUsedError; // v0.18.0
+  int? get rateLimitPost => throw _privateConstructorUsedError; // v0.18.0
+  int? get rateLimitPostPerSecond =>
+      throw _privateConstructorUsedError; // v0.18.0
+  int? get rateLimitRegister => throw _privateConstructorUsedError; // v0.18.0
+  int? get rateLimitRegisterPerSecond =>
+      throw _privateConstructorUsedError; // v0.18.0
+  int? get rateLimitImage => throw _privateConstructorUsedError; // v0.18.0
+  int? get rateLimitImagePerSecond =>
+      throw _privateConstructorUsedError; // v0.18.0
+  int? get rateLimitComment => throw _privateConstructorUsedError; // v0.18.0
+  int? get rateLimitCommentPerSecond =>
+      throw _privateConstructorUsedError; // v0.18.0
+  int? get rateLimitSearch => throw _privateConstructorUsedError; // v0.18.0
+  int? get rateLimitSearchPerSecond =>
+      throw _privateConstructorUsedError; // v0.18.0
+  bool? get federationEnabled => throw _privateConstructorUsedError; // v0.18.0
+  bool? get federationDebug => throw _privateConstructorUsedError; // v0.18.0
+  @deprecated
+  int? get federationWorkerCount =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.18.1]
+  bool? get captchaEnabled => throw _privateConstructorUsedError; // v0.18.0
+  String? get captchaDifficulty =>
+      throw _privateConstructorUsedError; // v0.18.0
+  List<String>? get allowedInstances =>
+      throw _privateConstructorUsedError; // v0.18.0
+  List<String>? get blockedInstances =>
+      throw _privateConstructorUsedError; // v0.18.0
+  List<String>? get taglines => throw _privateConstructorUsedError; // v0.18.0
+  RegistrationMode? get registrationMode =>
+      throw _privateConstructorUsedError; // v0.18.0
+  String? get contentWarning =>
+      throw _privateConstructorUsedError; // v0.19.4 (optional)
+  String? get defaultPostListingMode =>
+      throw _privateConstructorUsedError; // v0.19.4 (optional)
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -221,6 +246,7 @@ abstract class $CreateSiteCopyWith<$Res> {
       bool? privateInstance,
       String? defaultTheme,
       ListingType? defaultPostListingType,
+      SortType? defaultSortType,
       String? legalInformation,
       bool? applicationEmailAdmins,
       bool? hideModlogModNames,
@@ -241,12 +267,15 @@ abstract class $CreateSiteCopyWith<$Res> {
       int? rateLimitSearchPerSecond,
       bool? federationEnabled,
       bool? federationDebug,
+      @deprecated int? federationWorkerCount,
       bool? captchaEnabled,
       String? captchaDifficulty,
       List<String>? allowedInstances,
       List<String>? blockedInstances,
       List<String>? taglines,
-      RegistrationMode registrationMode,
+      RegistrationMode? registrationMode,
+      String? contentWarning,
+      String? defaultPostListingMode,
       String? auth});
 }
 
@@ -276,6 +305,7 @@ class _$CreateSiteCopyWithImpl<$Res, $Val extends CreateSite>
     Object? privateInstance = freezed,
     Object? defaultTheme = freezed,
     Object? defaultPostListingType = freezed,
+    Object? defaultSortType = freezed,
     Object? legalInformation = freezed,
     Object? applicationEmailAdmins = freezed,
     Object? hideModlogModNames = freezed,
@@ -296,12 +326,15 @@ class _$CreateSiteCopyWithImpl<$Res, $Val extends CreateSite>
     Object? rateLimitSearchPerSecond = freezed,
     Object? federationEnabled = freezed,
     Object? federationDebug = freezed,
+    Object? federationWorkerCount = freezed,
     Object? captchaEnabled = freezed,
     Object? captchaDifficulty = freezed,
     Object? allowedInstances = freezed,
     Object? blockedInstances = freezed,
     Object? taglines = freezed,
-    Object? registrationMode = null,
+    Object? registrationMode = freezed,
+    Object? contentWarning = freezed,
+    Object? defaultPostListingMode = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
@@ -357,6 +390,10 @@ class _$CreateSiteCopyWithImpl<$Res, $Val extends CreateSite>
           ? _value.defaultPostListingType
           : defaultPostListingType // ignore: cast_nullable_to_non_nullable
               as ListingType?,
+      defaultSortType: freezed == defaultSortType
+          ? _value.defaultSortType
+          : defaultSortType // ignore: cast_nullable_to_non_nullable
+              as SortType?,
       legalInformation: freezed == legalInformation
           ? _value.legalInformation
           : legalInformation // ignore: cast_nullable_to_non_nullable
@@ -437,6 +474,10 @@ class _$CreateSiteCopyWithImpl<$Res, $Val extends CreateSite>
           ? _value.federationDebug
           : federationDebug // ignore: cast_nullable_to_non_nullable
               as bool?,
+      federationWorkerCount: freezed == federationWorkerCount
+          ? _value.federationWorkerCount
+          : federationWorkerCount // ignore: cast_nullable_to_non_nullable
+              as int?,
       captchaEnabled: freezed == captchaEnabled
           ? _value.captchaEnabled
           : captchaEnabled // ignore: cast_nullable_to_non_nullable
@@ -457,10 +498,18 @@ class _$CreateSiteCopyWithImpl<$Res, $Val extends CreateSite>
           ? _value.taglines
           : taglines // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      registrationMode: null == registrationMode
+      registrationMode: freezed == registrationMode
           ? _value.registrationMode
           : registrationMode // ignore: cast_nullable_to_non_nullable
-              as RegistrationMode,
+              as RegistrationMode?,
+      contentWarning: freezed == contentWarning
+          ? _value.contentWarning
+          : contentWarning // ignore: cast_nullable_to_non_nullable
+              as String?,
+      defaultPostListingMode: freezed == defaultPostListingMode
+          ? _value.defaultPostListingMode
+          : defaultPostListingMode // ignore: cast_nullable_to_non_nullable
+              as String?,
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -491,6 +540,7 @@ abstract class _$$CreateSiteImplCopyWith<$Res>
       bool? privateInstance,
       String? defaultTheme,
       ListingType? defaultPostListingType,
+      SortType? defaultSortType,
       String? legalInformation,
       bool? applicationEmailAdmins,
       bool? hideModlogModNames,
@@ -511,12 +561,15 @@ abstract class _$$CreateSiteImplCopyWith<$Res>
       int? rateLimitSearchPerSecond,
       bool? federationEnabled,
       bool? federationDebug,
+      @deprecated int? federationWorkerCount,
       bool? captchaEnabled,
       String? captchaDifficulty,
       List<String>? allowedInstances,
       List<String>? blockedInstances,
       List<String>? taglines,
-      RegistrationMode registrationMode,
+      RegistrationMode? registrationMode,
+      String? contentWarning,
+      String? defaultPostListingMode,
       String? auth});
 }
 
@@ -544,6 +597,7 @@ class __$$CreateSiteImplCopyWithImpl<$Res>
     Object? privateInstance = freezed,
     Object? defaultTheme = freezed,
     Object? defaultPostListingType = freezed,
+    Object? defaultSortType = freezed,
     Object? legalInformation = freezed,
     Object? applicationEmailAdmins = freezed,
     Object? hideModlogModNames = freezed,
@@ -564,12 +618,15 @@ class __$$CreateSiteImplCopyWithImpl<$Res>
     Object? rateLimitSearchPerSecond = freezed,
     Object? federationEnabled = freezed,
     Object? federationDebug = freezed,
+    Object? federationWorkerCount = freezed,
     Object? captchaEnabled = freezed,
     Object? captchaDifficulty = freezed,
     Object? allowedInstances = freezed,
     Object? blockedInstances = freezed,
     Object? taglines = freezed,
-    Object? registrationMode = null,
+    Object? registrationMode = freezed,
+    Object? contentWarning = freezed,
+    Object? defaultPostListingMode = freezed,
     Object? auth = freezed,
   }) {
     return _then(_$CreateSiteImpl(
@@ -625,6 +682,10 @@ class __$$CreateSiteImplCopyWithImpl<$Res>
           ? _value.defaultPostListingType
           : defaultPostListingType // ignore: cast_nullable_to_non_nullable
               as ListingType?,
+      defaultSortType: freezed == defaultSortType
+          ? _value.defaultSortType
+          : defaultSortType // ignore: cast_nullable_to_non_nullable
+              as SortType?,
       legalInformation: freezed == legalInformation
           ? _value.legalInformation
           : legalInformation // ignore: cast_nullable_to_non_nullable
@@ -705,6 +766,10 @@ class __$$CreateSiteImplCopyWithImpl<$Res>
           ? _value.federationDebug
           : federationDebug // ignore: cast_nullable_to_non_nullable
               as bool?,
+      federationWorkerCount: freezed == federationWorkerCount
+          ? _value.federationWorkerCount
+          : federationWorkerCount // ignore: cast_nullable_to_non_nullable
+              as int?,
       captchaEnabled: freezed == captchaEnabled
           ? _value.captchaEnabled
           : captchaEnabled // ignore: cast_nullable_to_non_nullable
@@ -725,10 +790,18 @@ class __$$CreateSiteImplCopyWithImpl<$Res>
           ? _value._taglines
           : taglines // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      registrationMode: null == registrationMode
+      registrationMode: freezed == registrationMode
           ? _value.registrationMode
           : registrationMode // ignore: cast_nullable_to_non_nullable
-              as RegistrationMode,
+              as RegistrationMode?,
+      contentWarning: freezed == contentWarning
+          ? _value.contentWarning
+          : contentWarning // ignore: cast_nullable_to_non_nullable
+              as String?,
+      defaultPostListingMode: freezed == defaultPostListingMode
+          ? _value.defaultPostListingMode
+          : defaultPostListingMode // ignore: cast_nullable_to_non_nullable
+              as String?,
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -755,6 +828,7 @@ class _$CreateSiteImpl extends _CreateSite {
       this.privateInstance,
       this.defaultTheme,
       this.defaultPostListingType,
+      this.defaultSortType,
       this.legalInformation,
       this.applicationEmailAdmins,
       this.hideModlogModNames,
@@ -775,12 +849,15 @@ class _$CreateSiteImpl extends _CreateSite {
       this.rateLimitSearchPerSecond,
       this.federationEnabled,
       this.federationDebug,
+      @deprecated this.federationWorkerCount,
       this.captchaEnabled,
       this.captchaDifficulty,
       final List<String>? allowedInstances,
       final List<String>? blockedInstances,
       final List<String>? taglines,
-      required this.registrationMode,
+      this.registrationMode,
+      this.contentWarning,
+      this.defaultPostListingMode,
       this.auth})
       : _discussionLanguages = discussionLanguages,
         _allowedInstances = allowedInstances,
@@ -793,37 +870,57 @@ class _$CreateSiteImpl extends _CreateSite {
 
   @override
   final String name;
+// v0.18.0
   @override
   final String? sidebar;
+// v0.18.0
   @override
   final String? description;
+// v0.18.0
   @override
   final String? icon;
+// v0.18.0
   @override
   final String? banner;
+// v0.18.0
   @override
   final bool? enableDownvotes;
+// v0.18.0
   @override
   final bool? enableNsfw;
+// v0.18.0
   @override
   final bool? communityCreationAdminOnly;
+// v0.18.0
   @override
   final bool? requireEmailVerification;
+// v0.18.0
   @override
   final String? applicationQuestion;
+// v0.18.0
   @override
   final bool? privateInstance;
+// v0.18.0
   @override
   final String? defaultTheme;
+// v0.18.0
   @override
   final ListingType? defaultPostListingType;
+// v0.18.0
+  @override
+  final SortType? defaultSortType;
+// v0.19.4 (optional)
   @override
   final String? legalInformation;
+// v0.18.0
   @override
   final bool? applicationEmailAdmins;
+// v0.18.0
   @override
   final bool? hideModlogModNames;
+// v0.18.0
   final List<int>? _discussionLanguages;
+// v0.18.0
   @override
   List<int>? get discussionLanguages {
     final value = _discussionLanguages;
@@ -834,43 +931,67 @@ class _$CreateSiteImpl extends _CreateSite {
     return EqualUnmodifiableListView(value);
   }
 
+// v0.18.0
   @override
   final String? slurFilterRegex;
+// v0.18.0
   @override
   final int? actorNameMaxLength;
+// v0.18.0
   @override
   final int? rateLimitMessage;
+// v0.18.0
   @override
   final int? rateLimitMessagePerSecond;
+// v0.18.0
   @override
   final int? rateLimitPost;
+// v0.18.0
   @override
   final int? rateLimitPostPerSecond;
+// v0.18.0
   @override
   final int? rateLimitRegister;
+// v0.18.0
   @override
   final int? rateLimitRegisterPerSecond;
+// v0.18.0
   @override
   final int? rateLimitImage;
+// v0.18.0
   @override
   final int? rateLimitImagePerSecond;
+// v0.18.0
   @override
   final int? rateLimitComment;
+// v0.18.0
   @override
   final int? rateLimitCommentPerSecond;
+// v0.18.0
   @override
   final int? rateLimitSearch;
+// v0.18.0
   @override
   final int? rateLimitSearchPerSecond;
+// v0.18.0
   @override
   final bool? federationEnabled;
+// v0.18.0
   @override
   final bool? federationDebug;
+// v0.18.0
+  @override
+  @deprecated
+  final int? federationWorkerCount;
+// v0.18.0 [deprecated in v0.18.1]
   @override
   final bool? captchaEnabled;
+// v0.18.0
   @override
   final String? captchaDifficulty;
+// v0.18.0
   final List<String>? _allowedInstances;
+// v0.18.0
   @override
   List<String>? get allowedInstances {
     final value = _allowedInstances;
@@ -881,7 +1002,9 @@ class _$CreateSiteImpl extends _CreateSite {
     return EqualUnmodifiableListView(value);
   }
 
+// v0.18.0
   final List<String>? _blockedInstances;
+// v0.18.0
   @override
   List<String>? get blockedInstances {
     final value = _blockedInstances;
@@ -892,7 +1015,9 @@ class _$CreateSiteImpl extends _CreateSite {
     return EqualUnmodifiableListView(value);
   }
 
+// v0.18.0
   final List<String>? _taglines;
+// v0.18.0
   @override
   List<String>? get taglines {
     final value = _taglines;
@@ -902,18 +1027,26 @@ class _$CreateSiteImpl extends _CreateSite {
     return EqualUnmodifiableListView(value);
   }
 
+// v0.18.0
   @override
-  final RegistrationMode registrationMode;
+  final RegistrationMode? registrationMode;
+// v0.18.0
+  @override
+  final String? contentWarning;
+// v0.19.4 (optional)
+  @override
+  final String? defaultPostListingMode;
+// v0.19.4 (optional)
   @override
   final String? auth;
 
   @override
   String toString() {
-    return 'CreateSite(name: $name, sidebar: $sidebar, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, requireEmailVerification: $requireEmailVerification, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, defaultTheme: $defaultTheme, defaultPostListingType: $defaultPostListingType, legalInformation: $legalInformation, applicationEmailAdmins: $applicationEmailAdmins, hideModlogModNames: $hideModlogModNames, discussionLanguages: $discussionLanguages, slurFilterRegex: $slurFilterRegex, actorNameMaxLength: $actorNameMaxLength, rateLimitMessage: $rateLimitMessage, rateLimitMessagePerSecond: $rateLimitMessagePerSecond, rateLimitPost: $rateLimitPost, rateLimitPostPerSecond: $rateLimitPostPerSecond, rateLimitRegister: $rateLimitRegister, rateLimitRegisterPerSecond: $rateLimitRegisterPerSecond, rateLimitImage: $rateLimitImage, rateLimitImagePerSecond: $rateLimitImagePerSecond, rateLimitComment: $rateLimitComment, rateLimitCommentPerSecond: $rateLimitCommentPerSecond, rateLimitSearch: $rateLimitSearch, rateLimitSearchPerSecond: $rateLimitSearchPerSecond, federationEnabled: $federationEnabled, federationDebug: $federationDebug, captchaEnabled: $captchaEnabled, captchaDifficulty: $captchaDifficulty, allowedInstances: $allowedInstances, blockedInstances: $blockedInstances, taglines: $taglines, registrationMode: $registrationMode, auth: $auth)';
+    return 'CreateSite(name: $name, sidebar: $sidebar, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, requireEmailVerification: $requireEmailVerification, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, defaultTheme: $defaultTheme, defaultPostListingType: $defaultPostListingType, defaultSortType: $defaultSortType, legalInformation: $legalInformation, applicationEmailAdmins: $applicationEmailAdmins, hideModlogModNames: $hideModlogModNames, discussionLanguages: $discussionLanguages, slurFilterRegex: $slurFilterRegex, actorNameMaxLength: $actorNameMaxLength, rateLimitMessage: $rateLimitMessage, rateLimitMessagePerSecond: $rateLimitMessagePerSecond, rateLimitPost: $rateLimitPost, rateLimitPostPerSecond: $rateLimitPostPerSecond, rateLimitRegister: $rateLimitRegister, rateLimitRegisterPerSecond: $rateLimitRegisterPerSecond, rateLimitImage: $rateLimitImage, rateLimitImagePerSecond: $rateLimitImagePerSecond, rateLimitComment: $rateLimitComment, rateLimitCommentPerSecond: $rateLimitCommentPerSecond, rateLimitSearch: $rateLimitSearch, rateLimitSearchPerSecond: $rateLimitSearchPerSecond, federationEnabled: $federationEnabled, federationDebug: $federationDebug, federationWorkerCount: $federationWorkerCount, captchaEnabled: $captchaEnabled, captchaDifficulty: $captchaDifficulty, allowedInstances: $allowedInstances, blockedInstances: $blockedInstances, taglines: $taglines, registrationMode: $registrationMode, contentWarning: $contentWarning, defaultPostListingMode: $defaultPostListingMode, auth: $auth)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CreateSiteImpl &&
@@ -940,6 +1073,8 @@ class _$CreateSiteImpl extends _CreateSite {
                 other.defaultTheme == defaultTheme) &&
             (identical(other.defaultPostListingType, defaultPostListingType) ||
                 other.defaultPostListingType == defaultPostListingType) &&
+            (identical(other.defaultSortType, defaultSortType) ||
+                other.defaultSortType == defaultSortType) &&
             (identical(other.legalInformation, legalInformation) ||
                 other.legalInformation == legalInformation) &&
             (identical(other.applicationEmailAdmins, applicationEmailAdmins) ||
@@ -971,18 +1106,20 @@ class _$CreateSiteImpl extends _CreateSite {
                 other.rateLimitImagePerSecond == rateLimitImagePerSecond) &&
             (identical(other.rateLimitComment, rateLimitComment) ||
                 other.rateLimitComment == rateLimitComment) &&
-            (identical(other.rateLimitCommentPerSecond, rateLimitCommentPerSecond) ||
-                other.rateLimitCommentPerSecond == rateLimitCommentPerSecond) &&
+            (identical(other.rateLimitCommentPerSecond, rateLimitCommentPerSecond) || other.rateLimitCommentPerSecond == rateLimitCommentPerSecond) &&
             (identical(other.rateLimitSearch, rateLimitSearch) || other.rateLimitSearch == rateLimitSearch) &&
             (identical(other.rateLimitSearchPerSecond, rateLimitSearchPerSecond) || other.rateLimitSearchPerSecond == rateLimitSearchPerSecond) &&
             (identical(other.federationEnabled, federationEnabled) || other.federationEnabled == federationEnabled) &&
             (identical(other.federationDebug, federationDebug) || other.federationDebug == federationDebug) &&
+            (identical(other.federationWorkerCount, federationWorkerCount) || other.federationWorkerCount == federationWorkerCount) &&
             (identical(other.captchaEnabled, captchaEnabled) || other.captchaEnabled == captchaEnabled) &&
             (identical(other.captchaDifficulty, captchaDifficulty) || other.captchaDifficulty == captchaDifficulty) &&
             const DeepCollectionEquality().equals(other._allowedInstances, _allowedInstances) &&
             const DeepCollectionEquality().equals(other._blockedInstances, _blockedInstances) &&
             const DeepCollectionEquality().equals(other._taglines, _taglines) &&
             (identical(other.registrationMode, registrationMode) || other.registrationMode == registrationMode) &&
+            (identical(other.contentWarning, contentWarning) || other.contentWarning == contentWarning) &&
+            (identical(other.defaultPostListingMode, defaultPostListingMode) || other.defaultPostListingMode == defaultPostListingMode) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
@@ -1003,6 +1140,7 @@ class _$CreateSiteImpl extends _CreateSite {
         privateInstance,
         defaultTheme,
         defaultPostListingType,
+        defaultSortType,
         legalInformation,
         applicationEmailAdmins,
         hideModlogModNames,
@@ -1023,12 +1161,15 @@ class _$CreateSiteImpl extends _CreateSite {
         rateLimitSearchPerSecond,
         federationEnabled,
         federationDebug,
+        federationWorkerCount,
         captchaEnabled,
         captchaDifficulty,
         const DeepCollectionEquality().hash(_allowedInstances),
         const DeepCollectionEquality().hash(_blockedInstances),
         const DeepCollectionEquality().hash(_taglines),
         registrationMode,
+        contentWarning,
+        defaultPostListingMode,
         auth
       ]);
 
@@ -1061,6 +1202,7 @@ abstract class _CreateSite extends CreateSite {
       final bool? privateInstance,
       final String? defaultTheme,
       final ListingType? defaultPostListingType,
+      final SortType? defaultSortType,
       final String? legalInformation,
       final bool? applicationEmailAdmins,
       final bool? hideModlogModNames,
@@ -1081,12 +1223,15 @@ abstract class _CreateSite extends CreateSite {
       final int? rateLimitSearchPerSecond,
       final bool? federationEnabled,
       final bool? federationDebug,
+      @deprecated final int? federationWorkerCount,
       final bool? captchaEnabled,
       final String? captchaDifficulty,
       final List<String>? allowedInstances,
       final List<String>? blockedInstances,
       final List<String>? taglines,
-      required final RegistrationMode registrationMode,
+      final RegistrationMode? registrationMode,
+      final String? contentWarning,
+      final String? defaultPostListingMode,
       final String? auth}) = _$CreateSiteImpl;
   const _CreateSite._() : super._();
 
@@ -1095,83 +1240,92 @@ abstract class _CreateSite extends CreateSite {
 
   @override
   String get name;
-  @override
+  @override // v0.18.0
   String? get sidebar;
-  @override
+  @override // v0.18.0
   String? get description;
-  @override
+  @override // v0.18.0
   String? get icon;
-  @override
+  @override // v0.18.0
   String? get banner;
-  @override
+  @override // v0.18.0
   bool? get enableDownvotes;
-  @override
+  @override // v0.18.0
   bool? get enableNsfw;
-  @override
+  @override // v0.18.0
   bool? get communityCreationAdminOnly;
-  @override
+  @override // v0.18.0
   bool? get requireEmailVerification;
-  @override
+  @override // v0.18.0
   String? get applicationQuestion;
-  @override
+  @override // v0.18.0
   bool? get privateInstance;
-  @override
+  @override // v0.18.0
   String? get defaultTheme;
-  @override
+  @override // v0.18.0
   ListingType? get defaultPostListingType;
-  @override
+  @override // v0.18.0
+  SortType? get defaultSortType;
+  @override // v0.19.4 (optional)
   String? get legalInformation;
-  @override
+  @override // v0.18.0
   bool? get applicationEmailAdmins;
-  @override
+  @override // v0.18.0
   bool? get hideModlogModNames;
-  @override
+  @override // v0.18.0
   List<int>? get discussionLanguages;
-  @override
+  @override // v0.18.0
   String? get slurFilterRegex;
-  @override
+  @override // v0.18.0
   int? get actorNameMaxLength;
-  @override
+  @override // v0.18.0
   int? get rateLimitMessage;
-  @override
+  @override // v0.18.0
   int? get rateLimitMessagePerSecond;
-  @override
+  @override // v0.18.0
   int? get rateLimitPost;
-  @override
+  @override // v0.18.0
   int? get rateLimitPostPerSecond;
-  @override
+  @override // v0.18.0
   int? get rateLimitRegister;
-  @override
+  @override // v0.18.0
   int? get rateLimitRegisterPerSecond;
-  @override
+  @override // v0.18.0
   int? get rateLimitImage;
-  @override
+  @override // v0.18.0
   int? get rateLimitImagePerSecond;
-  @override
+  @override // v0.18.0
   int? get rateLimitComment;
-  @override
+  @override // v0.18.0
   int? get rateLimitCommentPerSecond;
-  @override
+  @override // v0.18.0
   int? get rateLimitSearch;
-  @override
+  @override // v0.18.0
   int? get rateLimitSearchPerSecond;
-  @override
+  @override // v0.18.0
   bool? get federationEnabled;
-  @override
+  @override // v0.18.0
   bool? get federationDebug;
-  @override
+  @override // v0.18.0
+  @deprecated
+  int? get federationWorkerCount;
+  @override // v0.18.0 [deprecated in v0.18.1]
   bool? get captchaEnabled;
-  @override
+  @override // v0.18.0
   String? get captchaDifficulty;
-  @override
+  @override // v0.18.0
   List<String>? get allowedInstances;
-  @override
+  @override // v0.18.0
   List<String>? get blockedInstances;
-  @override
+  @override // v0.18.0
   List<String>? get taglines;
-  @override
-  RegistrationMode get registrationMode;
-  @override
+  @override // v0.18.0
+  RegistrationMode? get registrationMode;
+  @override // v0.18.0
+  String? get contentWarning;
+  @override // v0.19.4 (optional)
+  String? get defaultPostListingMode;
+  @override // v0.19.4 (optional)
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -1185,46 +1339,71 @@ EditSite _$EditSiteFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$EditSite {
-  String? get name => throw _privateConstructorUsedError;
-  String? get sidebar => throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
-  String? get icon => throw _privateConstructorUsedError;
-  String? get banner => throw _privateConstructorUsedError;
-  bool? get enableDownvotes => throw _privateConstructorUsedError;
-  bool? get enableNsfw => throw _privateConstructorUsedError;
-  bool? get communityCreationAdminOnly => throw _privateConstructorUsedError;
-  bool? get requireEmailVerification => throw _privateConstructorUsedError;
-  String? get applicationQuestion => throw _privateConstructorUsedError;
-  bool? get privateInstance => throw _privateConstructorUsedError;
-  String? get defaultTheme => throw _privateConstructorUsedError;
-  ListingType? get defaultPostListingType => throw _privateConstructorUsedError;
-  String? get legalInformation => throw _privateConstructorUsedError;
-  bool? get applicationEmailAdmins => throw _privateConstructorUsedError;
-  bool? get hideModlogModNames => throw _privateConstructorUsedError;
-  List<int>? get discussionLanguages => throw _privateConstructorUsedError;
-  String? get slurFilterRegex => throw _privateConstructorUsedError;
-  int? get actorNameMaxLength => throw _privateConstructorUsedError;
-  int? get rateLimitMessage => throw _privateConstructorUsedError;
-  int? get rateLimitMessagePerSecond => throw _privateConstructorUsedError;
-  int? get rateLimitPost => throw _privateConstructorUsedError;
-  int? get rateLimitPostPerSecond => throw _privateConstructorUsedError;
-  int? get rateLimitRegister => throw _privateConstructorUsedError;
-  int? get rateLimitRegisterPerSecond => throw _privateConstructorUsedError;
-  int? get rateLimitImage => throw _privateConstructorUsedError;
-  int? get rateLimitImagePerSecond => throw _privateConstructorUsedError;
-  int? get rateLimitComment => throw _privateConstructorUsedError;
-  int? get rateLimitCommentPerSecond => throw _privateConstructorUsedError;
-  int? get rateLimitSearch => throw _privateConstructorUsedError;
-  int? get rateLimitSearchPerSecond => throw _privateConstructorUsedError;
-  bool? get federationEnabled => throw _privateConstructorUsedError;
-  bool? get federationDebug => throw _privateConstructorUsedError;
-  bool? get captchaEnabled => throw _privateConstructorUsedError;
-  String? get captchaDifficulty => throw _privateConstructorUsedError;
-  List<String>? get allowedInstances => throw _privateConstructorUsedError;
-  List<String>? get blockedInstances => throw _privateConstructorUsedError;
-  List<String>? get taglines => throw _privateConstructorUsedError;
-  RegistrationMode? get registrationMode => throw _privateConstructorUsedError;
-  bool? get reportsEmailAdmins => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError; // v0.18.0
+  String? get sidebar => throw _privateConstructorUsedError; // v0.18.0
+  String? get description => throw _privateConstructorUsedError; // v0.18.0
+  String? get icon => throw _privateConstructorUsedError; // v0.18.0
+  String? get banner => throw _privateConstructorUsedError; // v0.18.0
+  bool? get enableDownvotes => throw _privateConstructorUsedError; // v0.18.0
+  bool? get enableNsfw => throw _privateConstructorUsedError; // v0.18.0
+  bool? get communityCreationAdminOnly =>
+      throw _privateConstructorUsedError; // v0.18.0
+  bool? get requireEmailVerification =>
+      throw _privateConstructorUsedError; // v0.18.0
+  String? get applicationQuestion =>
+      throw _privateConstructorUsedError; // v0.18.0
+  bool? get privateInstance => throw _privateConstructorUsedError; // v0.18.0
+  String? get defaultTheme => throw _privateConstructorUsedError; // v0.18.0
+  ListingType? get defaultPostListingType =>
+      throw _privateConstructorUsedError; // v0.18.0
+  SortType? get defaultSortType =>
+      throw _privateConstructorUsedError; // v0.19.4 (optional)
+  String? get legalInformation => throw _privateConstructorUsedError; // v0.18.0
+  bool? get applicationEmailAdmins =>
+      throw _privateConstructorUsedError; // v0.18.0
+  bool? get hideModlogModNames => throw _privateConstructorUsedError; // v0.18.0
+  List<int>? get discussionLanguages =>
+      throw _privateConstructorUsedError; // v0.18.0
+  String? get slurFilterRegex => throw _privateConstructorUsedError; // v0.18.0
+  int? get actorNameMaxLength => throw _privateConstructorUsedError; // v0.18.0
+  int? get rateLimitMessage => throw _privateConstructorUsedError; // v0.18.0
+  int? get rateLimitMessagePerSecond =>
+      throw _privateConstructorUsedError; // v0.18.0
+  int? get rateLimitPost => throw _privateConstructorUsedError; // v0.18.0
+  int? get rateLimitPostPerSecond =>
+      throw _privateConstructorUsedError; // v0.18.0
+  int? get rateLimitRegister => throw _privateConstructorUsedError; // v0.18.0
+  int? get rateLimitRegisterPerSecond =>
+      throw _privateConstructorUsedError; // v0.18.0
+  int? get rateLimitImage => throw _privateConstructorUsedError; // v0.18.0
+  int? get rateLimitImagePerSecond =>
+      throw _privateConstructorUsedError; // v0.18.0
+  int? get rateLimitComment => throw _privateConstructorUsedError; // v0.18.0
+  int? get rateLimitCommentPerSecond =>
+      throw _privateConstructorUsedError; // v0.18.0
+  int? get rateLimitSearch => throw _privateConstructorUsedError; // v0.18.0
+  int? get rateLimitSearchPerSecond =>
+      throw _privateConstructorUsedError; // v0.18.0
+  bool? get federationEnabled => throw _privateConstructorUsedError; // v0.18.0
+  bool? get federationDebug => throw _privateConstructorUsedError; // v0.18.0
+  @deprecated
+  int? get federationWorkerCount =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.18.1]
+  bool? get captchaEnabled => throw _privateConstructorUsedError; // v0.18.0
+  String? get captchaDifficulty =>
+      throw _privateConstructorUsedError; // v0.18.0
+  List<String>? get allowedInstances =>
+      throw _privateConstructorUsedError; // v0.18.0
+  List<String>? get blockedInstances =>
+      throw _privateConstructorUsedError; // v0.18.0
+  List<String>? get taglines => throw _privateConstructorUsedError; // v0.18.0
+  RegistrationMode? get registrationMode =>
+      throw _privateConstructorUsedError; // v0.18.0
+  bool? get reportsEmailAdmins => throw _privateConstructorUsedError; // v0.18.0
+  String? get contentWarning =>
+      throw _privateConstructorUsedError; // v0.19.4 (optional)
+  String? get defaultPostListingMode =>
+      throw _privateConstructorUsedError; // v0.19.4 (optional)
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1252,6 +1431,7 @@ abstract class $EditSiteCopyWith<$Res> {
       bool? privateInstance,
       String? defaultTheme,
       ListingType? defaultPostListingType,
+      SortType? defaultSortType,
       String? legalInformation,
       bool? applicationEmailAdmins,
       bool? hideModlogModNames,
@@ -1272,6 +1452,7 @@ abstract class $EditSiteCopyWith<$Res> {
       int? rateLimitSearchPerSecond,
       bool? federationEnabled,
       bool? federationDebug,
+      @deprecated int? federationWorkerCount,
       bool? captchaEnabled,
       String? captchaDifficulty,
       List<String>? allowedInstances,
@@ -1279,6 +1460,8 @@ abstract class $EditSiteCopyWith<$Res> {
       List<String>? taglines,
       RegistrationMode? registrationMode,
       bool? reportsEmailAdmins,
+      String? contentWarning,
+      String? defaultPostListingMode,
       String? auth});
 }
 
@@ -1308,6 +1491,7 @@ class _$EditSiteCopyWithImpl<$Res, $Val extends EditSite>
     Object? privateInstance = freezed,
     Object? defaultTheme = freezed,
     Object? defaultPostListingType = freezed,
+    Object? defaultSortType = freezed,
     Object? legalInformation = freezed,
     Object? applicationEmailAdmins = freezed,
     Object? hideModlogModNames = freezed,
@@ -1328,6 +1512,7 @@ class _$EditSiteCopyWithImpl<$Res, $Val extends EditSite>
     Object? rateLimitSearchPerSecond = freezed,
     Object? federationEnabled = freezed,
     Object? federationDebug = freezed,
+    Object? federationWorkerCount = freezed,
     Object? captchaEnabled = freezed,
     Object? captchaDifficulty = freezed,
     Object? allowedInstances = freezed,
@@ -1335,6 +1520,8 @@ class _$EditSiteCopyWithImpl<$Res, $Val extends EditSite>
     Object? taglines = freezed,
     Object? registrationMode = freezed,
     Object? reportsEmailAdmins = freezed,
+    Object? contentWarning = freezed,
+    Object? defaultPostListingMode = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
@@ -1390,6 +1577,10 @@ class _$EditSiteCopyWithImpl<$Res, $Val extends EditSite>
           ? _value.defaultPostListingType
           : defaultPostListingType // ignore: cast_nullable_to_non_nullable
               as ListingType?,
+      defaultSortType: freezed == defaultSortType
+          ? _value.defaultSortType
+          : defaultSortType // ignore: cast_nullable_to_non_nullable
+              as SortType?,
       legalInformation: freezed == legalInformation
           ? _value.legalInformation
           : legalInformation // ignore: cast_nullable_to_non_nullable
@@ -1470,6 +1661,10 @@ class _$EditSiteCopyWithImpl<$Res, $Val extends EditSite>
           ? _value.federationDebug
           : federationDebug // ignore: cast_nullable_to_non_nullable
               as bool?,
+      federationWorkerCount: freezed == federationWorkerCount
+          ? _value.federationWorkerCount
+          : federationWorkerCount // ignore: cast_nullable_to_non_nullable
+              as int?,
       captchaEnabled: freezed == captchaEnabled
           ? _value.captchaEnabled
           : captchaEnabled // ignore: cast_nullable_to_non_nullable
@@ -1498,6 +1693,14 @@ class _$EditSiteCopyWithImpl<$Res, $Val extends EditSite>
           ? _value.reportsEmailAdmins
           : reportsEmailAdmins // ignore: cast_nullable_to_non_nullable
               as bool?,
+      contentWarning: freezed == contentWarning
+          ? _value.contentWarning
+          : contentWarning // ignore: cast_nullable_to_non_nullable
+              as String?,
+      defaultPostListingMode: freezed == defaultPostListingMode
+          ? _value.defaultPostListingMode
+          : defaultPostListingMode // ignore: cast_nullable_to_non_nullable
+              as String?,
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1528,6 +1731,7 @@ abstract class _$$EditSiteImplCopyWith<$Res>
       bool? privateInstance,
       String? defaultTheme,
       ListingType? defaultPostListingType,
+      SortType? defaultSortType,
       String? legalInformation,
       bool? applicationEmailAdmins,
       bool? hideModlogModNames,
@@ -1548,6 +1752,7 @@ abstract class _$$EditSiteImplCopyWith<$Res>
       int? rateLimitSearchPerSecond,
       bool? federationEnabled,
       bool? federationDebug,
+      @deprecated int? federationWorkerCount,
       bool? captchaEnabled,
       String? captchaDifficulty,
       List<String>? allowedInstances,
@@ -1555,6 +1760,8 @@ abstract class _$$EditSiteImplCopyWith<$Res>
       List<String>? taglines,
       RegistrationMode? registrationMode,
       bool? reportsEmailAdmins,
+      String? contentWarning,
+      String? defaultPostListingMode,
       String? auth});
 }
 
@@ -1582,6 +1789,7 @@ class __$$EditSiteImplCopyWithImpl<$Res>
     Object? privateInstance = freezed,
     Object? defaultTheme = freezed,
     Object? defaultPostListingType = freezed,
+    Object? defaultSortType = freezed,
     Object? legalInformation = freezed,
     Object? applicationEmailAdmins = freezed,
     Object? hideModlogModNames = freezed,
@@ -1602,6 +1810,7 @@ class __$$EditSiteImplCopyWithImpl<$Res>
     Object? rateLimitSearchPerSecond = freezed,
     Object? federationEnabled = freezed,
     Object? federationDebug = freezed,
+    Object? federationWorkerCount = freezed,
     Object? captchaEnabled = freezed,
     Object? captchaDifficulty = freezed,
     Object? allowedInstances = freezed,
@@ -1609,6 +1818,8 @@ class __$$EditSiteImplCopyWithImpl<$Res>
     Object? taglines = freezed,
     Object? registrationMode = freezed,
     Object? reportsEmailAdmins = freezed,
+    Object? contentWarning = freezed,
+    Object? defaultPostListingMode = freezed,
     Object? auth = freezed,
   }) {
     return _then(_$EditSiteImpl(
@@ -1664,6 +1875,10 @@ class __$$EditSiteImplCopyWithImpl<$Res>
           ? _value.defaultPostListingType
           : defaultPostListingType // ignore: cast_nullable_to_non_nullable
               as ListingType?,
+      defaultSortType: freezed == defaultSortType
+          ? _value.defaultSortType
+          : defaultSortType // ignore: cast_nullable_to_non_nullable
+              as SortType?,
       legalInformation: freezed == legalInformation
           ? _value.legalInformation
           : legalInformation // ignore: cast_nullable_to_non_nullable
@@ -1744,6 +1959,10 @@ class __$$EditSiteImplCopyWithImpl<$Res>
           ? _value.federationDebug
           : federationDebug // ignore: cast_nullable_to_non_nullable
               as bool?,
+      federationWorkerCount: freezed == federationWorkerCount
+          ? _value.federationWorkerCount
+          : federationWorkerCount // ignore: cast_nullable_to_non_nullable
+              as int?,
       captchaEnabled: freezed == captchaEnabled
           ? _value.captchaEnabled
           : captchaEnabled // ignore: cast_nullable_to_non_nullable
@@ -1772,6 +1991,14 @@ class __$$EditSiteImplCopyWithImpl<$Res>
           ? _value.reportsEmailAdmins
           : reportsEmailAdmins // ignore: cast_nullable_to_non_nullable
               as bool?,
+      contentWarning: freezed == contentWarning
+          ? _value.contentWarning
+          : contentWarning // ignore: cast_nullable_to_non_nullable
+              as String?,
+      defaultPostListingMode: freezed == defaultPostListingMode
+          ? _value.defaultPostListingMode
+          : defaultPostListingMode // ignore: cast_nullable_to_non_nullable
+              as String?,
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1798,6 +2025,7 @@ class _$EditSiteImpl extends _EditSite {
       this.privateInstance,
       this.defaultTheme,
       this.defaultPostListingType,
+      this.defaultSortType,
       this.legalInformation,
       this.applicationEmailAdmins,
       this.hideModlogModNames,
@@ -1818,6 +2046,7 @@ class _$EditSiteImpl extends _EditSite {
       this.rateLimitSearchPerSecond,
       this.federationEnabled,
       this.federationDebug,
+      @deprecated this.federationWorkerCount,
       this.captchaEnabled,
       this.captchaDifficulty,
       final List<String>? allowedInstances,
@@ -1825,6 +2054,8 @@ class _$EditSiteImpl extends _EditSite {
       final List<String>? taglines,
       this.registrationMode,
       this.reportsEmailAdmins,
+      this.contentWarning,
+      this.defaultPostListingMode,
       this.auth})
       : _discussionLanguages = discussionLanguages,
         _allowedInstances = allowedInstances,
@@ -1837,37 +2068,57 @@ class _$EditSiteImpl extends _EditSite {
 
   @override
   final String? name;
+// v0.18.0
   @override
   final String? sidebar;
+// v0.18.0
   @override
   final String? description;
+// v0.18.0
   @override
   final String? icon;
+// v0.18.0
   @override
   final String? banner;
+// v0.18.0
   @override
   final bool? enableDownvotes;
+// v0.18.0
   @override
   final bool? enableNsfw;
+// v0.18.0
   @override
   final bool? communityCreationAdminOnly;
+// v0.18.0
   @override
   final bool? requireEmailVerification;
+// v0.18.0
   @override
   final String? applicationQuestion;
+// v0.18.0
   @override
   final bool? privateInstance;
+// v0.18.0
   @override
   final String? defaultTheme;
+// v0.18.0
   @override
   final ListingType? defaultPostListingType;
+// v0.18.0
+  @override
+  final SortType? defaultSortType;
+// v0.19.4 (optional)
   @override
   final String? legalInformation;
+// v0.18.0
   @override
   final bool? applicationEmailAdmins;
+// v0.18.0
   @override
   final bool? hideModlogModNames;
+// v0.18.0
   final List<int>? _discussionLanguages;
+// v0.18.0
   @override
   List<int>? get discussionLanguages {
     final value = _discussionLanguages;
@@ -1878,43 +2129,67 @@ class _$EditSiteImpl extends _EditSite {
     return EqualUnmodifiableListView(value);
   }
 
+// v0.18.0
   @override
   final String? slurFilterRegex;
+// v0.18.0
   @override
   final int? actorNameMaxLength;
+// v0.18.0
   @override
   final int? rateLimitMessage;
+// v0.18.0
   @override
   final int? rateLimitMessagePerSecond;
+// v0.18.0
   @override
   final int? rateLimitPost;
+// v0.18.0
   @override
   final int? rateLimitPostPerSecond;
+// v0.18.0
   @override
   final int? rateLimitRegister;
+// v0.18.0
   @override
   final int? rateLimitRegisterPerSecond;
+// v0.18.0
   @override
   final int? rateLimitImage;
+// v0.18.0
   @override
   final int? rateLimitImagePerSecond;
+// v0.18.0
   @override
   final int? rateLimitComment;
+// v0.18.0
   @override
   final int? rateLimitCommentPerSecond;
+// v0.18.0
   @override
   final int? rateLimitSearch;
+// v0.18.0
   @override
   final int? rateLimitSearchPerSecond;
+// v0.18.0
   @override
   final bool? federationEnabled;
+// v0.18.0
   @override
   final bool? federationDebug;
+// v0.18.0
+  @override
+  @deprecated
+  final int? federationWorkerCount;
+// v0.18.0 [deprecated in v0.18.1]
   @override
   final bool? captchaEnabled;
+// v0.18.0
   @override
   final String? captchaDifficulty;
+// v0.18.0
   final List<String>? _allowedInstances;
+// v0.18.0
   @override
   List<String>? get allowedInstances {
     final value = _allowedInstances;
@@ -1925,7 +2200,9 @@ class _$EditSiteImpl extends _EditSite {
     return EqualUnmodifiableListView(value);
   }
 
+// v0.18.0
   final List<String>? _blockedInstances;
+// v0.18.0
   @override
   List<String>? get blockedInstances {
     final value = _blockedInstances;
@@ -1936,7 +2213,9 @@ class _$EditSiteImpl extends _EditSite {
     return EqualUnmodifiableListView(value);
   }
 
+// v0.18.0
   final List<String>? _taglines;
+// v0.18.0
   @override
   List<String>? get taglines {
     final value = _taglines;
@@ -1946,20 +2225,29 @@ class _$EditSiteImpl extends _EditSite {
     return EqualUnmodifiableListView(value);
   }
 
+// v0.18.0
   @override
   final RegistrationMode? registrationMode;
+// v0.18.0
   @override
   final bool? reportsEmailAdmins;
+// v0.18.0
+  @override
+  final String? contentWarning;
+// v0.19.4 (optional)
+  @override
+  final String? defaultPostListingMode;
+// v0.19.4 (optional)
   @override
   final String? auth;
 
   @override
   String toString() {
-    return 'EditSite(name: $name, sidebar: $sidebar, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, requireEmailVerification: $requireEmailVerification, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, defaultTheme: $defaultTheme, defaultPostListingType: $defaultPostListingType, legalInformation: $legalInformation, applicationEmailAdmins: $applicationEmailAdmins, hideModlogModNames: $hideModlogModNames, discussionLanguages: $discussionLanguages, slurFilterRegex: $slurFilterRegex, actorNameMaxLength: $actorNameMaxLength, rateLimitMessage: $rateLimitMessage, rateLimitMessagePerSecond: $rateLimitMessagePerSecond, rateLimitPost: $rateLimitPost, rateLimitPostPerSecond: $rateLimitPostPerSecond, rateLimitRegister: $rateLimitRegister, rateLimitRegisterPerSecond: $rateLimitRegisterPerSecond, rateLimitImage: $rateLimitImage, rateLimitImagePerSecond: $rateLimitImagePerSecond, rateLimitComment: $rateLimitComment, rateLimitCommentPerSecond: $rateLimitCommentPerSecond, rateLimitSearch: $rateLimitSearch, rateLimitSearchPerSecond: $rateLimitSearchPerSecond, federationEnabled: $federationEnabled, federationDebug: $federationDebug, captchaEnabled: $captchaEnabled, captchaDifficulty: $captchaDifficulty, allowedInstances: $allowedInstances, blockedInstances: $blockedInstances, taglines: $taglines, registrationMode: $registrationMode, reportsEmailAdmins: $reportsEmailAdmins, auth: $auth)';
+    return 'EditSite(name: $name, sidebar: $sidebar, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, requireEmailVerification: $requireEmailVerification, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, defaultTheme: $defaultTheme, defaultPostListingType: $defaultPostListingType, defaultSortType: $defaultSortType, legalInformation: $legalInformation, applicationEmailAdmins: $applicationEmailAdmins, hideModlogModNames: $hideModlogModNames, discussionLanguages: $discussionLanguages, slurFilterRegex: $slurFilterRegex, actorNameMaxLength: $actorNameMaxLength, rateLimitMessage: $rateLimitMessage, rateLimitMessagePerSecond: $rateLimitMessagePerSecond, rateLimitPost: $rateLimitPost, rateLimitPostPerSecond: $rateLimitPostPerSecond, rateLimitRegister: $rateLimitRegister, rateLimitRegisterPerSecond: $rateLimitRegisterPerSecond, rateLimitImage: $rateLimitImage, rateLimitImagePerSecond: $rateLimitImagePerSecond, rateLimitComment: $rateLimitComment, rateLimitCommentPerSecond: $rateLimitCommentPerSecond, rateLimitSearch: $rateLimitSearch, rateLimitSearchPerSecond: $rateLimitSearchPerSecond, federationEnabled: $federationEnabled, federationDebug: $federationDebug, federationWorkerCount: $federationWorkerCount, captchaEnabled: $captchaEnabled, captchaDifficulty: $captchaDifficulty, allowedInstances: $allowedInstances, blockedInstances: $blockedInstances, taglines: $taglines, registrationMode: $registrationMode, reportsEmailAdmins: $reportsEmailAdmins, contentWarning: $contentWarning, defaultPostListingMode: $defaultPostListingMode, auth: $auth)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EditSiteImpl &&
@@ -1986,6 +2274,8 @@ class _$EditSiteImpl extends _EditSite {
                 other.defaultTheme == defaultTheme) &&
             (identical(other.defaultPostListingType, defaultPostListingType) ||
                 other.defaultPostListingType == defaultPostListingType) &&
+            (identical(other.defaultSortType, defaultSortType) ||
+                other.defaultSortType == defaultSortType) &&
             (identical(other.legalInformation, legalInformation) ||
                 other.legalInformation == legalInformation) &&
             (identical(other.applicationEmailAdmins, applicationEmailAdmins) ||
@@ -2017,12 +2307,12 @@ class _$EditSiteImpl extends _EditSite {
                 other.rateLimitImagePerSecond == rateLimitImagePerSecond) &&
             (identical(other.rateLimitComment, rateLimitComment) ||
                 other.rateLimitComment == rateLimitComment) &&
-            (identical(other.rateLimitCommentPerSecond, rateLimitCommentPerSecond) ||
-                other.rateLimitCommentPerSecond == rateLimitCommentPerSecond) &&
+            (identical(other.rateLimitCommentPerSecond, rateLimitCommentPerSecond) || other.rateLimitCommentPerSecond == rateLimitCommentPerSecond) &&
             (identical(other.rateLimitSearch, rateLimitSearch) || other.rateLimitSearch == rateLimitSearch) &&
             (identical(other.rateLimitSearchPerSecond, rateLimitSearchPerSecond) || other.rateLimitSearchPerSecond == rateLimitSearchPerSecond) &&
             (identical(other.federationEnabled, federationEnabled) || other.federationEnabled == federationEnabled) &&
             (identical(other.federationDebug, federationDebug) || other.federationDebug == federationDebug) &&
+            (identical(other.federationWorkerCount, federationWorkerCount) || other.federationWorkerCount == federationWorkerCount) &&
             (identical(other.captchaEnabled, captchaEnabled) || other.captchaEnabled == captchaEnabled) &&
             (identical(other.captchaDifficulty, captchaDifficulty) || other.captchaDifficulty == captchaDifficulty) &&
             const DeepCollectionEquality().equals(other._allowedInstances, _allowedInstances) &&
@@ -2030,6 +2320,8 @@ class _$EditSiteImpl extends _EditSite {
             const DeepCollectionEquality().equals(other._taglines, _taglines) &&
             (identical(other.registrationMode, registrationMode) || other.registrationMode == registrationMode) &&
             (identical(other.reportsEmailAdmins, reportsEmailAdmins) || other.reportsEmailAdmins == reportsEmailAdmins) &&
+            (identical(other.contentWarning, contentWarning) || other.contentWarning == contentWarning) &&
+            (identical(other.defaultPostListingMode, defaultPostListingMode) || other.defaultPostListingMode == defaultPostListingMode) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
@@ -2050,6 +2342,7 @@ class _$EditSiteImpl extends _EditSite {
         privateInstance,
         defaultTheme,
         defaultPostListingType,
+        defaultSortType,
         legalInformation,
         applicationEmailAdmins,
         hideModlogModNames,
@@ -2070,6 +2363,7 @@ class _$EditSiteImpl extends _EditSite {
         rateLimitSearchPerSecond,
         federationEnabled,
         federationDebug,
+        federationWorkerCount,
         captchaEnabled,
         captchaDifficulty,
         const DeepCollectionEquality().hash(_allowedInstances),
@@ -2077,6 +2371,8 @@ class _$EditSiteImpl extends _EditSite {
         const DeepCollectionEquality().hash(_taglines),
         registrationMode,
         reportsEmailAdmins,
+        contentWarning,
+        defaultPostListingMode,
         auth
       ]);
 
@@ -2109,6 +2405,7 @@ abstract class _EditSite extends EditSite {
       final bool? privateInstance,
       final String? defaultTheme,
       final ListingType? defaultPostListingType,
+      final SortType? defaultSortType,
       final String? legalInformation,
       final bool? applicationEmailAdmins,
       final bool? hideModlogModNames,
@@ -2129,6 +2426,7 @@ abstract class _EditSite extends EditSite {
       final int? rateLimitSearchPerSecond,
       final bool? federationEnabled,
       final bool? federationDebug,
+      @deprecated final int? federationWorkerCount,
       final bool? captchaEnabled,
       final String? captchaDifficulty,
       final List<String>? allowedInstances,
@@ -2136,6 +2434,8 @@ abstract class _EditSite extends EditSite {
       final List<String>? taglines,
       final RegistrationMode? registrationMode,
       final bool? reportsEmailAdmins,
+      final String? contentWarning,
+      final String? defaultPostListingMode,
       final String? auth}) = _$EditSiteImpl;
   const _EditSite._() : super._();
 
@@ -2144,85 +2444,94 @@ abstract class _EditSite extends EditSite {
 
   @override
   String? get name;
-  @override
+  @override // v0.18.0
   String? get sidebar;
-  @override
+  @override // v0.18.0
   String? get description;
-  @override
+  @override // v0.18.0
   String? get icon;
-  @override
+  @override // v0.18.0
   String? get banner;
-  @override
+  @override // v0.18.0
   bool? get enableDownvotes;
-  @override
+  @override // v0.18.0
   bool? get enableNsfw;
-  @override
+  @override // v0.18.0
   bool? get communityCreationAdminOnly;
-  @override
+  @override // v0.18.0
   bool? get requireEmailVerification;
-  @override
+  @override // v0.18.0
   String? get applicationQuestion;
-  @override
+  @override // v0.18.0
   bool? get privateInstance;
-  @override
+  @override // v0.18.0
   String? get defaultTheme;
-  @override
+  @override // v0.18.0
   ListingType? get defaultPostListingType;
-  @override
+  @override // v0.18.0
+  SortType? get defaultSortType;
+  @override // v0.19.4 (optional)
   String? get legalInformation;
-  @override
+  @override // v0.18.0
   bool? get applicationEmailAdmins;
-  @override
+  @override // v0.18.0
   bool? get hideModlogModNames;
-  @override
+  @override // v0.18.0
   List<int>? get discussionLanguages;
-  @override
+  @override // v0.18.0
   String? get slurFilterRegex;
-  @override
+  @override // v0.18.0
   int? get actorNameMaxLength;
-  @override
+  @override // v0.18.0
   int? get rateLimitMessage;
-  @override
+  @override // v0.18.0
   int? get rateLimitMessagePerSecond;
-  @override
+  @override // v0.18.0
   int? get rateLimitPost;
-  @override
+  @override // v0.18.0
   int? get rateLimitPostPerSecond;
-  @override
+  @override // v0.18.0
   int? get rateLimitRegister;
-  @override
+  @override // v0.18.0
   int? get rateLimitRegisterPerSecond;
-  @override
+  @override // v0.18.0
   int? get rateLimitImage;
-  @override
+  @override // v0.18.0
   int? get rateLimitImagePerSecond;
-  @override
+  @override // v0.18.0
   int? get rateLimitComment;
-  @override
+  @override // v0.18.0
   int? get rateLimitCommentPerSecond;
-  @override
+  @override // v0.18.0
   int? get rateLimitSearch;
-  @override
+  @override // v0.18.0
   int? get rateLimitSearchPerSecond;
-  @override
+  @override // v0.18.0
   bool? get federationEnabled;
-  @override
+  @override // v0.18.0
   bool? get federationDebug;
-  @override
+  @override // v0.18.0
+  @deprecated
+  int? get federationWorkerCount;
+  @override // v0.18.0 [deprecated in v0.18.1]
   bool? get captchaEnabled;
-  @override
+  @override // v0.18.0
   String? get captchaDifficulty;
-  @override
+  @override // v0.18.0
   List<String>? get allowedInstances;
-  @override
+  @override // v0.18.0
   List<String>? get blockedInstances;
-  @override
+  @override // v0.18.0
   List<String>? get taglines;
-  @override
+  @override // v0.18.0
   RegistrationMode? get registrationMode;
-  @override
+  @override // v0.18.0
   bool? get reportsEmailAdmins;
-  @override
+  @override // v0.18.0
+  String? get contentWarning;
+  @override // v0.19.4 (optional)
+  String? get defaultPostListingMode;
+  @override // v0.19.4 (optional)
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -2237,7 +2546,8 @@ BlockInstance _$BlockInstanceFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$BlockInstance {
   String? get auth => throw _privateConstructorUsedError;
-  int get instanceId => throw _privateConstructorUsedError;
+  int get instanceId =>
+      throw _privateConstructorUsedError; // v0.19.0 (required)
   bool get block => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2347,6 +2657,7 @@ class _$BlockInstanceImpl extends _BlockInstance {
   final String? auth;
   @override
   final int instanceId;
+// v0.19.0 (required)
   @override
   final bool block;
 
@@ -2356,7 +2667,7 @@ class _$BlockInstanceImpl extends _BlockInstance {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BlockInstanceImpl &&
@@ -2398,7 +2709,7 @@ abstract class _BlockInstance extends BlockInstance {
   String? get auth;
   @override
   int get instanceId;
-  @override
+  @override // v0.19.0 (required)
   bool get block;
   @override
   @JsonKey(ignore: true)

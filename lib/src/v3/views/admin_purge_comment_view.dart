@@ -10,9 +10,9 @@ part 'admin_purge_comment_view.g.dart';
 class AdminPurgeCommentView with _$AdminPurgeCommentView {
   @modelSerde
   const factory AdminPurgeCommentView({
-    required AdminPurgeComment adminPurgeComment,
-    Person? admin,
-    required Post post,
+    required AdminPurgeComment adminPurgeComment, // v0.18.0
+    Person? admin, // v0.18.0
+    required Post post, // v0.18.0
   }) = _AdminPurgeCommentView;
 
   const AdminPurgeCommentView._();

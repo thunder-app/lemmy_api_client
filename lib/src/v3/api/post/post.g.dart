@@ -12,9 +12,11 @@ _$CreatePostImpl _$$CreatePostImplFromJson(Map<String, dynamic> json) =>
       communityId: json['community_id'] as int,
       url: json['url'] as String?,
       body: json['body'] as String?,
+      altText: json['alt_text'] as String?,
       honeypot: json['honeypot'] as String?,
       nsfw: json['nsfw'] as bool?,
       languageId: json['language_id'] as int?,
+      customThumbnail: json['custom_thumbnail'] as String?,
       auth: json['auth'] as String?,
     );
 
@@ -32,9 +34,11 @@ Map<String, dynamic> _$$CreatePostImplToJson(_$CreatePostImpl instance) {
 
   writeNotNull('url', instance.url);
   writeNotNull('body', instance.body);
+  writeNotNull('alt_text', instance.altText);
   writeNotNull('honeypot', instance.honeypot);
   writeNotNull('nsfw', instance.nsfw);
   writeNotNull('language_id', instance.languageId);
+  writeNotNull('custom_thumbnail', instance.customThumbnail);
   writeNotNull('auth', instance.auth);
   return val;
 }
@@ -67,8 +71,10 @@ _$EditPostImpl _$$EditPostImplFromJson(Map<String, dynamic> json) =>
       name: json['name'] as String?,
       url: json['url'] as String?,
       body: json['body'] as String?,
+      altText: json['alt_text'] as String?,
       nsfw: json['nsfw'] as bool?,
       languageId: json['language_id'] as int?,
+      customThumbnail: json['custom_thumbnail'] as String?,
       auth: json['auth'] as String?,
     );
 
@@ -86,8 +92,10 @@ Map<String, dynamic> _$$EditPostImplToJson(_$EditPostImpl instance) {
   writeNotNull('name', instance.name);
   writeNotNull('url', instance.url);
   writeNotNull('body', instance.body);
+  writeNotNull('alt_text', instance.altText);
   writeNotNull('nsfw', instance.nsfw);
   writeNotNull('language_id', instance.languageId);
+  writeNotNull('custom_thumbnail', instance.customThumbnail);
   writeNotNull('auth', instance.auth);
   return val;
 }
@@ -166,6 +174,30 @@ Map<String, dynamic> _$$MarkPostAsReadImplToJson(
   return val;
 }
 
+_$HidePostImpl _$$HidePostImplFromJson(Map<String, dynamic> json) =>
+    _$HidePostImpl(
+      postIds:
+          (json['post_ids'] as List<dynamic>).map((e) => e as int).toList(),
+      hide: json['hide'] as bool,
+      auth: json['auth'] as String?,
+    );
+
+Map<String, dynamic> _$$HidePostImplToJson(_$HidePostImpl instance) {
+  final val = <String, dynamic>{
+    'post_ids': instance.postIds,
+    'hide': instance.hide,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('auth', instance.auth);
+  return val;
+}
+
 _$LockPostImpl _$$LockPostImplFromJson(Map<String, dynamic> json) =>
     _$LockPostImpl(
       postId: json['post_id'] as int,
@@ -227,6 +259,7 @@ _$GetPostsImpl _$$GetPostsImplFromJson(Map<String, dynamic> json) =>
       auth: json['auth'] as String?,
       likedOnly: json['liked_only'] as bool?,
       dislikedOnly: json['disliked_only'] as bool?,
+      showHidden: json['show_hidden'] as bool?,
       pageCursor: json['page_cursor'] as String?,
     );
 
@@ -250,6 +283,7 @@ Map<String, dynamic> _$$GetPostsImplToJson(_$GetPostsImpl instance) {
   writeNotNull('auth', instance.auth);
   writeNotNull('liked_only', instance.likedOnly);
   writeNotNull('disliked_only', instance.dislikedOnly);
+  writeNotNull('show_hidden', instance.showHidden);
   writeNotNull('page_cursor', instance.pageCursor);
   return val;
 }
@@ -274,6 +308,31 @@ Map<String, dynamic> _$$CreatePostLikeImplToJson(
     }
   }
 
+  writeNotNull('auth', instance.auth);
+  return val;
+}
+
+_$ListPostLikesImpl _$$ListPostLikesImplFromJson(Map<String, dynamic> json) =>
+    _$ListPostLikesImpl(
+      postId: json['post_id'] as int,
+      page: json['page'] as int?,
+      limit: json['limit'] as int?,
+      auth: json['auth'] as String?,
+    );
+
+Map<String, dynamic> _$$ListPostLikesImplToJson(_$ListPostLikesImpl instance) {
+  final val = <String, dynamic>{
+    'post_id': instance.postId,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('page', instance.page);
+  writeNotNull('limit', instance.limit);
   writeNotNull('auth', instance.auth);
   return val;
 }
@@ -358,6 +417,7 @@ _$ListPostReportsImpl _$$ListPostReportsImplFromJson(
       limit: json['limit'] as int?,
       unresolvedOnly: json['unresolved_only'] as bool?,
       communityId: json['community_id'] as int?,
+      postId: json['post_id'] as int?,
       auth: json['auth'] as String?,
     );
 
@@ -375,6 +435,7 @@ Map<String, dynamic> _$$ListPostReportsImplToJson(
   writeNotNull('limit', instance.limit);
   writeNotNull('unresolved_only', instance.unresolvedOnly);
   writeNotNull('community_id', instance.communityId);
+  writeNotNull('post_id', instance.postId);
   writeNotNull('auth', instance.auth);
   return val;
 }

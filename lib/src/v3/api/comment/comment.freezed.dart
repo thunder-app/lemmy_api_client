@@ -12,7 +12,7 @@ part of 'comment.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CreateComment _$CreateCommentFromJson(Map<String, dynamic> json) {
   return _CreateComment.fromJson(json);
@@ -20,12 +20,13 @@ CreateComment _$CreateCommentFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CreateComment {
-  String get content => throw _privateConstructorUsedError;
-  int get postId => throw _privateConstructorUsedError;
-  int? get parentId => throw _privateConstructorUsedError;
-  int? get languageId => throw _privateConstructorUsedError;
+  String get content => throw _privateConstructorUsedError; // v0.18.0
+  int get postId => throw _privateConstructorUsedError; // v0.18.0
+  int? get parentId => throw _privateConstructorUsedError; // v0.18.0
+  int? get languageId => throw _privateConstructorUsedError; // v0.18.0
   @deprecated
-  String? get formId => throw _privateConstructorUsedError;
+  String? get formId =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -180,15 +181,20 @@ class _$CreateCommentImpl extends _CreateComment {
 
   @override
   final String content;
+// v0.18.0
   @override
   final int postId;
+// v0.18.0
   @override
   final int? parentId;
+// v0.18.0
   @override
   final int? languageId;
+// v0.18.0
   @override
   @deprecated
   final String? formId;
+// v0.18.0 [deprecated in v0.19.0]
   @override
   final String? auth;
 
@@ -198,7 +204,7 @@ class _$CreateCommentImpl extends _CreateComment {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CreateCommentImpl &&
@@ -246,16 +252,16 @@ abstract class _CreateComment extends CreateComment {
 
   @override
   String get content;
-  @override
+  @override // v0.18.0
   int get postId;
-  @override
+  @override // v0.18.0
   int? get parentId;
-  @override
+  @override // v0.18.0
   int? get languageId;
-  @override
+  @override // v0.18.0
   @deprecated
   String? get formId;
-  @override
+  @override // v0.18.0 [deprecated in v0.19.0]
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -269,11 +275,12 @@ EditComment _$EditCommentFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$EditComment {
-  int get commentId => throw _privateConstructorUsedError;
-  String? get content => throw _privateConstructorUsedError;
-  int? get languageId => throw _privateConstructorUsedError;
+  int get commentId => throw _privateConstructorUsedError; // v0.18.0
+  String? get content => throw _privateConstructorUsedError; // v0.18.0
+  int? get languageId => throw _privateConstructorUsedError; // v0.18.0
   @deprecated
-  String? get formId => throw _privateConstructorUsedError;
+  String? get formId =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -415,13 +422,17 @@ class _$EditCommentImpl extends _EditComment {
 
   @override
   final int commentId;
+// v0.18.0
   @override
   final String? content;
+// v0.18.0
   @override
   final int? languageId;
+// v0.18.0
   @override
   @deprecated
   final String? formId;
+// v0.18.0 [deprecated in v0.19.0]
   @override
   final String? auth;
 
@@ -431,7 +442,7 @@ class _$EditCommentImpl extends _EditComment {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EditCommentImpl &&
@@ -477,14 +488,14 @@ abstract class _EditComment extends EditComment {
 
   @override
   int get commentId;
-  @override
+  @override // v0.18.0
   String? get content;
-  @override
+  @override // v0.18.0
   int? get languageId;
-  @override
+  @override // v0.18.0
   @deprecated
   String? get formId;
-  @override
+  @override // v0.18.0 [deprecated in v0.19.0]
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -498,8 +509,8 @@ DeleteComment _$DeleteCommentFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$DeleteComment {
-  int get commentId => throw _privateConstructorUsedError;
-  bool get deleted => throw _privateConstructorUsedError;
+  int get commentId => throw _privateConstructorUsedError; // v0.18.0
+  bool get deleted => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -607,8 +618,10 @@ class _$DeleteCommentImpl extends _DeleteComment {
 
   @override
   final int commentId;
+// v0.18.0
   @override
   final bool deleted;
+// v0.18.0
   @override
   final String? auth;
 
@@ -618,7 +631,7 @@ class _$DeleteCommentImpl extends _DeleteComment {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeleteCommentImpl &&
@@ -658,9 +671,9 @@ abstract class _DeleteComment extends DeleteComment {
 
   @override
   int get commentId;
-  @override
+  @override // v0.18.0
   bool get deleted;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -674,9 +687,9 @@ RemoveComment _$RemoveCommentFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$RemoveComment {
-  int get commentId => throw _privateConstructorUsedError;
-  bool get removed => throw _privateConstructorUsedError;
-  String? get reason => throw _privateConstructorUsedError;
+  int get commentId => throw _privateConstructorUsedError; // v0.18.0
+  bool get removed => throw _privateConstructorUsedError; // v0.18.0
+  String? get reason => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -794,10 +807,13 @@ class _$RemoveCommentImpl extends _RemoveComment {
 
   @override
   final int commentId;
+// v0.18.0
   @override
   final bool removed;
+// v0.18.0
   @override
   final String? reason;
+// v0.18.0
   @override
   final String? auth;
 
@@ -807,7 +823,7 @@ class _$RemoveCommentImpl extends _RemoveComment {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RemoveCommentImpl &&
@@ -850,11 +866,11 @@ abstract class _RemoveComment extends RemoveComment {
 
   @override
   int get commentId;
-  @override
+  @override // v0.18.0
   bool get removed;
-  @override
+  @override // v0.18.0
   String? get reason;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -869,8 +885,8 @@ MarkCommentReplyAsRead _$MarkCommentReplyAsReadFromJson(
 
 /// @nodoc
 mixin _$MarkCommentReplyAsRead {
-  int get commentReplyId => throw _privateConstructorUsedError;
-  bool get read => throw _privateConstructorUsedError;
+  int get commentReplyId => throw _privateConstructorUsedError; // v0.18.0
+  bool get read => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -982,8 +998,10 @@ class _$MarkCommentReplyAsReadImpl extends _MarkCommentReplyAsRead {
 
   @override
   final int commentReplyId;
+// v0.18.0
   @override
   final bool read;
+// v0.18.0
   @override
   final String? auth;
 
@@ -993,7 +1011,7 @@ class _$MarkCommentReplyAsReadImpl extends _MarkCommentReplyAsRead {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MarkCommentReplyAsReadImpl &&
@@ -1034,9 +1052,9 @@ abstract class _MarkCommentReplyAsRead extends MarkCommentReplyAsRead {
 
   @override
   int get commentReplyId;
-  @override
+  @override // v0.18.0
   bool get read;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -1050,8 +1068,8 @@ CreateCommentLike _$CreateCommentLikeFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CreateCommentLike {
-  int get commentId => throw _privateConstructorUsedError;
-  num get score => throw _privateConstructorUsedError;
+  int get commentId => throw _privateConstructorUsedError; // v0.18.0
+  num get score => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1159,8 +1177,10 @@ class _$CreateCommentLikeImpl extends _CreateCommentLike {
 
   @override
   final int commentId;
+// v0.18.0
   @override
   final num score;
+// v0.18.0
   @override
   final String? auth;
 
@@ -1170,7 +1190,7 @@ class _$CreateCommentLikeImpl extends _CreateCommentLike {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CreateCommentLikeImpl &&
@@ -1211,13 +1231,210 @@ abstract class _CreateCommentLike extends CreateCommentLike {
 
   @override
   int get commentId;
-  @override
+  @override // v0.18.0
   num get score;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
   _$$CreateCommentLikeImplCopyWith<_$CreateCommentLikeImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ListCommentLikes _$ListCommentLikesFromJson(Map<String, dynamic> json) {
+  return _ListCommentLikes.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ListCommentLikes {
+  int get commentId => throw _privateConstructorUsedError; // v0.19.2 (required)
+  int? get page => throw _privateConstructorUsedError; // v0.19.2 (optional)
+  int? get limit => throw _privateConstructorUsedError; // v0.19.2 (optional)
+  String? get auth => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ListCommentLikesCopyWith<ListCommentLikes> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ListCommentLikesCopyWith<$Res> {
+  factory $ListCommentLikesCopyWith(
+          ListCommentLikes value, $Res Function(ListCommentLikes) then) =
+      _$ListCommentLikesCopyWithImpl<$Res, ListCommentLikes>;
+  @useResult
+  $Res call({int commentId, int? page, int? limit, String? auth});
+}
+
+/// @nodoc
+class _$ListCommentLikesCopyWithImpl<$Res, $Val extends ListCommentLikes>
+    implements $ListCommentLikesCopyWith<$Res> {
+  _$ListCommentLikesCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? commentId = null,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(_value.copyWith(
+      commentId: null == commentId
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      page: freezed == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: freezed == limit
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      auth: freezed == auth
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$ListCommentLikesImplCopyWith<$Res>
+    implements $ListCommentLikesCopyWith<$Res> {
+  factory _$$ListCommentLikesImplCopyWith(_$ListCommentLikesImpl value,
+          $Res Function(_$ListCommentLikesImpl) then) =
+      __$$ListCommentLikesImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int commentId, int? page, int? limit, String? auth});
+}
+
+/// @nodoc
+class __$$ListCommentLikesImplCopyWithImpl<$Res>
+    extends _$ListCommentLikesCopyWithImpl<$Res, _$ListCommentLikesImpl>
+    implements _$$ListCommentLikesImplCopyWith<$Res> {
+  __$$ListCommentLikesImplCopyWithImpl(_$ListCommentLikesImpl _value,
+      $Res Function(_$ListCommentLikesImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? commentId = null,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(_$ListCommentLikesImpl(
+      commentId: null == commentId
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      page: freezed == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: freezed == limit
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      auth: freezed == auth
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+@apiSerde
+class _$ListCommentLikesImpl extends _ListCommentLikes {
+  const _$ListCommentLikesImpl(
+      {required this.commentId, this.page, this.limit, this.auth})
+      : super._();
+
+  factory _$ListCommentLikesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ListCommentLikesImplFromJson(json);
+
+  @override
+  final int commentId;
+// v0.19.2 (required)
+  @override
+  final int? page;
+// v0.19.2 (optional)
+  @override
+  final int? limit;
+// v0.19.2 (optional)
+  @override
+  final String? auth;
+
+  @override
+  String toString() {
+    return 'ListCommentLikes(commentId: $commentId, page: $page, limit: $limit, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ListCommentLikesImpl &&
+            (identical(other.commentId, commentId) ||
+                other.commentId == commentId) &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, commentId, page, limit, auth);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ListCommentLikesImplCopyWith<_$ListCommentLikesImpl> get copyWith =>
+      __$$ListCommentLikesImplCopyWithImpl<_$ListCommentLikesImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ListCommentLikesImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _ListCommentLikes extends ListCommentLikes {
+  const factory _ListCommentLikes(
+      {required final int commentId,
+      final int? page,
+      final int? limit,
+      final String? auth}) = _$ListCommentLikesImpl;
+  const _ListCommentLikes._() : super._();
+
+  factory _ListCommentLikes.fromJson(Map<String, dynamic> json) =
+      _$ListCommentLikesImpl.fromJson;
+
+  @override
+  int get commentId;
+  @override // v0.19.2 (required)
+  int? get page;
+  @override // v0.19.2 (optional)
+  int? get limit;
+  @override // v0.19.2 (optional)
+  String? get auth;
+  @override
+  @JsonKey(ignore: true)
+  _$$ListCommentLikesImplCopyWith<_$ListCommentLikesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1227,8 +1444,8 @@ SaveComment _$SaveCommentFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SaveComment {
-  int get commentId => throw _privateConstructorUsedError;
-  bool get save => throw _privateConstructorUsedError;
+  int get commentId => throw _privateConstructorUsedError; // v0.18.0
+  bool get save => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1336,8 +1553,10 @@ class _$SaveCommentImpl extends _SaveComment {
 
   @override
   final int commentId;
+// v0.18.0
   @override
   final bool save;
+// v0.18.0
   @override
   final String? auth;
 
@@ -1347,7 +1566,7 @@ class _$SaveCommentImpl extends _SaveComment {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SaveCommentImpl &&
@@ -1387,9 +1606,9 @@ abstract class _SaveComment extends SaveComment {
 
   @override
   int get commentId;
-  @override
+  @override // v0.18.0
   bool get save;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -1403,8 +1622,8 @@ DistinguishComment _$DistinguishCommentFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$DistinguishComment {
-  int get commentId => throw _privateConstructorUsedError;
-  bool get distinguished => throw _privateConstructorUsedError;
+  int get commentId => throw _privateConstructorUsedError; // v0.18.0
+  bool get distinguished => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1512,8 +1731,10 @@ class _$DistinguishCommentImpl extends _DistinguishComment {
 
   @override
   final int commentId;
+// v0.18.0
   @override
   final bool distinguished;
+// v0.18.0
   @override
   final String? auth;
 
@@ -1523,7 +1744,7 @@ class _$DistinguishCommentImpl extends _DistinguishComment {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DistinguishCommentImpl &&
@@ -1565,9 +1786,9 @@ abstract class _DistinguishComment extends DistinguishComment {
 
   @override
   int get commentId;
-  @override
+  @override // v0.18.0
   bool get distinguished;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -1582,20 +1803,21 @@ GetComments _$GetCommentsFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$GetComments {
   @JsonKey(name: 'type_')
-  ListingType? get type => throw _privateConstructorUsedError;
-  CommentSortType? get sort => throw _privateConstructorUsedError;
-  int? get maxDepth => throw _privateConstructorUsedError;
-  int? get page => throw _privateConstructorUsedError;
-  int? get limit => throw _privateConstructorUsedError;
-  int? get communityId => throw _privateConstructorUsedError;
-  String? get communityName => throw _privateConstructorUsedError;
-  int? get postId => throw _privateConstructorUsedError;
-  int? get parentId => throw _privateConstructorUsedError;
-  bool? get savedOnly => throw _privateConstructorUsedError;
-  String? get auth => throw _privateConstructorUsedError;
+  ListingType? get type => throw _privateConstructorUsedError; // v0.18.0
+  CommentSortType? get sort => throw _privateConstructorUsedError; // v0.18.0
+  int? get maxDepth => throw _privateConstructorUsedError; // v0.18.0
+  int? get page => throw _privateConstructorUsedError; // v0.18.0
+  int? get limit => throw _privateConstructorUsedError; // v0.18.0
+  int? get communityId => throw _privateConstructorUsedError; // v0.18.0
+  String? get communityName => throw _privateConstructorUsedError; // v0.18.0
+  int? get postId => throw _privateConstructorUsedError; // v0.18.0
+  int? get parentId => throw _privateConstructorUsedError; // v0.18.0
+  bool? get savedOnly => throw _privateConstructorUsedError; // v0.18.0
   bool? get likedOnly =>
-      throw _privateConstructorUsedError; // Only available in lemmy v0.19.0 and above
-  bool? get dislikedOnly => throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
+  bool? get dislikedOnly =>
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
+  String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1620,9 +1842,9 @@ abstract class $GetCommentsCopyWith<$Res> {
       int? postId,
       int? parentId,
       bool? savedOnly,
-      String? auth,
       bool? likedOnly,
-      bool? dislikedOnly});
+      bool? dislikedOnly,
+      String? auth});
 }
 
 /// @nodoc
@@ -1648,9 +1870,9 @@ class _$GetCommentsCopyWithImpl<$Res, $Val extends GetComments>
     Object? postId = freezed,
     Object? parentId = freezed,
     Object? savedOnly = freezed,
-    Object? auth = freezed,
     Object? likedOnly = freezed,
     Object? dislikedOnly = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
       type: freezed == type
@@ -1693,10 +1915,6 @@ class _$GetCommentsCopyWithImpl<$Res, $Val extends GetComments>
           ? _value.savedOnly
           : savedOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
       likedOnly: freezed == likedOnly
           ? _value.likedOnly
           : likedOnly // ignore: cast_nullable_to_non_nullable
@@ -1705,6 +1923,10 @@ class _$GetCommentsCopyWithImpl<$Res, $Val extends GetComments>
           ? _value.dislikedOnly
           : dislikedOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
+      auth: freezed == auth
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -1728,9 +1950,9 @@ abstract class _$$GetCommentsImplCopyWith<$Res>
       int? postId,
       int? parentId,
       bool? savedOnly,
-      String? auth,
       bool? likedOnly,
-      bool? dislikedOnly});
+      bool? dislikedOnly,
+      String? auth});
 }
 
 /// @nodoc
@@ -1754,9 +1976,9 @@ class __$$GetCommentsImplCopyWithImpl<$Res>
     Object? postId = freezed,
     Object? parentId = freezed,
     Object? savedOnly = freezed,
-    Object? auth = freezed,
     Object? likedOnly = freezed,
     Object? dislikedOnly = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_$GetCommentsImpl(
       type: freezed == type
@@ -1799,10 +2021,6 @@ class __$$GetCommentsImplCopyWithImpl<$Res>
           ? _value.savedOnly
           : savedOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
       likedOnly: freezed == likedOnly
           ? _value.likedOnly
           : likedOnly // ignore: cast_nullable_to_non_nullable
@@ -1811,6 +2029,10 @@ class __$$GetCommentsImplCopyWithImpl<$Res>
           ? _value.dislikedOnly
           : dislikedOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
+      auth: freezed == auth
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1830,9 +2052,9 @@ class _$GetCommentsImpl extends _GetComments {
       this.postId,
       this.parentId,
       this.savedOnly,
-      this.auth,
       this.likedOnly,
-      this.dislikedOnly})
+      this.dislikedOnly,
+      this.auth})
       : super._();
 
   factory _$GetCommentsImpl.fromJson(Map<String, dynamic> json) =>
@@ -1841,39 +2063,50 @@ class _$GetCommentsImpl extends _GetComments {
   @override
   @JsonKey(name: 'type_')
   final ListingType? type;
+// v0.18.0
   @override
   final CommentSortType? sort;
+// v0.18.0
   @override
   final int? maxDepth;
+// v0.18.0
   @override
   final int? page;
+// v0.18.0
   @override
   final int? limit;
+// v0.18.0
   @override
   final int? communityId;
+// v0.18.0
   @override
   final String? communityName;
+// v0.18.0
   @override
   final int? postId;
+// v0.18.0
   @override
   final int? parentId;
+// v0.18.0
   @override
   final bool? savedOnly;
-  @override
-  final String? auth;
+// v0.18.0
   @override
   final bool? likedOnly;
-// Only available in lemmy v0.19.0 and above
+// v0.19.0 (optional)
   @override
   final bool? dislikedOnly;
+// v0.19.0 (optional)
+  @override
+  final String? auth;
 
   @override
   String toString() {
-    return 'GetComments(type: $type, sort: $sort, maxDepth: $maxDepth, page: $page, limit: $limit, communityId: $communityId, communityName: $communityName, postId: $postId, parentId: $parentId, savedOnly: $savedOnly, auth: $auth, likedOnly: $likedOnly, dislikedOnly: $dislikedOnly)';
+    return 'GetComments(type: $type, sort: $sort, maxDepth: $maxDepth, page: $page, limit: $limit, communityId: $communityId, communityName: $communityName, postId: $postId, parentId: $parentId, savedOnly: $savedOnly, likedOnly: $likedOnly, dislikedOnly: $dislikedOnly, auth: $auth)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetCommentsImpl &&
@@ -1892,11 +2125,11 @@ class _$GetCommentsImpl extends _GetComments {
                 other.parentId == parentId) &&
             (identical(other.savedOnly, savedOnly) ||
                 other.savedOnly == savedOnly) &&
-            (identical(other.auth, auth) || other.auth == auth) &&
             (identical(other.likedOnly, likedOnly) ||
                 other.likedOnly == likedOnly) &&
             (identical(other.dislikedOnly, dislikedOnly) ||
-                other.dislikedOnly == dislikedOnly));
+                other.dislikedOnly == dislikedOnly) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
@@ -1913,9 +2146,9 @@ class _$GetCommentsImpl extends _GetComments {
       postId,
       parentId,
       savedOnly,
-      auth,
       likedOnly,
-      dislikedOnly);
+      dislikedOnly,
+      auth);
 
   @JsonKey(ignore: true)
   @override
@@ -1943,9 +2176,9 @@ abstract class _GetComments extends GetComments {
       final int? postId,
       final int? parentId,
       final bool? savedOnly,
-      final String? auth,
       final bool? likedOnly,
-      final bool? dislikedOnly}) = _$GetCommentsImpl;
+      final bool? dislikedOnly,
+      final String? auth}) = _$GetCommentsImpl;
   const _GetComments._() : super._();
 
   factory _GetComments.fromJson(Map<String, dynamic> json) =
@@ -1954,30 +2187,30 @@ abstract class _GetComments extends GetComments {
   @override
   @JsonKey(name: 'type_')
   ListingType? get type;
-  @override
+  @override // v0.18.0
   CommentSortType? get sort;
-  @override
+  @override // v0.18.0
   int? get maxDepth;
-  @override
+  @override // v0.18.0
   int? get page;
-  @override
+  @override // v0.18.0
   int? get limit;
-  @override
+  @override // v0.18.0
   int? get communityId;
-  @override
+  @override // v0.18.0
   String? get communityName;
-  @override
+  @override // v0.18.0
   int? get postId;
-  @override
+  @override // v0.18.0
   int? get parentId;
-  @override
+  @override // v0.18.0
   bool? get savedOnly;
-  @override
-  String? get auth;
-  @override
+  @override // v0.18.0
   bool? get likedOnly;
-  @override // Only available in lemmy v0.19.0 and above
+  @override // v0.19.0 (optional)
   bool? get dislikedOnly;
+  @override // v0.19.0 (optional)
+  String? get auth;
   @override
   @JsonKey(ignore: true)
   _$$GetCommentsImplCopyWith<_$GetCommentsImpl> get copyWith =>
@@ -1990,7 +2223,7 @@ GetComment _$GetCommentFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetComment {
-  int get id => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2086,6 +2319,7 @@ class _$GetCommentImpl extends _GetComment {
 
   @override
   final int id;
+// v0.18.0
   @override
   final String? auth;
 
@@ -2095,7 +2329,7 @@ class _$GetCommentImpl extends _GetComment {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetCommentImpl &&
@@ -2131,7 +2365,7 @@ abstract class _GetComment extends GetComment {
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -2145,8 +2379,8 @@ CreateCommentReport _$CreateCommentReportFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CreateCommentReport {
-  int get commentId => throw _privateConstructorUsedError;
-  String get reason => throw _privateConstructorUsedError;
+  int get commentId => throw _privateConstructorUsedError; // v0.18.0
+  String get reason => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2254,8 +2488,10 @@ class _$CreateCommentReportImpl extends _CreateCommentReport {
 
   @override
   final int commentId;
+// v0.18.0
   @override
   final String reason;
+// v0.18.0
   @override
   final String? auth;
 
@@ -2265,7 +2501,7 @@ class _$CreateCommentReportImpl extends _CreateCommentReport {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CreateCommentReportImpl &&
@@ -2306,9 +2542,9 @@ abstract class _CreateCommentReport extends CreateCommentReport {
 
   @override
   int get commentId;
-  @override
+  @override // v0.18.0
   String get reason;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -2322,8 +2558,8 @@ ResolveCommentReport _$ResolveCommentReportFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ResolveCommentReport {
-  int get reportId => throw _privateConstructorUsedError;
-  bool get resolved => throw _privateConstructorUsedError;
+  int get reportId => throw _privateConstructorUsedError; // v0.18.0
+  bool get resolved => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2432,8 +2668,10 @@ class _$ResolveCommentReportImpl extends _ResolveCommentReport {
 
   @override
   final int reportId;
+// v0.18.0
   @override
   final bool resolved;
+// v0.18.0
   @override
   final String? auth;
 
@@ -2443,7 +2681,7 @@ class _$ResolveCommentReportImpl extends _ResolveCommentReport {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ResolveCommentReportImpl &&
@@ -2486,9 +2724,9 @@ abstract class _ResolveCommentReport extends ResolveCommentReport {
 
   @override
   int get reportId;
-  @override
+  @override // v0.18.0
   bool get resolved;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -2502,10 +2740,12 @@ ListCommentReports _$ListCommentReportsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ListCommentReports {
-  int? get page => throw _privateConstructorUsedError;
-  int? get limit => throw _privateConstructorUsedError;
-  bool? get unresolvedOnly => throw _privateConstructorUsedError;
-  int? get communityId => throw _privateConstructorUsedError;
+  int? get commentId =>
+      throw _privateConstructorUsedError; // v0.19.4 (optional)
+  int? get page => throw _privateConstructorUsedError; // v0.18.0
+  int? get limit => throw _privateConstructorUsedError; // v0.18.0
+  bool? get unresolvedOnly => throw _privateConstructorUsedError; // v0.18.0
+  int? get communityId => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2521,7 +2761,8 @@ abstract class $ListCommentReportsCopyWith<$Res> {
       _$ListCommentReportsCopyWithImpl<$Res, ListCommentReports>;
   @useResult
   $Res call(
-      {int? page,
+      {int? commentId,
+      int? page,
       int? limit,
       bool? unresolvedOnly,
       int? communityId,
@@ -2541,6 +2782,7 @@ class _$ListCommentReportsCopyWithImpl<$Res, $Val extends ListCommentReports>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? commentId = freezed,
     Object? page = freezed,
     Object? limit = freezed,
     Object? unresolvedOnly = freezed,
@@ -2548,6 +2790,10 @@ class _$ListCommentReportsCopyWithImpl<$Res, $Val extends ListCommentReports>
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
+      commentId: freezed == commentId
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int?,
       page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -2581,7 +2827,8 @@ abstract class _$$ListCommentReportsImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int? page,
+      {int? commentId,
+      int? page,
       int? limit,
       bool? unresolvedOnly,
       int? communityId,
@@ -2599,6 +2846,7 @@ class __$$ListCommentReportsImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? commentId = freezed,
     Object? page = freezed,
     Object? limit = freezed,
     Object? unresolvedOnly = freezed,
@@ -2606,6 +2854,10 @@ class __$$ListCommentReportsImplCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_$ListCommentReportsImpl(
+      commentId: freezed == commentId
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int?,
       page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -2635,33 +2887,47 @@ class __$$ListCommentReportsImplCopyWithImpl<$Res>
 @apiSerde
 class _$ListCommentReportsImpl extends _ListCommentReports {
   const _$ListCommentReportsImpl(
-      {this.page, this.limit, this.unresolvedOnly, this.communityId, this.auth})
+      {this.commentId,
+      this.page,
+      this.limit,
+      this.unresolvedOnly,
+      this.communityId,
+      this.auth})
       : super._();
 
   factory _$ListCommentReportsImpl.fromJson(Map<String, dynamic> json) =>
       _$$ListCommentReportsImplFromJson(json);
 
   @override
+  final int? commentId;
+// v0.19.4 (optional)
+  @override
   final int? page;
+// v0.18.0
   @override
   final int? limit;
+// v0.18.0
   @override
   final bool? unresolvedOnly;
+// v0.18.0
   @override
   final int? communityId;
+// v0.18.0
   @override
   final String? auth;
 
   @override
   String toString() {
-    return 'ListCommentReports(page: $page, limit: $limit, unresolvedOnly: $unresolvedOnly, communityId: $communityId, auth: $auth)';
+    return 'ListCommentReports(commentId: $commentId, page: $page, limit: $limit, unresolvedOnly: $unresolvedOnly, communityId: $communityId, auth: $auth)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ListCommentReportsImpl &&
+            (identical(other.commentId, commentId) ||
+                other.commentId == commentId) &&
             (identical(other.page, page) || other.page == page) &&
             (identical(other.limit, limit) || other.limit == limit) &&
             (identical(other.unresolvedOnly, unresolvedOnly) ||
@@ -2673,8 +2939,8 @@ class _$ListCommentReportsImpl extends _ListCommentReports {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, page, limit, unresolvedOnly, communityId, auth);
+  int get hashCode => Object.hash(
+      runtimeType, commentId, page, limit, unresolvedOnly, communityId, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -2693,7 +2959,8 @@ class _$ListCommentReportsImpl extends _ListCommentReports {
 
 abstract class _ListCommentReports extends ListCommentReports {
   const factory _ListCommentReports(
-      {final int? page,
+      {final int? commentId,
+      final int? page,
       final int? limit,
       final bool? unresolvedOnly,
       final int? communityId,
@@ -2704,14 +2971,16 @@ abstract class _ListCommentReports extends ListCommentReports {
       _$ListCommentReportsImpl.fromJson;
 
   @override
+  int? get commentId;
+  @override // v0.19.4 (optional)
   int? get page;
-  @override
+  @override // v0.18.0
   int? get limit;
-  @override
+  @override // v0.18.0
   bool? get unresolvedOnly;
-  @override
+  @override // v0.18.0
   int? get communityId;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)

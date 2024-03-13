@@ -9,9 +9,9 @@ part 'custom_emoji_keyword.g.dart';
 class CustomEmojiKeyword with _$CustomEmojiKeyword {
   @modelSerde
   const factory CustomEmojiKeyword({
-    @deprecated int? id,
-    required int customEmojiId,
-    required String keyword,
+    @deprecated int? id, // v0.18.0 [deprecated in v0.19.0]
+    required int customEmojiId, // v0.18.0
+    required String keyword, // v0.18.0
   }) = _CustomEmojiKeyword;
 
   const CustomEmojiKeyword._();

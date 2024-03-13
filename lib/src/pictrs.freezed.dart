@@ -12,7 +12,7 @@ part of 'pictrs.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PictrsUploadFile _$PictrsUploadFileFromJson(Map<String, dynamic> json) {
   return _PictrsUploadFile.fromJson(json);
@@ -126,7 +126,7 @@ class _$PictrsUploadFileImpl extends _PictrsUploadFile {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PictrsUploadFileImpl &&
@@ -308,7 +308,7 @@ class _$PictrsUploadImpl extends _PictrsUpload {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PictrsUploadImpl &&

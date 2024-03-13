@@ -11,7 +11,7 @@ class ListPrivateMessageReportsResponse
     with _$ListPrivateMessageReportsResponse {
   @modelSerde
   const factory ListPrivateMessageReportsResponse({
-    required List<PrivateMessageReportView> privateMessageReports,
+    required List<PrivateMessageReportView> privateMessageReports, // v0.18.0
   }) = _ListPrivateMessageReportsResponse;
 
   const ListPrivateMessageReportsResponse._();

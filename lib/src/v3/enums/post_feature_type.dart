@@ -1,6 +1,6 @@
 enum PostFeatureType {
-  local('Local'),
-  community('Community'),
+  local('Local'), // v0.18.0
+  community('Community'), // v0.18.0
   ;
 
   final String value;

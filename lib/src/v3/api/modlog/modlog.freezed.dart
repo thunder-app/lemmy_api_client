@@ -12,7 +12,7 @@ part of 'modlog.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetModlog _$GetModlogFromJson(Map<String, dynamic> json) {
   return _GetModlog.fromJson(json);
@@ -20,13 +20,16 @@ GetModlog _$GetModlogFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetModlog {
-  int? get modPersonId => throw _privateConstructorUsedError;
-  int? get communityId => throw _privateConstructorUsedError;
-  int? get page => throw _privateConstructorUsedError;
-  int? get limit => throw _privateConstructorUsedError;
+  int? get modPersonId => throw _privateConstructorUsedError; // v0.18.0
+  int? get communityId => throw _privateConstructorUsedError; // v0.18.0
+  int? get page => throw _privateConstructorUsedError; // v0.18.0
+  int? get limit => throw _privateConstructorUsedError; // v0.18.0
   @JsonKey(name: 'type_')
-  ModlogActionType? get type => throw _privateConstructorUsedError;
-  int? get otherPersonId => throw _privateConstructorUsedError;
+  ModlogActionType? get type => throw _privateConstructorUsedError; // v0.18.0
+  int? get otherPersonId => throw _privateConstructorUsedError; // v0.18.0
+  int? get postId => throw _privateConstructorUsedError; // v0.19.4 (optional)
+  int? get commentId =>
+      throw _privateConstructorUsedError; // v0.19.4 (optional)
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -47,6 +50,8 @@ abstract class $GetModlogCopyWith<$Res> {
       int? limit,
       @JsonKey(name: 'type_') ModlogActionType? type,
       int? otherPersonId,
+      int? postId,
+      int? commentId,
       String? auth});
 }
 
@@ -69,6 +74,8 @@ class _$GetModlogCopyWithImpl<$Res, $Val extends GetModlog>
     Object? limit = freezed,
     Object? type = freezed,
     Object? otherPersonId = freezed,
+    Object? postId = freezed,
+    Object? commentId = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
@@ -96,6 +103,14 @@ class _$GetModlogCopyWithImpl<$Res, $Val extends GetModlog>
           ? _value.otherPersonId
           : otherPersonId // ignore: cast_nullable_to_non_nullable
               as int?,
+      postId: freezed == postId
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      commentId: freezed == commentId
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int?,
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -119,6 +134,8 @@ abstract class _$$GetModlogImplCopyWith<$Res>
       int? limit,
       @JsonKey(name: 'type_') ModlogActionType? type,
       int? otherPersonId,
+      int? postId,
+      int? commentId,
       String? auth});
 }
 
@@ -139,6 +156,8 @@ class __$$GetModlogImplCopyWithImpl<$Res>
     Object? limit = freezed,
     Object? type = freezed,
     Object? otherPersonId = freezed,
+    Object? postId = freezed,
+    Object? commentId = freezed,
     Object? auth = freezed,
   }) {
     return _then(_$GetModlogImpl(
@@ -166,6 +185,14 @@ class __$$GetModlogImplCopyWithImpl<$Res>
           ? _value.otherPersonId
           : otherPersonId // ignore: cast_nullable_to_non_nullable
               as int?,
+      postId: freezed == postId
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      commentId: freezed == commentId
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int?,
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -185,6 +212,8 @@ class _$GetModlogImpl extends _GetModlog {
       this.limit,
       @JsonKey(name: 'type_') this.type,
       this.otherPersonId,
+      this.postId,
+      this.commentId,
       this.auth})
       : super._();
 
@@ -193,27 +222,39 @@ class _$GetModlogImpl extends _GetModlog {
 
   @override
   final int? modPersonId;
+// v0.18.0
   @override
   final int? communityId;
+// v0.18.0
   @override
   final int? page;
+// v0.18.0
   @override
   final int? limit;
+// v0.18.0
   @override
   @JsonKey(name: 'type_')
   final ModlogActionType? type;
+// v0.18.0
   @override
   final int? otherPersonId;
+// v0.18.0
+  @override
+  final int? postId;
+// v0.19.4 (optional)
+  @override
+  final int? commentId;
+// v0.19.4 (optional)
   @override
   final String? auth;
 
   @override
   String toString() {
-    return 'GetModlog(modPersonId: $modPersonId, communityId: $communityId, page: $page, limit: $limit, type: $type, otherPersonId: $otherPersonId, auth: $auth)';
+    return 'GetModlog(modPersonId: $modPersonId, communityId: $communityId, page: $page, limit: $limit, type: $type, otherPersonId: $otherPersonId, postId: $postId, commentId: $commentId, auth: $auth)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetModlogImpl &&
@@ -226,13 +267,16 @@ class _$GetModlogImpl extends _GetModlog {
             (identical(other.type, type) || other.type == type) &&
             (identical(other.otherPersonId, otherPersonId) ||
                 other.otherPersonId == otherPersonId) &&
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.commentId, commentId) ||
+                other.commentId == commentId) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, modPersonId, communityId, page,
-      limit, type, otherPersonId, auth);
+      limit, type, otherPersonId, postId, commentId, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -256,6 +300,8 @@ abstract class _GetModlog extends GetModlog {
       final int? limit,
       @JsonKey(name: 'type_') final ModlogActionType? type,
       final int? otherPersonId,
+      final int? postId,
+      final int? commentId,
       final String? auth}) = _$GetModlogImpl;
   const _GetModlog._() : super._();
 
@@ -264,18 +310,22 @@ abstract class _GetModlog extends GetModlog {
 
   @override
   int? get modPersonId;
-  @override
+  @override // v0.18.0
   int? get communityId;
-  @override
+  @override // v0.18.0
   int? get page;
-  @override
+  @override // v0.18.0
   int? get limit;
-  @override
+  @override // v0.18.0
   @JsonKey(name: 'type_')
   ModlogActionType? get type;
-  @override
+  @override // v0.18.0
   int? get otherPersonId;
-  @override
+  @override // v0.18.0
+  int? get postId;
+  @override // v0.19.4 (optional)
+  int? get commentId;
+  @override // v0.19.4 (optional)
   String? get auth;
   @override
   @JsonKey(ignore: true)

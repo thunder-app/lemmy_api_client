@@ -10,8 +10,8 @@ part 'community_moderator_view.g.dart';
 class CommunityModeratorView with _$CommunityModeratorView {
   @modelSerde
   const factory CommunityModeratorView({
-    required Community community,
-    required Person moderator,
+    required Community community, // v0.18.0
+    required Person moderator, // v0.18.0
   }) = _CommunityModeratorView;
 
   const CommunityModeratorView._();

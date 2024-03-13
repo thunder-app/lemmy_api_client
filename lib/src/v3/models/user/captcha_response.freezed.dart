@@ -12,7 +12,7 @@ part of 'captcha_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CaptchaResponse _$CaptchaResponseFromJson(Map<String, dynamic> json) {
   return _CaptchaResponse.fromJson(json);
@@ -20,8 +20,8 @@ CaptchaResponse _$CaptchaResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CaptchaResponse {
-  String get png => throw _privateConstructorUsedError;
-  String get wav => throw _privateConstructorUsedError;
+  String get png => throw _privateConstructorUsedError; // v0.18.0
+  String get wav => throw _privateConstructorUsedError; // v0.18.0
   String get uuid => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -129,8 +129,10 @@ class _$CaptchaResponseImpl extends _CaptchaResponse {
 
   @override
   final String png;
+// v0.18.0
   @override
   final String wav;
+// v0.18.0
   @override
   final String uuid;
 
@@ -140,7 +142,7 @@ class _$CaptchaResponseImpl extends _CaptchaResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CaptchaResponseImpl &&
@@ -180,9 +182,9 @@ abstract class _CaptchaResponse extends CaptchaResponse {
 
   @override
   String get png;
-  @override
+  @override // v0.18.0
   String get wav;
-  @override
+  @override // v0.18.0
   String get uuid;
   @override
   @JsonKey(ignore: true)

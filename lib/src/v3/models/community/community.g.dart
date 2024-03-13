@@ -27,6 +27,9 @@ _$CommunityImpl _$$CommunityImplFromJson(Map<String, dynamic> json) =>
       hidden: json['hidden'] as bool,
       postingRestrictedToMods: json['posting_restricted_to_mods'] as bool,
       instanceId: json['instance_id'] as int,
+      visibility: json['visibility'] == null
+          ? null
+          : CommunityVisibility.fromJson(json['visibility']),
     );
 
 Map<String, dynamic> _$$CommunityImplToJson(_$CommunityImpl instance) =>
@@ -50,6 +53,7 @@ Map<String, dynamic> _$$CommunityImplToJson(_$CommunityImpl instance) =>
       'hidden': instance.hidden,
       'posting_restricted_to_mods': instance.postingRestrictedToMods,
       'instance_id': instance.instanceId,
+      'visibility': instance.visibility?.toJson(),
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(

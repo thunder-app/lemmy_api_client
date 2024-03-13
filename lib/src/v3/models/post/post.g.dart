@@ -29,6 +29,8 @@ _$PostImpl _$$PostImplFromJson(Map<String, dynamic> json) => _$PostImpl(
       languageId: json['language_id'] as int,
       featuredCommunity: json['featured_community'] as bool,
       featuredLocal: json['featured_local'] as bool,
+      urlContentType: json['url_content_type'] as String?,
+      altText: json['alt_text'] as String?,
     );
 
 Map<String, dynamic> _$$PostImplToJson(_$PostImpl instance) =>
@@ -55,6 +57,8 @@ Map<String, dynamic> _$$PostImplToJson(_$PostImpl instance) =>
       'language_id': instance.languageId,
       'featured_community': instance.featuredCommunity,
       'featured_local': instance.featuredLocal,
+      'url_content_type': instance.urlContentType,
+      'alt_text': instance.altText,
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(

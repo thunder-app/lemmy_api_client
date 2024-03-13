@@ -18,7 +18,7 @@ class ResolveObject
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ResolveObject({
-    required String q,
+    required String q, // v0.18.0
     String? auth,
   }) = _ResolveObject;
 

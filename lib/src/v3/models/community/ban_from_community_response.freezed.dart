@@ -12,7 +12,7 @@ part of 'ban_from_community_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 BanFromCommunityResponse _$BanFromCommunityResponseFromJson(
     Map<String, dynamic> json) {
@@ -21,7 +21,7 @@ BanFromCommunityResponse _$BanFromCommunityResponseFromJson(
 
 /// @nodoc
 mixin _$BanFromCommunityResponse {
-  PersonView get personView => throw _privateConstructorUsedError;
+  PersonView get personView => throw _privateConstructorUsedError; // v0.18.0
   bool get banned => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -136,6 +136,7 @@ class _$BanFromCommunityResponseImpl extends _BanFromCommunityResponse {
 
   @override
   final PersonView personView;
+// v0.18.0
   @override
   final bool banned;
 
@@ -145,7 +146,7 @@ class _$BanFromCommunityResponseImpl extends _BanFromCommunityResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BanFromCommunityResponseImpl &&
@@ -184,7 +185,7 @@ abstract class _BanFromCommunityResponse extends BanFromCommunityResponse {
 
   @override
   PersonView get personView;
-  @override
+  @override // v0.18.0
   bool get banned;
   @override
   @JsonKey(ignore: true)

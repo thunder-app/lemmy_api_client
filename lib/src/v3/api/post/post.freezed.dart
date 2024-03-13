@@ -12,7 +12,7 @@ part of 'post.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CreatePost _$CreatePostFromJson(Map<String, dynamic> json) {
   return _CreatePost.fromJson(json);
@@ -20,13 +20,17 @@ CreatePost _$CreatePostFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CreatePost {
-  String get name => throw _privateConstructorUsedError;
-  int get communityId => throw _privateConstructorUsedError;
-  String? get url => throw _privateConstructorUsedError;
-  String? get body => throw _privateConstructorUsedError;
-  String? get honeypot => throw _privateConstructorUsedError;
-  bool? get nsfw => throw _privateConstructorUsedError;
-  int? get languageId => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError; // v0.18.0
+  int get communityId => throw _privateConstructorUsedError; // v0.18.0
+  String? get url => throw _privateConstructorUsedError; // v0.18.0
+  String? get body => throw _privateConstructorUsedError; // v0.18.0
+  String? get altText =>
+      throw _privateConstructorUsedError; // v0.19.4 (optional)
+  String? get honeypot => throw _privateConstructorUsedError; // v0.18.0
+  bool? get nsfw => throw _privateConstructorUsedError; // v0.18.0
+  int? get languageId => throw _privateConstructorUsedError; // v0.18.0
+  String? get customThumbnail =>
+      throw _privateConstructorUsedError; // v0.19.4 (optional)
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -46,9 +50,11 @@ abstract class $CreatePostCopyWith<$Res> {
       int communityId,
       String? url,
       String? body,
+      String? altText,
       String? honeypot,
       bool? nsfw,
       int? languageId,
+      String? customThumbnail,
       String? auth});
 }
 
@@ -69,9 +75,11 @@ class _$CreatePostCopyWithImpl<$Res, $Val extends CreatePost>
     Object? communityId = null,
     Object? url = freezed,
     Object? body = freezed,
+    Object? altText = freezed,
     Object? honeypot = freezed,
     Object? nsfw = freezed,
     Object? languageId = freezed,
+    Object? customThumbnail = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
@@ -91,6 +99,10 @@ class _$CreatePostCopyWithImpl<$Res, $Val extends CreatePost>
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
               as String?,
+      altText: freezed == altText
+          ? _value.altText
+          : altText // ignore: cast_nullable_to_non_nullable
+              as String?,
       honeypot: freezed == honeypot
           ? _value.honeypot
           : honeypot // ignore: cast_nullable_to_non_nullable
@@ -103,6 +115,10 @@ class _$CreatePostCopyWithImpl<$Res, $Val extends CreatePost>
           ? _value.languageId
           : languageId // ignore: cast_nullable_to_non_nullable
               as int?,
+      customThumbnail: freezed == customThumbnail
+          ? _value.customThumbnail
+          : customThumbnail // ignore: cast_nullable_to_non_nullable
+              as String?,
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -124,9 +140,11 @@ abstract class _$$CreatePostImplCopyWith<$Res>
       int communityId,
       String? url,
       String? body,
+      String? altText,
       String? honeypot,
       bool? nsfw,
       int? languageId,
+      String? customThumbnail,
       String? auth});
 }
 
@@ -145,9 +163,11 @@ class __$$CreatePostImplCopyWithImpl<$Res>
     Object? communityId = null,
     Object? url = freezed,
     Object? body = freezed,
+    Object? altText = freezed,
     Object? honeypot = freezed,
     Object? nsfw = freezed,
     Object? languageId = freezed,
+    Object? customThumbnail = freezed,
     Object? auth = freezed,
   }) {
     return _then(_$CreatePostImpl(
@@ -167,6 +187,10 @@ class __$$CreatePostImplCopyWithImpl<$Res>
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
               as String?,
+      altText: freezed == altText
+          ? _value.altText
+          : altText // ignore: cast_nullable_to_non_nullable
+              as String?,
       honeypot: freezed == honeypot
           ? _value.honeypot
           : honeypot // ignore: cast_nullable_to_non_nullable
@@ -179,6 +203,10 @@ class __$$CreatePostImplCopyWithImpl<$Res>
           ? _value.languageId
           : languageId // ignore: cast_nullable_to_non_nullable
               as int?,
+      customThumbnail: freezed == customThumbnail
+          ? _value.customThumbnail
+          : customThumbnail // ignore: cast_nullable_to_non_nullable
+              as String?,
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -196,9 +224,11 @@ class _$CreatePostImpl extends _CreatePost {
       required this.communityId,
       this.url,
       this.body,
+      this.altText,
       this.honeypot,
       this.nsfw,
       this.languageId,
+      this.customThumbnail,
       this.auth})
       : super._();
 
@@ -207,28 +237,41 @@ class _$CreatePostImpl extends _CreatePost {
 
   @override
   final String name;
+// v0.18.0
   @override
   final int communityId;
+// v0.18.0
   @override
   final String? url;
+// v0.18.0
   @override
   final String? body;
+// v0.18.0
+  @override
+  final String? altText;
+// v0.19.4 (optional)
   @override
   final String? honeypot;
+// v0.18.0
   @override
   final bool? nsfw;
+// v0.18.0
   @override
   final int? languageId;
+// v0.18.0
+  @override
+  final String? customThumbnail;
+// v0.19.4 (optional)
   @override
   final String? auth;
 
   @override
   String toString() {
-    return 'CreatePost(name: $name, communityId: $communityId, url: $url, body: $body, honeypot: $honeypot, nsfw: $nsfw, languageId: $languageId, auth: $auth)';
+    return 'CreatePost(name: $name, communityId: $communityId, url: $url, body: $body, altText: $altText, honeypot: $honeypot, nsfw: $nsfw, languageId: $languageId, customThumbnail: $customThumbnail, auth: $auth)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CreatePostImpl &&
@@ -237,18 +280,21 @@ class _$CreatePostImpl extends _CreatePost {
                 other.communityId == communityId) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.body, body) || other.body == body) &&
+            (identical(other.altText, altText) || other.altText == altText) &&
             (identical(other.honeypot, honeypot) ||
                 other.honeypot == honeypot) &&
             (identical(other.nsfw, nsfw) || other.nsfw == nsfw) &&
             (identical(other.languageId, languageId) ||
                 other.languageId == languageId) &&
+            (identical(other.customThumbnail, customThumbnail) ||
+                other.customThumbnail == customThumbnail) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, name, communityId, url, body,
-      honeypot, nsfw, languageId, auth);
+      altText, honeypot, nsfw, languageId, customThumbnail, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -270,9 +316,11 @@ abstract class _CreatePost extends CreatePost {
       required final int communityId,
       final String? url,
       final String? body,
+      final String? altText,
       final String? honeypot,
       final bool? nsfw,
       final int? languageId,
+      final String? customThumbnail,
       final String? auth}) = _$CreatePostImpl;
   const _CreatePost._() : super._();
 
@@ -281,19 +329,23 @@ abstract class _CreatePost extends CreatePost {
 
   @override
   String get name;
-  @override
+  @override // v0.18.0
   int get communityId;
-  @override
+  @override // v0.18.0
   String? get url;
-  @override
+  @override // v0.18.0
   String? get body;
-  @override
+  @override // v0.18.0
+  String? get altText;
+  @override // v0.19.4 (optional)
   String? get honeypot;
-  @override
+  @override // v0.18.0
   bool? get nsfw;
-  @override
+  @override // v0.18.0
   int? get languageId;
-  @override
+  @override // v0.18.0
+  String? get customThumbnail;
+  @override // v0.19.4 (optional)
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -307,8 +359,8 @@ GetPost _$GetPostFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetPost {
-  int? get id => throw _privateConstructorUsedError;
-  int? get commentId => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError; // v0.18.0
+  int? get commentId => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -411,8 +463,10 @@ class _$GetPostImpl extends _GetPost {
 
   @override
   final int? id;
+// v0.18.0
   @override
   final int? commentId;
+// v0.18.0
   @override
   final String? auth;
 
@@ -422,7 +476,7 @@ class _$GetPostImpl extends _GetPost {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetPostImpl &&
@@ -461,9 +515,9 @@ abstract class _GetPost extends GetPost {
 
   @override
   int? get id;
-  @override
+  @override // v0.18.0
   int? get commentId;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -477,12 +531,16 @@ EditPost _$EditPostFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$EditPost {
-  int get postId => throw _privateConstructorUsedError;
-  String? get name => throw _privateConstructorUsedError;
-  String? get url => throw _privateConstructorUsedError;
-  String? get body => throw _privateConstructorUsedError;
-  bool? get nsfw => throw _privateConstructorUsedError;
-  int? get languageId => throw _privateConstructorUsedError;
+  int get postId => throw _privateConstructorUsedError; // v0.18.0
+  String? get name => throw _privateConstructorUsedError; // v0.18.0
+  String? get url => throw _privateConstructorUsedError; // v0.18.0
+  String? get body => throw _privateConstructorUsedError; // v0.18.0
+  String? get altText =>
+      throw _privateConstructorUsedError; // v0.19.4 (optional)
+  bool? get nsfw => throw _privateConstructorUsedError; // v0.18.0
+  int? get languageId => throw _privateConstructorUsedError; // v0.18.0
+  String? get customThumbnail =>
+      throw _privateConstructorUsedError; // v0.19.4 (optional)
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -501,8 +559,10 @@ abstract class $EditPostCopyWith<$Res> {
       String? name,
       String? url,
       String? body,
+      String? altText,
       bool? nsfw,
       int? languageId,
+      String? customThumbnail,
       String? auth});
 }
 
@@ -523,8 +583,10 @@ class _$EditPostCopyWithImpl<$Res, $Val extends EditPost>
     Object? name = freezed,
     Object? url = freezed,
     Object? body = freezed,
+    Object? altText = freezed,
     Object? nsfw = freezed,
     Object? languageId = freezed,
+    Object? customThumbnail = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
@@ -544,6 +606,10 @@ class _$EditPostCopyWithImpl<$Res, $Val extends EditPost>
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
               as String?,
+      altText: freezed == altText
+          ? _value.altText
+          : altText // ignore: cast_nullable_to_non_nullable
+              as String?,
       nsfw: freezed == nsfw
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
@@ -552,6 +618,10 @@ class _$EditPostCopyWithImpl<$Res, $Val extends EditPost>
           ? _value.languageId
           : languageId // ignore: cast_nullable_to_non_nullable
               as int?,
+      customThumbnail: freezed == customThumbnail
+          ? _value.customThumbnail
+          : customThumbnail // ignore: cast_nullable_to_non_nullable
+              as String?,
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -573,8 +643,10 @@ abstract class _$$EditPostImplCopyWith<$Res>
       String? name,
       String? url,
       String? body,
+      String? altText,
       bool? nsfw,
       int? languageId,
+      String? customThumbnail,
       String? auth});
 }
 
@@ -593,8 +665,10 @@ class __$$EditPostImplCopyWithImpl<$Res>
     Object? name = freezed,
     Object? url = freezed,
     Object? body = freezed,
+    Object? altText = freezed,
     Object? nsfw = freezed,
     Object? languageId = freezed,
+    Object? customThumbnail = freezed,
     Object? auth = freezed,
   }) {
     return _then(_$EditPostImpl(
@@ -614,6 +688,10 @@ class __$$EditPostImplCopyWithImpl<$Res>
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
               as String?,
+      altText: freezed == altText
+          ? _value.altText
+          : altText // ignore: cast_nullable_to_non_nullable
+              as String?,
       nsfw: freezed == nsfw
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
@@ -622,6 +700,10 @@ class __$$EditPostImplCopyWithImpl<$Res>
           ? _value.languageId
           : languageId // ignore: cast_nullable_to_non_nullable
               as int?,
+      customThumbnail: freezed == customThumbnail
+          ? _value.customThumbnail
+          : customThumbnail // ignore: cast_nullable_to_non_nullable
+              as String?,
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -639,8 +721,10 @@ class _$EditPostImpl extends _EditPost {
       this.name,
       this.url,
       this.body,
+      this.altText,
       this.nsfw,
       this.languageId,
+      this.customThumbnail,
       this.auth})
       : super._();
 
@@ -649,26 +733,38 @@ class _$EditPostImpl extends _EditPost {
 
   @override
   final int postId;
+// v0.18.0
   @override
   final String? name;
+// v0.18.0
   @override
   final String? url;
+// v0.18.0
   @override
   final String? body;
+// v0.18.0
+  @override
+  final String? altText;
+// v0.19.4 (optional)
   @override
   final bool? nsfw;
+// v0.18.0
   @override
   final int? languageId;
+// v0.18.0
+  @override
+  final String? customThumbnail;
+// v0.19.4 (optional)
   @override
   final String? auth;
 
   @override
   String toString() {
-    return 'EditPost(postId: $postId, name: $name, url: $url, body: $body, nsfw: $nsfw, languageId: $languageId, auth: $auth)';
+    return 'EditPost(postId: $postId, name: $name, url: $url, body: $body, altText: $altText, nsfw: $nsfw, languageId: $languageId, customThumbnail: $customThumbnail, auth: $auth)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EditPostImpl &&
@@ -676,16 +772,19 @@ class _$EditPostImpl extends _EditPost {
             (identical(other.name, name) || other.name == name) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.body, body) || other.body == body) &&
+            (identical(other.altText, altText) || other.altText == altText) &&
             (identical(other.nsfw, nsfw) || other.nsfw == nsfw) &&
             (identical(other.languageId, languageId) ||
                 other.languageId == languageId) &&
+            (identical(other.customThumbnail, customThumbnail) ||
+                other.customThumbnail == customThumbnail) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, postId, name, url, body, nsfw, languageId, auth);
+  int get hashCode => Object.hash(runtimeType, postId, name, url, body, altText,
+      nsfw, languageId, customThumbnail, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -707,8 +806,10 @@ abstract class _EditPost extends EditPost {
       final String? name,
       final String? url,
       final String? body,
+      final String? altText,
       final bool? nsfw,
       final int? languageId,
+      final String? customThumbnail,
       final String? auth}) = _$EditPostImpl;
   const _EditPost._() : super._();
 
@@ -717,17 +818,21 @@ abstract class _EditPost extends EditPost {
 
   @override
   int get postId;
-  @override
+  @override // v0.18.0
   String? get name;
-  @override
+  @override // v0.18.0
   String? get url;
-  @override
+  @override // v0.18.0
   String? get body;
-  @override
+  @override // v0.18.0
+  String? get altText;
+  @override // v0.19.4 (optional)
   bool? get nsfw;
-  @override
+  @override // v0.18.0
   int? get languageId;
-  @override
+  @override // v0.18.0
+  String? get customThumbnail;
+  @override // v0.19.4 (optional)
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -741,8 +846,8 @@ DeletePost _$DeletePostFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$DeletePost {
-  int get postId => throw _privateConstructorUsedError;
-  bool get deleted => throw _privateConstructorUsedError;
+  int get postId => throw _privateConstructorUsedError; // v0.18.0
+  bool get deleted => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -850,8 +955,10 @@ class _$DeletePostImpl extends _DeletePost {
 
   @override
   final int postId;
+// v0.18.0
   @override
   final bool deleted;
+// v0.18.0
   @override
   final String? auth;
 
@@ -861,7 +968,7 @@ class _$DeletePostImpl extends _DeletePost {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeletePostImpl &&
@@ -900,9 +1007,9 @@ abstract class _DeletePost extends DeletePost {
 
   @override
   int get postId;
-  @override
+  @override // v0.18.0
   bool get deleted;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -916,9 +1023,9 @@ RemovePost _$RemovePostFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$RemovePost {
-  int get postId => throw _privateConstructorUsedError;
-  bool get removed => throw _privateConstructorUsedError;
-  String? get reason => throw _privateConstructorUsedError;
+  int get postId => throw _privateConstructorUsedError; // v0.18.0
+  bool get removed => throw _privateConstructorUsedError; // v0.18.0
+  String? get reason => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1036,10 +1143,13 @@ class _$RemovePostImpl extends _RemovePost {
 
   @override
   final int postId;
+// v0.18.0
   @override
   final bool removed;
+// v0.18.0
   @override
   final String? reason;
+// v0.18.0
   @override
   final String? auth;
 
@@ -1049,7 +1159,7 @@ class _$RemovePostImpl extends _RemovePost {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RemovePostImpl &&
@@ -1090,11 +1200,11 @@ abstract class _RemovePost extends RemovePost {
 
   @override
   int get postId;
-  @override
+  @override // v0.18.0
   bool get removed;
-  @override
+  @override // v0.18.0
   String? get reason;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -1108,10 +1218,12 @@ MarkPostAsRead _$MarkPostAsReadFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MarkPostAsRead {
-  int? get postId => throw _privateConstructorUsedError;
+  @deprecated
+  int? get postId =>
+      throw _privateConstructorUsedError; // v0.18.0 (required), v0.19.0 (optional) [deprecated in v0.19.4]
   List<int>? get postIds =>
-      throw _privateConstructorUsedError; // Available in lemmy v0.19.0 and above
-  bool get read => throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
+  bool get read => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1126,7 +1238,8 @@ abstract class $MarkPostAsReadCopyWith<$Res> {
           MarkPostAsRead value, $Res Function(MarkPostAsRead) then) =
       _$MarkPostAsReadCopyWithImpl<$Res, MarkPostAsRead>;
   @useResult
-  $Res call({int? postId, List<int>? postIds, bool read, String? auth});
+  $Res call(
+      {@deprecated int? postId, List<int>? postIds, bool read, String? auth});
 }
 
 /// @nodoc
@@ -1176,7 +1289,8 @@ abstract class _$$MarkPostAsReadImplCopyWith<$Res>
       __$$MarkPostAsReadImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int? postId, List<int>? postIds, bool read, String? auth});
+  $Res call(
+      {@deprecated int? postId, List<int>? postIds, bool read, String? auth});
 }
 
 /// @nodoc
@@ -1221,7 +1335,10 @@ class __$$MarkPostAsReadImplCopyWithImpl<$Res>
 @apiSerde
 class _$MarkPostAsReadImpl extends _MarkPostAsRead {
   const _$MarkPostAsReadImpl(
-      {this.postId, final List<int>? postIds, required this.read, this.auth})
+      {@deprecated this.postId,
+      final List<int>? postIds,
+      required this.read,
+      this.auth})
       : _postIds = postIds,
         super._();
 
@@ -1229,8 +1346,11 @@ class _$MarkPostAsReadImpl extends _MarkPostAsRead {
       _$$MarkPostAsReadImplFromJson(json);
 
   @override
+  @deprecated
   final int? postId;
+// v0.18.0 (required), v0.19.0 (optional) [deprecated in v0.19.4]
   final List<int>? _postIds;
+// v0.18.0 (required), v0.19.0 (optional) [deprecated in v0.19.4]
   @override
   List<int>? get postIds {
     final value = _postIds;
@@ -1240,9 +1360,10 @@ class _$MarkPostAsReadImpl extends _MarkPostAsRead {
     return EqualUnmodifiableListView(value);
   }
 
-// Available in lemmy v0.19.0 and above
+// v0.19.0 (optional)
   @override
   final bool read;
+// v0.18.0
   @override
   final String? auth;
 
@@ -1252,7 +1373,7 @@ class _$MarkPostAsReadImpl extends _MarkPostAsRead {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MarkPostAsReadImpl &&
@@ -1284,7 +1405,7 @@ class _$MarkPostAsReadImpl extends _MarkPostAsRead {
 
 abstract class _MarkPostAsRead extends MarkPostAsRead {
   const factory _MarkPostAsRead(
-      {final int? postId,
+      {@deprecated final int? postId,
       final List<int>? postIds,
       required final bool read,
       final String? auth}) = _$MarkPostAsReadImpl;
@@ -1294,16 +1415,202 @@ abstract class _MarkPostAsRead extends MarkPostAsRead {
       _$MarkPostAsReadImpl.fromJson;
 
   @override
+  @deprecated
   int? get postId;
-  @override
+  @override // v0.18.0 (required), v0.19.0 (optional) [deprecated in v0.19.4]
   List<int>? get postIds;
-  @override // Available in lemmy v0.19.0 and above
+  @override // v0.19.0 (optional)
   bool get read;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
   _$$MarkPostAsReadImplCopyWith<_$MarkPostAsReadImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+HidePost _$HidePostFromJson(Map<String, dynamic> json) {
+  return _HidePost.fromJson(json);
+}
+
+/// @nodoc
+mixin _$HidePost {
+  List<int> get postIds =>
+      throw _privateConstructorUsedError; // v0.19.4 (required)
+  bool get hide => throw _privateConstructorUsedError; // v0.19.4 (required)
+  String? get auth => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $HidePostCopyWith<HidePost> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $HidePostCopyWith<$Res> {
+  factory $HidePostCopyWith(HidePost value, $Res Function(HidePost) then) =
+      _$HidePostCopyWithImpl<$Res, HidePost>;
+  @useResult
+  $Res call({List<int> postIds, bool hide, String? auth});
+}
+
+/// @nodoc
+class _$HidePostCopyWithImpl<$Res, $Val extends HidePost>
+    implements $HidePostCopyWith<$Res> {
+  _$HidePostCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? postIds = null,
+    Object? hide = null,
+    Object? auth = freezed,
+  }) {
+    return _then(_value.copyWith(
+      postIds: null == postIds
+          ? _value.postIds
+          : postIds // ignore: cast_nullable_to_non_nullable
+              as List<int>,
+      hide: null == hide
+          ? _value.hide
+          : hide // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: freezed == auth
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$HidePostImplCopyWith<$Res>
+    implements $HidePostCopyWith<$Res> {
+  factory _$$HidePostImplCopyWith(
+          _$HidePostImpl value, $Res Function(_$HidePostImpl) then) =
+      __$$HidePostImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({List<int> postIds, bool hide, String? auth});
+}
+
+/// @nodoc
+class __$$HidePostImplCopyWithImpl<$Res>
+    extends _$HidePostCopyWithImpl<$Res, _$HidePostImpl>
+    implements _$$HidePostImplCopyWith<$Res> {
+  __$$HidePostImplCopyWithImpl(
+      _$HidePostImpl _value, $Res Function(_$HidePostImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? postIds = null,
+    Object? hide = null,
+    Object? auth = freezed,
+  }) {
+    return _then(_$HidePostImpl(
+      postIds: null == postIds
+          ? _value._postIds
+          : postIds // ignore: cast_nullable_to_non_nullable
+              as List<int>,
+      hide: null == hide
+          ? _value.hide
+          : hide // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: freezed == auth
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+@apiSerde
+class _$HidePostImpl extends _HidePost {
+  const _$HidePostImpl(
+      {required final List<int> postIds, required this.hide, this.auth})
+      : _postIds = postIds,
+        super._();
+
+  factory _$HidePostImpl.fromJson(Map<String, dynamic> json) =>
+      _$$HidePostImplFromJson(json);
+
+  final List<int> _postIds;
+  @override
+  List<int> get postIds {
+    if (_postIds is EqualUnmodifiableListView) return _postIds;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_postIds);
+  }
+
+// v0.19.4 (required)
+  @override
+  final bool hide;
+// v0.19.4 (required)
+  @override
+  final String? auth;
+
+  @override
+  String toString() {
+    return 'HidePost(postIds: $postIds, hide: $hide, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$HidePostImpl &&
+            const DeepCollectionEquality().equals(other._postIds, _postIds) &&
+            (identical(other.hide, hide) || other.hide == hide) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_postIds), hide, auth);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$HidePostImplCopyWith<_$HidePostImpl> get copyWith =>
+      __$$HidePostImplCopyWithImpl<_$HidePostImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$HidePostImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _HidePost extends HidePost {
+  const factory _HidePost(
+      {required final List<int> postIds,
+      required final bool hide,
+      final String? auth}) = _$HidePostImpl;
+  const _HidePost._() : super._();
+
+  factory _HidePost.fromJson(Map<String, dynamic> json) =
+      _$HidePostImpl.fromJson;
+
+  @override
+  List<int> get postIds;
+  @override // v0.19.4 (required)
+  bool get hide;
+  @override // v0.19.4 (required)
+  String? get auth;
+  @override
+  @JsonKey(ignore: true)
+  _$$HidePostImplCopyWith<_$HidePostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1313,8 +1620,8 @@ LockPost _$LockPostFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$LockPost {
-  int get postId => throw _privateConstructorUsedError;
-  bool get locked => throw _privateConstructorUsedError;
+  int get postId => throw _privateConstructorUsedError; // v0.18.0
+  bool get locked => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1420,8 +1727,10 @@ class _$LockPostImpl extends _LockPost {
 
   @override
   final int postId;
+// v0.18.0
   @override
   final bool locked;
+// v0.18.0
   @override
   final String? auth;
 
@@ -1431,7 +1740,7 @@ class _$LockPostImpl extends _LockPost {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LockPostImpl &&
@@ -1470,9 +1779,9 @@ abstract class _LockPost extends LockPost {
 
   @override
   int get postId;
-  @override
+  @override // v0.18.0
   bool get locked;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -1486,9 +1795,10 @@ FeaturePost _$FeaturePostFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$FeaturePost {
-  int get postId => throw _privateConstructorUsedError;
-  bool get featured => throw _privateConstructorUsedError;
-  PostFeatureType get featureType => throw _privateConstructorUsedError;
+  int get postId => throw _privateConstructorUsedError; // v0.18.0
+  bool get featured => throw _privateConstructorUsedError; // v0.18.0
+  PostFeatureType get featureType =>
+      throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1611,10 +1921,13 @@ class _$FeaturePostImpl extends _FeaturePost {
 
   @override
   final int postId;
+// v0.18.0
   @override
   final bool featured;
+// v0.18.0
   @override
   final PostFeatureType featureType;
+// v0.18.0
   @override
   final String? auth;
 
@@ -1624,7 +1937,7 @@ class _$FeaturePostImpl extends _FeaturePost {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FeaturePostImpl &&
@@ -1668,11 +1981,11 @@ abstract class _FeaturePost extends FeaturePost {
 
   @override
   int get postId;
-  @override
+  @override // v0.18.0
   bool get featured;
-  @override
+  @override // v0.18.0
   PostFeatureType get featureType;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -1687,20 +2000,23 @@ GetPosts _$GetPostsFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$GetPosts {
   @JsonKey(name: 'type_')
-  ListingType? get type => throw _privateConstructorUsedError;
-  SortType? get sort => throw _privateConstructorUsedError;
-  int? get page => throw _privateConstructorUsedError;
-  int? get limit => throw _privateConstructorUsedError;
-  int? get communityId => throw _privateConstructorUsedError;
-  String? get communityName => throw _privateConstructorUsedError;
-  bool? get savedOnly => throw _privateConstructorUsedError;
+  ListingType? get type => throw _privateConstructorUsedError; // v0.18.0
+  SortType? get sort => throw _privateConstructorUsedError; // v0.18.0
+  int? get page => throw _privateConstructorUsedError; // v0.18.0
+  int? get limit => throw _privateConstructorUsedError; // v0.18.0
+  int? get communityId => throw _privateConstructorUsedError; // v0.18.0
+  String? get communityName => throw _privateConstructorUsedError; // v0.18.0
+  bool? get savedOnly => throw _privateConstructorUsedError; // v0.18.0
   @deprecated
-  bool? get moderatorView => throw _privateConstructorUsedError;
+  bool? get moderatorView =>
+      throw _privateConstructorUsedError; // v0.18.3 [deprecated in v0.19.0]
   String? get auth => throw _privateConstructorUsedError;
   bool? get likedOnly =>
-      throw _privateConstructorUsedError; // Only available in lemmy v0.19.0 and above
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
   bool? get dislikedOnly =>
-      throw _privateConstructorUsedError; // Only available in lemmy v0.19.0 and above
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
+  bool? get showHidden =>
+      throw _privateConstructorUsedError; // v0.19.4 (optional)
   String? get pageCursor => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1726,6 +2042,7 @@ abstract class $GetPostsCopyWith<$Res> {
       String? auth,
       bool? likedOnly,
       bool? dislikedOnly,
+      bool? showHidden,
       String? pageCursor});
 }
 
@@ -1753,6 +2070,7 @@ class _$GetPostsCopyWithImpl<$Res, $Val extends GetPosts>
     Object? auth = freezed,
     Object? likedOnly = freezed,
     Object? dislikedOnly = freezed,
+    Object? showHidden = freezed,
     Object? pageCursor = freezed,
   }) {
     return _then(_value.copyWith(
@@ -1800,6 +2118,10 @@ class _$GetPostsCopyWithImpl<$Res, $Val extends GetPosts>
           ? _value.dislikedOnly
           : dislikedOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
+      showHidden: freezed == showHidden
+          ? _value.showHidden
+          : showHidden // ignore: cast_nullable_to_non_nullable
+              as bool?,
       pageCursor: freezed == pageCursor
           ? _value.pageCursor
           : pageCursor // ignore: cast_nullable_to_non_nullable
@@ -1828,6 +2150,7 @@ abstract class _$$GetPostsImplCopyWith<$Res>
       String? auth,
       bool? likedOnly,
       bool? dislikedOnly,
+      bool? showHidden,
       String? pageCursor});
 }
 
@@ -1853,6 +2176,7 @@ class __$$GetPostsImplCopyWithImpl<$Res>
     Object? auth = freezed,
     Object? likedOnly = freezed,
     Object? dislikedOnly = freezed,
+    Object? showHidden = freezed,
     Object? pageCursor = freezed,
   }) {
     return _then(_$GetPostsImpl(
@@ -1900,6 +2224,10 @@ class __$$GetPostsImplCopyWithImpl<$Res>
           ? _value.dislikedOnly
           : dislikedOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
+      showHidden: freezed == showHidden
+          ? _value.showHidden
+          : showHidden // ignore: cast_nullable_to_non_nullable
+              as bool?,
       pageCursor: freezed == pageCursor
           ? _value.pageCursor
           : pageCursor // ignore: cast_nullable_to_non_nullable
@@ -1924,6 +2252,7 @@ class _$GetPostsImpl extends _GetPosts {
       this.auth,
       this.likedOnly,
       this.dislikedOnly,
+      this.showHidden,
       this.pageCursor})
       : super._();
 
@@ -1933,39 +2262,50 @@ class _$GetPostsImpl extends _GetPosts {
   @override
   @JsonKey(name: 'type_')
   final ListingType? type;
+// v0.18.0
   @override
   final SortType? sort;
+// v0.18.0
   @override
   final int? page;
+// v0.18.0
   @override
   final int? limit;
+// v0.18.0
   @override
   final int? communityId;
+// v0.18.0
   @override
   final String? communityName;
+// v0.18.0
   @override
   final bool? savedOnly;
+// v0.18.0
   @override
   @deprecated
   final bool? moderatorView;
+// v0.18.3 [deprecated in v0.19.0]
   @override
   final String? auth;
   @override
   final bool? likedOnly;
-// Only available in lemmy v0.19.0 and above
+// v0.19.0 (optional)
   @override
   final bool? dislikedOnly;
-// Only available in lemmy v0.19.0 and above
+// v0.19.0 (optional)
+  @override
+  final bool? showHidden;
+// v0.19.4 (optional)
   @override
   final String? pageCursor;
 
   @override
   String toString() {
-    return 'GetPosts(type: $type, sort: $sort, page: $page, limit: $limit, communityId: $communityId, communityName: $communityName, savedOnly: $savedOnly, moderatorView: $moderatorView, auth: $auth, likedOnly: $likedOnly, dislikedOnly: $dislikedOnly, pageCursor: $pageCursor)';
+    return 'GetPosts(type: $type, sort: $sort, page: $page, limit: $limit, communityId: $communityId, communityName: $communityName, savedOnly: $savedOnly, moderatorView: $moderatorView, auth: $auth, likedOnly: $likedOnly, dislikedOnly: $dislikedOnly, showHidden: $showHidden, pageCursor: $pageCursor)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetPostsImpl &&
@@ -1986,6 +2326,8 @@ class _$GetPostsImpl extends _GetPosts {
                 other.likedOnly == likedOnly) &&
             (identical(other.dislikedOnly, dislikedOnly) ||
                 other.dislikedOnly == dislikedOnly) &&
+            (identical(other.showHidden, showHidden) ||
+                other.showHidden == showHidden) &&
             (identical(other.pageCursor, pageCursor) ||
                 other.pageCursor == pageCursor));
   }
@@ -2005,6 +2347,7 @@ class _$GetPostsImpl extends _GetPosts {
       auth,
       likedOnly,
       dislikedOnly,
+      showHidden,
       pageCursor);
 
   @JsonKey(ignore: true)
@@ -2034,6 +2377,7 @@ abstract class _GetPosts extends GetPosts {
       final String? auth,
       final bool? likedOnly,
       final bool? dislikedOnly,
+      final bool? showHidden,
       final String? pageCursor}) = _$GetPostsImpl;
   const _GetPosts._() : super._();
 
@@ -2043,28 +2387,30 @@ abstract class _GetPosts extends GetPosts {
   @override
   @JsonKey(name: 'type_')
   ListingType? get type;
-  @override
+  @override // v0.18.0
   SortType? get sort;
-  @override
+  @override // v0.18.0
   int? get page;
-  @override
+  @override // v0.18.0
   int? get limit;
-  @override
+  @override // v0.18.0
   int? get communityId;
-  @override
+  @override // v0.18.0
   String? get communityName;
-  @override
+  @override // v0.18.0
   bool? get savedOnly;
-  @override
+  @override // v0.18.0
   @deprecated
   bool? get moderatorView;
-  @override
+  @override // v0.18.3 [deprecated in v0.19.0]
   String? get auth;
   @override
   bool? get likedOnly;
-  @override // Only available in lemmy v0.19.0 and above
+  @override // v0.19.0 (optional)
   bool? get dislikedOnly;
-  @override // Only available in lemmy v0.19.0 and above
+  @override // v0.19.0 (optional)
+  bool? get showHidden;
+  @override // v0.19.4 (optional)
   String? get pageCursor;
   @override
   @JsonKey(ignore: true)
@@ -2078,8 +2424,8 @@ CreatePostLike _$CreatePostLikeFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CreatePostLike {
-  int get postId => throw _privateConstructorUsedError;
-  num get score => throw _privateConstructorUsedError;
+  int get postId => throw _privateConstructorUsedError; // v0.18.0
+  num get score => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2187,8 +2533,10 @@ class _$CreatePostLikeImpl extends _CreatePostLike {
 
   @override
   final int postId;
+// v0.18.0
   @override
   final num score;
+// v0.18.0
   @override
   final String? auth;
 
@@ -2198,7 +2546,7 @@ class _$CreatePostLikeImpl extends _CreatePostLike {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CreatePostLikeImpl &&
@@ -2238,13 +2586,208 @@ abstract class _CreatePostLike extends CreatePostLike {
 
   @override
   int get postId;
-  @override
+  @override // v0.18.0
   num get score;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
   _$$CreatePostLikeImplCopyWith<_$CreatePostLikeImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ListPostLikes _$ListPostLikesFromJson(Map<String, dynamic> json) {
+  return _ListPostLikes.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ListPostLikes {
+  int get postId => throw _privateConstructorUsedError; // v0.19.2 (required)
+  int? get page => throw _privateConstructorUsedError; // v0.19.2 (optional)
+  int? get limit => throw _privateConstructorUsedError; // v0.19.2 (optional)
+  String? get auth => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ListPostLikesCopyWith<ListPostLikes> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ListPostLikesCopyWith<$Res> {
+  factory $ListPostLikesCopyWith(
+          ListPostLikes value, $Res Function(ListPostLikes) then) =
+      _$ListPostLikesCopyWithImpl<$Res, ListPostLikes>;
+  @useResult
+  $Res call({int postId, int? page, int? limit, String? auth});
+}
+
+/// @nodoc
+class _$ListPostLikesCopyWithImpl<$Res, $Val extends ListPostLikes>
+    implements $ListPostLikesCopyWith<$Res> {
+  _$ListPostLikesCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? postId = null,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(_value.copyWith(
+      postId: null == postId
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      page: freezed == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: freezed == limit
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      auth: freezed == auth
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$ListPostLikesImplCopyWith<$Res>
+    implements $ListPostLikesCopyWith<$Res> {
+  factory _$$ListPostLikesImplCopyWith(
+          _$ListPostLikesImpl value, $Res Function(_$ListPostLikesImpl) then) =
+      __$$ListPostLikesImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int postId, int? page, int? limit, String? auth});
+}
+
+/// @nodoc
+class __$$ListPostLikesImplCopyWithImpl<$Res>
+    extends _$ListPostLikesCopyWithImpl<$Res, _$ListPostLikesImpl>
+    implements _$$ListPostLikesImplCopyWith<$Res> {
+  __$$ListPostLikesImplCopyWithImpl(
+      _$ListPostLikesImpl _value, $Res Function(_$ListPostLikesImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? postId = null,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(_$ListPostLikesImpl(
+      postId: null == postId
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      page: freezed == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: freezed == limit
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      auth: freezed == auth
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+@apiSerde
+class _$ListPostLikesImpl extends _ListPostLikes {
+  const _$ListPostLikesImpl(
+      {required this.postId, this.page, this.limit, this.auth})
+      : super._();
+
+  factory _$ListPostLikesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ListPostLikesImplFromJson(json);
+
+  @override
+  final int postId;
+// v0.19.2 (required)
+  @override
+  final int? page;
+// v0.19.2 (optional)
+  @override
+  final int? limit;
+// v0.19.2 (optional)
+  @override
+  final String? auth;
+
+  @override
+  String toString() {
+    return 'ListPostLikes(postId: $postId, page: $page, limit: $limit, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ListPostLikesImpl &&
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, postId, page, limit, auth);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ListPostLikesImplCopyWith<_$ListPostLikesImpl> get copyWith =>
+      __$$ListPostLikesImplCopyWithImpl<_$ListPostLikesImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ListPostLikesImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _ListPostLikes extends ListPostLikes {
+  const factory _ListPostLikes(
+      {required final int postId,
+      final int? page,
+      final int? limit,
+      final String? auth}) = _$ListPostLikesImpl;
+  const _ListPostLikes._() : super._();
+
+  factory _ListPostLikes.fromJson(Map<String, dynamic> json) =
+      _$ListPostLikesImpl.fromJson;
+
+  @override
+  int get postId;
+  @override // v0.19.2 (required)
+  int? get page;
+  @override // v0.19.2 (optional)
+  int? get limit;
+  @override // v0.19.2 (optional)
+  String? get auth;
+  @override
+  @JsonKey(ignore: true)
+  _$$ListPostLikesImplCopyWith<_$ListPostLikesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2254,8 +2797,8 @@ SavePost _$SavePostFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SavePost {
-  int get postId => throw _privateConstructorUsedError;
-  bool get save => throw _privateConstructorUsedError;
+  int get postId => throw _privateConstructorUsedError; // v0.18.0
+  bool get save => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2361,8 +2904,10 @@ class _$SavePostImpl extends _SavePost {
 
   @override
   final int postId;
+// v0.18.0
   @override
   final bool save;
+// v0.18.0
   @override
   final String? auth;
 
@@ -2372,7 +2917,7 @@ class _$SavePostImpl extends _SavePost {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SavePostImpl &&
@@ -2411,9 +2956,9 @@ abstract class _SavePost extends SavePost {
 
   @override
   int get postId;
-  @override
+  @override // v0.18.0
   bool get save;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -2427,8 +2972,8 @@ CreatePostReport _$CreatePostReportFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CreatePostReport {
-  int get postId => throw _privateConstructorUsedError;
-  String get reason => throw _privateConstructorUsedError;
+  int get postId => throw _privateConstructorUsedError; // v0.18.0
+  String get reason => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2536,8 +3081,10 @@ class _$CreatePostReportImpl extends _CreatePostReport {
 
   @override
   final int postId;
+// v0.18.0
   @override
   final String reason;
+// v0.18.0
   @override
   final String? auth;
 
@@ -2547,7 +3094,7 @@ class _$CreatePostReportImpl extends _CreatePostReport {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CreatePostReportImpl &&
@@ -2587,9 +3134,9 @@ abstract class _CreatePostReport extends CreatePostReport {
 
   @override
   int get postId;
-  @override
+  @override // v0.18.0
   String get reason;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -2603,8 +3150,8 @@ ResolvePostReport _$ResolvePostReportFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ResolvePostReport {
-  int get reportId => throw _privateConstructorUsedError;
-  bool get resolved => throw _privateConstructorUsedError;
+  int get reportId => throw _privateConstructorUsedError; // v0.18.0
+  bool get resolved => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2712,8 +3259,10 @@ class _$ResolvePostReportImpl extends _ResolvePostReport {
 
   @override
   final int reportId;
+// v0.18.0
   @override
   final bool resolved;
+// v0.18.0
   @override
   final String? auth;
 
@@ -2723,7 +3272,7 @@ class _$ResolvePostReportImpl extends _ResolvePostReport {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ResolvePostReportImpl &&
@@ -2765,9 +3314,9 @@ abstract class _ResolvePostReport extends ResolvePostReport {
 
   @override
   int get reportId;
-  @override
+  @override // v0.18.0
   bool get resolved;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -2781,10 +3330,11 @@ ListPostReports _$ListPostReportsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ListPostReports {
-  int? get page => throw _privateConstructorUsedError;
-  int? get limit => throw _privateConstructorUsedError;
-  bool? get unresolvedOnly => throw _privateConstructorUsedError;
-  int? get communityId => throw _privateConstructorUsedError;
+  int? get page => throw _privateConstructorUsedError; // v0.18.0
+  int? get limit => throw _privateConstructorUsedError; // v0.18.0
+  bool? get unresolvedOnly => throw _privateConstructorUsedError; // v0.18.0
+  int? get communityId => throw _privateConstructorUsedError; // v0.18.0
+  int? get postId => throw _privateConstructorUsedError; // v0.19.4 (optional)
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2804,6 +3354,7 @@ abstract class $ListPostReportsCopyWith<$Res> {
       int? limit,
       bool? unresolvedOnly,
       int? communityId,
+      int? postId,
       String? auth});
 }
 
@@ -2824,6 +3375,7 @@ class _$ListPostReportsCopyWithImpl<$Res, $Val extends ListPostReports>
     Object? limit = freezed,
     Object? unresolvedOnly = freezed,
     Object? communityId = freezed,
+    Object? postId = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
@@ -2842,6 +3394,10 @@ class _$ListPostReportsCopyWithImpl<$Res, $Val extends ListPostReports>
       communityId: freezed == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      postId: freezed == postId
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
               as int?,
       auth: freezed == auth
           ? _value.auth
@@ -2864,6 +3420,7 @@ abstract class _$$ListPostReportsImplCopyWith<$Res>
       int? limit,
       bool? unresolvedOnly,
       int? communityId,
+      int? postId,
       String? auth});
 }
 
@@ -2882,6 +3439,7 @@ class __$$ListPostReportsImplCopyWithImpl<$Res>
     Object? limit = freezed,
     Object? unresolvedOnly = freezed,
     Object? communityId = freezed,
+    Object? postId = freezed,
     Object? auth = freezed,
   }) {
     return _then(_$ListPostReportsImpl(
@@ -2901,6 +3459,10 @@ class __$$ListPostReportsImplCopyWithImpl<$Res>
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int?,
+      postId: freezed == postId
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int?,
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -2914,7 +3476,12 @@ class __$$ListPostReportsImplCopyWithImpl<$Res>
 @apiSerde
 class _$ListPostReportsImpl extends _ListPostReports {
   const _$ListPostReportsImpl(
-      {this.page, this.limit, this.unresolvedOnly, this.communityId, this.auth})
+      {this.page,
+      this.limit,
+      this.unresolvedOnly,
+      this.communityId,
+      this.postId,
+      this.auth})
       : super._();
 
   factory _$ListPostReportsImpl.fromJson(Map<String, dynamic> json) =>
@@ -2922,22 +3489,29 @@ class _$ListPostReportsImpl extends _ListPostReports {
 
   @override
   final int? page;
+// v0.18.0
   @override
   final int? limit;
+// v0.18.0
   @override
   final bool? unresolvedOnly;
+// v0.18.0
   @override
   final int? communityId;
+// v0.18.0
+  @override
+  final int? postId;
+// v0.19.4 (optional)
   @override
   final String? auth;
 
   @override
   String toString() {
-    return 'ListPostReports(page: $page, limit: $limit, unresolvedOnly: $unresolvedOnly, communityId: $communityId, auth: $auth)';
+    return 'ListPostReports(page: $page, limit: $limit, unresolvedOnly: $unresolvedOnly, communityId: $communityId, postId: $postId, auth: $auth)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ListPostReportsImpl &&
@@ -2947,13 +3521,14 @@ class _$ListPostReportsImpl extends _ListPostReports {
                 other.unresolvedOnly == unresolvedOnly) &&
             (identical(other.communityId, communityId) ||
                 other.communityId == communityId) &&
+            (identical(other.postId, postId) || other.postId == postId) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, page, limit, unresolvedOnly, communityId, auth);
+  int get hashCode => Object.hash(
+      runtimeType, page, limit, unresolvedOnly, communityId, postId, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -2976,6 +3551,7 @@ abstract class _ListPostReports extends ListPostReports {
       final int? limit,
       final bool? unresolvedOnly,
       final int? communityId,
+      final int? postId,
       final String? auth}) = _$ListPostReportsImpl;
   const _ListPostReports._() : super._();
 
@@ -2984,13 +3560,15 @@ abstract class _ListPostReports extends ListPostReports {
 
   @override
   int? get page;
-  @override
+  @override // v0.18.0
   int? get limit;
-  @override
+  @override // v0.18.0
   bool? get unresolvedOnly;
-  @override
+  @override // v0.18.0
   int? get communityId;
-  @override
+  @override // v0.18.0
+  int? get postId;
+  @override // v0.19.4 (optional)
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -3096,7 +3674,7 @@ class _$GetSiteMetadataImpl extends _GetSiteMetadata {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetSiteMetadataImpl &&

@@ -12,7 +12,7 @@ part of 'site_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SiteView _$SiteViewFromJson(Map<String, dynamic> json) {
   return _SiteView.fromJson(json);
@@ -20,10 +20,10 @@ SiteView _$SiteViewFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SiteView {
-  Site get site => throw _privateConstructorUsedError;
-  LocalSite get localSite => throw _privateConstructorUsedError;
+  Site get site => throw _privateConstructorUsedError; // v0.18.0
+  LocalSite get localSite => throw _privateConstructorUsedError; // v0.18.0
   LocalSiteRateLimit get localSiteRateLimit =>
-      throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
   SiteAggregates get counts => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -198,10 +198,13 @@ class _$SiteViewImpl extends _SiteView {
 
   @override
   final Site site;
+// v0.18.0
   @override
   final LocalSite localSite;
+// v0.18.0
   @override
   final LocalSiteRateLimit localSiteRateLimit;
+// v0.18.0
   @override
   final SiteAggregates counts;
 
@@ -211,7 +214,7 @@ class _$SiteViewImpl extends _SiteView {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SiteViewImpl &&
@@ -255,11 +258,11 @@ abstract class _SiteView extends SiteView {
 
   @override
   Site get site;
-  @override
+  @override // v0.18.0
   LocalSite get localSite;
-  @override
+  @override // v0.18.0
   LocalSiteRateLimit get localSiteRateLimit;
-  @override
+  @override // v0.18.0
   SiteAggregates get counts;
   @override
   @JsonKey(ignore: true)

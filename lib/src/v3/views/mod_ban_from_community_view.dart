@@ -10,10 +10,10 @@ part 'mod_ban_from_community_view.g.dart';
 class ModBanFromCommunityView with _$ModBanFromCommunityView {
   @modelSerde
   const factory ModBanFromCommunityView({
-    required ModBanFromCommunity modBanFromCommunity,
-    Person? moderator,
-    required Community community,
-    required Person bannedPerson,
+    required ModBanFromCommunity modBanFromCommunity, // v0.18.0
+    Person? moderator, // v0.18.0
+    required Community community, // v0.18.0
+    required Person bannedPerson, // v0.18.0
   }) = _ModBanFromCommunityView;
 
   const ModBanFromCommunityView._();

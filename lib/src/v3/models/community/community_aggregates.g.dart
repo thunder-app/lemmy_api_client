@@ -20,6 +20,7 @@ _$CommunityAggregatesImpl _$$CommunityAggregatesImplFromJson(
       usersActiveMonth: json['users_active_month'] as int,
       usersActiveHalfYear: json['users_active_half_year'] as int,
       hotRank: json['hot_rank'] as int?,
+      subscribersLocal: json['subscribers_local'] as int?,
     );
 
 Map<String, dynamic> _$$CommunityAggregatesImplToJson(
@@ -36,4 +37,5 @@ Map<String, dynamic> _$$CommunityAggregatesImplToJson(
       'users_active_month': instance.usersActiveMonth,
       'users_active_half_year': instance.usersActiveHalfYear,
       'hot_rank': instance.hotRank,
+      'subscribers_local': instance.subscribersLocal,
     };

@@ -12,7 +12,7 @@ part of 'registration_application.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 RegistrationApplication _$RegistrationApplicationFromJson(
     Map<String, dynamic> json) {
@@ -21,11 +21,11 @@ RegistrationApplication _$RegistrationApplicationFromJson(
 
 /// @nodoc
 mixin _$RegistrationApplication {
-  int get id => throw _privateConstructorUsedError;
-  int get localUserId => throw _privateConstructorUsedError;
-  String get answer => throw _privateConstructorUsedError;
-  int? get adminId => throw _privateConstructorUsedError;
-  String? get denyReason => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
+  int get localUserId => throw _privateConstructorUsedError; // v0.18.0
+  String get answer => throw _privateConstructorUsedError; // v0.18.0
+  int? get adminId => throw _privateConstructorUsedError; // v0.18.0
+  String? get denyReason => throw _privateConstructorUsedError; // v0.18.0
   DateTime get published => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -184,14 +184,19 @@ class _$RegistrationApplicationImpl extends _RegistrationApplication {
 
   @override
   final int id;
+// v0.18.0
   @override
   final int localUserId;
+// v0.18.0
   @override
   final String answer;
+// v0.18.0
   @override
   final int? adminId;
+// v0.18.0
   @override
   final String? denyReason;
+// v0.18.0
   @override
   final DateTime published;
 
@@ -201,7 +206,7 @@ class _$RegistrationApplicationImpl extends _RegistrationApplication {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RegistrationApplicationImpl &&
@@ -251,15 +256,15 @@ abstract class _RegistrationApplication extends RegistrationApplication {
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   int get localUserId;
-  @override
+  @override // v0.18.0
   String get answer;
-  @override
+  @override // v0.18.0
   int? get adminId;
-  @override
+  @override // v0.18.0
   String? get denyReason;
-  @override
+  @override // v0.18.0
   DateTime get published;
   @override
   @JsonKey(ignore: true)

@@ -11,6 +11,9 @@ _$GetPersonDetailsResponseImpl _$$GetPersonDetailsResponseImplFromJson(
     _$GetPersonDetailsResponseImpl(
       personView:
           PersonView.fromJson(json['person_view'] as Map<String, dynamic>),
+      site: json['site'] == null
+          ? null
+          : Site.fromJson(json['site'] as Map<String, dynamic>),
       comments: (json['comments'] as List<dynamic>)
           .map((e) => CommentView.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -27,6 +30,7 @@ Map<String, dynamic> _$$GetPersonDetailsResponseImplToJson(
         _$GetPersonDetailsResponseImpl instance) =>
     <String, dynamic>{
       'person_view': instance.personView.toJson(),
+      'site': instance.site?.toJson(),
       'comments': instance.comments.map((e) => e.toJson()).toList(),
       'posts': instance.posts.map((e) => e.toJson()).toList(),
       'moderates': instance.moderates.map((e) => e.toJson()).toList(),

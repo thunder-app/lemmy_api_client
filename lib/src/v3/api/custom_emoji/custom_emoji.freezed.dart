@@ -12,7 +12,7 @@ part of 'custom_emoji.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CreateCustomEmoji _$CreateCustomEmojiFromJson(Map<String, dynamic> json) {
   return _CreateCustomEmoji.fromJson(json);
@@ -20,11 +20,11 @@ CreateCustomEmoji _$CreateCustomEmojiFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CreateCustomEmoji {
-  String get category => throw _privateConstructorUsedError;
-  String get shortcode => throw _privateConstructorUsedError;
-  String get imageUrl => throw _privateConstructorUsedError;
-  String get altText => throw _privateConstructorUsedError;
-  List<String> get keywords => throw _privateConstructorUsedError;
+  String get category => throw _privateConstructorUsedError; // v0.18.0
+  String get shortcode => throw _privateConstructorUsedError; // v0.18.0
+  String get imageUrl => throw _privateConstructorUsedError; // v0.18.0
+  String get altText => throw _privateConstructorUsedError; // v0.18.0
+  List<String> get keywords => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -180,13 +180,18 @@ class _$CreateCustomEmojiImpl extends _CreateCustomEmoji {
 
   @override
   final String category;
+// v0.18.0
   @override
   final String shortcode;
+// v0.18.0
   @override
   final String imageUrl;
+// v0.18.0
   @override
   final String altText;
+// v0.18.0
   final List<String> _keywords;
+// v0.18.0
   @override
   List<String> get keywords {
     if (_keywords is EqualUnmodifiableListView) return _keywords;
@@ -194,6 +199,7 @@ class _$CreateCustomEmojiImpl extends _CreateCustomEmoji {
     return EqualUnmodifiableListView(_keywords);
   }
 
+// v0.18.0
   @override
   final String? auth;
 
@@ -203,7 +209,7 @@ class _$CreateCustomEmojiImpl extends _CreateCustomEmoji {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CreateCustomEmojiImpl &&
@@ -253,15 +259,15 @@ abstract class _CreateCustomEmoji extends CreateCustomEmoji {
 
   @override
   String get category;
-  @override
+  @override // v0.18.0
   String get shortcode;
-  @override
+  @override // v0.18.0
   String get imageUrl;
-  @override
+  @override // v0.18.0
   String get altText;
-  @override
+  @override // v0.18.0
   List<String> get keywords;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -275,11 +281,11 @@ EditCustomEmoji _$EditCustomEmojiFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$EditCustomEmoji {
-  int get id => throw _privateConstructorUsedError;
-  String get category => throw _privateConstructorUsedError;
-  String get imageUrl => throw _privateConstructorUsedError;
-  String get altText => throw _privateConstructorUsedError;
-  List<String> get keywords => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
+  String get category => throw _privateConstructorUsedError; // v0.18.0
+  String get imageUrl => throw _privateConstructorUsedError; // v0.18.0
+  String get altText => throw _privateConstructorUsedError; // v0.18.0
+  List<String> get keywords => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -435,13 +441,18 @@ class _$EditCustomEmojiImpl extends _EditCustomEmoji {
 
   @override
   final int id;
+// v0.18.0
   @override
   final String category;
+// v0.18.0
   @override
   final String imageUrl;
+// v0.18.0
   @override
   final String altText;
+// v0.18.0
   final List<String> _keywords;
+// v0.18.0
   @override
   List<String> get keywords {
     if (_keywords is EqualUnmodifiableListView) return _keywords;
@@ -449,6 +460,7 @@ class _$EditCustomEmojiImpl extends _EditCustomEmoji {
     return EqualUnmodifiableListView(_keywords);
   }
 
+// v0.18.0
   @override
   final String? auth;
 
@@ -458,7 +470,7 @@ class _$EditCustomEmojiImpl extends _EditCustomEmoji {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EditCustomEmojiImpl &&
@@ -507,15 +519,15 @@ abstract class _EditCustomEmoji extends EditCustomEmoji {
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   String get category;
-  @override
+  @override // v0.18.0
   String get imageUrl;
-  @override
+  @override // v0.18.0
   String get altText;
-  @override
+  @override // v0.18.0
   List<String> get keywords;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -529,7 +541,7 @@ DeleteCustomEmoji _$DeleteCustomEmojiFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$DeleteCustomEmoji {
-  int get id => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -625,6 +637,7 @@ class _$DeleteCustomEmojiImpl extends _DeleteCustomEmoji {
 
   @override
   final int id;
+// v0.18.0
   @override
   final String? auth;
 
@@ -634,7 +647,7 @@ class _$DeleteCustomEmojiImpl extends _DeleteCustomEmoji {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeleteCustomEmojiImpl &&
@@ -671,7 +684,7 @@ abstract class _DeleteCustomEmoji extends DeleteCustomEmoji {
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)

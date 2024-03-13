@@ -41,6 +41,9 @@ _$CreateCommunityImpl _$$CreateCommunityImplFromJson(
       discussionLanguages: (json['discussion_languages'] as List<dynamic>?)
           ?.map((e) => e as int)
           .toList(),
+      visibility: json['visibility'] == null
+          ? null
+          : CommunityVisibility.fromJson(json['visibility']),
       auth: json['auth'] as String?,
     );
 
@@ -63,6 +66,7 @@ Map<String, dynamic> _$$CreateCommunityImplToJson(
   writeNotNull('nsfw', instance.nsfw);
   writeNotNull('posting_restricted_to_mods', instance.postingRestrictedToMods);
   writeNotNull('discussion_languages', instance.discussionLanguages);
+  writeNotNull('visibility', instance.visibility?.toJson());
   writeNotNull('auth', instance.auth);
   return val;
 }
@@ -79,6 +83,9 @@ _$EditCommunityImpl _$$EditCommunityImplFromJson(Map<String, dynamic> json) =>
       discussionLanguages: (json['discussion_languages'] as List<dynamic>?)
           ?.map((e) => e as int)
           .toList(),
+      visibility: json['visibility'] == null
+          ? null
+          : CommunityVisibility.fromJson(json['visibility']),
       auth: json['auth'] as String?,
     );
 
@@ -100,6 +107,7 @@ Map<String, dynamic> _$$EditCommunityImplToJson(_$EditCommunityImpl instance) {
   writeNotNull('nsfw', instance.nsfw);
   writeNotNull('posting_restricted_to_mods', instance.postingRestrictedToMods);
   writeNotNull('discussion_languages', instance.discussionLanguages);
+  writeNotNull('visibility', instance.visibility?.toJson());
   writeNotNull('auth', instance.auth);
   return val;
 }
@@ -109,9 +117,9 @@ _$ListCommunitiesImpl _$$ListCommunitiesImplFromJson(
     _$ListCommunitiesImpl(
       type: json['type_'] == null ? null : ListingType.fromJson(json['type_']),
       sort: json['sort'] == null ? null : SortType.fromJson(json['sort']),
-      showNsfw: json['show_nsfw'] as bool?,
       page: json['page'] as int?,
       limit: json['limit'] as int?,
+      showNsfw: json['show_nsfw'] as bool?,
       auth: json['auth'] as String?,
     );
 
@@ -127,9 +135,9 @@ Map<String, dynamic> _$$ListCommunitiesImplToJson(
 
   writeNotNull('type_', instance.type?.toJson());
   writeNotNull('sort', instance.sort?.toJson());
-  writeNotNull('show_nsfw', instance.showNsfw);
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
+  writeNotNull('show_nsfw', instance.showNsfw);
   writeNotNull('auth', instance.auth);
   return val;
 }
@@ -210,14 +218,17 @@ Map<String, dynamic> _$$DeleteCommunityImplToJson(
 
 _$HideCommunityImpl _$$HideCommunityImplFromJson(Map<String, dynamic> json) =>
     _$HideCommunityImpl(
-      auth: json['auth'] as String?,
       communityId: json['community_id'] as int,
       hidden: json['hidden'] as bool,
       reason: json['reason'] as String?,
+      auth: json['auth'] as String?,
     );
 
 Map<String, dynamic> _$$HideCommunityImplToJson(_$HideCommunityImpl instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'community_id': instance.communityId,
+    'hidden': instance.hidden,
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -225,10 +236,8 @@ Map<String, dynamic> _$$HideCommunityImplToJson(_$HideCommunityImpl instance) {
     }
   }
 
-  writeNotNull('auth', instance.auth);
-  val['community_id'] = instance.communityId;
-  val['hidden'] = instance.hidden;
   writeNotNull('reason', instance.reason);
+  writeNotNull('auth', instance.auth);
   return val;
 }
 

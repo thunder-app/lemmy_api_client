@@ -12,7 +12,7 @@ part of 'comment_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CommentResponse _$CommentResponseFromJson(Map<String, dynamic> json) {
   return _CommentResponse.fromJson(json);
@@ -20,8 +20,8 @@ CommentResponse _$CommentResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CommentResponse {
-  CommentView get commentView => throw _privateConstructorUsedError;
-  List<int> get recipientIds => throw _privateConstructorUsedError;
+  CommentView get commentView => throw _privateConstructorUsedError; // v0.18.0
+  List<int> get recipientIds => throw _privateConstructorUsedError; // v0.18.0
   @deprecated
   String? get formId => throw _privateConstructorUsedError;
 
@@ -152,7 +152,9 @@ class _$CommentResponseImpl extends _CommentResponse {
 
   @override
   final CommentView commentView;
+// v0.18.0
   final List<int> _recipientIds;
+// v0.18.0
   @override
   List<int> get recipientIds {
     if (_recipientIds is EqualUnmodifiableListView) return _recipientIds;
@@ -160,6 +162,7 @@ class _$CommentResponseImpl extends _CommentResponse {
     return EqualUnmodifiableListView(_recipientIds);
   }
 
+// v0.18.0
   @override
   @deprecated
   final String? formId;
@@ -170,7 +173,7 @@ class _$CommentResponseImpl extends _CommentResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CommentResponseImpl &&
@@ -213,9 +216,9 @@ abstract class _CommentResponse extends CommentResponse {
 
   @override
   CommentView get commentView;
-  @override
+  @override // v0.18.0
   List<int> get recipientIds;
-  @override
+  @override // v0.18.0
   @deprecated
   String? get formId;
   @override

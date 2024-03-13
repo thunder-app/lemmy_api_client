@@ -10,9 +10,9 @@ part 'local_user_view.g.dart';
 class LocalUserView with _$LocalUserView {
   @modelSerde
   const factory LocalUserView({
-    required LocalUser localUser,
-    required Person person,
-    required PersonAggregates counts,
+    required LocalUser localUser, // v0.18.0
+    required Person person, // v0.18.0
+    required PersonAggregates counts, // v0.18.0
   }) = _LocalUserView;
 
   const LocalUserView._();

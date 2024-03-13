@@ -10,10 +10,10 @@ part 'resolve_object_response.g.dart';
 class ResolveObjectResponse with _$ResolveObjectResponse {
   @modelSerde
   const factory ResolveObjectResponse({
-    CommentView? comment,
-    PostView? post,
-    CommunityView? community,
-    PersonView? person,
+    CommentView? comment, // v0.18.0
+    PostView? post, // v0.18.0
+    CommunityView? community, // v0.18.0
+    PersonView? person, // v0.18.0
   }) = _ResolveObjectResponse;
 
   const ResolveObjectResponse._();

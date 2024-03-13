@@ -10,11 +10,11 @@ part 'person_mention.g.dart';
 class PersonMention with _$PersonMention {
   @modelSerde
   const factory PersonMention({
-    required int id,
-    required int recipientId,
-    required int commentId,
-    required bool read,
-    required DateTime published,
+    required int id, // v0.18.0
+    required int recipientId, // v0.18.0
+    required int commentId, // v0.18.0
+    required bool read, // v0.18.0
+    required DateTime published, // v0.18.0
   }) = _PersonMention;
 
   const PersonMention._();

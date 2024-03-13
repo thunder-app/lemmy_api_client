@@ -12,7 +12,7 @@ part of 'login_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 LoginResponse _$LoginResponseFromJson(Map<String, dynamic> json) {
   return _LoginResponse.fromJson(json);
@@ -20,8 +20,8 @@ LoginResponse _$LoginResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$LoginResponse {
-  String? get jwt => throw _privateConstructorUsedError;
-  bool get registrationCreated => throw _privateConstructorUsedError;
+  String? get jwt => throw _privateConstructorUsedError; // v0.18.0
+  bool get registrationCreated => throw _privateConstructorUsedError; // v0.18.0
   bool get verifyEmailSent => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -131,8 +131,10 @@ class _$LoginResponseImpl extends _LoginResponse {
 
   @override
   final String? jwt;
+// v0.18.0
   @override
   final bool registrationCreated;
+// v0.18.0
   @override
   final bool verifyEmailSent;
 
@@ -142,7 +144,7 @@ class _$LoginResponseImpl extends _LoginResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LoginResponseImpl &&
@@ -184,9 +186,9 @@ abstract class _LoginResponse extends LoginResponse {
 
   @override
   String? get jwt;
-  @override
+  @override // v0.18.0
   bool get registrationCreated;
-  @override
+  @override // v0.18.0
   bool get verifyEmailSent;
   @override
   @JsonKey(ignore: true)

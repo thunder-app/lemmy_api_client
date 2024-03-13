@@ -10,7 +10,7 @@ part 'get_captcha_response.g.dart';
 class GetCaptchaResponse with _$GetCaptchaResponse {
   @modelSerde
   const factory GetCaptchaResponse({
-    CaptchaResponse? ok,
+    CaptchaResponse? ok, // v0.18.0
   }) = _GetCaptchaResponse;
 
   const GetCaptchaResponse._();

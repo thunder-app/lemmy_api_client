@@ -10,10 +10,10 @@ part 'mod_lock_post_view.g.dart';
 class ModLockPostView with _$ModLockPostView {
   @modelSerde
   const factory ModLockPostView({
-    required ModLockPost modLockPost,
-    Person? moderator,
-    required Post post,
-    required Community community,
+    required ModLockPost modLockPost, // v0.18.0
+    Person? moderator, // v0.18.0
+    required Post post, // v0.18.0
+    required Community community, // v0.18.0
   }) = _ModLockPostView;
 
   const ModLockPostView._();

@@ -9,7 +9,7 @@ part 'delete_account_response.g.dart';
 class DeleteAccountResponse with _$DeleteAccountResponse {
   @modelSerde
   const factory DeleteAccountResponse({
-    bool? success, // Only available in lemmy v0.19.0 and above
+    bool? success, // v0.19.0 (required)
   }) = _DeleteAccountResponse;
 
   const DeleteAccountResponse._();

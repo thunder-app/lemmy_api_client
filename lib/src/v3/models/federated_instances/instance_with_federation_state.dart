@@ -11,14 +11,13 @@ part 'instance_with_federation_state.g.dart';
 class InstanceWithFederationState with _$InstanceWithFederationState {
   @modelSerde
   const factory InstanceWithFederationState({
-    required int id,
-    required String domain,
-    required DateTime published,
-    DateTime? updated,
-    String? software,
-    String? version,
-    ReadableFederationState?
-        federationState, // Only available in lemmy v0.19.0 and above
+    required int id, // v0.19.0 (required)
+    required String domain, // v0.19.0 (required)
+    required DateTime published, // v0.19.0 (required)
+    DateTime? updated, // v0.19.0 (optional)
+    String? software, // v0.19.0 (optional)
+    String? version, // v0.19.0 (optional)
+    ReadableFederationState? federationState, // v0.19.0 (optional)
   }) = _InstanceWithFederationState;
 
   const InstanceWithFederationState._();

@@ -12,7 +12,7 @@ part of 'readable_federation_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ReadableFederationState _$ReadableFederationStateFromJson(
     Map<String, dynamic> json) {
@@ -21,12 +21,15 @@ ReadableFederationState _$ReadableFederationStateFromJson(
 
 /// @nodoc
 mixin _$ReadableFederationState {
-  int get instanceId => throw _privateConstructorUsedError;
-  int? get lastSuccessfulId => throw _privateConstructorUsedError;
+  int get instanceId =>
+      throw _privateConstructorUsedError; // v0.19.0 (required)
+  int? get lastSuccessfulId =>
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
   DateTime? get lastSuccessfulPublishedTime =>
-      throw _privateConstructorUsedError;
-  int get failCount => throw _privateConstructorUsedError;
-  DateTime? get lastRetry => throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
+  int get failCount => throw _privateConstructorUsedError; // v0.19.0 (required)
+  DateTime? get lastRetry =>
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
   DateTime? get nextRetry => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -185,14 +188,19 @@ class _$ReadableFederationStateImpl extends _ReadableFederationState {
 
   @override
   final int instanceId;
+// v0.19.0 (required)
   @override
   final int? lastSuccessfulId;
+// v0.19.0 (optional)
   @override
   final DateTime? lastSuccessfulPublishedTime;
+// v0.19.0 (optional)
   @override
   final int failCount;
+// v0.19.0 (required)
   @override
   final DateTime? lastRetry;
+// v0.19.0 (optional)
   @override
   final DateTime? nextRetry;
 
@@ -202,7 +210,7 @@ class _$ReadableFederationStateImpl extends _ReadableFederationState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ReadableFederationStateImpl &&
@@ -257,15 +265,15 @@ abstract class _ReadableFederationState extends ReadableFederationState {
 
   @override
   int get instanceId;
-  @override
+  @override // v0.19.0 (required)
   int? get lastSuccessfulId;
-  @override
+  @override // v0.19.0 (optional)
   DateTime? get lastSuccessfulPublishedTime;
-  @override
+  @override // v0.19.0 (optional)
   int get failCount;
-  @override
+  @override // v0.19.0 (required)
   DateTime? get lastRetry;
-  @override
+  @override // v0.19.0 (optional)
   DateTime? get nextRetry;
   @override
   @JsonKey(ignore: true)

@@ -12,7 +12,7 @@ part of 'mod_lock_post.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ModLockPost _$ModLockPostFromJson(Map<String, dynamic> json) {
   return _ModLockPost.fromJson(json);
@@ -20,10 +20,10 @@ ModLockPost _$ModLockPostFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ModLockPost {
-  int get id => throw _privateConstructorUsedError;
-  int get modPersonId => throw _privateConstructorUsedError;
-  int get postId => throw _privateConstructorUsedError;
-  bool get locked => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
+  int get modPersonId => throw _privateConstructorUsedError; // v0.18.0
+  int get postId => throw _privateConstructorUsedError; // v0.18.0
+  bool get locked => throw _privateConstructorUsedError; // v0.18.0
   @JsonKey(name: 'when_')
   String get when => throw _privateConstructorUsedError;
 
@@ -166,12 +166,16 @@ class _$ModLockPostImpl extends _ModLockPost {
 
   @override
   final int id;
+// v0.18.0
   @override
   final int modPersonId;
+// v0.18.0
   @override
   final int postId;
+// v0.18.0
   @override
   final bool locked;
+// v0.18.0
   @override
   @JsonKey(name: 'when_')
   final String when;
@@ -182,7 +186,7 @@ class _$ModLockPostImpl extends _ModLockPost {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ModLockPostImpl &&
@@ -227,13 +231,13 @@ abstract class _ModLockPost extends ModLockPost {
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   int get modPersonId;
-  @override
+  @override // v0.18.0
   int get postId;
-  @override
+  @override // v0.18.0
   bool get locked;
-  @override
+  @override // v0.18.0
   @JsonKey(name: 'when_')
   String get when;
   @override

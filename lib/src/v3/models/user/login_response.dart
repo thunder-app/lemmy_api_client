@@ -9,9 +9,9 @@ part 'login_response.g.dart';
 class LoginResponse with _$LoginResponse {
   @modelSerde
   const factory LoginResponse({
-    String? jwt,
-    required bool registrationCreated,
-    required bool verifyEmailSent,
+    String? jwt, // v0.18.0
+    required bool registrationCreated, // v0.18.0
+    required bool verifyEmailSent, // v0.18.0
   }) = _LoginResponse;
 
   const LoginResponse._();

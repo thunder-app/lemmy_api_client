@@ -10,7 +10,7 @@ part 'post_report_response.g.dart';
 class PostReportResponse with _$PostReportResponse {
   @modelSerde
   const factory PostReportResponse({
-    required PostReportView postReportView,
+    required PostReportView postReportView, // v0.18.0
   }) = _PostReportResponse;
 
   const PostReportResponse._();

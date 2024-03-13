@@ -10,19 +10,19 @@ part 'comment.g.dart';
 class Comment with _$Comment {
   @modelSerde
   const factory Comment({
-    required int id,
-    required int creatorId,
-    required int postId,
-    required String content,
-    required bool removed,
-    required DateTime published,
-    DateTime? updated,
-    required bool deleted,
-    required String apId,
-    required bool local,
-    required String path,
-    required bool distinguished,
-    required int languageId,
+    required int id, // v0.18.0
+    required int creatorId, // v0.18.0
+    required int postId, // v0.18.0
+    required String content, // v0.18.0
+    required bool removed, // v0.18.0
+    required DateTime published, // v0.18.0
+    DateTime? updated, // v0.18.0
+    required bool deleted, // v0.18.0
+    required String apId, // v0.18.0
+    required bool local, // v0.18.0
+    required String path, // v0.18.0
+    required bool distinguished, // v0.18.0
+    required int languageId, // v0.18.0
   }) = _Comment;
 
   const Comment._();

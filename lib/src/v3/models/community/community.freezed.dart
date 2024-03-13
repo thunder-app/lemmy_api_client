@@ -12,7 +12,7 @@ part of 'community.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Community _$CommunityFromJson(Map<String, dynamic> json) {
   return _Community.fromJson(json);
@@ -20,26 +20,30 @@ Community _$CommunityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Community {
-  int get id => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  String get title => throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
-  bool get removed => throw _privateConstructorUsedError;
-  DateTime get published => throw _privateConstructorUsedError;
-  DateTime? get updated => throw _privateConstructorUsedError;
-  bool get deleted => throw _privateConstructorUsedError;
-  bool get nsfw => throw _privateConstructorUsedError;
-  String get actorId => throw _privateConstructorUsedError;
-  bool get local => throw _privateConstructorUsedError;
-  String? get icon => throw _privateConstructorUsedError;
-  String? get banner => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
+  String get name => throw _privateConstructorUsedError; // v0.18.0
+  String get title => throw _privateConstructorUsedError; // v0.18.0
+  String? get description => throw _privateConstructorUsedError; // v0.18.0
+  bool get removed => throw _privateConstructorUsedError; // v0.18.0
+  DateTime get published => throw _privateConstructorUsedError; // v0.18.0
+  DateTime? get updated => throw _privateConstructorUsedError; // v0.18.0
+  bool get deleted => throw _privateConstructorUsedError; // v0.18.0
+  bool get nsfw => throw _privateConstructorUsedError; // v0.18.0
+  String get actorId => throw _privateConstructorUsedError; // v0.18.0
+  bool get local => throw _privateConstructorUsedError; // v0.18.0
+  String? get icon => throw _privateConstructorUsedError; // v0.18.0
+  String? get banner => throw _privateConstructorUsedError; // v0.18.0
   @deprecated
-  String? get followersUrl => throw _privateConstructorUsedError;
+  String? get followersUrl =>
+      throw _privateConstructorUsedError; // v0.18.1 [deprecated in v0.19.0]
   @deprecated
-  String? get inboxUrl => throw _privateConstructorUsedError;
-  bool get hidden => throw _privateConstructorUsedError;
-  bool get postingRestrictedToMods => throw _privateConstructorUsedError;
-  int get instanceId => throw _privateConstructorUsedError;
+  String? get inboxUrl =>
+      throw _privateConstructorUsedError; // v0.18.1 [deprecated in v0.19.0]
+  bool get hidden => throw _privateConstructorUsedError; // v0.18.0
+  bool get postingRestrictedToMods =>
+      throw _privateConstructorUsedError; // v0.18.0
+  int get instanceId => throw _privateConstructorUsedError; // v0.18.0
+  CommunityVisibility? get visibility => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -70,7 +74,8 @@ abstract class $CommunityCopyWith<$Res> {
       @deprecated String? inboxUrl,
       bool hidden,
       bool postingRestrictedToMods,
-      int instanceId});
+      int instanceId,
+      CommunityVisibility? visibility});
 }
 
 /// @nodoc
@@ -104,6 +109,7 @@ class _$CommunityCopyWithImpl<$Res, $Val extends Community>
     Object? hidden = null,
     Object? postingRestrictedToMods = null,
     Object? instanceId = null,
+    Object? visibility = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -178,6 +184,10 @@ class _$CommunityCopyWithImpl<$Res, $Val extends Community>
           ? _value.instanceId
           : instanceId // ignore: cast_nullable_to_non_nullable
               as int,
+      visibility: freezed == visibility
+          ? _value.visibility
+          : visibility // ignore: cast_nullable_to_non_nullable
+              as CommunityVisibility?,
     ) as $Val);
   }
 }
@@ -208,7 +218,8 @@ abstract class _$$CommunityImplCopyWith<$Res>
       @deprecated String? inboxUrl,
       bool hidden,
       bool postingRestrictedToMods,
-      int instanceId});
+      int instanceId,
+      CommunityVisibility? visibility});
 }
 
 /// @nodoc
@@ -240,6 +251,7 @@ class __$$CommunityImplCopyWithImpl<$Res>
     Object? hidden = null,
     Object? postingRestrictedToMods = null,
     Object? instanceId = null,
+    Object? visibility = freezed,
   }) {
     return _then(_$CommunityImpl(
       id: null == id
@@ -314,6 +326,10 @@ class __$$CommunityImplCopyWithImpl<$Res>
           ? _value.instanceId
           : instanceId // ignore: cast_nullable_to_non_nullable
               as int,
+      visibility: freezed == visibility
+          ? _value.visibility
+          : visibility // ignore: cast_nullable_to_non_nullable
+              as CommunityVisibility?,
     ));
   }
 }
@@ -340,7 +356,8 @@ class _$CommunityImpl extends _Community {
       @deprecated this.inboxUrl,
       required this.hidden,
       required this.postingRestrictedToMods,
-      required this.instanceId})
+      required this.instanceId,
+      this.visibility})
       : super._();
 
   factory _$CommunityImpl.fromJson(Map<String, dynamic> json) =>
@@ -348,50 +365,70 @@ class _$CommunityImpl extends _Community {
 
   @override
   final int id;
+// v0.18.0
   @override
   final String name;
+// v0.18.0
   @override
   final String title;
+// v0.18.0
   @override
   final String? description;
+// v0.18.0
   @override
   final bool removed;
+// v0.18.0
   @override
   final DateTime published;
+// v0.18.0
   @override
   final DateTime? updated;
+// v0.18.0
   @override
   final bool deleted;
+// v0.18.0
   @override
   final bool nsfw;
+// v0.18.0
   @override
   final String actorId;
+// v0.18.0
   @override
   final bool local;
+// v0.18.0
   @override
   final String? icon;
+// v0.18.0
   @override
   final String? banner;
+// v0.18.0
   @override
   @deprecated
   final String? followersUrl;
+// v0.18.1 [deprecated in v0.19.0]
   @override
   @deprecated
   final String? inboxUrl;
+// v0.18.1 [deprecated in v0.19.0]
   @override
   final bool hidden;
+// v0.18.0
   @override
   final bool postingRestrictedToMods;
+// v0.18.0
   @override
   final int instanceId;
+// v0.18.0
+  @override
+  final CommunityVisibility? visibility;
 
   @override
   String toString() {
-    return 'Community(id: $id, name: $name, title: $title, description: $description, removed: $removed, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, actorId: $actorId, local: $local, icon: $icon, banner: $banner, followersUrl: $followersUrl, inboxUrl: $inboxUrl, hidden: $hidden, postingRestrictedToMods: $postingRestrictedToMods, instanceId: $instanceId)';
+    return 'Community(id: $id, name: $name, title: $title, description: $description, removed: $removed, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, actorId: $actorId, local: $local, icon: $icon, banner: $banner, followersUrl: $followersUrl, inboxUrl: $inboxUrl, hidden: $hidden, postingRestrictedToMods: $postingRestrictedToMods, instanceId: $instanceId, visibility: $visibility)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CommunityImpl &&
@@ -419,31 +456,35 @@ class _$CommunityImpl extends _Community {
                     other.postingRestrictedToMods, postingRestrictedToMods) ||
                 other.postingRestrictedToMods == postingRestrictedToMods) &&
             (identical(other.instanceId, instanceId) ||
-                other.instanceId == instanceId));
+                other.instanceId == instanceId) &&
+            (identical(other.visibility, visibility) ||
+                other.visibility == visibility));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      name,
-      title,
-      description,
-      removed,
-      published,
-      updated,
-      deleted,
-      nsfw,
-      actorId,
-      local,
-      icon,
-      banner,
-      followersUrl,
-      inboxUrl,
-      hidden,
-      postingRestrictedToMods,
-      instanceId);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        id,
+        name,
+        title,
+        description,
+        removed,
+        published,
+        updated,
+        deleted,
+        nsfw,
+        actorId,
+        local,
+        icon,
+        banner,
+        followersUrl,
+        inboxUrl,
+        hidden,
+        postingRestrictedToMods,
+        instanceId,
+        visibility
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -478,7 +519,8 @@ abstract class _Community extends Community {
       @deprecated final String? inboxUrl,
       required final bool hidden,
       required final bool postingRestrictedToMods,
-      required final int instanceId}) = _$CommunityImpl;
+      required final int instanceId,
+      final CommunityVisibility? visibility}) = _$CommunityImpl;
   const _Community._() : super._();
 
   factory _Community.fromJson(Map<String, dynamic> json) =
@@ -486,42 +528,44 @@ abstract class _Community extends Community {
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   String get name;
-  @override
+  @override // v0.18.0
   String get title;
-  @override
+  @override // v0.18.0
   String? get description;
-  @override
+  @override // v0.18.0
   bool get removed;
-  @override
+  @override // v0.18.0
   DateTime get published;
-  @override
+  @override // v0.18.0
   DateTime? get updated;
-  @override
+  @override // v0.18.0
   bool get deleted;
-  @override
+  @override // v0.18.0
   bool get nsfw;
-  @override
+  @override // v0.18.0
   String get actorId;
-  @override
+  @override // v0.18.0
   bool get local;
-  @override
+  @override // v0.18.0
   String? get icon;
-  @override
+  @override // v0.18.0
   String? get banner;
-  @override
+  @override // v0.18.0
   @deprecated
   String? get followersUrl;
-  @override
+  @override // v0.18.1 [deprecated in v0.19.0]
   @deprecated
   String? get inboxUrl;
-  @override
+  @override // v0.18.1 [deprecated in v0.19.0]
   bool get hidden;
-  @override
+  @override // v0.18.0
   bool get postingRestrictedToMods;
-  @override
+  @override // v0.18.0
   int get instanceId;
+  @override // v0.18.0
+  CommunityVisibility? get visibility;
   @override
   @JsonKey(ignore: true)
   _$$CommunityImplCopyWith<_$CommunityImpl> get copyWith =>

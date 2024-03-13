@@ -12,7 +12,7 @@ part of 'federated_instances.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 FederatedInstances _$FederatedInstancesFromJson(Map<String, dynamic> json) {
   return _FederatedInstances.fromJson(json);
@@ -21,9 +21,9 @@ FederatedInstances _$FederatedInstancesFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$FederatedInstances {
   List<InstanceWithFederationState> get linked =>
-      throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
   List<InstanceWithFederationState> get allowed =>
-      throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
   List<InstanceWithFederationState> get blocked =>
       throw _privateConstructorUsedError;
 
@@ -149,7 +149,9 @@ class _$FederatedInstancesImpl extends _FederatedInstances {
     return EqualUnmodifiableListView(_linked);
   }
 
+// v0.18.0
   final List<InstanceWithFederationState> _allowed;
+// v0.18.0
   @override
   List<InstanceWithFederationState> get allowed {
     if (_allowed is EqualUnmodifiableListView) return _allowed;
@@ -157,7 +159,9 @@ class _$FederatedInstancesImpl extends _FederatedInstances {
     return EqualUnmodifiableListView(_allowed);
   }
 
+// v0.18.0
   final List<InstanceWithFederationState> _blocked;
+// v0.18.0
   @override
   List<InstanceWithFederationState> get blocked {
     if (_blocked is EqualUnmodifiableListView) return _blocked;
@@ -171,7 +175,7 @@ class _$FederatedInstancesImpl extends _FederatedInstances {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FederatedInstancesImpl &&
@@ -216,9 +220,9 @@ abstract class _FederatedInstances extends FederatedInstances {
 
   @override
   List<InstanceWithFederationState> get linked;
-  @override
+  @override // v0.18.0
   List<InstanceWithFederationState> get allowed;
-  @override
+  @override // v0.18.0
   List<InstanceWithFederationState> get blocked;
   @override
   @JsonKey(ignore: true)

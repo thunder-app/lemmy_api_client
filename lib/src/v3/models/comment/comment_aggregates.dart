@@ -10,14 +10,14 @@ part 'comment_aggregates.g.dart';
 class CommentAggregates with _$CommentAggregates {
   @modelSerde
   const factory CommentAggregates({
-    @deprecated int? id,
-    required int commentId,
-    required int score,
-    required int upvotes,
-    required int downvotes,
-    required DateTime published,
-    required int childCount,
-    @deprecated int? hotRank,
+    @deprecated int? id, // v0.18.0 [deprecated in v0.19.0]
+    required int commentId, // v0.18.0
+    required int score, // v0.18.0
+    required int upvotes, // v0.18.0
+    required int downvotes, // v0.18.0
+    required DateTime published, // v0.18.0
+    required int childCount, // v0.18.0
+    @deprecated int? hotRank, // v0.18.0 [deprecated in v0.19.0]
   }) = _CommentAggregates;
 
   const CommentAggregates._();

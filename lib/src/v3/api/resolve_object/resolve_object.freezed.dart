@@ -12,7 +12,7 @@ part of 'resolve_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ResolveObject _$ResolveObjectFromJson(Map<String, dynamic> json) {
   return _ResolveObject.fromJson(json);
@@ -20,7 +20,7 @@ ResolveObject _$ResolveObjectFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ResolveObject {
-  String get q => throw _privateConstructorUsedError;
+  String get q => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -116,6 +116,7 @@ class _$ResolveObjectImpl extends _ResolveObject {
 
   @override
   final String q;
+// v0.18.0
   @override
   final String? auth;
 
@@ -125,7 +126,7 @@ class _$ResolveObjectImpl extends _ResolveObject {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ResolveObjectImpl &&
@@ -161,7 +162,7 @@ abstract class _ResolveObject extends ResolveObject {
 
   @override
   String get q;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)

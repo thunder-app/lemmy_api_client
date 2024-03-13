@@ -12,7 +12,7 @@ part of 'post_aggregates.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PostAggregates _$PostAggregatesFromJson(Map<String, dynamic> json) {
   return _PostAggregates.fromJson(json);
@@ -21,23 +21,28 @@ PostAggregates _$PostAggregatesFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$PostAggregates {
   @deprecated
-  int? get id => throw _privateConstructorUsedError;
-  int get postId => throw _privateConstructorUsedError;
-  int get comments => throw _privateConstructorUsedError;
-  int get score => throw _privateConstructorUsedError;
-  int get upvotes => throw _privateConstructorUsedError;
-  int get downvotes => throw _privateConstructorUsedError;
-  DateTime get published => throw _privateConstructorUsedError;
+  int? get id =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
+  int get postId => throw _privateConstructorUsedError; // v0.18.0
+  int get comments => throw _privateConstructorUsedError; // v0.18.0
+  int get score => throw _privateConstructorUsedError; // v0.18.0
+  int get upvotes => throw _privateConstructorUsedError; // v0.18.0
+  int get downvotes => throw _privateConstructorUsedError; // v0.18.0
+  DateTime get published => throw _privateConstructorUsedError; // v0.18.0
   @deprecated
-  String? get newestCommentTimeNecro => throw _privateConstructorUsedError;
+  String? get newestCommentTimeNecro =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
+  String? get newestCommentTime =>
+      throw _privateConstructorUsedError; // v0.18.0, deprecated in v0.19.0, reintroduced in v0.19.2 (required)
   @deprecated
-  String? get newestCommentTime => throw _privateConstructorUsedError;
+  bool? get featuredCommunity =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
   @deprecated
-  bool? get featuredCommunity => throw _privateConstructorUsedError;
+  bool? get featuredLocal =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
   @deprecated
-  bool? get featuredLocal => throw _privateConstructorUsedError;
-  @deprecated
-  int? get hotRank => throw _privateConstructorUsedError;
+  int? get hotRank =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
   @deprecated
   int? get hotRankActive => throw _privateConstructorUsedError;
 
@@ -62,7 +67,7 @@ abstract class $PostAggregatesCopyWith<$Res> {
       int downvotes,
       DateTime published,
       @deprecated String? newestCommentTimeNecro,
-      @deprecated String? newestCommentTime,
+      String? newestCommentTime,
       @deprecated bool? featuredCommunity,
       @deprecated bool? featuredLocal,
       @deprecated int? hotRank,
@@ -170,7 +175,7 @@ abstract class _$$PostAggregatesImplCopyWith<$Res>
       int downvotes,
       DateTime published,
       @deprecated String? newestCommentTimeNecro,
-      @deprecated String? newestCommentTime,
+      String? newestCommentTime,
       @deprecated bool? featuredCommunity,
       @deprecated bool? featuredLocal,
       @deprecated int? hotRank,
@@ -272,7 +277,7 @@ class _$PostAggregatesImpl extends _PostAggregates {
       required this.downvotes,
       required this.published,
       @deprecated this.newestCommentTimeNecro,
-      @deprecated this.newestCommentTime,
+      this.newestCommentTime,
       @deprecated this.featuredCommunity,
       @deprecated this.featuredLocal,
       @deprecated this.hotRank,
@@ -285,33 +290,44 @@ class _$PostAggregatesImpl extends _PostAggregates {
   @override
   @deprecated
   final int? id;
+// v0.18.0 [deprecated in v0.19.0]
   @override
   final int postId;
+// v0.18.0
   @override
   final int comments;
+// v0.18.0
   @override
   final int score;
+// v0.18.0
   @override
   final int upvotes;
+// v0.18.0
   @override
   final int downvotes;
+// v0.18.0
   @override
   final DateTime published;
+// v0.18.0
   @override
   @deprecated
   final String? newestCommentTimeNecro;
+// v0.18.0 [deprecated in v0.19.0]
   @override
-  @deprecated
   final String? newestCommentTime;
+// v0.18.0, deprecated in v0.19.0, reintroduced in v0.19.2 (required)
   @override
   @deprecated
   final bool? featuredCommunity;
+// v0.18.0 [deprecated in v0.19.0]
   @override
   @deprecated
   final bool? featuredLocal;
+// v0.18.0 [deprecated in v0.19.0]
   @override
   @deprecated
   final int? hotRank;
+// v0.18.0 [deprecated in v0.19.0]
   @override
   @deprecated
   final int? hotRankActive;
@@ -322,7 +338,7 @@ class _$PostAggregatesImpl extends _PostAggregates {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PostAggregatesImpl &&
@@ -392,7 +408,7 @@ abstract class _PostAggregates extends PostAggregates {
       required final int downvotes,
       required final DateTime published,
       @deprecated final String? newestCommentTimeNecro,
-      @deprecated final String? newestCommentTime,
+      final String? newestCommentTime,
       @deprecated final bool? featuredCommunity,
       @deprecated final bool? featuredLocal,
       @deprecated final int? hotRank,
@@ -405,34 +421,33 @@ abstract class _PostAggregates extends PostAggregates {
   @override
   @deprecated
   int? get id;
-  @override
+  @override // v0.18.0 [deprecated in v0.19.0]
   int get postId;
-  @override
+  @override // v0.18.0
   int get comments;
-  @override
+  @override // v0.18.0
   int get score;
-  @override
+  @override // v0.18.0
   int get upvotes;
-  @override
+  @override // v0.18.0
   int get downvotes;
-  @override
+  @override // v0.18.0
   DateTime get published;
-  @override
+  @override // v0.18.0
   @deprecated
   String? get newestCommentTimeNecro;
-  @override
-  @deprecated
+  @override // v0.18.0 [deprecated in v0.19.0]
   String? get newestCommentTime;
-  @override
+  @override // v0.18.0, deprecated in v0.19.0, reintroduced in v0.19.2 (required)
   @deprecated
   bool? get featuredCommunity;
-  @override
+  @override // v0.18.0 [deprecated in v0.19.0]
   @deprecated
   bool? get featuredLocal;
-  @override
+  @override // v0.18.0 [deprecated in v0.19.0]
   @deprecated
   int? get hotRank;
-  @override
+  @override // v0.18.0 [deprecated in v0.19.0]
   @deprecated
   int? get hotRankActive;
   @override
