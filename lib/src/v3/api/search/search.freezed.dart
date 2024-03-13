@@ -12,7 +12,7 @@ part of 'search.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Search _$SearchFromJson(Map<String, dynamic> json) {
   return _Search.fromJson(json);
@@ -20,16 +20,16 @@ Search _$SearchFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Search {
-  String get q => throw _privateConstructorUsedError;
-  int? get communityId => throw _privateConstructorUsedError;
-  String? get communityName => throw _privateConstructorUsedError;
-  int? get creatorId => throw _privateConstructorUsedError;
+  String get q => throw _privateConstructorUsedError; // v0.18.0
+  int? get communityId => throw _privateConstructorUsedError; // v0.18.0
+  String? get communityName => throw _privateConstructorUsedError; // v0.18.0
+  int? get creatorId => throw _privateConstructorUsedError; // v0.18.0
   @JsonKey(name: 'type_')
-  SearchType? get type => throw _privateConstructorUsedError;
-  SortType? get sort => throw _privateConstructorUsedError;
-  ListingType? get listingType => throw _privateConstructorUsedError;
-  int? get page => throw _privateConstructorUsedError;
-  int? get limit => throw _privateConstructorUsedError;
+  SearchType? get type => throw _privateConstructorUsedError; // v0.18.0
+  SortType? get sort => throw _privateConstructorUsedError; // v0.18.0
+  ListingType? get listingType => throw _privateConstructorUsedError; // v0.18.0
+  int? get page => throw _privateConstructorUsedError; // v0.18.0
+  int? get limit => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -233,23 +233,32 @@ class _$SearchImpl extends _Search {
 
   @override
   final String q;
+// v0.18.0
   @override
   final int? communityId;
+// v0.18.0
   @override
   final String? communityName;
+// v0.18.0
   @override
   final int? creatorId;
+// v0.18.0
   @override
   @JsonKey(name: 'type_')
   final SearchType? type;
+// v0.18.0
   @override
   final SortType? sort;
+// v0.18.0
   @override
   final ListingType? listingType;
+// v0.18.0
   @override
   final int? page;
+// v0.18.0
   @override
   final int? limit;
+// v0.18.0
   @override
   final String? auth;
 
@@ -259,7 +268,7 @@ class _$SearchImpl extends _Search {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SearchImpl &&
@@ -316,24 +325,24 @@ abstract class _Search extends Search {
 
   @override
   String get q;
-  @override
+  @override // v0.18.0
   int? get communityId;
-  @override
+  @override // v0.18.0
   String? get communityName;
-  @override
+  @override // v0.18.0
   int? get creatorId;
-  @override
+  @override // v0.18.0
   @JsonKey(name: 'type_')
   SearchType? get type;
-  @override
+  @override // v0.18.0
   SortType? get sort;
-  @override
+  @override // v0.18.0
   ListingType? get listingType;
-  @override
+  @override // v0.18.0
   int? get page;
-  @override
+  @override // v0.18.0
   int? get limit;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)

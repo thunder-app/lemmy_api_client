@@ -10,11 +10,11 @@ part 'comment_reply.g.dart';
 class CommentReply with _$CommentReply {
   @modelSerde
   const factory CommentReply({
-    required int id,
-    required int recipientId,
-    required int commentId,
-    required bool read,
-    required DateTime published,
+    required int id, // v0.18.0
+    required int recipientId, // v0.18.0
+    required int commentId, // v0.18.0
+    required bool read, // v0.18.0
+    required DateTime published, // v0.18.0
   }) = _CommentReply;
 
   const CommentReply._();

@@ -12,7 +12,7 @@ part of 'get_post_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetPostResponse _$GetPostResponseFromJson(Map<String, dynamic> json) {
   return _GetPostResponse.fromJson(json);
@@ -20,10 +20,11 @@ GetPostResponse _$GetPostResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetPostResponse {
-  PostView get postView => throw _privateConstructorUsedError;
-  CommunityView get communityView => throw _privateConstructorUsedError;
+  PostView get postView => throw _privateConstructorUsedError; // v0.18.0
+  CommunityView get communityView =>
+      throw _privateConstructorUsedError; // v0.18.0
   List<CommunityModeratorView> get moderators =>
-      throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
   List<PostView> get crossPosts => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -178,9 +179,12 @@ class _$GetPostResponseImpl extends _GetPostResponse {
 
   @override
   final PostView postView;
+// v0.18.0
   @override
   final CommunityView communityView;
+// v0.18.0
   final List<CommunityModeratorView> _moderators;
+// v0.18.0
   @override
   List<CommunityModeratorView> get moderators {
     if (_moderators is EqualUnmodifiableListView) return _moderators;
@@ -188,7 +192,9 @@ class _$GetPostResponseImpl extends _GetPostResponse {
     return EqualUnmodifiableListView(_moderators);
   }
 
+// v0.18.0
   final List<PostView> _crossPosts;
+// v0.18.0
   @override
   List<PostView> get crossPosts {
     if (_crossPosts is EqualUnmodifiableListView) return _crossPosts;
@@ -202,7 +208,7 @@ class _$GetPostResponseImpl extends _GetPostResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetPostResponseImpl &&
@@ -253,11 +259,11 @@ abstract class _GetPostResponse extends GetPostResponse {
 
   @override
   PostView get postView;
-  @override
+  @override // v0.18.0
   CommunityView get communityView;
-  @override
+  @override // v0.18.0
   List<CommunityModeratorView> get moderators;
-  @override
+  @override // v0.18.0
   List<PostView> get crossPosts;
   @override
   @JsonKey(ignore: true)

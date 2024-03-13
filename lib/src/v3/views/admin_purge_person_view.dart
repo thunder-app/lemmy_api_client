@@ -10,8 +10,8 @@ part 'admin_purge_person_view.g.dart';
 class AdminPurgePersonView with _$AdminPurgePersonView {
   @modelSerde
   const factory AdminPurgePersonView({
-    required AdminPurgePerson adminPurgePerson,
-    required Person? admin,
+    required AdminPurgePerson adminPurgePerson, // v0.18.0
+    Person? admin, // v0.18.0
   }) = _AdminPurgePersonView;
 
   const AdminPurgePersonView._();

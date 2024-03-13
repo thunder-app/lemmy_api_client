@@ -9,7 +9,7 @@ part 'update_totp_response.g.dart';
 class UpdateTotpResponse with _$UpdateTotpResponse {
   @modelSerde
   const factory UpdateTotpResponse({
-    required bool enabled,
+    required bool enabled, // v0.19.0 (required)
   }) = _UpdateTotpResponse;
 
   const UpdateTotpResponse._();

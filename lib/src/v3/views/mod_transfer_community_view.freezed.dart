@@ -12,7 +12,7 @@ part of 'mod_transfer_community_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ModTransferCommunityView _$ModTransferCommunityViewFromJson(
     Map<String, dynamic> json) {
@@ -22,9 +22,9 @@ ModTransferCommunityView _$ModTransferCommunityViewFromJson(
 /// @nodoc
 mixin _$ModTransferCommunityView {
   ModTransferCommunity get modTransferCommunity =>
-      throw _privateConstructorUsedError;
-  Person? get moderator => throw _privateConstructorUsedError;
-  Community get community => throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
+  Person? get moderator => throw _privateConstructorUsedError; // v0.18.0
+  Community get community => throw _privateConstructorUsedError; // v0.18.0
   Person get moddedPerson => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -208,10 +208,13 @@ class _$ModTransferCommunityViewImpl extends _ModTransferCommunityView {
 
   @override
   final ModTransferCommunity modTransferCommunity;
+// v0.18.0
   @override
   final Person? moderator;
+// v0.18.0
   @override
   final Community community;
+// v0.18.0
   @override
   final Person moddedPerson;
 
@@ -221,7 +224,7 @@ class _$ModTransferCommunityViewImpl extends _ModTransferCommunityView {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ModTransferCommunityViewImpl &&
@@ -268,11 +271,11 @@ abstract class _ModTransferCommunityView extends ModTransferCommunityView {
 
   @override
   ModTransferCommunity get modTransferCommunity;
-  @override
+  @override // v0.18.0
   Person? get moderator;
-  @override
+  @override // v0.18.0
   Community get community;
-  @override
+  @override // v0.18.0
   Person get moddedPerson;
   @override
   @JsonKey(ignore: true)

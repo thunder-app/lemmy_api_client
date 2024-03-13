@@ -10,16 +10,16 @@ part 'comment_report_view.g.dart';
 class CommentReportView with _$CommentReportView {
   @modelSerde
   const factory CommentReportView({
-    required CommentReport commentReport,
-    required Comment comment,
-    required Post post,
-    required Community community,
-    required Person creator,
-    required Person commentCreator,
-    required CommentAggregates counts,
-    required bool creatorBannedFromCommunity,
-    num? myVote,
-    Person? resolver,
+    required CommentReport commentReport, // v0.18.0
+    required Comment comment, // v0.18.0
+    required Post post, // v0.18.0
+    required Community community, // v0.18.0
+    required Person creator, // v0.18.0
+    required Person commentCreator, // v0.18.0
+    required CommentAggregates counts, // v0.18.0
+    required bool creatorBannedFromCommunity, // v0.18.0
+    num? myVote, // v0.18.0
+    Person? resolver, // v0.18.0
   }) = _CommentReportView;
 
   const CommentReportView._();

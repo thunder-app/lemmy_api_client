@@ -12,7 +12,7 @@ part of 'my_user_info.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MyUserInfo _$MyUserInfoFromJson(Map<String, dynamic> json) {
   return _MyUserInfo.fromJson(json);
@@ -20,15 +20,18 @@ MyUserInfo _$MyUserInfoFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MyUserInfo {
-  LocalUserView get localUserView => throw _privateConstructorUsedError;
-  List<CommunityFollowerView> get follows => throw _privateConstructorUsedError;
+  LocalUserView get localUserView =>
+      throw _privateConstructorUsedError; // v0.18.0
+  List<CommunityFollowerView> get follows =>
+      throw _privateConstructorUsedError; // v0.18.0
   List<CommunityModeratorView> get moderates =>
-      throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
   List<CommunityBlockView> get communityBlocks =>
-      throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
   List<InstanceBlockView>? get instanceBlocks =>
-      throw _privateConstructorUsedError; // Only available in lemmy v0.19.0 and above
-  List<PersonBlockView> get personBlocks => throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.19.0 (required)
+  List<PersonBlockView> get personBlocks =>
+      throw _privateConstructorUsedError; // v0.18.0
   List<int> get discussionLanguages => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -215,7 +218,9 @@ class _$MyUserInfoImpl extends _MyUserInfo {
 
   @override
   final LocalUserView localUserView;
+// v0.18.0
   final List<CommunityFollowerView> _follows;
+// v0.18.0
   @override
   List<CommunityFollowerView> get follows {
     if (_follows is EqualUnmodifiableListView) return _follows;
@@ -223,7 +228,9 @@ class _$MyUserInfoImpl extends _MyUserInfo {
     return EqualUnmodifiableListView(_follows);
   }
 
+// v0.18.0
   final List<CommunityModeratorView> _moderates;
+// v0.18.0
   @override
   List<CommunityModeratorView> get moderates {
     if (_moderates is EqualUnmodifiableListView) return _moderates;
@@ -231,7 +238,9 @@ class _$MyUserInfoImpl extends _MyUserInfo {
     return EqualUnmodifiableListView(_moderates);
   }
 
+// v0.18.0
   final List<CommunityBlockView> _communityBlocks;
+// v0.18.0
   @override
   List<CommunityBlockView> get communityBlocks {
     if (_communityBlocks is EqualUnmodifiableListView) return _communityBlocks;
@@ -239,7 +248,9 @@ class _$MyUserInfoImpl extends _MyUserInfo {
     return EqualUnmodifiableListView(_communityBlocks);
   }
 
+// v0.18.0
   final List<InstanceBlockView>? _instanceBlocks;
+// v0.18.0
   @override
   List<InstanceBlockView>? get instanceBlocks {
     final value = _instanceBlocks;
@@ -249,9 +260,9 @@ class _$MyUserInfoImpl extends _MyUserInfo {
     return EqualUnmodifiableListView(value);
   }
 
-// Only available in lemmy v0.19.0 and above
+// v0.19.0 (required)
   final List<PersonBlockView> _personBlocks;
-// Only available in lemmy v0.19.0 and above
+// v0.19.0 (required)
   @override
   List<PersonBlockView> get personBlocks {
     if (_personBlocks is EqualUnmodifiableListView) return _personBlocks;
@@ -259,7 +270,9 @@ class _$MyUserInfoImpl extends _MyUserInfo {
     return EqualUnmodifiableListView(_personBlocks);
   }
 
+// v0.18.0
   final List<int> _discussionLanguages;
+// v0.18.0
   @override
   List<int> get discussionLanguages {
     if (_discussionLanguages is EqualUnmodifiableListView)
@@ -274,7 +287,7 @@ class _$MyUserInfoImpl extends _MyUserInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MyUserInfoImpl &&
@@ -335,17 +348,17 @@ abstract class _MyUserInfo extends MyUserInfo {
 
   @override
   LocalUserView get localUserView;
-  @override
+  @override // v0.18.0
   List<CommunityFollowerView> get follows;
-  @override
+  @override // v0.18.0
   List<CommunityModeratorView> get moderates;
-  @override
+  @override // v0.18.0
   List<CommunityBlockView> get communityBlocks;
-  @override
+  @override // v0.18.0
   List<InstanceBlockView>? get instanceBlocks;
-  @override // Only available in lemmy v0.19.0 and above
+  @override // v0.19.0 (required)
   List<PersonBlockView> get personBlocks;
-  @override
+  @override // v0.18.0
   List<int> get discussionLanguages;
   @override
   @JsonKey(ignore: true)

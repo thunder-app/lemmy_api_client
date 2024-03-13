@@ -10,10 +10,10 @@ part 'mod_add_community_view.g.dart';
 class ModAddCommunityView with _$ModAddCommunityView {
   @modelSerde
   const factory ModAddCommunityView({
-    required ModAddCommunity modAddCommunity,
-    Person? moderator,
-    required Community community,
-    required Person moddedPerson,
+    required ModAddCommunity modAddCommunity, // v0.18.0
+    Person? moderator, // v0.18.0
+    required Community community, // v0.18.0
+    required Person moddedPerson, // v0.18.0
   }) = _ModAddCommunityView;
 
   const ModAddCommunityView._();

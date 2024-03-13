@@ -10,7 +10,7 @@ part 'get_replies_response.g.dart';
 class GetRepliesResponse with _$GetRepliesResponse {
   @modelSerde
   const factory GetRepliesResponse({
-    required List<CommentReplyView> replies,
+    required List<CommentReplyView> replies, // v0.18.0
   }) = _GetRepliesResponse;
 
   const GetRepliesResponse._();

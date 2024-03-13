@@ -10,7 +10,7 @@ part 'add_admin_response.g.dart';
 class AddAdminResponse with _$AddAdminResponse {
   @modelSerde
   const factory AddAdminResponse({
-    required List<PersonView> admins,
+    required List<PersonView> admins, // v0.18.0
   }) = _AddAdminResponse;
 
   const AddAdminResponse._();

@@ -12,7 +12,7 @@ part of 'private_message_report.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PrivateMessageReport _$PrivateMessageReportFromJson(Map<String, dynamic> json) {
   return _PrivateMessageReport.fromJson(json);
@@ -20,14 +20,14 @@ PrivateMessageReport _$PrivateMessageReportFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PrivateMessageReport {
-  int get id => throw _privateConstructorUsedError;
-  int get creatorId => throw _privateConstructorUsedError;
-  int get privateMessageId => throw _privateConstructorUsedError;
-  String get originalPmText => throw _privateConstructorUsedError;
-  String get reason => throw _privateConstructorUsedError;
-  bool get resolved => throw _privateConstructorUsedError;
-  int? get resolverId => throw _privateConstructorUsedError;
-  DateTime get published => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
+  int get creatorId => throw _privateConstructorUsedError; // v0.18.0
+  int get privateMessageId => throw _privateConstructorUsedError; // v0.18.0
+  String get originalPmText => throw _privateConstructorUsedError; // v0.18.0
+  String get reason => throw _privateConstructorUsedError; // v0.18.0
+  bool get resolved => throw _privateConstructorUsedError; // v0.18.0
+  int? get resolverId => throw _privateConstructorUsedError; // v0.18.0
+  DateTime get published => throw _privateConstructorUsedError; // v0.18.0
   DateTime? get updated => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -222,20 +222,28 @@ class _$PrivateMessageReportImpl extends _PrivateMessageReport {
 
   @override
   final int id;
+// v0.18.0
   @override
   final int creatorId;
+// v0.18.0
   @override
   final int privateMessageId;
+// v0.18.0
   @override
   final String originalPmText;
+// v0.18.0
   @override
   final String reason;
+// v0.18.0
   @override
   final bool resolved;
+// v0.18.0
   @override
   final int? resolverId;
+// v0.18.0
   @override
   final DateTime published;
+// v0.18.0
   @override
   final DateTime? updated;
 
@@ -245,7 +253,7 @@ class _$PrivateMessageReportImpl extends _PrivateMessageReport {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PrivateMessageReportImpl &&
@@ -305,21 +313,21 @@ abstract class _PrivateMessageReport extends PrivateMessageReport {
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   int get creatorId;
-  @override
+  @override // v0.18.0
   int get privateMessageId;
-  @override
+  @override // v0.18.0
   String get originalPmText;
-  @override
+  @override // v0.18.0
   String get reason;
-  @override
+  @override // v0.18.0
   bool get resolved;
-  @override
+  @override // v0.18.0
   int? get resolverId;
-  @override
+  @override // v0.18.0
   DateTime get published;
-  @override
+  @override // v0.18.0
   DateTime? get updated;
   @override
   @JsonKey(ignore: true)

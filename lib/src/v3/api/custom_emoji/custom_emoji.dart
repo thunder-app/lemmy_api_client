@@ -16,11 +16,11 @@ class CreateCustomEmoji
     implements LemmyApiQuery<CustomEmojiResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory CreateCustomEmoji({
-    required String category,
-    required String shortcode,
-    required String imageUrl,
-    required String altText,
-    required List<String> keywords,
+    required String category, // v0.18.0
+    required String shortcode, // v0.18.0
+    required String imageUrl, // v0.18.0
+    required String altText, // v0.18.0
+    required List<String> keywords, // v0.18.0
     String? auth,
   }) = _CreateCustomEmoji;
 
@@ -46,11 +46,11 @@ class EditCustomEmoji
     implements LemmyApiQuery<CustomEmojiResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory EditCustomEmoji({
-    required int id,
-    required String category,
-    required String imageUrl,
-    required String altText,
-    required List<String> keywords,
+    required int id, // v0.18.0
+    required String category, // v0.18.0
+    required String imageUrl, // v0.18.0
+    required String altText, // v0.18.0
+    required List<String> keywords, // v0.18.0
     String? auth,
   }) = _EditCustomEmoji;
 
@@ -78,7 +78,7 @@ class DeleteCustomEmoji
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory DeleteCustomEmoji({
-    required int id,
+    required int id, // v0.18.0
     String? auth,
   }) = _DeleteCustomEmoji;
 

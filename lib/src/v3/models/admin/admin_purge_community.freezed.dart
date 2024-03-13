@@ -12,7 +12,7 @@ part of 'admin_purge_community.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 AdminPurgeCommunity _$AdminPurgeCommunityFromJson(Map<String, dynamic> json) {
   return _AdminPurgeCommunity.fromJson(json);
@@ -20,9 +20,9 @@ AdminPurgeCommunity _$AdminPurgeCommunityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AdminPurgeCommunity {
-  int get id => throw _privateConstructorUsedError;
-  int get adminPersonId => throw _privateConstructorUsedError;
-  String? get reason => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
+  int get adminPersonId => throw _privateConstructorUsedError; // v0.18.0
+  String? get reason => throw _privateConstructorUsedError; // v0.18.0
   @JsonKey(name: 'when_')
   String get when => throw _privateConstructorUsedError;
 
@@ -152,10 +152,13 @@ class _$AdminPurgeCommunityImpl extends _AdminPurgeCommunity {
 
   @override
   final int id;
+// v0.18.0
   @override
   final int adminPersonId;
+// v0.18.0
   @override
   final String? reason;
+// v0.18.0
   @override
   @JsonKey(name: 'when_')
   final String when;
@@ -166,7 +169,7 @@ class _$AdminPurgeCommunityImpl extends _AdminPurgeCommunity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AdminPurgeCommunityImpl &&
@@ -210,11 +213,11 @@ abstract class _AdminPurgeCommunity extends AdminPurgeCommunity {
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   int get adminPersonId;
-  @override
+  @override // v0.18.0
   String? get reason;
-  @override
+  @override // v0.18.0
   @JsonKey(name: 'when_')
   String get when;
   @override

@@ -12,7 +12,7 @@ part of 'local_site.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 LocalSite _$LocalSiteFromJson(Map<String, dynamic> json) {
   return _LocalSite.fromJson(json);
@@ -20,30 +20,43 @@ LocalSite _$LocalSiteFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$LocalSite {
-  int get id => throw _privateConstructorUsedError;
-  int get siteId => throw _privateConstructorUsedError;
-  bool get siteSetup => throw _privateConstructorUsedError;
-  bool get enableDownvotes => throw _privateConstructorUsedError;
-  bool get enableNsfw => throw _privateConstructorUsedError;
-  bool get communityCreationAdminOnly => throw _privateConstructorUsedError;
-  bool get requireEmailVerification => throw _privateConstructorUsedError;
-  String? get applicationQuestion => throw _privateConstructorUsedError;
-  bool get privateInstance => throw _privateConstructorUsedError;
-  String get defaultTheme => throw _privateConstructorUsedError;
-  ListingType get defaultPostListingType => throw _privateConstructorUsedError;
-  String? get legalInformation => throw _privateConstructorUsedError;
-  bool get hideModlogModNames => throw _privateConstructorUsedError;
-  bool get applicationEmailAdmins => throw _privateConstructorUsedError;
-  String? get slurFilterRegex => throw _privateConstructorUsedError;
-  int get actorNameMaxLength => throw _privateConstructorUsedError;
-  bool get federationEnabled => throw _privateConstructorUsedError;
-  bool get captchaEnabled => throw _privateConstructorUsedError;
-  String get captchaDifficulty => throw _privateConstructorUsedError;
-  DateTime get published => throw _privateConstructorUsedError;
-  DateTime? get updated => throw _privateConstructorUsedError;
-  RegistrationMode get registrationMode => throw _privateConstructorUsedError;
-  bool get reportsEmailAdmins => throw _privateConstructorUsedError;
-  bool? get federationSignedFetch => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
+  int get siteId => throw _privateConstructorUsedError; // v0.18.0
+  bool get siteSetup => throw _privateConstructorUsedError; // v0.18.0
+  bool get enableDownvotes => throw _privateConstructorUsedError; // v0.18.0
+  bool get enableNsfw => throw _privateConstructorUsedError; // v0.18.0
+  bool get communityCreationAdminOnly =>
+      throw _privateConstructorUsedError; // v0.18.0
+  bool get requireEmailVerification =>
+      throw _privateConstructorUsedError; // v0.18.0
+  String? get applicationQuestion =>
+      throw _privateConstructorUsedError; // v0.18.0
+  bool get privateInstance => throw _privateConstructorUsedError; // v0.18.0
+  String get defaultTheme => throw _privateConstructorUsedError; // v0.18.0
+  ListingType get defaultPostListingType =>
+      throw _privateConstructorUsedError; // v0.18.0
+  String? get legalInformation => throw _privateConstructorUsedError; // v0.18.0
+  bool get hideModlogModNames => throw _privateConstructorUsedError; // v0.18.0
+  bool get applicationEmailAdmins =>
+      throw _privateConstructorUsedError; // v0.18.0
+  String? get slurFilterRegex => throw _privateConstructorUsedError; // v0.18.0
+  int get actorNameMaxLength => throw _privateConstructorUsedError; // v0.18.0
+  bool get federationEnabled => throw _privateConstructorUsedError; // v0.18.0
+  @deprecated
+  int? get federationWorkerCount =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.18.1]
+  bool get captchaEnabled => throw _privateConstructorUsedError; // v0.18.0
+  String get captchaDifficulty => throw _privateConstructorUsedError; // v0.18.0
+  DateTime get published => throw _privateConstructorUsedError; // v0.18.0
+  DateTime? get updated => throw _privateConstructorUsedError; // v0.18.0
+  RegistrationMode get registrationMode =>
+      throw _privateConstructorUsedError; // v0.18.0
+  bool get reportsEmailAdmins => throw _privateConstructorUsedError; // v0.18.0
+  bool? get federationSignedFetch =>
+      throw _privateConstructorUsedError; // v0.19.0 (required)
+  String? get defaultPostListingMode =>
+      throw _privateConstructorUsedError; // v0.19.4 (required)
+  SortType? get defaultSortType => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -74,13 +87,16 @@ abstract class $LocalSiteCopyWith<$Res> {
       String? slurFilterRegex,
       int actorNameMaxLength,
       bool federationEnabled,
+      @deprecated int? federationWorkerCount,
       bool captchaEnabled,
       String captchaDifficulty,
       DateTime published,
       DateTime? updated,
       RegistrationMode registrationMode,
       bool reportsEmailAdmins,
-      bool? federationSignedFetch});
+      bool? federationSignedFetch,
+      String? defaultPostListingMode,
+      SortType? defaultSortType});
 }
 
 /// @nodoc
@@ -113,6 +129,7 @@ class _$LocalSiteCopyWithImpl<$Res, $Val extends LocalSite>
     Object? slurFilterRegex = freezed,
     Object? actorNameMaxLength = null,
     Object? federationEnabled = null,
+    Object? federationWorkerCount = freezed,
     Object? captchaEnabled = null,
     Object? captchaDifficulty = null,
     Object? published = null,
@@ -120,6 +137,8 @@ class _$LocalSiteCopyWithImpl<$Res, $Val extends LocalSite>
     Object? registrationMode = null,
     Object? reportsEmailAdmins = null,
     Object? federationSignedFetch = freezed,
+    Object? defaultPostListingMode = freezed,
+    Object? defaultSortType = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -190,6 +209,10 @@ class _$LocalSiteCopyWithImpl<$Res, $Val extends LocalSite>
           ? _value.federationEnabled
           : federationEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
+      federationWorkerCount: freezed == federationWorkerCount
+          ? _value.federationWorkerCount
+          : federationWorkerCount // ignore: cast_nullable_to_non_nullable
+              as int?,
       captchaEnabled: null == captchaEnabled
           ? _value.captchaEnabled
           : captchaEnabled // ignore: cast_nullable_to_non_nullable
@@ -218,6 +241,14 @@ class _$LocalSiteCopyWithImpl<$Res, $Val extends LocalSite>
           ? _value.federationSignedFetch
           : federationSignedFetch // ignore: cast_nullable_to_non_nullable
               as bool?,
+      defaultPostListingMode: freezed == defaultPostListingMode
+          ? _value.defaultPostListingMode
+          : defaultPostListingMode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      defaultSortType: freezed == defaultSortType
+          ? _value.defaultSortType
+          : defaultSortType // ignore: cast_nullable_to_non_nullable
+              as SortType?,
     ) as $Val);
   }
 }
@@ -248,13 +279,16 @@ abstract class _$$LocalSiteImplCopyWith<$Res>
       String? slurFilterRegex,
       int actorNameMaxLength,
       bool federationEnabled,
+      @deprecated int? federationWorkerCount,
       bool captchaEnabled,
       String captchaDifficulty,
       DateTime published,
       DateTime? updated,
       RegistrationMode registrationMode,
       bool reportsEmailAdmins,
-      bool? federationSignedFetch});
+      bool? federationSignedFetch,
+      String? defaultPostListingMode,
+      SortType? defaultSortType});
 }
 
 /// @nodoc
@@ -285,6 +319,7 @@ class __$$LocalSiteImplCopyWithImpl<$Res>
     Object? slurFilterRegex = freezed,
     Object? actorNameMaxLength = null,
     Object? federationEnabled = null,
+    Object? federationWorkerCount = freezed,
     Object? captchaEnabled = null,
     Object? captchaDifficulty = null,
     Object? published = null,
@@ -292,6 +327,8 @@ class __$$LocalSiteImplCopyWithImpl<$Res>
     Object? registrationMode = null,
     Object? reportsEmailAdmins = null,
     Object? federationSignedFetch = freezed,
+    Object? defaultPostListingMode = freezed,
+    Object? defaultSortType = freezed,
   }) {
     return _then(_$LocalSiteImpl(
       id: null == id
@@ -362,6 +399,10 @@ class __$$LocalSiteImplCopyWithImpl<$Res>
           ? _value.federationEnabled
           : federationEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
+      federationWorkerCount: freezed == federationWorkerCount
+          ? _value.federationWorkerCount
+          : federationWorkerCount // ignore: cast_nullable_to_non_nullable
+              as int?,
       captchaEnabled: null == captchaEnabled
           ? _value.captchaEnabled
           : captchaEnabled // ignore: cast_nullable_to_non_nullable
@@ -390,6 +431,14 @@ class __$$LocalSiteImplCopyWithImpl<$Res>
           ? _value.federationSignedFetch
           : federationSignedFetch // ignore: cast_nullable_to_non_nullable
               as bool?,
+      defaultPostListingMode: freezed == defaultPostListingMode
+          ? _value.defaultPostListingMode
+          : defaultPostListingMode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      defaultSortType: freezed == defaultSortType
+          ? _value.defaultSortType
+          : defaultSortType // ignore: cast_nullable_to_non_nullable
+              as SortType?,
     ));
   }
 }
@@ -416,13 +465,16 @@ class _$LocalSiteImpl extends _LocalSite {
       this.slurFilterRegex,
       required this.actorNameMaxLength,
       required this.federationEnabled,
+      @deprecated this.federationWorkerCount,
       required this.captchaEnabled,
       required this.captchaDifficulty,
       required this.published,
       this.updated,
       required this.registrationMode,
       required this.reportsEmailAdmins,
-      this.federationSignedFetch})
+      this.federationSignedFetch,
+      this.defaultPostListingMode,
+      this.defaultSortType})
       : super._();
 
   factory _$LocalSiteImpl.fromJson(Map<String, dynamic> json) =>
@@ -430,60 +482,93 @@ class _$LocalSiteImpl extends _LocalSite {
 
   @override
   final int id;
+// v0.18.0
   @override
   final int siteId;
+// v0.18.0
   @override
   final bool siteSetup;
+// v0.18.0
   @override
   final bool enableDownvotes;
+// v0.18.0
   @override
   final bool enableNsfw;
+// v0.18.0
   @override
   final bool communityCreationAdminOnly;
+// v0.18.0
   @override
   final bool requireEmailVerification;
+// v0.18.0
   @override
   final String? applicationQuestion;
+// v0.18.0
   @override
   final bool privateInstance;
+// v0.18.0
   @override
   final String defaultTheme;
+// v0.18.0
   @override
   final ListingType defaultPostListingType;
+// v0.18.0
   @override
   final String? legalInformation;
+// v0.18.0
   @override
   final bool hideModlogModNames;
+// v0.18.0
   @override
   final bool applicationEmailAdmins;
+// v0.18.0
   @override
   final String? slurFilterRegex;
+// v0.18.0
   @override
   final int actorNameMaxLength;
+// v0.18.0
   @override
   final bool federationEnabled;
+// v0.18.0
+  @override
+  @deprecated
+  final int? federationWorkerCount;
+// v0.18.0 [deprecated in v0.18.1]
   @override
   final bool captchaEnabled;
+// v0.18.0
   @override
   final String captchaDifficulty;
+// v0.18.0
   @override
   final DateTime published;
+// v0.18.0
   @override
   final DateTime? updated;
+// v0.18.0
   @override
   final RegistrationMode registrationMode;
+// v0.18.0
   @override
   final bool reportsEmailAdmins;
+// v0.18.0
   @override
   final bool? federationSignedFetch;
+// v0.19.0 (required)
+  @override
+  final String? defaultPostListingMode;
+// v0.19.4 (required)
+  @override
+  final SortType? defaultSortType;
 
   @override
   String toString() {
-    return 'LocalSite(id: $id, siteId: $siteId, siteSetup: $siteSetup, enableDownvotes: $enableDownvotes, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, requireEmailVerification: $requireEmailVerification, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, defaultTheme: $defaultTheme, defaultPostListingType: $defaultPostListingType, legalInformation: $legalInformation, hideModlogModNames: $hideModlogModNames, applicationEmailAdmins: $applicationEmailAdmins, slurFilterRegex: $slurFilterRegex, actorNameMaxLength: $actorNameMaxLength, federationEnabled: $federationEnabled, captchaEnabled: $captchaEnabled, captchaDifficulty: $captchaDifficulty, published: $published, updated: $updated, registrationMode: $registrationMode, reportsEmailAdmins: $reportsEmailAdmins, federationSignedFetch: $federationSignedFetch)';
+    return 'LocalSite(id: $id, siteId: $siteId, siteSetup: $siteSetup, enableDownvotes: $enableDownvotes, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, requireEmailVerification: $requireEmailVerification, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, defaultTheme: $defaultTheme, defaultPostListingType: $defaultPostListingType, legalInformation: $legalInformation, hideModlogModNames: $hideModlogModNames, applicationEmailAdmins: $applicationEmailAdmins, slurFilterRegex: $slurFilterRegex, actorNameMaxLength: $actorNameMaxLength, federationEnabled: $federationEnabled, federationWorkerCount: $federationWorkerCount, captchaEnabled: $captchaEnabled, captchaDifficulty: $captchaDifficulty, published: $published, updated: $updated, registrationMode: $registrationMode, reportsEmailAdmins: $reportsEmailAdmins, federationSignedFetch: $federationSignedFetch, defaultPostListingMode: $defaultPostListingMode, defaultSortType: $defaultSortType)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LocalSiteImpl &&
@@ -499,8 +584,7 @@ class _$LocalSiteImpl extends _LocalSite {
                     communityCreationAdminOnly) ||
                 other.communityCreationAdminOnly ==
                     communityCreationAdminOnly) &&
-            (identical(
-                    other.requireEmailVerification, requireEmailVerification) ||
+            (identical(other.requireEmailVerification, requireEmailVerification) ||
                 other.requireEmailVerification == requireEmailVerification) &&
             (identical(other.applicationQuestion, applicationQuestion) ||
                 other.applicationQuestion == applicationQuestion) &&
@@ -522,6 +606,8 @@ class _$LocalSiteImpl extends _LocalSite {
                 other.actorNameMaxLength == actorNameMaxLength) &&
             (identical(other.federationEnabled, federationEnabled) ||
                 other.federationEnabled == federationEnabled) &&
+            (identical(other.federationWorkerCount, federationWorkerCount) ||
+                other.federationWorkerCount == federationWorkerCount) &&
             (identical(other.captchaEnabled, captchaEnabled) ||
                 other.captchaEnabled == captchaEnabled) &&
             (identical(other.captchaDifficulty, captchaDifficulty) ||
@@ -534,7 +620,11 @@ class _$LocalSiteImpl extends _LocalSite {
             (identical(other.reportsEmailAdmins, reportsEmailAdmins) ||
                 other.reportsEmailAdmins == reportsEmailAdmins) &&
             (identical(other.federationSignedFetch, federationSignedFetch) ||
-                other.federationSignedFetch == federationSignedFetch));
+                other.federationSignedFetch == federationSignedFetch) &&
+            (identical(other.defaultPostListingMode, defaultPostListingMode) ||
+                other.defaultPostListingMode == defaultPostListingMode) &&
+            (identical(other.defaultSortType, defaultSortType) ||
+                other.defaultSortType == defaultSortType));
   }
 
   @JsonKey(ignore: true)
@@ -558,13 +648,16 @@ class _$LocalSiteImpl extends _LocalSite {
         slurFilterRegex,
         actorNameMaxLength,
         federationEnabled,
+        federationWorkerCount,
         captchaEnabled,
         captchaDifficulty,
         published,
         updated,
         registrationMode,
         reportsEmailAdmins,
-        federationSignedFetch
+        federationSignedFetch,
+        defaultPostListingMode,
+        defaultSortType
       ]);
 
   @JsonKey(ignore: true)
@@ -600,13 +693,16 @@ abstract class _LocalSite extends LocalSite {
       final String? slurFilterRegex,
       required final int actorNameMaxLength,
       required final bool federationEnabled,
+      @deprecated final int? federationWorkerCount,
       required final bool captchaEnabled,
       required final String captchaDifficulty,
       required final DateTime published,
       final DateTime? updated,
       required final RegistrationMode registrationMode,
       required final bool reportsEmailAdmins,
-      final bool? federationSignedFetch}) = _$LocalSiteImpl;
+      final bool? federationSignedFetch,
+      final String? defaultPostListingMode,
+      final SortType? defaultSortType}) = _$LocalSiteImpl;
   const _LocalSite._() : super._();
 
   factory _LocalSite.fromJson(Map<String, dynamic> json) =
@@ -614,52 +710,59 @@ abstract class _LocalSite extends LocalSite {
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   int get siteId;
-  @override
+  @override // v0.18.0
   bool get siteSetup;
-  @override
+  @override // v0.18.0
   bool get enableDownvotes;
-  @override
+  @override // v0.18.0
   bool get enableNsfw;
-  @override
+  @override // v0.18.0
   bool get communityCreationAdminOnly;
-  @override
+  @override // v0.18.0
   bool get requireEmailVerification;
-  @override
+  @override // v0.18.0
   String? get applicationQuestion;
-  @override
+  @override // v0.18.0
   bool get privateInstance;
-  @override
+  @override // v0.18.0
   String get defaultTheme;
-  @override
+  @override // v0.18.0
   ListingType get defaultPostListingType;
-  @override
+  @override // v0.18.0
   String? get legalInformation;
-  @override
+  @override // v0.18.0
   bool get hideModlogModNames;
-  @override
+  @override // v0.18.0
   bool get applicationEmailAdmins;
-  @override
+  @override // v0.18.0
   String? get slurFilterRegex;
-  @override
+  @override // v0.18.0
   int get actorNameMaxLength;
-  @override
+  @override // v0.18.0
   bool get federationEnabled;
-  @override
+  @override // v0.18.0
+  @deprecated
+  int? get federationWorkerCount;
+  @override // v0.18.0 [deprecated in v0.18.1]
   bool get captchaEnabled;
-  @override
+  @override // v0.18.0
   String get captchaDifficulty;
-  @override
+  @override // v0.18.0
   DateTime get published;
-  @override
+  @override // v0.18.0
   DateTime? get updated;
-  @override
+  @override // v0.18.0
   RegistrationMode get registrationMode;
-  @override
+  @override // v0.18.0
   bool get reportsEmailAdmins;
-  @override
+  @override // v0.18.0
   bool? get federationSignedFetch;
+  @override // v0.19.0 (required)
+  String? get defaultPostListingMode;
+  @override // v0.19.4 (required)
+  SortType? get defaultSortType;
   @override
   @JsonKey(ignore: true)
   _$$LocalSiteImplCopyWith<_$LocalSiteImpl> get copyWith =>

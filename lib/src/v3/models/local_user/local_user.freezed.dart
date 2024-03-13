@@ -12,7 +12,7 @@ part of 'local_user.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 LocalUser _$LocalUserFromJson(Map<String, dynamic> json) {
   return _LocalUser.fromJson(json);
@@ -20,42 +20,46 @@ LocalUser _$LocalUserFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$LocalUser {
-  int get id => throw _privateConstructorUsedError;
-  int get personId => throw _privateConstructorUsedError;
-  String? get email => throw _privateConstructorUsedError;
-  bool get showNsfw => throw _privateConstructorUsedError;
-  bool? get blurNsfw => throw _privateConstructorUsedError;
-  bool? get autoExpand => throw _privateConstructorUsedError;
-  String get theme => throw _privateConstructorUsedError;
-  SortType get defaultSortType => throw _privateConstructorUsedError;
-  ListingType get defaultListingType => throw _privateConstructorUsedError;
-  String get interfaceLanguage => throw _privateConstructorUsedError;
-  bool get showAvatars => throw _privateConstructorUsedError;
-  bool get sendNotificationsToEmail => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
+  int get personId => throw _privateConstructorUsedError; // v0.18.0
+  String? get email => throw _privateConstructorUsedError; // v0.18.0
+  bool get showNsfw => throw _privateConstructorUsedError; // v0.18.0
+  bool? get blurNsfw => throw _privateConstructorUsedError; // v0.18.3
+  bool? get autoExpand => throw _privateConstructorUsedError; // v0.18.3
+  String get theme => throw _privateConstructorUsedError; // v0.18.0
+  SortType get defaultSortType => throw _privateConstructorUsedError; // v0.18.0
+  ListingType get defaultListingType =>
+      throw _privateConstructorUsedError; // v0.18.0
+  String get interfaceLanguage => throw _privateConstructorUsedError; // v0.18.0
+  bool get showAvatars => throw _privateConstructorUsedError; // v0.18.0
+  bool get sendNotificationsToEmail =>
+      throw _privateConstructorUsedError; // v0.18.0
   @deprecated
-  String? get validatorTime => throw _privateConstructorUsedError;
-  bool get showScores => throw _privateConstructorUsedError;
-  bool get showBotAccounts => throw _privateConstructorUsedError;
-  bool get showReadPosts => throw _privateConstructorUsedError;
+  String? get validatorTime =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
+  bool get showScores => throw _privateConstructorUsedError; // v0.18.0
+  bool get showBotAccounts => throw _privateConstructorUsedError; // v0.18.0
+  bool get showReadPosts => throw _privateConstructorUsedError; // v0.18.0
   @deprecated
-  bool? get showNewPostNotifs => throw _privateConstructorUsedError;
-  bool get emailVerified => throw _privateConstructorUsedError;
-  bool get acceptedApplication => throw _privateConstructorUsedError;
+  bool? get showNewPostNotifs =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
+  bool get emailVerified => throw _privateConstructorUsedError; // v0.18.0
+  bool get acceptedApplication => throw _privateConstructorUsedError; // v0.18.0
   @deprecated
-  String? get totp2faUrl => throw _privateConstructorUsedError;
-  bool? get openLinksInNewTab => throw _privateConstructorUsedError;
+  String? get totp2faUrl =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
+  bool? get openLinksInNewTab => throw _privateConstructorUsedError; // v0.18.1
   bool? get infiniteScrollEnabled =>
-      throw _privateConstructorUsedError; // Only available in lemmy v0.19.0 and above
-  bool? get admin =>
-      throw _privateConstructorUsedError; // Only available in lemmy v0.19.0 and above
+      throw _privateConstructorUsedError; // v0.19.0 (required)
+  bool? get admin => throw _privateConstructorUsedError; // v0.19.0 (required)
   String? get postListingMode =>
-      throw _privateConstructorUsedError; // Only available in lemmy v0.19.0 and above
+      throw _privateConstructorUsedError; // v0.19.0 (required)
   bool? get totp2faEnabled =>
-      throw _privateConstructorUsedError; // Only available in lemmy v0.19.0 and above
+      throw _privateConstructorUsedError; // v0.19.0 (required)
   bool? get enableKeyboardNavigation =>
-      throw _privateConstructorUsedError; // Only available in lemmy v0.19.0 and above
+      throw _privateConstructorUsedError; // v0.19.0 (required)
   bool? get enableAnimatedImages =>
-      throw _privateConstructorUsedError; // Only available in lemmy v0.19.0 and above
+      throw _privateConstructorUsedError; // v0.19.0 (required)
   bool? get collapseBotComments => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -495,67 +499,88 @@ class _$LocalUserImpl extends _LocalUser {
 
   @override
   final int id;
+// v0.18.0
   @override
   final int personId;
+// v0.18.0
   @override
   final String? email;
+// v0.18.0
   @override
   final bool showNsfw;
+// v0.18.0
   @override
   final bool? blurNsfw;
+// v0.18.3
   @override
   final bool? autoExpand;
+// v0.18.3
   @override
   final String theme;
+// v0.18.0
   @override
   final SortType defaultSortType;
+// v0.18.0
   @override
   final ListingType defaultListingType;
+// v0.18.0
   @override
   final String interfaceLanguage;
+// v0.18.0
   @override
   final bool showAvatars;
+// v0.18.0
   @override
   final bool sendNotificationsToEmail;
+// v0.18.0
   @override
   @deprecated
   final String? validatorTime;
+// v0.18.0 [deprecated in v0.19.0]
   @override
   final bool showScores;
+// v0.18.0
   @override
   final bool showBotAccounts;
+// v0.18.0
   @override
   final bool showReadPosts;
+// v0.18.0
   @override
   @deprecated
   final bool? showNewPostNotifs;
+// v0.18.0 [deprecated in v0.19.0]
   @override
   final bool emailVerified;
+// v0.18.0
   @override
   final bool acceptedApplication;
+// v0.18.0
   @override
   @deprecated
   final String? totp2faUrl;
+// v0.18.0 [deprecated in v0.19.0]
   @override
   final bool? openLinksInNewTab;
+// v0.18.1
   @override
   final bool? infiniteScrollEnabled;
-// Only available in lemmy v0.19.0 and above
+// v0.19.0 (required)
   @override
   final bool? admin;
-// Only available in lemmy v0.19.0 and above
+// v0.19.0 (required)
   @override
   final String? postListingMode;
-// Only available in lemmy v0.19.0 and above
+// v0.19.0 (required)
   @override
   final bool? totp2faEnabled;
-// Only available in lemmy v0.19.0 and above
+// v0.19.0 (required)
   @override
   final bool? enableKeyboardNavigation;
-// Only available in lemmy v0.19.0 and above
+// v0.19.0 (required)
   @override
   final bool? enableAnimatedImages;
-// Only available in lemmy v0.19.0 and above
+// v0.19.0 (required)
   @override
   final bool? collapseBotComments;
 
@@ -565,7 +590,7 @@ class _$LocalUserImpl extends _LocalUser {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LocalUserImpl &&
@@ -710,62 +735,62 @@ abstract class _LocalUser extends LocalUser {
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   int get personId;
-  @override
+  @override // v0.18.0
   String? get email;
-  @override
+  @override // v0.18.0
   bool get showNsfw;
-  @override
+  @override // v0.18.0
   bool? get blurNsfw;
-  @override
+  @override // v0.18.3
   bool? get autoExpand;
-  @override
+  @override // v0.18.3
   String get theme;
-  @override
+  @override // v0.18.0
   SortType get defaultSortType;
-  @override
+  @override // v0.18.0
   ListingType get defaultListingType;
-  @override
+  @override // v0.18.0
   String get interfaceLanguage;
-  @override
+  @override // v0.18.0
   bool get showAvatars;
-  @override
+  @override // v0.18.0
   bool get sendNotificationsToEmail;
-  @override
+  @override // v0.18.0
   @deprecated
   String? get validatorTime;
-  @override
+  @override // v0.18.0 [deprecated in v0.19.0]
   bool get showScores;
-  @override
+  @override // v0.18.0
   bool get showBotAccounts;
-  @override
+  @override // v0.18.0
   bool get showReadPosts;
-  @override
+  @override // v0.18.0
   @deprecated
   bool? get showNewPostNotifs;
-  @override
+  @override // v0.18.0 [deprecated in v0.19.0]
   bool get emailVerified;
-  @override
+  @override // v0.18.0
   bool get acceptedApplication;
-  @override
+  @override // v0.18.0
   @deprecated
   String? get totp2faUrl;
-  @override
+  @override // v0.18.0 [deprecated in v0.19.0]
   bool? get openLinksInNewTab;
-  @override
+  @override // v0.18.1
   bool? get infiniteScrollEnabled;
-  @override // Only available in lemmy v0.19.0 and above
+  @override // v0.19.0 (required)
   bool? get admin;
-  @override // Only available in lemmy v0.19.0 and above
+  @override // v0.19.0 (required)
   String? get postListingMode;
-  @override // Only available in lemmy v0.19.0 and above
+  @override // v0.19.0 (required)
   bool? get totp2faEnabled;
-  @override // Only available in lemmy v0.19.0 and above
+  @override // v0.19.0 (required)
   bool? get enableKeyboardNavigation;
-  @override // Only available in lemmy v0.19.0 and above
+  @override // v0.19.0 (required)
   bool? get enableAnimatedImages;
-  @override // Only available in lemmy v0.19.0 and above
+  @override // v0.19.0 (required)
   bool? get collapseBotComments;
   @override
   @JsonKey(ignore: true)

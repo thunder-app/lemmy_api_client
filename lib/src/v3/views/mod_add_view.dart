@@ -10,9 +10,9 @@ part 'mod_add_view.g.dart';
 class ModAddView with _$ModAddView {
   @modelSerde
   const factory ModAddView({
-    required ModAdd modAdd,
-    Person? moderator,
-    required Person moddedPerson,
+    required ModAdd modAdd, // v0.18.0
+    Person? moderator, // v0.18.0
+    required Person moddedPerson, // v0.18.0
   }) = _ModAddView;
 
   const ModAddView._();

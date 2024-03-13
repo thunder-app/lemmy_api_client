@@ -12,7 +12,7 @@ part of 'get_unread_count_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetUnreadCountResponse _$GetUnreadCountResponseFromJson(
     Map<String, dynamic> json) {
@@ -21,8 +21,8 @@ GetUnreadCountResponse _$GetUnreadCountResponseFromJson(
 
 /// @nodoc
 mixin _$GetUnreadCountResponse {
-  int get replies => throw _privateConstructorUsedError;
-  int get mentions => throw _privateConstructorUsedError;
+  int get replies => throw _privateConstructorUsedError; // v0.18.0
+  int get mentions => throw _privateConstructorUsedError; // v0.18.0
   int get privateMessages => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -136,8 +136,10 @@ class _$GetUnreadCountResponseImpl extends _GetUnreadCountResponse {
 
   @override
   final int replies;
+// v0.18.0
   @override
   final int mentions;
+// v0.18.0
   @override
   final int privateMessages;
 
@@ -147,7 +149,7 @@ class _$GetUnreadCountResponseImpl extends _GetUnreadCountResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetUnreadCountResponseImpl &&
@@ -190,9 +192,9 @@ abstract class _GetUnreadCountResponse extends GetUnreadCountResponse {
 
   @override
   int get replies;
-  @override
+  @override // v0.18.0
   int get mentions;
-  @override
+  @override // v0.18.0
   int get privateMessages;
   @override
   @JsonKey(ignore: true)

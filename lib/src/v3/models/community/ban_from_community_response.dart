@@ -10,8 +10,8 @@ part 'ban_from_community_response.g.dart';
 class BanFromCommunityResponse with _$BanFromCommunityResponse {
   @modelSerde
   const factory BanFromCommunityResponse({
-    required PersonView personView,
-    required bool banned,
+    required PersonView personView, // v0.18.0
+    required bool banned, // v0.18.0
   }) = _BanFromCommunityResponse;
 
   const BanFromCommunityResponse._();

@@ -12,7 +12,7 @@ part of 'tagline.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Tagline _$TaglineFromJson(Map<String, dynamic> json) {
   return _Tagline.fromJson(json);
@@ -20,10 +20,10 @@ Tagline _$TaglineFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Tagline {
-  int get id => throw _privateConstructorUsedError;
-  int get localSiteId => throw _privateConstructorUsedError;
-  String get content => throw _privateConstructorUsedError;
-  DateTime get published => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
+  int get localSiteId => throw _privateConstructorUsedError; // v0.18.0
+  String get content => throw _privateConstructorUsedError; // v0.18.0
+  DateTime get published => throw _privateConstructorUsedError; // v0.18.0
   DateTime? get updated => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -162,12 +162,16 @@ class _$TaglineImpl extends _Tagline {
 
   @override
   final int id;
+// v0.18.0
   @override
   final int localSiteId;
+// v0.18.0
   @override
   final String content;
+// v0.18.0
   @override
   final DateTime published;
+// v0.18.0
   @override
   final DateTime? updated;
 
@@ -177,7 +181,7 @@ class _$TaglineImpl extends _Tagline {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TaglineImpl &&
@@ -222,13 +226,13 @@ abstract class _Tagline extends Tagline {
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   int get localSiteId;
-  @override
+  @override // v0.18.0
   String get content;
-  @override
+  @override // v0.18.0
   DateTime get published;
-  @override
+  @override // v0.18.0
   DateTime? get updated;
   @override
   @JsonKey(ignore: true)

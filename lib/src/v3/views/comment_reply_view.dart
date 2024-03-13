@@ -11,20 +11,20 @@ part 'comment_reply_view.g.dart';
 class CommentReplyView with _$CommentReplyView {
   @modelSerde
   const factory CommentReplyView({
-    required CommentReply commentReply,
-    required Comment comment,
-    required Person creator,
-    required Post post,
-    required Community community,
-    required Person recipient,
-    required CommentAggregates counts,
-    required bool creatorBannedFromCommunity,
-    bool? creatorIsModerator, // Only available in lemmy v0.19.0 and above
-    bool? creatorIsAdmin, // Only available in lemmy v0.19.0 and above
-    required SubscribedType subscribed,
-    required bool saved,
-    required bool creatorBlocked,
-    num? myVote,
+    required CommentReply commentReply, // v0.18.0
+    required Comment comment, // v0.18.0
+    required Person creator, // v0.18.0
+    required Post post, // v0.18.0
+    required Community community, // v0.18.0
+    required Person recipient, // v0.18.0
+    required CommentAggregates counts, // v0.18.0
+    required bool creatorBannedFromCommunity, // v0.18.0
+    bool? creatorIsModerator, // v0.19.0 (required)
+    bool? creatorIsAdmin, // v0.19.0 (required)
+    required SubscribedType subscribed, // v0.18.0
+    required bool saved, // v0.18.0
+    required bool creatorBlocked, // v0.18.0
+    num? myVote, // v0.18.0
   }) = _CommentReplyView;
 
   const CommentReplyView._();

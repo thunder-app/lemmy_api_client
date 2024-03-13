@@ -10,9 +10,9 @@ part 'mod_remove_community_view.g.dart';
 class ModRemoveCommunityView with _$ModRemoveCommunityView {
   @modelSerde
   const factory ModRemoveCommunityView({
-    required ModRemoveCommunity modRemoveCommunity,
-    Person? moderator,
-    required Community community,
+    required ModRemoveCommunity modRemoveCommunity, // v0.18.0
+    Person? moderator, // v0.18.0
+    required Community community, // v0.18.0
   }) = _ModRemoveCommunityView;
 
   const ModRemoveCommunityView._();

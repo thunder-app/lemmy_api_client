@@ -1,8 +1,8 @@
 enum ListingType {
-  all('All'),
-  local('Local'),
-  subscribed('Subscribed'),
-  moderatorView('ModeratorView'); // Only available in lemmy v0.19.0 and above
+  all('All'), // v0.18.0
+  local('Local'), // v0.18.0
+  subscribed('Subscribed'), // v0.18.0
+  moderatorView('ModeratorView'); // v0.19.0
 
   final String value;
   const ListingType(this.value);

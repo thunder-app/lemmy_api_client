@@ -10,10 +10,10 @@ part 'get_post_response.g.dart';
 class GetPostResponse with _$GetPostResponse {
   @modelSerde
   const factory GetPostResponse({
-    required PostView postView,
-    required CommunityView communityView,
-    required List<CommunityModeratorView> moderators,
-    required List<PostView> crossPosts,
+    required PostView postView, // v0.18.0
+    required CommunityView communityView, // v0.18.0
+    required List<CommunityModeratorView> moderators, // v0.18.0
+    required List<PostView> crossPosts, // v0.18.0
   }) = _GetPostResponse;
 
   const GetPostResponse._();

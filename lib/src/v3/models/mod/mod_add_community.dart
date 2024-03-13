@@ -9,12 +9,12 @@ part 'mod_add_community.g.dart';
 class ModAddCommunity with _$ModAddCommunity {
   @modelSerde
   const factory ModAddCommunity({
-    required int id,
-    required int modPersonId,
-    required int otherPersonId,
-    required int communityId,
-    required bool removed,
-    @JsonKey(name: 'when_') required String when,
+    required int id, // v0.18.0
+    required int modPersonId, // v0.18.0
+    required int otherPersonId, // v0.18.0
+    required int communityId, // v0.18.0
+    required bool removed, // v0.18.0
+    @JsonKey(name: 'when_') required String when, // v0.18.0
   }) = _ModAddCommunity;
 
   const ModAddCommunity._();

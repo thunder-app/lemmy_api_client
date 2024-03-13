@@ -10,9 +10,9 @@ part 'person_view.g.dart';
 class PersonView with _$PersonView {
   @modelSerde
   const factory PersonView({
-    required Person person,
-    required PersonAggregates counts,
-    bool? isAdmin, // Only available in lemmy v0.19.0 and above
+    required Person person, // v0.18.0
+    required PersonAggregates counts, // v0.18.0
+    bool? isAdmin, // v0.19.0 (required)
   }) = _PersonView;
 
   const PersonView._();

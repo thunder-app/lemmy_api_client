@@ -42,6 +42,9 @@ _$CreateSiteImpl _$$CreateSiteImplFromJson(Map<String, dynamic> json) =>
       defaultPostListingType: json['default_post_listing_type'] == null
           ? null
           : ListingType.fromJson(json['default_post_listing_type']),
+      defaultSortType: json['default_sort_type'] == null
+          ? null
+          : SortType.fromJson(json['default_sort_type']),
       legalInformation: json['legal_information'] as String?,
       applicationEmailAdmins: json['application_email_admins'] as bool?,
       hideModlogModNames: json['hide_modlog_mod_names'] as bool?,
@@ -65,6 +68,7 @@ _$CreateSiteImpl _$$CreateSiteImplFromJson(Map<String, dynamic> json) =>
       rateLimitSearchPerSecond: json['rate_limit_search_per_second'] as int?,
       federationEnabled: json['federation_enabled'] as bool?,
       federationDebug: json['federation_debug'] as bool?,
+      federationWorkerCount: json['federation_worker_count'] as int?,
       captchaEnabled: json['captcha_enabled'] as bool?,
       captchaDifficulty: json['captcha_difficulty'] as String?,
       allowedInstances: (json['allowed_instances'] as List<dynamic>?)
@@ -76,8 +80,11 @@ _$CreateSiteImpl _$$CreateSiteImplFromJson(Map<String, dynamic> json) =>
       taglines: (json['taglines'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
-      registrationMode:
-          RegistrationMode.fromJson(json['registration_mode'] as String),
+      registrationMode: json['registration_mode'] == null
+          ? null
+          : RegistrationMode.fromJson(json['registration_mode'] as String),
+      contentWarning: json['content_warning'] as String?,
+      defaultPostListingMode: json['default_post_listing_mode'] as String?,
       auth: json['auth'] as String?,
     );
 
@@ -106,6 +113,7 @@ Map<String, dynamic> _$$CreateSiteImplToJson(_$CreateSiteImpl instance) {
   writeNotNull('default_theme', instance.defaultTheme);
   writeNotNull(
       'default_post_listing_type', instance.defaultPostListingType?.toJson());
+  writeNotNull('default_sort_type', instance.defaultSortType?.toJson());
   writeNotNull('legal_information', instance.legalInformation);
   writeNotNull('application_email_admins', instance.applicationEmailAdmins);
   writeNotNull('hide_modlog_mod_names', instance.hideModlogModNames);
@@ -130,12 +138,15 @@ Map<String, dynamic> _$$CreateSiteImplToJson(_$CreateSiteImpl instance) {
       'rate_limit_search_per_second', instance.rateLimitSearchPerSecond);
   writeNotNull('federation_enabled', instance.federationEnabled);
   writeNotNull('federation_debug', instance.federationDebug);
+  writeNotNull('federation_worker_count', instance.federationWorkerCount);
   writeNotNull('captcha_enabled', instance.captchaEnabled);
   writeNotNull('captcha_difficulty', instance.captchaDifficulty);
   writeNotNull('allowed_instances', instance.allowedInstances);
   writeNotNull('blocked_instances', instance.blockedInstances);
   writeNotNull('taglines', instance.taglines);
-  val['registration_mode'] = instance.registrationMode.toJson();
+  writeNotNull('registration_mode', instance.registrationMode?.toJson());
+  writeNotNull('content_warning', instance.contentWarning);
+  writeNotNull('default_post_listing_mode', instance.defaultPostListingMode);
   writeNotNull('auth', instance.auth);
   return val;
 }
@@ -158,6 +169,9 @@ _$EditSiteImpl _$$EditSiteImplFromJson(Map<String, dynamic> json) =>
       defaultPostListingType: json['default_post_listing_type'] == null
           ? null
           : ListingType.fromJson(json['default_post_listing_type']),
+      defaultSortType: json['default_sort_type'] == null
+          ? null
+          : SortType.fromJson(json['default_sort_type']),
       legalInformation: json['legal_information'] as String?,
       applicationEmailAdmins: json['application_email_admins'] as bool?,
       hideModlogModNames: json['hide_modlog_mod_names'] as bool?,
@@ -181,6 +195,7 @@ _$EditSiteImpl _$$EditSiteImplFromJson(Map<String, dynamic> json) =>
       rateLimitSearchPerSecond: json['rate_limit_search_per_second'] as int?,
       federationEnabled: json['federation_enabled'] as bool?,
       federationDebug: json['federation_debug'] as bool?,
+      federationWorkerCount: json['federation_worker_count'] as int?,
       captchaEnabled: json['captcha_enabled'] as bool?,
       captchaDifficulty: json['captcha_difficulty'] as String?,
       allowedInstances: (json['allowed_instances'] as List<dynamic>?)
@@ -196,6 +211,8 @@ _$EditSiteImpl _$$EditSiteImplFromJson(Map<String, dynamic> json) =>
           ? null
           : RegistrationMode.fromJson(json['registration_mode'] as String),
       reportsEmailAdmins: json['reports_email_admins'] as bool?,
+      contentWarning: json['content_warning'] as String?,
+      defaultPostListingMode: json['default_post_listing_mode'] as String?,
       auth: json['auth'] as String?,
     );
 
@@ -223,6 +240,7 @@ Map<String, dynamic> _$$EditSiteImplToJson(_$EditSiteImpl instance) {
   writeNotNull('default_theme', instance.defaultTheme);
   writeNotNull(
       'default_post_listing_type', instance.defaultPostListingType?.toJson());
+  writeNotNull('default_sort_type', instance.defaultSortType?.toJson());
   writeNotNull('legal_information', instance.legalInformation);
   writeNotNull('application_email_admins', instance.applicationEmailAdmins);
   writeNotNull('hide_modlog_mod_names', instance.hideModlogModNames);
@@ -247,6 +265,7 @@ Map<String, dynamic> _$$EditSiteImplToJson(_$EditSiteImpl instance) {
       'rate_limit_search_per_second', instance.rateLimitSearchPerSecond);
   writeNotNull('federation_enabled', instance.federationEnabled);
   writeNotNull('federation_debug', instance.federationDebug);
+  writeNotNull('federation_worker_count', instance.federationWorkerCount);
   writeNotNull('captcha_enabled', instance.captchaEnabled);
   writeNotNull('captcha_difficulty', instance.captchaDifficulty);
   writeNotNull('allowed_instances', instance.allowedInstances);
@@ -254,6 +273,8 @@ Map<String, dynamic> _$$EditSiteImplToJson(_$EditSiteImpl instance) {
   writeNotNull('taglines', instance.taglines);
   writeNotNull('registration_mode', instance.registrationMode?.toJson());
   writeNotNull('reports_email_admins', instance.reportsEmailAdmins);
+  writeNotNull('content_warning', instance.contentWarning);
+  writeNotNull('default_post_listing_mode', instance.defaultPostListingMode);
   writeNotNull('auth', instance.auth);
   return val;
 }

@@ -10,12 +10,12 @@ part 'mod_remove_comment_view.g.dart';
 class ModRemoveCommentView with _$ModRemoveCommentView {
   @modelSerde
   const factory ModRemoveCommentView({
-    required ModRemoveComment modRemoveComment,
-    Person? moderator,
-    required Comment comment,
-    required Person commenter,
-    required Post post,
-    required Community community,
+    required ModRemoveComment modRemoveComment, // v0.18.0
+    Person? moderator, // v0.18.0
+    required Comment comment, // v0.18.0
+    required Person commenter, // v0.18.0
+    required Post post, // v0.18.0
+    required Community community, // v0.18.0
   }) = _ModRemoveCommentView;
 
   const ModRemoveCommentView._();

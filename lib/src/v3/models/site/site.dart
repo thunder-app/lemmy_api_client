@@ -10,20 +10,21 @@ part 'site.g.dart';
 class Site with _$Site {
   @modelSerde
   const factory Site({
-    required int id,
-    required String name,
-    String? sidebar,
-    required DateTime published,
-    DateTime? updated,
-    String? icon,
-    String? banner,
-    String? description,
-    required String actorId,
-    required DateTime lastRefreshedAt,
-    required String inboxUrl,
-    String? privateKey,
-    required String publicKey,
-    required int instanceId,
+    required int id, // v0.18.0
+    required String name, // v0.18.0
+    String? sidebar, // v0.18.0
+    required DateTime published, // v0.18.0
+    DateTime? updated, // v0.18.0
+    String? icon, // v0.18.0
+    String? banner, // v0.18.0
+    String? description, // v0.18.0
+    required String actorId, // v0.18.0
+    required DateTime lastRefreshedAt, // v0.18.0
+    required String inboxUrl, // v0.18.0
+    String? privateKey, // v0.18.0
+    required String publicKey, // v0.18.0
+    required int instanceId, // v0.18.0
+    String? contentWarning, // v0.19.4 (optional)
   }) = _Site;
 
   const Site._();

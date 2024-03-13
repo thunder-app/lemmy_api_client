@@ -12,7 +12,7 @@ part of 'post_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PostView _$PostViewFromJson(Map<String, dynamic> json) {
   return _PostView.fromJson(json);
@@ -20,20 +20,23 @@ PostView _$PostViewFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PostView {
-  Post get post => throw _privateConstructorUsedError;
-  Person get creator => throw _privateConstructorUsedError;
-  Community get community => throw _privateConstructorUsedError;
-  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
+  Post get post => throw _privateConstructorUsedError; // v0.18.0
+  Person get creator => throw _privateConstructorUsedError; // v0.18.0
+  Community get community => throw _privateConstructorUsedError; // v0.18.0
+  bool get creatorBannedFromCommunity =>
+      throw _privateConstructorUsedError; // v0.18.0
   bool? get creatorIsModerator =>
-      throw _privateConstructorUsedError; // Only available in lemmy v0.19.0 and above
+      throw _privateConstructorUsedError; // v0.19.0 (required)
   bool? get creatorIsAdmin =>
-      throw _privateConstructorUsedError; // Only available in lemmy v0.19.0 and above
-  PostAggregates get counts => throw _privateConstructorUsedError;
-  SubscribedType get subscribed => throw _privateConstructorUsedError;
-  bool get saved => throw _privateConstructorUsedError;
-  bool get read => throw _privateConstructorUsedError;
-  bool get creatorBlocked => throw _privateConstructorUsedError;
-  int? get myVote => throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.19.0 (required)
+  PostAggregates get counts => throw _privateConstructorUsedError; // v0.18.0
+  SubscribedType get subscribed =>
+      throw _privateConstructorUsedError; // v0.18.0
+  bool get saved => throw _privateConstructorUsedError; // v0.18.0
+  bool get read => throw _privateConstructorUsedError; // v0.18.0
+  bool? get hidden => throw _privateConstructorUsedError; // v0.19.4 (required)
+  bool get creatorBlocked => throw _privateConstructorUsedError; // v0.18.0
+  int? get myVote => throw _privateConstructorUsedError; // v0.18.0
   int get unreadComments => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -58,6 +61,7 @@ abstract class $PostViewCopyWith<$Res> {
       SubscribedType subscribed,
       bool saved,
       bool read,
+      bool? hidden,
       bool creatorBlocked,
       int? myVote,
       int unreadComments});
@@ -91,6 +95,7 @@ class _$PostViewCopyWithImpl<$Res, $Val extends PostView>
     Object? subscribed = null,
     Object? saved = null,
     Object? read = null,
+    Object? hidden = freezed,
     Object? creatorBlocked = null,
     Object? myVote = freezed,
     Object? unreadComments = null,
@@ -136,6 +141,10 @@ class _$PostViewCopyWithImpl<$Res, $Val extends PostView>
           ? _value.read
           : read // ignore: cast_nullable_to_non_nullable
               as bool,
+      hidden: freezed == hidden
+          ? _value.hidden
+          : hidden // ignore: cast_nullable_to_non_nullable
+              as bool?,
       creatorBlocked: null == creatorBlocked
           ? _value.creatorBlocked
           : creatorBlocked // ignore: cast_nullable_to_non_nullable
@@ -203,6 +212,7 @@ abstract class _$$PostViewImplCopyWith<$Res>
       SubscribedType subscribed,
       bool saved,
       bool read,
+      bool? hidden,
       bool creatorBlocked,
       int? myVote,
       int unreadComments});
@@ -238,6 +248,7 @@ class __$$PostViewImplCopyWithImpl<$Res>
     Object? subscribed = null,
     Object? saved = null,
     Object? read = null,
+    Object? hidden = freezed,
     Object? creatorBlocked = null,
     Object? myVote = freezed,
     Object? unreadComments = null,
@@ -283,6 +294,10 @@ class __$$PostViewImplCopyWithImpl<$Res>
           ? _value.read
           : read // ignore: cast_nullable_to_non_nullable
               as bool,
+      hidden: freezed == hidden
+          ? _value.hidden
+          : hidden // ignore: cast_nullable_to_non_nullable
+              as bool?,
       creatorBlocked: null == creatorBlocked
           ? _value.creatorBlocked
           : creatorBlocked // ignore: cast_nullable_to_non_nullable
@@ -314,6 +329,7 @@ class _$PostViewImpl extends _PostView {
       required this.subscribed,
       required this.saved,
       required this.read,
+      this.hidden,
       required this.creatorBlocked,
       this.myVote,
       required this.unreadComments})
@@ -324,40 +340,53 @@ class _$PostViewImpl extends _PostView {
 
   @override
   final Post post;
+// v0.18.0
   @override
   final Person creator;
+// v0.18.0
   @override
   final Community community;
+// v0.18.0
   @override
   final bool creatorBannedFromCommunity;
+// v0.18.0
   @override
   final bool? creatorIsModerator;
-// Only available in lemmy v0.19.0 and above
+// v0.19.0 (required)
   @override
   final bool? creatorIsAdmin;
-// Only available in lemmy v0.19.0 and above
+// v0.19.0 (required)
   @override
   final PostAggregates counts;
+// v0.18.0
   @override
   final SubscribedType subscribed;
+// v0.18.0
   @override
   final bool saved;
+// v0.18.0
   @override
   final bool read;
+// v0.18.0
+  @override
+  final bool? hidden;
+// v0.19.4 (required)
   @override
   final bool creatorBlocked;
+// v0.18.0
   @override
   final int? myVote;
+// v0.18.0
   @override
   final int unreadComments;
 
   @override
   String toString() {
-    return 'PostView(post: $post, creator: $creator, community: $community, creatorBannedFromCommunity: $creatorBannedFromCommunity, creatorIsModerator: $creatorIsModerator, creatorIsAdmin: $creatorIsAdmin, counts: $counts, subscribed: $subscribed, saved: $saved, read: $read, creatorBlocked: $creatorBlocked, myVote: $myVote, unreadComments: $unreadComments)';
+    return 'PostView(post: $post, creator: $creator, community: $community, creatorBannedFromCommunity: $creatorBannedFromCommunity, creatorIsModerator: $creatorIsModerator, creatorIsAdmin: $creatorIsAdmin, counts: $counts, subscribed: $subscribed, saved: $saved, read: $read, hidden: $hidden, creatorBlocked: $creatorBlocked, myVote: $myVote, unreadComments: $unreadComments)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PostViewImpl &&
@@ -378,6 +407,7 @@ class _$PostViewImpl extends _PostView {
                 other.subscribed == subscribed) &&
             (identical(other.saved, saved) || other.saved == saved) &&
             (identical(other.read, read) || other.read == read) &&
+            (identical(other.hidden, hidden) || other.hidden == hidden) &&
             (identical(other.creatorBlocked, creatorBlocked) ||
                 other.creatorBlocked == creatorBlocked) &&
             (identical(other.myVote, myVote) || other.myVote == myVote) &&
@@ -399,6 +429,7 @@ class _$PostViewImpl extends _PostView {
       subscribed,
       saved,
       read,
+      hidden,
       creatorBlocked,
       myVote,
       unreadComments);
@@ -429,6 +460,7 @@ abstract class _PostView extends PostView {
       required final SubscribedType subscribed,
       required final bool saved,
       required final bool read,
+      final bool? hidden,
       required final bool creatorBlocked,
       final int? myVote,
       required final int unreadComments}) = _$PostViewImpl;
@@ -439,29 +471,31 @@ abstract class _PostView extends PostView {
 
   @override
   Post get post;
-  @override
+  @override // v0.18.0
   Person get creator;
-  @override
+  @override // v0.18.0
   Community get community;
-  @override
+  @override // v0.18.0
   bool get creatorBannedFromCommunity;
-  @override
+  @override // v0.18.0
   bool? get creatorIsModerator;
-  @override // Only available in lemmy v0.19.0 and above
+  @override // v0.19.0 (required)
   bool? get creatorIsAdmin;
-  @override // Only available in lemmy v0.19.0 and above
+  @override // v0.19.0 (required)
   PostAggregates get counts;
-  @override
+  @override // v0.18.0
   SubscribedType get subscribed;
-  @override
+  @override // v0.18.0
   bool get saved;
-  @override
+  @override // v0.18.0
   bool get read;
-  @override
+  @override // v0.18.0
+  bool? get hidden;
+  @override // v0.19.4 (required)
   bool get creatorBlocked;
-  @override
+  @override // v0.18.0
   int? get myVote;
-  @override
+  @override // v0.18.0
   int get unreadComments;
   @override
   @JsonKey(ignore: true)

@@ -12,7 +12,7 @@ part of 'community_aggregates.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CommunityAggregates _$CommunityAggregatesFromJson(Map<String, dynamic> json) {
   return _CommunityAggregates.fromJson(json);
@@ -21,18 +21,21 @@ CommunityAggregates _$CommunityAggregatesFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$CommunityAggregates {
   @deprecated
-  int? get id => throw _privateConstructorUsedError;
-  int get communityId => throw _privateConstructorUsedError;
-  int get subscribers => throw _privateConstructorUsedError;
-  int get posts => throw _privateConstructorUsedError;
-  int get comments => throw _privateConstructorUsedError;
-  DateTime get published => throw _privateConstructorUsedError;
-  int get usersActiveDay => throw _privateConstructorUsedError;
-  int get usersActiveWeek => throw _privateConstructorUsedError;
-  int get usersActiveMonth => throw _privateConstructorUsedError;
-  int get usersActiveHalfYear => throw _privateConstructorUsedError;
+  int? get id =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
+  int get communityId => throw _privateConstructorUsedError; // v0.18.0
+  int get subscribers => throw _privateConstructorUsedError; // v0.18.0
+  int get posts => throw _privateConstructorUsedError; // v0.18.0
+  int get comments => throw _privateConstructorUsedError; // v0.18.0
+  DateTime get published => throw _privateConstructorUsedError; // v0.18.0
+  int get usersActiveDay => throw _privateConstructorUsedError; // v0.18.0
+  int get usersActiveWeek => throw _privateConstructorUsedError; // v0.18.0
+  int get usersActiveMonth => throw _privateConstructorUsedError; // v0.18.0
+  int get usersActiveHalfYear => throw _privateConstructorUsedError; // v0.18.0
   @deprecated
-  int? get hotRank => throw _privateConstructorUsedError;
+  int? get hotRank =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
+  int? get subscribersLocal => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -57,7 +60,8 @@ abstract class $CommunityAggregatesCopyWith<$Res> {
       int usersActiveWeek,
       int usersActiveMonth,
       int usersActiveHalfYear,
-      @deprecated int? hotRank});
+      @deprecated int? hotRank,
+      int? subscribersLocal});
 }
 
 /// @nodoc
@@ -84,6 +88,7 @@ class _$CommunityAggregatesCopyWithImpl<$Res, $Val extends CommunityAggregates>
     Object? usersActiveMonth = null,
     Object? usersActiveHalfYear = null,
     Object? hotRank = freezed,
+    Object? subscribersLocal = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -130,6 +135,10 @@ class _$CommunityAggregatesCopyWithImpl<$Res, $Val extends CommunityAggregates>
           ? _value.hotRank
           : hotRank // ignore: cast_nullable_to_non_nullable
               as int?,
+      subscribersLocal: freezed == subscribersLocal
+          ? _value.subscribersLocal
+          : subscribersLocal // ignore: cast_nullable_to_non_nullable
+              as int?,
     ) as $Val);
   }
 }
@@ -153,7 +162,8 @@ abstract class _$$CommunityAggregatesImplCopyWith<$Res>
       int usersActiveWeek,
       int usersActiveMonth,
       int usersActiveHalfYear,
-      @deprecated int? hotRank});
+      @deprecated int? hotRank,
+      int? subscribersLocal});
 }
 
 /// @nodoc
@@ -178,6 +188,7 @@ class __$$CommunityAggregatesImplCopyWithImpl<$Res>
     Object? usersActiveMonth = null,
     Object? usersActiveHalfYear = null,
     Object? hotRank = freezed,
+    Object? subscribersLocal = freezed,
   }) {
     return _then(_$CommunityAggregatesImpl(
       id: freezed == id
@@ -224,6 +235,10 @@ class __$$CommunityAggregatesImplCopyWithImpl<$Res>
           ? _value.hotRank
           : hotRank // ignore: cast_nullable_to_non_nullable
               as int?,
+      subscribersLocal: freezed == subscribersLocal
+          ? _value.subscribersLocal
+          : subscribersLocal // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -243,7 +258,8 @@ class _$CommunityAggregatesImpl extends _CommunityAggregates {
       required this.usersActiveWeek,
       required this.usersActiveMonth,
       required this.usersActiveHalfYear,
-      @deprecated this.hotRank})
+      @deprecated this.hotRank,
+      this.subscribersLocal})
       : super._();
 
   factory _$CommunityAggregatesImpl.fromJson(Map<String, dynamic> json) =>
@@ -252,35 +268,48 @@ class _$CommunityAggregatesImpl extends _CommunityAggregates {
   @override
   @deprecated
   final int? id;
+// v0.18.0 [deprecated in v0.19.0]
   @override
   final int communityId;
+// v0.18.0
   @override
   final int subscribers;
+// v0.18.0
   @override
   final int posts;
+// v0.18.0
   @override
   final int comments;
+// v0.18.0
   @override
   final DateTime published;
+// v0.18.0
   @override
   final int usersActiveDay;
+// v0.18.0
   @override
   final int usersActiveWeek;
+// v0.18.0
   @override
   final int usersActiveMonth;
+// v0.18.0
   @override
   final int usersActiveHalfYear;
+// v0.18.0
   @override
   @deprecated
   final int? hotRank;
+// v0.18.0 [deprecated in v0.19.0]
+  @override
+  final int? subscribersLocal;
 
   @override
   String toString() {
-    return 'CommunityAggregates(id: $id, communityId: $communityId, subscribers: $subscribers, posts: $posts, comments: $comments, published: $published, usersActiveDay: $usersActiveDay, usersActiveWeek: $usersActiveWeek, usersActiveMonth: $usersActiveMonth, usersActiveHalfYear: $usersActiveHalfYear, hotRank: $hotRank)';
+    return 'CommunityAggregates(id: $id, communityId: $communityId, subscribers: $subscribers, posts: $posts, comments: $comments, published: $published, usersActiveDay: $usersActiveDay, usersActiveWeek: $usersActiveWeek, usersActiveMonth: $usersActiveMonth, usersActiveHalfYear: $usersActiveHalfYear, hotRank: $hotRank, subscribersLocal: $subscribersLocal)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CommunityAggregatesImpl &&
@@ -302,7 +331,9 @@ class _$CommunityAggregatesImpl extends _CommunityAggregates {
                 other.usersActiveMonth == usersActiveMonth) &&
             (identical(other.usersActiveHalfYear, usersActiveHalfYear) ||
                 other.usersActiveHalfYear == usersActiveHalfYear) &&
-            (identical(other.hotRank, hotRank) || other.hotRank == hotRank));
+            (identical(other.hotRank, hotRank) || other.hotRank == hotRank) &&
+            (identical(other.subscribersLocal, subscribersLocal) ||
+                other.subscribersLocal == subscribersLocal));
   }
 
   @JsonKey(ignore: true)
@@ -319,7 +350,8 @@ class _$CommunityAggregatesImpl extends _CommunityAggregates {
       usersActiveWeek,
       usersActiveMonth,
       usersActiveHalfYear,
-      hotRank);
+      hotRank,
+      subscribersLocal);
 
   @JsonKey(ignore: true)
   @override
@@ -348,7 +380,8 @@ abstract class _CommunityAggregates extends CommunityAggregates {
       required final int usersActiveWeek,
       required final int usersActiveMonth,
       required final int usersActiveHalfYear,
-      @deprecated final int? hotRank}) = _$CommunityAggregatesImpl;
+      @deprecated final int? hotRank,
+      final int? subscribersLocal}) = _$CommunityAggregatesImpl;
   const _CommunityAggregates._() : super._();
 
   factory _CommunityAggregates.fromJson(Map<String, dynamic> json) =
@@ -357,27 +390,29 @@ abstract class _CommunityAggregates extends CommunityAggregates {
   @override
   @deprecated
   int? get id;
-  @override
+  @override // v0.18.0 [deprecated in v0.19.0]
   int get communityId;
-  @override
+  @override // v0.18.0
   int get subscribers;
-  @override
+  @override // v0.18.0
   int get posts;
-  @override
+  @override // v0.18.0
   int get comments;
-  @override
+  @override // v0.18.0
   DateTime get published;
-  @override
+  @override // v0.18.0
   int get usersActiveDay;
-  @override
+  @override // v0.18.0
   int get usersActiveWeek;
-  @override
+  @override // v0.18.0
   int get usersActiveMonth;
-  @override
+  @override // v0.18.0
   int get usersActiveHalfYear;
-  @override
+  @override // v0.18.0
   @deprecated
   int? get hotRank;
+  @override // v0.18.0 [deprecated in v0.19.0]
+  int? get subscribersLocal;
   @override
   @JsonKey(ignore: true)
   _$$CommunityAggregatesImplCopyWith<_$CommunityAggregatesImpl> get copyWith =>

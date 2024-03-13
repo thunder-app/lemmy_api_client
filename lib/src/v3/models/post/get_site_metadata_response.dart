@@ -10,7 +10,7 @@ part 'get_site_metadata_response.g.dart';
 class GetSiteMetadataResponse with _$GetSiteMetadataResponse {
   @modelSerde
   const factory GetSiteMetadataResponse({
-    required SiteMetadata metadata,
+    required LinkMetadata metadata, // v0.18.0
   }) = _GetSiteMetadataResponse;
 
   const GetSiteMetadataResponse._();

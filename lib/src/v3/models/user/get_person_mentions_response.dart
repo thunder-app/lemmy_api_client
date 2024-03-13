@@ -10,7 +10,7 @@ part 'get_person_mentions_response.g.dart';
 class GetPersonMentionsResponse with _$GetPersonMentionsResponse {
   @modelSerde
   const factory GetPersonMentionsResponse({
-    required List<PersonMentionView> mentions,
+    required List<PersonMentionView> mentions, // v0.18.0
   }) = _GetPersonMentionsResponse;
 
   const GetPersonMentionsResponse._();

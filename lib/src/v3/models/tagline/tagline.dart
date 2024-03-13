@@ -10,11 +10,11 @@ part 'tagline.g.dart';
 class Tagline with _$Tagline {
   @modelSerde
   const factory Tagline({
-    required int id,
-    required int localSiteId,
-    required String content,
-    required DateTime published,
-    DateTime? updated,
+    required int id, // v0.18.0
+    required int localSiteId, // v0.18.0
+    required String content, // v0.18.0
+    required DateTime published, // v0.18.0
+    DateTime? updated, // v0.18.0
   }) = _Tagline;
 
   const Tagline._();

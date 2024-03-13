@@ -24,6 +24,28 @@ Map<String, dynamic> _$$LeaveAdminImplToJson(_$LeaveAdminImpl instance) {
   return val;
 }
 
+_$ListMediaImpl _$$ListMediaImplFromJson(Map<String, dynamic> json) =>
+    _$ListMediaImpl(
+      page: json['page'] as int?,
+      limit: json['limit'] as int?,
+      auth: json['auth'] as String?,
+    );
+
+Map<String, dynamic> _$$ListMediaImplToJson(_$ListMediaImpl instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('page', instance.page);
+  writeNotNull('limit', instance.limit);
+  writeNotNull('auth', instance.auth);
+  return val;
+}
+
 _$GenerateTotpSecretImpl _$$GenerateTotpSecretImplFromJson(
         Map<String, dynamic> json) =>
     _$GenerateTotpSecretImpl(

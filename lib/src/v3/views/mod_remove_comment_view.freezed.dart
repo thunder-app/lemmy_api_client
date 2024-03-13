@@ -12,7 +12,7 @@ part of 'mod_remove_comment_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ModRemoveCommentView _$ModRemoveCommentViewFromJson(Map<String, dynamic> json) {
   return _ModRemoveCommentView.fromJson(json);
@@ -20,11 +20,12 @@ ModRemoveCommentView _$ModRemoveCommentViewFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ModRemoveCommentView {
-  ModRemoveComment get modRemoveComment => throw _privateConstructorUsedError;
-  Person? get moderator => throw _privateConstructorUsedError;
-  Comment get comment => throw _privateConstructorUsedError;
-  Person get commenter => throw _privateConstructorUsedError;
-  Post get post => throw _privateConstructorUsedError;
+  ModRemoveComment get modRemoveComment =>
+      throw _privateConstructorUsedError; // v0.18.0
+  Person? get moderator => throw _privateConstructorUsedError; // v0.18.0
+  Comment get comment => throw _privateConstructorUsedError; // v0.18.0
+  Person get commenter => throw _privateConstructorUsedError; // v0.18.0
+  Post get post => throw _privateConstructorUsedError; // v0.18.0
   Community get community => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -252,14 +253,19 @@ class _$ModRemoveCommentViewImpl extends _ModRemoveCommentView {
 
   @override
   final ModRemoveComment modRemoveComment;
+// v0.18.0
   @override
   final Person? moderator;
+// v0.18.0
   @override
   final Comment comment;
+// v0.18.0
   @override
   final Person commenter;
+// v0.18.0
   @override
   final Post post;
+// v0.18.0
   @override
   final Community community;
 
@@ -269,7 +275,7 @@ class _$ModRemoveCommentViewImpl extends _ModRemoveCommentView {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ModRemoveCommentViewImpl &&
@@ -321,15 +327,15 @@ abstract class _ModRemoveCommentView extends ModRemoveCommentView {
 
   @override
   ModRemoveComment get modRemoveComment;
-  @override
+  @override // v0.18.0
   Person? get moderator;
-  @override
+  @override // v0.18.0
   Comment get comment;
-  @override
+  @override // v0.18.0
   Person get commenter;
-  @override
+  @override // v0.18.0
   Post get post;
-  @override
+  @override // v0.18.0
   Community get community;
   @override
   @JsonKey(ignore: true)

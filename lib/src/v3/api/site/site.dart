@@ -42,45 +42,49 @@ class CreateSite
     implements LemmyApiQuery<SiteResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory CreateSite({
-    required String name,
-    String? sidebar,
-    String? description,
-    String? icon,
-    String? banner,
-    bool? enableDownvotes,
-    bool? enableNsfw,
-    bool? communityCreationAdminOnly,
-    bool? requireEmailVerification,
-    String? applicationQuestion,
-    bool? privateInstance,
-    String? defaultTheme,
-    ListingType? defaultPostListingType,
-    String? legalInformation,
-    bool? applicationEmailAdmins,
-    bool? hideModlogModNames,
-    List<int>? discussionLanguages,
-    String? slurFilterRegex,
-    int? actorNameMaxLength,
-    int? rateLimitMessage,
-    int? rateLimitMessagePerSecond,
-    int? rateLimitPost,
-    int? rateLimitPostPerSecond,
-    int? rateLimitRegister,
-    int? rateLimitRegisterPerSecond,
-    int? rateLimitImage,
-    int? rateLimitImagePerSecond,
-    int? rateLimitComment,
-    int? rateLimitCommentPerSecond,
-    int? rateLimitSearch,
-    int? rateLimitSearchPerSecond,
-    bool? federationEnabled,
-    bool? federationDebug,
-    bool? captchaEnabled,
-    String? captchaDifficulty,
-    List<String>? allowedInstances,
-    List<String>? blockedInstances,
-    List<String>? taglines,
-    required RegistrationMode registrationMode,
+    required String name, // v0.18.0
+    String? sidebar, // v0.18.0
+    String? description, // v0.18.0
+    String? icon, // v0.18.0
+    String? banner, // v0.18.0
+    bool? enableDownvotes, // v0.18.0
+    bool? enableNsfw, // v0.18.0
+    bool? communityCreationAdminOnly, // v0.18.0
+    bool? requireEmailVerification, // v0.18.0
+    String? applicationQuestion, // v0.18.0
+    bool? privateInstance, // v0.18.0
+    String? defaultTheme, // v0.18.0
+    ListingType? defaultPostListingType, // v0.18.0
+    SortType? defaultSortType, // v0.19.4 (optional)
+    String? legalInformation, // v0.18.0
+    bool? applicationEmailAdmins, // v0.18.0
+    bool? hideModlogModNames, // v0.18.0
+    List<int>? discussionLanguages, // v0.18.0
+    String? slurFilterRegex, // v0.18.0
+    int? actorNameMaxLength, // v0.18.0
+    int? rateLimitMessage, // v0.18.0
+    int? rateLimitMessagePerSecond, // v0.18.0
+    int? rateLimitPost, // v0.18.0
+    int? rateLimitPostPerSecond, // v0.18.0
+    int? rateLimitRegister, // v0.18.0
+    int? rateLimitRegisterPerSecond, // v0.18.0
+    int? rateLimitImage, // v0.18.0
+    int? rateLimitImagePerSecond, // v0.18.0
+    int? rateLimitComment, // v0.18.0
+    int? rateLimitCommentPerSecond, // v0.18.0
+    int? rateLimitSearch, // v0.18.0
+    int? rateLimitSearchPerSecond, // v0.18.0
+    bool? federationEnabled, // v0.18.0
+    bool? federationDebug, // v0.18.0
+    @deprecated int? federationWorkerCount, // v0.18.0 [deprecated in v0.18.1]
+    bool? captchaEnabled, // v0.18.0
+    String? captchaDifficulty, // v0.18.0
+    List<String>? allowedInstances, // v0.18.0
+    List<String>? blockedInstances, // v0.18.0
+    List<String>? taglines, // v0.18.0
+    RegistrationMode? registrationMode, // v0.18.0
+    String? contentWarning, // v0.19.4 (optional)
+    String? defaultPostListingMode, // v0.19.4 (optional)
     String? auth,
   }) = _CreateSite;
 
@@ -106,46 +110,50 @@ class EditSite
     implements LemmyApiQuery<SiteResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory EditSite({
-    String? name,
-    String? sidebar,
-    String? description,
-    String? icon,
-    String? banner,
-    bool? enableDownvotes,
-    bool? enableNsfw,
-    bool? communityCreationAdminOnly,
-    bool? requireEmailVerification,
-    String? applicationQuestion,
-    bool? privateInstance,
-    String? defaultTheme,
-    ListingType? defaultPostListingType,
-    String? legalInformation,
-    bool? applicationEmailAdmins,
-    bool? hideModlogModNames,
-    List<int>? discussionLanguages,
-    String? slurFilterRegex,
-    int? actorNameMaxLength,
-    int? rateLimitMessage,
-    int? rateLimitMessagePerSecond,
-    int? rateLimitPost,
-    int? rateLimitPostPerSecond,
-    int? rateLimitRegister,
-    int? rateLimitRegisterPerSecond,
-    int? rateLimitImage,
-    int? rateLimitImagePerSecond,
-    int? rateLimitComment,
-    int? rateLimitCommentPerSecond,
-    int? rateLimitSearch,
-    int? rateLimitSearchPerSecond,
-    bool? federationEnabled,
-    bool? federationDebug,
-    bool? captchaEnabled,
-    String? captchaDifficulty,
-    List<String>? allowedInstances,
-    List<String>? blockedInstances,
-    List<String>? taglines,
-    RegistrationMode? registrationMode,
-    bool? reportsEmailAdmins,
+    String? name, // v0.18.0
+    String? sidebar, // v0.18.0
+    String? description, // v0.18.0
+    String? icon, // v0.18.0
+    String? banner, // v0.18.0
+    bool? enableDownvotes, // v0.18.0
+    bool? enableNsfw, // v0.18.0
+    bool? communityCreationAdminOnly, // v0.18.0
+    bool? requireEmailVerification, // v0.18.0
+    String? applicationQuestion, // v0.18.0
+    bool? privateInstance, // v0.18.0
+    String? defaultTheme, // v0.18.0
+    ListingType? defaultPostListingType, // v0.18.0
+    SortType? defaultSortType, // v0.19.4 (optional)
+    String? legalInformation, // v0.18.0
+    bool? applicationEmailAdmins, // v0.18.0
+    bool? hideModlogModNames, // v0.18.0
+    List<int>? discussionLanguages, // v0.18.0
+    String? slurFilterRegex, // v0.18.0
+    int? actorNameMaxLength, // v0.18.0
+    int? rateLimitMessage, // v0.18.0
+    int? rateLimitMessagePerSecond, // v0.18.0
+    int? rateLimitPost, // v0.18.0
+    int? rateLimitPostPerSecond, // v0.18.0
+    int? rateLimitRegister, // v0.18.0
+    int? rateLimitRegisterPerSecond, // v0.18.0
+    int? rateLimitImage, // v0.18.0
+    int? rateLimitImagePerSecond, // v0.18.0
+    int? rateLimitComment, // v0.18.0
+    int? rateLimitCommentPerSecond, // v0.18.0
+    int? rateLimitSearch, // v0.18.0
+    int? rateLimitSearchPerSecond, // v0.18.0
+    bool? federationEnabled, // v0.18.0
+    bool? federationDebug, // v0.18.0
+    @deprecated int? federationWorkerCount, // v0.18.0 [deprecated in v0.18.1]
+    bool? captchaEnabled, // v0.18.0
+    String? captchaDifficulty, // v0.18.0
+    List<String>? allowedInstances, // v0.18.0
+    List<String>? blockedInstances, // v0.18.0
+    List<String>? taglines, // v0.18.0
+    RegistrationMode? registrationMode, // v0.18.0
+    bool? reportsEmailAdmins, // v0.18.0
+    String? contentWarning, // v0.19.4 (optional)
+    String? defaultPostListingMode, // v0.19.4 (optional)
     String? auth,
   }) = _EditSite;
 
@@ -176,8 +184,8 @@ class BlockInstance
   @apiSerde
   const factory BlockInstance({
     String? auth,
-    required int instanceId,
-    required bool block,
+    required int instanceId, // v0.19.0 (required)
+    required bool block, // v0.19.0 (required)
   }) = _BlockInstance;
 
   const BlockInstance._();

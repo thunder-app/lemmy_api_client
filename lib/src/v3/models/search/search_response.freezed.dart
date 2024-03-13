@@ -12,7 +12,7 @@ part of 'search_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SearchResponse _$SearchResponseFromJson(Map<String, dynamic> json) {
   return _SearchResponse.fromJson(json);
@@ -21,10 +21,12 @@ SearchResponse _$SearchResponseFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$SearchResponse {
   @JsonKey(name: 'type_')
-  SearchType get type => throw _privateConstructorUsedError;
-  List<CommentView> get comments => throw _privateConstructorUsedError;
-  List<PostView> get posts => throw _privateConstructorUsedError;
-  List<CommunityView> get communities => throw _privateConstructorUsedError;
+  SearchType get type => throw _privateConstructorUsedError; // v0.18.0
+  List<CommentView> get comments =>
+      throw _privateConstructorUsedError; // v0.18.0
+  List<PostView> get posts => throw _privateConstructorUsedError; // v0.18.0
+  List<CommunityView> get communities =>
+      throw _privateConstructorUsedError; // v0.18.0
   List<PersonView> get users => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -171,7 +173,9 @@ class _$SearchResponseImpl extends _SearchResponse {
   @override
   @JsonKey(name: 'type_')
   final SearchType type;
+// v0.18.0
   final List<CommentView> _comments;
+// v0.18.0
   @override
   List<CommentView> get comments {
     if (_comments is EqualUnmodifiableListView) return _comments;
@@ -179,7 +183,9 @@ class _$SearchResponseImpl extends _SearchResponse {
     return EqualUnmodifiableListView(_comments);
   }
 
+// v0.18.0
   final List<PostView> _posts;
+// v0.18.0
   @override
   List<PostView> get posts {
     if (_posts is EqualUnmodifiableListView) return _posts;
@@ -187,7 +193,9 @@ class _$SearchResponseImpl extends _SearchResponse {
     return EqualUnmodifiableListView(_posts);
   }
 
+// v0.18.0
   final List<CommunityView> _communities;
+// v0.18.0
   @override
   List<CommunityView> get communities {
     if (_communities is EqualUnmodifiableListView) return _communities;
@@ -195,7 +203,9 @@ class _$SearchResponseImpl extends _SearchResponse {
     return EqualUnmodifiableListView(_communities);
   }
 
+// v0.18.0
   final List<PersonView> _users;
+// v0.18.0
   @override
   List<PersonView> get users {
     if (_users is EqualUnmodifiableListView) return _users;
@@ -209,7 +219,7 @@ class _$SearchResponseImpl extends _SearchResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SearchResponseImpl &&
@@ -261,13 +271,13 @@ abstract class _SearchResponse extends SearchResponse {
   @override
   @JsonKey(name: 'type_')
   SearchType get type;
-  @override
+  @override // v0.18.0
   List<CommentView> get comments;
-  @override
+  @override // v0.18.0
   List<PostView> get posts;
-  @override
+  @override // v0.18.0
   List<CommunityView> get communities;
-  @override
+  @override // v0.18.0
   List<PersonView> get users;
   @override
   @JsonKey(ignore: true)

@@ -12,7 +12,7 @@ part of 'get_community_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetCommunityResponse _$GetCommunityResponseFromJson(Map<String, dynamic> json) {
   return _GetCommunityResponse.fromJson(json);
@@ -20,10 +20,11 @@ GetCommunityResponse _$GetCommunityResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetCommunityResponse {
-  CommunityView get communityView => throw _privateConstructorUsedError;
-  Site? get site => throw _privateConstructorUsedError;
+  CommunityView get communityView =>
+      throw _privateConstructorUsedError; // v0.18.0
+  Site? get site => throw _privateConstructorUsedError; // v0.18.0
   List<CommunityModeratorView> get moderators =>
-      throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
   List<int> get discussionLanguages => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -183,9 +184,12 @@ class _$GetCommunityResponseImpl extends _GetCommunityResponse {
 
   @override
   final CommunityView communityView;
+// v0.18.0
   @override
   final Site? site;
+// v0.18.0
   final List<CommunityModeratorView> _moderators;
+// v0.18.0
   @override
   List<CommunityModeratorView> get moderators {
     if (_moderators is EqualUnmodifiableListView) return _moderators;
@@ -193,7 +197,9 @@ class _$GetCommunityResponseImpl extends _GetCommunityResponse {
     return EqualUnmodifiableListView(_moderators);
   }
 
+// v0.18.0
   final List<int> _discussionLanguages;
+// v0.18.0
   @override
   List<int> get discussionLanguages {
     if (_discussionLanguages is EqualUnmodifiableListView)
@@ -208,7 +214,7 @@ class _$GetCommunityResponseImpl extends _GetCommunityResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetCommunityResponseImpl &&
@@ -260,11 +266,11 @@ abstract class _GetCommunityResponse extends GetCommunityResponse {
 
   @override
   CommunityView get communityView;
-  @override
+  @override // v0.18.0
   Site? get site;
-  @override
+  @override // v0.18.0
   List<CommunityModeratorView> get moderators;
-  @override
+  @override // v0.18.0
   List<int> get discussionLanguages;
   @override
   @JsonKey(ignore: true)

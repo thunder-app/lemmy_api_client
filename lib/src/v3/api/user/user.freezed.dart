@@ -12,7 +12,7 @@ part of 'user.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 LeaveAdmin _$LeaveAdminFromJson(Map<String, dynamic> json) {
   return _LeaveAdmin.fromJson(json);
@@ -112,7 +112,7 @@ class _$LeaveAdminImpl extends _LeaveAdmin {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LeaveAdminImpl &&
@@ -149,6 +149,180 @@ abstract class _LeaveAdmin extends LeaveAdmin {
   @override
   @JsonKey(ignore: true)
   _$$LeaveAdminImplCopyWith<_$LeaveAdminImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ListMedia _$ListMediaFromJson(Map<String, dynamic> json) {
+  return _ListMedia.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ListMedia {
+  int? get page => throw _privateConstructorUsedError; // v0.19.4 (optional)
+  int? get limit => throw _privateConstructorUsedError; // v0.19.4 (optional)
+  String? get auth => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ListMediaCopyWith<ListMedia> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ListMediaCopyWith<$Res> {
+  factory $ListMediaCopyWith(ListMedia value, $Res Function(ListMedia) then) =
+      _$ListMediaCopyWithImpl<$Res, ListMedia>;
+  @useResult
+  $Res call({int? page, int? limit, String? auth});
+}
+
+/// @nodoc
+class _$ListMediaCopyWithImpl<$Res, $Val extends ListMedia>
+    implements $ListMediaCopyWith<$Res> {
+  _$ListMediaCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(_value.copyWith(
+      page: freezed == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: freezed == limit
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      auth: freezed == auth
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$ListMediaImplCopyWith<$Res>
+    implements $ListMediaCopyWith<$Res> {
+  factory _$$ListMediaImplCopyWith(
+          _$ListMediaImpl value, $Res Function(_$ListMediaImpl) then) =
+      __$$ListMediaImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int? page, int? limit, String? auth});
+}
+
+/// @nodoc
+class __$$ListMediaImplCopyWithImpl<$Res>
+    extends _$ListMediaCopyWithImpl<$Res, _$ListMediaImpl>
+    implements _$$ListMediaImplCopyWith<$Res> {
+  __$$ListMediaImplCopyWithImpl(
+      _$ListMediaImpl _value, $Res Function(_$ListMediaImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(_$ListMediaImpl(
+      page: freezed == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: freezed == limit
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      auth: freezed == auth
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+@apiSerde
+class _$ListMediaImpl extends _ListMedia {
+  const _$ListMediaImpl({this.page, this.limit, this.auth}) : super._();
+
+  factory _$ListMediaImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ListMediaImplFromJson(json);
+
+  @override
+  final int? page;
+// v0.19.4 (optional)
+  @override
+  final int? limit;
+// v0.19.4 (optional)
+  @override
+  final String? auth;
+
+  @override
+  String toString() {
+    return 'ListMedia(page: $page, limit: $limit, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ListMediaImpl &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, page, limit, auth);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ListMediaImplCopyWith<_$ListMediaImpl> get copyWith =>
+      __$$ListMediaImplCopyWithImpl<_$ListMediaImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ListMediaImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _ListMedia extends ListMedia {
+  const factory _ListMedia(
+      {final int? page,
+      final int? limit,
+      final String? auth}) = _$ListMediaImpl;
+  const _ListMedia._() : super._();
+
+  factory _ListMedia.fromJson(Map<String, dynamic> json) =
+      _$ListMediaImpl.fromJson;
+
+  @override
+  int? get page;
+  @override // v0.19.4 (optional)
+  int? get limit;
+  @override // v0.19.4 (optional)
+  String? get auth;
+  @override
+  @JsonKey(ignore: true)
+  _$$ListMediaImplCopyWith<_$ListMediaImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -250,7 +424,7 @@ class _$GenerateTotpSecretImpl extends _GenerateTotpSecret {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GenerateTotpSecretImpl &&
@@ -390,7 +564,7 @@ class _$ExportSettingsImpl extends _ExportSettings {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ExportSettingsImpl &&
@@ -542,7 +716,7 @@ class _$ImportSettingsImpl extends _ImportSettings {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ImportSettingsImpl &&
@@ -686,7 +860,7 @@ class _$ValidateAuthImpl extends _ValidateAuth {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ValidateAuthImpl &&
@@ -733,7 +907,8 @@ UpdateTotp _$UpdateTotpFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$UpdateTotp {
   String? get auth => throw _privateConstructorUsedError;
-  String get totpToken => throw _privateConstructorUsedError;
+  String get totpToken =>
+      throw _privateConstructorUsedError; // v0.19.0 (required)
   bool get enabled => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -843,6 +1018,7 @@ class _$UpdateTotpImpl extends _UpdateTotp {
   final String? auth;
   @override
   final String totpToken;
+// v0.19.0 (required)
   @override
   final bool enabled;
 
@@ -852,7 +1028,7 @@ class _$UpdateTotpImpl extends _UpdateTotp {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UpdateTotpImpl &&
@@ -894,7 +1070,7 @@ abstract class _UpdateTotp extends UpdateTotp {
   String? get auth;
   @override
   String get totpToken;
-  @override
+  @override // v0.19.0 (required)
   bool get enabled;
   @override
   @JsonKey(ignore: true)
@@ -908,14 +1084,14 @@ Register _$RegisterFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Register {
-  String get username => throw _privateConstructorUsedError;
-  String get password => throw _privateConstructorUsedError;
-  String get passwordVerify => throw _privateConstructorUsedError;
-  bool get showNsfw => throw _privateConstructorUsedError;
-  String? get email => throw _privateConstructorUsedError;
-  String? get captchaUuid => throw _privateConstructorUsedError;
-  String? get captchaAnswer => throw _privateConstructorUsedError;
-  String? get honeypot => throw _privateConstructorUsedError;
+  String get username => throw _privateConstructorUsedError; // v0.18.0
+  String get password => throw _privateConstructorUsedError; // v0.18.0
+  String get passwordVerify => throw _privateConstructorUsedError; // v0.18.0
+  bool get showNsfw => throw _privateConstructorUsedError; // v0.18.0
+  String? get email => throw _privateConstructorUsedError; // v0.18.0
+  String? get captchaUuid => throw _privateConstructorUsedError; // v0.18.0
+  String? get captchaAnswer => throw _privateConstructorUsedError; // v0.18.0
+  String? get honeypot => throw _privateConstructorUsedError; // v0.18.0
   String? get answer => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1108,20 +1284,28 @@ class _$RegisterImpl extends _Register {
 
   @override
   final String username;
+// v0.18.0
   @override
   final String password;
+// v0.18.0
   @override
   final String passwordVerify;
+// v0.18.0
   @override
   final bool showNsfw;
+// v0.18.0
   @override
   final String? email;
+// v0.18.0
   @override
   final String? captchaUuid;
+// v0.18.0
   @override
   final String? captchaAnswer;
+// v0.18.0
   @override
   final String? honeypot;
+// v0.18.0
   @override
   final String? answer;
 
@@ -1131,7 +1315,7 @@ class _$RegisterImpl extends _Register {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RegisterImpl &&
@@ -1199,21 +1383,21 @@ abstract class _Register extends Register {
 
   @override
   String get username;
-  @override
+  @override // v0.18.0
   String get password;
-  @override
+  @override // v0.18.0
   String get passwordVerify;
-  @override
+  @override // v0.18.0
   bool get showNsfw;
-  @override
+  @override // v0.18.0
   String? get email;
-  @override
+  @override // v0.18.0
   String? get captchaUuid;
-  @override
+  @override // v0.18.0
   String? get captchaAnswer;
-  @override
+  @override // v0.18.0
   String? get honeypot;
-  @override
+  @override // v0.18.0
   String? get answer;
   @override
   @JsonKey(ignore: true)
@@ -1227,8 +1411,8 @@ Login _$LoginFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Login {
-  String get usernameOrEmail => throw _privateConstructorUsedError;
-  String get password => throw _privateConstructorUsedError;
+  String get usernameOrEmail => throw _privateConstructorUsedError; // v0.18.0
+  String get password => throw _privateConstructorUsedError; // v0.18.0
   @JsonKey(name: 'totp_2fa_token')
   String? get totp2faToken => throw _privateConstructorUsedError;
 
@@ -1342,8 +1526,10 @@ class _$LoginImpl extends _Login {
 
   @override
   final String usernameOrEmail;
+// v0.18.0
   @override
   final String password;
+// v0.18.0
   @override
   @JsonKey(name: 'totp_2fa_token')
   final String? totp2faToken;
@@ -1354,7 +1540,7 @@ class _$LoginImpl extends _Login {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LoginImpl &&
@@ -1397,9 +1583,9 @@ abstract class _Login extends Login {
 
   @override
   String get usernameOrEmail;
-  @override
+  @override // v0.18.0
   String get password;
-  @override
+  @override // v0.18.0
   @JsonKey(name: 'totp_2fa_token')
   String? get totp2faToken;
   @override
@@ -1465,7 +1651,7 @@ class _$LogoutImpl extends _Logout {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType && other is _$LogoutImpl);
   }
@@ -1495,13 +1681,13 @@ GetPersonDetails _$GetPersonDetailsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetPersonDetails {
-  int? get personId => throw _privateConstructorUsedError;
-  String? get username => throw _privateConstructorUsedError;
-  SortType? get sort => throw _privateConstructorUsedError;
-  int? get page => throw _privateConstructorUsedError;
-  int? get limit => throw _privateConstructorUsedError;
-  int? get communityId => throw _privateConstructorUsedError;
-  bool? get savedOnly => throw _privateConstructorUsedError;
+  int? get personId => throw _privateConstructorUsedError; // v0.18.0
+  String? get username => throw _privateConstructorUsedError; // v0.18.0
+  SortType? get sort => throw _privateConstructorUsedError; // v0.18.0
+  int? get page => throw _privateConstructorUsedError; // v0.18.0
+  int? get limit => throw _privateConstructorUsedError; // v0.18.0
+  int? get communityId => throw _privateConstructorUsedError; // v0.18.0
+  bool? get savedOnly => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1682,18 +1868,25 @@ class _$GetPersonDetailsImpl extends _GetPersonDetails {
 
   @override
   final int? personId;
+// v0.18.0
   @override
   final String? username;
+// v0.18.0
   @override
   final SortType? sort;
+// v0.18.0
   @override
   final int? page;
+// v0.18.0
   @override
   final int? limit;
+// v0.18.0
   @override
   final int? communityId;
+// v0.18.0
   @override
   final bool? savedOnly;
+// v0.18.0
   @override
   final String? auth;
 
@@ -1703,7 +1896,7 @@ class _$GetPersonDetailsImpl extends _GetPersonDetails {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetPersonDetailsImpl &&
@@ -1758,19 +1951,19 @@ abstract class _GetPersonDetails extends GetPersonDetails {
 
   @override
   int? get personId;
-  @override
+  @override // v0.18.0
   String? get username;
-  @override
+  @override // v0.18.0
   SortType? get sort;
-  @override
+  @override // v0.18.0
   int? get page;
-  @override
+  @override // v0.18.0
   int? get limit;
-  @override
+  @override // v0.18.0
   int? get communityId;
-  @override
+  @override // v0.18.0
   bool? get savedOnly;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -1784,10 +1977,10 @@ GetPersonMentions _$GetPersonMentionsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetPersonMentions {
-  CommentSortType? get sort => throw _privateConstructorUsedError;
-  int? get page => throw _privateConstructorUsedError;
-  int? get limit => throw _privateConstructorUsedError;
-  bool? get unreadOnly => throw _privateConstructorUsedError;
+  CommentSortType? get sort => throw _privateConstructorUsedError; // v0.18.0
+  int? get page => throw _privateConstructorUsedError; // v0.18.0
+  int? get limit => throw _privateConstructorUsedError; // v0.18.0
+  bool? get unreadOnly => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1925,12 +2118,16 @@ class _$GetPersonMentionsImpl extends _GetPersonMentions {
 
   @override
   final CommentSortType? sort;
+// v0.18.0
   @override
   final int? page;
+// v0.18.0
   @override
   final int? limit;
+// v0.18.0
   @override
   final bool? unreadOnly;
+// v0.18.0
   @override
   final String? auth;
 
@@ -1940,7 +2137,7 @@ class _$GetPersonMentionsImpl extends _GetPersonMentions {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetPersonMentionsImpl &&
@@ -1986,13 +2183,13 @@ abstract class _GetPersonMentions extends GetPersonMentions {
 
   @override
   CommentSortType? get sort;
-  @override
+  @override // v0.18.0
   int? get page;
-  @override
+  @override // v0.18.0
   int? get limit;
-  @override
+  @override // v0.18.0
   bool? get unreadOnly;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -2007,8 +2204,8 @@ MarkPersonMentionAsRead _$MarkPersonMentionAsReadFromJson(
 
 /// @nodoc
 mixin _$MarkPersonMentionAsRead {
-  int get personMentionId => throw _privateConstructorUsedError;
-  bool get read => throw _privateConstructorUsedError;
+  int get personMentionId => throw _privateConstructorUsedError; // v0.18.0
+  bool get read => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2120,8 +2317,10 @@ class _$MarkPersonMentionAsReadImpl extends _MarkPersonMentionAsRead {
 
   @override
   final int personMentionId;
+// v0.18.0
   @override
   final bool read;
+// v0.18.0
   @override
   final String? auth;
 
@@ -2131,7 +2330,7 @@ class _$MarkPersonMentionAsReadImpl extends _MarkPersonMentionAsRead {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MarkPersonMentionAsReadImpl &&
@@ -2172,9 +2371,9 @@ abstract class _MarkPersonMentionAsRead extends MarkPersonMentionAsRead {
 
   @override
   int get personMentionId;
-  @override
+  @override // v0.18.0
   bool get read;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -2188,10 +2387,10 @@ GetReplies _$GetRepliesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetReplies {
-  CommentSortType? get sort => throw _privateConstructorUsedError;
-  int? get page => throw _privateConstructorUsedError;
-  int? get limit => throw _privateConstructorUsedError;
-  bool? get unreadOnly => throw _privateConstructorUsedError;
+  CommentSortType? get sort => throw _privateConstructorUsedError; // v0.18.0
+  int? get page => throw _privateConstructorUsedError; // v0.18.0
+  int? get limit => throw _privateConstructorUsedError; // v0.18.0
+  bool? get unreadOnly => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2329,12 +2528,16 @@ class _$GetRepliesImpl extends _GetReplies {
 
   @override
   final CommentSortType? sort;
+// v0.18.0
   @override
   final int? page;
+// v0.18.0
   @override
   final int? limit;
+// v0.18.0
   @override
   final bool? unreadOnly;
+// v0.18.0
   @override
   final String? auth;
 
@@ -2344,7 +2547,7 @@ class _$GetRepliesImpl extends _GetReplies {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetRepliesImpl &&
@@ -2389,13 +2592,13 @@ abstract class _GetReplies extends GetReplies {
 
   @override
   CommentSortType? get sort;
-  @override
+  @override // v0.18.0
   int? get page;
-  @override
+  @override // v0.18.0
   int? get limit;
-  @override
+  @override // v0.18.0
   bool? get unreadOnly;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -2409,11 +2612,11 @@ BanPerson _$BanPersonFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$BanPerson {
-  int get personId => throw _privateConstructorUsedError;
-  bool get ban => throw _privateConstructorUsedError;
-  bool? get removeData => throw _privateConstructorUsedError;
-  String? get reason => throw _privateConstructorUsedError;
-  int? get expires => throw _privateConstructorUsedError;
+  int get personId => throw _privateConstructorUsedError; // v0.18.0
+  bool get ban => throw _privateConstructorUsedError; // v0.18.0
+  bool? get removeData => throw _privateConstructorUsedError; // v0.18.0
+  String? get reason => throw _privateConstructorUsedError; // v0.18.0
+  int? get expires => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2567,14 +2770,19 @@ class _$BanPersonImpl extends _BanPerson {
 
   @override
   final int personId;
+// v0.18.0
   @override
   final bool ban;
+// v0.18.0
   @override
   final bool? removeData;
+// v0.18.0
   @override
   final String? reason;
+// v0.18.0
   @override
   final int? expires;
+// v0.18.0
   @override
   final String? auth;
 
@@ -2584,7 +2792,7 @@ class _$BanPersonImpl extends _BanPerson {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BanPersonImpl &&
@@ -2632,15 +2840,15 @@ abstract class _BanPerson extends BanPerson {
 
   @override
   int get personId;
-  @override
+  @override // v0.18.0
   bool get ban;
-  @override
+  @override // v0.18.0
   bool? get removeData;
-  @override
+  @override // v0.18.0
   String? get reason;
-  @override
+  @override // v0.18.0
   int? get expires;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -2746,7 +2954,7 @@ class _$GetBannedPersonsImpl extends _GetBannedPersons {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetBannedPersonsImpl &&
@@ -2794,8 +3002,8 @@ BlockPerson _$BlockPersonFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$BlockPerson {
-  int get personId => throw _privateConstructorUsedError;
-  bool get block => throw _privateConstructorUsedError;
+  int get personId => throw _privateConstructorUsedError; // v0.18.0
+  bool get block => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2903,8 +3111,10 @@ class _$BlockPersonImpl extends _BlockPerson {
 
   @override
   final int personId;
+// v0.18.0
   @override
   final bool block;
+// v0.18.0
   @override
   final String? auth;
 
@@ -2914,7 +3124,7 @@ class _$BlockPersonImpl extends _BlockPerson {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BlockPersonImpl &&
@@ -2954,9 +3164,9 @@ abstract class _BlockPerson extends BlockPerson {
 
   @override
   int get personId;
-  @override
+  @override // v0.18.0
   bool get block;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -3062,7 +3272,7 @@ class _$GetCaptchaImpl extends _GetCaptcha {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetCaptchaImpl &&
@@ -3108,9 +3318,9 @@ DeleteAccount _$DeleteAccountFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$DeleteAccount {
-  String get password => throw _privateConstructorUsedError;
+  String get password => throw _privateConstructorUsedError; // v0.18.0
   bool? get deleteContent =>
-      throw _privateConstructorUsedError; // Required in lemmy v0.19.0 and above
+      throw _privateConstructorUsedError; // v0.19.0 (required)
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -3218,9 +3428,10 @@ class _$DeleteAccountImpl extends _DeleteAccount {
 
   @override
   final String password;
+// v0.18.0
   @override
   final bool? deleteContent;
-// Required in lemmy v0.19.0 and above
+// v0.19.0 (required)
   @override
   final String? auth;
 
@@ -3230,7 +3441,7 @@ class _$DeleteAccountImpl extends _DeleteAccount {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeleteAccountImpl &&
@@ -3271,9 +3482,9 @@ abstract class _DeleteAccount extends DeleteAccount {
 
   @override
   String get password;
-  @override
+  @override // v0.18.0
   bool? get deleteContent;
-  @override // Required in lemmy v0.19.0 and above
+  @override // v0.19.0 (required)
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -3379,7 +3590,7 @@ class _$PasswordResetImpl extends _PasswordReset {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PasswordResetImpl &&
@@ -3427,8 +3638,8 @@ PasswordChangeAfterReset _$PasswordChangeAfterResetFromJson(
 
 /// @nodoc
 mixin _$PasswordChangeAfterReset {
-  String get token => throw _privateConstructorUsedError;
-  String get password => throw _privateConstructorUsedError;
+  String get token => throw _privateConstructorUsedError; // v0.18.0
+  String get password => throw _privateConstructorUsedError; // v0.18.0
   String get passwordVerify => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -3542,8 +3753,10 @@ class _$PasswordChangeAfterResetImpl extends _PasswordChangeAfterReset {
 
   @override
   final String token;
+// v0.18.0
   @override
   final String password;
+// v0.18.0
   @override
   final String passwordVerify;
 
@@ -3553,7 +3766,7 @@ class _$PasswordChangeAfterResetImpl extends _PasswordChangeAfterReset {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PasswordChangeAfterResetImpl &&
@@ -3595,9 +3808,9 @@ abstract class _PasswordChangeAfterReset extends PasswordChangeAfterReset {
 
   @override
   String get token;
-  @override
+  @override // v0.18.0
   String get password;
-  @override
+  @override // v0.18.0
   String get passwordVerify;
   @override
   @JsonKey(ignore: true)
@@ -3703,7 +3916,7 @@ class _$MarkAllAsReadImpl extends _MarkAllAsRead {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MarkAllAsReadImpl &&
@@ -3749,40 +3962,47 @@ SaveUserSettings _$SaveUserSettingsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SaveUserSettings {
-  bool? get showNsfw => throw _privateConstructorUsedError;
-  bool? get blurNsfw => throw _privateConstructorUsedError;
-  bool? get autoExpand => throw _privateConstructorUsedError;
-  bool? get showScores => throw _privateConstructorUsedError;
-  String? get theme => throw _privateConstructorUsedError;
-  SortType? get defaultSortType => throw _privateConstructorUsedError;
-  ListingType? get defaultListingType => throw _privateConstructorUsedError;
-  String? get interfaceLanguage => throw _privateConstructorUsedError;
-  String? get avatar => throw _privateConstructorUsedError;
-  String? get banner => throw _privateConstructorUsedError;
-  String? get displayName => throw _privateConstructorUsedError;
-  String? get email => throw _privateConstructorUsedError;
-  String? get bio => throw _privateConstructorUsedError;
-  String? get matrixUserId => throw _privateConstructorUsedError;
-  bool? get showAvatars => throw _privateConstructorUsedError;
-  bool? get sendNotificationsToEmail => throw _privateConstructorUsedError;
-  bool? get botAccount => throw _privateConstructorUsedError;
-  bool? get showBotAccounts => throw _privateConstructorUsedError;
-  bool? get showReadPosts => throw _privateConstructorUsedError;
+  bool? get showNsfw => throw _privateConstructorUsedError; // v0.18.0
+  bool? get blurNsfw => throw _privateConstructorUsedError; // v0.18.3
+  bool? get autoExpand => throw _privateConstructorUsedError; // v0.18.3
+  bool? get showScores => throw _privateConstructorUsedError; // v0.18.0
+  String? get theme => throw _privateConstructorUsedError; // v0.18.0
+  SortType? get defaultSortType =>
+      throw _privateConstructorUsedError; // v0.18.0
+  ListingType? get defaultListingType =>
+      throw _privateConstructorUsedError; // v0.18.0
+  String? get interfaceLanguage =>
+      throw _privateConstructorUsedError; // v0.18.0
+  String? get avatar => throw _privateConstructorUsedError; // v0.18.0
+  String? get banner => throw _privateConstructorUsedError; // v0.18.0
+  String? get displayName => throw _privateConstructorUsedError; // v0.18.0
+  String? get email => throw _privateConstructorUsedError; // v0.18.0
+  String? get bio => throw _privateConstructorUsedError; // v0.18.0
+  String? get matrixUserId => throw _privateConstructorUsedError; // v0.18.0
+  bool? get showAvatars => throw _privateConstructorUsedError; // v0.18.0
+  bool? get sendNotificationsToEmail =>
+      throw _privateConstructorUsedError; // v0.18.0
+  bool? get botAccount => throw _privateConstructorUsedError; // v0.18.0
+  bool? get showBotAccounts => throw _privateConstructorUsedError; // v0.18.0
+  bool? get showReadPosts => throw _privateConstructorUsedError; // v0.18.0
   @deprecated
-  bool? get showNewPostNotifs => throw _privateConstructorUsedError;
-  List<int>? get discussionLanguages => throw _privateConstructorUsedError;
+  bool? get showNewPostNotifs =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
+  List<int>? get discussionLanguages =>
+      throw _privateConstructorUsedError; // v0.18.0
   @deprecated
-  bool? get generateTotp2fa => throw _privateConstructorUsedError;
+  bool? get generateTotp2fa =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
   String? get auth => throw _privateConstructorUsedError;
-  bool? get openLinksInNewTab => throw _privateConstructorUsedError;
+  bool? get openLinksInNewTab => throw _privateConstructorUsedError; // v0.18.1
   bool? get infiniteScrollEnabled =>
-      throw _privateConstructorUsedError; // Available in lemmy v0.19.0 and above
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
   String? get postListingMode =>
-      throw _privateConstructorUsedError; // Available in lemmy v0.19.0 and above
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
   bool? get enableKeyboardNavigation =>
-      throw _privateConstructorUsedError; // Available in lemmy v0.19.0 and above
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
   bool? get enableAnimatedImages =>
-      throw _privateConstructorUsedError; // Available in lemmy v0.19.0 and above
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
   bool? get collapseBotComments => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -4237,46 +4457,67 @@ class _$SaveUserSettingsImpl extends _SaveUserSettings {
 
   @override
   final bool? showNsfw;
+// v0.18.0
   @override
   final bool? blurNsfw;
+// v0.18.3
   @override
   final bool? autoExpand;
+// v0.18.3
   @override
   final bool? showScores;
+// v0.18.0
   @override
   final String? theme;
+// v0.18.0
   @override
   final SortType? defaultSortType;
+// v0.18.0
   @override
   final ListingType? defaultListingType;
+// v0.18.0
   @override
   final String? interfaceLanguage;
+// v0.18.0
   @override
   final String? avatar;
+// v0.18.0
   @override
   final String? banner;
+// v0.18.0
   @override
   final String? displayName;
+// v0.18.0
   @override
   final String? email;
+// v0.18.0
   @override
   final String? bio;
+// v0.18.0
   @override
   final String? matrixUserId;
+// v0.18.0
   @override
   final bool? showAvatars;
+// v0.18.0
   @override
   final bool? sendNotificationsToEmail;
+// v0.18.0
   @override
   final bool? botAccount;
+// v0.18.0
   @override
   final bool? showBotAccounts;
+// v0.18.0
   @override
   final bool? showReadPosts;
+// v0.18.0
   @override
   @deprecated
   final bool? showNewPostNotifs;
+// v0.18.0 [deprecated in v0.19.0]
   final List<int>? _discussionLanguages;
+// v0.18.0 [deprecated in v0.19.0]
   @override
   List<int>? get discussionLanguages {
     final value = _discussionLanguages;
@@ -4287,25 +4528,28 @@ class _$SaveUserSettingsImpl extends _SaveUserSettings {
     return EqualUnmodifiableListView(value);
   }
 
+// v0.18.0
   @override
   @deprecated
   final bool? generateTotp2fa;
+// v0.18.0 [deprecated in v0.19.0]
   @override
   final String? auth;
   @override
   final bool? openLinksInNewTab;
+// v0.18.1
   @override
   final bool? infiniteScrollEnabled;
-// Available in lemmy v0.19.0 and above
+// v0.19.0 (optional)
   @override
   final String? postListingMode;
-// Available in lemmy v0.19.0 and above
+// v0.19.0 (optional)
   @override
   final bool? enableKeyboardNavigation;
-// Available in lemmy v0.19.0 and above
+// v0.19.0 (optional)
   @override
   final bool? enableAnimatedImages;
-// Available in lemmy v0.19.0 and above
+// v0.19.0 (optional)
   @override
   final bool? collapseBotComments;
 
@@ -4315,7 +4559,7 @@ class _$SaveUserSettingsImpl extends _SaveUserSettings {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SaveUserSettingsImpl &&
@@ -4463,63 +4707,63 @@ abstract class _SaveUserSettings extends SaveUserSettings {
 
   @override
   bool? get showNsfw;
-  @override
+  @override // v0.18.0
   bool? get blurNsfw;
-  @override
+  @override // v0.18.3
   bool? get autoExpand;
-  @override
+  @override // v0.18.3
   bool? get showScores;
-  @override
+  @override // v0.18.0
   String? get theme;
-  @override
+  @override // v0.18.0
   SortType? get defaultSortType;
-  @override
+  @override // v0.18.0
   ListingType? get defaultListingType;
-  @override
+  @override // v0.18.0
   String? get interfaceLanguage;
-  @override
+  @override // v0.18.0
   String? get avatar;
-  @override
+  @override // v0.18.0
   String? get banner;
-  @override
+  @override // v0.18.0
   String? get displayName;
-  @override
+  @override // v0.18.0
   String? get email;
-  @override
+  @override // v0.18.0
   String? get bio;
-  @override
+  @override // v0.18.0
   String? get matrixUserId;
-  @override
+  @override // v0.18.0
   bool? get showAvatars;
-  @override
+  @override // v0.18.0
   bool? get sendNotificationsToEmail;
-  @override
+  @override // v0.18.0
   bool? get botAccount;
-  @override
+  @override // v0.18.0
   bool? get showBotAccounts;
-  @override
+  @override // v0.18.0
   bool? get showReadPosts;
-  @override
+  @override // v0.18.0
   @deprecated
   bool? get showNewPostNotifs;
-  @override
+  @override // v0.18.0 [deprecated in v0.19.0]
   List<int>? get discussionLanguages;
-  @override
+  @override // v0.18.0
   @deprecated
   bool? get generateTotp2fa;
-  @override
+  @override // v0.18.0 [deprecated in v0.19.0]
   String? get auth;
   @override
   bool? get openLinksInNewTab;
-  @override
+  @override // v0.18.1
   bool? get infiniteScrollEnabled;
-  @override // Available in lemmy v0.19.0 and above
+  @override // v0.19.0 (optional)
   String? get postListingMode;
-  @override // Available in lemmy v0.19.0 and above
+  @override // v0.19.0 (optional)
   bool? get enableKeyboardNavigation;
-  @override // Available in lemmy v0.19.0 and above
+  @override // v0.19.0 (optional)
   bool? get enableAnimatedImages;
-  @override // Available in lemmy v0.19.0 and above
+  @override // v0.19.0 (optional)
   bool? get collapseBotComments;
   @override
   @JsonKey(ignore: true)
@@ -4533,9 +4777,9 @@ ChangePassword _$ChangePasswordFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ChangePassword {
-  String get newPassword => throw _privateConstructorUsedError;
-  String get newPasswordVerify => throw _privateConstructorUsedError;
-  String get oldPassword => throw _privateConstructorUsedError;
+  String get newPassword => throw _privateConstructorUsedError; // v0.18.0
+  String get newPasswordVerify => throw _privateConstructorUsedError; // v0.18.0
+  String get oldPassword => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -4664,10 +4908,13 @@ class _$ChangePasswordImpl extends _ChangePassword {
 
   @override
   final String newPassword;
+// v0.18.0
   @override
   final String newPasswordVerify;
+// v0.18.0
   @override
   final String oldPassword;
+// v0.18.0
   @override
   final String? auth;
 
@@ -4677,7 +4924,7 @@ class _$ChangePasswordImpl extends _ChangePassword {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ChangePasswordImpl &&
@@ -4723,11 +4970,11 @@ abstract class _ChangePassword extends ChangePassword {
 
   @override
   String get newPassword;
-  @override
+  @override // v0.18.0
   String get newPasswordVerify;
-  @override
+  @override // v0.18.0
   String get oldPassword;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -4741,7 +4988,7 @@ GetReportCount _$GetReportCountFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetReportCount {
-  int? get communityId => throw _privateConstructorUsedError;
+  int? get communityId => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -4837,6 +5084,7 @@ class _$GetReportCountImpl extends _GetReportCount {
 
   @override
   final int? communityId;
+// v0.18.0
   @override
   final String? auth;
 
@@ -4846,7 +5094,7 @@ class _$GetReportCountImpl extends _GetReportCount {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetReportCountImpl &&
@@ -4884,7 +5132,7 @@ abstract class _GetReportCount extends GetReportCount {
 
   @override
   int? get communityId;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -4990,7 +5238,7 @@ class _$GetUnreadCountImpl extends _GetUnreadCount {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetUnreadCountImpl &&
@@ -5129,7 +5377,7 @@ class _$VerifyEmailImpl extends _VerifyEmail {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$VerifyEmailImpl &&

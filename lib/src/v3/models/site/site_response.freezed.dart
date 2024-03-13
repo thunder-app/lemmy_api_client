@@ -12,7 +12,7 @@ part of 'site_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SiteResponse _$SiteResponseFromJson(Map<String, dynamic> json) {
   return _SiteResponse.fromJson(json);
@@ -20,7 +20,7 @@ SiteResponse _$SiteResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SiteResponse {
-  SiteView get siteView => throw _privateConstructorUsedError;
+  SiteView get siteView => throw _privateConstructorUsedError; // v0.18.0
   List<Tagline> get taglines => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -132,7 +132,9 @@ class _$SiteResponseImpl extends _SiteResponse {
 
   @override
   final SiteView siteView;
+// v0.18.0
   final List<Tagline> _taglines;
+// v0.18.0
   @override
   List<Tagline> get taglines {
     if (_taglines is EqualUnmodifiableListView) return _taglines;
@@ -146,7 +148,7 @@ class _$SiteResponseImpl extends _SiteResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SiteResponseImpl &&
@@ -185,7 +187,7 @@ abstract class _SiteResponse extends SiteResponse {
 
   @override
   SiteView get siteView;
-  @override
+  @override // v0.18.0
   List<Tagline> get taglines;
   @override
   @JsonKey(ignore: true)

@@ -10,8 +10,8 @@ part 'custom_emoji_view.g.dart';
 class CustomEmojiView with _$CustomEmojiView {
   @modelSerde
   const factory CustomEmojiView({
-    required CustomEmoji customEmoji,
-    required List<CustomEmojiKeyword> keywords,
+    required CustomEmoji customEmoji, // v0.18.0
+    required List<CustomEmojiKeyword> keywords, // v0.18.0
   }) = _CustomEmojiView;
 
   const CustomEmojiView._();

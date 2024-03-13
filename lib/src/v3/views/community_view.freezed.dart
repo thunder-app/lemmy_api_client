@@ -12,7 +12,7 @@ part of 'community_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CommunityView _$CommunityViewFromJson(Map<String, dynamic> json) {
   return _CommunityView.fromJson(json);
@@ -20,10 +20,13 @@ CommunityView _$CommunityViewFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CommunityView {
-  Community get community => throw _privateConstructorUsedError;
-  SubscribedType get subscribed => throw _privateConstructorUsedError;
-  bool get blocked => throw _privateConstructorUsedError;
-  CommunityAggregates get counts => throw _privateConstructorUsedError;
+  Community get community => throw _privateConstructorUsedError; // v0.18.0
+  SubscribedType get subscribed =>
+      throw _privateConstructorUsedError; // v0.18.0
+  bool get blocked => throw _privateConstructorUsedError; // v0.18.0
+  CommunityAggregates get counts =>
+      throw _privateConstructorUsedError; // v0.18.0
+  bool? get bannedFromCommunity => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -41,7 +44,8 @@ abstract class $CommunityViewCopyWith<$Res> {
       {Community community,
       SubscribedType subscribed,
       bool blocked,
-      CommunityAggregates counts});
+      CommunityAggregates counts,
+      bool? bannedFromCommunity});
 
   $CommunityCopyWith<$Res> get community;
   $CommunityAggregatesCopyWith<$Res> get counts;
@@ -64,6 +68,7 @@ class _$CommunityViewCopyWithImpl<$Res, $Val extends CommunityView>
     Object? subscribed = null,
     Object? blocked = null,
     Object? counts = null,
+    Object? bannedFromCommunity = freezed,
   }) {
     return _then(_value.copyWith(
       community: null == community
@@ -82,6 +87,10 @@ class _$CommunityViewCopyWithImpl<$Res, $Val extends CommunityView>
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
               as CommunityAggregates,
+      bannedFromCommunity: freezed == bannedFromCommunity
+          ? _value.bannedFromCommunity
+          : bannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ) as $Val);
   }
 
@@ -114,7 +123,8 @@ abstract class _$$CommunityViewImplCopyWith<$Res>
       {Community community,
       SubscribedType subscribed,
       bool blocked,
-      CommunityAggregates counts});
+      CommunityAggregates counts,
+      bool? bannedFromCommunity});
 
   @override
   $CommunityCopyWith<$Res> get community;
@@ -137,6 +147,7 @@ class __$$CommunityViewImplCopyWithImpl<$Res>
     Object? subscribed = null,
     Object? blocked = null,
     Object? counts = null,
+    Object? bannedFromCommunity = freezed,
   }) {
     return _then(_$CommunityViewImpl(
       community: null == community
@@ -155,6 +166,10 @@ class __$$CommunityViewImplCopyWithImpl<$Res>
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
               as CommunityAggregates,
+      bannedFromCommunity: freezed == bannedFromCommunity
+          ? _value.bannedFromCommunity
+          : bannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
@@ -167,7 +182,8 @@ class _$CommunityViewImpl extends _CommunityView {
       {required this.community,
       required this.subscribed,
       required this.blocked,
-      required this.counts})
+      required this.counts,
+      this.bannedFromCommunity})
       : super._();
 
   factory _$CommunityViewImpl.fromJson(Map<String, dynamic> json) =>
@@ -175,20 +191,26 @@ class _$CommunityViewImpl extends _CommunityView {
 
   @override
   final Community community;
+// v0.18.0
   @override
   final SubscribedType subscribed;
+// v0.18.0
   @override
   final bool blocked;
+// v0.18.0
   @override
   final CommunityAggregates counts;
+// v0.18.0
+  @override
+  final bool? bannedFromCommunity;
 
   @override
   String toString() {
-    return 'CommunityView(community: $community, subscribed: $subscribed, blocked: $blocked, counts: $counts)';
+    return 'CommunityView(community: $community, subscribed: $subscribed, blocked: $blocked, counts: $counts, bannedFromCommunity: $bannedFromCommunity)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CommunityViewImpl &&
@@ -197,13 +219,15 @@ class _$CommunityViewImpl extends _CommunityView {
             (identical(other.subscribed, subscribed) ||
                 other.subscribed == subscribed) &&
             (identical(other.blocked, blocked) || other.blocked == blocked) &&
-            (identical(other.counts, counts) || other.counts == counts));
+            (identical(other.counts, counts) || other.counts == counts) &&
+            (identical(other.bannedFromCommunity, bannedFromCommunity) ||
+                other.bannedFromCommunity == bannedFromCommunity));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, community, subscribed, blocked, counts);
+  int get hashCode => Object.hash(
+      runtimeType, community, subscribed, blocked, counts, bannedFromCommunity);
 
   @JsonKey(ignore: true)
   @override
@@ -224,7 +248,8 @@ abstract class _CommunityView extends CommunityView {
       {required final Community community,
       required final SubscribedType subscribed,
       required final bool blocked,
-      required final CommunityAggregates counts}) = _$CommunityViewImpl;
+      required final CommunityAggregates counts,
+      final bool? bannedFromCommunity}) = _$CommunityViewImpl;
   const _CommunityView._() : super._();
 
   factory _CommunityView.fromJson(Map<String, dynamic> json) =
@@ -232,12 +257,14 @@ abstract class _CommunityView extends CommunityView {
 
   @override
   Community get community;
-  @override
+  @override // v0.18.0
   SubscribedType get subscribed;
-  @override
+  @override // v0.18.0
   bool get blocked;
-  @override
+  @override // v0.18.0
   CommunityAggregates get counts;
+  @override // v0.18.0
+  bool? get bannedFromCommunity;
   @override
   @JsonKey(ignore: true)
   _$$CommunityViewImplCopyWith<_$CommunityViewImpl> get copyWith =>

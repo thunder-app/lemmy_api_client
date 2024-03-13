@@ -12,7 +12,7 @@ part of 'custom_emoji_keyword.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CustomEmojiKeyword _$CustomEmojiKeywordFromJson(Map<String, dynamic> json) {
   return _CustomEmojiKeyword.fromJson(json);
@@ -21,8 +21,9 @@ CustomEmojiKeyword _$CustomEmojiKeywordFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$CustomEmojiKeyword {
   @deprecated
-  int? get id => throw _privateConstructorUsedError;
-  int get customEmojiId => throw _privateConstructorUsedError;
+  int? get id =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
+  int get customEmojiId => throw _privateConstructorUsedError; // v0.18.0
   String get keyword => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -131,8 +132,10 @@ class _$CustomEmojiKeywordImpl extends _CustomEmojiKeyword {
   @override
   @deprecated
   final int? id;
+// v0.18.0 [deprecated in v0.19.0]
   @override
   final int customEmojiId;
+// v0.18.0
   @override
   final String keyword;
 
@@ -142,7 +145,7 @@ class _$CustomEmojiKeywordImpl extends _CustomEmojiKeyword {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CustomEmojiKeywordImpl &&
@@ -184,9 +187,9 @@ abstract class _CustomEmojiKeyword extends CustomEmojiKeyword {
   @override
   @deprecated
   int? get id;
-  @override
+  @override // v0.18.0 [deprecated in v0.19.0]
   int get customEmojiId;
-  @override
+  @override // v0.18.0
   String get keyword;
   @override
   @JsonKey(ignore: true)

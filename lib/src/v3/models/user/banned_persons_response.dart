@@ -10,7 +10,7 @@ part 'banned_persons_response.g.dart';
 class BannedPersonsResponse with _$BannedPersonsResponse {
   @modelSerde
   const factory BannedPersonsResponse({
-    required List<PersonView> banned,
+    required List<PersonView> banned, // v0.18.0
   }) = _BannedPersonsResponse;
 
   const BannedPersonsResponse._();

@@ -12,7 +12,7 @@ part of 'resolve_object_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ResolveObjectResponse _$ResolveObjectResponseFromJson(
     Map<String, dynamic> json) {
@@ -21,9 +21,9 @@ ResolveObjectResponse _$ResolveObjectResponseFromJson(
 
 /// @nodoc
 mixin _$ResolveObjectResponse {
-  CommentView? get comment => throw _privateConstructorUsedError;
-  PostView? get post => throw _privateConstructorUsedError;
-  CommunityView? get community => throw _privateConstructorUsedError;
+  CommentView? get comment => throw _privateConstructorUsedError; // v0.18.0
+  PostView? get post => throw _privateConstructorUsedError; // v0.18.0
+  CommunityView? get community => throw _privateConstructorUsedError; // v0.18.0
   PersonView? get person => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -214,10 +214,13 @@ class _$ResolveObjectResponseImpl extends _ResolveObjectResponse {
 
   @override
   final CommentView? comment;
+// v0.18.0
   @override
   final PostView? post;
+// v0.18.0
   @override
   final CommunityView? community;
+// v0.18.0
   @override
   final PersonView? person;
 
@@ -227,7 +230,7 @@ class _$ResolveObjectResponseImpl extends _ResolveObjectResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ResolveObjectResponseImpl &&
@@ -271,11 +274,11 @@ abstract class _ResolveObjectResponse extends ResolveObjectResponse {
 
   @override
   CommentView? get comment;
-  @override
+  @override // v0.18.0
   PostView? get post;
-  @override
+  @override // v0.18.0
   CommunityView? get community;
-  @override
+  @override // v0.18.0
   PersonView? get person;
   @override
   @JsonKey(ignore: true)

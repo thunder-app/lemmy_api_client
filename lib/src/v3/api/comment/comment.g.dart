@@ -160,6 +160,33 @@ Map<String, dynamic> _$$CreateCommentLikeImplToJson(
   return val;
 }
 
+_$ListCommentLikesImpl _$$ListCommentLikesImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ListCommentLikesImpl(
+      commentId: json['comment_id'] as int,
+      page: json['page'] as int?,
+      limit: json['limit'] as int?,
+      auth: json['auth'] as String?,
+    );
+
+Map<String, dynamic> _$$ListCommentLikesImplToJson(
+    _$ListCommentLikesImpl instance) {
+  final val = <String, dynamic>{
+    'comment_id': instance.commentId,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('page', instance.page);
+  writeNotNull('limit', instance.limit);
+  writeNotNull('auth', instance.auth);
+  return val;
+}
+
 _$SaveCommentImpl _$$SaveCommentImplFromJson(Map<String, dynamic> json) =>
     _$SaveCommentImpl(
       commentId: json['comment_id'] as int,
@@ -221,9 +248,9 @@ _$GetCommentsImpl _$$GetCommentsImplFromJson(Map<String, dynamic> json) =>
       postId: json['post_id'] as int?,
       parentId: json['parent_id'] as int?,
       savedOnly: json['saved_only'] as bool?,
-      auth: json['auth'] as String?,
       likedOnly: json['liked_only'] as bool?,
       dislikedOnly: json['disliked_only'] as bool?,
+      auth: json['auth'] as String?,
     );
 
 Map<String, dynamic> _$$GetCommentsImplToJson(_$GetCommentsImpl instance) {
@@ -245,9 +272,9 @@ Map<String, dynamic> _$$GetCommentsImplToJson(_$GetCommentsImpl instance) {
   writeNotNull('post_id', instance.postId);
   writeNotNull('parent_id', instance.parentId);
   writeNotNull('saved_only', instance.savedOnly);
-  writeNotNull('auth', instance.auth);
   writeNotNull('liked_only', instance.likedOnly);
   writeNotNull('disliked_only', instance.dislikedOnly);
+  writeNotNull('auth', instance.auth);
   return val;
 }
 
@@ -325,6 +352,7 @@ Map<String, dynamic> _$$ResolveCommentReportImplToJson(
 _$ListCommentReportsImpl _$$ListCommentReportsImplFromJson(
         Map<String, dynamic> json) =>
     _$ListCommentReportsImpl(
+      commentId: json['comment_id'] as int?,
       page: json['page'] as int?,
       limit: json['limit'] as int?,
       unresolvedOnly: json['unresolved_only'] as bool?,
@@ -342,6 +370,7 @@ Map<String, dynamic> _$$ListCommentReportsImplToJson(
     }
   }
 
+  writeNotNull('comment_id', instance.commentId);
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
   writeNotNull('unresolved_only', instance.unresolvedOnly);

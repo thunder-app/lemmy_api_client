@@ -12,7 +12,7 @@ part of 'get_report_count_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetReportCountResponse _$GetReportCountResponseFromJson(
     Map<String, dynamic> json) {
@@ -21,9 +21,9 @@ GetReportCountResponse _$GetReportCountResponseFromJson(
 
 /// @nodoc
 mixin _$GetReportCountResponse {
-  int? get communityId => throw _privateConstructorUsedError;
-  int get commentReports => throw _privateConstructorUsedError;
-  int get postReports => throw _privateConstructorUsedError;
+  int? get communityId => throw _privateConstructorUsedError; // v0.18.0
+  int get commentReports => throw _privateConstructorUsedError; // v0.18.0
+  int get postReports => throw _privateConstructorUsedError; // v0.18.0
   int? get privateMessageReports => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -156,10 +156,13 @@ class _$GetReportCountResponseImpl extends _GetReportCountResponse {
 
   @override
   final int? communityId;
+// v0.18.0
   @override
   final int commentReports;
+// v0.18.0
   @override
   final int postReports;
+// v0.18.0
   @override
   final int? privateMessageReports;
 
@@ -169,7 +172,7 @@ class _$GetReportCountResponseImpl extends _GetReportCountResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetReportCountResponseImpl &&
@@ -216,11 +219,11 @@ abstract class _GetReportCountResponse extends GetReportCountResponse {
 
   @override
   int? get communityId;
-  @override
+  @override // v0.18.0
   int get commentReports;
-  @override
+  @override // v0.18.0
   int get postReports;
-  @override
+  @override // v0.18.0
   int? get privateMessageReports;
   @override
   @JsonKey(ignore: true)

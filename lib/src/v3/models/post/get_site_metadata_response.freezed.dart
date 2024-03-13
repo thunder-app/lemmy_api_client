@@ -12,7 +12,7 @@ part of 'get_site_metadata_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetSiteMetadataResponse _$GetSiteMetadataResponseFromJson(
     Map<String, dynamic> json) {
@@ -21,7 +21,7 @@ GetSiteMetadataResponse _$GetSiteMetadataResponseFromJson(
 
 /// @nodoc
 mixin _$GetSiteMetadataResponse {
-  SiteMetadata get metadata => throw _privateConstructorUsedError;
+  LinkMetadata get metadata => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,9 +35,9 @@ abstract class $GetSiteMetadataResponseCopyWith<$Res> {
           $Res Function(GetSiteMetadataResponse) then) =
       _$GetSiteMetadataResponseCopyWithImpl<$Res, GetSiteMetadataResponse>;
   @useResult
-  $Res call({SiteMetadata metadata});
+  $Res call({LinkMetadata metadata});
 
-  $SiteMetadataCopyWith<$Res> get metadata;
+  $LinkMetadataCopyWith<$Res> get metadata;
 }
 
 /// @nodoc
@@ -60,14 +60,14 @@ class _$GetSiteMetadataResponseCopyWithImpl<$Res,
       metadata: null == metadata
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
-              as SiteMetadata,
+              as LinkMetadata,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $SiteMetadataCopyWith<$Res> get metadata {
-    return $SiteMetadataCopyWith<$Res>(_value.metadata, (value) {
+  $LinkMetadataCopyWith<$Res> get metadata {
+    return $LinkMetadataCopyWith<$Res>(_value.metadata, (value) {
       return _then(_value.copyWith(metadata: value) as $Val);
     });
   }
@@ -82,10 +82,10 @@ abstract class _$$GetSiteMetadataResponseImplCopyWith<$Res>
       __$$GetSiteMetadataResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({SiteMetadata metadata});
+  $Res call({LinkMetadata metadata});
 
   @override
-  $SiteMetadataCopyWith<$Res> get metadata;
+  $LinkMetadataCopyWith<$Res> get metadata;
 }
 
 /// @nodoc
@@ -107,7 +107,7 @@ class __$$GetSiteMetadataResponseImplCopyWithImpl<$Res>
       metadata: null == metadata
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
-              as SiteMetadata,
+              as LinkMetadata,
     ));
   }
 }
@@ -122,7 +122,7 @@ class _$GetSiteMetadataResponseImpl extends _GetSiteMetadataResponse {
       _$$GetSiteMetadataResponseImplFromJson(json);
 
   @override
-  final SiteMetadata metadata;
+  final LinkMetadata metadata;
 
   @override
   String toString() {
@@ -130,7 +130,7 @@ class _$GetSiteMetadataResponseImpl extends _GetSiteMetadataResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetSiteMetadataResponseImpl &&
@@ -159,14 +159,14 @@ class _$GetSiteMetadataResponseImpl extends _GetSiteMetadataResponse {
 
 abstract class _GetSiteMetadataResponse extends GetSiteMetadataResponse {
   const factory _GetSiteMetadataResponse(
-      {required final SiteMetadata metadata}) = _$GetSiteMetadataResponseImpl;
+      {required final LinkMetadata metadata}) = _$GetSiteMetadataResponseImpl;
   const _GetSiteMetadataResponse._() : super._();
 
   factory _GetSiteMetadataResponse.fromJson(Map<String, dynamic> json) =
       _$GetSiteMetadataResponseImpl.fromJson;
 
   @override
-  SiteMetadata get metadata;
+  LinkMetadata get metadata;
   @override
   @JsonKey(ignore: true)
   _$$GetSiteMetadataResponseImplCopyWith<_$GetSiteMetadataResponseImpl>

@@ -10,7 +10,7 @@ part 'list_comment_reports_response.g.dart';
 class ListCommentReportsResponse with _$ListCommentReportsResponse {
   @modelSerde
   const factory ListCommentReportsResponse({
-    required List<CommentReportView> commentReports,
+    required List<CommentReportView> commentReports, // v0.18.0
   }) = _ListCommentReportsResponse;
 
   const ListCommentReportsResponse._();

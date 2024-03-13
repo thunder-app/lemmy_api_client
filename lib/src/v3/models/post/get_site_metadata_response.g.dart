@@ -9,7 +9,7 @@ part of 'get_site_metadata_response.dart';
 _$GetSiteMetadataResponseImpl _$$GetSiteMetadataResponseImplFromJson(
         Map<String, dynamic> json) =>
     _$GetSiteMetadataResponseImpl(
-      metadata: SiteMetadata.fromJson(json['metadata'] as Map<String, dynamic>),
+      metadata: LinkMetadata.fromJson(json['metadata'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$GetSiteMetadataResponseImplToJson(

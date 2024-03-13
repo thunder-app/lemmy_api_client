@@ -10,9 +10,9 @@ part 'admin_purge_post_view.g.dart';
 class AdminPurgePostView with _$AdminPurgePostView {
   @modelSerde
   const factory AdminPurgePostView({
-    required AdminPurgePost adminPurgePost,
-    Person? admin,
-    required Community community,
+    required AdminPurgePost adminPurgePost, // v0.18.0
+    Person? admin, // v0.18.0
+    required Community community, // v0.18.0
   }) = _AdminPurgePostView;
 
   const AdminPurgePostView._();

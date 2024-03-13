@@ -12,8 +12,8 @@ _$GetPrivateMessagesImpl _$$GetPrivateMessagesImplFromJson(
       unreadOnly: json['unread_only'] as bool?,
       page: json['page'] as int?,
       limit: json['limit'] as int?,
-      auth: json['auth'] as String?,
       creatorId: json['creator_id'] as int?,
+      auth: json['auth'] as String?,
     );
 
 Map<String, dynamic> _$$GetPrivateMessagesImplToJson(
@@ -29,8 +29,8 @@ Map<String, dynamic> _$$GetPrivateMessagesImplToJson(
   writeNotNull('unread_only', instance.unreadOnly);
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
-  writeNotNull('auth', instance.auth);
   writeNotNull('creator_id', instance.creatorId);
+  writeNotNull('auth', instance.auth);
   return val;
 }
 

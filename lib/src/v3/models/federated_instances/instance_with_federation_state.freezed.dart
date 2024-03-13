@@ -12,7 +12,7 @@ part of 'instance_with_federation_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 InstanceWithFederationState _$InstanceWithFederationStateFromJson(
     Map<String, dynamic> json) {
@@ -21,12 +21,16 @@ InstanceWithFederationState _$InstanceWithFederationStateFromJson(
 
 /// @nodoc
 mixin _$InstanceWithFederationState {
-  int get id => throw _privateConstructorUsedError;
-  String get domain => throw _privateConstructorUsedError;
-  DateTime get published => throw _privateConstructorUsedError;
-  DateTime? get updated => throw _privateConstructorUsedError;
-  String? get software => throw _privateConstructorUsedError;
-  String? get version => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.19.0 (required)
+  String get domain => throw _privateConstructorUsedError; // v0.19.0 (required)
+  DateTime get published =>
+      throw _privateConstructorUsedError; // v0.19.0 (required)
+  DateTime? get updated =>
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
+  String? get software =>
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
+  String? get version =>
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
   ReadableFederationState? get federationState =>
       throw _privateConstructorUsedError;
 
@@ -220,16 +224,22 @@ class _$InstanceWithFederationStateImpl extends _InstanceWithFederationState {
 
   @override
   final int id;
+// v0.19.0 (required)
   @override
   final String domain;
+// v0.19.0 (required)
   @override
   final DateTime published;
+// v0.19.0 (required)
   @override
   final DateTime? updated;
+// v0.19.0 (optional)
   @override
   final String? software;
+// v0.19.0 (optional)
   @override
   final String? version;
+// v0.19.0 (optional)
   @override
   final ReadableFederationState? federationState;
 
@@ -239,7 +249,7 @@ class _$InstanceWithFederationStateImpl extends _InstanceWithFederationState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InstanceWithFederationStateImpl &&
@@ -293,17 +303,17 @@ abstract class _InstanceWithFederationState
 
   @override
   int get id;
-  @override
+  @override // v0.19.0 (required)
   String get domain;
-  @override
+  @override // v0.19.0 (required)
   DateTime get published;
-  @override
+  @override // v0.19.0 (required)
   DateTime? get updated;
-  @override
+  @override // v0.19.0 (optional)
   String? get software;
-  @override
+  @override // v0.19.0 (optional)
   String? get version;
-  @override
+  @override // v0.19.0 (optional)
   ReadableFederationState? get federationState;
   @override
   @JsonKey(ignore: true)

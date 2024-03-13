@@ -9,7 +9,7 @@ part 'generate_totp_secret_response.g.dart';
 class GenerateTotpSecretResponse with _$GenerateTotpSecretResponse {
   @modelSerde
   const factory GenerateTotpSecretResponse({
-    required String totpSecretUrl,
+    required String totpSecretUrl, // v0.19.0 (required)
   }) = _GenerateTotpSecretResponse;
 
   const GenerateTotpSecretResponse._();

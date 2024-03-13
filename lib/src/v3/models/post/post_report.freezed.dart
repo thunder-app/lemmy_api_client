@@ -12,7 +12,7 @@ part of 'post_report.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PostReport _$PostReportFromJson(Map<String, dynamic> json) {
   return _PostReport.fromJson(json);
@@ -20,16 +20,16 @@ PostReport _$PostReportFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PostReport {
-  int get id => throw _privateConstructorUsedError;
-  int get creatorId => throw _privateConstructorUsedError;
-  int get postId => throw _privateConstructorUsedError;
-  String get originalPostName => throw _privateConstructorUsedError;
-  String? get originalPostUrl => throw _privateConstructorUsedError;
-  String? get originalPostBody => throw _privateConstructorUsedError;
-  String get reason => throw _privateConstructorUsedError;
-  bool get resolved => throw _privateConstructorUsedError;
-  int? get resolverId => throw _privateConstructorUsedError;
-  DateTime get published => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
+  int get creatorId => throw _privateConstructorUsedError; // v0.18.0
+  int get postId => throw _privateConstructorUsedError; // v0.18.0
+  String get originalPostName => throw _privateConstructorUsedError; // v0.18.0
+  String? get originalPostUrl => throw _privateConstructorUsedError; // v0.18.0
+  String? get originalPostBody => throw _privateConstructorUsedError; // v0.18.0
+  String get reason => throw _privateConstructorUsedError; // v0.18.0
+  bool get resolved => throw _privateConstructorUsedError; // v0.18.0
+  int? get resolverId => throw _privateConstructorUsedError; // v0.18.0
+  DateTime get published => throw _privateConstructorUsedError; // v0.18.0
   DateTime? get updated => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -249,24 +249,34 @@ class _$PostReportImpl extends _PostReport {
 
   @override
   final int id;
+// v0.18.0
   @override
   final int creatorId;
+// v0.18.0
   @override
   final int postId;
+// v0.18.0
   @override
   final String originalPostName;
+// v0.18.0
   @override
   final String? originalPostUrl;
+// v0.18.0
   @override
   final String? originalPostBody;
+// v0.18.0
   @override
   final String reason;
+// v0.18.0
   @override
   final bool resolved;
+// v0.18.0
   @override
   final int? resolverId;
+// v0.18.0
   @override
   final DateTime published;
+// v0.18.0
   @override
   final DateTime? updated;
 
@@ -276,7 +286,7 @@ class _$PostReportImpl extends _PostReport {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PostReportImpl &&
@@ -350,25 +360,25 @@ abstract class _PostReport extends PostReport {
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   int get creatorId;
-  @override
+  @override // v0.18.0
   int get postId;
-  @override
+  @override // v0.18.0
   String get originalPostName;
-  @override
+  @override // v0.18.0
   String? get originalPostUrl;
-  @override
+  @override // v0.18.0
   String? get originalPostBody;
-  @override
+  @override // v0.18.0
   String get reason;
-  @override
+  @override // v0.18.0
   bool get resolved;
-  @override
+  @override // v0.18.0
   int? get resolverId;
-  @override
+  @override // v0.18.0
   DateTime get published;
-  @override
+  @override // v0.18.0
   DateTime? get updated;
   @override
   @JsonKey(ignore: true)

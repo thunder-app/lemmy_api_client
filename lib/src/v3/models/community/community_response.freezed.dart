@@ -12,7 +12,7 @@ part of 'community_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CommunityResponse _$CommunityResponseFromJson(Map<String, dynamic> json) {
   return _CommunityResponse.fromJson(json);
@@ -20,7 +20,8 @@ CommunityResponse _$CommunityResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CommunityResponse {
-  CommunityView get communityView => throw _privateConstructorUsedError;
+  CommunityView get communityView =>
+      throw _privateConstructorUsedError; // v0.18.0
   List<int> get discussionLanguages => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -133,7 +134,9 @@ class _$CommunityResponseImpl extends _CommunityResponse {
 
   @override
   final CommunityView communityView;
+// v0.18.0
   final List<int> _discussionLanguages;
+// v0.18.0
   @override
   List<int> get discussionLanguages {
     if (_discussionLanguages is EqualUnmodifiableListView)
@@ -148,7 +151,7 @@ class _$CommunityResponseImpl extends _CommunityResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CommunityResponseImpl &&
@@ -189,7 +192,7 @@ abstract class _CommunityResponse extends CommunityResponse {
 
   @override
   CommunityView get communityView;
-  @override
+  @override // v0.18.0
   List<int> get discussionLanguages;
   @override
   @JsonKey(ignore: true)

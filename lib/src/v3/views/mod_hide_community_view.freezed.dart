@@ -12,7 +12,7 @@ part of 'mod_hide_community_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ModHideCommunityView _$ModHideCommunityViewFromJson(Map<String, dynamic> json) {
   return _ModHideCommunityView.fromJson(json);
@@ -20,8 +20,9 @@ ModHideCommunityView _$ModHideCommunityViewFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ModHideCommunityView {
-  ModHideCommunity get modHideCommunity => throw _privateConstructorUsedError;
-  Person? get admin => throw _privateConstructorUsedError;
+  ModHideCommunity get modHideCommunity =>
+      throw _privateConstructorUsedError; // v0.18.0
+  Person? get admin => throw _privateConstructorUsedError; // v0.18.0
   Community get community => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -171,8 +172,10 @@ class _$ModHideCommunityViewImpl extends _ModHideCommunityView {
 
   @override
   final ModHideCommunity modHideCommunity;
+// v0.18.0
   @override
   final Person? admin;
+// v0.18.0
   @override
   final Community community;
 
@@ -182,7 +185,7 @@ class _$ModHideCommunityViewImpl extends _ModHideCommunityView {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ModHideCommunityViewImpl &&
@@ -226,9 +229,9 @@ abstract class _ModHideCommunityView extends ModHideCommunityView {
 
   @override
   ModHideCommunity get modHideCommunity;
-  @override
+  @override // v0.18.0
   Person? get admin;
-  @override
+  @override // v0.18.0
   Community get community;
   @override
   @JsonKey(ignore: true)

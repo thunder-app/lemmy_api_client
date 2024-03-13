@@ -9,10 +9,10 @@ part 'get_report_count_response.g.dart';
 class GetReportCountResponse with _$GetReportCountResponse {
   @modelSerde
   const factory GetReportCountResponse({
-    int? communityId,
-    required int commentReports,
-    required int postReports,
-    int? privateMessageReports,
+    int? communityId, // v0.18.0
+    required int commentReports, // v0.18.0
+    required int postReports, // v0.18.0
+    int? privateMessageReports, // v0.18.0
   }) = _GetReportCountResponse;
 
   const GetReportCountResponse._();

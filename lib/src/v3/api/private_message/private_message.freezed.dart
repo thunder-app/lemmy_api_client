@@ -12,7 +12,7 @@ part of 'private_message.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetPrivateMessages _$GetPrivateMessagesFromJson(Map<String, dynamic> json) {
   return _GetPrivateMessages.fromJson(json);
@@ -20,11 +20,12 @@ GetPrivateMessages _$GetPrivateMessagesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetPrivateMessages {
-  bool? get unreadOnly => throw _privateConstructorUsedError;
-  int? get page => throw _privateConstructorUsedError;
-  int? get limit => throw _privateConstructorUsedError;
+  bool? get unreadOnly => throw _privateConstructorUsedError; // v0.18.0
+  int? get page => throw _privateConstructorUsedError; // v0.18.0
+  int? get limit => throw _privateConstructorUsedError; // v0.18.0
+  int? get creatorId =>
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
   String? get auth => throw _privateConstructorUsedError;
-  int? get creatorId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -39,7 +40,7 @@ abstract class $GetPrivateMessagesCopyWith<$Res> {
       _$GetPrivateMessagesCopyWithImpl<$Res, GetPrivateMessages>;
   @useResult
   $Res call(
-      {bool? unreadOnly, int? page, int? limit, String? auth, int? creatorId});
+      {bool? unreadOnly, int? page, int? limit, int? creatorId, String? auth});
 }
 
 /// @nodoc
@@ -58,8 +59,8 @@ class _$GetPrivateMessagesCopyWithImpl<$Res, $Val extends GetPrivateMessages>
     Object? unreadOnly = freezed,
     Object? page = freezed,
     Object? limit = freezed,
-    Object? auth = freezed,
     Object? creatorId = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
       unreadOnly: freezed == unreadOnly
@@ -74,14 +75,14 @@ class _$GetPrivateMessagesCopyWithImpl<$Res, $Val extends GetPrivateMessages>
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
       creatorId: freezed == creatorId
           ? _value.creatorId
           : creatorId // ignore: cast_nullable_to_non_nullable
               as int?,
+      auth: freezed == auth
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -95,7 +96,7 @@ abstract class _$$GetPrivateMessagesImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {bool? unreadOnly, int? page, int? limit, String? auth, int? creatorId});
+      {bool? unreadOnly, int? page, int? limit, int? creatorId, String? auth});
 }
 
 /// @nodoc
@@ -112,8 +113,8 @@ class __$$GetPrivateMessagesImplCopyWithImpl<$Res>
     Object? unreadOnly = freezed,
     Object? page = freezed,
     Object? limit = freezed,
-    Object? auth = freezed,
     Object? creatorId = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_$GetPrivateMessagesImpl(
       unreadOnly: freezed == unreadOnly
@@ -128,14 +129,14 @@ class __$$GetPrivateMessagesImplCopyWithImpl<$Res>
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
       creatorId: freezed == creatorId
           ? _value.creatorId
           : creatorId // ignore: cast_nullable_to_non_nullable
               as int?,
+      auth: freezed == auth
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -145,7 +146,7 @@ class __$$GetPrivateMessagesImplCopyWithImpl<$Res>
 @apiSerde
 class _$GetPrivateMessagesImpl extends _GetPrivateMessages {
   const _$GetPrivateMessagesImpl(
-      {this.unreadOnly, this.page, this.limit, this.auth, this.creatorId})
+      {this.unreadOnly, this.page, this.limit, this.creatorId, this.auth})
       : super._();
 
   factory _$GetPrivateMessagesImpl.fromJson(Map<String, dynamic> json) =>
@@ -153,22 +154,26 @@ class _$GetPrivateMessagesImpl extends _GetPrivateMessages {
 
   @override
   final bool? unreadOnly;
+// v0.18.0
   @override
   final int? page;
+// v0.18.0
   @override
   final int? limit;
-  @override
-  final String? auth;
+// v0.18.0
   @override
   final int? creatorId;
+// v0.19.0 (optional)
+  @override
+  final String? auth;
 
   @override
   String toString() {
-    return 'GetPrivateMessages(unreadOnly: $unreadOnly, page: $page, limit: $limit, auth: $auth, creatorId: $creatorId)';
+    return 'GetPrivateMessages(unreadOnly: $unreadOnly, page: $page, limit: $limit, creatorId: $creatorId, auth: $auth)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetPrivateMessagesImpl &&
@@ -176,15 +181,15 @@ class _$GetPrivateMessagesImpl extends _GetPrivateMessages {
                 other.unreadOnly == unreadOnly) &&
             (identical(other.page, page) || other.page == page) &&
             (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.auth, auth) || other.auth == auth) &&
             (identical(other.creatorId, creatorId) ||
-                other.creatorId == creatorId));
+                other.creatorId == creatorId) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, unreadOnly, page, limit, auth, creatorId);
+      Object.hash(runtimeType, unreadOnly, page, limit, creatorId, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -206,8 +211,8 @@ abstract class _GetPrivateMessages extends GetPrivateMessages {
       {final bool? unreadOnly,
       final int? page,
       final int? limit,
-      final String? auth,
-      final int? creatorId}) = _$GetPrivateMessagesImpl;
+      final int? creatorId,
+      final String? auth}) = _$GetPrivateMessagesImpl;
   const _GetPrivateMessages._() : super._();
 
   factory _GetPrivateMessages.fromJson(Map<String, dynamic> json) =
@@ -215,14 +220,14 @@ abstract class _GetPrivateMessages extends GetPrivateMessages {
 
   @override
   bool? get unreadOnly;
-  @override
+  @override // v0.18.0
   int? get page;
-  @override
+  @override // v0.18.0
   int? get limit;
-  @override
-  String? get auth;
-  @override
+  @override // v0.18.0
   int? get creatorId;
+  @override // v0.19.0 (optional)
+  String? get auth;
   @override
   @JsonKey(ignore: true)
   _$$GetPrivateMessagesImplCopyWith<_$GetPrivateMessagesImpl> get copyWith =>
@@ -235,8 +240,8 @@ CreatePrivateMessage _$CreatePrivateMessageFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CreatePrivateMessage {
-  String get content => throw _privateConstructorUsedError;
-  int get recipientId => throw _privateConstructorUsedError;
+  String get content => throw _privateConstructorUsedError; // v0.18.0
+  int get recipientId => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -345,8 +350,10 @@ class _$CreatePrivateMessageImpl extends _CreatePrivateMessage {
 
   @override
   final String content;
+// v0.18.0
   @override
   final int recipientId;
+// v0.18.0
   @override
   final String? auth;
 
@@ -356,7 +363,7 @@ class _$CreatePrivateMessageImpl extends _CreatePrivateMessage {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CreatePrivateMessageImpl &&
@@ -398,9 +405,9 @@ abstract class _CreatePrivateMessage extends CreatePrivateMessage {
 
   @override
   String get content;
-  @override
+  @override // v0.18.0
   int get recipientId;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -414,8 +421,8 @@ EditPrivateMessage _$EditPrivateMessageFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$EditPrivateMessage {
-  int get privateMessageId => throw _privateConstructorUsedError;
-  String get content => throw _privateConstructorUsedError;
+  int get privateMessageId => throw _privateConstructorUsedError; // v0.18.0
+  String get content => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -523,8 +530,10 @@ class _$EditPrivateMessageImpl extends _EditPrivateMessage {
 
   @override
   final int privateMessageId;
+// v0.18.0
   @override
   final String content;
+// v0.18.0
   @override
   final String? auth;
 
@@ -534,7 +543,7 @@ class _$EditPrivateMessageImpl extends _EditPrivateMessage {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EditPrivateMessageImpl &&
@@ -575,9 +584,9 @@ abstract class _EditPrivateMessage extends EditPrivateMessage {
 
   @override
   int get privateMessageId;
-  @override
+  @override // v0.18.0
   String get content;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -591,8 +600,8 @@ DeletePrivateMessage _$DeletePrivateMessageFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$DeletePrivateMessage {
-  int get privateMessageId => throw _privateConstructorUsedError;
-  bool get deleted => throw _privateConstructorUsedError;
+  int get privateMessageId => throw _privateConstructorUsedError; // v0.18.0
+  bool get deleted => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -701,8 +710,10 @@ class _$DeletePrivateMessageImpl extends _DeletePrivateMessage {
 
   @override
   final int privateMessageId;
+// v0.18.0
   @override
   final bool deleted;
+// v0.18.0
   @override
   final String? auth;
 
@@ -712,7 +723,7 @@ class _$DeletePrivateMessageImpl extends _DeletePrivateMessage {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeletePrivateMessageImpl &&
@@ -754,9 +765,9 @@ abstract class _DeletePrivateMessage extends DeletePrivateMessage {
 
   @override
   int get privateMessageId;
-  @override
+  @override // v0.18.0
   bool get deleted;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -771,8 +782,8 @@ MarkPrivateMessageAsRead _$MarkPrivateMessageAsReadFromJson(
 
 /// @nodoc
 mixin _$MarkPrivateMessageAsRead {
-  int get privateMessageId => throw _privateConstructorUsedError;
-  bool get read => throw _privateConstructorUsedError;
+  int get privateMessageId => throw _privateConstructorUsedError; // v0.18.0
+  bool get read => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -884,8 +895,10 @@ class _$MarkPrivateMessageAsReadImpl extends _MarkPrivateMessageAsRead {
 
   @override
   final int privateMessageId;
+// v0.18.0
   @override
   final bool read;
+// v0.18.0
   @override
   final String? auth;
 
@@ -895,7 +908,7 @@ class _$MarkPrivateMessageAsReadImpl extends _MarkPrivateMessageAsRead {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MarkPrivateMessageAsReadImpl &&
@@ -936,9 +949,9 @@ abstract class _MarkPrivateMessageAsRead extends MarkPrivateMessageAsRead {
 
   @override
   int get privateMessageId;
-  @override
+  @override // v0.18.0
   bool get read;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -953,8 +966,8 @@ CreatePrivateMessageReport _$CreatePrivateMessageReportFromJson(
 
 /// @nodoc
 mixin _$CreatePrivateMessageReport {
-  int get privateMessageId => throw _privateConstructorUsedError;
-  String get reason => throw _privateConstructorUsedError;
+  int get privateMessageId => throw _privateConstructorUsedError; // v0.18.0
+  String get reason => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1068,8 +1081,10 @@ class _$CreatePrivateMessageReportImpl extends _CreatePrivateMessageReport {
 
   @override
   final int privateMessageId;
+// v0.18.0
   @override
   final String reason;
+// v0.18.0
   @override
   final String? auth;
 
@@ -1079,7 +1094,7 @@ class _$CreatePrivateMessageReportImpl extends _CreatePrivateMessageReport {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CreatePrivateMessageReportImpl &&
@@ -1120,9 +1135,9 @@ abstract class _CreatePrivateMessageReport extends CreatePrivateMessageReport {
 
   @override
   int get privateMessageId;
-  @override
+  @override // v0.18.0
   String get reason;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -1137,8 +1152,8 @@ ResolvePrivateMessageReport _$ResolvePrivateMessageReportFromJson(
 
 /// @nodoc
 mixin _$ResolvePrivateMessageReport {
-  int get reportId => throw _privateConstructorUsedError;
-  bool get resolved => throw _privateConstructorUsedError;
+  int get reportId => throw _privateConstructorUsedError; // v0.18.0
+  bool get resolved => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1253,8 +1268,10 @@ class _$ResolvePrivateMessageReportImpl extends _ResolvePrivateMessageReport {
 
   @override
   final int reportId;
+// v0.18.0
   @override
   final bool resolved;
+// v0.18.0
   @override
   final String? auth;
 
@@ -1264,7 +1281,7 @@ class _$ResolvePrivateMessageReportImpl extends _ResolvePrivateMessageReport {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ResolvePrivateMessageReportImpl &&
@@ -1307,9 +1324,9 @@ abstract class _ResolvePrivateMessageReport
 
   @override
   int get reportId;
-  @override
+  @override // v0.18.0
   bool get resolved;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -1324,9 +1341,9 @@ ListPrivateMessageReports _$ListPrivateMessageReportsFromJson(
 
 /// @nodoc
 mixin _$ListPrivateMessageReports {
-  int? get page => throw _privateConstructorUsedError;
-  int? get limit => throw _privateConstructorUsedError;
-  bool? get unresolvedOnly => throw _privateConstructorUsedError;
+  int? get page => throw _privateConstructorUsedError; // v0.18.0
+  int? get limit => throw _privateConstructorUsedError; // v0.18.0
+  bool? get unresolvedOnly => throw _privateConstructorUsedError; // v0.18.0
   int? get communityId => throw _privateConstructorUsedError;
   String? get auth => throw _privateConstructorUsedError;
 
@@ -1469,10 +1486,13 @@ class _$ListPrivateMessageReportsImpl extends _ListPrivateMessageReports {
 
   @override
   final int? page;
+// v0.18.0
   @override
   final int? limit;
+// v0.18.0
   @override
   final bool? unresolvedOnly;
+// v0.18.0
   @override
   final int? communityId;
   @override
@@ -1484,7 +1504,7 @@ class _$ListPrivateMessageReportsImpl extends _ListPrivateMessageReports {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ListPrivateMessageReportsImpl &&
@@ -1531,11 +1551,11 @@ abstract class _ListPrivateMessageReports extends ListPrivateMessageReports {
 
   @override
   int? get page;
-  @override
+  @override // v0.18.0
   int? get limit;
-  @override
+  @override // v0.18.0
   bool? get unresolvedOnly;
-  @override
+  @override // v0.18.0
   int? get communityId;
   @override
   String? get auth;

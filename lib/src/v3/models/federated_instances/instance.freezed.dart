@@ -12,7 +12,7 @@ part of 'instance.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Instance _$InstanceFromJson(Map<String, dynamic> json) {
   return _Instance.fromJson(json);
@@ -20,11 +20,11 @@ Instance _$InstanceFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Instance {
-  int get id => throw _privateConstructorUsedError;
-  String get domain => throw _privateConstructorUsedError;
-  DateTime get published => throw _privateConstructorUsedError;
-  DateTime? get updated => throw _privateConstructorUsedError;
-  String? get software => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
+  String get domain => throw _privateConstructorUsedError; // v0.18.0
+  DateTime get published => throw _privateConstructorUsedError; // v0.18.0
+  DateTime? get updated => throw _privateConstructorUsedError; // v0.18.0
+  String? get software => throw _privateConstructorUsedError; // v0.18.0
   String? get version => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -178,14 +178,19 @@ class _$InstanceImpl extends _Instance {
 
   @override
   final int id;
+// v0.18.0
   @override
   final String domain;
+// v0.18.0
   @override
   final DateTime published;
+// v0.18.0
   @override
   final DateTime? updated;
+// v0.18.0
   @override
   final String? software;
+// v0.18.0
   @override
   final String? version;
 
@@ -195,7 +200,7 @@ class _$InstanceImpl extends _Instance {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InstanceImpl &&
@@ -243,15 +248,15 @@ abstract class _Instance extends Instance {
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   String get domain;
-  @override
+  @override // v0.18.0
   DateTime get published;
-  @override
+  @override // v0.18.0
   DateTime? get updated;
-  @override
+  @override // v0.18.0
   String? get software;
-  @override
+  @override // v0.18.0
   String? get version;
   @override
   @JsonKey(ignore: true)

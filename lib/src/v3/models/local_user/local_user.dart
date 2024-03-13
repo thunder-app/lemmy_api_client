@@ -10,34 +10,34 @@ part 'local_user.g.dart';
 class LocalUser with _$LocalUser {
   @modelSerde
   const factory LocalUser({
-    required int id,
-    required int personId,
-    String? email,
-    required bool showNsfw,
-    bool? blurNsfw,
-    bool? autoExpand,
-    required String theme,
-    required SortType defaultSortType,
-    required ListingType defaultListingType,
-    required String interfaceLanguage,
-    required bool showAvatars,
-    required bool sendNotificationsToEmail,
-    @deprecated String? validatorTime,
-    required bool showScores,
-    required bool showBotAccounts,
-    required bool showReadPosts,
-    @deprecated bool? showNewPostNotifs,
-    required bool emailVerified,
-    required bool acceptedApplication,
-    @deprecated String? totp2faUrl,
-    bool? openLinksInNewTab,
-    bool? infiniteScrollEnabled, // Only available in lemmy v0.19.0 and above
-    bool? admin, // Only available in lemmy v0.19.0 and above
-    String? postListingMode, // Only available in lemmy v0.19.0 and above
-    bool? totp2faEnabled, // Only available in lemmy v0.19.0 and above
-    bool? enableKeyboardNavigation, // Only available in lemmy v0.19.0 and above
-    bool? enableAnimatedImages, // Only available in lemmy v0.19.0 and above
-    bool? collapseBotComments, // Only available in lemmy v0.19.0 and above
+    required int id, // v0.18.0
+    required int personId, // v0.18.0
+    String? email, // v0.18.0
+    required bool showNsfw, // v0.18.0
+    bool? blurNsfw, // v0.18.3
+    bool? autoExpand, // v0.18.3
+    required String theme, // v0.18.0
+    required SortType defaultSortType, // v0.18.0
+    required ListingType defaultListingType, // v0.18.0
+    required String interfaceLanguage, // v0.18.0
+    required bool showAvatars, // v0.18.0
+    required bool sendNotificationsToEmail, // v0.18.0
+    @deprecated String? validatorTime, // v0.18.0 [deprecated in v0.19.0]
+    required bool showScores, // v0.18.0
+    required bool showBotAccounts, // v0.18.0
+    required bool showReadPosts, // v0.18.0
+    @deprecated bool? showNewPostNotifs, // v0.18.0 [deprecated in v0.19.0]
+    required bool emailVerified, // v0.18.0
+    required bool acceptedApplication, // v0.18.0
+    @deprecated String? totp2faUrl, // v0.18.0 [deprecated in v0.19.0]
+    bool? openLinksInNewTab, // v0.18.1
+    bool? infiniteScrollEnabled, // v0.19.0 (required)
+    bool? admin, // v0.19.0 (required)
+    String? postListingMode, // v0.19.0 (required)
+    bool? totp2faEnabled, // v0.19.0 (required)
+    bool? enableKeyboardNavigation, // v0.19.0 (required)
+    bool? enableAnimatedImages, // v0.19.0 (required)
+    bool? collapseBotComments, // v0.19.0 (required)
   }) = _LocalUser;
 
   const LocalUser._();

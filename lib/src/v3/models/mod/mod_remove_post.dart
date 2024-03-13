@@ -9,12 +9,12 @@ part 'mod_remove_post.g.dart';
 class ModRemovePost with _$ModRemovePost {
   @modelSerde
   const factory ModRemovePost({
-    required int id,
-    required int modPersonId,
-    required int postId,
-    String? reason,
-    required bool removed,
-    @JsonKey(name: 'when_') required String when,
+    required int id, // v0.18.0
+    required int modPersonId, // v0.18.0
+    required int postId, // v0.18.0
+    String? reason, // v0.18.0
+    required bool removed, // v0.18.0
+    @JsonKey(name: 'when_') required String when, // v0.18.0
   }) = _ModRemovePost;
 
   const ModRemovePost._();

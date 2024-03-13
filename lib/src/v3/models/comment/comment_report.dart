@@ -10,15 +10,15 @@ part 'comment_report.g.dart';
 class CommentReport with _$CommentReport {
   @modelSerde
   const factory CommentReport({
-    required int id,
-    required int creatorId,
-    required int commentId,
-    required String originalCommentText,
-    required String reason,
-    required bool resolved,
-    int? resolverId,
-    required DateTime published,
-    DateTime? updated,
+    required int id, // v0.18.0
+    required int creatorId, // v0.18.0
+    required int commentId, // v0.18.0
+    required String originalCommentText, // v0.18.0
+    required String reason, // v0.18.0
+    required bool resolved, // v0.18.0
+    int? resolverId, // v0.18.0
+    required DateTime published, // v0.18.0
+    DateTime? updated, // v0.18.0
   }) = _CommentReport;
 
   const CommentReport._();

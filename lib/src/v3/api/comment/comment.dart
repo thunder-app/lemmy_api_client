@@ -17,11 +17,11 @@ class CreateComment
     implements LemmyApiQuery<CommentResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory CreateComment({
-    required String content,
-    required int postId,
-    int? parentId,
-    int? languageId,
-    @deprecated String? formId,
+    required String content, // v0.18.0
+    required int postId, // v0.18.0
+    int? parentId, // v0.18.0
+    int? languageId, // v0.18.0
+    @deprecated String? formId, // v0.18.0 [deprecated in v0.19.0]
     String? auth,
   }) = _CreateComment;
 
@@ -47,10 +47,10 @@ class EditComment
     implements LemmyApiQuery<CommentResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory EditComment({
-    required int commentId,
-    String? content,
-    int? languageId,
-    @deprecated String? formId,
+    required int commentId, // v0.18.0
+    String? content, // v0.18.0
+    int? languageId, // v0.18.0
+    @deprecated String? formId, // v0.18.0 [deprecated in v0.19.0]
     String? auth,
   }) = _EditComment;
 
@@ -76,8 +76,8 @@ class DeleteComment
     implements LemmyApiQuery<CommentResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory DeleteComment({
-    required int commentId,
-    required bool deleted,
+    required int commentId, // v0.18.0
+    required bool deleted, // v0.18.0
     String? auth,
   }) = _DeleteComment;
 
@@ -103,9 +103,9 @@ class RemoveComment
     implements LemmyApiQuery<CommentResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory RemoveComment({
-    required int commentId,
-    required bool removed,
-    String? reason,
+    required int commentId, // v0.18.0
+    required bool removed, // v0.18.0
+    String? reason, // v0.18.0
     String? auth,
   }) = _RemoveComment;
 
@@ -131,8 +131,8 @@ class MarkCommentReplyAsRead
     implements LemmyApiQuery<CommentReplyResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory MarkCommentReplyAsRead({
-    required int commentReplyId,
-    required bool read,
+    required int commentReplyId, // v0.18.0
+    required bool read, // v0.18.0
     String? auth,
   }) = _MarkCommentReplyAsRead;
 
@@ -158,8 +158,8 @@ class CreateCommentLike
     implements LemmyApiQuery<CommentResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory CreateCommentLike({
-    required int commentId,
-    required num score,
+    required int commentId, // v0.18.0
+    required num score, // v0.18.0
     String? auth,
   }) = _CreateCommentLike;
 
@@ -176,6 +176,38 @@ class CreateCommentLike
       CommentResponse.fromJson(json);
 }
 
+/// Only available in lemmy v0.19.2 and above
+///
+/// List a comment's likes. Admin-only.
+///
+/// `HTTP.GET /comment/like/list`
+@freezed
+class ListCommentLikes
+    with _$ListCommentLikes
+    implements
+        LemmyApiQuery<ListCommentLikesResponse>,
+        LemmyApiAuthenticatedQuery {
+  @apiSerde
+  const factory ListCommentLikes({
+    required int commentId, // v0.19.2 (required)
+    int? page, // v0.19.2 (optional)
+    int? limit, // v0.19.2 (optional)
+    String? auth,
+  }) = _ListCommentLikes;
+
+  const ListCommentLikes._();
+  factory ListCommentLikes.fromJson(Map<String, dynamic> json) =>
+      _$ListCommentLikesFromJson(json);
+
+  final path = '/comment/like/list';
+
+  final httpMethod = HttpMethod.get;
+
+  @override
+  ListCommentLikesResponse responseFactory(Map<String, dynamic> json) =>
+      ListCommentLikesResponse.fromJson(json);
+}
+
 /// Save a comment.
 ///
 /// `HTTP.PUT /comment/save`
@@ -185,8 +217,8 @@ class SaveComment
     implements LemmyApiQuery<CommentResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory SaveComment({
-    required int commentId,
-    required bool save,
+    required int commentId, // v0.18.0
+    required bool save, // v0.18.0
     String? auth,
   }) = _SaveComment;
 
@@ -212,8 +244,8 @@ class DistinguishComment
     implements LemmyApiQuery<CommentResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory DistinguishComment({
-    required int commentId,
-    required bool distinguished,
+    required int commentId, // v0.18.0
+    required bool distinguished, // v0.18.0
     String? auth,
   }) = _DistinguishComment;
 
@@ -239,19 +271,19 @@ class GetComments
     implements LemmyApiQuery<GetCommentsResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetComments({
-    @JsonKey(name: 'type_') ListingType? type,
-    CommentSortType? sort,
-    int? maxDepth,
-    int? page,
-    int? limit,
-    int? communityId,
-    String? communityName,
-    int? postId,
-    int? parentId,
-    bool? savedOnly,
+    @JsonKey(name: 'type_') ListingType? type, // v0.18.0
+    CommentSortType? sort, // v0.18.0
+    int? maxDepth, // v0.18.0
+    int? page, // v0.18.0
+    int? limit, // v0.18.0
+    int? communityId, // v0.18.0
+    String? communityName, // v0.18.0
+    int? postId, // v0.18.0
+    int? parentId, // v0.18.0
+    bool? savedOnly, // v0.18.0
+    bool? likedOnly, // v0.19.0 (optional)
+    bool? dislikedOnly, // v0.19.0 (optional)
     String? auth,
-    bool? likedOnly, // Only available in lemmy v0.19.0 and above
-    bool? dislikedOnly, // Only available in lemmy v0.19.0 and above
   }) = _GetComments;
 
   const GetComments._();
@@ -276,7 +308,7 @@ class GetComment
     implements LemmyApiQuery<CommentResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetComment({
-    required int id,
+    required int id, // v0.18.0
     String? auth,
   }) = _GetComment;
 
@@ -304,8 +336,8 @@ class CreateCommentReport
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory CreateCommentReport({
-    required int commentId,
-    required String reason,
+    required int commentId, // v0.18.0
+    required String reason, // v0.18.0
     String? auth,
   }) = _CreateCommentReport;
 
@@ -333,8 +365,8 @@ class ResolveCommentReport
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ResolveCommentReport({
-    required int reportId,
-    required bool resolved,
+    required int reportId, // v0.18.0
+    required bool resolved, // v0.18.0
     String? auth,
   }) = _ResolveCommentReport;
 
@@ -362,10 +394,11 @@ class ListCommentReports
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ListCommentReports({
-    int? page,
-    int? limit,
-    bool? unresolvedOnly,
-    int? communityId,
+    int? commentId, // v0.19.4 (optional)
+    int? page, // v0.18.0
+    int? limit, // v0.18.0
+    bool? unresolvedOnly, // v0.18.0
+    int? communityId, // v0.18.0
     String? auth,
   }) = _ListCommentReports;
 

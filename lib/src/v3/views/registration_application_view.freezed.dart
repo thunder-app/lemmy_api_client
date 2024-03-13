@@ -12,7 +12,7 @@ part of 'registration_application_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 RegistrationApplicationView _$RegistrationApplicationViewFromJson(
     Map<String, dynamic> json) {
@@ -22,9 +22,10 @@ RegistrationApplicationView _$RegistrationApplicationViewFromJson(
 /// @nodoc
 mixin _$RegistrationApplicationView {
   RegistrationApplication get registrationApplication =>
-      throw _privateConstructorUsedError;
-  LocalUser get creatorLocalUser => throw _privateConstructorUsedError;
-  Person get creator => throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
+  LocalUser get creatorLocalUser =>
+      throw _privateConstructorUsedError; // v0.18.0
+  Person get creator => throw _privateConstructorUsedError; // v0.18.0
   Person? get admin => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -211,10 +212,13 @@ class _$RegistrationApplicationViewImpl extends _RegistrationApplicationView {
 
   @override
   final RegistrationApplication registrationApplication;
+// v0.18.0
   @override
   final LocalUser creatorLocalUser;
+// v0.18.0
   @override
   final Person creator;
+// v0.18.0
   @override
   final Person? admin;
 
@@ -224,7 +228,7 @@ class _$RegistrationApplicationViewImpl extends _RegistrationApplicationView {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RegistrationApplicationViewImpl &&
@@ -271,11 +275,11 @@ abstract class _RegistrationApplicationView
 
   @override
   RegistrationApplication get registrationApplication;
-  @override
+  @override // v0.18.0
   LocalUser get creatorLocalUser;
-  @override
+  @override // v0.18.0
   Person get creator;
-  @override
+  @override // v0.18.0
   Person? get admin;
   @override
   @JsonKey(ignore: true)

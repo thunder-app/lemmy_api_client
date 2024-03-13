@@ -11,14 +11,14 @@ part 'get_site_response.g.dart';
 class GetSiteResponse with _$GetSiteResponse {
   @modelSerde
   const factory GetSiteResponse({
-    required SiteView siteView,
-    required List<PersonView> admins,
-    required String version,
-    MyUserInfo? myUser,
-    required List<Language> allLanguages,
-    required List<int> discussionLanguages,
-    required List<Tagline> taglines,
-    required List<CustomEmojiView> customEmojis,
+    required SiteView siteView, // v0.18.0
+    required List<PersonView> admins, // v0.18.0
+    required String version, // v0.18.0
+    MyUserInfo? myUser, // v0.18.0
+    required List<Language> allLanguages, // v0.18.0
+    required List<int> discussionLanguages, // v0.18.0
+    required List<Tagline> taglines, // v0.18.0
+    required List<CustomEmojiView> customEmojis, // v0.18.0
   }) = _GetSiteResponse;
 
   const GetSiteResponse._();

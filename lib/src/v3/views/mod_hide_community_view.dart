@@ -10,9 +10,9 @@ part 'mod_hide_community_view.g.dart';
 class ModHideCommunityView with _$ModHideCommunityView {
   @modelSerde
   const factory ModHideCommunityView({
-    required ModHideCommunity modHideCommunity,
-    Person? admin,
-    required Community community,
+    required ModHideCommunity modHideCommunity, // v0.18.0
+    Person? admin, // v0.18.0
+    required Community community, // v0.18.0
   }) = _ModHideCommunityView;
 
   const ModHideCommunityView._();

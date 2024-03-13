@@ -9,12 +9,12 @@ part 'mod_feature_post.g.dart';
 class ModFeaturePost with _$ModFeaturePost {
   @modelSerde
   const factory ModFeaturePost({
-    required int id,
-    required int modPersonId,
-    required int postId,
-    required bool featured,
-    @JsonKey(name: 'when_') required String when,
-    required bool isFeaturedCommunity,
+    required int id, // v0.18.0
+    required int modPersonId, // v0.18.0
+    required int postId, // v0.18.0
+    required bool featured, // v0.18.0
+    @JsonKey(name: 'when_') required String when, // v0.18.0
+    required bool isFeaturedCommunity, // v0.18.0
   }) = _ModFeaturePost;
 
   const ModFeaturePost._();

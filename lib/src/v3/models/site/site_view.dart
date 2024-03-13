@@ -10,10 +10,10 @@ part 'site_view.g.dart';
 class SiteView with _$SiteView {
   @modelSerde
   const factory SiteView({
-    required Site site,
-    required LocalSite localSite,
-    required LocalSiteRateLimit localSiteRateLimit,
-    required SiteAggregates counts,
+    required Site site, // v0.18.0
+    required LocalSite localSite, // v0.18.0
+    required LocalSiteRateLimit localSiteRateLimit, // v0.18.0
+    required SiteAggregates counts, // v0.18.0
   }) = _SiteView;
 
   const SiteView._();

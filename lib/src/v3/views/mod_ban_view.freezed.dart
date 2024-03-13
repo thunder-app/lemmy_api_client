@@ -12,7 +12,7 @@ part of 'mod_ban_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ModBanView _$ModBanViewFromJson(Map<String, dynamic> json) {
   return _ModBanView.fromJson(json);
@@ -20,8 +20,8 @@ ModBanView _$ModBanViewFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ModBanView {
-  ModBan get modBan => throw _privateConstructorUsedError;
-  Person? get moderator => throw _privateConstructorUsedError;
+  ModBan get modBan => throw _privateConstructorUsedError; // v0.18.0
+  Person? get moderator => throw _privateConstructorUsedError; // v0.18.0
   Person get bannedPerson => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -168,8 +168,10 @@ class _$ModBanViewImpl extends _ModBanView {
 
   @override
   final ModBan modBan;
+// v0.18.0
   @override
   final Person? moderator;
+// v0.18.0
   @override
   final Person bannedPerson;
 
@@ -179,7 +181,7 @@ class _$ModBanViewImpl extends _ModBanView {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ModBanViewImpl &&
@@ -220,9 +222,9 @@ abstract class _ModBanView extends ModBanView {
 
   @override
   ModBan get modBan;
-  @override
+  @override // v0.18.0
   Person? get moderator;
-  @override
+  @override // v0.18.0
   Person get bannedPerson;
   @override
   @JsonKey(ignore: true)

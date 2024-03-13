@@ -18,11 +18,11 @@ class GetPrivateMessages
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetPrivateMessages({
-    bool? unreadOnly,
-    int? page,
-    int? limit,
+    bool? unreadOnly, // v0.18.0
+    int? page, // v0.18.0
+    int? limit, // v0.18.0
+    int? creatorId, // v0.19.0 (optional)
     String? auth,
-    int? creatorId, // Only available in lemmy v0.19.0 and above
   }) = _GetPrivateMessages;
 
   const GetPrivateMessages._();
@@ -49,8 +49,8 @@ class CreatePrivateMessage
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory CreatePrivateMessage({
-    required String content,
-    required int recipientId,
+    required String content, // v0.18.0
+    required int recipientId, // v0.18.0
     String? auth,
   }) = _CreatePrivateMessage;
 
@@ -78,8 +78,8 @@ class EditPrivateMessage
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory EditPrivateMessage({
-    required int privateMessageId,
-    required String content,
+    required int privateMessageId, // v0.18.0
+    required String content, // v0.18.0
     String? auth,
   }) = _EditPrivateMessage;
 
@@ -107,8 +107,8 @@ class DeletePrivateMessage
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory DeletePrivateMessage({
-    required int privateMessageId,
-    required bool deleted,
+    required int privateMessageId, // v0.18.0
+    required bool deleted, // v0.18.0
     String? auth,
   }) = _DeletePrivateMessage;
 
@@ -136,8 +136,8 @@ class MarkPrivateMessageAsRead
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory MarkPrivateMessageAsRead({
-    required int privateMessageId,
-    required bool read,
+    required int privateMessageId, // v0.18.0
+    required bool read, // v0.18.0
     String? auth,
   }) = _MarkPrivateMessageAsRead;
 
@@ -165,8 +165,8 @@ class CreatePrivateMessageReport
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory CreatePrivateMessageReport({
-    required int privateMessageId,
-    required String reason,
+    required int privateMessageId, // v0.18.0
+    required String reason, // v0.18.0
     String? auth,
   }) = _CreatePrivateMessageReport;
 
@@ -194,8 +194,8 @@ class ResolvePrivateMessageReport
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ResolvePrivateMessageReport({
-    required int reportId,
-    required bool resolved,
+    required int reportId, // v0.18.0
+    required bool resolved, // v0.18.0
     String? auth,
   }) = _ResolvePrivateMessageReport;
 
@@ -223,9 +223,9 @@ class ListPrivateMessageReports
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ListPrivateMessageReports({
-    int? page,
-    int? limit,
-    bool? unresolvedOnly,
+    int? page, // v0.18.0
+    int? limit, // v0.18.0
+    bool? unresolvedOnly, // v0.18.0
     int? communityId,
     String? auth,
   }) = _ListPrivateMessageReports;

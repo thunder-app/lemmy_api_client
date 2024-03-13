@@ -10,10 +10,10 @@ part 'mod_feature_post_view.g.dart';
 class ModFeaturePostView with _$ModFeaturePostView {
   @modelSerde
   const factory ModFeaturePostView({
-    required ModFeaturePost modFeaturePost,
-    Person? moderator,
-    required Post post,
-    required Community community,
+    required ModFeaturePost modFeaturePost, // v0.18.0
+    Person? moderator, // v0.18.0
+    required Post post, // v0.18.0
+    required Community community, // v0.18.0
   }) = _ModFeaturePostView;
 
   const ModFeaturePostView._();

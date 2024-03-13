@@ -9,10 +9,10 @@ part 'admin_purge_community.g.dart';
 class AdminPurgeCommunity with _$AdminPurgeCommunity {
   @modelSerde
   const factory AdminPurgeCommunity({
-    required int id,
-    required int adminPersonId,
-    String? reason,
-    @JsonKey(name: 'when_') required String when,
+    required int id, // v0.18.0
+    required int adminPersonId, // v0.18.0
+    String? reason, // v0.18.0
+    @JsonKey(name: 'when_') required String when, // v0.18.0
   }) = _AdminPurgeCommunity;
 
   const AdminPurgeCommunity._();

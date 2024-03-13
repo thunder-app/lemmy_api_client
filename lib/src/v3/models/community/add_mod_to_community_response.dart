@@ -10,7 +10,7 @@ part 'add_mod_to_community_response.g.dart';
 class AddModToCommunityResponse with _$AddModToCommunityResponse {
   @modelSerde
   const factory AddModToCommunityResponse({
-    required List<CommunityModeratorView> moderators,
+    required List<CommunityModeratorView> moderators, // v0.18.0
   }) = _AddModToCommunityResponse;
 
   const AddModToCommunityResponse._();

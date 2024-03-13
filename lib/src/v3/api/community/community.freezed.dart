@@ -12,7 +12,7 @@ part of 'community.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetCommunity _$GetCommunityFromJson(Map<String, dynamic> json) {
   return _GetCommunity.fromJson(json);
@@ -20,8 +20,8 @@ GetCommunity _$GetCommunityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetCommunity {
-  int? get id => throw _privateConstructorUsedError;
-  String? get name => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError; // v0.18.0
+  String? get name => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -127,8 +127,10 @@ class _$GetCommunityImpl extends _GetCommunity {
 
   @override
   final int? id;
+// v0.18.0
   @override
   final String? name;
+// v0.18.0
   @override
   final String? auth;
 
@@ -138,7 +140,7 @@ class _$GetCommunityImpl extends _GetCommunity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetCommunityImpl &&
@@ -177,9 +179,9 @@ abstract class _GetCommunity extends GetCommunity {
 
   @override
   int? get id;
-  @override
+  @override // v0.18.0
   String? get name;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -193,14 +195,18 @@ CreateCommunity _$CreateCommunityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CreateCommunity {
-  String get name => throw _privateConstructorUsedError;
-  String get title => throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
-  String? get icon => throw _privateConstructorUsedError;
-  String? get banner => throw _privateConstructorUsedError;
-  bool? get nsfw => throw _privateConstructorUsedError;
-  bool? get postingRestrictedToMods => throw _privateConstructorUsedError;
-  List<int>? get discussionLanguages => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError; // v0.18.0
+  String get title => throw _privateConstructorUsedError; // v0.18.0
+  String? get description => throw _privateConstructorUsedError; // v0.18.0
+  String? get icon => throw _privateConstructorUsedError; // v0.18.0
+  String? get banner => throw _privateConstructorUsedError; // v0.18.0
+  bool? get nsfw => throw _privateConstructorUsedError; // v0.18.0
+  bool? get postingRestrictedToMods =>
+      throw _privateConstructorUsedError; // v0.18.0
+  List<int>? get discussionLanguages =>
+      throw _privateConstructorUsedError; // v0.18.0
+  CommunityVisibility? get visibility =>
+      throw _privateConstructorUsedError; // v0.19.4 (optional)
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -224,6 +230,7 @@ abstract class $CreateCommunityCopyWith<$Res> {
       bool? nsfw,
       bool? postingRestrictedToMods,
       List<int>? discussionLanguages,
+      CommunityVisibility? visibility,
       String? auth});
 }
 
@@ -248,6 +255,7 @@ class _$CreateCommunityCopyWithImpl<$Res, $Val extends CreateCommunity>
     Object? nsfw = freezed,
     Object? postingRestrictedToMods = freezed,
     Object? discussionLanguages = freezed,
+    Object? visibility = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
@@ -283,6 +291,10 @@ class _$CreateCommunityCopyWithImpl<$Res, $Val extends CreateCommunity>
           ? _value.discussionLanguages
           : discussionLanguages // ignore: cast_nullable_to_non_nullable
               as List<int>?,
+      visibility: freezed == visibility
+          ? _value.visibility
+          : visibility // ignore: cast_nullable_to_non_nullable
+              as CommunityVisibility?,
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -308,6 +320,7 @@ abstract class _$$CreateCommunityImplCopyWith<$Res>
       bool? nsfw,
       bool? postingRestrictedToMods,
       List<int>? discussionLanguages,
+      CommunityVisibility? visibility,
       String? auth});
 }
 
@@ -330,6 +343,7 @@ class __$$CreateCommunityImplCopyWithImpl<$Res>
     Object? nsfw = freezed,
     Object? postingRestrictedToMods = freezed,
     Object? discussionLanguages = freezed,
+    Object? visibility = freezed,
     Object? auth = freezed,
   }) {
     return _then(_$CreateCommunityImpl(
@@ -365,6 +379,10 @@ class __$$CreateCommunityImplCopyWithImpl<$Res>
           ? _value._discussionLanguages
           : discussionLanguages // ignore: cast_nullable_to_non_nullable
               as List<int>?,
+      visibility: freezed == visibility
+          ? _value.visibility
+          : visibility // ignore: cast_nullable_to_non_nullable
+              as CommunityVisibility?,
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -386,6 +404,7 @@ class _$CreateCommunityImpl extends _CreateCommunity {
       this.nsfw,
       this.postingRestrictedToMods,
       final List<int>? discussionLanguages,
+      this.visibility,
       this.auth})
       : _discussionLanguages = discussionLanguages,
         super._();
@@ -395,19 +414,27 @@ class _$CreateCommunityImpl extends _CreateCommunity {
 
   @override
   final String name;
+// v0.18.0
   @override
   final String title;
+// v0.18.0
   @override
   final String? description;
+// v0.18.0
   @override
   final String? icon;
+// v0.18.0
   @override
   final String? banner;
+// v0.18.0
   @override
   final bool? nsfw;
+// v0.18.0
   @override
   final bool? postingRestrictedToMods;
+// v0.18.0
   final List<int>? _discussionLanguages;
+// v0.18.0
   @override
   List<int>? get discussionLanguages {
     final value = _discussionLanguages;
@@ -418,16 +445,20 @@ class _$CreateCommunityImpl extends _CreateCommunity {
     return EqualUnmodifiableListView(value);
   }
 
+// v0.18.0
+  @override
+  final CommunityVisibility? visibility;
+// v0.19.4 (optional)
   @override
   final String? auth;
 
   @override
   String toString() {
-    return 'CreateCommunity(name: $name, title: $title, description: $description, icon: $icon, banner: $banner, nsfw: $nsfw, postingRestrictedToMods: $postingRestrictedToMods, discussionLanguages: $discussionLanguages, auth: $auth)';
+    return 'CreateCommunity(name: $name, title: $title, description: $description, icon: $icon, banner: $banner, nsfw: $nsfw, postingRestrictedToMods: $postingRestrictedToMods, discussionLanguages: $discussionLanguages, visibility: $visibility, auth: $auth)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CreateCommunityImpl &&
@@ -443,6 +474,8 @@ class _$CreateCommunityImpl extends _CreateCommunity {
                 other.postingRestrictedToMods == postingRestrictedToMods) &&
             const DeepCollectionEquality()
                 .equals(other._discussionLanguages, _discussionLanguages) &&
+            (identical(other.visibility, visibility) ||
+                other.visibility == visibility) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
@@ -458,6 +491,7 @@ class _$CreateCommunityImpl extends _CreateCommunity {
       nsfw,
       postingRestrictedToMods,
       const DeepCollectionEquality().hash(_discussionLanguages),
+      visibility,
       auth);
 
   @JsonKey(ignore: true)
@@ -485,6 +519,7 @@ abstract class _CreateCommunity extends CreateCommunity {
       final bool? nsfw,
       final bool? postingRestrictedToMods,
       final List<int>? discussionLanguages,
+      final CommunityVisibility? visibility,
       final String? auth}) = _$CreateCommunityImpl;
   const _CreateCommunity._() : super._();
 
@@ -493,21 +528,23 @@ abstract class _CreateCommunity extends CreateCommunity {
 
   @override
   String get name;
-  @override
+  @override // v0.18.0
   String get title;
-  @override
+  @override // v0.18.0
   String? get description;
-  @override
+  @override // v0.18.0
   String? get icon;
-  @override
+  @override // v0.18.0
   String? get banner;
-  @override
+  @override // v0.18.0
   bool? get nsfw;
-  @override
+  @override // v0.18.0
   bool? get postingRestrictedToMods;
-  @override
+  @override // v0.18.0
   List<int>? get discussionLanguages;
-  @override
+  @override // v0.18.0
+  CommunityVisibility? get visibility;
+  @override // v0.19.4 (optional)
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -521,14 +558,18 @@ EditCommunity _$EditCommunityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$EditCommunity {
-  int get communityId => throw _privateConstructorUsedError;
-  String? get title => throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
-  String? get icon => throw _privateConstructorUsedError;
-  String? get banner => throw _privateConstructorUsedError;
-  bool? get nsfw => throw _privateConstructorUsedError;
-  bool? get postingRestrictedToMods => throw _privateConstructorUsedError;
-  List<int>? get discussionLanguages => throw _privateConstructorUsedError;
+  int get communityId => throw _privateConstructorUsedError; // v0.18.0
+  String? get title => throw _privateConstructorUsedError; // v0.18.0
+  String? get description => throw _privateConstructorUsedError; // v0.18.0
+  String? get icon => throw _privateConstructorUsedError; // v0.18.0
+  String? get banner => throw _privateConstructorUsedError; // v0.18.0
+  bool? get nsfw => throw _privateConstructorUsedError; // v0.18.0
+  bool? get postingRestrictedToMods =>
+      throw _privateConstructorUsedError; // v0.18.0
+  List<int>? get discussionLanguages =>
+      throw _privateConstructorUsedError; // v0.18.0
+  CommunityVisibility? get visibility =>
+      throw _privateConstructorUsedError; // v0.19.4 (required)
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -552,6 +593,7 @@ abstract class $EditCommunityCopyWith<$Res> {
       bool? nsfw,
       bool? postingRestrictedToMods,
       List<int>? discussionLanguages,
+      CommunityVisibility? visibility,
       String? auth});
 }
 
@@ -576,6 +618,7 @@ class _$EditCommunityCopyWithImpl<$Res, $Val extends EditCommunity>
     Object? nsfw = freezed,
     Object? postingRestrictedToMods = freezed,
     Object? discussionLanguages = freezed,
+    Object? visibility = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
@@ -611,6 +654,10 @@ class _$EditCommunityCopyWithImpl<$Res, $Val extends EditCommunity>
           ? _value.discussionLanguages
           : discussionLanguages // ignore: cast_nullable_to_non_nullable
               as List<int>?,
+      visibility: freezed == visibility
+          ? _value.visibility
+          : visibility // ignore: cast_nullable_to_non_nullable
+              as CommunityVisibility?,
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -636,6 +683,7 @@ abstract class _$$EditCommunityImplCopyWith<$Res>
       bool? nsfw,
       bool? postingRestrictedToMods,
       List<int>? discussionLanguages,
+      CommunityVisibility? visibility,
       String? auth});
 }
 
@@ -658,6 +706,7 @@ class __$$EditCommunityImplCopyWithImpl<$Res>
     Object? nsfw = freezed,
     Object? postingRestrictedToMods = freezed,
     Object? discussionLanguages = freezed,
+    Object? visibility = freezed,
     Object? auth = freezed,
   }) {
     return _then(_$EditCommunityImpl(
@@ -693,6 +742,10 @@ class __$$EditCommunityImplCopyWithImpl<$Res>
           ? _value._discussionLanguages
           : discussionLanguages // ignore: cast_nullable_to_non_nullable
               as List<int>?,
+      visibility: freezed == visibility
+          ? _value.visibility
+          : visibility // ignore: cast_nullable_to_non_nullable
+              as CommunityVisibility?,
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -714,6 +767,7 @@ class _$EditCommunityImpl extends _EditCommunity {
       this.nsfw,
       this.postingRestrictedToMods,
       final List<int>? discussionLanguages,
+      this.visibility,
       this.auth})
       : _discussionLanguages = discussionLanguages,
         super._();
@@ -723,19 +777,27 @@ class _$EditCommunityImpl extends _EditCommunity {
 
   @override
   final int communityId;
+// v0.18.0
   @override
   final String? title;
+// v0.18.0
   @override
   final String? description;
+// v0.18.0
   @override
   final String? icon;
+// v0.18.0
   @override
   final String? banner;
+// v0.18.0
   @override
   final bool? nsfw;
+// v0.18.0
   @override
   final bool? postingRestrictedToMods;
+// v0.18.0
   final List<int>? _discussionLanguages;
+// v0.18.0
   @override
   List<int>? get discussionLanguages {
     final value = _discussionLanguages;
@@ -746,16 +808,20 @@ class _$EditCommunityImpl extends _EditCommunity {
     return EqualUnmodifiableListView(value);
   }
 
+// v0.18.0
+  @override
+  final CommunityVisibility? visibility;
+// v0.19.4 (required)
   @override
   final String? auth;
 
   @override
   String toString() {
-    return 'EditCommunity(communityId: $communityId, title: $title, description: $description, icon: $icon, banner: $banner, nsfw: $nsfw, postingRestrictedToMods: $postingRestrictedToMods, discussionLanguages: $discussionLanguages, auth: $auth)';
+    return 'EditCommunity(communityId: $communityId, title: $title, description: $description, icon: $icon, banner: $banner, nsfw: $nsfw, postingRestrictedToMods: $postingRestrictedToMods, discussionLanguages: $discussionLanguages, visibility: $visibility, auth: $auth)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EditCommunityImpl &&
@@ -772,6 +838,8 @@ class _$EditCommunityImpl extends _EditCommunity {
                 other.postingRestrictedToMods == postingRestrictedToMods) &&
             const DeepCollectionEquality()
                 .equals(other._discussionLanguages, _discussionLanguages) &&
+            (identical(other.visibility, visibility) ||
+                other.visibility == visibility) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
@@ -787,6 +855,7 @@ class _$EditCommunityImpl extends _EditCommunity {
       nsfw,
       postingRestrictedToMods,
       const DeepCollectionEquality().hash(_discussionLanguages),
+      visibility,
       auth);
 
   @JsonKey(ignore: true)
@@ -813,6 +882,7 @@ abstract class _EditCommunity extends EditCommunity {
       final bool? nsfw,
       final bool? postingRestrictedToMods,
       final List<int>? discussionLanguages,
+      final CommunityVisibility? visibility,
       final String? auth}) = _$EditCommunityImpl;
   const _EditCommunity._() : super._();
 
@@ -821,21 +891,23 @@ abstract class _EditCommunity extends EditCommunity {
 
   @override
   int get communityId;
-  @override
+  @override // v0.18.0
   String? get title;
-  @override
+  @override // v0.18.0
   String? get description;
-  @override
+  @override // v0.18.0
   String? get icon;
-  @override
+  @override // v0.18.0
   String? get banner;
-  @override
+  @override // v0.18.0
   bool? get nsfw;
-  @override
+  @override // v0.18.0
   bool? get postingRestrictedToMods;
-  @override
+  @override // v0.18.0
   List<int>? get discussionLanguages;
-  @override
+  @override // v0.18.0
+  CommunityVisibility? get visibility;
+  @override // v0.19.4 (required)
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -850,11 +922,11 @@ ListCommunities _$ListCommunitiesFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ListCommunities {
   @JsonKey(name: 'type_')
-  ListingType? get type => throw _privateConstructorUsedError;
-  SortType? get sort => throw _privateConstructorUsedError;
-  bool? get showNsfw => throw _privateConstructorUsedError;
-  int? get page => throw _privateConstructorUsedError;
-  int? get limit => throw _privateConstructorUsedError;
+  ListingType? get type => throw _privateConstructorUsedError; // v0.18.0
+  SortType? get sort => throw _privateConstructorUsedError; // v0.18.0
+  int? get page => throw _privateConstructorUsedError; // v0.18.0
+  int? get limit => throw _privateConstructorUsedError; // v0.18.0
+  bool? get showNsfw => throw _privateConstructorUsedError; // v0.18.1
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -872,9 +944,9 @@ abstract class $ListCommunitiesCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'type_') ListingType? type,
       SortType? sort,
-      bool? showNsfw,
       int? page,
       int? limit,
+      bool? showNsfw,
       String? auth});
 }
 
@@ -893,9 +965,9 @@ class _$ListCommunitiesCopyWithImpl<$Res, $Val extends ListCommunities>
   $Res call({
     Object? type = freezed,
     Object? sort = freezed,
-    Object? showNsfw = freezed,
     Object? page = freezed,
     Object? limit = freezed,
+    Object? showNsfw = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
@@ -907,10 +979,6 @@ class _$ListCommunitiesCopyWithImpl<$Res, $Val extends ListCommunities>
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
               as SortType?,
-      showNsfw: freezed == showNsfw
-          ? _value.showNsfw
-          : showNsfw // ignore: cast_nullable_to_non_nullable
-              as bool?,
       page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -919,6 +987,10 @@ class _$ListCommunitiesCopyWithImpl<$Res, $Val extends ListCommunities>
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
+      showNsfw: freezed == showNsfw
+          ? _value.showNsfw
+          : showNsfw // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -938,9 +1010,9 @@ abstract class _$$ListCommunitiesImplCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'type_') ListingType? type,
       SortType? sort,
-      bool? showNsfw,
       int? page,
       int? limit,
+      bool? showNsfw,
       String? auth});
 }
 
@@ -957,9 +1029,9 @@ class __$$ListCommunitiesImplCopyWithImpl<$Res>
   $Res call({
     Object? type = freezed,
     Object? sort = freezed,
-    Object? showNsfw = freezed,
     Object? page = freezed,
     Object? limit = freezed,
+    Object? showNsfw = freezed,
     Object? auth = freezed,
   }) {
     return _then(_$ListCommunitiesImpl(
@@ -971,10 +1043,6 @@ class __$$ListCommunitiesImplCopyWithImpl<$Res>
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
               as SortType?,
-      showNsfw: freezed == showNsfw
-          ? _value.showNsfw
-          : showNsfw // ignore: cast_nullable_to_non_nullable
-              as bool?,
       page: freezed == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -983,6 +1051,10 @@ class __$$ListCommunitiesImplCopyWithImpl<$Res>
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
+      showNsfw: freezed == showNsfw
+          ? _value.showNsfw
+          : showNsfw // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: freezed == auth
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -998,9 +1070,9 @@ class _$ListCommunitiesImpl extends _ListCommunities {
   const _$ListCommunitiesImpl(
       {@JsonKey(name: 'type_') this.type,
       this.sort,
-      this.showNsfw,
       this.page,
       this.limit,
+      this.showNsfw,
       this.auth})
       : super._();
 
@@ -1010,40 +1082,45 @@ class _$ListCommunitiesImpl extends _ListCommunities {
   @override
   @JsonKey(name: 'type_')
   final ListingType? type;
+// v0.18.0
   @override
   final SortType? sort;
-  @override
-  final bool? showNsfw;
+// v0.18.0
   @override
   final int? page;
+// v0.18.0
   @override
   final int? limit;
+// v0.18.0
+  @override
+  final bool? showNsfw;
+// v0.18.1
   @override
   final String? auth;
 
   @override
   String toString() {
-    return 'ListCommunities(type: $type, sort: $sort, showNsfw: $showNsfw, page: $page, limit: $limit, auth: $auth)';
+    return 'ListCommunities(type: $type, sort: $sort, page: $page, limit: $limit, showNsfw: $showNsfw, auth: $auth)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ListCommunitiesImpl &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.sort, sort) || other.sort == sort) &&
-            (identical(other.showNsfw, showNsfw) ||
-                other.showNsfw == showNsfw) &&
             (identical(other.page, page) || other.page == page) &&
             (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.showNsfw, showNsfw) ||
+                other.showNsfw == showNsfw) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, type, sort, showNsfw, page, limit, auth);
+      Object.hash(runtimeType, type, sort, page, limit, showNsfw, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -1064,9 +1141,9 @@ abstract class _ListCommunities extends ListCommunities {
   const factory _ListCommunities(
       {@JsonKey(name: 'type_') final ListingType? type,
       final SortType? sort,
-      final bool? showNsfw,
       final int? page,
       final int? limit,
+      final bool? showNsfw,
       final String? auth}) = _$ListCommunitiesImpl;
   const _ListCommunities._() : super._();
 
@@ -1076,15 +1153,15 @@ abstract class _ListCommunities extends ListCommunities {
   @override
   @JsonKey(name: 'type_')
   ListingType? get type;
-  @override
+  @override // v0.18.0
   SortType? get sort;
-  @override
-  bool? get showNsfw;
-  @override
+  @override // v0.18.0
   int? get page;
-  @override
+  @override // v0.18.0
   int? get limit;
-  @override
+  @override // v0.18.0
+  bool? get showNsfw;
+  @override // v0.18.1
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -1098,8 +1175,8 @@ FollowCommunity _$FollowCommunityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$FollowCommunity {
-  int get communityId => throw _privateConstructorUsedError;
-  bool get follow => throw _privateConstructorUsedError;
+  int get communityId => throw _privateConstructorUsedError; // v0.18.0
+  bool get follow => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1207,8 +1284,10 @@ class _$FollowCommunityImpl extends _FollowCommunity {
 
   @override
   final int communityId;
+// v0.18.0
   @override
   final bool follow;
+// v0.18.0
   @override
   final String? auth;
 
@@ -1218,7 +1297,7 @@ class _$FollowCommunityImpl extends _FollowCommunity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FollowCommunityImpl &&
@@ -1259,9 +1338,9 @@ abstract class _FollowCommunity extends FollowCommunity {
 
   @override
   int get communityId;
-  @override
+  @override // v0.18.0
   bool get follow;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -1275,8 +1354,8 @@ BlockCommunity _$BlockCommunityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$BlockCommunity {
-  int get communityId => throw _privateConstructorUsedError;
-  bool get block => throw _privateConstructorUsedError;
+  int get communityId => throw _privateConstructorUsedError; // v0.18.0
+  bool get block => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1384,8 +1463,10 @@ class _$BlockCommunityImpl extends _BlockCommunity {
 
   @override
   final int communityId;
+// v0.18.0
   @override
   final bool block;
+// v0.18.0
   @override
   final String? auth;
 
@@ -1395,7 +1476,7 @@ class _$BlockCommunityImpl extends _BlockCommunity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BlockCommunityImpl &&
@@ -1436,9 +1517,9 @@ abstract class _BlockCommunity extends BlockCommunity {
 
   @override
   int get communityId;
-  @override
+  @override // v0.18.0
   bool get block;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -1452,8 +1533,8 @@ DeleteCommunity _$DeleteCommunityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$DeleteCommunity {
-  int get communityId => throw _privateConstructorUsedError;
-  bool get deleted => throw _privateConstructorUsedError;
+  int get communityId => throw _privateConstructorUsedError; // v0.18.0
+  bool get deleted => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1561,8 +1642,10 @@ class _$DeleteCommunityImpl extends _DeleteCommunity {
 
   @override
   final int communityId;
+// v0.18.0
   @override
   final bool deleted;
+// v0.18.0
   @override
   final String? auth;
 
@@ -1572,7 +1655,7 @@ class _$DeleteCommunityImpl extends _DeleteCommunity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeleteCommunityImpl &&
@@ -1613,9 +1696,9 @@ abstract class _DeleteCommunity extends DeleteCommunity {
 
   @override
   int get communityId;
-  @override
+  @override // v0.18.0
   bool get deleted;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -1629,10 +1712,10 @@ HideCommunity _$HideCommunityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$HideCommunity {
+  int get communityId => throw _privateConstructorUsedError; // v0.18.0
+  bool get hidden => throw _privateConstructorUsedError; // v0.18.0
+  String? get reason => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
-  int get communityId => throw _privateConstructorUsedError;
-  bool get hidden => throw _privateConstructorUsedError;
-  String? get reason => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1646,7 +1729,7 @@ abstract class $HideCommunityCopyWith<$Res> {
           HideCommunity value, $Res Function(HideCommunity) then) =
       _$HideCommunityCopyWithImpl<$Res, HideCommunity>;
   @useResult
-  $Res call({String? auth, int communityId, bool hidden, String? reason});
+  $Res call({int communityId, bool hidden, String? reason, String? auth});
 }
 
 /// @nodoc
@@ -1662,16 +1745,12 @@ class _$HideCommunityCopyWithImpl<$Res, $Val extends HideCommunity>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? auth = freezed,
     Object? communityId = null,
     Object? hidden = null,
     Object? reason = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
       communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -1683,6 +1762,10 @@ class _$HideCommunityCopyWithImpl<$Res, $Val extends HideCommunity>
       reason: freezed == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      auth: freezed == auth
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
   }
@@ -1696,7 +1779,7 @@ abstract class _$$HideCommunityImplCopyWith<$Res>
       __$$HideCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? auth, int communityId, bool hidden, String? reason});
+  $Res call({int communityId, bool hidden, String? reason, String? auth});
 }
 
 /// @nodoc
@@ -1710,16 +1793,12 @@ class __$$HideCommunityImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? auth = freezed,
     Object? communityId = null,
     Object? hidden = null,
     Object? reason = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_$HideCommunityImpl(
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
       communityId: null == communityId
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -1732,6 +1811,10 @@ class __$$HideCommunityImplCopyWithImpl<$Res>
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as String?,
+      auth: freezed == auth
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1741,42 +1824,45 @@ class __$$HideCommunityImplCopyWithImpl<$Res>
 @apiSerde
 class _$HideCommunityImpl extends _HideCommunity {
   const _$HideCommunityImpl(
-      {this.auth, required this.communityId, required this.hidden, this.reason})
+      {required this.communityId, required this.hidden, this.reason, this.auth})
       : super._();
 
   factory _$HideCommunityImpl.fromJson(Map<String, dynamic> json) =>
       _$$HideCommunityImplFromJson(json);
 
   @override
-  final String? auth;
-  @override
   final int communityId;
+// v0.18.0
   @override
   final bool hidden;
+// v0.18.0
   @override
   final String? reason;
+// v0.18.0
+  @override
+  final String? auth;
 
   @override
   String toString() {
-    return 'HideCommunity(auth: $auth, communityId: $communityId, hidden: $hidden, reason: $reason)';
+    return 'HideCommunity(communityId: $communityId, hidden: $hidden, reason: $reason, auth: $auth)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$HideCommunityImpl &&
-            (identical(other.auth, auth) || other.auth == auth) &&
             (identical(other.communityId, communityId) ||
                 other.communityId == communityId) &&
             (identical(other.hidden, hidden) || other.hidden == hidden) &&
-            (identical(other.reason, reason) || other.reason == reason));
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, auth, communityId, hidden, reason);
+      Object.hash(runtimeType, communityId, hidden, reason, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -1794,23 +1880,23 @@ class _$HideCommunityImpl extends _HideCommunity {
 
 abstract class _HideCommunity extends HideCommunity {
   const factory _HideCommunity(
-      {final String? auth,
-      required final int communityId,
+      {required final int communityId,
       required final bool hidden,
-      final String? reason}) = _$HideCommunityImpl;
+      final String? reason,
+      final String? auth}) = _$HideCommunityImpl;
   const _HideCommunity._() : super._();
 
   factory _HideCommunity.fromJson(Map<String, dynamic> json) =
       _$HideCommunityImpl.fromJson;
 
   @override
-  String? get auth;
-  @override
   int get communityId;
-  @override
+  @override // v0.18.0
   bool get hidden;
-  @override
+  @override // v0.18.0
   String? get reason;
+  @override // v0.18.0
+  String? get auth;
   @override
   @JsonKey(ignore: true)
   _$$HideCommunityImplCopyWith<_$HideCommunityImpl> get copyWith =>
@@ -1823,11 +1909,12 @@ RemoveCommunity _$RemoveCommunityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$RemoveCommunity {
-  int get communityId => throw _privateConstructorUsedError;
-  bool get removed => throw _privateConstructorUsedError;
-  String? get reason => throw _privateConstructorUsedError;
+  int get communityId => throw _privateConstructorUsedError; // v0.18.0
+  bool get removed => throw _privateConstructorUsedError; // v0.18.0
+  String? get reason => throw _privateConstructorUsedError; // v0.18.0
   @deprecated
-  int? get expires => throw _privateConstructorUsedError;
+  int? get expires =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1969,13 +2056,17 @@ class _$RemoveCommunityImpl extends _RemoveCommunity {
 
   @override
   final int communityId;
+// v0.18.0
   @override
   final bool removed;
+// v0.18.0
   @override
   final String? reason;
+// v0.18.0
   @override
   @deprecated
   final int? expires;
+// v0.18.0 [deprecated in v0.19.0]
   @override
   final String? auth;
 
@@ -1985,7 +2076,7 @@ class _$RemoveCommunityImpl extends _RemoveCommunity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RemoveCommunityImpl &&
@@ -2031,14 +2122,14 @@ abstract class _RemoveCommunity extends RemoveCommunity {
 
   @override
   int get communityId;
-  @override
+  @override // v0.18.0
   bool get removed;
-  @override
+  @override // v0.18.0
   String? get reason;
-  @override
+  @override // v0.18.0
   @deprecated
   int? get expires;
-  @override
+  @override // v0.18.0 [deprecated in v0.19.0]
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -2052,8 +2143,8 @@ TransferCommunity _$TransferCommunityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TransferCommunity {
-  int get communityId => throw _privateConstructorUsedError;
-  int get personId => throw _privateConstructorUsedError;
+  int get communityId => throw _privateConstructorUsedError; // v0.18.0
+  int get personId => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2161,8 +2252,10 @@ class _$TransferCommunityImpl extends _TransferCommunity {
 
   @override
   final int communityId;
+// v0.18.0
   @override
   final int personId;
+// v0.18.0
   @override
   final String? auth;
 
@@ -2172,7 +2265,7 @@ class _$TransferCommunityImpl extends _TransferCommunity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TransferCommunityImpl &&
@@ -2214,9 +2307,9 @@ abstract class _TransferCommunity extends TransferCommunity {
 
   @override
   int get communityId;
-  @override
+  @override // v0.18.0
   int get personId;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -2230,12 +2323,12 @@ BanFromCommunity _$BanFromCommunityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$BanFromCommunity {
-  int get communityId => throw _privateConstructorUsedError;
-  int get personId => throw _privateConstructorUsedError;
-  bool get ban => throw _privateConstructorUsedError;
-  bool? get removeData => throw _privateConstructorUsedError;
-  String? get reason => throw _privateConstructorUsedError;
-  int? get expires => throw _privateConstructorUsedError;
+  int get communityId => throw _privateConstructorUsedError; // v0.18.0
+  int get personId => throw _privateConstructorUsedError; // v0.18.0
+  bool get ban => throw _privateConstructorUsedError; // v0.18.0
+  bool? get removeData => throw _privateConstructorUsedError; // v0.18.0
+  String? get reason => throw _privateConstructorUsedError; // v0.18.0
+  int? get expires => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2403,16 +2496,22 @@ class _$BanFromCommunityImpl extends _BanFromCommunity {
 
   @override
   final int communityId;
+// v0.18.0
   @override
   final int personId;
+// v0.18.0
   @override
   final bool ban;
+// v0.18.0
   @override
   final bool? removeData;
+// v0.18.0
   @override
   final String? reason;
+// v0.18.0
   @override
   final int? expires;
+// v0.18.0
   @override
   final String? auth;
 
@@ -2422,7 +2521,7 @@ class _$BanFromCommunityImpl extends _BanFromCommunity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BanFromCommunityImpl &&
@@ -2474,17 +2573,17 @@ abstract class _BanFromCommunity extends BanFromCommunity {
 
   @override
   int get communityId;
-  @override
+  @override // v0.18.0
   int get personId;
-  @override
+  @override // v0.18.0
   bool get ban;
-  @override
+  @override // v0.18.0
   bool? get removeData;
-  @override
+  @override // v0.18.0
   String? get reason;
-  @override
+  @override // v0.18.0
   int? get expires;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)
@@ -2498,9 +2597,9 @@ AddModToCommunity _$AddModToCommunityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AddModToCommunity {
-  int get communityId => throw _privateConstructorUsedError;
-  int get personId => throw _privateConstructorUsedError;
-  bool get added => throw _privateConstructorUsedError;
+  int get communityId => throw _privateConstructorUsedError; // v0.18.0
+  int get personId => throw _privateConstructorUsedError; // v0.18.0
+  bool get added => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2621,10 +2720,13 @@ class _$AddModToCommunityImpl extends _AddModToCommunity {
 
   @override
   final int communityId;
+// v0.18.0
   @override
   final int personId;
+// v0.18.0
   @override
   final bool added;
+// v0.18.0
   @override
   final String? auth;
 
@@ -2634,7 +2736,7 @@ class _$AddModToCommunityImpl extends _AddModToCommunity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AddModToCommunityImpl &&
@@ -2679,11 +2781,11 @@ abstract class _AddModToCommunity extends AddModToCommunity {
 
   @override
   int get communityId;
-  @override
+  @override // v0.18.0
   int get personId;
-  @override
+  @override // v0.18.0
   bool get added;
-  @override
+  @override // v0.18.0
   String? get auth;
   @override
   @JsonKey(ignore: true)

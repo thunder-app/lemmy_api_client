@@ -11,7 +11,8 @@ class ListRegistrationApplicationsResponse
     with _$ListRegistrationApplicationsResponse {
   @modelSerde
   const factory ListRegistrationApplicationsResponse({
-    required List<RegistrationApplicationView> registrationApplications,
+    required List<RegistrationApplicationView>
+        registrationApplications, // v0.18.0
   }) = _ListRegistrationApplicationsResponse;
 
   const ListRegistrationApplicationsResponse._();

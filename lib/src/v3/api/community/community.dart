@@ -17,8 +17,8 @@ class GetCommunity
     implements LemmyApiQuery<GetCommunityResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetCommunity({
-    int? id,
-    String? name,
+    int? id, // v0.18.0
+    String? name, // v0.18.0
     String? auth,
   }) = _GetCommunity;
 
@@ -44,14 +44,15 @@ class CreateCommunity
     implements LemmyApiQuery<CommunityResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory CreateCommunity({
-    required String name,
-    required String title,
-    String? description,
-    String? icon,
-    String? banner,
-    bool? nsfw,
-    bool? postingRestrictedToMods,
-    List<int>? discussionLanguages,
+    required String name, // v0.18.0
+    required String title, // v0.18.0
+    String? description, // v0.18.0
+    String? icon, // v0.18.0
+    String? banner, // v0.18.0
+    bool? nsfw, // v0.18.0
+    bool? postingRestrictedToMods, // v0.18.0
+    List<int>? discussionLanguages, // v0.18.0
+    CommunityVisibility? visibility, // v0.19.4 (optional)
     String? auth,
   }) = _CreateCommunity;
 
@@ -77,14 +78,15 @@ class EditCommunity
     implements LemmyApiQuery<CommunityResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory EditCommunity({
-    required int communityId,
-    String? title,
-    String? description,
-    String? icon,
-    String? banner,
-    bool? nsfw,
-    bool? postingRestrictedToMods,
-    List<int>? discussionLanguages,
+    required int communityId, // v0.18.0
+    String? title, // v0.18.0
+    String? description, // v0.18.0
+    String? icon, // v0.18.0
+    String? banner, // v0.18.0
+    bool? nsfw, // v0.18.0
+    bool? postingRestrictedToMods, // v0.18.0
+    List<int>? discussionLanguages, // v0.18.0
+    CommunityVisibility? visibility, // v0.19.4 (required)
     String? auth,
   }) = _EditCommunity;
 
@@ -112,11 +114,11 @@ class ListCommunities
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ListCommunities({
-    @JsonKey(name: 'type_') ListingType? type,
-    SortType? sort,
-    bool? showNsfw,
-    int? page,
-    int? limit,
+    @JsonKey(name: 'type_') ListingType? type, // v0.18.0
+    SortType? sort, // v0.18.0
+    int? page, // v0.18.0
+    int? limit, // v0.18.0
+    bool? showNsfw, // v0.18.1
     String? auth,
   }) = _ListCommunities;
 
@@ -142,8 +144,8 @@ class FollowCommunity
     implements LemmyApiQuery<CommunityResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory FollowCommunity({
-    required int communityId,
-    required bool follow,
+    required int communityId, // v0.18.0
+    required bool follow, // v0.18.0
     String? auth,
   }) = _FollowCommunity;
 
@@ -171,8 +173,8 @@ class BlockCommunity
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory BlockCommunity({
-    required int communityId,
-    required bool block,
+    required int communityId, // v0.18.0
+    required bool block, // v0.18.0
     String? auth,
   }) = _BlockCommunity;
 
@@ -198,8 +200,8 @@ class DeleteCommunity
     implements LemmyApiQuery<CommunityResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory DeleteCommunity({
-    required int communityId,
-    required bool deleted,
+    required int communityId, // v0.18.0
+    required bool deleted, // v0.18.0
     String? auth,
   }) = _DeleteCommunity;
 
@@ -229,10 +231,10 @@ class HideCommunity
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory HideCommunity({
+    required int communityId, // v0.18.0
+    required bool hidden, // v0.18.0
+    String? reason, // v0.18.0
     String? auth,
-    required int communityId,
-    required bool hidden,
-    String? reason,
   }) = _HideCommunity;
 
   const HideCommunity._();
@@ -257,10 +259,10 @@ class RemoveCommunity
     implements LemmyApiQuery<CommunityResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory RemoveCommunity({
-    required int communityId,
-    required bool removed,
-    String? reason,
-    @deprecated int? expires,
+    required int communityId, // v0.18.0
+    required bool removed, // v0.18.0
+    String? reason, // v0.18.0
+    @deprecated int? expires, // v0.18.0 [deprecated in v0.19.0]
     String? auth,
   }) = _RemoveCommunity;
 
@@ -286,8 +288,8 @@ class TransferCommunity
     implements LemmyApiQuery<GetCommunityResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory TransferCommunity({
-    required int communityId,
-    required int personId,
+    required int communityId, // v0.18.0
+    required int personId, // v0.18.0
     String? auth,
   }) = _TransferCommunity;
 
@@ -315,12 +317,12 @@ class BanFromCommunity
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory BanFromCommunity({
-    required int communityId,
-    required int personId,
-    required bool ban,
-    bool? removeData,
-    String? reason,
-    int? expires,
+    required int communityId, // v0.18.0
+    required int personId, // v0.18.0
+    required bool ban, // v0.18.0
+    bool? removeData, // v0.18.0
+    String? reason, // v0.18.0
+    int? expires, // v0.18.0
     String? auth,
   }) = _BanFromCommunity;
 
@@ -348,9 +350,9 @@ class AddModToCommunity
         LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory AddModToCommunity({
-    required int communityId,
-    required int personId,
-    required bool added,
+    required int communityId, // v0.18.0
+    required int personId, // v0.18.0
+    required bool added, // v0.18.0
     String? auth,
   }) = _AddModToCommunity;
 

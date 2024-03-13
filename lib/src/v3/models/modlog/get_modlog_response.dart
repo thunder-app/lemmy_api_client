@@ -10,21 +10,21 @@ part 'get_modlog_response.g.dart';
 class GetModlogResponse with _$GetModlogResponse {
   @modelSerde
   const factory GetModlogResponse({
-    required List<ModRemovePostView> removedPosts,
-    required List<ModLockPostView> lockedPosts,
-    required List<ModFeaturePostView> featuredPosts,
-    required List<ModRemoveCommentView> removedComments,
-    required List<ModRemoveCommunityView> removedCommunities,
-    required List<ModBanFromCommunityView> bannedFromCommunity,
-    required List<ModBanView> banned,
-    required List<ModAddCommunityView> addedToCommunity,
-    required List<ModTransferCommunityView> transferredToCommunity,
-    required List<ModAddView> added,
-    required List<AdminPurgePersonView> adminPurgedPersons,
-    required List<AdminPurgeCommunityView> adminPurgedCommunities,
-    required List<AdminPurgePostView> adminPurgedPosts,
-    required List<AdminPurgeCommentView> adminPurgedComments,
-    required List<ModHideCommunityView> hiddenCommunities,
+    required List<ModRemovePostView> removedPosts, // v0.18.0
+    required List<ModLockPostView> lockedPosts, // v0.18.0
+    required List<ModFeaturePostView> featuredPosts, // v0.18.0
+    required List<ModRemoveCommentView> removedComments, // v0.18.0
+    required List<ModRemoveCommunityView> removedCommunities, // v0.18.0
+    required List<ModBanFromCommunityView> bannedFromCommunity, // v0.18.0
+    required List<ModBanView> banned, // v0.18.0
+    required List<ModAddCommunityView> addedToCommunity, // v0.18.0
+    required List<ModTransferCommunityView> transferredToCommunity, // v0.18.0
+    required List<ModAddView> added, // v0.18.0
+    required List<AdminPurgePersonView> adminPurgedPersons, // v0.18.0
+    required List<AdminPurgeCommunityView> adminPurgedCommunities, // v0.18.0
+    required List<AdminPurgePostView> adminPurgedPosts, // v0.18.0
+    required List<AdminPurgeCommentView> adminPurgedComments, // v0.18.0
+    required List<ModHideCommunityView> hiddenCommunities, // v0.18.0
   }) = _GetModlogResponse;
 
   const GetModlogResponse._();

@@ -12,7 +12,7 @@ part of 'private_message_report_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PrivateMessageReportView _$PrivateMessageReportViewFromJson(
     Map<String, dynamic> json) {
@@ -22,10 +22,12 @@ PrivateMessageReportView _$PrivateMessageReportViewFromJson(
 /// @nodoc
 mixin _$PrivateMessageReportView {
   PrivateMessageReport get privateMessageReport =>
-      throw _privateConstructorUsedError;
-  PrivateMessage get privateMessage => throw _privateConstructorUsedError;
-  Person get privateMessageCreator => throw _privateConstructorUsedError;
-  Person get creator => throw _privateConstructorUsedError;
+      throw _privateConstructorUsedError; // v0.18.0
+  PrivateMessage get privateMessage =>
+      throw _privateConstructorUsedError; // v0.18.0
+  Person get privateMessageCreator =>
+      throw _privateConstructorUsedError; // v0.18.0
+  Person get creator => throw _privateConstructorUsedError; // v0.18.0
   Person? get resolver => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -233,12 +235,16 @@ class _$PrivateMessageReportViewImpl extends _PrivateMessageReportView {
 
   @override
   final PrivateMessageReport privateMessageReport;
+// v0.18.0
   @override
   final PrivateMessage privateMessage;
+// v0.18.0
   @override
   final Person privateMessageCreator;
+// v0.18.0
   @override
   final Person creator;
+// v0.18.0
   @override
   final Person? resolver;
 
@@ -248,7 +254,7 @@ class _$PrivateMessageReportViewImpl extends _PrivateMessageReportView {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PrivateMessageReportViewImpl &&
@@ -297,13 +303,13 @@ abstract class _PrivateMessageReportView extends PrivateMessageReportView {
 
   @override
   PrivateMessageReport get privateMessageReport;
-  @override
+  @override // v0.18.0
   PrivateMessage get privateMessage;
-  @override
+  @override // v0.18.0
   Person get privateMessageCreator;
-  @override
+  @override // v0.18.0
   Person get creator;
-  @override
+  @override // v0.18.0
   Person? get resolver;
   @override
   @JsonKey(ignore: true)

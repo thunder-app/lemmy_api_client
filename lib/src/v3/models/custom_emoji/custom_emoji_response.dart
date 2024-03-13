@@ -10,7 +10,7 @@ part 'custom_emoji_response.g.dart';
 class CustomEmojiResponse with _$CustomEmojiResponse {
   @modelSerde
   const factory CustomEmojiResponse({
-    required CustomEmojiView customEmoji,
+    required CustomEmojiView customEmoji, // v0.18.0
   }) = _CustomEmojiResponse;
 
   const CustomEmojiResponse._();

@@ -10,12 +10,12 @@ part 'readable_federation_state.g.dart';
 class ReadableFederationState with _$ReadableFederationState {
   @modelSerde
   const factory ReadableFederationState({
-    required int instanceId,
-    int? lastSuccessfulId,
-    DateTime? lastSuccessfulPublishedTime,
-    required int failCount,
-    DateTime? lastRetry,
-    DateTime? nextRetry,
+    required int instanceId, // v0.19.0 (required)
+    int? lastSuccessfulId, // v0.19.0 (optional)
+    DateTime? lastSuccessfulPublishedTime, // v0.19.0 (optional)
+    required int failCount, // v0.19.0 (required)
+    DateTime? lastRetry, // v0.19.0 (optional)
+    DateTime? nextRetry, // v0.19.0 (optional)
   }) = _ReadableFederationState;
 
   const ReadableFederationState._();

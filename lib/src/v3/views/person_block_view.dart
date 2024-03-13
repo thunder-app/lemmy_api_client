@@ -10,8 +10,8 @@ part 'person_block_view.g.dart';
 class PersonBlockView with _$PersonBlockView {
   @modelSerde
   const factory PersonBlockView({
-    required Person person,
-    required Person target,
+    required Person person, // v0.18.0
+    required Person target, // v0.18.0
   }) = _PersonBlockView;
 
   const PersonBlockView._();

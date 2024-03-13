@@ -10,8 +10,8 @@ part 'block_person_response.g.dart';
 class BlockPersonResponse with _$BlockPersonResponse {
   @modelSerde
   const factory BlockPersonResponse({
-    required PersonView personView,
-    required bool blocked,
+    required PersonView personView, // v0.18.0
+    required bool blocked, // v0.18.0
   }) = _BlockPersonResponse;
 
   const BlockPersonResponse._();

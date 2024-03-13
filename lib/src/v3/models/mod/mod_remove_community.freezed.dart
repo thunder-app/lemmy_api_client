@@ -12,7 +12,7 @@ part of 'mod_remove_community.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ModRemoveCommunity _$ModRemoveCommunityFromJson(Map<String, dynamic> json) {
   return _ModRemoveCommunity.fromJson(json);
@@ -20,13 +20,14 @@ ModRemoveCommunity _$ModRemoveCommunityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ModRemoveCommunity {
-  int get id => throw _privateConstructorUsedError;
-  int get modPersonId => throw _privateConstructorUsedError;
-  int get communityId => throw _privateConstructorUsedError;
-  String? get reason => throw _privateConstructorUsedError;
-  bool get removed => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError; // v0.18.0
+  int get modPersonId => throw _privateConstructorUsedError; // v0.18.0
+  int get communityId => throw _privateConstructorUsedError; // v0.18.0
+  String? get reason => throw _privateConstructorUsedError; // v0.18.0
+  bool get removed => throw _privateConstructorUsedError; // v0.18.0
   @deprecated
-  int? get expires => throw _privateConstructorUsedError;
+  String? get expires =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
   @JsonKey(name: 'when_')
   String get when => throw _privateConstructorUsedError;
 
@@ -48,7 +49,7 @@ abstract class $ModRemoveCommunityCopyWith<$Res> {
       int communityId,
       String? reason,
       bool removed,
-      @deprecated int? expires,
+      @deprecated String? expires,
       @JsonKey(name: 'when_') String when});
 }
 
@@ -97,7 +98,7 @@ class _$ModRemoveCommunityCopyWithImpl<$Res, $Val extends ModRemoveCommunity>
       expires: freezed == expires
           ? _value.expires
           : expires // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
@@ -120,7 +121,7 @@ abstract class _$$ModRemoveCommunityImplCopyWith<$Res>
       int communityId,
       String? reason,
       bool removed,
-      @deprecated int? expires,
+      @deprecated String? expires,
       @JsonKey(name: 'when_') String when});
 }
 
@@ -167,7 +168,7 @@ class __$$ModRemoveCommunityImplCopyWithImpl<$Res>
       expires: freezed == expires
           ? _value.expires
           : expires // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       when: null == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
@@ -195,17 +196,23 @@ class _$ModRemoveCommunityImpl extends _ModRemoveCommunity {
 
   @override
   final int id;
+// v0.18.0
   @override
   final int modPersonId;
+// v0.18.0
   @override
   final int communityId;
+// v0.18.0
   @override
   final String? reason;
+// v0.18.0
   @override
   final bool removed;
+// v0.18.0
   @override
   @deprecated
-  final int? expires;
+  final String? expires;
+// v0.18.0 [deprecated in v0.19.0]
   @override
   @JsonKey(name: 'when_')
   final String when;
@@ -216,7 +223,7 @@ class _$ModRemoveCommunityImpl extends _ModRemoveCommunity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ModRemoveCommunityImpl &&
@@ -258,7 +265,7 @@ abstract class _ModRemoveCommunity extends ModRemoveCommunity {
           required final int communityId,
           final String? reason,
           required final bool removed,
-          @deprecated final int? expires,
+          @deprecated final String? expires,
           @JsonKey(name: 'when_') required final String when}) =
       _$ModRemoveCommunityImpl;
   const _ModRemoveCommunity._() : super._();
@@ -268,18 +275,18 @@ abstract class _ModRemoveCommunity extends ModRemoveCommunity {
 
   @override
   int get id;
-  @override
+  @override // v0.18.0
   int get modPersonId;
-  @override
+  @override // v0.18.0
   int get communityId;
-  @override
+  @override // v0.18.0
   String? get reason;
-  @override
+  @override // v0.18.0
   bool get removed;
-  @override
+  @override // v0.18.0
   @deprecated
-  int? get expires;
-  @override
+  String? get expires;
+  @override // v0.18.0 [deprecated in v0.19.0]
   @JsonKey(name: 'when_')
   String get when;
   @override

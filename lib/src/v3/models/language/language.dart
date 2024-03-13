@@ -9,9 +9,9 @@ part 'language.g.dart';
 class Language with _$Language {
   @modelSerde
   const factory Language({
-    required int id,
-    required String code,
-    required String name,
+    required int id, // v0.18.0
+    required String code, // v0.18.0
+    required String name, // v0.18.0
   }) = _Language;
 
   const Language._();

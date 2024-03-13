@@ -10,7 +10,7 @@ part 'person_mention_response.g.dart';
 class PersonMentionResponse with _$PersonMentionResponse {
   @modelSerde
   const factory PersonMentionResponse({
-    required PersonMentionView personMentionView,
+    required PersonMentionView personMentionView, // v0.18.0
   }) = _PersonMentionResponse;
 
   const PersonMentionResponse._();

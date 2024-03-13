@@ -10,8 +10,8 @@ part 'get_posts_response.g.dart';
 class GetPostsResponse with _$GetPostsResponse {
   @modelSerde
   const factory GetPostsResponse({
-    required List<PostView> posts,
-    String? nextPage, // Only available in lemmy v0.19.0 and above
+    required List<PostView> posts, // v0.18.0
+    String? nextPage, // v0.19.0 (optional)
   }) = _GetPostsResponse;
 
   const GetPostsResponse._();

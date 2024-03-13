@@ -12,7 +12,7 @@ part of 'local_site_rate_limit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 LocalSiteRateLimit _$LocalSiteRateLimitFromJson(Map<String, dynamic> json) {
   return _LocalSiteRateLimit.fromJson(json);
@@ -21,24 +21,25 @@ LocalSiteRateLimit _$LocalSiteRateLimitFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$LocalSiteRateLimit {
   @deprecated
-  int? get id => throw _privateConstructorUsedError;
-  int get localSiteId => throw _privateConstructorUsedError;
-  int get message => throw _privateConstructorUsedError;
-  int get messagePerSecond => throw _privateConstructorUsedError;
-  int get post => throw _privateConstructorUsedError;
-  int get postPerSecond => throw _privateConstructorUsedError;
-  int get register => throw _privateConstructorUsedError;
-  int get registerPerSecond => throw _privateConstructorUsedError;
-  int get image => throw _privateConstructorUsedError;
-  int get imagePerSecond => throw _privateConstructorUsedError;
-  int get comment => throw _privateConstructorUsedError;
-  int get commentPerSecond => throw _privateConstructorUsedError;
-  int get search => throw _privateConstructorUsedError;
-  int get searchPerSecond => throw _privateConstructorUsedError;
-  DateTime get published => throw _privateConstructorUsedError;
-  DateTime? get updated => throw _privateConstructorUsedError;
+  int? get id =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
+  int get localSiteId => throw _privateConstructorUsedError; // v0.18.0
+  int get message => throw _privateConstructorUsedError; // v0.18.0
+  int get messagePerSecond => throw _privateConstructorUsedError; // v0.18.0
+  int get post => throw _privateConstructorUsedError; // v0.18.0
+  int get postPerSecond => throw _privateConstructorUsedError; // v0.18.0
+  int get register => throw _privateConstructorUsedError; // v0.18.0
+  int get registerPerSecond => throw _privateConstructorUsedError; // v0.18.0
+  int get image => throw _privateConstructorUsedError; // v0.18.0
+  int get imagePerSecond => throw _privateConstructorUsedError; // v0.18.0
+  int get comment => throw _privateConstructorUsedError; // v0.18.0
+  int get commentPerSecond => throw _privateConstructorUsedError; // v0.18.0
+  int get search => throw _privateConstructorUsedError; // v0.18.0
+  int get searchPerSecond => throw _privateConstructorUsedError; // v0.18.0
+  DateTime get published => throw _privateConstructorUsedError; // v0.18.0
+  DateTime? get updated => throw _privateConstructorUsedError; // v0.18.0
   int? get importUserSettings =>
-      throw _privateConstructorUsedError; // Only available in lemmy v0.19.0 and above
+      throw _privateConstructorUsedError; // v0.19.0 (required)
   int? get importUserSettingsPerSecond => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -350,39 +351,55 @@ class _$LocalSiteRateLimitImpl extends _LocalSiteRateLimit {
   @override
   @deprecated
   final int? id;
+// v0.18.0 [deprecated in v0.19.0]
   @override
   final int localSiteId;
+// v0.18.0
   @override
   final int message;
+// v0.18.0
   @override
   final int messagePerSecond;
+// v0.18.0
   @override
   final int post;
+// v0.18.0
   @override
   final int postPerSecond;
+// v0.18.0
   @override
   final int register;
+// v0.18.0
   @override
   final int registerPerSecond;
+// v0.18.0
   @override
   final int image;
+// v0.18.0
   @override
   final int imagePerSecond;
+// v0.18.0
   @override
   final int comment;
+// v0.18.0
   @override
   final int commentPerSecond;
+// v0.18.0
   @override
   final int search;
+// v0.18.0
   @override
   final int searchPerSecond;
+// v0.18.0
   @override
   final DateTime published;
+// v0.18.0
   @override
   final DateTime? updated;
+// v0.18.0
   @override
   final int? importUserSettings;
-// Only available in lemmy v0.19.0 and above
+// v0.19.0 (required)
   @override
   final int? importUserSettingsPerSecond;
 
@@ -392,7 +409,7 @@ class _$LocalSiteRateLimitImpl extends _LocalSiteRateLimit {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LocalSiteRateLimitImpl &&
@@ -495,39 +512,39 @@ abstract class _LocalSiteRateLimit extends LocalSiteRateLimit {
   @override
   @deprecated
   int? get id;
-  @override
+  @override // v0.18.0 [deprecated in v0.19.0]
   int get localSiteId;
-  @override
+  @override // v0.18.0
   int get message;
-  @override
+  @override // v0.18.0
   int get messagePerSecond;
-  @override
+  @override // v0.18.0
   int get post;
-  @override
+  @override // v0.18.0
   int get postPerSecond;
-  @override
+  @override // v0.18.0
   int get register;
-  @override
+  @override // v0.18.0
   int get registerPerSecond;
-  @override
+  @override // v0.18.0
   int get image;
-  @override
+  @override // v0.18.0
   int get imagePerSecond;
-  @override
+  @override // v0.18.0
   int get comment;
-  @override
+  @override // v0.18.0
   int get commentPerSecond;
-  @override
+  @override // v0.18.0
   int get search;
-  @override
+  @override // v0.18.0
   int get searchPerSecond;
-  @override
+  @override // v0.18.0
   DateTime get published;
-  @override
+  @override // v0.18.0
   DateTime? get updated;
-  @override
+  @override // v0.18.0
   int? get importUserSettings;
-  @override // Only available in lemmy v0.19.0 and above
+  @override // v0.19.0 (required)
   int? get importUserSettingsPerSecond;
   @override
   @JsonKey(ignore: true)

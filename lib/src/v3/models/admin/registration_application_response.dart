@@ -10,7 +10,7 @@ part 'registration_application_response.g.dart';
 class RegistrationApplicationResponse with _$RegistrationApplicationResponse {
   @modelSerde
   const factory RegistrationApplicationResponse({
-    required RegistrationApplicationView registrationApplication,
+    required RegistrationApplicationView registrationApplication, // v0.18.0
   }) = _RegistrationApplicationResponse;
 
   const RegistrationApplicationResponse._();

@@ -12,7 +12,7 @@ part of 'person_aggregates.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PersonAggregates _$PersonAggregatesFromJson(Map<String, dynamic> json) {
   return _PersonAggregates.fromJson(json);
@@ -21,12 +21,14 @@ PersonAggregates _$PersonAggregatesFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$PersonAggregates {
   @deprecated
-  int? get id => throw _privateConstructorUsedError;
-  int get personId => throw _privateConstructorUsedError;
-  int get postCount => throw _privateConstructorUsedError;
+  int? get id =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
+  int get personId => throw _privateConstructorUsedError; // v0.18.0
+  int get postCount => throw _privateConstructorUsedError; // v0.18.0
   @deprecated
-  int? get postScore => throw _privateConstructorUsedError;
-  int get commentCount => throw _privateConstructorUsedError;
+  int? get postScore =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
+  int get commentCount => throw _privateConstructorUsedError; // v0.18.0
   @deprecated
   int? get commentScore => throw _privateConstructorUsedError;
 
@@ -183,15 +185,20 @@ class _$PersonAggregatesImpl extends _PersonAggregates {
   @override
   @deprecated
   final int? id;
+// v0.18.0 [deprecated in v0.19.0]
   @override
   final int personId;
+// v0.18.0
   @override
   final int postCount;
+// v0.18.0
   @override
   @deprecated
   final int? postScore;
+// v0.18.0 [deprecated in v0.19.0]
   @override
   final int commentCount;
+// v0.18.0
   @override
   @deprecated
   final int? commentScore;
@@ -202,7 +209,7 @@ class _$PersonAggregatesImpl extends _PersonAggregates {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PersonAggregatesImpl &&
@@ -255,16 +262,16 @@ abstract class _PersonAggregates extends PersonAggregates {
   @override
   @deprecated
   int? get id;
-  @override
+  @override // v0.18.0 [deprecated in v0.19.0]
   int get personId;
-  @override
+  @override // v0.18.0
   int get postCount;
-  @override
+  @override // v0.18.0
   @deprecated
   int? get postScore;
-  @override
+  @override // v0.18.0 [deprecated in v0.19.0]
   int get commentCount;
-  @override
+  @override // v0.18.0
   @deprecated
   int? get commentScore;
   @override

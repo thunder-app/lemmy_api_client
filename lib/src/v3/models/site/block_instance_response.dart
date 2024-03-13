@@ -9,7 +9,7 @@ part 'block_instance_response.g.dart';
 class BlockInstanceResponse with _$BlockInstanceResponse {
   @modelSerde
   const factory BlockInstanceResponse({
-    required bool blocked,
+    required bool blocked, // v0.19.0 (required)
   }) = _BlockInstanceResponse;
 
   const BlockInstanceResponse._();

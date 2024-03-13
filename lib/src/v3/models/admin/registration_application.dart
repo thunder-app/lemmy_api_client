@@ -10,12 +10,12 @@ part 'registration_application.g.dart';
 class RegistrationApplication with _$RegistrationApplication {
   @modelSerde
   const factory RegistrationApplication({
-    required int id,
-    required int localUserId,
-    required String answer,
-    int? adminId,
-    String? denyReason,
-    required DateTime published,
+    required int id, // v0.18.0
+    required int localUserId, // v0.18.0
+    required String answer, // v0.18.0
+    int? adminId, // v0.18.0
+    String? denyReason, // v0.18.0
+    required DateTime published, // v0.18.0
   }) = _RegistrationApplication;
 
   const RegistrationApplication._();

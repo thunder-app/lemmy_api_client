@@ -1,7 +1,7 @@
 enum RegistrationMode {
-  closed('Closed'),
-  requireApplication('RequireApplication'),
-  open('Open');
+  closed('Closed'), // v0.18.0
+  requireApplication('RequireApplication'), // v0.18.0
+  open('Open'); // v0.18.0
 
   final String value;
   const RegistrationMode(this.value);

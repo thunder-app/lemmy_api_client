@@ -12,7 +12,7 @@ part of 'instance_block_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 InstanceBlockView _$InstanceBlockViewFromJson(Map<String, dynamic> json) {
   return _InstanceBlockView.fromJson(json);
@@ -20,8 +20,9 @@ InstanceBlockView _$InstanceBlockViewFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$InstanceBlockView {
-  Person get person => throw _privateConstructorUsedError;
-  Instance get instance => throw _privateConstructorUsedError;
+  Person get person => throw _privateConstructorUsedError; // v0.19.0 (required)
+  Instance get instance =>
+      throw _privateConstructorUsedError; // v0.19.0 (required)
   Site? get site => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -168,8 +169,10 @@ class _$InstanceBlockViewImpl extends _InstanceBlockView {
 
   @override
   final Person person;
+// v0.19.0 (required)
   @override
   final Instance instance;
+// v0.19.0 (required)
   @override
   final Site? site;
 
@@ -179,7 +182,7 @@ class _$InstanceBlockViewImpl extends _InstanceBlockView {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InstanceBlockViewImpl &&
@@ -220,9 +223,9 @@ abstract class _InstanceBlockView extends InstanceBlockView {
 
   @override
   Person get person;
-  @override
+  @override // v0.19.0 (required)
   Instance get instance;
-  @override
+  @override // v0.19.0 (required)
   Site? get site;
   @override
   @JsonKey(ignore: true)

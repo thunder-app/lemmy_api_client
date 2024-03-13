@@ -9,11 +9,11 @@ part 'admin_purge_comment.g.dart';
 class AdminPurgeComment with _$AdminPurgeComment {
   @modelSerde
   const factory AdminPurgeComment({
-    required int id,
-    required int adminPersonId,
-    required int postId,
-    String? reason,
-    @JsonKey(name: 'when_') required String when,
+    required int id, // v0.18.0
+    required int adminPersonId, // v0.18.0
+    required int postId, // v0.18.0
+    String? reason, // v0.18.0
+    @JsonKey(name: 'when_') required String when, // v0.18.0
   }) = _AdminPurgeComment;
 
   const AdminPurgeComment._();

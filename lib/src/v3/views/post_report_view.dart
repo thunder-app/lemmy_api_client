@@ -10,15 +10,15 @@ part 'post_report_view.g.dart';
 class PostReportView with _$PostReportView {
   @modelSerde
   const factory PostReportView({
-    required PostReport postReport,
-    required Post post,
-    required Community community,
-    required Person creator,
-    required Person postCreator,
-    required bool creatorBannedFromCommunity,
-    num? myVote,
-    required PostAggregates counts,
-    Person? resolver,
+    required PostReport postReport, // v0.18.0
+    required Post post, // v0.18.0
+    required Community community, // v0.18.0
+    required Person creator, // v0.18.0
+    required Person postCreator, // v0.18.0
+    required bool creatorBannedFromCommunity, // v0.18.0
+    num? myVote, // v0.18.0
+    required PostAggregates counts, // v0.18.0
+    Person? resolver, // v0.18.0
   }) = _PostReportView;
 
   const PostReportView._();
