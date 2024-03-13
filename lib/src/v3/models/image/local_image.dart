@@ -12,7 +12,7 @@ class LocalImage with _$LocalImage {
     required int localUserId, // v0.19.0
     required String pictrsAlias, // v0.19.0
     required String pictrsDeleteToken, // v0.19.0
-    required DateTime published, // v0.19.0
+    required String published, // v0.19.0
   }) = _LocalImage;
 
   const LocalImage._();
