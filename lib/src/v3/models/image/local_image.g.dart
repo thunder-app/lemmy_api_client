@@ -11,7 +11,7 @@ _$LocalImageImpl _$$LocalImageImplFromJson(Map<String, dynamic> json) =>
       localUserId: json['local_user_id'] as int,
       pictrsAlias: json['pictrs_alias'] as String,
       pictrsDeleteToken: json['pictrs_delete_token'] as String,
-      published: const ForceUtcDateTime().fromJson(json['published'] as String),
+      published: json['published'] as String,
     );
 
 Map<String, dynamic> _$$LocalImageImplToJson(_$LocalImageImpl instance) =>
@@ -19,5 +19,5 @@ Map<String, dynamic> _$$LocalImageImplToJson(_$LocalImageImpl instance) =>
       'local_user_id': instance.localUserId,
       'pictrs_alias': instance.pictrsAlias,
       'pictrs_delete_token': instance.pictrsDeleteToken,
-      'published': const ForceUtcDateTime().toJson(instance.published),
+      'published': instance.published,
     };

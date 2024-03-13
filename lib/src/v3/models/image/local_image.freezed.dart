@@ -23,7 +23,7 @@ mixin _$LocalImage {
   int get localUserId => throw _privateConstructorUsedError; // v0.19.0
   String get pictrsAlias => throw _privateConstructorUsedError; // v0.19.0
   String get pictrsDeleteToken => throw _privateConstructorUsedError; // v0.19.0
-  DateTime get published => throw _privateConstructorUsedError;
+  String get published => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -41,7 +41,7 @@ abstract class $LocalImageCopyWith<$Res> {
       {int localUserId,
       String pictrsAlias,
       String pictrsDeleteToken,
-      DateTime published});
+      String published});
 }
 
 /// @nodoc
@@ -78,7 +78,7 @@ class _$LocalImageCopyWithImpl<$Res, $Val extends LocalImage>
       published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as String,
     ) as $Val);
   }
 }
@@ -95,7 +95,7 @@ abstract class _$$LocalImageImplCopyWith<$Res>
       {int localUserId,
       String pictrsAlias,
       String pictrsDeleteToken,
-      DateTime published});
+      String published});
 }
 
 /// @nodoc
@@ -130,7 +130,7 @@ class __$$LocalImageImplCopyWithImpl<$Res>
       published: null == published
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as String,
     ));
   }
 }
@@ -159,7 +159,7 @@ class _$LocalImageImpl extends _LocalImage {
   final String pictrsDeleteToken;
 // v0.19.0
   @override
-  final DateTime published;
+  final String published;
 
   @override
   String toString() {
@@ -205,7 +205,7 @@ abstract class _LocalImage extends LocalImage {
       {required final int localUserId,
       required final String pictrsAlias,
       required final String pictrsDeleteToken,
-      required final DateTime published}) = _$LocalImageImpl;
+      required final String published}) = _$LocalImageImpl;
   const _LocalImage._() : super._();
 
   factory _LocalImage.fromJson(Map<String, dynamic> json) =
@@ -218,7 +218,7 @@ abstract class _LocalImage extends LocalImage {
   @override // v0.19.0
   String get pictrsDeleteToken;
   @override // v0.19.0
-  DateTime get published;
+  String get published;
   @override
   @JsonKey(ignore: true)
   _$$LocalImageImplCopyWith<_$LocalImageImpl> get copyWith =>
