@@ -27,6 +27,14 @@ class CreatePost
     int? languageId, // v0.18.0
     String? customThumbnail, // v0.19.4 (optional)
     String? auth,
+    String? pickupLocation,
+    String? pickupTime,
+    String? pickupNotes,
+    String? pickupContact,
+    String? dropoffLocation,
+    String? dropoffTime,
+    String? dropoffNotes,
+    String? dropoffContact,
   }) = _CreatePost;
 
   const CreatePost._();
@@ -77,17 +85,24 @@ class EditPost
     with _$EditPost
     implements LemmyApiQuery<PostResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
-  const factory EditPost({
-    required int postId, // v0.18.0
-    String? name, // v0.18.0
-    String? url, // v0.18.0
-    String? body, // v0.18.0
-    String? altText, // v0.19.4 (optional)
-    bool? nsfw, // v0.18.0
-    int? languageId, // v0.18.0
-    String? customThumbnail, // v0.19.4 (optional)
-    String? auth,
-  }) = _EditPost;
+  const factory EditPost(
+      {required int postId, // v0.18.0
+      String? name, // v0.18.0
+      String? url, // v0.18.0
+      String? body, // v0.18.0
+      String? altText, // v0.19.4 (optional)
+      bool? nsfw, // v0.18.0
+      int? languageId, // v0.18.0
+      String? customThumbnail, // v0.19.4 (optional)
+      String? auth,
+      String? pickupLocation,
+      String? pickupTime,
+      String? pickupNotes,
+      String? pickupContact,
+      String? dropoffLocation,
+      String? dropoffTime,
+      String? dropoffNotes,
+      String? dropoffContact}) = _EditPost;
 
   const EditPost._();
   factory EditPost.fromJson(Map<String, dynamic> json) =>

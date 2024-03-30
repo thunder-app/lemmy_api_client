@@ -32,6 +32,14 @@ mixin _$CreatePost {
   String? get customThumbnail =>
       throw _privateConstructorUsedError; // v0.19.4 (optional)
   String? get auth => throw _privateConstructorUsedError;
+  String? get pickupLocation => throw _privateConstructorUsedError;
+  String? get pickupTime => throw _privateConstructorUsedError;
+  String? get pickupNotes => throw _privateConstructorUsedError;
+  String? get pickupContact => throw _privateConstructorUsedError;
+  String? get dropoffLocation => throw _privateConstructorUsedError;
+  String? get dropoffTime => throw _privateConstructorUsedError;
+  String? get dropoffNotes => throw _privateConstructorUsedError;
+  String? get dropoffContact => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -55,7 +63,15 @@ abstract class $CreatePostCopyWith<$Res> {
       bool? nsfw,
       int? languageId,
       String? customThumbnail,
-      String? auth});
+      String? auth,
+      String? pickupLocation,
+      String? pickupTime,
+      String? pickupNotes,
+      String? pickupContact,
+      String? dropoffLocation,
+      String? dropoffTime,
+      String? dropoffNotes,
+      String? dropoffContact});
 }
 
 /// @nodoc
@@ -81,6 +97,14 @@ class _$CreatePostCopyWithImpl<$Res, $Val extends CreatePost>
     Object? languageId = freezed,
     Object? customThumbnail = freezed,
     Object? auth = freezed,
+    Object? pickupLocation = freezed,
+    Object? pickupTime = freezed,
+    Object? pickupNotes = freezed,
+    Object? pickupContact = freezed,
+    Object? dropoffLocation = freezed,
+    Object? dropoffTime = freezed,
+    Object? dropoffNotes = freezed,
+    Object? dropoffContact = freezed,
   }) {
     return _then(_value.copyWith(
       name: null == name
@@ -123,6 +147,38 @@ class _$CreatePostCopyWithImpl<$Res, $Val extends CreatePost>
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
+      pickupLocation: freezed == pickupLocation
+          ? _value.pickupLocation
+          : pickupLocation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pickupTime: freezed == pickupTime
+          ? _value.pickupTime
+          : pickupTime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pickupNotes: freezed == pickupNotes
+          ? _value.pickupNotes
+          : pickupNotes // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pickupContact: freezed == pickupContact
+          ? _value.pickupContact
+          : pickupContact // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoffLocation: freezed == dropoffLocation
+          ? _value.dropoffLocation
+          : dropoffLocation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoffTime: freezed == dropoffTime
+          ? _value.dropoffTime
+          : dropoffTime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoffNotes: freezed == dropoffNotes
+          ? _value.dropoffNotes
+          : dropoffNotes // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoffContact: freezed == dropoffContact
+          ? _value.dropoffContact
+          : dropoffContact // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -145,7 +201,15 @@ abstract class _$$CreatePostImplCopyWith<$Res>
       bool? nsfw,
       int? languageId,
       String? customThumbnail,
-      String? auth});
+      String? auth,
+      String? pickupLocation,
+      String? pickupTime,
+      String? pickupNotes,
+      String? pickupContact,
+      String? dropoffLocation,
+      String? dropoffTime,
+      String? dropoffNotes,
+      String? dropoffContact});
 }
 
 /// @nodoc
@@ -169,6 +233,14 @@ class __$$CreatePostImplCopyWithImpl<$Res>
     Object? languageId = freezed,
     Object? customThumbnail = freezed,
     Object? auth = freezed,
+    Object? pickupLocation = freezed,
+    Object? pickupTime = freezed,
+    Object? pickupNotes = freezed,
+    Object? pickupContact = freezed,
+    Object? dropoffLocation = freezed,
+    Object? dropoffTime = freezed,
+    Object? dropoffNotes = freezed,
+    Object? dropoffContact = freezed,
   }) {
     return _then(_$CreatePostImpl(
       name: null == name
@@ -211,6 +283,38 @@ class __$$CreatePostImplCopyWithImpl<$Res>
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
+      pickupLocation: freezed == pickupLocation
+          ? _value.pickupLocation
+          : pickupLocation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pickupTime: freezed == pickupTime
+          ? _value.pickupTime
+          : pickupTime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pickupNotes: freezed == pickupNotes
+          ? _value.pickupNotes
+          : pickupNotes // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pickupContact: freezed == pickupContact
+          ? _value.pickupContact
+          : pickupContact // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoffLocation: freezed == dropoffLocation
+          ? _value.dropoffLocation
+          : dropoffLocation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoffTime: freezed == dropoffTime
+          ? _value.dropoffTime
+          : dropoffTime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoffNotes: freezed == dropoffNotes
+          ? _value.dropoffNotes
+          : dropoffNotes // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoffContact: freezed == dropoffContact
+          ? _value.dropoffContact
+          : dropoffContact // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -229,7 +333,15 @@ class _$CreatePostImpl extends _CreatePost {
       this.nsfw,
       this.languageId,
       this.customThumbnail,
-      this.auth})
+      this.auth,
+      this.pickupLocation,
+      this.pickupTime,
+      this.pickupNotes,
+      this.pickupContact,
+      this.dropoffLocation,
+      this.dropoffTime,
+      this.dropoffNotes,
+      this.dropoffContact})
       : super._();
 
   factory _$CreatePostImpl.fromJson(Map<String, dynamic> json) =>
@@ -264,10 +376,26 @@ class _$CreatePostImpl extends _CreatePost {
 // v0.19.4 (optional)
   @override
   final String? auth;
+  @override
+  final String? pickupLocation;
+  @override
+  final String? pickupTime;
+  @override
+  final String? pickupNotes;
+  @override
+  final String? pickupContact;
+  @override
+  final String? dropoffLocation;
+  @override
+  final String? dropoffTime;
+  @override
+  final String? dropoffNotes;
+  @override
+  final String? dropoffContact;
 
   @override
   String toString() {
-    return 'CreatePost(name: $name, communityId: $communityId, url: $url, body: $body, altText: $altText, honeypot: $honeypot, nsfw: $nsfw, languageId: $languageId, customThumbnail: $customThumbnail, auth: $auth)';
+    return 'CreatePost(name: $name, communityId: $communityId, url: $url, body: $body, altText: $altText, honeypot: $honeypot, nsfw: $nsfw, languageId: $languageId, customThumbnail: $customThumbnail, auth: $auth, pickupLocation: $pickupLocation, pickupTime: $pickupTime, pickupNotes: $pickupNotes, pickupContact: $pickupContact, dropoffLocation: $dropoffLocation, dropoffTime: $dropoffTime, dropoffNotes: $dropoffNotes, dropoffContact: $dropoffContact)';
   }
 
   @override
@@ -288,13 +416,47 @@ class _$CreatePostImpl extends _CreatePost {
                 other.languageId == languageId) &&
             (identical(other.customThumbnail, customThumbnail) ||
                 other.customThumbnail == customThumbnail) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            (identical(other.auth, auth) || other.auth == auth) &&
+            (identical(other.pickupLocation, pickupLocation) ||
+                other.pickupLocation == pickupLocation) &&
+            (identical(other.pickupTime, pickupTime) ||
+                other.pickupTime == pickupTime) &&
+            (identical(other.pickupNotes, pickupNotes) ||
+                other.pickupNotes == pickupNotes) &&
+            (identical(other.pickupContact, pickupContact) ||
+                other.pickupContact == pickupContact) &&
+            (identical(other.dropoffLocation, dropoffLocation) ||
+                other.dropoffLocation == dropoffLocation) &&
+            (identical(other.dropoffTime, dropoffTime) ||
+                other.dropoffTime == dropoffTime) &&
+            (identical(other.dropoffNotes, dropoffNotes) ||
+                other.dropoffNotes == dropoffNotes) &&
+            (identical(other.dropoffContact, dropoffContact) ||
+                other.dropoffContact == dropoffContact));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, name, communityId, url, body,
-      altText, honeypot, nsfw, languageId, customThumbnail, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      name,
+      communityId,
+      url,
+      body,
+      altText,
+      honeypot,
+      nsfw,
+      languageId,
+      customThumbnail,
+      auth,
+      pickupLocation,
+      pickupTime,
+      pickupNotes,
+      pickupContact,
+      dropoffLocation,
+      dropoffTime,
+      dropoffNotes,
+      dropoffContact);
 
   @JsonKey(ignore: true)
   @override
@@ -321,7 +483,15 @@ abstract class _CreatePost extends CreatePost {
       final bool? nsfw,
       final int? languageId,
       final String? customThumbnail,
-      final String? auth}) = _$CreatePostImpl;
+      final String? auth,
+      final String? pickupLocation,
+      final String? pickupTime,
+      final String? pickupNotes,
+      final String? pickupContact,
+      final String? dropoffLocation,
+      final String? dropoffTime,
+      final String? dropoffNotes,
+      final String? dropoffContact}) = _$CreatePostImpl;
   const _CreatePost._() : super._();
 
   factory _CreatePost.fromJson(Map<String, dynamic> json) =
@@ -347,6 +517,22 @@ abstract class _CreatePost extends CreatePost {
   String? get customThumbnail;
   @override // v0.19.4 (optional)
   String? get auth;
+  @override
+  String? get pickupLocation;
+  @override
+  String? get pickupTime;
+  @override
+  String? get pickupNotes;
+  @override
+  String? get pickupContact;
+  @override
+  String? get dropoffLocation;
+  @override
+  String? get dropoffTime;
+  @override
+  String? get dropoffNotes;
+  @override
+  String? get dropoffContact;
   @override
   @JsonKey(ignore: true)
   _$$CreatePostImplCopyWith<_$CreatePostImpl> get copyWith =>
@@ -542,6 +728,14 @@ mixin _$EditPost {
   String? get customThumbnail =>
       throw _privateConstructorUsedError; // v0.19.4 (optional)
   String? get auth => throw _privateConstructorUsedError;
+  String? get pickupLocation => throw _privateConstructorUsedError;
+  String? get pickupTime => throw _privateConstructorUsedError;
+  String? get pickupNotes => throw _privateConstructorUsedError;
+  String? get pickupContact => throw _privateConstructorUsedError;
+  String? get dropoffLocation => throw _privateConstructorUsedError;
+  String? get dropoffTime => throw _privateConstructorUsedError;
+  String? get dropoffNotes => throw _privateConstructorUsedError;
+  String? get dropoffContact => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -563,7 +757,15 @@ abstract class $EditPostCopyWith<$Res> {
       bool? nsfw,
       int? languageId,
       String? customThumbnail,
-      String? auth});
+      String? auth,
+      String? pickupLocation,
+      String? pickupTime,
+      String? pickupNotes,
+      String? pickupContact,
+      String? dropoffLocation,
+      String? dropoffTime,
+      String? dropoffNotes,
+      String? dropoffContact});
 }
 
 /// @nodoc
@@ -588,6 +790,14 @@ class _$EditPostCopyWithImpl<$Res, $Val extends EditPost>
     Object? languageId = freezed,
     Object? customThumbnail = freezed,
     Object? auth = freezed,
+    Object? pickupLocation = freezed,
+    Object? pickupTime = freezed,
+    Object? pickupNotes = freezed,
+    Object? pickupContact = freezed,
+    Object? dropoffLocation = freezed,
+    Object? dropoffTime = freezed,
+    Object? dropoffNotes = freezed,
+    Object? dropoffContact = freezed,
   }) {
     return _then(_value.copyWith(
       postId: null == postId
@@ -626,6 +836,38 @@ class _$EditPostCopyWithImpl<$Res, $Val extends EditPost>
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
+      pickupLocation: freezed == pickupLocation
+          ? _value.pickupLocation
+          : pickupLocation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pickupTime: freezed == pickupTime
+          ? _value.pickupTime
+          : pickupTime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pickupNotes: freezed == pickupNotes
+          ? _value.pickupNotes
+          : pickupNotes // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pickupContact: freezed == pickupContact
+          ? _value.pickupContact
+          : pickupContact // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoffLocation: freezed == dropoffLocation
+          ? _value.dropoffLocation
+          : dropoffLocation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoffTime: freezed == dropoffTime
+          ? _value.dropoffTime
+          : dropoffTime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoffNotes: freezed == dropoffNotes
+          ? _value.dropoffNotes
+          : dropoffNotes // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoffContact: freezed == dropoffContact
+          ? _value.dropoffContact
+          : dropoffContact // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -647,7 +889,15 @@ abstract class _$$EditPostImplCopyWith<$Res>
       bool? nsfw,
       int? languageId,
       String? customThumbnail,
-      String? auth});
+      String? auth,
+      String? pickupLocation,
+      String? pickupTime,
+      String? pickupNotes,
+      String? pickupContact,
+      String? dropoffLocation,
+      String? dropoffTime,
+      String? dropoffNotes,
+      String? dropoffContact});
 }
 
 /// @nodoc
@@ -670,6 +920,14 @@ class __$$EditPostImplCopyWithImpl<$Res>
     Object? languageId = freezed,
     Object? customThumbnail = freezed,
     Object? auth = freezed,
+    Object? pickupLocation = freezed,
+    Object? pickupTime = freezed,
+    Object? pickupNotes = freezed,
+    Object? pickupContact = freezed,
+    Object? dropoffLocation = freezed,
+    Object? dropoffTime = freezed,
+    Object? dropoffNotes = freezed,
+    Object? dropoffContact = freezed,
   }) {
     return _then(_$EditPostImpl(
       postId: null == postId
@@ -708,6 +966,38 @@ class __$$EditPostImplCopyWithImpl<$Res>
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String?,
+      pickupLocation: freezed == pickupLocation
+          ? _value.pickupLocation
+          : pickupLocation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pickupTime: freezed == pickupTime
+          ? _value.pickupTime
+          : pickupTime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pickupNotes: freezed == pickupNotes
+          ? _value.pickupNotes
+          : pickupNotes // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pickupContact: freezed == pickupContact
+          ? _value.pickupContact
+          : pickupContact // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoffLocation: freezed == dropoffLocation
+          ? _value.dropoffLocation
+          : dropoffLocation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoffTime: freezed == dropoffTime
+          ? _value.dropoffTime
+          : dropoffTime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoffNotes: freezed == dropoffNotes
+          ? _value.dropoffNotes
+          : dropoffNotes // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoffContact: freezed == dropoffContact
+          ? _value.dropoffContact
+          : dropoffContact // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -725,7 +1015,15 @@ class _$EditPostImpl extends _EditPost {
       this.nsfw,
       this.languageId,
       this.customThumbnail,
-      this.auth})
+      this.auth,
+      this.pickupLocation,
+      this.pickupTime,
+      this.pickupNotes,
+      this.pickupContact,
+      this.dropoffLocation,
+      this.dropoffTime,
+      this.dropoffNotes,
+      this.dropoffContact})
       : super._();
 
   factory _$EditPostImpl.fromJson(Map<String, dynamic> json) =>
@@ -757,10 +1055,26 @@ class _$EditPostImpl extends _EditPost {
 // v0.19.4 (optional)
   @override
   final String? auth;
+  @override
+  final String? pickupLocation;
+  @override
+  final String? pickupTime;
+  @override
+  final String? pickupNotes;
+  @override
+  final String? pickupContact;
+  @override
+  final String? dropoffLocation;
+  @override
+  final String? dropoffTime;
+  @override
+  final String? dropoffNotes;
+  @override
+  final String? dropoffContact;
 
   @override
   String toString() {
-    return 'EditPost(postId: $postId, name: $name, url: $url, body: $body, altText: $altText, nsfw: $nsfw, languageId: $languageId, customThumbnail: $customThumbnail, auth: $auth)';
+    return 'EditPost(postId: $postId, name: $name, url: $url, body: $body, altText: $altText, nsfw: $nsfw, languageId: $languageId, customThumbnail: $customThumbnail, auth: $auth, pickupLocation: $pickupLocation, pickupTime: $pickupTime, pickupNotes: $pickupNotes, pickupContact: $pickupContact, dropoffLocation: $dropoffLocation, dropoffTime: $dropoffTime, dropoffNotes: $dropoffNotes, dropoffContact: $dropoffContact)';
   }
 
   @override
@@ -778,13 +1092,46 @@ class _$EditPostImpl extends _EditPost {
                 other.languageId == languageId) &&
             (identical(other.customThumbnail, customThumbnail) ||
                 other.customThumbnail == customThumbnail) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            (identical(other.auth, auth) || other.auth == auth) &&
+            (identical(other.pickupLocation, pickupLocation) ||
+                other.pickupLocation == pickupLocation) &&
+            (identical(other.pickupTime, pickupTime) ||
+                other.pickupTime == pickupTime) &&
+            (identical(other.pickupNotes, pickupNotes) ||
+                other.pickupNotes == pickupNotes) &&
+            (identical(other.pickupContact, pickupContact) ||
+                other.pickupContact == pickupContact) &&
+            (identical(other.dropoffLocation, dropoffLocation) ||
+                other.dropoffLocation == dropoffLocation) &&
+            (identical(other.dropoffTime, dropoffTime) ||
+                other.dropoffTime == dropoffTime) &&
+            (identical(other.dropoffNotes, dropoffNotes) ||
+                other.dropoffNotes == dropoffNotes) &&
+            (identical(other.dropoffContact, dropoffContact) ||
+                other.dropoffContact == dropoffContact));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, postId, name, url, body, altText,
-      nsfw, languageId, customThumbnail, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      postId,
+      name,
+      url,
+      body,
+      altText,
+      nsfw,
+      languageId,
+      customThumbnail,
+      auth,
+      pickupLocation,
+      pickupTime,
+      pickupNotes,
+      pickupContact,
+      dropoffLocation,
+      dropoffTime,
+      dropoffNotes,
+      dropoffContact);
 
   @JsonKey(ignore: true)
   @override
@@ -810,7 +1157,15 @@ abstract class _EditPost extends EditPost {
       final bool? nsfw,
       final int? languageId,
       final String? customThumbnail,
-      final String? auth}) = _$EditPostImpl;
+      final String? auth,
+      final String? pickupLocation,
+      final String? pickupTime,
+      final String? pickupNotes,
+      final String? pickupContact,
+      final String? dropoffLocation,
+      final String? dropoffTime,
+      final String? dropoffNotes,
+      final String? dropoffContact}) = _$EditPostImpl;
   const _EditPost._() : super._();
 
   factory _EditPost.fromJson(Map<String, dynamic> json) =
@@ -834,6 +1189,22 @@ abstract class _EditPost extends EditPost {
   String? get customThumbnail;
   @override // v0.19.4 (optional)
   String? get auth;
+  @override
+  String? get pickupLocation;
+  @override
+  String? get pickupTime;
+  @override
+  String? get pickupNotes;
+  @override
+  String? get pickupContact;
+  @override
+  String? get dropoffLocation;
+  @override
+  String? get dropoffTime;
+  @override
+  String? get dropoffNotes;
+  @override
+  String? get dropoffContact;
   @override
   @JsonKey(ignore: true)
   _$$EditPostImplCopyWith<_$EditPostImpl> get copyWith =>

@@ -31,6 +31,14 @@ _$PostImpl _$$PostImplFromJson(Map<String, dynamic> json) => _$PostImpl(
       featuredLocal: json['featured_local'] as bool,
       urlContentType: json['url_content_type'] as String?,
       altText: json['alt_text'] as String?,
+      pickupLocation: json['pickup_location'] as String?,
+      pickupTime: json['pickup_time'] as String?,
+      pickupNotes: json['pickup_notes'] as String?,
+      pickupContact: json['pickup_contact'] as String?,
+      dropoffLocation: json['dropoff_location'] as String?,
+      dropoffTime: json['dropoff_time'] as String?,
+      dropoffNotes: json['dropoff_notes'] as String?,
+      dropoffContact: json['dropoff_contact'] as String?,
     );
 
 Map<String, dynamic> _$$PostImplToJson(_$PostImpl instance) =>
@@ -59,6 +67,14 @@ Map<String, dynamic> _$$PostImplToJson(_$PostImpl instance) =>
       'featured_local': instance.featuredLocal,
       'url_content_type': instance.urlContentType,
       'alt_text': instance.altText,
+      'pickup_location': instance.pickupLocation,
+      'pickup_time': instance.pickupTime,
+      'pickup_notes': instance.pickupNotes,
+      'pickup_contact': instance.pickupContact,
+      'dropoff_location': instance.dropoffLocation,
+      'dropoff_time': instance.dropoffTime,
+      'dropoff_notes': instance.dropoffNotes,
+      'dropoff_contact': instance.dropoffContact,
     };
 
 Value? _$JsonConverterFromJson<Json, Value>(

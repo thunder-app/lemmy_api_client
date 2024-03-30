@@ -18,6 +18,14 @@ _$CreatePostImpl _$$CreatePostImplFromJson(Map<String, dynamic> json) =>
       languageId: json['language_id'] as int?,
       customThumbnail: json['custom_thumbnail'] as String?,
       auth: json['auth'] as String?,
+      pickupLocation: json['pickup_location'] as String?,
+      pickupTime: json['pickup_time'] as String?,
+      pickupNotes: json['pickup_notes'] as String?,
+      pickupContact: json['pickup_contact'] as String?,
+      dropoffLocation: json['dropoff_location'] as String?,
+      dropoffTime: json['dropoff_time'] as String?,
+      dropoffNotes: json['dropoff_notes'] as String?,
+      dropoffContact: json['dropoff_contact'] as String?,
     );
 
 Map<String, dynamic> _$$CreatePostImplToJson(_$CreatePostImpl instance) {
@@ -40,6 +48,14 @@ Map<String, dynamic> _$$CreatePostImplToJson(_$CreatePostImpl instance) {
   writeNotNull('language_id', instance.languageId);
   writeNotNull('custom_thumbnail', instance.customThumbnail);
   writeNotNull('auth', instance.auth);
+  writeNotNull('pickup_location', instance.pickupLocation);
+  writeNotNull('pickup_time', instance.pickupTime);
+  writeNotNull('pickup_notes', instance.pickupNotes);
+  writeNotNull('pickup_contact', instance.pickupContact);
+  writeNotNull('dropoff_location', instance.dropoffLocation);
+  writeNotNull('dropoff_time', instance.dropoffTime);
+  writeNotNull('dropoff_notes', instance.dropoffNotes);
+  writeNotNull('dropoff_contact', instance.dropoffContact);
   return val;
 }
 
@@ -76,6 +92,14 @@ _$EditPostImpl _$$EditPostImplFromJson(Map<String, dynamic> json) =>
       languageId: json['language_id'] as int?,
       customThumbnail: json['custom_thumbnail'] as String?,
       auth: json['auth'] as String?,
+      pickupLocation: json['pickup_location'] as String?,
+      pickupTime: json['pickup_time'] as String?,
+      pickupNotes: json['pickup_notes'] as String?,
+      pickupContact: json['pickup_contact'] as String?,
+      dropoffLocation: json['dropoff_location'] as String?,
+      dropoffTime: json['dropoff_time'] as String?,
+      dropoffNotes: json['dropoff_notes'] as String?,
+      dropoffContact: json['dropoff_contact'] as String?,
     );
 
 Map<String, dynamic> _$$EditPostImplToJson(_$EditPostImpl instance) {
@@ -97,6 +121,14 @@ Map<String, dynamic> _$$EditPostImplToJson(_$EditPostImpl instance) {
   writeNotNull('language_id', instance.languageId);
   writeNotNull('custom_thumbnail', instance.customThumbnail);
   writeNotNull('auth', instance.auth);
+  writeNotNull('pickup_location', instance.pickupLocation);
+  writeNotNull('pickup_time', instance.pickupTime);
+  writeNotNull('pickup_notes', instance.pickupNotes);
+  writeNotNull('pickup_contact', instance.pickupContact);
+  writeNotNull('dropoff_location', instance.dropoffLocation);
+  writeNotNull('dropoff_time', instance.dropoffTime);
+  writeNotNull('dropoff_notes', instance.dropoffNotes);
+  writeNotNull('dropoff_contact', instance.dropoffContact);
   return val;
 }
 

@@ -33,6 +33,14 @@ class Post with _$Post {
     required bool featuredLocal, // v0.18.0
     String? urlContentType, // v0.19.4 (optional)
     String? altText, // v0.19.4 (optional)
+    String? pickupLocation,
+    String? pickupTime,
+    String? pickupNotes,
+    String? pickupContact,
+    String? dropoffLocation,
+    String? dropoffTime,
+    String? dropoffNotes,
+    String? dropoffContact,
   }) = _Post;
 
   const Post._();

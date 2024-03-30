@@ -43,7 +43,16 @@ mixin _$Post {
   bool get featuredLocal => throw _privateConstructorUsedError; // v0.18.0
   String? get urlContentType =>
       throw _privateConstructorUsedError; // v0.19.4 (optional)
-  String? get altText => throw _privateConstructorUsedError;
+  String? get altText =>
+      throw _privateConstructorUsedError; // v0.19.4 (optional)
+  String? get pickupLocation => throw _privateConstructorUsedError;
+  String? get pickupTime => throw _privateConstructorUsedError;
+  String? get pickupNotes => throw _privateConstructorUsedError;
+  String? get pickupContact => throw _privateConstructorUsedError;
+  String? get dropoffLocation => throw _privateConstructorUsedError;
+  String? get dropoffTime => throw _privateConstructorUsedError;
+  String? get dropoffNotes => throw _privateConstructorUsedError;
+  String? get dropoffContact => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -78,7 +87,15 @@ abstract class $PostCopyWith<$Res> {
       bool featuredCommunity,
       bool featuredLocal,
       String? urlContentType,
-      String? altText});
+      String? altText,
+      String? pickupLocation,
+      String? pickupTime,
+      String? pickupNotes,
+      String? pickupContact,
+      String? dropoffLocation,
+      String? dropoffTime,
+      String? dropoffNotes,
+      String? dropoffContact});
 }
 
 /// @nodoc
@@ -117,6 +134,14 @@ class _$PostCopyWithImpl<$Res, $Val extends Post>
     Object? featuredLocal = null,
     Object? urlContentType = freezed,
     Object? altText = freezed,
+    Object? pickupLocation = freezed,
+    Object? pickupTime = freezed,
+    Object? pickupNotes = freezed,
+    Object? pickupContact = freezed,
+    Object? dropoffLocation = freezed,
+    Object? dropoffTime = freezed,
+    Object? dropoffNotes = freezed,
+    Object? dropoffContact = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -211,6 +236,38 @@ class _$PostCopyWithImpl<$Res, $Val extends Post>
           ? _value.altText
           : altText // ignore: cast_nullable_to_non_nullable
               as String?,
+      pickupLocation: freezed == pickupLocation
+          ? _value.pickupLocation
+          : pickupLocation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pickupTime: freezed == pickupTime
+          ? _value.pickupTime
+          : pickupTime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pickupNotes: freezed == pickupNotes
+          ? _value.pickupNotes
+          : pickupNotes // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pickupContact: freezed == pickupContact
+          ? _value.pickupContact
+          : pickupContact // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoffLocation: freezed == dropoffLocation
+          ? _value.dropoffLocation
+          : dropoffLocation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoffTime: freezed == dropoffTime
+          ? _value.dropoffTime
+          : dropoffTime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoffNotes: freezed == dropoffNotes
+          ? _value.dropoffNotes
+          : dropoffNotes // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoffContact: freezed == dropoffContact
+          ? _value.dropoffContact
+          : dropoffContact // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -245,7 +302,15 @@ abstract class _$$PostImplCopyWith<$Res> implements $PostCopyWith<$Res> {
       bool featuredCommunity,
       bool featuredLocal,
       String? urlContentType,
-      String? altText});
+      String? altText,
+      String? pickupLocation,
+      String? pickupTime,
+      String? pickupNotes,
+      String? pickupContact,
+      String? dropoffLocation,
+      String? dropoffTime,
+      String? dropoffNotes,
+      String? dropoffContact});
 }
 
 /// @nodoc
@@ -281,6 +346,14 @@ class __$$PostImplCopyWithImpl<$Res>
     Object? featuredLocal = null,
     Object? urlContentType = freezed,
     Object? altText = freezed,
+    Object? pickupLocation = freezed,
+    Object? pickupTime = freezed,
+    Object? pickupNotes = freezed,
+    Object? pickupContact = freezed,
+    Object? dropoffLocation = freezed,
+    Object? dropoffTime = freezed,
+    Object? dropoffNotes = freezed,
+    Object? dropoffContact = freezed,
   }) {
     return _then(_$PostImpl(
       id: null == id
@@ -375,6 +448,38 @@ class __$$PostImplCopyWithImpl<$Res>
           ? _value.altText
           : altText // ignore: cast_nullable_to_non_nullable
               as String?,
+      pickupLocation: freezed == pickupLocation
+          ? _value.pickupLocation
+          : pickupLocation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pickupTime: freezed == pickupTime
+          ? _value.pickupTime
+          : pickupTime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pickupNotes: freezed == pickupNotes
+          ? _value.pickupNotes
+          : pickupNotes // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pickupContact: freezed == pickupContact
+          ? _value.pickupContact
+          : pickupContact // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoffLocation: freezed == dropoffLocation
+          ? _value.dropoffLocation
+          : dropoffLocation // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoffTime: freezed == dropoffTime
+          ? _value.dropoffTime
+          : dropoffTime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoffNotes: freezed == dropoffNotes
+          ? _value.dropoffNotes
+          : dropoffNotes // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dropoffContact: freezed == dropoffContact
+          ? _value.dropoffContact
+          : dropoffContact // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -406,7 +511,15 @@ class _$PostImpl extends _Post {
       required this.featuredCommunity,
       required this.featuredLocal,
       this.urlContentType,
-      this.altText})
+      this.altText,
+      this.pickupLocation,
+      this.pickupTime,
+      this.pickupNotes,
+      this.pickupContact,
+      this.dropoffLocation,
+      this.dropoffTime,
+      this.dropoffNotes,
+      this.dropoffContact})
       : super._();
 
   factory _$PostImpl.fromJson(Map<String, dynamic> json) =>
@@ -480,10 +593,27 @@ class _$PostImpl extends _Post {
 // v0.19.4 (optional)
   @override
   final String? altText;
+// v0.19.4 (optional)
+  @override
+  final String? pickupLocation;
+  @override
+  final String? pickupTime;
+  @override
+  final String? pickupNotes;
+  @override
+  final String? pickupContact;
+  @override
+  final String? dropoffLocation;
+  @override
+  final String? dropoffTime;
+  @override
+  final String? dropoffNotes;
+  @override
+  final String? dropoffContact;
 
   @override
   String toString() {
-    return 'Post(id: $id, name: $name, url: $url, body: $body, creatorId: $creatorId, communityId: $communityId, removed: $removed, locked: $locked, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, embedTitle: $embedTitle, embedDescription: $embedDescription, thumbnailUrl: $thumbnailUrl, apId: $apId, local: $local, embedVideoUrl: $embedVideoUrl, languageId: $languageId, featuredCommunity: $featuredCommunity, featuredLocal: $featuredLocal, urlContentType: $urlContentType, altText: $altText)';
+    return 'Post(id: $id, name: $name, url: $url, body: $body, creatorId: $creatorId, communityId: $communityId, removed: $removed, locked: $locked, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, embedTitle: $embedTitle, embedDescription: $embedDescription, thumbnailUrl: $thumbnailUrl, apId: $apId, local: $local, embedVideoUrl: $embedVideoUrl, languageId: $languageId, featuredCommunity: $featuredCommunity, featuredLocal: $featuredLocal, urlContentType: $urlContentType, altText: $altText, pickupLocation: $pickupLocation, pickupTime: $pickupTime, pickupNotes: $pickupNotes, pickupContact: $pickupContact, dropoffLocation: $dropoffLocation, dropoffTime: $dropoffTime, dropoffNotes: $dropoffNotes, dropoffContact: $dropoffContact)';
   }
 
   @override
@@ -524,7 +654,23 @@ class _$PostImpl extends _Post {
                 other.featuredLocal == featuredLocal) &&
             (identical(other.urlContentType, urlContentType) ||
                 other.urlContentType == urlContentType) &&
-            (identical(other.altText, altText) || other.altText == altText));
+            (identical(other.altText, altText) || other.altText == altText) &&
+            (identical(other.pickupLocation, pickupLocation) ||
+                other.pickupLocation == pickupLocation) &&
+            (identical(other.pickupTime, pickupTime) ||
+                other.pickupTime == pickupTime) &&
+            (identical(other.pickupNotes, pickupNotes) ||
+                other.pickupNotes == pickupNotes) &&
+            (identical(other.pickupContact, pickupContact) ||
+                other.pickupContact == pickupContact) &&
+            (identical(other.dropoffLocation, dropoffLocation) ||
+                other.dropoffLocation == dropoffLocation) &&
+            (identical(other.dropoffTime, dropoffTime) ||
+                other.dropoffTime == dropoffTime) &&
+            (identical(other.dropoffNotes, dropoffNotes) ||
+                other.dropoffNotes == dropoffNotes) &&
+            (identical(other.dropoffContact, dropoffContact) ||
+                other.dropoffContact == dropoffContact));
   }
 
   @JsonKey(ignore: true)
@@ -553,7 +699,15 @@ class _$PostImpl extends _Post {
         featuredCommunity,
         featuredLocal,
         urlContentType,
-        altText
+        altText,
+        pickupLocation,
+        pickupTime,
+        pickupNotes,
+        pickupContact,
+        dropoffLocation,
+        dropoffTime,
+        dropoffNotes,
+        dropoffContact
       ]);
 
   @JsonKey(ignore: true)
@@ -594,7 +748,15 @@ abstract class _Post extends Post {
       required final bool featuredCommunity,
       required final bool featuredLocal,
       final String? urlContentType,
-      final String? altText}) = _$PostImpl;
+      final String? altText,
+      final String? pickupLocation,
+      final String? pickupTime,
+      final String? pickupNotes,
+      final String? pickupContact,
+      final String? dropoffLocation,
+      final String? dropoffTime,
+      final String? dropoffNotes,
+      final String? dropoffContact}) = _$PostImpl;
   const _Post._() : super._();
 
   factory _Post.fromJson(Map<String, dynamic> json) = _$PostImpl.fromJson;
@@ -645,6 +807,22 @@ abstract class _Post extends Post {
   String? get urlContentType;
   @override // v0.19.4 (optional)
   String? get altText;
+  @override // v0.19.4 (optional)
+  String? get pickupLocation;
+  @override
+  String? get pickupTime;
+  @override
+  String? get pickupNotes;
+  @override
+  String? get pickupContact;
+  @override
+  String? get dropoffLocation;
+  @override
+  String? get dropoffTime;
+  @override
+  String? get dropoffNotes;
+  @override
+  String? get dropoffContact;
   @override
   @JsonKey(ignore: true)
   _$$PostImplCopyWith<_$PostImpl> get copyWith =>
