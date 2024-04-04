@@ -149,6 +149,7 @@ class EditSite
     String? captchaDifficulty, // v0.18.0
     List<String>? allowedInstances, // v0.18.0
     List<String>? blockedInstances, // v0.18.0
+    List<String>? blockedUrls, // v0.19.4 (optional)
     List<String>? taglines, // v0.18.0
     RegistrationMode? registrationMode, // v0.18.0
     bool? reportsEmailAdmins, // v0.18.0

@@ -21,8 +21,8 @@ class Site with _$Site {
     required String actorId, // v0.18.0
     required DateTime lastRefreshedAt, // v0.18.0
     required String inboxUrl, // v0.18.0
-    String? privateKey, // v0.18.0
-    required String publicKey, // v0.18.0
+    @deprecated String? privateKey, // v0.18.0 [deprecated in v0.19.4]
+    @deprecated String? publicKey, // v0.18.0 [deprecated in v0.19.4]
     required int instanceId, // v0.18.0
     String? contentWarning, // v0.19.4 (optional)
   }) = _Site;

@@ -30,6 +30,15 @@ mixin _$CommentReportView {
   CommentAggregates get counts => throw _privateConstructorUsedError; // v0.18.0
   bool get creatorBannedFromCommunity =>
       throw _privateConstructorUsedError; // v0.18.0
+  bool? get creatorIsModerator =>
+      throw _privateConstructorUsedError; // v0.19.4 (required)
+  bool? get creatorIsAdmin =>
+      throw _privateConstructorUsedError; // v0.19.4 (required)
+  bool? get creatorBlocked =>
+      throw _privateConstructorUsedError; // v0.19.4 (required)
+  SubscribedType? get subscribed =>
+      throw _privateConstructorUsedError; // v0.19.4 (required)
+  bool? get saved => throw _privateConstructorUsedError; // v0.19.4 (required)
   num? get myVote => throw _privateConstructorUsedError; // v0.18.0
   Person? get resolver => throw _privateConstructorUsedError;
 
@@ -54,6 +63,11 @@ abstract class $CommentReportViewCopyWith<$Res> {
       Person commentCreator,
       CommentAggregates counts,
       bool creatorBannedFromCommunity,
+      bool? creatorIsModerator,
+      bool? creatorIsAdmin,
+      bool? creatorBlocked,
+      SubscribedType? subscribed,
+      bool? saved,
       num? myVote,
       Person? resolver});
 
@@ -88,6 +102,11 @@ class _$CommentReportViewCopyWithImpl<$Res, $Val extends CommentReportView>
     Object? commentCreator = null,
     Object? counts = null,
     Object? creatorBannedFromCommunity = null,
+    Object? creatorIsModerator = freezed,
+    Object? creatorIsAdmin = freezed,
+    Object? creatorBlocked = freezed,
+    Object? subscribed = freezed,
+    Object? saved = freezed,
     Object? myVote = freezed,
     Object? resolver = freezed,
   }) {
@@ -124,6 +143,26 @@ class _$CommentReportViewCopyWithImpl<$Res, $Val extends CommentReportView>
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
               as bool,
+      creatorIsModerator: freezed == creatorIsModerator
+          ? _value.creatorIsModerator
+          : creatorIsModerator // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      creatorIsAdmin: freezed == creatorIsAdmin
+          ? _value.creatorIsAdmin
+          : creatorIsAdmin // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      creatorBlocked: freezed == creatorBlocked
+          ? _value.creatorBlocked
+          : creatorBlocked // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      subscribed: freezed == subscribed
+          ? _value.subscribed
+          : subscribed // ignore: cast_nullable_to_non_nullable
+              as SubscribedType?,
+      saved: freezed == saved
+          ? _value.saved
+          : saved // ignore: cast_nullable_to_non_nullable
+              as bool?,
       myVote: freezed == myVote
           ? _value.myVote
           : myVote // ignore: cast_nullable_to_non_nullable
@@ -221,6 +260,11 @@ abstract class _$$CommentReportViewImplCopyWith<$Res>
       Person commentCreator,
       CommentAggregates counts,
       bool creatorBannedFromCommunity,
+      bool? creatorIsModerator,
+      bool? creatorIsAdmin,
+      bool? creatorBlocked,
+      SubscribedType? subscribed,
+      bool? saved,
       num? myVote,
       Person? resolver});
 
@@ -261,6 +305,11 @@ class __$$CommentReportViewImplCopyWithImpl<$Res>
     Object? commentCreator = null,
     Object? counts = null,
     Object? creatorBannedFromCommunity = null,
+    Object? creatorIsModerator = freezed,
+    Object? creatorIsAdmin = freezed,
+    Object? creatorBlocked = freezed,
+    Object? subscribed = freezed,
+    Object? saved = freezed,
     Object? myVote = freezed,
     Object? resolver = freezed,
   }) {
@@ -297,6 +346,26 @@ class __$$CommentReportViewImplCopyWithImpl<$Res>
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
               as bool,
+      creatorIsModerator: freezed == creatorIsModerator
+          ? _value.creatorIsModerator
+          : creatorIsModerator // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      creatorIsAdmin: freezed == creatorIsAdmin
+          ? _value.creatorIsAdmin
+          : creatorIsAdmin // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      creatorBlocked: freezed == creatorBlocked
+          ? _value.creatorBlocked
+          : creatorBlocked // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      subscribed: freezed == subscribed
+          ? _value.subscribed
+          : subscribed // ignore: cast_nullable_to_non_nullable
+              as SubscribedType?,
+      saved: freezed == saved
+          ? _value.saved
+          : saved // ignore: cast_nullable_to_non_nullable
+              as bool?,
       myVote: freezed == myVote
           ? _value.myVote
           : myVote // ignore: cast_nullable_to_non_nullable
@@ -322,6 +391,11 @@ class _$CommentReportViewImpl extends _CommentReportView {
       required this.commentCreator,
       required this.counts,
       required this.creatorBannedFromCommunity,
+      this.creatorIsModerator,
+      this.creatorIsAdmin,
+      this.creatorBlocked,
+      this.subscribed,
+      this.saved,
       this.myVote,
       this.resolver})
       : super._();
@@ -354,6 +428,21 @@ class _$CommentReportViewImpl extends _CommentReportView {
   final bool creatorBannedFromCommunity;
 // v0.18.0
   @override
+  final bool? creatorIsModerator;
+// v0.19.4 (required)
+  @override
+  final bool? creatorIsAdmin;
+// v0.19.4 (required)
+  @override
+  final bool? creatorBlocked;
+// v0.19.4 (required)
+  @override
+  final SubscribedType? subscribed;
+// v0.19.4 (required)
+  @override
+  final bool? saved;
+// v0.19.4 (required)
+  @override
   final num? myVote;
 // v0.18.0
   @override
@@ -361,7 +450,7 @@ class _$CommentReportViewImpl extends _CommentReportView {
 
   @override
   String toString() {
-    return 'CommentReportView(commentReport: $commentReport, comment: $comment, post: $post, community: $community, creator: $creator, commentCreator: $commentCreator, counts: $counts, creatorBannedFromCommunity: $creatorBannedFromCommunity, myVote: $myVote, resolver: $resolver)';
+    return 'CommentReportView(commentReport: $commentReport, comment: $comment, post: $post, community: $community, creator: $creator, commentCreator: $commentCreator, counts: $counts, creatorBannedFromCommunity: $creatorBannedFromCommunity, creatorIsModerator: $creatorIsModerator, creatorIsAdmin: $creatorIsAdmin, creatorBlocked: $creatorBlocked, subscribed: $subscribed, saved: $saved, myVote: $myVote, resolver: $resolver)';
   }
 
   @override
@@ -383,6 +472,15 @@ class _$CommentReportViewImpl extends _CommentReportView {
                     creatorBannedFromCommunity) ||
                 other.creatorBannedFromCommunity ==
                     creatorBannedFromCommunity) &&
+            (identical(other.creatorIsModerator, creatorIsModerator) ||
+                other.creatorIsModerator == creatorIsModerator) &&
+            (identical(other.creatorIsAdmin, creatorIsAdmin) ||
+                other.creatorIsAdmin == creatorIsAdmin) &&
+            (identical(other.creatorBlocked, creatorBlocked) ||
+                other.creatorBlocked == creatorBlocked) &&
+            (identical(other.subscribed, subscribed) ||
+                other.subscribed == subscribed) &&
+            (identical(other.saved, saved) || other.saved == saved) &&
             (identical(other.myVote, myVote) || other.myVote == myVote) &&
             (identical(other.resolver, resolver) ||
                 other.resolver == resolver));
@@ -400,6 +498,11 @@ class _$CommentReportViewImpl extends _CommentReportView {
       commentCreator,
       counts,
       creatorBannedFromCommunity,
+      creatorIsModerator,
+      creatorIsAdmin,
+      creatorBlocked,
+      subscribed,
+      saved,
       myVote,
       resolver);
 
@@ -428,6 +531,11 @@ abstract class _CommentReportView extends CommentReportView {
       required final Person commentCreator,
       required final CommentAggregates counts,
       required final bool creatorBannedFromCommunity,
+      final bool? creatorIsModerator,
+      final bool? creatorIsAdmin,
+      final bool? creatorBlocked,
+      final SubscribedType? subscribed,
+      final bool? saved,
       final num? myVote,
       final Person? resolver}) = _$CommentReportViewImpl;
   const _CommentReportView._() : super._();
@@ -452,6 +560,16 @@ abstract class _CommentReportView extends CommentReportView {
   @override // v0.18.0
   bool get creatorBannedFromCommunity;
   @override // v0.18.0
+  bool? get creatorIsModerator;
+  @override // v0.19.4 (required)
+  bool? get creatorIsAdmin;
+  @override // v0.19.4 (required)
+  bool? get creatorBlocked;
+  @override // v0.19.4 (required)
+  SubscribedType? get subscribed;
+  @override // v0.19.4 (required)
+  bool? get saved;
+  @override // v0.19.4 (required)
   num? get myVote;
   @override // v0.18.0
   Person? get resolver;

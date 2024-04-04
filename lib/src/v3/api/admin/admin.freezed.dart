@@ -1468,3 +1468,178 @@ abstract class _PurgeComment extends PurgeComment {
   _$$PurgeCommentImplCopyWith<_$PurgeCommentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+ListAllMedia _$ListAllMediaFromJson(Map<String, dynamic> json) {
+  return _ListAllMedia.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ListAllMedia {
+  int? get page => throw _privateConstructorUsedError; // v0.19.4 (optional)
+  int? get limit => throw _privateConstructorUsedError; // v0.19.4 (optional)
+  String? get auth => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ListAllMediaCopyWith<ListAllMedia> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ListAllMediaCopyWith<$Res> {
+  factory $ListAllMediaCopyWith(
+          ListAllMedia value, $Res Function(ListAllMedia) then) =
+      _$ListAllMediaCopyWithImpl<$Res, ListAllMedia>;
+  @useResult
+  $Res call({int? page, int? limit, String? auth});
+}
+
+/// @nodoc
+class _$ListAllMediaCopyWithImpl<$Res, $Val extends ListAllMedia>
+    implements $ListAllMediaCopyWith<$Res> {
+  _$ListAllMediaCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(_value.copyWith(
+      page: freezed == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: freezed == limit
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      auth: freezed == auth
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$ListAllMediaImplCopyWith<$Res>
+    implements $ListAllMediaCopyWith<$Res> {
+  factory _$$ListAllMediaImplCopyWith(
+          _$ListAllMediaImpl value, $Res Function(_$ListAllMediaImpl) then) =
+      __$$ListAllMediaImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int? page, int? limit, String? auth});
+}
+
+/// @nodoc
+class __$$ListAllMediaImplCopyWithImpl<$Res>
+    extends _$ListAllMediaCopyWithImpl<$Res, _$ListAllMediaImpl>
+    implements _$$ListAllMediaImplCopyWith<$Res> {
+  __$$ListAllMediaImplCopyWithImpl(
+      _$ListAllMediaImpl _value, $Res Function(_$ListAllMediaImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(_$ListAllMediaImpl(
+      page: freezed == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: freezed == limit
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      auth: freezed == auth
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+@apiSerde
+class _$ListAllMediaImpl extends _ListAllMedia {
+  const _$ListAllMediaImpl({this.page, this.limit, this.auth}) : super._();
+
+  factory _$ListAllMediaImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ListAllMediaImplFromJson(json);
+
+  @override
+  final int? page;
+// v0.19.4 (optional)
+  @override
+  final int? limit;
+// v0.19.4 (optional)
+  @override
+  final String? auth;
+
+  @override
+  String toString() {
+    return 'ListAllMedia(page: $page, limit: $limit, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ListAllMediaImpl &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, page, limit, auth);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ListAllMediaImplCopyWith<_$ListAllMediaImpl> get copyWith =>
+      __$$ListAllMediaImplCopyWithImpl<_$ListAllMediaImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ListAllMediaImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _ListAllMedia extends ListAllMedia {
+  const factory _ListAllMedia(
+      {final int? page,
+      final int? limit,
+      final String? auth}) = _$ListAllMediaImpl;
+  const _ListAllMedia._() : super._();
+
+  factory _ListAllMedia.fromJson(Map<String, dynamic> json) =
+      _$ListAllMediaImpl.fromJson;
+
+  @override
+  int? get page;
+  @override // v0.19.4 (optional)
+  int? get limit;
+  @override // v0.19.4 (optional)
+  String? get auth;
+  @override
+  @JsonKey(ignore: true)
+  _$$ListAllMediaImplCopyWith<_$ListAllMediaImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

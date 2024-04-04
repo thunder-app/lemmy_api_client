@@ -195,3 +195,25 @@ Map<String, dynamic> _$$PurgeCommentImplToJson(_$PurgeCommentImpl instance) {
   writeNotNull('auth', instance.auth);
   return val;
 }
+
+_$ListAllMediaImpl _$$ListAllMediaImplFromJson(Map<String, dynamic> json) =>
+    _$ListAllMediaImpl(
+      page: json['page'] as int?,
+      limit: json['limit'] as int?,
+      auth: json['auth'] as String?,
+    );
+
+Map<String, dynamic> _$$ListAllMediaImplToJson(_$ListAllMediaImpl instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('page', instance.page);
+  writeNotNull('limit', instance.limit);
+  writeNotNull('auth', instance.auth);
+  return val;
+}

@@ -1396,6 +1396,8 @@ mixin _$EditSite {
       throw _privateConstructorUsedError; // v0.18.0
   List<String>? get blockedInstances =>
       throw _privateConstructorUsedError; // v0.18.0
+  List<String>? get blockedUrls =>
+      throw _privateConstructorUsedError; // v0.19.4 (optional)
   List<String>? get taglines => throw _privateConstructorUsedError; // v0.18.0
   RegistrationMode? get registrationMode =>
       throw _privateConstructorUsedError; // v0.18.0
@@ -1457,6 +1459,7 @@ abstract class $EditSiteCopyWith<$Res> {
       String? captchaDifficulty,
       List<String>? allowedInstances,
       List<String>? blockedInstances,
+      List<String>? blockedUrls,
       List<String>? taglines,
       RegistrationMode? registrationMode,
       bool? reportsEmailAdmins,
@@ -1517,6 +1520,7 @@ class _$EditSiteCopyWithImpl<$Res, $Val extends EditSite>
     Object? captchaDifficulty = freezed,
     Object? allowedInstances = freezed,
     Object? blockedInstances = freezed,
+    Object? blockedUrls = freezed,
     Object? taglines = freezed,
     Object? registrationMode = freezed,
     Object? reportsEmailAdmins = freezed,
@@ -1681,6 +1685,10 @@ class _$EditSiteCopyWithImpl<$Res, $Val extends EditSite>
           ? _value.blockedInstances
           : blockedInstances // ignore: cast_nullable_to_non_nullable
               as List<String>?,
+      blockedUrls: freezed == blockedUrls
+          ? _value.blockedUrls
+          : blockedUrls // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       taglines: freezed == taglines
           ? _value.taglines
           : taglines // ignore: cast_nullable_to_non_nullable
@@ -1757,6 +1765,7 @@ abstract class _$$EditSiteImplCopyWith<$Res>
       String? captchaDifficulty,
       List<String>? allowedInstances,
       List<String>? blockedInstances,
+      List<String>? blockedUrls,
       List<String>? taglines,
       RegistrationMode? registrationMode,
       bool? reportsEmailAdmins,
@@ -1815,6 +1824,7 @@ class __$$EditSiteImplCopyWithImpl<$Res>
     Object? captchaDifficulty = freezed,
     Object? allowedInstances = freezed,
     Object? blockedInstances = freezed,
+    Object? blockedUrls = freezed,
     Object? taglines = freezed,
     Object? registrationMode = freezed,
     Object? reportsEmailAdmins = freezed,
@@ -1979,6 +1989,10 @@ class __$$EditSiteImplCopyWithImpl<$Res>
           ? _value._blockedInstances
           : blockedInstances // ignore: cast_nullable_to_non_nullable
               as List<String>?,
+      blockedUrls: freezed == blockedUrls
+          ? _value._blockedUrls
+          : blockedUrls // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       taglines: freezed == taglines
           ? _value._taglines
           : taglines // ignore: cast_nullable_to_non_nullable
@@ -2051,6 +2065,7 @@ class _$EditSiteImpl extends _EditSite {
       this.captchaDifficulty,
       final List<String>? allowedInstances,
       final List<String>? blockedInstances,
+      final List<String>? blockedUrls,
       final List<String>? taglines,
       this.registrationMode,
       this.reportsEmailAdmins,
@@ -2060,6 +2075,7 @@ class _$EditSiteImpl extends _EditSite {
       : _discussionLanguages = discussionLanguages,
         _allowedInstances = allowedInstances,
         _blockedInstances = blockedInstances,
+        _blockedUrls = blockedUrls,
         _taglines = taglines,
         super._();
 
@@ -2214,8 +2230,20 @@ class _$EditSiteImpl extends _EditSite {
   }
 
 // v0.18.0
-  final List<String>? _taglines;
+  final List<String>? _blockedUrls;
 // v0.18.0
+  @override
+  List<String>? get blockedUrls {
+    final value = _blockedUrls;
+    if (value == null) return null;
+    if (_blockedUrls is EqualUnmodifiableListView) return _blockedUrls;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+// v0.19.4 (optional)
+  final List<String>? _taglines;
+// v0.19.4 (optional)
   @override
   List<String>? get taglines {
     final value = _taglines;
@@ -2243,7 +2271,7 @@ class _$EditSiteImpl extends _EditSite {
 
   @override
   String toString() {
-    return 'EditSite(name: $name, sidebar: $sidebar, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, requireEmailVerification: $requireEmailVerification, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, defaultTheme: $defaultTheme, defaultPostListingType: $defaultPostListingType, defaultSortType: $defaultSortType, legalInformation: $legalInformation, applicationEmailAdmins: $applicationEmailAdmins, hideModlogModNames: $hideModlogModNames, discussionLanguages: $discussionLanguages, slurFilterRegex: $slurFilterRegex, actorNameMaxLength: $actorNameMaxLength, rateLimitMessage: $rateLimitMessage, rateLimitMessagePerSecond: $rateLimitMessagePerSecond, rateLimitPost: $rateLimitPost, rateLimitPostPerSecond: $rateLimitPostPerSecond, rateLimitRegister: $rateLimitRegister, rateLimitRegisterPerSecond: $rateLimitRegisterPerSecond, rateLimitImage: $rateLimitImage, rateLimitImagePerSecond: $rateLimitImagePerSecond, rateLimitComment: $rateLimitComment, rateLimitCommentPerSecond: $rateLimitCommentPerSecond, rateLimitSearch: $rateLimitSearch, rateLimitSearchPerSecond: $rateLimitSearchPerSecond, federationEnabled: $federationEnabled, federationDebug: $federationDebug, federationWorkerCount: $federationWorkerCount, captchaEnabled: $captchaEnabled, captchaDifficulty: $captchaDifficulty, allowedInstances: $allowedInstances, blockedInstances: $blockedInstances, taglines: $taglines, registrationMode: $registrationMode, reportsEmailAdmins: $reportsEmailAdmins, contentWarning: $contentWarning, defaultPostListingMode: $defaultPostListingMode, auth: $auth)';
+    return 'EditSite(name: $name, sidebar: $sidebar, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, requireEmailVerification: $requireEmailVerification, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, defaultTheme: $defaultTheme, defaultPostListingType: $defaultPostListingType, defaultSortType: $defaultSortType, legalInformation: $legalInformation, applicationEmailAdmins: $applicationEmailAdmins, hideModlogModNames: $hideModlogModNames, discussionLanguages: $discussionLanguages, slurFilterRegex: $slurFilterRegex, actorNameMaxLength: $actorNameMaxLength, rateLimitMessage: $rateLimitMessage, rateLimitMessagePerSecond: $rateLimitMessagePerSecond, rateLimitPost: $rateLimitPost, rateLimitPostPerSecond: $rateLimitPostPerSecond, rateLimitRegister: $rateLimitRegister, rateLimitRegisterPerSecond: $rateLimitRegisterPerSecond, rateLimitImage: $rateLimitImage, rateLimitImagePerSecond: $rateLimitImagePerSecond, rateLimitComment: $rateLimitComment, rateLimitCommentPerSecond: $rateLimitCommentPerSecond, rateLimitSearch: $rateLimitSearch, rateLimitSearchPerSecond: $rateLimitSearchPerSecond, federationEnabled: $federationEnabled, federationDebug: $federationDebug, federationWorkerCount: $federationWorkerCount, captchaEnabled: $captchaEnabled, captchaDifficulty: $captchaDifficulty, allowedInstances: $allowedInstances, blockedInstances: $blockedInstances, blockedUrls: $blockedUrls, taglines: $taglines, registrationMode: $registrationMode, reportsEmailAdmins: $reportsEmailAdmins, contentWarning: $contentWarning, defaultPostListingMode: $defaultPostListingMode, auth: $auth)';
   }
 
   @override
@@ -2317,6 +2345,7 @@ class _$EditSiteImpl extends _EditSite {
             (identical(other.captchaDifficulty, captchaDifficulty) || other.captchaDifficulty == captchaDifficulty) &&
             const DeepCollectionEquality().equals(other._allowedInstances, _allowedInstances) &&
             const DeepCollectionEquality().equals(other._blockedInstances, _blockedInstances) &&
+            const DeepCollectionEquality().equals(other._blockedUrls, _blockedUrls) &&
             const DeepCollectionEquality().equals(other._taglines, _taglines) &&
             (identical(other.registrationMode, registrationMode) || other.registrationMode == registrationMode) &&
             (identical(other.reportsEmailAdmins, reportsEmailAdmins) || other.reportsEmailAdmins == reportsEmailAdmins) &&
@@ -2368,6 +2397,7 @@ class _$EditSiteImpl extends _EditSite {
         captchaDifficulty,
         const DeepCollectionEquality().hash(_allowedInstances),
         const DeepCollectionEquality().hash(_blockedInstances),
+        const DeepCollectionEquality().hash(_blockedUrls),
         const DeepCollectionEquality().hash(_taglines),
         registrationMode,
         reportsEmailAdmins,
@@ -2431,6 +2461,7 @@ abstract class _EditSite extends EditSite {
       final String? captchaDifficulty,
       final List<String>? allowedInstances,
       final List<String>? blockedInstances,
+      final List<String>? blockedUrls,
       final List<String>? taglines,
       final RegistrationMode? registrationMode,
       final bool? reportsEmailAdmins,
@@ -2522,6 +2553,8 @@ abstract class _EditSite extends EditSite {
   @override // v0.18.0
   List<String>? get blockedInstances;
   @override // v0.18.0
+  List<String>? get blockedUrls;
+  @override // v0.19.4 (optional)
   List<String>? get taglines;
   @override // v0.18.0
   RegistrationMode? get registrationMode;

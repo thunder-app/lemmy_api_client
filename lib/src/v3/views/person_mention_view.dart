@@ -19,6 +19,7 @@ class PersonMentionView with _$PersonMentionView {
     required Person recipient, // v0.18.0
     required CommentAggregates counts, // v0.18.0
     required bool creatorBannedFromCommunity, // v0.18.0
+    bool? bannedFromCommunity, // v0.19.4 (required)
     bool? creatorIsModerator, // v0.19.0 (required)
     bool? creatorIsAdmin, // v0.19.0 (required)
     required SubscribedType subscribed, // v0.18.0

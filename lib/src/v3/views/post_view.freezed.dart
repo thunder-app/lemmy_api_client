@@ -25,6 +25,8 @@ mixin _$PostView {
   Community get community => throw _privateConstructorUsedError; // v0.18.0
   bool get creatorBannedFromCommunity =>
       throw _privateConstructorUsedError; // v0.18.0
+  bool? get bannedFromCommunity =>
+      throw _privateConstructorUsedError; // v0.19.4 (required)
   bool? get creatorIsModerator =>
       throw _privateConstructorUsedError; // v0.19.0 (required)
   bool? get creatorIsAdmin =>
@@ -55,6 +57,7 @@ abstract class $PostViewCopyWith<$Res> {
       Person creator,
       Community community,
       bool creatorBannedFromCommunity,
+      bool? bannedFromCommunity,
       bool? creatorIsModerator,
       bool? creatorIsAdmin,
       PostAggregates counts,
@@ -89,6 +92,7 @@ class _$PostViewCopyWithImpl<$Res, $Val extends PostView>
     Object? creator = null,
     Object? community = null,
     Object? creatorBannedFromCommunity = null,
+    Object? bannedFromCommunity = freezed,
     Object? creatorIsModerator = freezed,
     Object? creatorIsAdmin = freezed,
     Object? counts = null,
@@ -117,6 +121,10 @@ class _$PostViewCopyWithImpl<$Res, $Val extends PostView>
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
               as bool,
+      bannedFromCommunity: freezed == bannedFromCommunity
+          ? _value.bannedFromCommunity
+          : bannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool?,
       creatorIsModerator: freezed == creatorIsModerator
           ? _value.creatorIsModerator
           : creatorIsModerator // ignore: cast_nullable_to_non_nullable
@@ -206,6 +214,7 @@ abstract class _$$PostViewImplCopyWith<$Res>
       Person creator,
       Community community,
       bool creatorBannedFromCommunity,
+      bool? bannedFromCommunity,
       bool? creatorIsModerator,
       bool? creatorIsAdmin,
       PostAggregates counts,
@@ -242,6 +251,7 @@ class __$$PostViewImplCopyWithImpl<$Res>
     Object? creator = null,
     Object? community = null,
     Object? creatorBannedFromCommunity = null,
+    Object? bannedFromCommunity = freezed,
     Object? creatorIsModerator = freezed,
     Object? creatorIsAdmin = freezed,
     Object? counts = null,
@@ -270,6 +280,10 @@ class __$$PostViewImplCopyWithImpl<$Res>
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
               as bool,
+      bannedFromCommunity: freezed == bannedFromCommunity
+          ? _value.bannedFromCommunity
+          : bannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool?,
       creatorIsModerator: freezed == creatorIsModerator
           ? _value.creatorIsModerator
           : creatorIsModerator // ignore: cast_nullable_to_non_nullable
@@ -323,6 +337,7 @@ class _$PostViewImpl extends _PostView {
       required this.creator,
       required this.community,
       required this.creatorBannedFromCommunity,
+      this.bannedFromCommunity,
       this.creatorIsModerator,
       this.creatorIsAdmin,
       required this.counts,
@@ -350,6 +365,9 @@ class _$PostViewImpl extends _PostView {
   @override
   final bool creatorBannedFromCommunity;
 // v0.18.0
+  @override
+  final bool? bannedFromCommunity;
+// v0.19.4 (required)
   @override
   final bool? creatorIsModerator;
 // v0.19.0 (required)
@@ -382,7 +400,7 @@ class _$PostViewImpl extends _PostView {
 
   @override
   String toString() {
-    return 'PostView(post: $post, creator: $creator, community: $community, creatorBannedFromCommunity: $creatorBannedFromCommunity, creatorIsModerator: $creatorIsModerator, creatorIsAdmin: $creatorIsAdmin, counts: $counts, subscribed: $subscribed, saved: $saved, read: $read, hidden: $hidden, creatorBlocked: $creatorBlocked, myVote: $myVote, unreadComments: $unreadComments)';
+    return 'PostView(post: $post, creator: $creator, community: $community, creatorBannedFromCommunity: $creatorBannedFromCommunity, bannedFromCommunity: $bannedFromCommunity, creatorIsModerator: $creatorIsModerator, creatorIsAdmin: $creatorIsAdmin, counts: $counts, subscribed: $subscribed, saved: $saved, read: $read, hidden: $hidden, creatorBlocked: $creatorBlocked, myVote: $myVote, unreadComments: $unreadComments)';
   }
 
   @override
@@ -398,6 +416,8 @@ class _$PostViewImpl extends _PostView {
                     creatorBannedFromCommunity) ||
                 other.creatorBannedFromCommunity ==
                     creatorBannedFromCommunity) &&
+            (identical(other.bannedFromCommunity, bannedFromCommunity) ||
+                other.bannedFromCommunity == bannedFromCommunity) &&
             (identical(other.creatorIsModerator, creatorIsModerator) ||
                 other.creatorIsModerator == creatorIsModerator) &&
             (identical(other.creatorIsAdmin, creatorIsAdmin) ||
@@ -423,6 +443,7 @@ class _$PostViewImpl extends _PostView {
       creator,
       community,
       creatorBannedFromCommunity,
+      bannedFromCommunity,
       creatorIsModerator,
       creatorIsAdmin,
       counts,
@@ -454,6 +475,7 @@ abstract class _PostView extends PostView {
       required final Person creator,
       required final Community community,
       required final bool creatorBannedFromCommunity,
+      final bool? bannedFromCommunity,
       final bool? creatorIsModerator,
       final bool? creatorIsAdmin,
       required final PostAggregates counts,
@@ -478,6 +500,8 @@ abstract class _PostView extends PostView {
   @override // v0.18.0
   bool get creatorBannedFromCommunity;
   @override // v0.18.0
+  bool? get bannedFromCommunity;
+  @override // v0.19.4 (required)
   bool? get creatorIsModerator;
   @override // v0.19.0 (required)
   bool? get creatorIsAdmin;

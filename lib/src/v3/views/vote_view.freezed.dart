@@ -22,6 +22,8 @@ VoteView _$VoteViewFromJson(Map<String, dynamic> json) {
 mixin _$VoteView {
   Person get creator =>
       throw _privateConstructorUsedError; // v0.19.2 (required)
+  bool? get creatorBannedFromCommunity =>
+      throw _privateConstructorUsedError; // v0.19.4 (required)
   int get score => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -35,7 +37,7 @@ abstract class $VoteViewCopyWith<$Res> {
   factory $VoteViewCopyWith(VoteView value, $Res Function(VoteView) then) =
       _$VoteViewCopyWithImpl<$Res, VoteView>;
   @useResult
-  $Res call({Person creator, int score});
+  $Res call({Person creator, bool? creatorBannedFromCommunity, int score});
 
   $PersonCopyWith<$Res> get creator;
 }
@@ -54,6 +56,7 @@ class _$VoteViewCopyWithImpl<$Res, $Val extends VoteView>
   @override
   $Res call({
     Object? creator = null,
+    Object? creatorBannedFromCommunity = freezed,
     Object? score = null,
   }) {
     return _then(_value.copyWith(
@@ -61,6 +64,10 @@ class _$VoteViewCopyWithImpl<$Res, $Val extends VoteView>
           ? _value.creator
           : creator // ignore: cast_nullable_to_non_nullable
               as Person,
+      creatorBannedFromCommunity: freezed == creatorBannedFromCommunity
+          ? _value.creatorBannedFromCommunity
+          : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool?,
       score: null == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
@@ -85,7 +92,7 @@ abstract class _$$VoteViewImplCopyWith<$Res>
       __$$VoteViewImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Person creator, int score});
+  $Res call({Person creator, bool? creatorBannedFromCommunity, int score});
 
   @override
   $PersonCopyWith<$Res> get creator;
@@ -103,6 +110,7 @@ class __$$VoteViewImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? creator = null,
+    Object? creatorBannedFromCommunity = freezed,
     Object? score = null,
   }) {
     return _then(_$VoteViewImpl(
@@ -110,6 +118,10 @@ class __$$VoteViewImplCopyWithImpl<$Res>
           ? _value.creator
           : creator // ignore: cast_nullable_to_non_nullable
               as Person,
+      creatorBannedFromCommunity: freezed == creatorBannedFromCommunity
+          ? _value.creatorBannedFromCommunity
+          : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool?,
       score: null == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
@@ -122,7 +134,10 @@ class __$$VoteViewImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$VoteViewImpl extends _VoteView {
-  const _$VoteViewImpl({required this.creator, required this.score})
+  const _$VoteViewImpl(
+      {required this.creator,
+      this.creatorBannedFromCommunity,
+      required this.score})
       : super._();
 
   factory _$VoteViewImpl.fromJson(Map<String, dynamic> json) =>
@@ -132,11 +147,14 @@ class _$VoteViewImpl extends _VoteView {
   final Person creator;
 // v0.19.2 (required)
   @override
+  final bool? creatorBannedFromCommunity;
+// v0.19.4 (required)
+  @override
   final int score;
 
   @override
   String toString() {
-    return 'VoteView(creator: $creator, score: $score)';
+    return 'VoteView(creator: $creator, creatorBannedFromCommunity: $creatorBannedFromCommunity, score: $score)';
   }
 
   @override
@@ -145,12 +163,17 @@ class _$VoteViewImpl extends _VoteView {
         (other.runtimeType == runtimeType &&
             other is _$VoteViewImpl &&
             (identical(other.creator, creator) || other.creator == creator) &&
+            (identical(other.creatorBannedFromCommunity,
+                    creatorBannedFromCommunity) ||
+                other.creatorBannedFromCommunity ==
+                    creatorBannedFromCommunity) &&
             (identical(other.score, score) || other.score == score));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, creator, score);
+  int get hashCode =>
+      Object.hash(runtimeType, creator, creatorBannedFromCommunity, score);
 
   @JsonKey(ignore: true)
   @override
@@ -169,6 +192,7 @@ class _$VoteViewImpl extends _VoteView {
 abstract class _VoteView extends VoteView {
   const factory _VoteView(
       {required final Person creator,
+      final bool? creatorBannedFromCommunity,
       required final int score}) = _$VoteViewImpl;
   const _VoteView._() : super._();
 
@@ -178,6 +202,8 @@ abstract class _VoteView extends VoteView {
   @override
   Person get creator;
   @override // v0.19.2 (required)
+  bool? get creatorBannedFromCommunity;
+  @override // v0.19.4 (required)
   int get score;
   @override
   @JsonKey(ignore: true)

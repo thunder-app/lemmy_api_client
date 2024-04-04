@@ -19,6 +19,7 @@ class GetSiteResponse with _$GetSiteResponse {
     required List<int> discussionLanguages, // v0.18.0
     required List<Tagline> taglines, // v0.18.0
     required List<CustomEmojiView> customEmojis, // v0.18.0
+    List<LocalSiteUrlBlocklist>? blockedUrls, // v0.19.4 (required)
   }) = _GetSiteResponse;
 
   const GetSiteResponse._();

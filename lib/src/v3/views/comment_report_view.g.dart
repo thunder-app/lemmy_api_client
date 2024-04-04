@@ -20,6 +20,13 @@ _$CommentReportViewImpl _$$CommentReportViewImplFromJson(
       counts:
           CommentAggregates.fromJson(json['counts'] as Map<String, dynamic>),
       creatorBannedFromCommunity: json['creator_banned_from_community'] as bool,
+      creatorIsModerator: json['creator_is_moderator'] as bool?,
+      creatorIsAdmin: json['creator_is_admin'] as bool?,
+      creatorBlocked: json['creator_blocked'] as bool?,
+      subscribed: json['subscribed'] == null
+          ? null
+          : SubscribedType.fromJson(json['subscribed'] as String),
+      saved: json['saved'] as bool?,
       myVote: json['my_vote'] as num?,
       resolver: json['resolver'] == null
           ? null
@@ -37,6 +44,11 @@ Map<String, dynamic> _$$CommentReportViewImplToJson(
       'comment_creator': instance.commentCreator.toJson(),
       'counts': instance.counts.toJson(),
       'creator_banned_from_community': instance.creatorBannedFromCommunity,
+      'creator_is_moderator': instance.creatorIsModerator,
+      'creator_is_admin': instance.creatorIsAdmin,
+      'creator_blocked': instance.creatorBlocked,
+      'subscribed': instance.subscribed?.toJson(),
+      'saved': instance.saved,
       'my_vote': instance.myVote,
       'resolver': instance.resolver?.toJson(),
     };

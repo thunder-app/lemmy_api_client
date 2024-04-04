@@ -37,7 +37,7 @@ class LeaveAdmin
 ///
 /// List all the media for your user
 ///
-/// `HTTP.GET /user/list_media`
+/// `HTTP.GET /account/list_media`
 @freezed
 class ListMedia
     with _$ListMedia
@@ -53,7 +53,7 @@ class ListMedia
   factory ListMedia.fromJson(Map<String, dynamic> json) =>
       _$ListMediaFromJson(json);
 
-  final path = '/user/list_media';
+  final path = '/account/list_media';
 
   final httpMethod = HttpMethod.get;
 
@@ -648,7 +648,6 @@ class SaveUserSettings
     bool? showNsfw, // v0.18.0
     bool? blurNsfw, // v0.18.3
     bool? autoExpand, // v0.18.3
-    bool? showScores, // v0.18.0
     String? theme, // v0.18.0
     SortType? defaultSortType, // v0.18.0
     ListingType? defaultListingType, // v0.18.0
@@ -674,6 +673,10 @@ class SaveUserSettings
     bool? enableKeyboardNavigation, // v0.19.0 (optional)
     bool? enableAnimatedImages, // v0.19.0 (optional)
     bool? collapseBotComments, // v0.19.0 (optional)
+    bool? showScores, // v0.18.0 (optional)
+    bool? showUpvotes, // v0.19.4 (optional)
+    bool? showDownvotes, // v0.19.4 (optional)
+    bool? showUpvotePercentage, // v0.19.4 (optional)
   }) = _SaveUserSettings;
 
   const SaveUserSettings._();

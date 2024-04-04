@@ -9,7 +9,7 @@ part 'local_image.g.dart';
 class LocalImage with _$LocalImage {
   @modelSerde
   const factory LocalImage({
-    required int localUserId, // v0.19.0
+    int? localUserId, // v0.19.0 (optional)
     required String pictrsAlias, // v0.19.0
     required String pictrsDeleteToken, // v0.19.0
     required String published, // v0.19.0
