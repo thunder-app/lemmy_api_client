@@ -29,6 +29,10 @@ _$GetSiteResponseImpl _$$GetSiteResponseImplFromJson(
       customEmojis: (json['custom_emojis'] as List<dynamic>)
           .map((e) => CustomEmojiView.fromJson(e as Map<String, dynamic>))
           .toList(),
+      blockedUrls: (json['blocked_urls'] as List<dynamic>?)
+          ?.map(
+              (e) => LocalSiteUrlBlocklist.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$$GetSiteResponseImplToJson(
@@ -42,4 +46,5 @@ Map<String, dynamic> _$$GetSiteResponseImplToJson(
       'discussion_languages': instance.discussionLanguages,
       'taglines': instance.taglines.map((e) => e.toJson()).toList(),
       'custom_emojis': instance.customEmojis.map((e) => e.toJson()).toList(),
+      'blocked_urls': instance.blockedUrls?.map((e) => e.toJson()).toList(),
     };

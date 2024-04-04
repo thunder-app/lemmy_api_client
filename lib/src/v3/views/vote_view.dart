@@ -11,6 +11,7 @@ class VoteView with _$VoteView {
   @modelSerde
   const factory VoteView({
     required Person creator, // v0.19.2 (required)
+    bool? creatorBannedFromCommunity, // v0.19.4 (required)
     required int score, // v0.19.2 (required)
   }) = _VoteView;
 

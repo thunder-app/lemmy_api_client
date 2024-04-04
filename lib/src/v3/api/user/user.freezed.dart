@@ -3965,7 +3965,6 @@ mixin _$SaveUserSettings {
   bool? get showNsfw => throw _privateConstructorUsedError; // v0.18.0
   bool? get blurNsfw => throw _privateConstructorUsedError; // v0.18.3
   bool? get autoExpand => throw _privateConstructorUsedError; // v0.18.3
-  bool? get showScores => throw _privateConstructorUsedError; // v0.18.0
   String? get theme => throw _privateConstructorUsedError; // v0.18.0
   SortType? get defaultSortType =>
       throw _privateConstructorUsedError; // v0.18.0
@@ -4003,7 +4002,15 @@ mixin _$SaveUserSettings {
       throw _privateConstructorUsedError; // v0.19.0 (optional)
   bool? get enableAnimatedImages =>
       throw _privateConstructorUsedError; // v0.19.0 (optional)
-  bool? get collapseBotComments => throw _privateConstructorUsedError;
+  bool? get collapseBotComments =>
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
+  bool? get showScores =>
+      throw _privateConstructorUsedError; // v0.18.0 (optional)
+  bool? get showUpvotes =>
+      throw _privateConstructorUsedError; // v0.19.4 (optional)
+  bool? get showDownvotes =>
+      throw _privateConstructorUsedError; // v0.19.4 (optional)
+  bool? get showUpvotePercentage => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -4021,7 +4028,6 @@ abstract class $SaveUserSettingsCopyWith<$Res> {
       {bool? showNsfw,
       bool? blurNsfw,
       bool? autoExpand,
-      bool? showScores,
       String? theme,
       SortType? defaultSortType,
       ListingType? defaultListingType,
@@ -4046,7 +4052,11 @@ abstract class $SaveUserSettingsCopyWith<$Res> {
       String? postListingMode,
       bool? enableKeyboardNavigation,
       bool? enableAnimatedImages,
-      bool? collapseBotComments});
+      bool? collapseBotComments,
+      bool? showScores,
+      bool? showUpvotes,
+      bool? showDownvotes,
+      bool? showUpvotePercentage});
 }
 
 /// @nodoc
@@ -4065,7 +4075,6 @@ class _$SaveUserSettingsCopyWithImpl<$Res, $Val extends SaveUserSettings>
     Object? showNsfw = freezed,
     Object? blurNsfw = freezed,
     Object? autoExpand = freezed,
-    Object? showScores = freezed,
     Object? theme = freezed,
     Object? defaultSortType = freezed,
     Object? defaultListingType = freezed,
@@ -4091,6 +4100,10 @@ class _$SaveUserSettingsCopyWithImpl<$Res, $Val extends SaveUserSettings>
     Object? enableKeyboardNavigation = freezed,
     Object? enableAnimatedImages = freezed,
     Object? collapseBotComments = freezed,
+    Object? showScores = freezed,
+    Object? showUpvotes = freezed,
+    Object? showDownvotes = freezed,
+    Object? showUpvotePercentage = freezed,
   }) {
     return _then(_value.copyWith(
       showNsfw: freezed == showNsfw
@@ -4104,10 +4117,6 @@ class _$SaveUserSettingsCopyWithImpl<$Res, $Val extends SaveUserSettings>
       autoExpand: freezed == autoExpand
           ? _value.autoExpand
           : autoExpand // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      showScores: freezed == showScores
-          ? _value.showScores
-          : showScores // ignore: cast_nullable_to_non_nullable
               as bool?,
       theme: freezed == theme
           ? _value.theme
@@ -4209,6 +4218,22 @@ class _$SaveUserSettingsCopyWithImpl<$Res, $Val extends SaveUserSettings>
           ? _value.collapseBotComments
           : collapseBotComments // ignore: cast_nullable_to_non_nullable
               as bool?,
+      showScores: freezed == showScores
+          ? _value.showScores
+          : showScores // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      showUpvotes: freezed == showUpvotes
+          ? _value.showUpvotes
+          : showUpvotes // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      showDownvotes: freezed == showDownvotes
+          ? _value.showDownvotes
+          : showDownvotes // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      showUpvotePercentage: freezed == showUpvotePercentage
+          ? _value.showUpvotePercentage
+          : showUpvotePercentage // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ) as $Val);
   }
 }
@@ -4225,7 +4250,6 @@ abstract class _$$SaveUserSettingsImplCopyWith<$Res>
       {bool? showNsfw,
       bool? blurNsfw,
       bool? autoExpand,
-      bool? showScores,
       String? theme,
       SortType? defaultSortType,
       ListingType? defaultListingType,
@@ -4250,7 +4274,11 @@ abstract class _$$SaveUserSettingsImplCopyWith<$Res>
       String? postListingMode,
       bool? enableKeyboardNavigation,
       bool? enableAnimatedImages,
-      bool? collapseBotComments});
+      bool? collapseBotComments,
+      bool? showScores,
+      bool? showUpvotes,
+      bool? showDownvotes,
+      bool? showUpvotePercentage});
 }
 
 /// @nodoc
@@ -4267,7 +4295,6 @@ class __$$SaveUserSettingsImplCopyWithImpl<$Res>
     Object? showNsfw = freezed,
     Object? blurNsfw = freezed,
     Object? autoExpand = freezed,
-    Object? showScores = freezed,
     Object? theme = freezed,
     Object? defaultSortType = freezed,
     Object? defaultListingType = freezed,
@@ -4293,6 +4320,10 @@ class __$$SaveUserSettingsImplCopyWithImpl<$Res>
     Object? enableKeyboardNavigation = freezed,
     Object? enableAnimatedImages = freezed,
     Object? collapseBotComments = freezed,
+    Object? showScores = freezed,
+    Object? showUpvotes = freezed,
+    Object? showDownvotes = freezed,
+    Object? showUpvotePercentage = freezed,
   }) {
     return _then(_$SaveUserSettingsImpl(
       showNsfw: freezed == showNsfw
@@ -4306,10 +4337,6 @@ class __$$SaveUserSettingsImplCopyWithImpl<$Res>
       autoExpand: freezed == autoExpand
           ? _value.autoExpand
           : autoExpand // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      showScores: freezed == showScores
-          ? _value.showScores
-          : showScores // ignore: cast_nullable_to_non_nullable
               as bool?,
       theme: freezed == theme
           ? _value.theme
@@ -4411,6 +4438,22 @@ class __$$SaveUserSettingsImplCopyWithImpl<$Res>
           ? _value.collapseBotComments
           : collapseBotComments // ignore: cast_nullable_to_non_nullable
               as bool?,
+      showScores: freezed == showScores
+          ? _value.showScores
+          : showScores // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      showUpvotes: freezed == showUpvotes
+          ? _value.showUpvotes
+          : showUpvotes // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      showDownvotes: freezed == showDownvotes
+          ? _value.showDownvotes
+          : showDownvotes // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      showUpvotePercentage: freezed == showUpvotePercentage
+          ? _value.showUpvotePercentage
+          : showUpvotePercentage // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
@@ -4423,7 +4466,6 @@ class _$SaveUserSettingsImpl extends _SaveUserSettings {
       {this.showNsfw,
       this.blurNsfw,
       this.autoExpand,
-      this.showScores,
       this.theme,
       this.defaultSortType,
       this.defaultListingType,
@@ -4448,7 +4490,11 @@ class _$SaveUserSettingsImpl extends _SaveUserSettings {
       this.postListingMode,
       this.enableKeyboardNavigation,
       this.enableAnimatedImages,
-      this.collapseBotComments})
+      this.collapseBotComments,
+      this.showScores,
+      this.showUpvotes,
+      this.showDownvotes,
+      this.showUpvotePercentage})
       : _discussionLanguages = discussionLanguages,
         super._();
 
@@ -4464,9 +4510,6 @@ class _$SaveUserSettingsImpl extends _SaveUserSettings {
   @override
   final bool? autoExpand;
 // v0.18.3
-  @override
-  final bool? showScores;
-// v0.18.0
   @override
   final String? theme;
 // v0.18.0
@@ -4552,10 +4595,22 @@ class _$SaveUserSettingsImpl extends _SaveUserSettings {
 // v0.19.0 (optional)
   @override
   final bool? collapseBotComments;
+// v0.19.0 (optional)
+  @override
+  final bool? showScores;
+// v0.18.0 (optional)
+  @override
+  final bool? showUpvotes;
+// v0.19.4 (optional)
+  @override
+  final bool? showDownvotes;
+// v0.19.4 (optional)
+  @override
+  final bool? showUpvotePercentage;
 
   @override
   String toString() {
-    return 'SaveUserSettings(showNsfw: $showNsfw, blurNsfw: $blurNsfw, autoExpand: $autoExpand, showScores: $showScores, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, interfaceLanguage: $interfaceLanguage, avatar: $avatar, banner: $banner, displayName: $displayName, email: $email, bio: $bio, matrixUserId: $matrixUserId, showAvatars: $showAvatars, sendNotificationsToEmail: $sendNotificationsToEmail, botAccount: $botAccount, showBotAccounts: $showBotAccounts, showReadPosts: $showReadPosts, showNewPostNotifs: $showNewPostNotifs, discussionLanguages: $discussionLanguages, generateTotp2fa: $generateTotp2fa, auth: $auth, openLinksInNewTab: $openLinksInNewTab, infiniteScrollEnabled: $infiniteScrollEnabled, postListingMode: $postListingMode, enableKeyboardNavigation: $enableKeyboardNavigation, enableAnimatedImages: $enableAnimatedImages, collapseBotComments: $collapseBotComments)';
+    return 'SaveUserSettings(showNsfw: $showNsfw, blurNsfw: $blurNsfw, autoExpand: $autoExpand, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, interfaceLanguage: $interfaceLanguage, avatar: $avatar, banner: $banner, displayName: $displayName, email: $email, bio: $bio, matrixUserId: $matrixUserId, showAvatars: $showAvatars, sendNotificationsToEmail: $sendNotificationsToEmail, botAccount: $botAccount, showBotAccounts: $showBotAccounts, showReadPosts: $showReadPosts, showNewPostNotifs: $showNewPostNotifs, discussionLanguages: $discussionLanguages, generateTotp2fa: $generateTotp2fa, auth: $auth, openLinksInNewTab: $openLinksInNewTab, infiniteScrollEnabled: $infiniteScrollEnabled, postListingMode: $postListingMode, enableKeyboardNavigation: $enableKeyboardNavigation, enableAnimatedImages: $enableAnimatedImages, collapseBotComments: $collapseBotComments, showScores: $showScores, showUpvotes: $showUpvotes, showDownvotes: $showDownvotes, showUpvotePercentage: $showUpvotePercentage)';
   }
 
   @override
@@ -4569,8 +4624,6 @@ class _$SaveUserSettingsImpl extends _SaveUserSettings {
                 other.blurNsfw == blurNsfw) &&
             (identical(other.autoExpand, autoExpand) ||
                 other.autoExpand == autoExpand) &&
-            (identical(other.showScores, showScores) ||
-                other.showScores == showScores) &&
             (identical(other.theme, theme) || other.theme == theme) &&
             (identical(other.defaultSortType, defaultSortType) ||
                 other.defaultSortType == defaultSortType) &&
@@ -4616,7 +4669,15 @@ class _$SaveUserSettingsImpl extends _SaveUserSettings {
             (identical(other.enableAnimatedImages, enableAnimatedImages) ||
                 other.enableAnimatedImages == enableAnimatedImages) &&
             (identical(other.collapseBotComments, collapseBotComments) ||
-                other.collapseBotComments == collapseBotComments));
+                other.collapseBotComments == collapseBotComments) &&
+            (identical(other.showScores, showScores) ||
+                other.showScores == showScores) &&
+            (identical(other.showUpvotes, showUpvotes) ||
+                other.showUpvotes == showUpvotes) &&
+            (identical(other.showDownvotes, showDownvotes) ||
+                other.showDownvotes == showDownvotes) &&
+            (identical(other.showUpvotePercentage, showUpvotePercentage) ||
+                other.showUpvotePercentage == showUpvotePercentage));
   }
 
   @JsonKey(ignore: true)
@@ -4626,7 +4687,6 @@ class _$SaveUserSettingsImpl extends _SaveUserSettings {
         showNsfw,
         blurNsfw,
         autoExpand,
-        showScores,
         theme,
         defaultSortType,
         defaultListingType,
@@ -4651,7 +4711,11 @@ class _$SaveUserSettingsImpl extends _SaveUserSettings {
         postListingMode,
         enableKeyboardNavigation,
         enableAnimatedImages,
-        collapseBotComments
+        collapseBotComments,
+        showScores,
+        showUpvotes,
+        showDownvotes,
+        showUpvotePercentage
       ]);
 
   @JsonKey(ignore: true)
@@ -4674,7 +4738,6 @@ abstract class _SaveUserSettings extends SaveUserSettings {
       {final bool? showNsfw,
       final bool? blurNsfw,
       final bool? autoExpand,
-      final bool? showScores,
       final String? theme,
       final SortType? defaultSortType,
       final ListingType? defaultListingType,
@@ -4699,7 +4762,11 @@ abstract class _SaveUserSettings extends SaveUserSettings {
       final String? postListingMode,
       final bool? enableKeyboardNavigation,
       final bool? enableAnimatedImages,
-      final bool? collapseBotComments}) = _$SaveUserSettingsImpl;
+      final bool? collapseBotComments,
+      final bool? showScores,
+      final bool? showUpvotes,
+      final bool? showDownvotes,
+      final bool? showUpvotePercentage}) = _$SaveUserSettingsImpl;
   const _SaveUserSettings._() : super._();
 
   factory _SaveUserSettings.fromJson(Map<String, dynamic> json) =
@@ -4712,8 +4779,6 @@ abstract class _SaveUserSettings extends SaveUserSettings {
   @override // v0.18.3
   bool? get autoExpand;
   @override // v0.18.3
-  bool? get showScores;
-  @override // v0.18.0
   String? get theme;
   @override // v0.18.0
   SortType? get defaultSortType;
@@ -4765,6 +4830,14 @@ abstract class _SaveUserSettings extends SaveUserSettings {
   bool? get enableAnimatedImages;
   @override // v0.19.0 (optional)
   bool? get collapseBotComments;
+  @override // v0.19.0 (optional)
+  bool? get showScores;
+  @override // v0.18.0 (optional)
+  bool? get showUpvotes;
+  @override // v0.19.4 (optional)
+  bool? get showDownvotes;
+  @override // v0.19.4 (optional)
+  bool? get showUpvotePercentage;
   @override
   @JsonKey(ignore: true)
   _$$SaveUserSettingsImplCopyWith<_$SaveUserSettingsImpl> get copyWith =>

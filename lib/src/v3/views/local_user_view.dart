@@ -11,6 +11,7 @@ class LocalUserView with _$LocalUserView {
   @modelSerde
   const factory LocalUserView({
     required LocalUser localUser, // v0.18.0
+    LocalUserVoteDisplayMode? localUserVoteDisplayMode, // v0.19.4 (required)
     required Person person, // v0.18.0
     required PersonAggregates counts, // v0.18.0
   }) = _LocalUserView;

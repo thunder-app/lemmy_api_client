@@ -29,7 +29,10 @@ mixin _$GetSiteResponse {
   List<int> get discussionLanguages =>
       throw _privateConstructorUsedError; // v0.18.0
   List<Tagline> get taglines => throw _privateConstructorUsedError; // v0.18.0
-  List<CustomEmojiView> get customEmojis => throw _privateConstructorUsedError;
+  List<CustomEmojiView> get customEmojis =>
+      throw _privateConstructorUsedError; // v0.18.0
+  List<LocalSiteUrlBlocklist>? get blockedUrls =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -51,7 +54,8 @@ abstract class $GetSiteResponseCopyWith<$Res> {
       List<Language> allLanguages,
       List<int> discussionLanguages,
       List<Tagline> taglines,
-      List<CustomEmojiView> customEmojis});
+      List<CustomEmojiView> customEmojis,
+      List<LocalSiteUrlBlocklist>? blockedUrls});
 
   $SiteViewCopyWith<$Res> get siteView;
   $MyUserInfoCopyWith<$Res>? get myUser;
@@ -78,6 +82,7 @@ class _$GetSiteResponseCopyWithImpl<$Res, $Val extends GetSiteResponse>
     Object? discussionLanguages = null,
     Object? taglines = null,
     Object? customEmojis = null,
+    Object? blockedUrls = freezed,
   }) {
     return _then(_value.copyWith(
       siteView: null == siteView
@@ -112,6 +117,10 @@ class _$GetSiteResponseCopyWithImpl<$Res, $Val extends GetSiteResponse>
           ? _value.customEmojis
           : customEmojis // ignore: cast_nullable_to_non_nullable
               as List<CustomEmojiView>,
+      blockedUrls: freezed == blockedUrls
+          ? _value.blockedUrls
+          : blockedUrls // ignore: cast_nullable_to_non_nullable
+              as List<LocalSiteUrlBlocklist>?,
     ) as $Val);
   }
 
@@ -152,7 +161,8 @@ abstract class _$$GetSiteResponseImplCopyWith<$Res>
       List<Language> allLanguages,
       List<int> discussionLanguages,
       List<Tagline> taglines,
-      List<CustomEmojiView> customEmojis});
+      List<CustomEmojiView> customEmojis,
+      List<LocalSiteUrlBlocklist>? blockedUrls});
 
   @override
   $SiteViewCopyWith<$Res> get siteView;
@@ -179,6 +189,7 @@ class __$$GetSiteResponseImplCopyWithImpl<$Res>
     Object? discussionLanguages = null,
     Object? taglines = null,
     Object? customEmojis = null,
+    Object? blockedUrls = freezed,
   }) {
     return _then(_$GetSiteResponseImpl(
       siteView: null == siteView
@@ -213,6 +224,10 @@ class __$$GetSiteResponseImplCopyWithImpl<$Res>
           ? _value._customEmojis
           : customEmojis // ignore: cast_nullable_to_non_nullable
               as List<CustomEmojiView>,
+      blockedUrls: freezed == blockedUrls
+          ? _value._blockedUrls
+          : blockedUrls // ignore: cast_nullable_to_non_nullable
+              as List<LocalSiteUrlBlocklist>?,
     ));
   }
 }
@@ -229,12 +244,14 @@ class _$GetSiteResponseImpl extends _GetSiteResponse {
       required final List<Language> allLanguages,
       required final List<int> discussionLanguages,
       required final List<Tagline> taglines,
-      required final List<CustomEmojiView> customEmojis})
+      required final List<CustomEmojiView> customEmojis,
+      final List<LocalSiteUrlBlocklist>? blockedUrls})
       : _admins = admins,
         _allLanguages = allLanguages,
         _discussionLanguages = discussionLanguages,
         _taglines = taglines,
         _customEmojis = customEmojis,
+        _blockedUrls = blockedUrls,
         super._();
 
   factory _$GetSiteResponseImpl.fromJson(Map<String, dynamic> json) =>
@@ -299,9 +316,21 @@ class _$GetSiteResponseImpl extends _GetSiteResponse {
     return EqualUnmodifiableListView(_customEmojis);
   }
 
+// v0.18.0
+  final List<LocalSiteUrlBlocklist>? _blockedUrls;
+// v0.18.0
+  @override
+  List<LocalSiteUrlBlocklist>? get blockedUrls {
+    final value = _blockedUrls;
+    if (value == null) return null;
+    if (_blockedUrls is EqualUnmodifiableListView) return _blockedUrls;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   String toString() {
-    return 'GetSiteResponse(siteView: $siteView, admins: $admins, version: $version, myUser: $myUser, allLanguages: $allLanguages, discussionLanguages: $discussionLanguages, taglines: $taglines, customEmojis: $customEmojis)';
+    return 'GetSiteResponse(siteView: $siteView, admins: $admins, version: $version, myUser: $myUser, allLanguages: $allLanguages, discussionLanguages: $discussionLanguages, taglines: $taglines, customEmojis: $customEmojis, blockedUrls: $blockedUrls)';
   }
 
   @override
@@ -320,7 +349,9 @@ class _$GetSiteResponseImpl extends _GetSiteResponse {
                 .equals(other._discussionLanguages, _discussionLanguages) &&
             const DeepCollectionEquality().equals(other._taglines, _taglines) &&
             const DeepCollectionEquality()
-                .equals(other._customEmojis, _customEmojis));
+                .equals(other._customEmojis, _customEmojis) &&
+            const DeepCollectionEquality()
+                .equals(other._blockedUrls, _blockedUrls));
   }
 
   @JsonKey(ignore: true)
@@ -334,7 +365,8 @@ class _$GetSiteResponseImpl extends _GetSiteResponse {
       const DeepCollectionEquality().hash(_allLanguages),
       const DeepCollectionEquality().hash(_discussionLanguages),
       const DeepCollectionEquality().hash(_taglines),
-      const DeepCollectionEquality().hash(_customEmojis));
+      const DeepCollectionEquality().hash(_customEmojis),
+      const DeepCollectionEquality().hash(_blockedUrls));
 
   @JsonKey(ignore: true)
   @override
@@ -353,15 +385,15 @@ class _$GetSiteResponseImpl extends _GetSiteResponse {
 
 abstract class _GetSiteResponse extends GetSiteResponse {
   const factory _GetSiteResponse(
-          {required final SiteView siteView,
-          required final List<PersonView> admins,
-          required final String version,
-          final MyUserInfo? myUser,
-          required final List<Language> allLanguages,
-          required final List<int> discussionLanguages,
-          required final List<Tagline> taglines,
-          required final List<CustomEmojiView> customEmojis}) =
-      _$GetSiteResponseImpl;
+      {required final SiteView siteView,
+      required final List<PersonView> admins,
+      required final String version,
+      final MyUserInfo? myUser,
+      required final List<Language> allLanguages,
+      required final List<int> discussionLanguages,
+      required final List<Tagline> taglines,
+      required final List<CustomEmojiView> customEmojis,
+      final List<LocalSiteUrlBlocklist>? blockedUrls}) = _$GetSiteResponseImpl;
   const _GetSiteResponse._() : super._();
 
   factory _GetSiteResponse.fromJson(Map<String, dynamic> json) =
@@ -383,6 +415,8 @@ abstract class _GetSiteResponse extends GetSiteResponse {
   List<Tagline> get taglines;
   @override // v0.18.0
   List<CustomEmojiView> get customEmojis;
+  @override // v0.18.0
+  List<LocalSiteUrlBlocklist>? get blockedUrls;
   @override
   @JsonKey(ignore: true)
   _$$GetSiteResponseImplCopyWith<_$GetSiteResponseImpl> get copyWith =>

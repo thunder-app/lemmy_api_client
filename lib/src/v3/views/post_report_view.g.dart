@@ -16,7 +16,17 @@ _$PostReportViewImpl _$$PostReportViewImplFromJson(Map<String, dynamic> json) =>
       postCreator:
           Person.fromJson(json['post_creator'] as Map<String, dynamic>),
       creatorBannedFromCommunity: json['creator_banned_from_community'] as bool,
+      creatorIsModerator: json['creator_is_moderator'] as bool?,
+      creatorIsAdmin: json['creator_is_admin'] as bool?,
+      subscribed: json['subscribed'] == null
+          ? null
+          : SubscribedType.fromJson(json['subscribed'] as String),
+      saved: json['saved'] as bool?,
+      read: json['read'] as bool?,
+      hidden: json['hidden'] as bool?,
+      creatorBlocked: json['creator_blocked'] as bool?,
       myVote: json['my_vote'] as num?,
+      unreadComments: json['unread_comments'] as int?,
       counts: PostAggregates.fromJson(json['counts'] as Map<String, dynamic>),
       resolver: json['resolver'] == null
           ? null
@@ -32,7 +42,15 @@ Map<String, dynamic> _$$PostReportViewImplToJson(
       'creator': instance.creator.toJson(),
       'post_creator': instance.postCreator.toJson(),
       'creator_banned_from_community': instance.creatorBannedFromCommunity,
+      'creator_is_moderator': instance.creatorIsModerator,
+      'creator_is_admin': instance.creatorIsAdmin,
+      'subscribed': instance.subscribed?.toJson(),
+      'saved': instance.saved,
+      'read': instance.read,
+      'hidden': instance.hidden,
+      'creator_blocked': instance.creatorBlocked,
       'my_vote': instance.myVote,
+      'unread_comments': instance.unreadComments,
       'counts': instance.counts.toJson(),
       'resolver': instance.resolver?.toJson(),
     };

@@ -21,7 +21,7 @@ _$SiteImpl _$$SiteImplFromJson(Map<String, dynamic> json) => _$SiteImpl(
           .fromJson(json['last_refreshed_at'] as String),
       inboxUrl: json['inbox_url'] as String,
       privateKey: json['private_key'] as String?,
-      publicKey: json['public_key'] as String,
+      publicKey: json['public_key'] as String?,
       instanceId: json['instance_id'] as int,
       contentWarning: json['content_warning'] as String?,
     );

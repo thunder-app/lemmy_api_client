@@ -231,3 +231,30 @@ class PurgeComment
   PurgeItemResponse responseFactory(Map<String, dynamic> json) =>
       PurgeItemResponse.fromJson(json);
 }
+
+/// List all the media known to your instance.
+///
+/// `HTTP.GET /admin/list_all_media`
+@freezed
+class ListAllMedia
+    with _$ListAllMedia
+    implements LemmyApiQuery<ListMediaResponse>, LemmyApiAuthenticatedQuery {
+  @apiSerde
+  const factory ListAllMedia({
+    int? page, // v0.19.4 (optional)
+    int? limit, // v0.19.4 (optional)
+    String? auth,
+  }) = _ListAllMedia;
+
+  const ListAllMedia._();
+  factory ListAllMedia.fromJson(Map<String, dynamic> json) =>
+      _$ListAllMediaFromJson(json);
+
+  final path = '/admin/list_all_media';
+
+  final httpMethod = HttpMethod.get;
+
+  @override
+  ListMediaResponse responseFactory(Map<String, dynamic> json) =>
+      ListMediaResponse.fromJson(json);
+}

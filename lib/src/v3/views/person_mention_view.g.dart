@@ -19,6 +19,7 @@ _$PersonMentionViewImpl _$$PersonMentionViewImplFromJson(
       counts:
           CommentAggregates.fromJson(json['counts'] as Map<String, dynamic>),
       creatorBannedFromCommunity: json['creator_banned_from_community'] as bool,
+      bannedFromCommunity: json['banned_from_community'] as bool?,
       creatorIsModerator: json['creator_is_moderator'] as bool?,
       creatorIsAdmin: json['creator_is_admin'] as bool?,
       subscribed: SubscribedType.fromJson(json['subscribed'] as String),
@@ -38,6 +39,7 @@ Map<String, dynamic> _$$PersonMentionViewImplToJson(
       'recipient': instance.recipient.toJson(),
       'counts': instance.counts.toJson(),
       'creator_banned_from_community': instance.creatorBannedFromCommunity,
+      'banned_from_community': instance.bannedFromCommunity,
       'creator_is_moderator': instance.creatorIsModerator,
       'creator_is_admin': instance.creatorIsAdmin,
       'subscribed': instance.subscribed.toJson(),

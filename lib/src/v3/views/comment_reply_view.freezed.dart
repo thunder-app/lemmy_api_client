@@ -30,6 +30,8 @@ mixin _$CommentReplyView {
   CommentAggregates get counts => throw _privateConstructorUsedError; // v0.18.0
   bool get creatorBannedFromCommunity =>
       throw _privateConstructorUsedError; // v0.18.0
+  bool? get bannedFromCommunity =>
+      throw _privateConstructorUsedError; // v0.19.4 (required)
   bool? get creatorIsModerator =>
       throw _privateConstructorUsedError; // v0.19.0 (required)
   bool? get creatorIsAdmin =>
@@ -61,6 +63,7 @@ abstract class $CommentReplyViewCopyWith<$Res> {
       Person recipient,
       CommentAggregates counts,
       bool creatorBannedFromCommunity,
+      bool? bannedFromCommunity,
       bool? creatorIsModerator,
       bool? creatorIsAdmin,
       SubscribedType subscribed,
@@ -98,6 +101,7 @@ class _$CommentReplyViewCopyWithImpl<$Res, $Val extends CommentReplyView>
     Object? recipient = null,
     Object? counts = null,
     Object? creatorBannedFromCommunity = null,
+    Object? bannedFromCommunity = freezed,
     Object? creatorIsModerator = freezed,
     Object? creatorIsAdmin = freezed,
     Object? subscribed = null,
@@ -138,6 +142,10 @@ class _$CommentReplyViewCopyWithImpl<$Res, $Val extends CommentReplyView>
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
               as bool,
+      bannedFromCommunity: freezed == bannedFromCommunity
+          ? _value.bannedFromCommunity
+          : bannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool?,
       creatorIsModerator: freezed == creatorIsModerator
           ? _value.creatorIsModerator
           : creatorIsModerator // ignore: cast_nullable_to_non_nullable
@@ -239,6 +247,7 @@ abstract class _$$CommentReplyViewImplCopyWith<$Res>
       Person recipient,
       CommentAggregates counts,
       bool creatorBannedFromCommunity,
+      bool? bannedFromCommunity,
       bool? creatorIsModerator,
       bool? creatorIsAdmin,
       SubscribedType subscribed,
@@ -281,6 +290,7 @@ class __$$CommentReplyViewImplCopyWithImpl<$Res>
     Object? recipient = null,
     Object? counts = null,
     Object? creatorBannedFromCommunity = null,
+    Object? bannedFromCommunity = freezed,
     Object? creatorIsModerator = freezed,
     Object? creatorIsAdmin = freezed,
     Object? subscribed = null,
@@ -321,6 +331,10 @@ class __$$CommentReplyViewImplCopyWithImpl<$Res>
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
               as bool,
+      bannedFromCommunity: freezed == bannedFromCommunity
+          ? _value.bannedFromCommunity
+          : bannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool?,
       creatorIsModerator: freezed == creatorIsModerator
           ? _value.creatorIsModerator
           : creatorIsModerator // ignore: cast_nullable_to_non_nullable
@@ -362,6 +376,7 @@ class _$CommentReplyViewImpl extends _CommentReplyView {
       required this.recipient,
       required this.counts,
       required this.creatorBannedFromCommunity,
+      this.bannedFromCommunity,
       this.creatorIsModerator,
       this.creatorIsAdmin,
       required this.subscribed,
@@ -398,6 +413,9 @@ class _$CommentReplyViewImpl extends _CommentReplyView {
   final bool creatorBannedFromCommunity;
 // v0.18.0
   @override
+  final bool? bannedFromCommunity;
+// v0.19.4 (required)
+  @override
   final bool? creatorIsModerator;
 // v0.19.0 (required)
   @override
@@ -417,7 +435,7 @@ class _$CommentReplyViewImpl extends _CommentReplyView {
 
   @override
   String toString() {
-    return 'CommentReplyView(commentReply: $commentReply, comment: $comment, creator: $creator, post: $post, community: $community, recipient: $recipient, counts: $counts, creatorBannedFromCommunity: $creatorBannedFromCommunity, creatorIsModerator: $creatorIsModerator, creatorIsAdmin: $creatorIsAdmin, subscribed: $subscribed, saved: $saved, creatorBlocked: $creatorBlocked, myVote: $myVote)';
+    return 'CommentReplyView(commentReply: $commentReply, comment: $comment, creator: $creator, post: $post, community: $community, recipient: $recipient, counts: $counts, creatorBannedFromCommunity: $creatorBannedFromCommunity, bannedFromCommunity: $bannedFromCommunity, creatorIsModerator: $creatorIsModerator, creatorIsAdmin: $creatorIsAdmin, subscribed: $subscribed, saved: $saved, creatorBlocked: $creatorBlocked, myVote: $myVote)';
   }
 
   @override
@@ -439,6 +457,8 @@ class _$CommentReplyViewImpl extends _CommentReplyView {
                     creatorBannedFromCommunity) ||
                 other.creatorBannedFromCommunity ==
                     creatorBannedFromCommunity) &&
+            (identical(other.bannedFromCommunity, bannedFromCommunity) ||
+                other.bannedFromCommunity == bannedFromCommunity) &&
             (identical(other.creatorIsModerator, creatorIsModerator) ||
                 other.creatorIsModerator == creatorIsModerator) &&
             (identical(other.creatorIsAdmin, creatorIsAdmin) ||
@@ -463,6 +483,7 @@ class _$CommentReplyViewImpl extends _CommentReplyView {
       recipient,
       counts,
       creatorBannedFromCommunity,
+      bannedFromCommunity,
       creatorIsModerator,
       creatorIsAdmin,
       subscribed,
@@ -495,6 +516,7 @@ abstract class _CommentReplyView extends CommentReplyView {
       required final Person recipient,
       required final CommentAggregates counts,
       required final bool creatorBannedFromCommunity,
+      final bool? bannedFromCommunity,
       final bool? creatorIsModerator,
       final bool? creatorIsAdmin,
       required final SubscribedType subscribed,
@@ -523,6 +545,8 @@ abstract class _CommentReplyView extends CommentReplyView {
   @override // v0.18.0
   bool get creatorBannedFromCommunity;
   @override // v0.18.0
+  bool? get bannedFromCommunity;
+  @override // v0.19.4 (required)
   bool? get creatorIsModerator;
   @override // v0.19.0 (required)
   bool? get creatorIsAdmin;

@@ -27,7 +27,20 @@ mixin _$PostReportView {
   Person get postCreator => throw _privateConstructorUsedError; // v0.18.0
   bool get creatorBannedFromCommunity =>
       throw _privateConstructorUsedError; // v0.18.0
+  bool? get creatorIsModerator =>
+      throw _privateConstructorUsedError; // v0.19.4 (required)
+  bool? get creatorIsAdmin =>
+      throw _privateConstructorUsedError; // v0.19.4 (required)
+  SubscribedType? get subscribed =>
+      throw _privateConstructorUsedError; // v0.19.4 (required)
+  bool? get saved => throw _privateConstructorUsedError; // v0.19.4 (required)
+  bool? get read => throw _privateConstructorUsedError; // v0.19.4 (required)
+  bool? get hidden => throw _privateConstructorUsedError; // v0.19.4 (required)
+  bool? get creatorBlocked =>
+      throw _privateConstructorUsedError; // v0.19.4 (required)
   num? get myVote => throw _privateConstructorUsedError; // v0.18.0
+  int? get unreadComments =>
+      throw _privateConstructorUsedError; // v0.19.4 (required)
   PostAggregates get counts => throw _privateConstructorUsedError; // v0.18.0
   Person? get resolver => throw _privateConstructorUsedError;
 
@@ -50,7 +63,15 @@ abstract class $PostReportViewCopyWith<$Res> {
       Person creator,
       Person postCreator,
       bool creatorBannedFromCommunity,
+      bool? creatorIsModerator,
+      bool? creatorIsAdmin,
+      SubscribedType? subscribed,
+      bool? saved,
+      bool? read,
+      bool? hidden,
+      bool? creatorBlocked,
       num? myVote,
+      int? unreadComments,
       PostAggregates counts,
       Person? resolver});
 
@@ -82,7 +103,15 @@ class _$PostReportViewCopyWithImpl<$Res, $Val extends PostReportView>
     Object? creator = null,
     Object? postCreator = null,
     Object? creatorBannedFromCommunity = null,
+    Object? creatorIsModerator = freezed,
+    Object? creatorIsAdmin = freezed,
+    Object? subscribed = freezed,
+    Object? saved = freezed,
+    Object? read = freezed,
+    Object? hidden = freezed,
+    Object? creatorBlocked = freezed,
     Object? myVote = freezed,
+    Object? unreadComments = freezed,
     Object? counts = null,
     Object? resolver = freezed,
   }) {
@@ -111,10 +140,42 @@ class _$PostReportViewCopyWithImpl<$Res, $Val extends PostReportView>
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
               as bool,
+      creatorIsModerator: freezed == creatorIsModerator
+          ? _value.creatorIsModerator
+          : creatorIsModerator // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      creatorIsAdmin: freezed == creatorIsAdmin
+          ? _value.creatorIsAdmin
+          : creatorIsAdmin // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      subscribed: freezed == subscribed
+          ? _value.subscribed
+          : subscribed // ignore: cast_nullable_to_non_nullable
+              as SubscribedType?,
+      saved: freezed == saved
+          ? _value.saved
+          : saved // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      read: freezed == read
+          ? _value.read
+          : read // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      hidden: freezed == hidden
+          ? _value.hidden
+          : hidden // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      creatorBlocked: freezed == creatorBlocked
+          ? _value.creatorBlocked
+          : creatorBlocked // ignore: cast_nullable_to_non_nullable
+              as bool?,
       myVote: freezed == myVote
           ? _value.myVote
           : myVote // ignore: cast_nullable_to_non_nullable
               as num?,
+      unreadComments: freezed == unreadComments
+          ? _value.unreadComments
+          : unreadComments // ignore: cast_nullable_to_non_nullable
+              as int?,
       counts: null == counts
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
@@ -202,7 +263,15 @@ abstract class _$$PostReportViewImplCopyWith<$Res>
       Person creator,
       Person postCreator,
       bool creatorBannedFromCommunity,
+      bool? creatorIsModerator,
+      bool? creatorIsAdmin,
+      SubscribedType? subscribed,
+      bool? saved,
+      bool? read,
+      bool? hidden,
+      bool? creatorBlocked,
       num? myVote,
+      int? unreadComments,
       PostAggregates counts,
       Person? resolver});
 
@@ -239,7 +308,15 @@ class __$$PostReportViewImplCopyWithImpl<$Res>
     Object? creator = null,
     Object? postCreator = null,
     Object? creatorBannedFromCommunity = null,
+    Object? creatorIsModerator = freezed,
+    Object? creatorIsAdmin = freezed,
+    Object? subscribed = freezed,
+    Object? saved = freezed,
+    Object? read = freezed,
+    Object? hidden = freezed,
+    Object? creatorBlocked = freezed,
     Object? myVote = freezed,
+    Object? unreadComments = freezed,
     Object? counts = null,
     Object? resolver = freezed,
   }) {
@@ -268,10 +345,42 @@ class __$$PostReportViewImplCopyWithImpl<$Res>
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
               as bool,
+      creatorIsModerator: freezed == creatorIsModerator
+          ? _value.creatorIsModerator
+          : creatorIsModerator // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      creatorIsAdmin: freezed == creatorIsAdmin
+          ? _value.creatorIsAdmin
+          : creatorIsAdmin // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      subscribed: freezed == subscribed
+          ? _value.subscribed
+          : subscribed // ignore: cast_nullable_to_non_nullable
+              as SubscribedType?,
+      saved: freezed == saved
+          ? _value.saved
+          : saved // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      read: freezed == read
+          ? _value.read
+          : read // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      hidden: freezed == hidden
+          ? _value.hidden
+          : hidden // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      creatorBlocked: freezed == creatorBlocked
+          ? _value.creatorBlocked
+          : creatorBlocked // ignore: cast_nullable_to_non_nullable
+              as bool?,
       myVote: freezed == myVote
           ? _value.myVote
           : myVote // ignore: cast_nullable_to_non_nullable
               as num?,
+      unreadComments: freezed == unreadComments
+          ? _value.unreadComments
+          : unreadComments // ignore: cast_nullable_to_non_nullable
+              as int?,
       counts: null == counts
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
@@ -295,7 +404,15 @@ class _$PostReportViewImpl extends _PostReportView {
       required this.creator,
       required this.postCreator,
       required this.creatorBannedFromCommunity,
+      this.creatorIsModerator,
+      this.creatorIsAdmin,
+      this.subscribed,
+      this.saved,
+      this.read,
+      this.hidden,
+      this.creatorBlocked,
       this.myVote,
+      this.unreadComments,
       required this.counts,
       this.resolver})
       : super._();
@@ -322,8 +439,32 @@ class _$PostReportViewImpl extends _PostReportView {
   final bool creatorBannedFromCommunity;
 // v0.18.0
   @override
+  final bool? creatorIsModerator;
+// v0.19.4 (required)
+  @override
+  final bool? creatorIsAdmin;
+// v0.19.4 (required)
+  @override
+  final SubscribedType? subscribed;
+// v0.19.4 (required)
+  @override
+  final bool? saved;
+// v0.19.4 (required)
+  @override
+  final bool? read;
+// v0.19.4 (required)
+  @override
+  final bool? hidden;
+// v0.19.4 (required)
+  @override
+  final bool? creatorBlocked;
+// v0.19.4 (required)
+  @override
   final num? myVote;
 // v0.18.0
+  @override
+  final int? unreadComments;
+// v0.19.4 (required)
   @override
   final PostAggregates counts;
 // v0.18.0
@@ -332,7 +473,7 @@ class _$PostReportViewImpl extends _PostReportView {
 
   @override
   String toString() {
-    return 'PostReportView(postReport: $postReport, post: $post, community: $community, creator: $creator, postCreator: $postCreator, creatorBannedFromCommunity: $creatorBannedFromCommunity, myVote: $myVote, counts: $counts, resolver: $resolver)';
+    return 'PostReportView(postReport: $postReport, post: $post, community: $community, creator: $creator, postCreator: $postCreator, creatorBannedFromCommunity: $creatorBannedFromCommunity, creatorIsModerator: $creatorIsModerator, creatorIsAdmin: $creatorIsAdmin, subscribed: $subscribed, saved: $saved, read: $read, hidden: $hidden, creatorBlocked: $creatorBlocked, myVote: $myVote, unreadComments: $unreadComments, counts: $counts, resolver: $resolver)';
   }
 
   @override
@@ -352,7 +493,20 @@ class _$PostReportViewImpl extends _PostReportView {
                     creatorBannedFromCommunity) ||
                 other.creatorBannedFromCommunity ==
                     creatorBannedFromCommunity) &&
+            (identical(other.creatorIsModerator, creatorIsModerator) ||
+                other.creatorIsModerator == creatorIsModerator) &&
+            (identical(other.creatorIsAdmin, creatorIsAdmin) ||
+                other.creatorIsAdmin == creatorIsAdmin) &&
+            (identical(other.subscribed, subscribed) ||
+                other.subscribed == subscribed) &&
+            (identical(other.saved, saved) || other.saved == saved) &&
+            (identical(other.read, read) || other.read == read) &&
+            (identical(other.hidden, hidden) || other.hidden == hidden) &&
+            (identical(other.creatorBlocked, creatorBlocked) ||
+                other.creatorBlocked == creatorBlocked) &&
             (identical(other.myVote, myVote) || other.myVote == myVote) &&
+            (identical(other.unreadComments, unreadComments) ||
+                other.unreadComments == unreadComments) &&
             (identical(other.counts, counts) || other.counts == counts) &&
             (identical(other.resolver, resolver) ||
                 other.resolver == resolver));
@@ -368,7 +522,15 @@ class _$PostReportViewImpl extends _PostReportView {
       creator,
       postCreator,
       creatorBannedFromCommunity,
+      creatorIsModerator,
+      creatorIsAdmin,
+      subscribed,
+      saved,
+      read,
+      hidden,
+      creatorBlocked,
       myVote,
+      unreadComments,
       counts,
       resolver);
 
@@ -395,7 +557,15 @@ abstract class _PostReportView extends PostReportView {
       required final Person creator,
       required final Person postCreator,
       required final bool creatorBannedFromCommunity,
+      final bool? creatorIsModerator,
+      final bool? creatorIsAdmin,
+      final SubscribedType? subscribed,
+      final bool? saved,
+      final bool? read,
+      final bool? hidden,
+      final bool? creatorBlocked,
       final num? myVote,
+      final int? unreadComments,
       required final PostAggregates counts,
       final Person? resolver}) = _$PostReportViewImpl;
   const _PostReportView._() : super._();
@@ -416,8 +586,24 @@ abstract class _PostReportView extends PostReportView {
   @override // v0.18.0
   bool get creatorBannedFromCommunity;
   @override // v0.18.0
+  bool? get creatorIsModerator;
+  @override // v0.19.4 (required)
+  bool? get creatorIsAdmin;
+  @override // v0.19.4 (required)
+  SubscribedType? get subscribed;
+  @override // v0.19.4 (required)
+  bool? get saved;
+  @override // v0.19.4 (required)
+  bool? get read;
+  @override // v0.19.4 (required)
+  bool? get hidden;
+  @override // v0.19.4 (required)
+  bool? get creatorBlocked;
+  @override // v0.19.4 (required)
   num? get myVote;
   @override // v0.18.0
+  int? get unreadComments;
+  @override // v0.19.4 (required)
   PostAggregates get counts;
   @override // v0.18.0
   Person? get resolver;

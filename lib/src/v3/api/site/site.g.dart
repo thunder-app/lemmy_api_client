@@ -204,6 +204,9 @@ _$EditSiteImpl _$$EditSiteImplFromJson(Map<String, dynamic> json) =>
       blockedInstances: (json['blocked_instances'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
+      blockedUrls: (json['blocked_urls'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
       taglines: (json['taglines'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
@@ -270,6 +273,7 @@ Map<String, dynamic> _$$EditSiteImplToJson(_$EditSiteImpl instance) {
   writeNotNull('captcha_difficulty', instance.captchaDifficulty);
   writeNotNull('allowed_instances', instance.allowedInstances);
   writeNotNull('blocked_instances', instance.blockedInstances);
+  writeNotNull('blocked_urls', instance.blockedUrls);
   writeNotNull('taglines', instance.taglines);
   writeNotNull('registration_mode', instance.registrationMode?.toJson());
   writeNotNull('reports_email_admins', instance.reportsEmailAdmins);

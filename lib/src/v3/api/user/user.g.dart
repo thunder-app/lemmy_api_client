@@ -486,7 +486,6 @@ _$SaveUserSettingsImpl _$$SaveUserSettingsImplFromJson(
       showNsfw: json['show_nsfw'] as bool?,
       blurNsfw: json['blur_nsfw'] as bool?,
       autoExpand: json['auto_expand'] as bool?,
-      showScores: json['show_scores'] as bool?,
       theme: json['theme'] as String?,
       defaultSortType: json['default_sort_type'] == null
           ? null
@@ -518,6 +517,10 @@ _$SaveUserSettingsImpl _$$SaveUserSettingsImplFromJson(
       enableKeyboardNavigation: json['enable_keyboard_navigation'] as bool?,
       enableAnimatedImages: json['enable_animated_images'] as bool?,
       collapseBotComments: json['collapse_bot_comments'] as bool?,
+      showScores: json['show_scores'] as bool?,
+      showUpvotes: json['show_upvotes'] as bool?,
+      showDownvotes: json['show_downvotes'] as bool?,
+      showUpvotePercentage: json['show_upvote_percentage'] as bool?,
     );
 
 Map<String, dynamic> _$$SaveUserSettingsImplToJson(
@@ -533,7 +536,6 @@ Map<String, dynamic> _$$SaveUserSettingsImplToJson(
   writeNotNull('show_nsfw', instance.showNsfw);
   writeNotNull('blur_nsfw', instance.blurNsfw);
   writeNotNull('auto_expand', instance.autoExpand);
-  writeNotNull('show_scores', instance.showScores);
   writeNotNull('theme', instance.theme);
   writeNotNull('default_sort_type', instance.defaultSortType?.toJson());
   writeNotNull('default_listing_type', instance.defaultListingType?.toJson());
@@ -560,6 +562,10 @@ Map<String, dynamic> _$$SaveUserSettingsImplToJson(
   writeNotNull('enable_keyboard_navigation', instance.enableKeyboardNavigation);
   writeNotNull('enable_animated_images', instance.enableAnimatedImages);
   writeNotNull('collapse_bot_comments', instance.collapseBotComments);
+  writeNotNull('show_scores', instance.showScores);
+  writeNotNull('show_upvotes', instance.showUpvotes);
+  writeNotNull('show_downvotes', instance.showDownvotes);
+  writeNotNull('show_upvote_percentage', instance.showUpvotePercentage);
   return val;
 }
 

@@ -31,8 +31,12 @@ mixin _$Site {
   String get actorId => throw _privateConstructorUsedError; // v0.18.0
   DateTime get lastRefreshedAt => throw _privateConstructorUsedError; // v0.18.0
   String get inboxUrl => throw _privateConstructorUsedError; // v0.18.0
-  String? get privateKey => throw _privateConstructorUsedError; // v0.18.0
-  String get publicKey => throw _privateConstructorUsedError; // v0.18.0
+  @deprecated
+  String? get privateKey =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.4]
+  @deprecated
+  String? get publicKey =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.4]
   int get instanceId => throw _privateConstructorUsedError; // v0.18.0
   String? get contentWarning => throw _privateConstructorUsedError;
 
@@ -58,8 +62,8 @@ abstract class $SiteCopyWith<$Res> {
       String actorId,
       DateTime lastRefreshedAt,
       String inboxUrl,
-      String? privateKey,
-      String publicKey,
+      @deprecated String? privateKey,
+      @deprecated String? publicKey,
       int instanceId,
       String? contentWarning});
 }
@@ -89,7 +93,7 @@ class _$SiteCopyWithImpl<$Res, $Val extends Site>
     Object? lastRefreshedAt = null,
     Object? inboxUrl = null,
     Object? privateKey = freezed,
-    Object? publicKey = null,
+    Object? publicKey = freezed,
     Object? instanceId = null,
     Object? contentWarning = freezed,
   }) {
@@ -142,10 +146,10 @@ class _$SiteCopyWithImpl<$Res, $Val extends Site>
           ? _value.privateKey
           : privateKey // ignore: cast_nullable_to_non_nullable
               as String?,
-      publicKey: null == publicKey
+      publicKey: freezed == publicKey
           ? _value.publicKey
           : publicKey // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       instanceId: null == instanceId
           ? _value.instanceId
           : instanceId // ignore: cast_nullable_to_non_nullable
@@ -177,8 +181,8 @@ abstract class _$$SiteImplCopyWith<$Res> implements $SiteCopyWith<$Res> {
       String actorId,
       DateTime lastRefreshedAt,
       String inboxUrl,
-      String? privateKey,
-      String publicKey,
+      @deprecated String? privateKey,
+      @deprecated String? publicKey,
       int instanceId,
       String? contentWarning});
 }
@@ -205,7 +209,7 @@ class __$$SiteImplCopyWithImpl<$Res>
     Object? lastRefreshedAt = null,
     Object? inboxUrl = null,
     Object? privateKey = freezed,
-    Object? publicKey = null,
+    Object? publicKey = freezed,
     Object? instanceId = null,
     Object? contentWarning = freezed,
   }) {
@@ -258,10 +262,10 @@ class __$$SiteImplCopyWithImpl<$Res>
           ? _value.privateKey
           : privateKey // ignore: cast_nullable_to_non_nullable
               as String?,
-      publicKey: null == publicKey
+      publicKey: freezed == publicKey
           ? _value.publicKey
           : publicKey // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       instanceId: null == instanceId
           ? _value.instanceId
           : instanceId // ignore: cast_nullable_to_non_nullable
@@ -290,8 +294,8 @@ class _$SiteImpl extends _Site {
       required this.actorId,
       required this.lastRefreshedAt,
       required this.inboxUrl,
-      this.privateKey,
-      required this.publicKey,
+      @deprecated this.privateKey,
+      @deprecated this.publicKey,
       required this.instanceId,
       this.contentWarning})
       : super._();
@@ -333,11 +337,13 @@ class _$SiteImpl extends _Site {
   final String inboxUrl;
 // v0.18.0
   @override
+  @deprecated
   final String? privateKey;
-// v0.18.0
+// v0.18.0 [deprecated in v0.19.4]
   @override
-  final String publicKey;
-// v0.18.0
+  @deprecated
+  final String? publicKey;
+// v0.18.0 [deprecated in v0.19.4]
   @override
   final int instanceId;
 // v0.18.0
@@ -426,8 +432,8 @@ abstract class _Site extends Site {
       required final String actorId,
       required final DateTime lastRefreshedAt,
       required final String inboxUrl,
-      final String? privateKey,
-      required final String publicKey,
+      @deprecated final String? privateKey,
+      @deprecated final String? publicKey,
       required final int instanceId,
       final String? contentWarning}) = _$SiteImpl;
   const _Site._() : super._();
@@ -457,10 +463,12 @@ abstract class _Site extends Site {
   @override // v0.18.0
   String get inboxUrl;
   @override // v0.18.0
+  @deprecated
   String? get privateKey;
-  @override // v0.18.0
-  String get publicKey;
-  @override // v0.18.0
+  @override // v0.18.0 [deprecated in v0.19.4]
+  @deprecated
+  String? get publicKey;
+  @override // v0.18.0 [deprecated in v0.19.4]
   int get instanceId;
   @override // v0.18.0
   String? get contentWarning;

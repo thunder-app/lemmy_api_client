@@ -20,7 +20,8 @@ LocalImage _$LocalImageFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$LocalImage {
-  int get localUserId => throw _privateConstructorUsedError; // v0.19.0
+  int? get localUserId =>
+      throw _privateConstructorUsedError; // v0.19.0 (optional)
   String get pictrsAlias => throw _privateConstructorUsedError; // v0.19.0
   String get pictrsDeleteToken => throw _privateConstructorUsedError; // v0.19.0
   String get published => throw _privateConstructorUsedError;
@@ -38,7 +39,7 @@ abstract class $LocalImageCopyWith<$Res> {
       _$LocalImageCopyWithImpl<$Res, LocalImage>;
   @useResult
   $Res call(
-      {int localUserId,
+      {int? localUserId,
       String pictrsAlias,
       String pictrsDeleteToken,
       String published});
@@ -57,16 +58,16 @@ class _$LocalImageCopyWithImpl<$Res, $Val extends LocalImage>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? localUserId = null,
+    Object? localUserId = freezed,
     Object? pictrsAlias = null,
     Object? pictrsDeleteToken = null,
     Object? published = null,
   }) {
     return _then(_value.copyWith(
-      localUserId: null == localUserId
+      localUserId: freezed == localUserId
           ? _value.localUserId
           : localUserId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       pictrsAlias: null == pictrsAlias
           ? _value.pictrsAlias
           : pictrsAlias // ignore: cast_nullable_to_non_nullable
@@ -92,7 +93,7 @@ abstract class _$$LocalImageImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int localUserId,
+      {int? localUserId,
       String pictrsAlias,
       String pictrsDeleteToken,
       String published});
@@ -109,16 +110,16 @@ class __$$LocalImageImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? localUserId = null,
+    Object? localUserId = freezed,
     Object? pictrsAlias = null,
     Object? pictrsDeleteToken = null,
     Object? published = null,
   }) {
     return _then(_$LocalImageImpl(
-      localUserId: null == localUserId
+      localUserId: freezed == localUserId
           ? _value.localUserId
           : localUserId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       pictrsAlias: null == pictrsAlias
           ? _value.pictrsAlias
           : pictrsAlias // ignore: cast_nullable_to_non_nullable
@@ -140,7 +141,7 @@ class __$$LocalImageImplCopyWithImpl<$Res>
 @modelSerde
 class _$LocalImageImpl extends _LocalImage {
   const _$LocalImageImpl(
-      {required this.localUserId,
+      {this.localUserId,
       required this.pictrsAlias,
       required this.pictrsDeleteToken,
       required this.published})
@@ -150,8 +151,8 @@ class _$LocalImageImpl extends _LocalImage {
       _$$LocalImageImplFromJson(json);
 
   @override
-  final int localUserId;
-// v0.19.0
+  final int? localUserId;
+// v0.19.0 (optional)
   @override
   final String pictrsAlias;
 // v0.19.0
@@ -202,7 +203,7 @@ class _$LocalImageImpl extends _LocalImage {
 
 abstract class _LocalImage extends LocalImage {
   const factory _LocalImage(
-      {required final int localUserId,
+      {final int? localUserId,
       required final String pictrsAlias,
       required final String pictrsDeleteToken,
       required final String published}) = _$LocalImageImpl;
@@ -212,8 +213,8 @@ abstract class _LocalImage extends LocalImage {
       _$LocalImageImpl.fromJson;
 
   @override
-  int get localUserId;
-  @override // v0.19.0
+  int? get localUserId;
+  @override // v0.19.0 (optional)
   String get pictrsAlias;
   @override // v0.19.0
   String get pictrsDeleteToken;
