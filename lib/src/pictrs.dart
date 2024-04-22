@@ -31,12 +31,16 @@ class PictrsApi {
     return PictrsUpload.fromJson(body);
   }
 
-  Future<void> delete(PictrsUploadFile pictrsFile) async {
+  Future<void> delete(
+    PictrsUploadFile pictrsFile,
+    String? auth,
+  ) async {
     final res = await http.get(
       Uri.https(
         host,
         '$extraPath/delete/${pictrsFile.deleteToken}/${pictrsFile.file}',
       ),
+      headers: {'Authorization': 'Bearer $auth'},
     );
 
     if (!res.ok) {

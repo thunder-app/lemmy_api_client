@@ -20,7 +20,7 @@ ListMediaResponse _$ListMediaResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ListMediaResponse {
-  List<LocalImage> get images => throw _privateConstructorUsedError;
+  List<LocalImageView> get images => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -34,7 +34,7 @@ abstract class $ListMediaResponseCopyWith<$Res> {
           ListMediaResponse value, $Res Function(ListMediaResponse) then) =
       _$ListMediaResponseCopyWithImpl<$Res, ListMediaResponse>;
   @useResult
-  $Res call({List<LocalImage> images});
+  $Res call({List<LocalImageView> images});
 }
 
 /// @nodoc
@@ -56,7 +56,7 @@ class _$ListMediaResponseCopyWithImpl<$Res, $Val extends ListMediaResponse>
       images: null == images
           ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
-              as List<LocalImage>,
+              as List<LocalImageView>,
     ) as $Val);
   }
 }
@@ -69,7 +69,7 @@ abstract class _$$ListMediaResponseImplCopyWith<$Res>
       __$$ListMediaResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<LocalImage> images});
+  $Res call({List<LocalImageView> images});
 }
 
 /// @nodoc
@@ -89,7 +89,7 @@ class __$$ListMediaResponseImplCopyWithImpl<$Res>
       images: null == images
           ? _value._images
           : images // ignore: cast_nullable_to_non_nullable
-              as List<LocalImage>,
+              as List<LocalImageView>,
     ));
   }
 }
@@ -98,16 +98,16 @@ class __$$ListMediaResponseImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$ListMediaResponseImpl extends _ListMediaResponse {
-  const _$ListMediaResponseImpl({required final List<LocalImage> images})
+  const _$ListMediaResponseImpl({required final List<LocalImageView> images})
       : _images = images,
         super._();
 
   factory _$ListMediaResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$ListMediaResponseImplFromJson(json);
 
-  final List<LocalImage> _images;
+  final List<LocalImageView> _images;
   @override
-  List<LocalImage> get images {
+  List<LocalImageView> get images {
     if (_images is EqualUnmodifiableListView) return _images;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_images);
@@ -147,15 +147,15 @@ class _$ListMediaResponseImpl extends _ListMediaResponse {
 }
 
 abstract class _ListMediaResponse extends ListMediaResponse {
-  const factory _ListMediaResponse({required final List<LocalImage> images}) =
-      _$ListMediaResponseImpl;
+  const factory _ListMediaResponse(
+      {required final List<LocalImageView> images}) = _$ListMediaResponseImpl;
   const _ListMediaResponse._() : super._();
 
   factory _ListMediaResponse.fromJson(Map<String, dynamic> json) =
       _$ListMediaResponseImpl.fromJson;
 
   @override
-  List<LocalImage> get images;
+  List<LocalImageView> get images;
   @override
   @JsonKey(ignore: true)
   _$$ListMediaResponseImplCopyWith<_$ListMediaResponseImpl> get copyWith =>
