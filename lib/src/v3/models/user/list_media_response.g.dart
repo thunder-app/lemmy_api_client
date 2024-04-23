@@ -10,7 +10,7 @@ _$ListMediaResponseImpl _$$ListMediaResponseImplFromJson(
         Map<String, dynamic> json) =>
     _$ListMediaResponseImpl(
       images: (json['images'] as List<dynamic>)
-          .map((e) => LocalImage.fromJson(e as Map<String, dynamic>))
+          .map((e) => LocalImageView.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 

@@ -37,6 +37,7 @@ export 'federated_instances/instance.dart';
 export 'federated_instances/instance_with_federation_state.dart';
 export 'federated_instances/readable_federation_state.dart';
 export 'image/local_image.dart';
+export 'image/local_image_view.dart';
 export 'language/language.dart';
 export 'local_user/local_user.dart';
 export 'local_user/local_user_vote_display_mode.dart';
