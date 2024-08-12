@@ -103,6 +103,29 @@ Map<String, dynamic> _$$ApproveRegistrationApplicationImplToJson(
   return val;
 }
 
+_$GetRegistrationApplicationImpl _$$GetRegistrationApplicationImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetRegistrationApplicationImpl(
+      personId: (json['person_id'] as num).toInt(),
+      auth: json['auth'] as String?,
+    );
+
+Map<String, dynamic> _$$GetRegistrationApplicationImplToJson(
+    _$GetRegistrationApplicationImpl instance) {
+  final val = <String, dynamic>{
+    'person_id': instance.personId,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('auth', instance.auth);
+  return val;
+}
+
 _$PurgePersonImpl _$$PurgePersonImplFromJson(Map<String, dynamic> json) =>
     _$PurgePersonImpl(
       personId: (json['person_id'] as num).toInt(),

@@ -262,6 +262,8 @@ _$GetPostsImpl _$$GetPostsImplFromJson(Map<String, dynamic> json) =>
       likedOnly: json['liked_only'] as bool?,
       dislikedOnly: json['disliked_only'] as bool?,
       showHidden: json['show_hidden'] as bool?,
+      showRead: json['show_read'] as bool?,
+      showNsfw: json['show_nsfw'] as bool?,
       pageCursor: json['page_cursor'] as String?,
     );
 
@@ -286,6 +288,8 @@ Map<String, dynamic> _$$GetPostsImplToJson(_$GetPostsImpl instance) {
   writeNotNull('liked_only', instance.likedOnly);
   writeNotNull('disliked_only', instance.dislikedOnly);
   writeNotNull('show_hidden', instance.showHidden);
+  writeNotNull('show_read', instance.showRead);
+  writeNotNull('show_nsfw', instance.showNsfw);
   writeNotNull('page_cursor', instance.pageCursor);
   return val;
 }

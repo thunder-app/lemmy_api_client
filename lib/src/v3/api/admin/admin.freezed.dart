@@ -761,6 +761,173 @@ abstract class _ApproveRegistrationApplication
       get copyWith => throw _privateConstructorUsedError;
 }
 
+GetRegistrationApplication _$GetRegistrationApplicationFromJson(
+    Map<String, dynamic> json) {
+  return _GetRegistrationApplication.fromJson(json);
+}
+
+/// @nodoc
+mixin _$GetRegistrationApplication {
+  int get personId => throw _privateConstructorUsedError; // v0.19.6 (required)
+  String? get auth => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $GetRegistrationApplicationCopyWith<GetRegistrationApplication>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $GetRegistrationApplicationCopyWith<$Res> {
+  factory $GetRegistrationApplicationCopyWith(GetRegistrationApplication value,
+          $Res Function(GetRegistrationApplication) then) =
+      _$GetRegistrationApplicationCopyWithImpl<$Res,
+          GetRegistrationApplication>;
+  @useResult
+  $Res call({int personId, String? auth});
+}
+
+/// @nodoc
+class _$GetRegistrationApplicationCopyWithImpl<$Res,
+        $Val extends GetRegistrationApplication>
+    implements $GetRegistrationApplicationCopyWith<$Res> {
+  _$GetRegistrationApplicationCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? personId = null,
+    Object? auth = freezed,
+  }) {
+    return _then(_value.copyWith(
+      personId: null == personId
+          ? _value.personId
+          : personId // ignore: cast_nullable_to_non_nullable
+              as int,
+      auth: freezed == auth
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$GetRegistrationApplicationImplCopyWith<$Res>
+    implements $GetRegistrationApplicationCopyWith<$Res> {
+  factory _$$GetRegistrationApplicationImplCopyWith(
+          _$GetRegistrationApplicationImpl value,
+          $Res Function(_$GetRegistrationApplicationImpl) then) =
+      __$$GetRegistrationApplicationImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int personId, String? auth});
+}
+
+/// @nodoc
+class __$$GetRegistrationApplicationImplCopyWithImpl<$Res>
+    extends _$GetRegistrationApplicationCopyWithImpl<$Res,
+        _$GetRegistrationApplicationImpl>
+    implements _$$GetRegistrationApplicationImplCopyWith<$Res> {
+  __$$GetRegistrationApplicationImplCopyWithImpl(
+      _$GetRegistrationApplicationImpl _value,
+      $Res Function(_$GetRegistrationApplicationImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? personId = null,
+    Object? auth = freezed,
+  }) {
+    return _then(_$GetRegistrationApplicationImpl(
+      personId: null == personId
+          ? _value.personId
+          : personId // ignore: cast_nullable_to_non_nullable
+              as int,
+      auth: freezed == auth
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+@apiSerde
+class _$GetRegistrationApplicationImpl extends _GetRegistrationApplication {
+  const _$GetRegistrationApplicationImpl({required this.personId, this.auth})
+      : super._();
+
+  factory _$GetRegistrationApplicationImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$GetRegistrationApplicationImplFromJson(json);
+
+  @override
+  final int personId;
+// v0.19.6 (required)
+  @override
+  final String? auth;
+
+  @override
+  String toString() {
+    return 'GetRegistrationApplication(personId: $personId, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetRegistrationApplicationImpl &&
+            (identical(other.personId, personId) ||
+                other.personId == personId) &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, personId, auth);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetRegistrationApplicationImplCopyWith<_$GetRegistrationApplicationImpl>
+      get copyWith => __$$GetRegistrationApplicationImplCopyWithImpl<
+          _$GetRegistrationApplicationImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$GetRegistrationApplicationImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _GetRegistrationApplication extends GetRegistrationApplication {
+  const factory _GetRegistrationApplication(
+      {required final int personId,
+      final String? auth}) = _$GetRegistrationApplicationImpl;
+  const _GetRegistrationApplication._() : super._();
+
+  factory _GetRegistrationApplication.fromJson(Map<String, dynamic> json) =
+      _$GetRegistrationApplicationImpl.fromJson;
+
+  @override
+  int get personId;
+  @override // v0.19.6 (required)
+  String? get auth;
+  @override
+  @JsonKey(ignore: true)
+  _$$GetRegistrationApplicationImplCopyWith<_$GetRegistrationApplicationImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
 PurgePerson _$PurgePersonFromJson(Map<String, dynamic> json) {
   return _PurgePerson.fromJson(json);
 }

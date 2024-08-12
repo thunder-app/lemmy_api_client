@@ -294,6 +294,8 @@ class GetPosts
     bool? likedOnly, // v0.19.0 (optional)
     bool? dislikedOnly, // v0.19.0 (optional)
     bool? showHidden, // v0.19.4 (optional)
+    bool? showRead, // v0.19.6 (optional)
+    bool? showNsfw, // v0.19.6 (optional)
     String? pageCursor, // v0.19.0 (optional)
   }) = _GetPosts;
 

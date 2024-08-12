@@ -124,6 +124,32 @@ class ApproveRegistrationApplication
       RegistrationApplicationResponse.fromJson(json);
 }
 
+/// Get the application a user submitted when they first registered their account
+///
+/// `HTTP.GET /admin/registration_application`
+@freezed
+class GetRegistrationApplication
+    with _$GetRegistrationApplication
+    implements LemmyApiQuery<RegistrationApplicationResponse>, LemmyApiAuthenticatedQuery {
+  @apiSerde
+  const factory GetRegistrationApplication({
+    required int personId, // v0.19.6 (required)
+    String? auth,
+  }) = _GetRegistrationApplication;
+
+  const GetRegistrationApplication._();
+  factory GetRegistrationApplication.fromJson(Map<String, dynamic> json) =>
+      _$GetRegistrationApplicationFromJson(json);
+
+  final path = '/admin/registration_application';
+
+  final httpMethod = HttpMethod.get;
+
+  @override
+  RegistrationApplicationResponse responseFactory(Map<String, dynamic> json) =>
+      RegistrationApplicationResponse.fromJson(json);
+}
+
 /// Purge / Delete a person from the database.
 ///
 /// `HTTP.POST /admin/purge/person`
