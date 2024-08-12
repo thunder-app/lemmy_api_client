@@ -21,8 +21,8 @@ _$PostViewImpl _$$PostViewImplFromJson(Map<String, dynamic> json) =>
       read: json['read'] as bool,
       hidden: json['hidden'] as bool?,
       creatorBlocked: json['creator_blocked'] as bool,
-      myVote: json['my_vote'] as int?,
-      unreadComments: json['unread_comments'] as int,
+      myVote: (json['my_vote'] as num?)?.toInt(),
+      unreadComments: (json['unread_comments'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$PostViewImplToJson(_$PostViewImpl instance) =>

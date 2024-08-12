@@ -229,7 +229,7 @@ class Register with _$Register implements LemmyApiQuery<LoginResponse> {
     required String username, // v0.18.0
     required String password, // v0.18.0
     required String passwordVerify, // v0.18.0
-    required bool showNsfw, // v0.18.0
+    bool? showNsfw, // v0.18.0
     String? email, // v0.18.0
     String? captchaUuid, // v0.18.0
     String? captchaAnswer, // v0.18.0

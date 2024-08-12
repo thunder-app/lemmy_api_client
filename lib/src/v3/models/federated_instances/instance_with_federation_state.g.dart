@@ -9,7 +9,7 @@ part of 'instance_with_federation_state.dart';
 _$InstanceWithFederationStateImpl _$$InstanceWithFederationStateImplFromJson(
         Map<String, dynamic> json) =>
     _$InstanceWithFederationStateImpl(
-      id: json['id'] as int,
+      id: (json['id'] as num).toInt(),
       domain: json['domain'] as String,
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
       updated: _$JsonConverterFromJson<String, DateTime>(

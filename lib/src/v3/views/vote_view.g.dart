@@ -11,7 +11,7 @@ _$VoteViewImpl _$$VoteViewImplFromJson(Map<String, dynamic> json) =>
       creator: Person.fromJson(json['creator'] as Map<String, dynamic>),
       creatorBannedFromCommunity:
           json['creator_banned_from_community'] as bool?,
-      score: json['score'] as int,
+      score: (json['score'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$VoteViewImplToJson(_$VoteViewImpl instance) =>

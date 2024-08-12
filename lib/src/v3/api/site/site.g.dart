@@ -49,26 +49,31 @@ _$CreateSiteImpl _$$CreateSiteImplFromJson(Map<String, dynamic> json) =>
       applicationEmailAdmins: json['application_email_admins'] as bool?,
       hideModlogModNames: json['hide_modlog_mod_names'] as bool?,
       discussionLanguages: (json['discussion_languages'] as List<dynamic>?)
-          ?.map((e) => e as int)
+          ?.map((e) => (e as num).toInt())
           .toList(),
       slurFilterRegex: json['slur_filter_regex'] as String?,
-      actorNameMaxLength: json['actor_name_max_length'] as int?,
-      rateLimitMessage: json['rate_limit_message'] as int?,
-      rateLimitMessagePerSecond: json['rate_limit_message_per_second'] as int?,
-      rateLimitPost: json['rate_limit_post'] as int?,
-      rateLimitPostPerSecond: json['rate_limit_post_per_second'] as int?,
-      rateLimitRegister: json['rate_limit_register'] as int?,
+      actorNameMaxLength: (json['actor_name_max_length'] as num?)?.toInt(),
+      rateLimitMessage: (json['rate_limit_message'] as num?)?.toInt(),
+      rateLimitMessagePerSecond:
+          (json['rate_limit_message_per_second'] as num?)?.toInt(),
+      rateLimitPost: (json['rate_limit_post'] as num?)?.toInt(),
+      rateLimitPostPerSecond:
+          (json['rate_limit_post_per_second'] as num?)?.toInt(),
+      rateLimitRegister: (json['rate_limit_register'] as num?)?.toInt(),
       rateLimitRegisterPerSecond:
-          json['rate_limit_register_per_second'] as int?,
-      rateLimitImage: json['rate_limit_image'] as int?,
-      rateLimitImagePerSecond: json['rate_limit_image_per_second'] as int?,
-      rateLimitComment: json['rate_limit_comment'] as int?,
-      rateLimitCommentPerSecond: json['rate_limit_comment_per_second'] as int?,
-      rateLimitSearch: json['rate_limit_search'] as int?,
-      rateLimitSearchPerSecond: json['rate_limit_search_per_second'] as int?,
+          (json['rate_limit_register_per_second'] as num?)?.toInt(),
+      rateLimitImage: (json['rate_limit_image'] as num?)?.toInt(),
+      rateLimitImagePerSecond:
+          (json['rate_limit_image_per_second'] as num?)?.toInt(),
+      rateLimitComment: (json['rate_limit_comment'] as num?)?.toInt(),
+      rateLimitCommentPerSecond:
+          (json['rate_limit_comment_per_second'] as num?)?.toInt(),
+      rateLimitSearch: (json['rate_limit_search'] as num?)?.toInt(),
+      rateLimitSearchPerSecond:
+          (json['rate_limit_search_per_second'] as num?)?.toInt(),
       federationEnabled: json['federation_enabled'] as bool?,
       federationDebug: json['federation_debug'] as bool?,
-      federationWorkerCount: json['federation_worker_count'] as int?,
+      federationWorkerCount: (json['federation_worker_count'] as num?)?.toInt(),
       captchaEnabled: json['captcha_enabled'] as bool?,
       captchaDifficulty: json['captcha_difficulty'] as String?,
       allowedInstances: (json['allowed_instances'] as List<dynamic>?)
@@ -176,26 +181,31 @@ _$EditSiteImpl _$$EditSiteImplFromJson(Map<String, dynamic> json) =>
       applicationEmailAdmins: json['application_email_admins'] as bool?,
       hideModlogModNames: json['hide_modlog_mod_names'] as bool?,
       discussionLanguages: (json['discussion_languages'] as List<dynamic>?)
-          ?.map((e) => e as int)
+          ?.map((e) => (e as num).toInt())
           .toList(),
       slurFilterRegex: json['slur_filter_regex'] as String?,
-      actorNameMaxLength: json['actor_name_max_length'] as int?,
-      rateLimitMessage: json['rate_limit_message'] as int?,
-      rateLimitMessagePerSecond: json['rate_limit_message_per_second'] as int?,
-      rateLimitPost: json['rate_limit_post'] as int?,
-      rateLimitPostPerSecond: json['rate_limit_post_per_second'] as int?,
-      rateLimitRegister: json['rate_limit_register'] as int?,
+      actorNameMaxLength: (json['actor_name_max_length'] as num?)?.toInt(),
+      rateLimitMessage: (json['rate_limit_message'] as num?)?.toInt(),
+      rateLimitMessagePerSecond:
+          (json['rate_limit_message_per_second'] as num?)?.toInt(),
+      rateLimitPost: (json['rate_limit_post'] as num?)?.toInt(),
+      rateLimitPostPerSecond:
+          (json['rate_limit_post_per_second'] as num?)?.toInt(),
+      rateLimitRegister: (json['rate_limit_register'] as num?)?.toInt(),
       rateLimitRegisterPerSecond:
-          json['rate_limit_register_per_second'] as int?,
-      rateLimitImage: json['rate_limit_image'] as int?,
-      rateLimitImagePerSecond: json['rate_limit_image_per_second'] as int?,
-      rateLimitComment: json['rate_limit_comment'] as int?,
-      rateLimitCommentPerSecond: json['rate_limit_comment_per_second'] as int?,
-      rateLimitSearch: json['rate_limit_search'] as int?,
-      rateLimitSearchPerSecond: json['rate_limit_search_per_second'] as int?,
+          (json['rate_limit_register_per_second'] as num?)?.toInt(),
+      rateLimitImage: (json['rate_limit_image'] as num?)?.toInt(),
+      rateLimitImagePerSecond:
+          (json['rate_limit_image_per_second'] as num?)?.toInt(),
+      rateLimitComment: (json['rate_limit_comment'] as num?)?.toInt(),
+      rateLimitCommentPerSecond:
+          (json['rate_limit_comment_per_second'] as num?)?.toInt(),
+      rateLimitSearch: (json['rate_limit_search'] as num?)?.toInt(),
+      rateLimitSearchPerSecond:
+          (json['rate_limit_search_per_second'] as num?)?.toInt(),
       federationEnabled: json['federation_enabled'] as bool?,
       federationDebug: json['federation_debug'] as bool?,
-      federationWorkerCount: json['federation_worker_count'] as int?,
+      federationWorkerCount: (json['federation_worker_count'] as num?)?.toInt(),
       captchaEnabled: json['captcha_enabled'] as bool?,
       captchaDifficulty: json['captcha_difficulty'] as String?,
       allowedInstances: (json['allowed_instances'] as List<dynamic>?)
@@ -286,7 +296,7 @@ Map<String, dynamic> _$$EditSiteImplToJson(_$EditSiteImpl instance) {
 _$BlockInstanceImpl _$$BlockInstanceImplFromJson(Map<String, dynamic> json) =>
     _$BlockInstanceImpl(
       auth: json['auth'] as String?,
-      instanceId: json['instance_id'] as int,
+      instanceId: (json['instance_id'] as num).toInt(),
       block: json['block'] as bool,
     );
 

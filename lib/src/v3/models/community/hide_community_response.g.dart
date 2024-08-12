@@ -14,7 +14,7 @@ _$HideCommunityResponseImpl _$$HideCommunityResponseImplFromJson(
           : CommunityView.fromJson(
               json['community_view'] as Map<String, dynamic>),
       discussionLanguages: (json['discussion_languages'] as List<dynamic>?)
-          ?.map((e) => e as int)
+          ?.map((e) => (e as num).toInt())
           .toList(),
       success: json['success'] as bool?,
     );
