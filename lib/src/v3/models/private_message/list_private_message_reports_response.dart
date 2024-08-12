@@ -16,6 +16,7 @@ class ListPrivateMessageReportsResponse
 
   const ListPrivateMessageReportsResponse._();
   factory ListPrivateMessageReportsResponse.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json,
+  ) =>
       _$ListPrivateMessageReportsResponseFromJson(json);
 }

@@ -240,6 +240,7 @@ class ListPrivateMessageReports
 
   @override
   ListPrivateMessageReportsResponse responseFactory(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json,
+  ) =>
       ListPrivateMessageReportsResponse.fromJson(json);
 }

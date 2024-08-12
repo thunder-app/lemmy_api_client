@@ -10,7 +10,8 @@ _$GetUnreadRegistrationApplicationCountResponseImpl
     _$$GetUnreadRegistrationApplicationCountResponseImplFromJson(
             Map<String, dynamic> json) =>
         _$GetUnreadRegistrationApplicationCountResponseImpl(
-          registrationApplications: json['registration_applications'] as int,
+          registrationApplications:
+              (json['registration_applications'] as num).toInt(),
         );
 
 Map<String, dynamic> _$$GetUnreadRegistrationApplicationCountResponseImplToJson(

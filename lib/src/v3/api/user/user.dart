@@ -2,8 +2,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../v3.dart';
 import '../../../utils/serde.dart';
-import '../../enums/enums.dart';
-import '../../models/models.dart';
 
 part 'user.freezed.dart';
 part 'user.g.dart';
