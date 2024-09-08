@@ -13,8 +13,9 @@ class LemmyApiV3 {
   static const extraPath = '/api/v3';
 
   final bool debug;
+  final bool tls;
 
-  const LemmyApiV3(this.host, {this.debug = false});
+  const LemmyApiV3(this.host, {this.debug = false, this.tls = true});
 
   /// Run a given query
   Future<T> run<T>(LemmyApiQuery<T> query) async {
@@ -34,35 +35,75 @@ class LemmyApiV3 {
     final res = await () {
       switch (query.httpMethod) {
         case HttpMethod.get:
-          return http.get(
-            Uri.https(
-              host,
-              '$extraPath${query.path}',
-              <String, String>{
-                for (final entry in query.toJson().entries)
-                  entry.key: entry.value.toString()
-              },
-            ),
-            headers: (auth != null) ? {'Authorization': 'Bearer $auth'} : null,
-          );
+          if (tls) {
+            return http.get(
+              Uri.https(
+                host,
+                '$extraPath${query.path}',
+                <String, String>{
+                  for (final entry in query.toJson().entries)
+                    entry.key: entry.value.toString()
+                },
+              ),
+              headers:
+                  (auth != null) ? {'Authorization': 'Bearer $auth'} : null,
+            );
+          } else {
+            return http.get(
+              Uri.http(
+                host,
+                '$extraPath${query.path}',
+                <String, String>{
+                  for (final entry in query.toJson().entries)
+                    entry.key: entry.value.toString()
+                },
+              ),
+              headers:
+                  (auth != null) ? {'Authorization': 'Bearer $auth'} : null,
+            );
+          }
+
         case HttpMethod.post:
-          return http.post(
-            Uri.https(host, '$extraPath${query.path}'),
-            body: jsonEncode(query.toJson()),
-            headers: {
-              'Content-Type': 'application/json',
-              if (auth != null) 'Authorization': 'Bearer $auth'
-            },
-          );
+          if (tls) {
+            return http.post(
+              Uri.https(host, '$extraPath${query.path}'),
+              body: jsonEncode(query.toJson()),
+              headers: {
+                'Content-Type': 'application/json',
+                if (auth != null) 'Authorization': 'Bearer $auth'
+              },
+            );
+          } else {
+            return http.post(
+              Uri.http(host, '$extraPath${query.path}'),
+              body: jsonEncode(query.toJson()),
+              headers: {
+                'Content-Type': 'application/json',
+                if (auth != null) 'Authorization': 'Bearer $auth'
+              },
+            );
+          }
+
         case HttpMethod.put:
-          return http.put(
-            Uri.https(host, '$extraPath${query.path}'),
-            body: jsonEncode(query.toJson()),
-            headers: {
-              'Content-Type': 'application/json',
-              if (auth != null) 'Authorization': 'Bearer $auth'
-            },
-          );
+          if (tls) {
+            return http.put(
+              Uri.https(host, '$extraPath${query.path}'),
+              body: jsonEncode(query.toJson()),
+              headers: {
+                'Content-Type': 'application/json',
+                if (auth != null) 'Authorization': 'Bearer $auth'
+              },
+            );
+          } else {
+            return http.put(
+              Uri.http(host, '$extraPath${query.path}'),
+              body: jsonEncode(query.toJson()),
+              headers: {
+                'Content-Type': 'application/json',
+                if (auth != null) 'Authorization': 'Bearer $auth'
+              },
+            );
+          }
       }
     }();
 
