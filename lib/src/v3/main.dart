@@ -37,7 +37,7 @@ class LemmyApiV3 {
         case HttpMethod.get:
           return http.get(
             Uri(
-              scheme: tls ? 'https' : 'http',
+              scheme: (!tls && debug) ? 'http' : 'https',
               host: host,
               path: '$extraPath${query.path}',
               queryParameters: <String, String>{
@@ -50,7 +50,7 @@ class LemmyApiV3 {
         case HttpMethod.post:
           return http.post(
             Uri(
-              scheme: tls ? 'https' : 'http',
+              scheme: (!tls && debug) ? 'http' : 'https',
               host: host,
               path: '$extraPath${query.path}',
             ),
@@ -63,7 +63,7 @@ class LemmyApiV3 {
         case HttpMethod.put:
           return http.put(
             Uri(
-              scheme: tls ? 'https' : 'http',
+              scheme: (!tls && debug) ? 'http' : 'https',
               host: host,
               path: '$extraPath${query.path}',
             ),
