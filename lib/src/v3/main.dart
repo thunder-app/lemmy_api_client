@@ -35,75 +35,44 @@ class LemmyApiV3 {
     final res = await () {
       switch (query.httpMethod) {
         case HttpMethod.get:
-          if (tls) {
-            return http.get(
-              Uri.https(
-                host,
-                '$extraPath${query.path}',
-                <String, String>{
-                  for (final entry in query.toJson().entries)
-                    entry.key: entry.value.toString()
-                },
-              ),
-              headers:
-                  (auth != null) ? {'Authorization': 'Bearer $auth'} : null,
-            );
-          } else {
-            return http.get(
-              Uri.http(
-                host,
-                '$extraPath${query.path}',
-                <String, String>{
-                  for (final entry in query.toJson().entries)
-                    entry.key: entry.value.toString()
-                },
-              ),
-              headers:
-                  (auth != null) ? {'Authorization': 'Bearer $auth'} : null,
-            );
-          }
-
+          return http.get(
+            Uri(
+              scheme: tls ? 'https' : 'http',
+              host: host,
+              path: '$extraPath${query.path}',
+              queryParameters: <String, String>{
+                for (final entry in query.toJson().entries)
+                  entry.key: entry.value.toString()
+              },
+            ),
+            headers: (auth != null) ? {'Authorization': 'Bearer $auth'} : null,
+          );
         case HttpMethod.post:
-          if (tls) {
-            return http.post(
-              Uri.https(host, '$extraPath${query.path}'),
-              body: jsonEncode(query.toJson()),
-              headers: {
-                'Content-Type': 'application/json',
-                if (auth != null) 'Authorization': 'Bearer $auth'
-              },
-            );
-          } else {
-            return http.post(
-              Uri.http(host, '$extraPath${query.path}'),
-              body: jsonEncode(query.toJson()),
-              headers: {
-                'Content-Type': 'application/json',
-                if (auth != null) 'Authorization': 'Bearer $auth'
-              },
-            );
-          }
-
+          return http.post(
+            Uri(
+              scheme: tls ? 'https' : 'http',
+              host: host,
+              path: '$extraPath${query.path}',
+            ),
+            body: jsonEncode(query.toJson()),
+            headers: {
+              'Content-Type': 'application/json',
+              if (auth != null) 'Authorization': 'Bearer $auth'
+            },
+          );
         case HttpMethod.put:
-          if (tls) {
-            return http.put(
-              Uri.https(host, '$extraPath${query.path}'),
-              body: jsonEncode(query.toJson()),
-              headers: {
-                'Content-Type': 'application/json',
-                if (auth != null) 'Authorization': 'Bearer $auth'
-              },
-            );
-          } else {
-            return http.put(
-              Uri.http(host, '$extraPath${query.path}'),
-              body: jsonEncode(query.toJson()),
-              headers: {
-                'Content-Type': 'application/json',
-                if (auth != null) 'Authorization': 'Bearer $auth'
-              },
-            );
-          }
+          return http.put(
+            Uri(
+              scheme: tls ? 'https' : 'http',
+              host: host,
+              path: '$extraPath${query.path}',
+            ),
+            body: jsonEncode(query.toJson()),
+            headers: {
+              'Content-Type': 'application/json',
+              if (auth != null) 'Authorization': 'Bearer $auth'
+            },
+          );
       }
     }();
 
