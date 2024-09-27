@@ -33,7 +33,7 @@ class LemmyApiV3 {
     }
 
     // TLS can only be disable in debug mode.
-    final bool scheme = (!tls && debug) ? 'http' : 'https';
+    final String scheme = (!tls && debug) ? 'http' : 'https';
 
     final res = await () {
       switch (query.httpMethod) {
