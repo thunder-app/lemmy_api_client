@@ -32,12 +32,15 @@ class LemmyApiV3 {
       );
     }
 
+    // TLS can only be disable in debug mode.
+    final bool scheme = (!tls && debug) ? 'http' : 'https';
+
     final res = await () {
       switch (query.httpMethod) {
         case HttpMethod.get:
           return http.get(
             Uri(
-              scheme: (!tls && debug) ? 'http' : 'https',
+              scheme: scheme,
               host: host,
               path: '$extraPath${query.path}',
               queryParameters: <String, String>{
@@ -50,7 +53,7 @@ class LemmyApiV3 {
         case HttpMethod.post:
           return http.post(
             Uri(
-              scheme: (!tls && debug) ? 'http' : 'https',
+              scheme: scheme,
               host: host,
               path: '$extraPath${query.path}',
             ),
@@ -63,7 +66,7 @@ class LemmyApiV3 {
         case HttpMethod.put:
           return http.put(
             Uri(
-              scheme: (!tls && debug) ? 'http' : 'https',
+              scheme: scheme,
               host: host,
               path: '$extraPath${query.path}',
             ),
