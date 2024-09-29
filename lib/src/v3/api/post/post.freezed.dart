@@ -2017,6 +2017,10 @@ mixin _$GetPosts {
       throw _privateConstructorUsedError; // v0.19.0 (optional)
   bool? get showHidden =>
       throw _privateConstructorUsedError; // v0.19.4 (optional)
+  bool? get showRead =>
+      throw _privateConstructorUsedError; // v0.19.6 (optional)
+  bool? get showNsfw =>
+      throw _privateConstructorUsedError; // v0.19.6 (optional)
   String? get pageCursor => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2043,6 +2047,8 @@ abstract class $GetPostsCopyWith<$Res> {
       bool? likedOnly,
       bool? dislikedOnly,
       bool? showHidden,
+      bool? showRead,
+      bool? showNsfw,
       String? pageCursor});
 }
 
@@ -2071,6 +2077,8 @@ class _$GetPostsCopyWithImpl<$Res, $Val extends GetPosts>
     Object? likedOnly = freezed,
     Object? dislikedOnly = freezed,
     Object? showHidden = freezed,
+    Object? showRead = freezed,
+    Object? showNsfw = freezed,
     Object? pageCursor = freezed,
   }) {
     return _then(_value.copyWith(
@@ -2122,6 +2130,14 @@ class _$GetPostsCopyWithImpl<$Res, $Val extends GetPosts>
           ? _value.showHidden
           : showHidden // ignore: cast_nullable_to_non_nullable
               as bool?,
+      showRead: freezed == showRead
+          ? _value.showRead
+          : showRead // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      showNsfw: freezed == showNsfw
+          ? _value.showNsfw
+          : showNsfw // ignore: cast_nullable_to_non_nullable
+              as bool?,
       pageCursor: freezed == pageCursor
           ? _value.pageCursor
           : pageCursor // ignore: cast_nullable_to_non_nullable
@@ -2151,6 +2167,8 @@ abstract class _$$GetPostsImplCopyWith<$Res>
       bool? likedOnly,
       bool? dislikedOnly,
       bool? showHidden,
+      bool? showRead,
+      bool? showNsfw,
       String? pageCursor});
 }
 
@@ -2177,6 +2195,8 @@ class __$$GetPostsImplCopyWithImpl<$Res>
     Object? likedOnly = freezed,
     Object? dislikedOnly = freezed,
     Object? showHidden = freezed,
+    Object? showRead = freezed,
+    Object? showNsfw = freezed,
     Object? pageCursor = freezed,
   }) {
     return _then(_$GetPostsImpl(
@@ -2228,6 +2248,14 @@ class __$$GetPostsImplCopyWithImpl<$Res>
           ? _value.showHidden
           : showHidden // ignore: cast_nullable_to_non_nullable
               as bool?,
+      showRead: freezed == showRead
+          ? _value.showRead
+          : showRead // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      showNsfw: freezed == showNsfw
+          ? _value.showNsfw
+          : showNsfw // ignore: cast_nullable_to_non_nullable
+              as bool?,
       pageCursor: freezed == pageCursor
           ? _value.pageCursor
           : pageCursor // ignore: cast_nullable_to_non_nullable
@@ -2253,6 +2281,8 @@ class _$GetPostsImpl extends _GetPosts {
       this.likedOnly,
       this.dislikedOnly,
       this.showHidden,
+      this.showRead,
+      this.showNsfw,
       this.pageCursor})
       : super._();
 
@@ -2297,11 +2327,17 @@ class _$GetPostsImpl extends _GetPosts {
   final bool? showHidden;
 // v0.19.4 (optional)
   @override
+  final bool? showRead;
+// v0.19.6 (optional)
+  @override
+  final bool? showNsfw;
+// v0.19.6 (optional)
+  @override
   final String? pageCursor;
 
   @override
   String toString() {
-    return 'GetPosts(type: $type, sort: $sort, page: $page, limit: $limit, communityId: $communityId, communityName: $communityName, savedOnly: $savedOnly, moderatorView: $moderatorView, auth: $auth, likedOnly: $likedOnly, dislikedOnly: $dislikedOnly, showHidden: $showHidden, pageCursor: $pageCursor)';
+    return 'GetPosts(type: $type, sort: $sort, page: $page, limit: $limit, communityId: $communityId, communityName: $communityName, savedOnly: $savedOnly, moderatorView: $moderatorView, auth: $auth, likedOnly: $likedOnly, dislikedOnly: $dislikedOnly, showHidden: $showHidden, showRead: $showRead, showNsfw: $showNsfw, pageCursor: $pageCursor)';
   }
 
   @override
@@ -2328,6 +2364,10 @@ class _$GetPostsImpl extends _GetPosts {
                 other.dislikedOnly == dislikedOnly) &&
             (identical(other.showHidden, showHidden) ||
                 other.showHidden == showHidden) &&
+            (identical(other.showRead, showRead) ||
+                other.showRead == showRead) &&
+            (identical(other.showNsfw, showNsfw) ||
+                other.showNsfw == showNsfw) &&
             (identical(other.pageCursor, pageCursor) ||
                 other.pageCursor == pageCursor));
   }
@@ -2348,6 +2388,8 @@ class _$GetPostsImpl extends _GetPosts {
       likedOnly,
       dislikedOnly,
       showHidden,
+      showRead,
+      showNsfw,
       pageCursor);
 
   @JsonKey(ignore: true)
@@ -2378,6 +2420,8 @@ abstract class _GetPosts extends GetPosts {
       final bool? likedOnly,
       final bool? dislikedOnly,
       final bool? showHidden,
+      final bool? showRead,
+      final bool? showNsfw,
       final String? pageCursor}) = _$GetPostsImpl;
   const _GetPosts._() : super._();
 
@@ -2411,6 +2455,10 @@ abstract class _GetPosts extends GetPosts {
   @override // v0.19.0 (optional)
   bool? get showHidden;
   @override // v0.19.4 (optional)
+  bool? get showRead;
+  @override // v0.19.6 (optional)
+  bool? get showNsfw;
+  @override // v0.19.6 (optional)
   String? get pageCursor;
   @override
   @JsonKey(ignore: true)

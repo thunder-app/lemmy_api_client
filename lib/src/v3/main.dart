@@ -45,7 +45,7 @@ class LemmyApiV3 {
               path: '$extraPath${query.path}',
               queryParameters: <String, String>{
                 for (final entry in query.toJson().entries)
-                  entry.key: entry.value.toString()
+                  entry.key: entry.value.toString(),
               },
             ),
             headers: (auth != null) ? {'Authorization': 'Bearer $auth'} : null,
@@ -60,7 +60,7 @@ class LemmyApiV3 {
             body: jsonEncode(query.toJson()),
             headers: {
               'Content-Type': 'application/json',
-              if (auth != null) 'Authorization': 'Bearer $auth'
+              if (auth != null) 'Authorization': 'Bearer $auth',
             },
           );
         case HttpMethod.put:
@@ -73,7 +73,7 @@ class LemmyApiV3 {
             body: jsonEncode(query.toJson()),
             headers: {
               'Content-Type': 'application/json',
-              if (auth != null) 'Authorization': 'Bearer $auth'
+              if (auth != null) 'Authorization': 'Bearer $auth',
             },
           );
       }

@@ -8,7 +8,7 @@ part of 'community.dart';
 
 _$GetCommunityImpl _$$GetCommunityImplFromJson(Map<String, dynamic> json) =>
     _$GetCommunityImpl(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       auth: json['auth'] as String?,
     );
@@ -39,7 +39,7 @@ _$CreateCommunityImpl _$$CreateCommunityImplFromJson(
       nsfw: json['nsfw'] as bool?,
       postingRestrictedToMods: json['posting_restricted_to_mods'] as bool?,
       discussionLanguages: (json['discussion_languages'] as List<dynamic>?)
-          ?.map((e) => e as int)
+          ?.map((e) => (e as num).toInt())
           .toList(),
       visibility: json['visibility'] == null
           ? null
@@ -73,7 +73,7 @@ Map<String, dynamic> _$$CreateCommunityImplToJson(
 
 _$EditCommunityImpl _$$EditCommunityImplFromJson(Map<String, dynamic> json) =>
     _$EditCommunityImpl(
-      communityId: json['community_id'] as int,
+      communityId: (json['community_id'] as num).toInt(),
       title: json['title'] as String?,
       description: json['description'] as String?,
       icon: json['icon'] as String?,
@@ -81,7 +81,7 @@ _$EditCommunityImpl _$$EditCommunityImplFromJson(Map<String, dynamic> json) =>
       nsfw: json['nsfw'] as bool?,
       postingRestrictedToMods: json['posting_restricted_to_mods'] as bool?,
       discussionLanguages: (json['discussion_languages'] as List<dynamic>?)
-          ?.map((e) => e as int)
+          ?.map((e) => (e as num).toInt())
           .toList(),
       visibility: json['visibility'] == null
           ? null
@@ -117,8 +117,8 @@ _$ListCommunitiesImpl _$$ListCommunitiesImplFromJson(
     _$ListCommunitiesImpl(
       type: json['type_'] == null ? null : ListingType.fromJson(json['type_']),
       sort: json['sort'] == null ? null : SortType.fromJson(json['sort']),
-      page: json['page'] as int?,
-      limit: json['limit'] as int?,
+      page: (json['page'] as num?)?.toInt(),
+      limit: (json['limit'] as num?)?.toInt(),
       showNsfw: json['show_nsfw'] as bool?,
       auth: json['auth'] as String?,
     );
@@ -145,7 +145,7 @@ Map<String, dynamic> _$$ListCommunitiesImplToJson(
 _$FollowCommunityImpl _$$FollowCommunityImplFromJson(
         Map<String, dynamic> json) =>
     _$FollowCommunityImpl(
-      communityId: json['community_id'] as int,
+      communityId: (json['community_id'] as num).toInt(),
       follow: json['follow'] as bool,
       auth: json['auth'] as String?,
     );
@@ -169,7 +169,7 @@ Map<String, dynamic> _$$FollowCommunityImplToJson(
 
 _$BlockCommunityImpl _$$BlockCommunityImplFromJson(Map<String, dynamic> json) =>
     _$BlockCommunityImpl(
-      communityId: json['community_id'] as int,
+      communityId: (json['community_id'] as num).toInt(),
       block: json['block'] as bool,
       auth: json['auth'] as String?,
     );
@@ -194,7 +194,7 @@ Map<String, dynamic> _$$BlockCommunityImplToJson(
 _$DeleteCommunityImpl _$$DeleteCommunityImplFromJson(
         Map<String, dynamic> json) =>
     _$DeleteCommunityImpl(
-      communityId: json['community_id'] as int,
+      communityId: (json['community_id'] as num).toInt(),
       deleted: json['deleted'] as bool,
       auth: json['auth'] as String?,
     );
@@ -218,7 +218,7 @@ Map<String, dynamic> _$$DeleteCommunityImplToJson(
 
 _$HideCommunityImpl _$$HideCommunityImplFromJson(Map<String, dynamic> json) =>
     _$HideCommunityImpl(
-      communityId: json['community_id'] as int,
+      communityId: (json['community_id'] as num).toInt(),
       hidden: json['hidden'] as bool,
       reason: json['reason'] as String?,
       auth: json['auth'] as String?,
@@ -244,10 +244,10 @@ Map<String, dynamic> _$$HideCommunityImplToJson(_$HideCommunityImpl instance) {
 _$RemoveCommunityImpl _$$RemoveCommunityImplFromJson(
         Map<String, dynamic> json) =>
     _$RemoveCommunityImpl(
-      communityId: json['community_id'] as int,
+      communityId: (json['community_id'] as num).toInt(),
       removed: json['removed'] as bool,
       reason: json['reason'] as String?,
-      expires: json['expires'] as int?,
+      expires: (json['expires'] as num?)?.toInt(),
       auth: json['auth'] as String?,
     );
 
@@ -273,8 +273,8 @@ Map<String, dynamic> _$$RemoveCommunityImplToJson(
 _$TransferCommunityImpl _$$TransferCommunityImplFromJson(
         Map<String, dynamic> json) =>
     _$TransferCommunityImpl(
-      communityId: json['community_id'] as int,
-      personId: json['person_id'] as int,
+      communityId: (json['community_id'] as num).toInt(),
+      personId: (json['person_id'] as num).toInt(),
       auth: json['auth'] as String?,
     );
 
@@ -298,12 +298,12 @@ Map<String, dynamic> _$$TransferCommunityImplToJson(
 _$BanFromCommunityImpl _$$BanFromCommunityImplFromJson(
         Map<String, dynamic> json) =>
     _$BanFromCommunityImpl(
-      communityId: json['community_id'] as int,
-      personId: json['person_id'] as int,
+      communityId: (json['community_id'] as num).toInt(),
+      personId: (json['person_id'] as num).toInt(),
       ban: json['ban'] as bool,
       removeData: json['remove_data'] as bool?,
       reason: json['reason'] as String?,
-      expires: json['expires'] as int?,
+      expires: (json['expires'] as num?)?.toInt(),
       auth: json['auth'] as String?,
     );
 
@@ -331,8 +331,8 @@ Map<String, dynamic> _$$BanFromCommunityImplToJson(
 _$AddModToCommunityImpl _$$AddModToCommunityImplFromJson(
         Map<String, dynamic> json) =>
     _$AddModToCommunityImpl(
-      communityId: json['community_id'] as int,
-      personId: json['person_id'] as int,
+      communityId: (json['community_id'] as num).toInt(),
+      personId: (json['person_id'] as num).toInt(),
       added: json['added'] as bool,
       auth: json['auth'] as String?,
     );

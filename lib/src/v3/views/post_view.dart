@@ -14,6 +14,7 @@ class PostView with _$PostView {
     required Post post, // v0.18.0
     required Person creator, // v0.18.0
     required Community community, // v0.18.0
+    ImageDetails? imageDetails, // v0.19.6 (optional)
     required bool creatorBannedFromCommunity, // v0.18.0
     bool? bannedFromCommunity, // v0.19.4 (required)
     bool? creatorIsModerator, // v0.19.0 (required)

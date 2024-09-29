@@ -8,16 +8,16 @@ part of 'modlog.dart';
 
 _$GetModlogImpl _$$GetModlogImplFromJson(Map<String, dynamic> json) =>
     _$GetModlogImpl(
-      modPersonId: json['mod_person_id'] as int?,
-      communityId: json['community_id'] as int?,
-      page: json['page'] as int?,
-      limit: json['limit'] as int?,
+      modPersonId: (json['mod_person_id'] as num?)?.toInt(),
+      communityId: (json['community_id'] as num?)?.toInt(),
+      page: (json['page'] as num?)?.toInt(),
+      limit: (json['limit'] as num?)?.toInt(),
       type: json['type_'] == null
           ? null
           : ModlogActionType.fromJson(json['type_'] as String),
-      otherPersonId: json['other_person_id'] as int?,
-      postId: json['post_id'] as int?,
-      commentId: json['comment_id'] as int?,
+      otherPersonId: (json['other_person_id'] as num?)?.toInt(),
+      postId: (json['post_id'] as num?)?.toInt(),
+      commentId: (json['comment_id'] as num?)?.toInt(),
       auth: json['auth'] as String?,
     );
 

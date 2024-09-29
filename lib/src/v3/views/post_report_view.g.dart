@@ -26,7 +26,7 @@ _$PostReportViewImpl _$$PostReportViewImplFromJson(Map<String, dynamic> json) =>
       hidden: json['hidden'] as bool?,
       creatorBlocked: json['creator_blocked'] as bool?,
       myVote: json['my_vote'] as num?,
-      unreadComments: json['unread_comments'] as int?,
+      unreadComments: (json['unread_comments'] as num?)?.toInt(),
       counts: PostAggregates.fromJson(json['counts'] as Map<String, dynamic>),
       resolver: json['resolver'] == null
           ? null

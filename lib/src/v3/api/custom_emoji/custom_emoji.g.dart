@@ -41,7 +41,7 @@ Map<String, dynamic> _$$CreateCustomEmojiImplToJson(
 _$EditCustomEmojiImpl _$$EditCustomEmojiImplFromJson(
         Map<String, dynamic> json) =>
     _$EditCustomEmojiImpl(
-      id: json['id'] as int,
+      id: (json['id'] as num).toInt(),
       category: json['category'] as String,
       imageUrl: json['image_url'] as String,
       altText: json['alt_text'] as String,
@@ -73,7 +73,7 @@ Map<String, dynamic> _$$EditCustomEmojiImplToJson(
 _$DeleteCustomEmojiImpl _$$DeleteCustomEmojiImplFromJson(
         Map<String, dynamic> json) =>
     _$DeleteCustomEmojiImpl(
-      id: json['id'] as int,
+      id: (json['id'] as num).toInt(),
       auth: json['auth'] as String?,
     );
 

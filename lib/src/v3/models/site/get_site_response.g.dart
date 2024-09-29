@@ -21,7 +21,7 @@ _$GetSiteResponseImpl _$$GetSiteResponseImplFromJson(
           .map((e) => Language.fromJson(e as Map<String, dynamic>))
           .toList(),
       discussionLanguages: (json['discussion_languages'] as List<dynamic>)
-          .map((e) => e as int)
+          .map((e) => (e as num).toInt())
           .toList(),
       taglines: (json['taglines'] as List<dynamic>)
           .map((e) => Tagline.fromJson(e as Map<String, dynamic>))

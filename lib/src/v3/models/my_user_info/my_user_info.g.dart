@@ -27,7 +27,7 @@ _$MyUserInfoImpl _$$MyUserInfoImplFromJson(Map<String, dynamic> json) =>
           .map((e) => PersonBlockView.fromJson(e as Map<String, dynamic>))
           .toList(),
       discussionLanguages: (json['discussion_languages'] as List<dynamic>)
-          .map((e) => e as int)
+          .map((e) => (e as num).toInt())
           .toList(),
     );
 
