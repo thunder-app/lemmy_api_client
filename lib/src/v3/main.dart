@@ -13,8 +13,9 @@ class LemmyApiV3 {
   static const extraPath = '/api/v3';
 
   final bool debug;
+  final bool tls;
 
-  const LemmyApiV3(this.host, {this.debug = false});
+  const LemmyApiV3(this.host, {this.debug = false, this.tls = true});
 
   /// Run a given query
   Future<T> run<T>(LemmyApiQuery<T> query) async {
@@ -31,14 +32,18 @@ class LemmyApiV3 {
       );
     }
 
+    // TLS can only be disable in debug mode.
+    final String scheme = (!tls && debug) ? 'http' : 'https';
+
     final res = await () {
       switch (query.httpMethod) {
         case HttpMethod.get:
           return http.get(
-            Uri.https(
-              host,
-              '$extraPath${query.path}',
-              <String, String>{
+            Uri(
+              scheme: scheme,
+              host: host,
+              path: '$extraPath${query.path}',
+              queryParameters: <String, String>{
                 for (final entry in query.toJson().entries)
                   entry.key: entry.value.toString()
               },
@@ -47,7 +52,11 @@ class LemmyApiV3 {
           );
         case HttpMethod.post:
           return http.post(
-            Uri.https(host, '$extraPath${query.path}'),
+            Uri(
+              scheme: scheme,
+              host: host,
+              path: '$extraPath${query.path}',
+            ),
             body: jsonEncode(query.toJson()),
             headers: {
               'Content-Type': 'application/json',
@@ -56,7 +65,11 @@ class LemmyApiV3 {
           );
         case HttpMethod.put:
           return http.put(
-            Uri.https(host, '$extraPath${query.path}'),
+            Uri(
+              scheme: scheme,
+              host: host,
+              path: '$extraPath${query.path}',
+            ),
             body: jsonEncode(query.toJson()),
             headers: {
               'Content-Type': 'application/json',
