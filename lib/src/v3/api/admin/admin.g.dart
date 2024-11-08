@@ -8,7 +8,7 @@ part of 'admin.dart';
 
 _$AddAdminImpl _$$AddAdminImplFromJson(Map<String, dynamic> json) =>
     _$AddAdminImpl(
-      personId: json['person_id'] as int,
+      personId: (json['person_id'] as num).toInt(),
       added: json['added'] as bool,
       auth: json['auth'] as String?,
     );
@@ -54,8 +54,8 @@ _$ListRegistrationApplicationsImpl _$$ListRegistrationApplicationsImplFromJson(
         Map<String, dynamic> json) =>
     _$ListRegistrationApplicationsImpl(
       unreadOnly: json['unread_only'] as bool?,
-      page: json['page'] as int?,
-      limit: json['limit'] as int?,
+      page: (json['page'] as num?)?.toInt(),
+      limit: (json['limit'] as num?)?.toInt(),
       auth: json['auth'] as String?,
     );
 
@@ -79,7 +79,7 @@ Map<String, dynamic> _$$ListRegistrationApplicationsImplToJson(
 _$ApproveRegistrationApplicationImpl
     _$$ApproveRegistrationApplicationImplFromJson(Map<String, dynamic> json) =>
         _$ApproveRegistrationApplicationImpl(
-          id: json['id'] as int,
+          id: (json['id'] as num).toInt(),
           approve: json['approve'] as bool,
           denyReason: json['deny_reason'] as String?,
           auth: json['auth'] as String?,
@@ -103,9 +103,32 @@ Map<String, dynamic> _$$ApproveRegistrationApplicationImplToJson(
   return val;
 }
 
+_$GetRegistrationApplicationImpl _$$GetRegistrationApplicationImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetRegistrationApplicationImpl(
+      personId: (json['person_id'] as num).toInt(),
+      auth: json['auth'] as String?,
+    );
+
+Map<String, dynamic> _$$GetRegistrationApplicationImplToJson(
+    _$GetRegistrationApplicationImpl instance) {
+  final val = <String, dynamic>{
+    'person_id': instance.personId,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('auth', instance.auth);
+  return val;
+}
+
 _$PurgePersonImpl _$$PurgePersonImplFromJson(Map<String, dynamic> json) =>
     _$PurgePersonImpl(
-      personId: json['person_id'] as int,
+      personId: (json['person_id'] as num).toInt(),
       reason: json['reason'] as String?,
       auth: json['auth'] as String?,
     );
@@ -128,7 +151,7 @@ Map<String, dynamic> _$$PurgePersonImplToJson(_$PurgePersonImpl instance) {
 
 _$PurgeCommunityImpl _$$PurgeCommunityImplFromJson(Map<String, dynamic> json) =>
     _$PurgeCommunityImpl(
-      communityId: json['community_id'] as int,
+      communityId: (json['community_id'] as num).toInt(),
       reason: json['reason'] as String?,
       auth: json['auth'] as String?,
     );
@@ -152,7 +175,7 @@ Map<String, dynamic> _$$PurgeCommunityImplToJson(
 
 _$PurgePostImpl _$$PurgePostImplFromJson(Map<String, dynamic> json) =>
     _$PurgePostImpl(
-      postId: json['post_id'] as int,
+      postId: (json['post_id'] as num).toInt(),
       reason: json['reason'] as String?,
       auth: json['auth'] as String?,
     );
@@ -175,7 +198,7 @@ Map<String, dynamic> _$$PurgePostImplToJson(_$PurgePostImpl instance) {
 
 _$PurgeCommentImpl _$$PurgeCommentImplFromJson(Map<String, dynamic> json) =>
     _$PurgeCommentImpl(
-      commentId: json['comment_id'] as int,
+      commentId: (json['comment_id'] as num).toInt(),
       reason: json['reason'] as String?,
       auth: json['auth'] as String?,
     );
@@ -198,8 +221,8 @@ Map<String, dynamic> _$$PurgeCommentImplToJson(_$PurgeCommentImpl instance) {
 
 _$ListAllMediaImpl _$$ListAllMediaImplFromJson(Map<String, dynamic> json) =>
     _$ListAllMediaImpl(
-      page: json['page'] as int?,
-      limit: json['limit'] as int?,
+      page: (json['page'] as num?)?.toInt(),
+      limit: (json['limit'] as num?)?.toInt(),
       auth: json['auth'] as String?,
     );
 

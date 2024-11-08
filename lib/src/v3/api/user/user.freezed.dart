@@ -1087,7 +1087,7 @@ mixin _$Register {
   String get username => throw _privateConstructorUsedError; // v0.18.0
   String get password => throw _privateConstructorUsedError; // v0.18.0
   String get passwordVerify => throw _privateConstructorUsedError; // v0.18.0
-  bool get showNsfw => throw _privateConstructorUsedError; // v0.18.0
+  bool? get showNsfw => throw _privateConstructorUsedError; // v0.18.0
   String? get email => throw _privateConstructorUsedError; // v0.18.0
   String? get captchaUuid => throw _privateConstructorUsedError; // v0.18.0
   String? get captchaAnswer => throw _privateConstructorUsedError; // v0.18.0
@@ -1109,7 +1109,7 @@ abstract class $RegisterCopyWith<$Res> {
       {String username,
       String password,
       String passwordVerify,
-      bool showNsfw,
+      bool? showNsfw,
       String? email,
       String? captchaUuid,
       String? captchaAnswer,
@@ -1133,7 +1133,7 @@ class _$RegisterCopyWithImpl<$Res, $Val extends Register>
     Object? username = null,
     Object? password = null,
     Object? passwordVerify = null,
-    Object? showNsfw = null,
+    Object? showNsfw = freezed,
     Object? email = freezed,
     Object? captchaUuid = freezed,
     Object? captchaAnswer = freezed,
@@ -1153,10 +1153,10 @@ class _$RegisterCopyWithImpl<$Res, $Val extends Register>
           ? _value.passwordVerify
           : passwordVerify // ignore: cast_nullable_to_non_nullable
               as String,
-      showNsfw: null == showNsfw
+      showNsfw: freezed == showNsfw
           ? _value.showNsfw
           : showNsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -1193,7 +1193,7 @@ abstract class _$$RegisterImplCopyWith<$Res>
       {String username,
       String password,
       String passwordVerify,
-      bool showNsfw,
+      bool? showNsfw,
       String? email,
       String? captchaUuid,
       String? captchaAnswer,
@@ -1215,7 +1215,7 @@ class __$$RegisterImplCopyWithImpl<$Res>
     Object? username = null,
     Object? password = null,
     Object? passwordVerify = null,
-    Object? showNsfw = null,
+    Object? showNsfw = freezed,
     Object? email = freezed,
     Object? captchaUuid = freezed,
     Object? captchaAnswer = freezed,
@@ -1235,10 +1235,10 @@ class __$$RegisterImplCopyWithImpl<$Res>
           ? _value.passwordVerify
           : passwordVerify // ignore: cast_nullable_to_non_nullable
               as String,
-      showNsfw: null == showNsfw
+      showNsfw: freezed == showNsfw
           ? _value.showNsfw
           : showNsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -1271,7 +1271,7 @@ class _$RegisterImpl extends _Register {
       {required this.username,
       required this.password,
       required this.passwordVerify,
-      required this.showNsfw,
+      this.showNsfw,
       this.email,
       this.captchaUuid,
       this.captchaAnswer,
@@ -1292,7 +1292,7 @@ class _$RegisterImpl extends _Register {
   final String passwordVerify;
 // v0.18.0
   @override
-  final bool showNsfw;
+  final bool? showNsfw;
 // v0.18.0
   @override
   final String? email;
@@ -1370,7 +1370,7 @@ abstract class _Register extends Register {
       {required final String username,
       required final String password,
       required final String passwordVerify,
-      required final bool showNsfw,
+      final bool? showNsfw,
       final String? email,
       final String? captchaUuid,
       final String? captchaAnswer,
@@ -1388,7 +1388,7 @@ abstract class _Register extends Register {
   @override // v0.18.0
   String get passwordVerify;
   @override // v0.18.0
-  bool get showNsfw;
+  bool? get showNsfw;
   @override // v0.18.0
   String? get email;
   @override // v0.18.0

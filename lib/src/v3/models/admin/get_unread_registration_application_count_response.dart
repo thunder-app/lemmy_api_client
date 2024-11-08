@@ -15,6 +15,7 @@ class GetUnreadRegistrationApplicationCountResponse
 
   const GetUnreadRegistrationApplicationCountResponse._();
   factory GetUnreadRegistrationApplicationCountResponse.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json,
+  ) =>
       _$GetUnreadRegistrationApplicationCountResponseFromJson(json);
 }

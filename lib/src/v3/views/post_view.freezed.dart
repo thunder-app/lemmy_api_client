@@ -23,6 +23,8 @@ mixin _$PostView {
   Post get post => throw _privateConstructorUsedError; // v0.18.0
   Person get creator => throw _privateConstructorUsedError; // v0.18.0
   Community get community => throw _privateConstructorUsedError; // v0.18.0
+  ImageDetails? get imageDetails =>
+      throw _privateConstructorUsedError; // v0.19.6 (optional)
   bool get creatorBannedFromCommunity =>
       throw _privateConstructorUsedError; // v0.18.0
   bool? get bannedFromCommunity =>
@@ -56,6 +58,7 @@ abstract class $PostViewCopyWith<$Res> {
       {Post post,
       Person creator,
       Community community,
+      ImageDetails? imageDetails,
       bool creatorBannedFromCommunity,
       bool? bannedFromCommunity,
       bool? creatorIsModerator,
@@ -72,6 +75,7 @@ abstract class $PostViewCopyWith<$Res> {
   $PostCopyWith<$Res> get post;
   $PersonCopyWith<$Res> get creator;
   $CommunityCopyWith<$Res> get community;
+  $ImageDetailsCopyWith<$Res>? get imageDetails;
   $PostAggregatesCopyWith<$Res> get counts;
 }
 
@@ -91,6 +95,7 @@ class _$PostViewCopyWithImpl<$Res, $Val extends PostView>
     Object? post = null,
     Object? creator = null,
     Object? community = null,
+    Object? imageDetails = freezed,
     Object? creatorBannedFromCommunity = null,
     Object? bannedFromCommunity = freezed,
     Object? creatorIsModerator = freezed,
@@ -117,6 +122,10 @@ class _$PostViewCopyWithImpl<$Res, $Val extends PostView>
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
               as Community,
+      imageDetails: freezed == imageDetails
+          ? _value.imageDetails
+          : imageDetails // ignore: cast_nullable_to_non_nullable
+              as ImageDetails?,
       creatorBannedFromCommunity: null == creatorBannedFromCommunity
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
@@ -194,6 +203,18 @@ class _$PostViewCopyWithImpl<$Res, $Val extends PostView>
 
   @override
   @pragma('vm:prefer-inline')
+  $ImageDetailsCopyWith<$Res>? get imageDetails {
+    if (_value.imageDetails == null) {
+      return null;
+    }
+
+    return $ImageDetailsCopyWith<$Res>(_value.imageDetails!, (value) {
+      return _then(_value.copyWith(imageDetails: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $PostAggregatesCopyWith<$Res> get counts {
     return $PostAggregatesCopyWith<$Res>(_value.counts, (value) {
       return _then(_value.copyWith(counts: value) as $Val);
@@ -213,6 +234,7 @@ abstract class _$$PostViewImplCopyWith<$Res>
       {Post post,
       Person creator,
       Community community,
+      ImageDetails? imageDetails,
       bool creatorBannedFromCommunity,
       bool? bannedFromCommunity,
       bool? creatorIsModerator,
@@ -233,6 +255,8 @@ abstract class _$$PostViewImplCopyWith<$Res>
   @override
   $CommunityCopyWith<$Res> get community;
   @override
+  $ImageDetailsCopyWith<$Res>? get imageDetails;
+  @override
   $PostAggregatesCopyWith<$Res> get counts;
 }
 
@@ -250,6 +274,7 @@ class __$$PostViewImplCopyWithImpl<$Res>
     Object? post = null,
     Object? creator = null,
     Object? community = null,
+    Object? imageDetails = freezed,
     Object? creatorBannedFromCommunity = null,
     Object? bannedFromCommunity = freezed,
     Object? creatorIsModerator = freezed,
@@ -276,6 +301,10 @@ class __$$PostViewImplCopyWithImpl<$Res>
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
               as Community,
+      imageDetails: freezed == imageDetails
+          ? _value.imageDetails
+          : imageDetails // ignore: cast_nullable_to_non_nullable
+              as ImageDetails?,
       creatorBannedFromCommunity: null == creatorBannedFromCommunity
           ? _value.creatorBannedFromCommunity
           : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
@@ -336,6 +365,7 @@ class _$PostViewImpl extends _PostView {
       {required this.post,
       required this.creator,
       required this.community,
+      this.imageDetails,
       required this.creatorBannedFromCommunity,
       this.bannedFromCommunity,
       this.creatorIsModerator,
@@ -362,6 +392,9 @@ class _$PostViewImpl extends _PostView {
   @override
   final Community community;
 // v0.18.0
+  @override
+  final ImageDetails? imageDetails;
+// v0.19.6 (optional)
   @override
   final bool creatorBannedFromCommunity;
 // v0.18.0
@@ -400,7 +433,7 @@ class _$PostViewImpl extends _PostView {
 
   @override
   String toString() {
-    return 'PostView(post: $post, creator: $creator, community: $community, creatorBannedFromCommunity: $creatorBannedFromCommunity, bannedFromCommunity: $bannedFromCommunity, creatorIsModerator: $creatorIsModerator, creatorIsAdmin: $creatorIsAdmin, counts: $counts, subscribed: $subscribed, saved: $saved, read: $read, hidden: $hidden, creatorBlocked: $creatorBlocked, myVote: $myVote, unreadComments: $unreadComments)';
+    return 'PostView(post: $post, creator: $creator, community: $community, imageDetails: $imageDetails, creatorBannedFromCommunity: $creatorBannedFromCommunity, bannedFromCommunity: $bannedFromCommunity, creatorIsModerator: $creatorIsModerator, creatorIsAdmin: $creatorIsAdmin, counts: $counts, subscribed: $subscribed, saved: $saved, read: $read, hidden: $hidden, creatorBlocked: $creatorBlocked, myVote: $myVote, unreadComments: $unreadComments)';
   }
 
   @override
@@ -412,6 +445,8 @@ class _$PostViewImpl extends _PostView {
             (identical(other.creator, creator) || other.creator == creator) &&
             (identical(other.community, community) ||
                 other.community == community) &&
+            (identical(other.imageDetails, imageDetails) ||
+                other.imageDetails == imageDetails) &&
             (identical(other.creatorBannedFromCommunity,
                     creatorBannedFromCommunity) ||
                 other.creatorBannedFromCommunity ==
@@ -442,6 +477,7 @@ class _$PostViewImpl extends _PostView {
       post,
       creator,
       community,
+      imageDetails,
       creatorBannedFromCommunity,
       bannedFromCommunity,
       creatorIsModerator,
@@ -474,6 +510,7 @@ abstract class _PostView extends PostView {
       {required final Post post,
       required final Person creator,
       required final Community community,
+      final ImageDetails? imageDetails,
       required final bool creatorBannedFromCommunity,
       final bool? bannedFromCommunity,
       final bool? creatorIsModerator,
@@ -498,6 +535,8 @@ abstract class _PostView extends PostView {
   @override // v0.18.0
   Community get community;
   @override // v0.18.0
+  ImageDetails? get imageDetails;
+  @override // v0.19.6 (optional)
   bool get creatorBannedFromCommunity;
   @override // v0.18.0
   bool? get bannedFromCommunity;

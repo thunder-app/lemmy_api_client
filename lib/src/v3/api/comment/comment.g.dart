@@ -9,9 +9,9 @@ part of 'comment.dart';
 _$CreateCommentImpl _$$CreateCommentImplFromJson(Map<String, dynamic> json) =>
     _$CreateCommentImpl(
       content: json['content'] as String,
-      postId: json['post_id'] as int,
-      parentId: json['parent_id'] as int?,
-      languageId: json['language_id'] as int?,
+      postId: (json['post_id'] as num).toInt(),
+      parentId: (json['parent_id'] as num?)?.toInt(),
+      languageId: (json['language_id'] as num?)?.toInt(),
       formId: json['form_id'] as String?,
       auth: json['auth'] as String?,
     );
@@ -37,9 +37,9 @@ Map<String, dynamic> _$$CreateCommentImplToJson(_$CreateCommentImpl instance) {
 
 _$EditCommentImpl _$$EditCommentImplFromJson(Map<String, dynamic> json) =>
     _$EditCommentImpl(
-      commentId: json['comment_id'] as int,
+      commentId: (json['comment_id'] as num).toInt(),
       content: json['content'] as String?,
-      languageId: json['language_id'] as int?,
+      languageId: (json['language_id'] as num?)?.toInt(),
       formId: json['form_id'] as String?,
       auth: json['auth'] as String?,
     );
@@ -64,7 +64,7 @@ Map<String, dynamic> _$$EditCommentImplToJson(_$EditCommentImpl instance) {
 
 _$DeleteCommentImpl _$$DeleteCommentImplFromJson(Map<String, dynamic> json) =>
     _$DeleteCommentImpl(
-      commentId: json['comment_id'] as int,
+      commentId: (json['comment_id'] as num).toInt(),
       deleted: json['deleted'] as bool,
       auth: json['auth'] as String?,
     );
@@ -87,7 +87,7 @@ Map<String, dynamic> _$$DeleteCommentImplToJson(_$DeleteCommentImpl instance) {
 
 _$RemoveCommentImpl _$$RemoveCommentImplFromJson(Map<String, dynamic> json) =>
     _$RemoveCommentImpl(
-      commentId: json['comment_id'] as int,
+      commentId: (json['comment_id'] as num).toInt(),
       removed: json['removed'] as bool,
       reason: json['reason'] as String?,
       auth: json['auth'] as String?,
@@ -113,7 +113,7 @@ Map<String, dynamic> _$$RemoveCommentImplToJson(_$RemoveCommentImpl instance) {
 _$MarkCommentReplyAsReadImpl _$$MarkCommentReplyAsReadImplFromJson(
         Map<String, dynamic> json) =>
     _$MarkCommentReplyAsReadImpl(
-      commentReplyId: json['comment_reply_id'] as int,
+      commentReplyId: (json['comment_reply_id'] as num).toInt(),
       read: json['read'] as bool,
       auth: json['auth'] as String?,
     );
@@ -138,7 +138,7 @@ Map<String, dynamic> _$$MarkCommentReplyAsReadImplToJson(
 _$CreateCommentLikeImpl _$$CreateCommentLikeImplFromJson(
         Map<String, dynamic> json) =>
     _$CreateCommentLikeImpl(
-      commentId: json['comment_id'] as int,
+      commentId: (json['comment_id'] as num).toInt(),
       score: json['score'] as num,
       auth: json['auth'] as String?,
     );
@@ -163,9 +163,9 @@ Map<String, dynamic> _$$CreateCommentLikeImplToJson(
 _$ListCommentLikesImpl _$$ListCommentLikesImplFromJson(
         Map<String, dynamic> json) =>
     _$ListCommentLikesImpl(
-      commentId: json['comment_id'] as int,
-      page: json['page'] as int?,
-      limit: json['limit'] as int?,
+      commentId: (json['comment_id'] as num).toInt(),
+      page: (json['page'] as num?)?.toInt(),
+      limit: (json['limit'] as num?)?.toInt(),
       auth: json['auth'] as String?,
     );
 
@@ -189,7 +189,7 @@ Map<String, dynamic> _$$ListCommentLikesImplToJson(
 
 _$SaveCommentImpl _$$SaveCommentImplFromJson(Map<String, dynamic> json) =>
     _$SaveCommentImpl(
-      commentId: json['comment_id'] as int,
+      commentId: (json['comment_id'] as num).toInt(),
       save: json['save'] as bool,
       auth: json['auth'] as String?,
     );
@@ -213,7 +213,7 @@ Map<String, dynamic> _$$SaveCommentImplToJson(_$SaveCommentImpl instance) {
 _$DistinguishCommentImpl _$$DistinguishCommentImplFromJson(
         Map<String, dynamic> json) =>
     _$DistinguishCommentImpl(
-      commentId: json['comment_id'] as int,
+      commentId: (json['comment_id'] as num).toInt(),
       distinguished: json['distinguished'] as bool,
       auth: json['auth'] as String?,
     );
@@ -240,13 +240,13 @@ _$GetCommentsImpl _$$GetCommentsImplFromJson(Map<String, dynamic> json) =>
       type: json['type_'] == null ? null : ListingType.fromJson(json['type_']),
       sort:
           json['sort'] == null ? null : CommentSortType.fromJson(json['sort']),
-      maxDepth: json['max_depth'] as int?,
-      page: json['page'] as int?,
-      limit: json['limit'] as int?,
-      communityId: json['community_id'] as int?,
+      maxDepth: (json['max_depth'] as num?)?.toInt(),
+      page: (json['page'] as num?)?.toInt(),
+      limit: (json['limit'] as num?)?.toInt(),
+      communityId: (json['community_id'] as num?)?.toInt(),
       communityName: json['community_name'] as String?,
-      postId: json['post_id'] as int?,
-      parentId: json['parent_id'] as int?,
+      postId: (json['post_id'] as num?)?.toInt(),
+      parentId: (json['parent_id'] as num?)?.toInt(),
       savedOnly: json['saved_only'] as bool?,
       likedOnly: json['liked_only'] as bool?,
       dislikedOnly: json['disliked_only'] as bool?,
@@ -280,7 +280,7 @@ Map<String, dynamic> _$$GetCommentsImplToJson(_$GetCommentsImpl instance) {
 
 _$GetCommentImpl _$$GetCommentImplFromJson(Map<String, dynamic> json) =>
     _$GetCommentImpl(
-      id: json['id'] as int,
+      id: (json['id'] as num).toInt(),
       auth: json['auth'] as String?,
     );
 
@@ -302,7 +302,7 @@ Map<String, dynamic> _$$GetCommentImplToJson(_$GetCommentImpl instance) {
 _$CreateCommentReportImpl _$$CreateCommentReportImplFromJson(
         Map<String, dynamic> json) =>
     _$CreateCommentReportImpl(
-      commentId: json['comment_id'] as int,
+      commentId: (json['comment_id'] as num).toInt(),
       reason: json['reason'] as String,
       auth: json['auth'] as String?,
     );
@@ -327,7 +327,7 @@ Map<String, dynamic> _$$CreateCommentReportImplToJson(
 _$ResolveCommentReportImpl _$$ResolveCommentReportImplFromJson(
         Map<String, dynamic> json) =>
     _$ResolveCommentReportImpl(
-      reportId: json['report_id'] as int,
+      reportId: (json['report_id'] as num).toInt(),
       resolved: json['resolved'] as bool,
       auth: json['auth'] as String?,
     );
@@ -352,11 +352,11 @@ Map<String, dynamic> _$$ResolveCommentReportImplToJson(
 _$ListCommentReportsImpl _$$ListCommentReportsImplFromJson(
         Map<String, dynamic> json) =>
     _$ListCommentReportsImpl(
-      commentId: json['comment_id'] as int?,
-      page: json['page'] as int?,
-      limit: json['limit'] as int?,
+      commentId: (json['comment_id'] as num?)?.toInt(),
+      page: (json['page'] as num?)?.toInt(),
+      limit: (json['limit'] as num?)?.toInt(),
       unresolvedOnly: json['unresolved_only'] as bool?,
-      communityId: json['community_id'] as int?,
+      communityId: (json['community_id'] as num?)?.toInt(),
       auth: json['auth'] as String?,
     );
 

@@ -2,7 +2,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../v3.dart';
 import '../../../utils/serde.dart';
-import '../../models/models.dart';
 
 part 'admin.freezed.dart';
 part 'admin.g.dart';
@@ -50,7 +49,8 @@ class GetUnreadRegistrationApplicationCount
 
   const GetUnreadRegistrationApplicationCount._();
   factory GetUnreadRegistrationApplicationCount.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json,
+  ) =>
       _$GetUnreadRegistrationApplicationCountFromJson(json);
 
   final path = '/admin/registration_application/count';
@@ -59,7 +59,8 @@ class GetUnreadRegistrationApplicationCount
 
   @override
   GetUnreadRegistrationApplicationCountResponse responseFactory(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json,
+  ) =>
       GetUnreadRegistrationApplicationCountResponse.fromJson(json);
 }
 
@@ -90,7 +91,8 @@ class ListRegistrationApplications
 
   @override
   ListRegistrationApplicationsResponse responseFactory(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json,
+  ) =>
       ListRegistrationApplicationsResponse.fromJson(json);
 }
 
@@ -118,6 +120,34 @@ class ApproveRegistrationApplication
   final path = '/admin/registration_application/approve';
 
   final httpMethod = HttpMethod.put;
+
+  @override
+  RegistrationApplicationResponse responseFactory(Map<String, dynamic> json) =>
+      RegistrationApplicationResponse.fromJson(json);
+}
+
+/// Get the application a user submitted when they first registered their account
+///
+/// `HTTP.GET /admin/registration_application`
+@freezed
+class GetRegistrationApplication
+    with _$GetRegistrationApplication
+    implements
+        LemmyApiQuery<RegistrationApplicationResponse>,
+        LemmyApiAuthenticatedQuery {
+  @apiSerde
+  const factory GetRegistrationApplication({
+    required int personId, // v0.19.6 (required)
+    String? auth,
+  }) = _GetRegistrationApplication;
+
+  const GetRegistrationApplication._();
+  factory GetRegistrationApplication.fromJson(Map<String, dynamic> json) =>
+      _$GetRegistrationApplicationFromJson(json);
+
+  final path = '/admin/registration_application';
+
+  final httpMethod = HttpMethod.get;
 
   @override
   RegistrationApplicationResponse responseFactory(Map<String, dynamic> json) =>

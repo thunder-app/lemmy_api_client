@@ -11,6 +11,10 @@ _$PostViewImpl _$$PostViewImplFromJson(Map<String, dynamic> json) =>
       post: Post.fromJson(json['post'] as Map<String, dynamic>),
       creator: Person.fromJson(json['creator'] as Map<String, dynamic>),
       community: Community.fromJson(json['community'] as Map<String, dynamic>),
+      imageDetails: json['image_details'] == null
+          ? null
+          : ImageDetails.fromJson(
+              json['image_details'] as Map<String, dynamic>),
       creatorBannedFromCommunity: json['creator_banned_from_community'] as bool,
       bannedFromCommunity: json['banned_from_community'] as bool?,
       creatorIsModerator: json['creator_is_moderator'] as bool?,
@@ -21,8 +25,8 @@ _$PostViewImpl _$$PostViewImplFromJson(Map<String, dynamic> json) =>
       read: json['read'] as bool,
       hidden: json['hidden'] as bool?,
       creatorBlocked: json['creator_blocked'] as bool,
-      myVote: json['my_vote'] as int?,
-      unreadComments: json['unread_comments'] as int,
+      myVote: (json['my_vote'] as num?)?.toInt(),
+      unreadComments: (json['unread_comments'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$PostViewImplToJson(_$PostViewImpl instance) =>
@@ -30,6 +34,7 @@ Map<String, dynamic> _$$PostViewImplToJson(_$PostViewImpl instance) =>
       'post': instance.post.toJson(),
       'creator': instance.creator.toJson(),
       'community': instance.community.toJson(),
+      'image_details': instance.imageDetails?.toJson(),
       'creator_banned_from_community': instance.creatorBannedFromCommunity,
       'banned_from_community': instance.bannedFromCommunity,
       'creator_is_moderator': instance.creatorIsModerator,

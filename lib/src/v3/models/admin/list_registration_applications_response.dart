@@ -17,6 +17,7 @@ class ListRegistrationApplicationsResponse
 
   const ListRegistrationApplicationsResponse._();
   factory ListRegistrationApplicationsResponse.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json,
+  ) =>
       _$ListRegistrationApplicationsResponseFromJson(json);
 }

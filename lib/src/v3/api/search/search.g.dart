@@ -8,9 +8,9 @@ part of 'search.dart';
 
 _$SearchImpl _$$SearchImplFromJson(Map<String, dynamic> json) => _$SearchImpl(
       q: json['q'] as String,
-      communityId: json['community_id'] as int?,
+      communityId: (json['community_id'] as num?)?.toInt(),
       communityName: json['community_name'] as String?,
-      creatorId: json['creator_id'] as int?,
+      creatorId: (json['creator_id'] as num?)?.toInt(),
       type: json['type_'] == null
           ? null
           : SearchType.fromJson(json['type_'] as String),
@@ -18,8 +18,8 @@ _$SearchImpl _$$SearchImplFromJson(Map<String, dynamic> json) => _$SearchImpl(
       listingType: json['listing_type'] == null
           ? null
           : ListingType.fromJson(json['listing_type']),
-      page: json['page'] as int?,
-      limit: json['limit'] as int?,
+      page: (json['page'] as num?)?.toInt(),
+      limit: (json['limit'] as num?)?.toInt(),
       auth: json['auth'] as String?,
     );
 

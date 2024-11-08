@@ -8,7 +8,7 @@ part of 'community.dart';
 
 _$CommunityImpl _$$CommunityImplFromJson(Map<String, dynamic> json) =>
     _$CommunityImpl(
-      id: json['id'] as int,
+      id: (json['id'] as num).toInt(),
       name: json['name'] as String,
       title: json['title'] as String,
       description: json['description'] as String?,
@@ -26,7 +26,7 @@ _$CommunityImpl _$$CommunityImplFromJson(Map<String, dynamic> json) =>
       inboxUrl: json['inbox_url'] as String?,
       hidden: json['hidden'] as bool,
       postingRestrictedToMods: json['posting_restricted_to_mods'] as bool,
-      instanceId: json['instance_id'] as int,
+      instanceId: (json['instance_id'] as num).toInt(),
       visibility: json['visibility'] == null
           ? null
           : CommunityVisibility.fromJson(json['visibility']),

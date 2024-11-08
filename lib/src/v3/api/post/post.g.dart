@@ -9,13 +9,13 @@ part of 'post.dart';
 _$CreatePostImpl _$$CreatePostImplFromJson(Map<String, dynamic> json) =>
     _$CreatePostImpl(
       name: json['name'] as String,
-      communityId: json['community_id'] as int,
+      communityId: (json['community_id'] as num).toInt(),
       url: json['url'] as String?,
       body: json['body'] as String?,
       altText: json['alt_text'] as String?,
       honeypot: json['honeypot'] as String?,
       nsfw: json['nsfw'] as bool?,
-      languageId: json['language_id'] as int?,
+      languageId: (json['language_id'] as num?)?.toInt(),
       customThumbnail: json['custom_thumbnail'] as String?,
       auth: json['auth'] as String?,
     );
@@ -45,8 +45,8 @@ Map<String, dynamic> _$$CreatePostImplToJson(_$CreatePostImpl instance) {
 
 _$GetPostImpl _$$GetPostImplFromJson(Map<String, dynamic> json) =>
     _$GetPostImpl(
-      id: json['id'] as int?,
-      commentId: json['comment_id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      commentId: (json['comment_id'] as num?)?.toInt(),
       auth: json['auth'] as String?,
     );
 
@@ -67,13 +67,13 @@ Map<String, dynamic> _$$GetPostImplToJson(_$GetPostImpl instance) {
 
 _$EditPostImpl _$$EditPostImplFromJson(Map<String, dynamic> json) =>
     _$EditPostImpl(
-      postId: json['post_id'] as int,
+      postId: (json['post_id'] as num).toInt(),
       name: json['name'] as String?,
       url: json['url'] as String?,
       body: json['body'] as String?,
       altText: json['alt_text'] as String?,
       nsfw: json['nsfw'] as bool?,
-      languageId: json['language_id'] as int?,
+      languageId: (json['language_id'] as num?)?.toInt(),
       customThumbnail: json['custom_thumbnail'] as String?,
       auth: json['auth'] as String?,
     );
@@ -102,7 +102,7 @@ Map<String, dynamic> _$$EditPostImplToJson(_$EditPostImpl instance) {
 
 _$DeletePostImpl _$$DeletePostImplFromJson(Map<String, dynamic> json) =>
     _$DeletePostImpl(
-      postId: json['post_id'] as int,
+      postId: (json['post_id'] as num).toInt(),
       deleted: json['deleted'] as bool,
       auth: json['auth'] as String?,
     );
@@ -125,7 +125,7 @@ Map<String, dynamic> _$$DeletePostImplToJson(_$DeletePostImpl instance) {
 
 _$RemovePostImpl _$$RemovePostImplFromJson(Map<String, dynamic> json) =>
     _$RemovePostImpl(
-      postId: json['post_id'] as int,
+      postId: (json['post_id'] as num).toInt(),
       removed: json['removed'] as bool,
       reason: json['reason'] as String?,
       auth: json['auth'] as String?,
@@ -150,9 +150,10 @@ Map<String, dynamic> _$$RemovePostImplToJson(_$RemovePostImpl instance) {
 
 _$MarkPostAsReadImpl _$$MarkPostAsReadImplFromJson(Map<String, dynamic> json) =>
     _$MarkPostAsReadImpl(
-      postId: json['post_id'] as int?,
-      postIds:
-          (json['post_ids'] as List<dynamic>?)?.map((e) => e as int).toList(),
+      postId: (json['post_id'] as num?)?.toInt(),
+      postIds: (json['post_ids'] as List<dynamic>?)
+          ?.map((e) => (e as num).toInt())
+          .toList(),
       read: json['read'] as bool,
       auth: json['auth'] as String?,
     );
@@ -176,8 +177,9 @@ Map<String, dynamic> _$$MarkPostAsReadImplToJson(
 
 _$HidePostImpl _$$HidePostImplFromJson(Map<String, dynamic> json) =>
     _$HidePostImpl(
-      postIds:
-          (json['post_ids'] as List<dynamic>).map((e) => e as int).toList(),
+      postIds: (json['post_ids'] as List<dynamic>)
+          .map((e) => (e as num).toInt())
+          .toList(),
       hide: json['hide'] as bool,
       auth: json['auth'] as String?,
     );
@@ -200,7 +202,7 @@ Map<String, dynamic> _$$HidePostImplToJson(_$HidePostImpl instance) {
 
 _$LockPostImpl _$$LockPostImplFromJson(Map<String, dynamic> json) =>
     _$LockPostImpl(
-      postId: json['post_id'] as int,
+      postId: (json['post_id'] as num).toInt(),
       locked: json['locked'] as bool,
       auth: json['auth'] as String?,
     );
@@ -223,7 +225,7 @@ Map<String, dynamic> _$$LockPostImplToJson(_$LockPostImpl instance) {
 
 _$FeaturePostImpl _$$FeaturePostImplFromJson(Map<String, dynamic> json) =>
     _$FeaturePostImpl(
-      postId: json['post_id'] as int,
+      postId: (json['post_id'] as num).toInt(),
       featured: json['featured'] as bool,
       featureType: PostFeatureType.fromJson(json['feature_type'] as String),
       auth: json['auth'] as String?,
@@ -250,9 +252,9 @@ _$GetPostsImpl _$$GetPostsImplFromJson(Map<String, dynamic> json) =>
     _$GetPostsImpl(
       type: json['type_'] == null ? null : ListingType.fromJson(json['type_']),
       sort: json['sort'] == null ? null : SortType.fromJson(json['sort']),
-      page: json['page'] as int?,
-      limit: json['limit'] as int?,
-      communityId: json['community_id'] as int?,
+      page: (json['page'] as num?)?.toInt(),
+      limit: (json['limit'] as num?)?.toInt(),
+      communityId: (json['community_id'] as num?)?.toInt(),
       communityName: json['community_name'] as String?,
       savedOnly: json['saved_only'] as bool?,
       moderatorView: json['moderator_view'] as bool?,
@@ -260,6 +262,8 @@ _$GetPostsImpl _$$GetPostsImplFromJson(Map<String, dynamic> json) =>
       likedOnly: json['liked_only'] as bool?,
       dislikedOnly: json['disliked_only'] as bool?,
       showHidden: json['show_hidden'] as bool?,
+      showRead: json['show_read'] as bool?,
+      showNsfw: json['show_nsfw'] as bool?,
       pageCursor: json['page_cursor'] as String?,
     );
 
@@ -284,13 +288,15 @@ Map<String, dynamic> _$$GetPostsImplToJson(_$GetPostsImpl instance) {
   writeNotNull('liked_only', instance.likedOnly);
   writeNotNull('disliked_only', instance.dislikedOnly);
   writeNotNull('show_hidden', instance.showHidden);
+  writeNotNull('show_read', instance.showRead);
+  writeNotNull('show_nsfw', instance.showNsfw);
   writeNotNull('page_cursor', instance.pageCursor);
   return val;
 }
 
 _$CreatePostLikeImpl _$$CreatePostLikeImplFromJson(Map<String, dynamic> json) =>
     _$CreatePostLikeImpl(
-      postId: json['post_id'] as int,
+      postId: (json['post_id'] as num).toInt(),
       score: json['score'] as num,
       auth: json['auth'] as String?,
     );
@@ -314,9 +320,9 @@ Map<String, dynamic> _$$CreatePostLikeImplToJson(
 
 _$ListPostLikesImpl _$$ListPostLikesImplFromJson(Map<String, dynamic> json) =>
     _$ListPostLikesImpl(
-      postId: json['post_id'] as int,
-      page: json['page'] as int?,
-      limit: json['limit'] as int?,
+      postId: (json['post_id'] as num).toInt(),
+      page: (json['page'] as num?)?.toInt(),
+      limit: (json['limit'] as num?)?.toInt(),
       auth: json['auth'] as String?,
     );
 
@@ -339,7 +345,7 @@ Map<String, dynamic> _$$ListPostLikesImplToJson(_$ListPostLikesImpl instance) {
 
 _$SavePostImpl _$$SavePostImplFromJson(Map<String, dynamic> json) =>
     _$SavePostImpl(
-      postId: json['post_id'] as int,
+      postId: (json['post_id'] as num).toInt(),
       save: json['save'] as bool,
       auth: json['auth'] as String?,
     );
@@ -363,7 +369,7 @@ Map<String, dynamic> _$$SavePostImplToJson(_$SavePostImpl instance) {
 _$CreatePostReportImpl _$$CreatePostReportImplFromJson(
         Map<String, dynamic> json) =>
     _$CreatePostReportImpl(
-      postId: json['post_id'] as int,
+      postId: (json['post_id'] as num).toInt(),
       reason: json['reason'] as String,
       auth: json['auth'] as String?,
     );
@@ -388,7 +394,7 @@ Map<String, dynamic> _$$CreatePostReportImplToJson(
 _$ResolvePostReportImpl _$$ResolvePostReportImplFromJson(
         Map<String, dynamic> json) =>
     _$ResolvePostReportImpl(
-      reportId: json['report_id'] as int,
+      reportId: (json['report_id'] as num).toInt(),
       resolved: json['resolved'] as bool,
       auth: json['auth'] as String?,
     );
@@ -413,11 +419,11 @@ Map<String, dynamic> _$$ResolvePostReportImplToJson(
 _$ListPostReportsImpl _$$ListPostReportsImplFromJson(
         Map<String, dynamic> json) =>
     _$ListPostReportsImpl(
-      page: json['page'] as int?,
-      limit: json['limit'] as int?,
+      page: (json['page'] as num?)?.toInt(),
+      limit: (json['limit'] as num?)?.toInt(),
       unresolvedOnly: json['unresolved_only'] as bool?,
-      communityId: json['community_id'] as int?,
-      postId: json['post_id'] as int?,
+      communityId: (json['community_id'] as num?)?.toInt(),
+      postId: (json['post_id'] as num?)?.toInt(),
       auth: json['auth'] as String?,
     );
 
