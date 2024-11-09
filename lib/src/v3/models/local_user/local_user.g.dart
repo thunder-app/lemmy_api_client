@@ -6,8 +6,7 @@ part of 'local_user.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$LocalUserImpl _$$LocalUserImplFromJson(Map<String, dynamic> json) =>
-    _$LocalUserImpl(
+_$LocalUserImpl _$$LocalUserImplFromJson(Map<String, dynamic> json) => _$LocalUserImpl(
       id: json['id'] as int,
       personId: json['person_id'] as int,
       email: json['email'] as String?,
@@ -15,13 +14,13 @@ _$LocalUserImpl _$$LocalUserImplFromJson(Map<String, dynamic> json) =>
       blurNsfw: json['blur_nsfw'] as bool?,
       autoExpand: json['auto_expand'] as bool?,
       theme: json['theme'] as String,
-      defaultSortType: SortType.fromJson(json['default_sort_type']),
+      defaultSortType: SortType.fromJson(json['default_comment_sort_type']),
       defaultListingType: ListingType.fromJson(json['default_listing_type']),
       interfaceLanguage: json['interface_language'] as String,
       showAvatars: json['show_avatars'] as bool,
       sendNotificationsToEmail: json['send_notifications_to_email'] as bool,
       validatorTime: json['validator_time'] as String?,
-      showScores: json['show_scores'] as bool,
+      showScores: json['show_scores'] ?? false as bool,
       showBotAccounts: json['show_bot_accounts'] as bool,
       showReadPosts: json['show_read_posts'] as bool,
       showNewPostNotifs: json['show_new_post_notifs'] as bool?,
@@ -38,8 +37,7 @@ _$LocalUserImpl _$$LocalUserImplFromJson(Map<String, dynamic> json) =>
       collapseBotComments: json['collapse_bot_comments'] as bool?,
     );
 
-Map<String, dynamic> _$$LocalUserImplToJson(_$LocalUserImpl instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$LocalUserImplToJson(_$LocalUserImpl instance) => <String, dynamic>{
       'id': instance.id,
       'person_id': instance.personId,
       'email': instance.email,
