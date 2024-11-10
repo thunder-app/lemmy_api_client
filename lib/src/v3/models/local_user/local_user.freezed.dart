@@ -41,6 +41,7 @@ mixin _$LocalUser {
   @deprecated
   String? get validatorTime =>
       throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
+  @deprecated
   bool? get showScores =>
       throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.20.0]
   bool get showBotAccounts => throw _privateConstructorUsedError; // v0.18.0
@@ -97,7 +98,7 @@ abstract class $LocalUserCopyWith<$Res> {
       bool showAvatars,
       bool sendNotificationsToEmail,
       @deprecated String? validatorTime,
-      bool? showScores,
+      @deprecated bool? showScores,
       bool showBotAccounts,
       bool showReadPosts,
       @deprecated bool? showNewPostNotifs,
@@ -303,7 +304,7 @@ abstract class _$$LocalUserImplCopyWith<$Res>
       bool showAvatars,
       bool sendNotificationsToEmail,
       @deprecated String? validatorTime,
-      bool? showScores,
+      @deprecated bool? showScores,
       bool showBotAccounts,
       bool showReadPosts,
       @deprecated bool? showNewPostNotifs,
@@ -503,7 +504,7 @@ class _$LocalUserImpl extends _LocalUser {
       required this.showAvatars,
       required this.sendNotificationsToEmail,
       @deprecated this.validatorTime,
-      this.showScores,
+      @deprecated this.showScores,
       required this.showBotAccounts,
       required this.showReadPosts,
       @deprecated this.showNewPostNotifs,
@@ -568,6 +569,7 @@ class _$LocalUserImpl extends _LocalUser {
   final String? validatorTime;
 // v0.18.0 [deprecated in v0.19.0]
   @override
+  @deprecated
   final bool? showScores;
 // v0.18.0 [deprecated in v0.20.0]
   @override
@@ -749,7 +751,7 @@ abstract class _LocalUser extends LocalUser {
       required final bool showAvatars,
       required final bool sendNotificationsToEmail,
       @deprecated final String? validatorTime,
-      final bool? showScores,
+      @deprecated final bool? showScores,
       required final bool showBotAccounts,
       required final bool showReadPosts,
       @deprecated final bool? showNewPostNotifs,
@@ -800,6 +802,7 @@ abstract class _LocalUser extends LocalUser {
   @deprecated
   String? get validatorTime; // v0.18.0 [deprecated in v0.19.0]
   @override
+  @deprecated
   bool? get showScores; // v0.18.0 [deprecated in v0.20.0]
   @override
   bool get showBotAccounts; // v0.18.0

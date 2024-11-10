@@ -24,7 +24,7 @@ class LocalUser with _$LocalUser {
     required bool showAvatars, // v0.18.0
     required bool sendNotificationsToEmail, // v0.18.0
     @deprecated String? validatorTime, // v0.18.0 [deprecated in v0.19.0]
-    bool? showScores, // v0.18.0 [deprecated in v0.20.0]
+    @deprecated bool? showScores, // v0.18.0 [deprecated in v0.20.0]
     required bool showBotAccounts, // v0.18.0
     required bool showReadPosts, // v0.18.0
     @deprecated bool? showNewPostNotifs, // v0.18.0 [deprecated in v0.19.0]
