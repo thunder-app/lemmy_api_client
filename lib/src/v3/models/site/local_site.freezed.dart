@@ -23,8 +23,12 @@ mixin _$LocalSite {
   int get id => throw _privateConstructorUsedError; // v0.18.0
   int get siteId => throw _privateConstructorUsedError; // v0.18.0
   bool get siteSetup => throw _privateConstructorUsedError; // v0.18.0
-  bool get enableDownvotes => throw _privateConstructorUsedError; // v0.18.0
-  bool get enableNsfw => throw _privateConstructorUsedError; // v0.18.0
+  @deprecated
+  bool? get enableDownvotes =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.20.0]
+  @deprecated
+  bool? get enableNsfw =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.20.0]
   bool get communityCreationAdminOnly =>
       throw _privateConstructorUsedError; // v0.18.0
   bool get requireEmailVerification =>
@@ -58,8 +62,12 @@ mixin _$LocalSite {
       throw _privateConstructorUsedError; // v0.19.4 (required)
   SortType? get defaultSortType => throw _privateConstructorUsedError;
 
+  /// Serializes this LocalSite to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LocalSite
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LocalSiteCopyWith<LocalSite> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -73,8 +81,8 @@ abstract class $LocalSiteCopyWith<$Res> {
       {int id,
       int siteId,
       bool siteSetup,
-      bool enableDownvotes,
-      bool enableNsfw,
+      @deprecated bool? enableDownvotes,
+      @deprecated bool? enableNsfw,
       bool communityCreationAdminOnly,
       bool requireEmailVerification,
       String? applicationQuestion,
@@ -109,14 +117,16 @@ class _$LocalSiteCopyWithImpl<$Res, $Val extends LocalSite>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LocalSite
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? siteId = null,
     Object? siteSetup = null,
-    Object? enableDownvotes = null,
-    Object? enableNsfw = null,
+    Object? enableDownvotes = freezed,
+    Object? enableNsfw = freezed,
     Object? communityCreationAdminOnly = null,
     Object? requireEmailVerification = null,
     Object? applicationQuestion = freezed,
@@ -153,14 +163,14 @@ class _$LocalSiteCopyWithImpl<$Res, $Val extends LocalSite>
           ? _value.siteSetup
           : siteSetup // ignore: cast_nullable_to_non_nullable
               as bool,
-      enableDownvotes: null == enableDownvotes
+      enableDownvotes: freezed == enableDownvotes
           ? _value.enableDownvotes
           : enableDownvotes // ignore: cast_nullable_to_non_nullable
-              as bool,
-      enableNsfw: null == enableNsfw
+              as bool?,
+      enableNsfw: freezed == enableNsfw
           ? _value.enableNsfw
           : enableNsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       communityCreationAdminOnly: null == communityCreationAdminOnly
           ? _value.communityCreationAdminOnly
           : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
@@ -265,8 +275,8 @@ abstract class _$$LocalSiteImplCopyWith<$Res>
       {int id,
       int siteId,
       bool siteSetup,
-      bool enableDownvotes,
-      bool enableNsfw,
+      @deprecated bool? enableDownvotes,
+      @deprecated bool? enableNsfw,
       bool communityCreationAdminOnly,
       bool requireEmailVerification,
       String? applicationQuestion,
@@ -299,14 +309,16 @@ class __$$LocalSiteImplCopyWithImpl<$Res>
       _$LocalSiteImpl _value, $Res Function(_$LocalSiteImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LocalSite
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? siteId = null,
     Object? siteSetup = null,
-    Object? enableDownvotes = null,
-    Object? enableNsfw = null,
+    Object? enableDownvotes = freezed,
+    Object? enableNsfw = freezed,
     Object? communityCreationAdminOnly = null,
     Object? requireEmailVerification = null,
     Object? applicationQuestion = freezed,
@@ -343,14 +355,14 @@ class __$$LocalSiteImplCopyWithImpl<$Res>
           ? _value.siteSetup
           : siteSetup // ignore: cast_nullable_to_non_nullable
               as bool,
-      enableDownvotes: null == enableDownvotes
+      enableDownvotes: freezed == enableDownvotes
           ? _value.enableDownvotes
           : enableDownvotes // ignore: cast_nullable_to_non_nullable
-              as bool,
-      enableNsfw: null == enableNsfw
+              as bool?,
+      enableNsfw: freezed == enableNsfw
           ? _value.enableNsfw
           : enableNsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       communityCreationAdminOnly: null == communityCreationAdminOnly
           ? _value.communityCreationAdminOnly
           : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
@@ -451,8 +463,8 @@ class _$LocalSiteImpl extends _LocalSite {
       {required this.id,
       required this.siteId,
       required this.siteSetup,
-      required this.enableDownvotes,
-      required this.enableNsfw,
+      @deprecated this.enableDownvotes,
+      @deprecated this.enableNsfw,
       required this.communityCreationAdminOnly,
       required this.requireEmailVerification,
       this.applicationQuestion,
@@ -490,11 +502,13 @@ class _$LocalSiteImpl extends _LocalSite {
   final bool siteSetup;
 // v0.18.0
   @override
-  final bool enableDownvotes;
-// v0.18.0
+  @deprecated
+  final bool? enableDownvotes;
+// v0.18.0 [deprecated in v0.20.0]
   @override
-  final bool enableNsfw;
-// v0.18.0
+  @deprecated
+  final bool? enableNsfw;
+// v0.18.0 [deprecated in v0.20.0]
   @override
   final bool communityCreationAdminOnly;
 // v0.18.0
@@ -627,7 +641,7 @@ class _$LocalSiteImpl extends _LocalSite {
                 other.defaultSortType == defaultSortType));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -660,7 +674,9 @@ class _$LocalSiteImpl extends _LocalSite {
         defaultSortType
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LocalSite
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LocalSiteImplCopyWith<_$LocalSiteImpl> get copyWith =>
@@ -679,8 +695,8 @@ abstract class _LocalSite extends LocalSite {
       {required final int id,
       required final int siteId,
       required final bool siteSetup,
-      required final bool enableDownvotes,
-      required final bool enableNsfw,
+      @deprecated final bool? enableDownvotes,
+      @deprecated final bool? enableNsfw,
       required final bool communityCreationAdminOnly,
       required final bool requireEmailVerification,
       final String? applicationQuestion,
@@ -709,62 +725,67 @@ abstract class _LocalSite extends LocalSite {
       _$LocalSiteImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  int get siteId;
-  @override // v0.18.0
-  bool get siteSetup;
-  @override // v0.18.0
-  bool get enableDownvotes;
-  @override // v0.18.0
-  bool get enableNsfw;
-  @override // v0.18.0
-  bool get communityCreationAdminOnly;
-  @override // v0.18.0
-  bool get requireEmailVerification;
-  @override // v0.18.0
-  String? get applicationQuestion;
-  @override // v0.18.0
-  bool get privateInstance;
-  @override // v0.18.0
-  String get defaultTheme;
-  @override // v0.18.0
-  ListingType get defaultPostListingType;
-  @override // v0.18.0
-  String? get legalInformation;
-  @override // v0.18.0
-  bool get hideModlogModNames;
-  @override // v0.18.0
-  bool get applicationEmailAdmins;
-  @override // v0.18.0
-  String? get slurFilterRegex;
-  @override // v0.18.0
-  int get actorNameMaxLength;
-  @override // v0.18.0
-  bool get federationEnabled;
-  @override // v0.18.0
-  @deprecated
-  int? get federationWorkerCount;
-  @override // v0.18.0 [deprecated in v0.18.1]
-  bool get captchaEnabled;
-  @override // v0.18.0
-  String get captchaDifficulty;
-  @override // v0.18.0
-  DateTime get published;
-  @override // v0.18.0
-  DateTime? get updated;
-  @override // v0.18.0
-  RegistrationMode get registrationMode;
-  @override // v0.18.0
-  bool get reportsEmailAdmins;
-  @override // v0.18.0
-  bool? get federationSignedFetch;
-  @override // v0.19.0 (required)
-  String? get defaultPostListingMode;
-  @override // v0.19.4 (required)
-  SortType? get defaultSortType;
+  int get id; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  int get siteId; // v0.18.0
+  @override
+  bool get siteSetup; // v0.18.0
+  @override
+  @deprecated
+  bool? get enableDownvotes; // v0.18.0 [deprecated in v0.20.0]
+  @override
+  @deprecated
+  bool? get enableNsfw; // v0.18.0 [deprecated in v0.20.0]
+  @override
+  bool get communityCreationAdminOnly; // v0.18.0
+  @override
+  bool get requireEmailVerification; // v0.18.0
+  @override
+  String? get applicationQuestion; // v0.18.0
+  @override
+  bool get privateInstance; // v0.18.0
+  @override
+  String get defaultTheme; // v0.18.0
+  @override
+  ListingType get defaultPostListingType; // v0.18.0
+  @override
+  String? get legalInformation; // v0.18.0
+  @override
+  bool get hideModlogModNames; // v0.18.0
+  @override
+  bool get applicationEmailAdmins; // v0.18.0
+  @override
+  String? get slurFilterRegex; // v0.18.0
+  @override
+  int get actorNameMaxLength; // v0.18.0
+  @override
+  bool get federationEnabled; // v0.18.0
+  @override
+  @deprecated
+  int? get federationWorkerCount; // v0.18.0 [deprecated in v0.18.1]
+  @override
+  bool get captchaEnabled; // v0.18.0
+  @override
+  String get captchaDifficulty; // v0.18.0
+  @override
+  DateTime get published; // v0.18.0
+  @override
+  DateTime? get updated; // v0.18.0
+  @override
+  RegistrationMode get registrationMode; // v0.18.0
+  @override
+  bool get reportsEmailAdmins; // v0.18.0
+  @override
+  bool? get federationSignedFetch; // v0.19.0 (required)
+  @override
+  String? get defaultPostListingMode; // v0.19.4 (required)
+  @override
+  SortType? get defaultSortType;
+
+  /// Create a copy of LocalSite
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LocalSiteImplCopyWith<_$LocalSiteImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
