@@ -27,7 +27,11 @@ mixin _$LocalUser {
   bool? get blurNsfw => throw _privateConstructorUsedError; // v0.18.3
   bool? get autoExpand => throw _privateConstructorUsedError; // v0.18.3
   String get theme => throw _privateConstructorUsedError; // v0.18.0
-  SortType get defaultSortType => throw _privateConstructorUsedError; // v0.18.0
+  @deprecated
+  SortType? get defaultSortType =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.20.0]
+  SortType get defaultCommentSortType =>
+      throw _privateConstructorUsedError; // v0.20.0
   ListingType get defaultListingType =>
       throw _privateConstructorUsedError; // v0.18.0
   String get interfaceLanguage => throw _privateConstructorUsedError; // v0.18.0
@@ -37,7 +41,8 @@ mixin _$LocalUser {
   @deprecated
   String? get validatorTime =>
       throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
-  bool get showScores => throw _privateConstructorUsedError; // v0.18.0
+  bool? get showScores =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.20.0]
   bool get showBotAccounts => throw _privateConstructorUsedError; // v0.18.0
   bool get showReadPosts => throw _privateConstructorUsedError; // v0.18.0
   @deprecated
@@ -85,13 +90,14 @@ abstract class $LocalUserCopyWith<$Res> {
       bool? blurNsfw,
       bool? autoExpand,
       String theme,
-      SortType defaultSortType,
+      @deprecated SortType? defaultSortType,
+      SortType defaultCommentSortType,
       ListingType defaultListingType,
       String interfaceLanguage,
       bool showAvatars,
       bool sendNotificationsToEmail,
       @deprecated String? validatorTime,
-      bool showScores,
+      bool? showScores,
       bool showBotAccounts,
       bool showReadPosts,
       @deprecated bool? showNewPostNotifs,
@@ -130,13 +136,14 @@ class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
     Object? blurNsfw = freezed,
     Object? autoExpand = freezed,
     Object? theme = null,
-    Object? defaultSortType = null,
+    Object? defaultSortType = freezed,
+    Object? defaultCommentSortType = null,
     Object? defaultListingType = null,
     Object? interfaceLanguage = null,
     Object? showAvatars = null,
     Object? sendNotificationsToEmail = null,
     Object? validatorTime = freezed,
-    Object? showScores = null,
+    Object? showScores = freezed,
     Object? showBotAccounts = null,
     Object? showReadPosts = null,
     Object? showNewPostNotifs = freezed,
@@ -181,9 +188,13 @@ class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
               as String,
-      defaultSortType: null == defaultSortType
+      defaultSortType: freezed == defaultSortType
           ? _value.defaultSortType
           : defaultSortType // ignore: cast_nullable_to_non_nullable
+              as SortType?,
+      defaultCommentSortType: null == defaultCommentSortType
+          ? _value.defaultCommentSortType
+          : defaultCommentSortType // ignore: cast_nullable_to_non_nullable
               as SortType,
       defaultListingType: null == defaultListingType
           ? _value.defaultListingType
@@ -205,10 +216,10 @@ class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
           ? _value.validatorTime
           : validatorTime // ignore: cast_nullable_to_non_nullable
               as String?,
-      showScores: null == showScores
+      showScores: freezed == showScores
           ? _value.showScores
           : showScores // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       showBotAccounts: null == showBotAccounts
           ? _value.showBotAccounts
           : showBotAccounts // ignore: cast_nullable_to_non_nullable
@@ -285,13 +296,14 @@ abstract class _$$LocalUserImplCopyWith<$Res>
       bool? blurNsfw,
       bool? autoExpand,
       String theme,
-      SortType defaultSortType,
+      @deprecated SortType? defaultSortType,
+      SortType defaultCommentSortType,
       ListingType defaultListingType,
       String interfaceLanguage,
       bool showAvatars,
       bool sendNotificationsToEmail,
       @deprecated String? validatorTime,
-      bool showScores,
+      bool? showScores,
       bool showBotAccounts,
       bool showReadPosts,
       @deprecated bool? showNewPostNotifs,
@@ -328,13 +340,14 @@ class __$$LocalUserImplCopyWithImpl<$Res>
     Object? blurNsfw = freezed,
     Object? autoExpand = freezed,
     Object? theme = null,
-    Object? defaultSortType = null,
+    Object? defaultSortType = freezed,
+    Object? defaultCommentSortType = null,
     Object? defaultListingType = null,
     Object? interfaceLanguage = null,
     Object? showAvatars = null,
     Object? sendNotificationsToEmail = null,
     Object? validatorTime = freezed,
-    Object? showScores = null,
+    Object? showScores = freezed,
     Object? showBotAccounts = null,
     Object? showReadPosts = null,
     Object? showNewPostNotifs = freezed,
@@ -379,9 +392,13 @@ class __$$LocalUserImplCopyWithImpl<$Res>
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
               as String,
-      defaultSortType: null == defaultSortType
+      defaultSortType: freezed == defaultSortType
           ? _value.defaultSortType
           : defaultSortType // ignore: cast_nullable_to_non_nullable
+              as SortType?,
+      defaultCommentSortType: null == defaultCommentSortType
+          ? _value.defaultCommentSortType
+          : defaultCommentSortType // ignore: cast_nullable_to_non_nullable
               as SortType,
       defaultListingType: null == defaultListingType
           ? _value.defaultListingType
@@ -403,10 +420,10 @@ class __$$LocalUserImplCopyWithImpl<$Res>
           ? _value.validatorTime
           : validatorTime // ignore: cast_nullable_to_non_nullable
               as String?,
-      showScores: null == showScores
+      showScores: freezed == showScores
           ? _value.showScores
           : showScores // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       showBotAccounts: null == showBotAccounts
           ? _value.showBotAccounts
           : showBotAccounts // ignore: cast_nullable_to_non_nullable
@@ -479,13 +496,14 @@ class _$LocalUserImpl extends _LocalUser {
       this.blurNsfw,
       this.autoExpand,
       required this.theme,
-      required this.defaultSortType,
+      @deprecated this.defaultSortType,
+      required this.defaultCommentSortType,
       required this.defaultListingType,
       required this.interfaceLanguage,
       required this.showAvatars,
       required this.sendNotificationsToEmail,
       @deprecated this.validatorTime,
-      required this.showScores,
+      this.showScores,
       required this.showBotAccounts,
       required this.showReadPosts,
       @deprecated this.showNewPostNotifs,
@@ -527,8 +545,12 @@ class _$LocalUserImpl extends _LocalUser {
   final String theme;
 // v0.18.0
   @override
-  final SortType defaultSortType;
-// v0.18.0
+  @deprecated
+  final SortType? defaultSortType;
+// v0.18.0 [deprecated in v0.20.0]
+  @override
+  final SortType defaultCommentSortType;
+// v0.20.0
   @override
   final ListingType defaultListingType;
 // v0.18.0
@@ -546,8 +568,8 @@ class _$LocalUserImpl extends _LocalUser {
   final String? validatorTime;
 // v0.18.0 [deprecated in v0.19.0]
   @override
-  final bool showScores;
-// v0.18.0
+  final bool? showScores;
+// v0.18.0 [deprecated in v0.20.0]
   @override
   final bool showBotAccounts;
 // v0.18.0
@@ -594,7 +616,7 @@ class _$LocalUserImpl extends _LocalUser {
 
   @override
   String toString() {
-    return 'LocalUser(id: $id, personId: $personId, email: $email, showNsfw: $showNsfw, blurNsfw: $blurNsfw, autoExpand: $autoExpand, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, interfaceLanguage: $interfaceLanguage, showAvatars: $showAvatars, sendNotificationsToEmail: $sendNotificationsToEmail, validatorTime: $validatorTime, showScores: $showScores, showBotAccounts: $showBotAccounts, showReadPosts: $showReadPosts, showNewPostNotifs: $showNewPostNotifs, emailVerified: $emailVerified, acceptedApplication: $acceptedApplication, totp2faUrl: $totp2faUrl, openLinksInNewTab: $openLinksInNewTab, infiniteScrollEnabled: $infiniteScrollEnabled, admin: $admin, postListingMode: $postListingMode, totp2faEnabled: $totp2faEnabled, enableKeyboardNavigation: $enableKeyboardNavigation, enableAnimatedImages: $enableAnimatedImages, collapseBotComments: $collapseBotComments)';
+    return 'LocalUser(id: $id, personId: $personId, email: $email, showNsfw: $showNsfw, blurNsfw: $blurNsfw, autoExpand: $autoExpand, theme: $theme, defaultSortType: $defaultSortType, defaultCommentSortType: $defaultCommentSortType, defaultListingType: $defaultListingType, interfaceLanguage: $interfaceLanguage, showAvatars: $showAvatars, sendNotificationsToEmail: $sendNotificationsToEmail, validatorTime: $validatorTime, showScores: $showScores, showBotAccounts: $showBotAccounts, showReadPosts: $showReadPosts, showNewPostNotifs: $showNewPostNotifs, emailVerified: $emailVerified, acceptedApplication: $acceptedApplication, totp2faUrl: $totp2faUrl, openLinksInNewTab: $openLinksInNewTab, infiniteScrollEnabled: $infiniteScrollEnabled, admin: $admin, postListingMode: $postListingMode, totp2faEnabled: $totp2faEnabled, enableKeyboardNavigation: $enableKeyboardNavigation, enableAnimatedImages: $enableAnimatedImages, collapseBotComments: $collapseBotComments)';
   }
 
   @override
@@ -615,6 +637,8 @@ class _$LocalUserImpl extends _LocalUser {
             (identical(other.theme, theme) || other.theme == theme) &&
             (identical(other.defaultSortType, defaultSortType) ||
                 other.defaultSortType == defaultSortType) &&
+            (identical(other.defaultCommentSortType, defaultCommentSortType) ||
+                other.defaultCommentSortType == defaultCommentSortType) &&
             (identical(other.defaultListingType, defaultListingType) ||
                 other.defaultListingType == defaultListingType) &&
             (identical(other.interfaceLanguage, interfaceLanguage) ||
@@ -670,6 +694,7 @@ class _$LocalUserImpl extends _LocalUser {
         autoExpand,
         theme,
         defaultSortType,
+        defaultCommentSortType,
         defaultListingType,
         interfaceLanguage,
         showAvatars,
@@ -717,13 +742,14 @@ abstract class _LocalUser extends LocalUser {
       final bool? blurNsfw,
       final bool? autoExpand,
       required final String theme,
-      required final SortType defaultSortType,
+      @deprecated final SortType? defaultSortType,
+      required final SortType defaultCommentSortType,
       required final ListingType defaultListingType,
       required final String interfaceLanguage,
       required final bool showAvatars,
       required final bool sendNotificationsToEmail,
       @deprecated final String? validatorTime,
-      required final bool showScores,
+      final bool? showScores,
       required final bool showBotAccounts,
       required final bool showReadPosts,
       @deprecated final bool? showNewPostNotifs,
@@ -758,7 +784,10 @@ abstract class _LocalUser extends LocalUser {
   @override
   String get theme; // v0.18.0
   @override
-  SortType get defaultSortType; // v0.18.0
+  @deprecated
+  SortType? get defaultSortType; // v0.18.0 [deprecated in v0.20.0]
+  @override
+  SortType get defaultCommentSortType; // v0.20.0
   @override
   ListingType get defaultListingType; // v0.18.0
   @override
@@ -771,7 +800,7 @@ abstract class _LocalUser extends LocalUser {
   @deprecated
   String? get validatorTime; // v0.18.0 [deprecated in v0.19.0]
   @override
-  bool get showScores; // v0.18.0
+  bool? get showScores; // v0.18.0 [deprecated in v0.20.0]
   @override
   bool get showBotAccounts; // v0.18.0
   @override
