@@ -33,8 +33,12 @@ mixin _$CreatePost {
       throw _privateConstructorUsedError; // v0.19.4 (optional)
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this CreatePost to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CreatePost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CreatePostCopyWith<CreatePost> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -68,6 +72,8 @@ class _$CreatePostCopyWithImpl<$Res, $Val extends CreatePost>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CreatePost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -156,6 +162,8 @@ class __$$CreatePostImplCopyWithImpl<$Res>
       _$CreatePostImpl _value, $Res Function(_$CreatePostImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CreatePost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -291,12 +299,14 @@ class _$CreatePostImpl extends _CreatePost {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, communityId, url, body,
       altText, honeypot, nsfw, languageId, customThumbnail, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CreatePost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CreatePostImplCopyWith<_$CreatePostImpl> get copyWith =>
@@ -328,27 +338,30 @@ abstract class _CreatePost extends CreatePost {
       _$CreatePostImpl.fromJson;
 
   @override
-  String get name;
-  @override // v0.18.0
-  int get communityId;
-  @override // v0.18.0
-  String? get url;
-  @override // v0.18.0
-  String? get body;
-  @override // v0.18.0
-  String? get altText;
-  @override // v0.19.4 (optional)
-  String? get honeypot;
-  @override // v0.18.0
-  bool? get nsfw;
-  @override // v0.18.0
-  int? get languageId;
-  @override // v0.18.0
-  String? get customThumbnail;
-  @override // v0.19.4 (optional)
-  String? get auth;
+  String get name; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  int get communityId; // v0.18.0
+  @override
+  String? get url; // v0.18.0
+  @override
+  String? get body; // v0.18.0
+  @override
+  String? get altText; // v0.19.4 (optional)
+  @override
+  String? get honeypot; // v0.18.0
+  @override
+  bool? get nsfw; // v0.18.0
+  @override
+  int? get languageId; // v0.18.0
+  @override
+  String? get customThumbnail; // v0.19.4 (optional)
+  @override
+  String? get auth;
+
+  /// Create a copy of CreatePost
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CreatePostImplCopyWith<_$CreatePostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -363,8 +376,12 @@ mixin _$GetPost {
   int? get commentId => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this GetPost to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetPost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetPostCopyWith<GetPost> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -386,6 +403,8 @@ class _$GetPostCopyWithImpl<$Res, $Val extends GetPost>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetPost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -428,6 +447,8 @@ class __$$GetPostImplCopyWithImpl<$Res>
       _$GetPostImpl _value, $Res Function(_$GetPostImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetPost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -486,11 +507,13 @@ class _$GetPostImpl extends _GetPost {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, commentId, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetPost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetPostImplCopyWith<_$GetPostImpl> get copyWith =>
@@ -514,13 +537,16 @@ abstract class _GetPost extends GetPost {
   factory _GetPost.fromJson(Map<String, dynamic> json) = _$GetPostImpl.fromJson;
 
   @override
-  int? get id;
-  @override // v0.18.0
-  int? get commentId;
-  @override // v0.18.0
-  String? get auth;
+  int? get id; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  int? get commentId; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of GetPost
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetPostImplCopyWith<_$GetPostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -543,8 +569,12 @@ mixin _$EditPost {
       throw _privateConstructorUsedError; // v0.19.4 (optional)
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this EditPost to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of EditPost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $EditPostCopyWith<EditPost> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -576,6 +606,8 @@ class _$EditPostCopyWithImpl<$Res, $Val extends EditPost>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of EditPost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -658,6 +690,8 @@ class __$$EditPostImplCopyWithImpl<$Res>
       _$EditPostImpl _value, $Res Function(_$EditPostImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of EditPost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -781,12 +815,14 @@ class _$EditPostImpl extends _EditPost {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, postId, name, url, body, altText,
       nsfw, languageId, customThumbnail, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EditPost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EditPostImplCopyWith<_$EditPostImpl> get copyWith =>
@@ -817,25 +853,28 @@ abstract class _EditPost extends EditPost {
       _$EditPostImpl.fromJson;
 
   @override
-  int get postId;
-  @override // v0.18.0
-  String? get name;
-  @override // v0.18.0
-  String? get url;
-  @override // v0.18.0
-  String? get body;
-  @override // v0.18.0
-  String? get altText;
-  @override // v0.19.4 (optional)
-  bool? get nsfw;
-  @override // v0.18.0
-  int? get languageId;
-  @override // v0.18.0
-  String? get customThumbnail;
-  @override // v0.19.4 (optional)
-  String? get auth;
+  int get postId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String? get name; // v0.18.0
+  @override
+  String? get url; // v0.18.0
+  @override
+  String? get body; // v0.18.0
+  @override
+  String? get altText; // v0.19.4 (optional)
+  @override
+  bool? get nsfw; // v0.18.0
+  @override
+  int? get languageId; // v0.18.0
+  @override
+  String? get customThumbnail; // v0.19.4 (optional)
+  @override
+  String? get auth;
+
+  /// Create a copy of EditPost
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EditPostImplCopyWith<_$EditPostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -850,8 +889,12 @@ mixin _$DeletePost {
   bool get deleted => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this DeletePost to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DeletePost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DeletePostCopyWith<DeletePost> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -875,6 +918,8 @@ class _$DeletePostCopyWithImpl<$Res, $Val extends DeletePost>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DeletePost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -918,6 +963,8 @@ class __$$DeletePostImplCopyWithImpl<$Res>
       _$DeletePostImpl _value, $Res Function(_$DeletePostImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DeletePost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -977,11 +1024,13 @@ class _$DeletePostImpl extends _DeletePost {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, postId, deleted, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeletePost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DeletePostImplCopyWith<_$DeletePostImpl> get copyWith =>
@@ -1006,13 +1055,16 @@ abstract class _DeletePost extends DeletePost {
       _$DeletePostImpl.fromJson;
 
   @override
-  int get postId;
-  @override // v0.18.0
-  bool get deleted;
-  @override // v0.18.0
-  String? get auth;
+  int get postId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  bool get deleted; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of DeletePost
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeletePostImplCopyWith<_$DeletePostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1028,8 +1080,12 @@ mixin _$RemovePost {
   String? get reason => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this RemovePost to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RemovePost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RemovePostCopyWith<RemovePost> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1053,6 +1109,8 @@ class _$RemovePostCopyWithImpl<$Res, $Val extends RemovePost>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RemovePost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1101,6 +1159,8 @@ class __$$RemovePostImplCopyWithImpl<$Res>
       _$RemovePostImpl _value, $Res Function(_$RemovePostImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RemovePost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1169,11 +1229,13 @@ class _$RemovePostImpl extends _RemovePost {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, postId, removed, reason, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RemovePost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RemovePostImplCopyWith<_$RemovePostImpl> get copyWith =>
@@ -1199,15 +1261,18 @@ abstract class _RemovePost extends RemovePost {
       _$RemovePostImpl.fromJson;
 
   @override
-  int get postId;
-  @override // v0.18.0
-  bool get removed;
-  @override // v0.18.0
-  String? get reason;
-  @override // v0.18.0
-  String? get auth;
+  int get postId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  bool get removed; // v0.18.0
+  @override
+  String? get reason; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of RemovePost
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RemovePostImplCopyWith<_$RemovePostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1226,8 +1291,12 @@ mixin _$MarkPostAsRead {
   bool get read => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this MarkPostAsRead to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MarkPostAsRead
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MarkPostAsReadCopyWith<MarkPostAsRead> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1252,6 +1321,8 @@ class _$MarkPostAsReadCopyWithImpl<$Res, $Val extends MarkPostAsRead>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MarkPostAsRead
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1301,6 +1372,8 @@ class __$$MarkPostAsReadImplCopyWithImpl<$Res>
       _$MarkPostAsReadImpl _value, $Res Function(_$MarkPostAsReadImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MarkPostAsRead
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1383,12 +1456,14 @@ class _$MarkPostAsReadImpl extends _MarkPostAsRead {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, postId,
       const DeepCollectionEquality().hash(_postIds), read, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MarkPostAsRead
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MarkPostAsReadImplCopyWith<_$MarkPostAsReadImpl> get copyWith =>
@@ -1416,15 +1491,19 @@ abstract class _MarkPostAsRead extends MarkPostAsRead {
 
   @override
   @deprecated
-  int? get postId;
-  @override // v0.18.0 (required), v0.19.0 (optional) [deprecated in v0.19.4]
-  List<int>? get postIds;
-  @override // v0.19.0 (optional)
-  bool get read;
-  @override // v0.18.0
-  String? get auth;
+  int?
+      get postId; // v0.18.0 (required), v0.19.0 (optional) [deprecated in v0.19.4]
   @override
-  @JsonKey(ignore: true)
+  List<int>? get postIds; // v0.19.0 (optional)
+  @override
+  bool get read; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of MarkPostAsRead
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MarkPostAsReadImplCopyWith<_$MarkPostAsReadImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1440,8 +1519,12 @@ mixin _$HidePost {
   bool get hide => throw _privateConstructorUsedError; // v0.19.4 (required)
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this HidePost to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HidePost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $HidePostCopyWith<HidePost> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1464,6 +1547,8 @@ class _$HidePostCopyWithImpl<$Res, $Val extends HidePost>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of HidePost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1507,6 +1592,8 @@ class __$$HidePostImplCopyWithImpl<$Res>
       _$HidePostImpl _value, $Res Function(_$HidePostImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HidePost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1573,12 +1660,14 @@ class _$HidePostImpl extends _HidePost {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_postIds), hide, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HidePost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$HidePostImplCopyWith<_$HidePostImpl> get copyWith =>
@@ -1603,13 +1692,16 @@ abstract class _HidePost extends HidePost {
       _$HidePostImpl.fromJson;
 
   @override
-  List<int> get postIds;
-  @override // v0.19.4 (required)
-  bool get hide;
-  @override // v0.19.4 (required)
-  String? get auth;
+  List<int> get postIds; // v0.19.4 (required)
   @override
-  @JsonKey(ignore: true)
+  bool get hide; // v0.19.4 (required)
+  @override
+  String? get auth;
+
+  /// Create a copy of HidePost
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HidePostImplCopyWith<_$HidePostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1624,8 +1716,12 @@ mixin _$LockPost {
   bool get locked => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this LockPost to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LockPost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LockPostCopyWith<LockPost> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1648,6 +1744,8 @@ class _$LockPostCopyWithImpl<$Res, $Val extends LockPost>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LockPost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1691,6 +1789,8 @@ class __$$LockPostImplCopyWithImpl<$Res>
       _$LockPostImpl _value, $Res Function(_$LockPostImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LockPost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1749,11 +1849,13 @@ class _$LockPostImpl extends _LockPost {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, postId, locked, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LockPost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LockPostImplCopyWith<_$LockPostImpl> get copyWith =>
@@ -1778,13 +1880,16 @@ abstract class _LockPost extends LockPost {
       _$LockPostImpl.fromJson;
 
   @override
-  int get postId;
-  @override // v0.18.0
-  bool get locked;
-  @override // v0.18.0
-  String? get auth;
+  int get postId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  bool get locked; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of LockPost
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LockPostImplCopyWith<_$LockPostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1801,8 +1906,12 @@ mixin _$FeaturePost {
       throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this FeaturePost to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FeaturePost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FeaturePostCopyWith<FeaturePost> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1827,6 +1936,8 @@ class _$FeaturePostCopyWithImpl<$Res, $Val extends FeaturePost>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FeaturePost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1876,6 +1987,8 @@ class __$$FeaturePostImplCopyWithImpl<$Res>
       _$FeaturePostImpl _value, $Res Function(_$FeaturePostImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FeaturePost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1949,12 +2062,14 @@ class _$FeaturePostImpl extends _FeaturePost {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, postId, featured, featureType, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FeaturePost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FeaturePostImplCopyWith<_$FeaturePostImpl> get copyWith =>
@@ -1980,15 +2095,18 @@ abstract class _FeaturePost extends FeaturePost {
       _$FeaturePostImpl.fromJson;
 
   @override
-  int get postId;
-  @override // v0.18.0
-  bool get featured;
-  @override // v0.18.0
-  PostFeatureType get featureType;
-  @override // v0.18.0
-  String? get auth;
+  int get postId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  bool get featured; // v0.18.0
+  @override
+  PostFeatureType get featureType; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of FeaturePost
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FeaturePostImplCopyWith<_$FeaturePostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2023,8 +2141,12 @@ mixin _$GetPosts {
       throw _privateConstructorUsedError; // v0.19.6 (optional)
   String? get pageCursor => throw _privateConstructorUsedError;
 
+  /// Serializes this GetPosts to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetPosts
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetPostsCopyWith<GetPosts> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2062,6 +2184,8 @@ class _$GetPostsCopyWithImpl<$Res, $Val extends GetPosts>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetPosts
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2180,6 +2304,8 @@ class __$$GetPostsImplCopyWithImpl<$Res>
       _$GetPostsImpl _value, $Res Function(_$GetPostsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetPosts
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2372,7 +2498,7 @@ class _$GetPostsImpl extends _GetPosts {
                 other.pageCursor == pageCursor));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2392,7 +2518,9 @@ class _$GetPostsImpl extends _GetPosts {
       showNsfw,
       pageCursor);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetPosts
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetPostsImplCopyWith<_$GetPostsImpl> get copyWith =>
@@ -2430,38 +2558,41 @@ abstract class _GetPosts extends GetPosts {
 
   @override
   @JsonKey(name: 'type_')
-  ListingType? get type;
-  @override // v0.18.0
-  SortType? get sort;
-  @override // v0.18.0
-  int? get page;
-  @override // v0.18.0
-  int? get limit;
-  @override // v0.18.0
-  int? get communityId;
-  @override // v0.18.0
-  String? get communityName;
-  @override // v0.18.0
-  bool? get savedOnly;
-  @override // v0.18.0
+  ListingType? get type; // v0.18.0
+  @override
+  SortType? get sort; // v0.18.0
+  @override
+  int? get page; // v0.18.0
+  @override
+  int? get limit; // v0.18.0
+  @override
+  int? get communityId; // v0.18.0
+  @override
+  String? get communityName; // v0.18.0
+  @override
+  bool? get savedOnly; // v0.18.0
+  @override
   @deprecated
-  bool? get moderatorView;
-  @override // v0.18.3 [deprecated in v0.19.0]
+  bool? get moderatorView; // v0.18.3 [deprecated in v0.19.0]
+  @override
   String? get auth;
   @override
-  bool? get likedOnly;
-  @override // v0.19.0 (optional)
-  bool? get dislikedOnly;
-  @override // v0.19.0 (optional)
-  bool? get showHidden;
-  @override // v0.19.4 (optional)
-  bool? get showRead;
-  @override // v0.19.6 (optional)
-  bool? get showNsfw;
-  @override // v0.19.6 (optional)
-  String? get pageCursor;
+  bool? get likedOnly; // v0.19.0 (optional)
   @override
-  @JsonKey(ignore: true)
+  bool? get dislikedOnly; // v0.19.0 (optional)
+  @override
+  bool? get showHidden; // v0.19.4 (optional)
+  @override
+  bool? get showRead; // v0.19.6 (optional)
+  @override
+  bool? get showNsfw; // v0.19.6 (optional)
+  @override
+  String? get pageCursor;
+
+  /// Create a copy of GetPosts
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetPostsImplCopyWith<_$GetPostsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2476,8 +2607,12 @@ mixin _$CreatePostLike {
   num get score => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this CreatePostLike to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CreatePostLike
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CreatePostLikeCopyWith<CreatePostLike> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2501,6 +2636,8 @@ class _$CreatePostLikeCopyWithImpl<$Res, $Val extends CreatePostLike>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CreatePostLike
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2544,6 +2681,8 @@ class __$$CreatePostLikeImplCopyWithImpl<$Res>
       _$CreatePostLikeImpl _value, $Res Function(_$CreatePostLikeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CreatePostLike
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2603,11 +2742,13 @@ class _$CreatePostLikeImpl extends _CreatePostLike {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, postId, score, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CreatePostLike
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CreatePostLikeImplCopyWith<_$CreatePostLikeImpl> get copyWith =>
@@ -2633,13 +2774,16 @@ abstract class _CreatePostLike extends CreatePostLike {
       _$CreatePostLikeImpl.fromJson;
 
   @override
-  int get postId;
-  @override // v0.18.0
-  num get score;
-  @override // v0.18.0
-  String? get auth;
+  int get postId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  num get score; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of CreatePostLike
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CreatePostLikeImplCopyWith<_$CreatePostLikeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2655,8 +2799,12 @@ mixin _$ListPostLikes {
   int? get limit => throw _privateConstructorUsedError; // v0.19.2 (optional)
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this ListPostLikes to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ListPostLikes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ListPostLikesCopyWith<ListPostLikes> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2680,6 +2828,8 @@ class _$ListPostLikesCopyWithImpl<$Res, $Val extends ListPostLikes>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ListPostLikes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2728,6 +2878,8 @@ class __$$ListPostLikesImplCopyWithImpl<$Res>
       _$ListPostLikesImpl _value, $Res Function(_$ListPostLikesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ListPostLikes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2796,11 +2948,13 @@ class _$ListPostLikesImpl extends _ListPostLikes {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, postId, page, limit, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ListPostLikes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ListPostLikesImplCopyWith<_$ListPostLikesImpl> get copyWith =>
@@ -2826,15 +2980,18 @@ abstract class _ListPostLikes extends ListPostLikes {
       _$ListPostLikesImpl.fromJson;
 
   @override
-  int get postId;
-  @override // v0.19.2 (required)
-  int? get page;
-  @override // v0.19.2 (optional)
-  int? get limit;
-  @override // v0.19.2 (optional)
-  String? get auth;
+  int get postId; // v0.19.2 (required)
   @override
-  @JsonKey(ignore: true)
+  int? get page; // v0.19.2 (optional)
+  @override
+  int? get limit; // v0.19.2 (optional)
+  @override
+  String? get auth;
+
+  /// Create a copy of ListPostLikes
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ListPostLikesImplCopyWith<_$ListPostLikesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2849,8 +3006,12 @@ mixin _$SavePost {
   bool get save => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this SavePost to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SavePost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SavePostCopyWith<SavePost> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2873,6 +3034,8 @@ class _$SavePostCopyWithImpl<$Res, $Val extends SavePost>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SavePost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2916,6 +3079,8 @@ class __$$SavePostImplCopyWithImpl<$Res>
       _$SavePostImpl _value, $Res Function(_$SavePostImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SavePost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2974,11 +3139,13 @@ class _$SavePostImpl extends _SavePost {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, postId, save, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SavePost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SavePostImplCopyWith<_$SavePostImpl> get copyWith =>
@@ -3003,13 +3170,16 @@ abstract class _SavePost extends SavePost {
       _$SavePostImpl.fromJson;
 
   @override
-  int get postId;
-  @override // v0.18.0
-  bool get save;
-  @override // v0.18.0
-  String? get auth;
+  int get postId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  bool get save; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of SavePost
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SavePostImplCopyWith<_$SavePostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3024,8 +3194,12 @@ mixin _$CreatePostReport {
   String get reason => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this CreatePostReport to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CreatePostReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CreatePostReportCopyWith<CreatePostReport> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3049,6 +3223,8 @@ class _$CreatePostReportCopyWithImpl<$Res, $Val extends CreatePostReport>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CreatePostReport
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3092,6 +3268,8 @@ class __$$CreatePostReportImplCopyWithImpl<$Res>
       $Res Function(_$CreatePostReportImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CreatePostReport
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3151,11 +3329,13 @@ class _$CreatePostReportImpl extends _CreatePostReport {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, postId, reason, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CreatePostReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CreatePostReportImplCopyWith<_$CreatePostReportImpl> get copyWith =>
@@ -3181,13 +3361,16 @@ abstract class _CreatePostReport extends CreatePostReport {
       _$CreatePostReportImpl.fromJson;
 
   @override
-  int get postId;
-  @override // v0.18.0
-  String get reason;
-  @override // v0.18.0
-  String? get auth;
+  int get postId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String get reason; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of CreatePostReport
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CreatePostReportImplCopyWith<_$CreatePostReportImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3202,8 +3385,12 @@ mixin _$ResolvePostReport {
   bool get resolved => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this ResolvePostReport to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ResolvePostReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ResolvePostReportCopyWith<ResolvePostReport> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3227,6 +3414,8 @@ class _$ResolvePostReportCopyWithImpl<$Res, $Val extends ResolvePostReport>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ResolvePostReport
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3270,6 +3459,8 @@ class __$$ResolvePostReportImplCopyWithImpl<$Res>
       $Res Function(_$ResolvePostReportImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ResolvePostReport
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3331,11 +3522,13 @@ class _$ResolvePostReportImpl extends _ResolvePostReport {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, reportId, resolved, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResolvePostReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ResolvePostReportImplCopyWith<_$ResolvePostReportImpl> get copyWith =>
@@ -3361,13 +3554,16 @@ abstract class _ResolvePostReport extends ResolvePostReport {
       _$ResolvePostReportImpl.fromJson;
 
   @override
-  int get reportId;
-  @override // v0.18.0
-  bool get resolved;
-  @override // v0.18.0
-  String? get auth;
+  int get reportId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  bool get resolved; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of ResolvePostReport
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ResolvePostReportImplCopyWith<_$ResolvePostReportImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3385,8 +3581,12 @@ mixin _$ListPostReports {
   int? get postId => throw _privateConstructorUsedError; // v0.19.4 (optional)
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this ListPostReports to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ListPostReports
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ListPostReportsCopyWith<ListPostReports> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3416,6 +3616,8 @@ class _$ListPostReportsCopyWithImpl<$Res, $Val extends ListPostReports>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ListPostReports
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3480,6 +3682,8 @@ class __$$ListPostReportsImplCopyWithImpl<$Res>
       _$ListPostReportsImpl _value, $Res Function(_$ListPostReportsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ListPostReports
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3573,12 +3777,14 @@ class _$ListPostReportsImpl extends _ListPostReports {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, page, limit, unresolvedOnly, communityId, postId, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ListPostReports
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ListPostReportsImplCopyWith<_$ListPostReportsImpl> get copyWith =>
@@ -3607,19 +3813,22 @@ abstract class _ListPostReports extends ListPostReports {
       _$ListPostReportsImpl.fromJson;
 
   @override
-  int? get page;
-  @override // v0.18.0
-  int? get limit;
-  @override // v0.18.0
-  bool? get unresolvedOnly;
-  @override // v0.18.0
-  int? get communityId;
-  @override // v0.18.0
-  int? get postId;
-  @override // v0.19.4 (optional)
-  String? get auth;
+  int? get page; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  int? get limit; // v0.18.0
+  @override
+  bool? get unresolvedOnly; // v0.18.0
+  @override
+  int? get communityId; // v0.18.0
+  @override
+  int? get postId; // v0.19.4 (optional)
+  @override
+  String? get auth;
+
+  /// Create a copy of ListPostReports
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ListPostReportsImplCopyWith<_$ListPostReportsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3632,8 +3841,12 @@ GetSiteMetadata _$GetSiteMetadataFromJson(Map<String, dynamic> json) {
 mixin _$GetSiteMetadata {
   String get url => throw _privateConstructorUsedError;
 
+  /// Serializes this GetSiteMetadata to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetSiteMetadata
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetSiteMetadataCopyWith<GetSiteMetadata> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3657,6 +3870,8 @@ class _$GetSiteMetadataCopyWithImpl<$Res, $Val extends GetSiteMetadata>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetSiteMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3690,6 +3905,8 @@ class __$$GetSiteMetadataImplCopyWithImpl<$Res>
       _$GetSiteMetadataImpl _value, $Res Function(_$GetSiteMetadataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetSiteMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3729,11 +3946,13 @@ class _$GetSiteMetadataImpl extends _GetSiteMetadata {
             (identical(other.url, url) || other.url == url));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, url);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetSiteMetadata
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetSiteMetadataImplCopyWith<_$GetSiteMetadataImpl> get copyWith =>
@@ -3758,8 +3977,11 @@ abstract class _GetSiteMetadata extends GetSiteMetadata {
 
   @override
   String get url;
+
+  /// Create a copy of GetSiteMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetSiteMetadataImplCopyWith<_$GetSiteMetadataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

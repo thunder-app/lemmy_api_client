@@ -9,9 +9,9 @@ part of 'get_unread_count_response.dart';
 _$GetUnreadCountResponseImpl _$$GetUnreadCountResponseImplFromJson(
         Map<String, dynamic> json) =>
     _$GetUnreadCountResponseImpl(
-      replies: json['replies'] as int,
-      mentions: json['mentions'] as int,
-      privateMessages: json['private_messages'] as int,
+      replies: (json['replies'] as num).toInt(),
+      mentions: (json['mentions'] as num).toInt(),
+      privateMessages: (json['private_messages'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$GetUnreadCountResponseImplToJson(

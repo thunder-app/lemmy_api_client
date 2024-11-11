@@ -22,8 +22,12 @@ CommentReplyResponse _$CommentReplyResponseFromJson(Map<String, dynamic> json) {
 mixin _$CommentReplyResponse {
   CommentReplyView get commentReplyView => throw _privateConstructorUsedError;
 
+  /// Serializes this CommentReplyResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CommentReplyResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CommentReplyResponseCopyWith<CommentReplyResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$CommentReplyResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CommentReplyResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -63,6 +69,8 @@ class _$CommentReplyResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of CommentReplyResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommentReplyViewCopyWith<$Res> get commentReplyView {
@@ -94,6 +102,8 @@ class __$$CommentReplyResponseImplCopyWithImpl<$Res>
       $Res Function(_$CommentReplyResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CommentReplyResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -135,11 +145,13 @@ class _$CommentReplyResponseImpl extends _CommentReplyResponse {
                 other.commentReplyView == commentReplyView));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, commentReplyView);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CommentReplyResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CommentReplyResponseImplCopyWith<_$CommentReplyResponseImpl>
@@ -166,8 +178,11 @@ abstract class _CommentReplyResponse extends CommentReplyResponse {
 
   @override
   CommentReplyView get commentReplyView;
+
+  /// Create a copy of CommentReplyResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CommentReplyResponseImplCopyWith<_$CommentReplyResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

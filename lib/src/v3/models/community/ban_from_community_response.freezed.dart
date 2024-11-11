@@ -24,8 +24,12 @@ mixin _$BanFromCommunityResponse {
   PersonView get personView => throw _privateConstructorUsedError; // v0.18.0
   bool get banned => throw _privateConstructorUsedError;
 
+  /// Serializes this BanFromCommunityResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BanFromCommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BanFromCommunityResponseCopyWith<BanFromCommunityResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$BanFromCommunityResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of BanFromCommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -70,6 +76,8 @@ class _$BanFromCommunityResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of BanFromCommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonViewCopyWith<$Res> get personView {
@@ -104,6 +112,8 @@ class __$$BanFromCommunityResponseImplCopyWithImpl<$Res>
       $Res Function(_$BanFromCommunityResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BanFromCommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -155,11 +165,13 @@ class _$BanFromCommunityResponseImpl extends _BanFromCommunityResponse {
             (identical(other.banned, banned) || other.banned == banned));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, personView, banned);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BanFromCommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BanFromCommunityResponseImplCopyWith<_$BanFromCommunityResponseImpl>
@@ -184,11 +196,14 @@ abstract class _BanFromCommunityResponse extends BanFromCommunityResponse {
       _$BanFromCommunityResponseImpl.fromJson;
 
   @override
-  PersonView get personView;
-  @override // v0.18.0
-  bool get banned;
+  PersonView get personView; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  bool get banned;
+
+  /// Create a copy of BanFromCommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BanFromCommunityResponseImplCopyWith<_$BanFromCommunityResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

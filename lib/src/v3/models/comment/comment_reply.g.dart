@@ -8,9 +8,9 @@ part of 'comment_reply.dart';
 
 _$CommentReplyImpl _$$CommentReplyImplFromJson(Map<String, dynamic> json) =>
     _$CommentReplyImpl(
-      id: json['id'] as int,
-      recipientId: json['recipient_id'] as int,
-      commentId: json['comment_id'] as int,
+      id: (json['id'] as num).toInt(),
+      recipientId: (json['recipient_id'] as num).toInt(),
+      commentId: (json['comment_id'] as num).toInt(),
       read: json['read'] as bool,
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
     );

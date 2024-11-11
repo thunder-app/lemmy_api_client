@@ -22,8 +22,12 @@ ListMediaResponse _$ListMediaResponseFromJson(Map<String, dynamic> json) {
 mixin _$ListMediaResponse {
   List<LocalImageView> get images => throw _privateConstructorUsedError;
 
+  /// Serializes this ListMediaResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ListMediaResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ListMediaResponseCopyWith<ListMediaResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$ListMediaResponseCopyWithImpl<$Res, $Val extends ListMediaResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ListMediaResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$ListMediaResponseImplCopyWithImpl<$Res>
       $Res Function(_$ListMediaResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ListMediaResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -126,12 +134,14 @@ class _$ListMediaResponseImpl extends _ListMediaResponse {
             const DeepCollectionEquality().equals(other._images, _images));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_images));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ListMediaResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ListMediaResponseImplCopyWith<_$ListMediaResponseImpl> get copyWith =>
@@ -156,8 +166,11 @@ abstract class _ListMediaResponse extends ListMediaResponse {
 
   @override
   List<LocalImageView> get images;
+
+  /// Create a copy of ListMediaResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ListMediaResponseImplCopyWith<_$ListMediaResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

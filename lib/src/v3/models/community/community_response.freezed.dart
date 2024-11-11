@@ -24,8 +24,12 @@ mixin _$CommunityResponse {
       throw _privateConstructorUsedError; // v0.18.0
   List<int> get discussionLanguages => throw _privateConstructorUsedError;
 
+  /// Serializes this CommunityResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CommunityResponseCopyWith<CommunityResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$CommunityResponseCopyWithImpl<$Res, $Val extends CommunityResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -69,6 +75,8 @@ class _$CommunityResponseCopyWithImpl<$Res, $Val extends CommunityResponse>
     ) as $Val);
   }
 
+  /// Create a copy of CommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommunityViewCopyWith<$Res> get communityView {
@@ -100,6 +108,8 @@ class __$$CommunityResponseImplCopyWithImpl<$Res>
       $Res Function(_$CommunityResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -161,12 +171,14 @@ class _$CommunityResponseImpl extends _CommunityResponse {
                 .equals(other._discussionLanguages, _discussionLanguages));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, communityView,
       const DeepCollectionEquality().hash(_discussionLanguages));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CommunityResponseImplCopyWith<_$CommunityResponseImpl> get copyWith =>
@@ -191,11 +203,14 @@ abstract class _CommunityResponse extends CommunityResponse {
       _$CommunityResponseImpl.fromJson;
 
   @override
-  CommunityView get communityView;
-  @override // v0.18.0
-  List<int> get discussionLanguages;
+  CommunityView get communityView; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  List<int> get discussionLanguages;
+
+  /// Create a copy of CommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CommunityResponseImplCopyWith<_$CommunityResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

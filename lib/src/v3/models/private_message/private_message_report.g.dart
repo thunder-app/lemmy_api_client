@@ -9,13 +9,13 @@ part of 'private_message_report.dart';
 _$PrivateMessageReportImpl _$$PrivateMessageReportImplFromJson(
         Map<String, dynamic> json) =>
     _$PrivateMessageReportImpl(
-      id: json['id'] as int,
-      creatorId: json['creator_id'] as int,
-      privateMessageId: json['private_message_id'] as int,
+      id: (json['id'] as num).toInt(),
+      creatorId: (json['creator_id'] as num).toInt(),
+      privateMessageId: (json['private_message_id'] as num).toInt(),
       originalPmText: json['original_pm_text'] as String,
       reason: json['reason'] as String,
       resolved: json['resolved'] as bool,
-      resolverId: json['resolver_id'] as int?,
+      resolverId: (json['resolver_id'] as num?)?.toInt(),
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
       updated: _$JsonConverterFromJson<String, DateTime>(
           json['updated'], const ForceUtcDateTime().fromJson),

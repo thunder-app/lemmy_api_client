@@ -24,8 +24,12 @@ mixin _$GetFederatedInstancesResponse {
   FederatedInstances? get federatedInstances =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this GetFederatedInstancesResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetFederatedInstancesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetFederatedInstancesResponseCopyWith<GetFederatedInstancesResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -54,6 +58,8 @@ class _$GetFederatedInstancesResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetFederatedInstancesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -67,6 +73,8 @@ class _$GetFederatedInstancesResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of GetFederatedInstancesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $FederatedInstancesCopyWith<$Res>? get federatedInstances {
@@ -106,6 +114,8 @@ class __$$GetFederatedInstancesResponseImplCopyWithImpl<$Res>
       $Res Function(_$GetFederatedInstancesResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetFederatedInstancesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -149,11 +159,13 @@ class _$GetFederatedInstancesResponseImpl
                 other.federatedInstances == federatedInstances));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, federatedInstances);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetFederatedInstancesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetFederatedInstancesResponseImplCopyWith<
@@ -181,8 +193,11 @@ abstract class _GetFederatedInstancesResponse
 
   @override
   FederatedInstances? get federatedInstances;
+
+  /// Create a copy of GetFederatedInstancesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetFederatedInstancesResponseImplCopyWith<
           _$GetFederatedInstancesResponseImpl>
       get copyWith => throw _privateConstructorUsedError;

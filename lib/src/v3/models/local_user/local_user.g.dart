@@ -8,8 +8,8 @@ part of 'local_user.dart';
 
 _$LocalUserImpl _$$LocalUserImplFromJson(Map<String, dynamic> json) =>
     _$LocalUserImpl(
-      id: json['id'] as int,
-      personId: json['person_id'] as int,
+      id: (json['id'] as num).toInt(),
+      personId: (json['person_id'] as num).toInt(),
       email: json['email'] as String?,
       showNsfw: json['show_nsfw'] as bool,
       blurNsfw: json['blur_nsfw'] as bool?,

@@ -8,9 +8,9 @@ part of 'person_mention.dart';
 
 _$PersonMentionImpl _$$PersonMentionImplFromJson(Map<String, dynamic> json) =>
     _$PersonMentionImpl(
-      id: json['id'] as int,
-      recipientId: json['recipient_id'] as int,
-      commentId: json['comment_id'] as int,
+      id: (json['id'] as num).toInt(),
+      recipientId: (json['recipient_id'] as num).toInt(),
+      commentId: (json['comment_id'] as num).toInt(),
       read: json['read'] as bool,
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
     );

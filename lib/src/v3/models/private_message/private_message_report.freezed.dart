@@ -30,8 +30,12 @@ mixin _$PrivateMessageReport {
   DateTime get published => throw _privateConstructorUsedError; // v0.18.0
   DateTime? get updated => throw _privateConstructorUsedError;
 
+  /// Serializes this PrivateMessageReport to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PrivateMessageReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PrivateMessageReportCopyWith<PrivateMessageReport> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -65,6 +69,8 @@ class _$PrivateMessageReportCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PrivateMessageReport
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -147,6 +153,8 @@ class __$$PrivateMessageReportImplCopyWithImpl<$Res>
       $Res Function(_$PrivateMessageReportImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PrivateMessageReport
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -274,12 +282,14 @@ class _$PrivateMessageReportImpl extends _PrivateMessageReport {
             (identical(other.updated, updated) || other.updated == updated));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, creatorId, privateMessageId,
       originalPmText, reason, resolved, resolverId, published, updated);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PrivateMessageReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PrivateMessageReportImplCopyWith<_$PrivateMessageReportImpl>
@@ -312,25 +322,28 @@ abstract class _PrivateMessageReport extends PrivateMessageReport {
       _$PrivateMessageReportImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  int get creatorId;
-  @override // v0.18.0
-  int get privateMessageId;
-  @override // v0.18.0
-  String get originalPmText;
-  @override // v0.18.0
-  String get reason;
-  @override // v0.18.0
-  bool get resolved;
-  @override // v0.18.0
-  int? get resolverId;
-  @override // v0.18.0
-  DateTime get published;
-  @override // v0.18.0
-  DateTime? get updated;
+  int get id; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  int get creatorId; // v0.18.0
+  @override
+  int get privateMessageId; // v0.18.0
+  @override
+  String get originalPmText; // v0.18.0
+  @override
+  String get reason; // v0.18.0
+  @override
+  bool get resolved; // v0.18.0
+  @override
+  int? get resolverId; // v0.18.0
+  @override
+  DateTime get published; // v0.18.0
+  @override
+  DateTime? get updated;
+
+  /// Create a copy of PrivateMessageReport
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PrivateMessageReportImplCopyWith<_$PrivateMessageReportImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

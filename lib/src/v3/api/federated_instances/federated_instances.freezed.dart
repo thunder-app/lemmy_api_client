@@ -23,8 +23,12 @@ GetFederatedInstances _$GetFederatedInstancesFromJson(
 mixin _$GetFederatedInstances {
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this GetFederatedInstances to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetFederatedInstances
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetFederatedInstancesCopyWith<GetFederatedInstances> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$GetFederatedInstancesCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetFederatedInstances
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -84,6 +90,8 @@ class __$$GetFederatedInstancesImplCopyWithImpl<$Res>
       $Res Function(_$GetFederatedInstancesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetFederatedInstances
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -123,11 +131,13 @@ class _$GetFederatedInstancesImpl extends _GetFederatedInstances {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetFederatedInstances
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetFederatedInstancesImplCopyWith<_$GetFederatedInstancesImpl>
@@ -152,8 +162,11 @@ abstract class _GetFederatedInstances extends GetFederatedInstances {
 
   @override
   String? get auth;
+
+  /// Create a copy of GetFederatedInstances
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetFederatedInstancesImplCopyWith<_$GetFederatedInstancesImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -8,7 +8,7 @@ part of 'local_image.dart';
 
 _$LocalImageImpl _$$LocalImageImplFromJson(Map<String, dynamic> json) =>
     _$LocalImageImpl(
-      localUserId: json['local_user_id'] as int?,
+      localUserId: (json['local_user_id'] as num?)?.toInt(),
       pictrsAlias: json['pictrs_alias'] as String,
       pictrsDeleteToken: json['pictrs_delete_token'] as String,
       published: json['published'] as String,

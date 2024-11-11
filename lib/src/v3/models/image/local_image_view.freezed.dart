@@ -23,8 +23,12 @@ mixin _$LocalImageView {
   Person get person => throw _privateConstructorUsedError; // v0.19.4
   LocalImage get localImage => throw _privateConstructorUsedError;
 
+  /// Serializes this LocalImageView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LocalImageView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LocalImageViewCopyWith<LocalImageView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$LocalImageViewCopyWithImpl<$Res, $Val extends LocalImageView>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LocalImageView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -69,6 +75,8 @@ class _$LocalImageViewCopyWithImpl<$Res, $Val extends LocalImageView>
     ) as $Val);
   }
 
+  /// Create a copy of LocalImageView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res> get person {
@@ -77,6 +85,8 @@ class _$LocalImageViewCopyWithImpl<$Res, $Val extends LocalImageView>
     });
   }
 
+  /// Create a copy of LocalImageView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $LocalImageCopyWith<$Res> get localImage {
@@ -110,6 +120,8 @@ class __$$LocalImageViewImplCopyWithImpl<$Res>
       _$LocalImageViewImpl _value, $Res Function(_$LocalImageViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LocalImageView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -160,11 +172,13 @@ class _$LocalImageViewImpl extends _LocalImageView {
                 other.localImage == localImage));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, person, localImage);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LocalImageView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LocalImageViewImplCopyWith<_$LocalImageViewImpl> get copyWith =>
@@ -189,11 +203,14 @@ abstract class _LocalImageView extends LocalImageView {
       _$LocalImageViewImpl.fromJson;
 
   @override
-  Person get person;
-  @override // v0.19.4
-  LocalImage get localImage;
+  Person get person; // v0.19.4
   @override
-  @JsonKey(ignore: true)
+  LocalImage get localImage;
+
+  /// Create a copy of LocalImageView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LocalImageViewImplCopyWith<_$LocalImageViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

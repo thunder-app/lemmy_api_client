@@ -24,8 +24,12 @@ mixin _$CaptchaResponse {
   String get wav => throw _privateConstructorUsedError; // v0.18.0
   String get uuid => throw _privateConstructorUsedError;
 
+  /// Serializes this CaptchaResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CaptchaResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CaptchaResponseCopyWith<CaptchaResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$CaptchaResponseCopyWithImpl<$Res, $Val extends CaptchaResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CaptchaResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +98,8 @@ class __$$CaptchaResponseImplCopyWithImpl<$Res>
       _$CaptchaResponseImpl _value, $Res Function(_$CaptchaResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CaptchaResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -151,11 +159,13 @@ class _$CaptchaResponseImpl extends _CaptchaResponse {
             (identical(other.uuid, uuid) || other.uuid == uuid));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, png, wav, uuid);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CaptchaResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CaptchaResponseImplCopyWith<_$CaptchaResponseImpl> get copyWith =>
@@ -181,13 +191,16 @@ abstract class _CaptchaResponse extends CaptchaResponse {
       _$CaptchaResponseImpl.fromJson;
 
   @override
-  String get png;
-  @override // v0.18.0
-  String get wav;
-  @override // v0.18.0
-  String get uuid;
+  String get png; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String get wav; // v0.18.0
+  @override
+  String get uuid;
+
+  /// Create a copy of CaptchaResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CaptchaResponseImplCopyWith<_$CaptchaResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

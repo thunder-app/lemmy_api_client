@@ -26,8 +26,12 @@ mixin _$LocalImage {
   String get pictrsDeleteToken => throw _privateConstructorUsedError; // v0.19.0
   String get published => throw _privateConstructorUsedError;
 
+  /// Serializes this LocalImage to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LocalImage
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LocalImageCopyWith<LocalImage> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$LocalImageCopyWithImpl<$Res, $Val extends LocalImage>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LocalImage
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -107,6 +113,8 @@ class __$$LocalImageImplCopyWithImpl<$Res>
       _$LocalImageImpl _value, $Res Function(_$LocalImageImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LocalImage
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -182,12 +190,14 @@ class _$LocalImageImpl extends _LocalImage {
                 other.published == published));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, localUserId, pictrsAlias, pictrsDeleteToken, published);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LocalImage
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LocalImageImplCopyWith<_$LocalImageImpl> get copyWith =>
@@ -213,15 +223,18 @@ abstract class _LocalImage extends LocalImage {
       _$LocalImageImpl.fromJson;
 
   @override
-  int? get localUserId;
-  @override // v0.19.0 (optional)
-  String get pictrsAlias;
-  @override // v0.19.0
-  String get pictrsDeleteToken;
-  @override // v0.19.0
-  String get published;
+  int? get localUserId; // v0.19.0 (optional)
   @override
-  @JsonKey(ignore: true)
+  String get pictrsAlias; // v0.19.0
+  @override
+  String get pictrsDeleteToken; // v0.19.0
+  @override
+  String get published;
+
+  /// Create a copy of LocalImage
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LocalImageImplCopyWith<_$LocalImageImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

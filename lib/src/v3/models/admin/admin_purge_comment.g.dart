@@ -9,9 +9,9 @@ part of 'admin_purge_comment.dart';
 _$AdminPurgeCommentImpl _$$AdminPurgeCommentImplFromJson(
         Map<String, dynamic> json) =>
     _$AdminPurgeCommentImpl(
-      id: json['id'] as int,
-      adminPersonId: json['admin_person_id'] as int,
-      postId: json['post_id'] as int,
+      id: (json['id'] as num).toInt(),
+      adminPersonId: (json['admin_person_id'] as num).toInt(),
+      postId: (json['post_id'] as num).toInt(),
       reason: json['reason'] as String?,
       when: json['when_'] as String,
     );

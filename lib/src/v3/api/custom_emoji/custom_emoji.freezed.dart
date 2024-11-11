@@ -27,8 +27,12 @@ mixin _$CreateCustomEmoji {
   List<String> get keywords => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this CreateCustomEmoji to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CreateCustomEmoji
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CreateCustomEmojiCopyWith<CreateCustomEmoji> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,6 +62,8 @@ class _$CreateCustomEmojiCopyWithImpl<$Res, $Val extends CreateCustomEmoji>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CreateCustomEmoji
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -122,6 +128,8 @@ class __$$CreateCustomEmojiImplCopyWithImpl<$Res>
       $Res Function(_$CreateCustomEmojiImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CreateCustomEmoji
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -224,12 +232,14 @@ class _$CreateCustomEmojiImpl extends _CreateCustomEmoji {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, category, shortcode, imageUrl,
       altText, const DeepCollectionEquality().hash(_keywords), auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CreateCustomEmoji
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CreateCustomEmojiImplCopyWith<_$CreateCustomEmojiImpl> get copyWith =>
@@ -258,19 +268,22 @@ abstract class _CreateCustomEmoji extends CreateCustomEmoji {
       _$CreateCustomEmojiImpl.fromJson;
 
   @override
-  String get category;
-  @override // v0.18.0
-  String get shortcode;
-  @override // v0.18.0
-  String get imageUrl;
-  @override // v0.18.0
-  String get altText;
-  @override // v0.18.0
-  List<String> get keywords;
-  @override // v0.18.0
-  String? get auth;
+  String get category; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String get shortcode; // v0.18.0
+  @override
+  String get imageUrl; // v0.18.0
+  @override
+  String get altText; // v0.18.0
+  @override
+  List<String> get keywords; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of CreateCustomEmoji
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CreateCustomEmojiImplCopyWith<_$CreateCustomEmojiImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -288,8 +301,12 @@ mixin _$EditCustomEmoji {
   List<String> get keywords => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this EditCustomEmoji to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of EditCustomEmoji
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $EditCustomEmojiCopyWith<EditCustomEmoji> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -319,6 +336,8 @@ class _$EditCustomEmojiCopyWithImpl<$Res, $Val extends EditCustomEmoji>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of EditCustomEmoji
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -383,6 +402,8 @@ class __$$EditCustomEmojiImplCopyWithImpl<$Res>
       _$EditCustomEmojiImpl _value, $Res Function(_$EditCustomEmojiImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of EditCustomEmoji
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -484,12 +505,14 @@ class _$EditCustomEmojiImpl extends _EditCustomEmoji {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, category, imageUrl, altText,
       const DeepCollectionEquality().hash(_keywords), auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EditCustomEmoji
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EditCustomEmojiImplCopyWith<_$EditCustomEmojiImpl> get copyWith =>
@@ -518,19 +541,22 @@ abstract class _EditCustomEmoji extends EditCustomEmoji {
       _$EditCustomEmojiImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  String get category;
-  @override // v0.18.0
-  String get imageUrl;
-  @override // v0.18.0
-  String get altText;
-  @override // v0.18.0
-  List<String> get keywords;
-  @override // v0.18.0
-  String? get auth;
+  int get id; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String get category; // v0.18.0
+  @override
+  String get imageUrl; // v0.18.0
+  @override
+  String get altText; // v0.18.0
+  @override
+  List<String> get keywords; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of EditCustomEmoji
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EditCustomEmojiImplCopyWith<_$EditCustomEmojiImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -544,8 +570,12 @@ mixin _$DeleteCustomEmoji {
   int get id => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this DeleteCustomEmoji to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DeleteCustomEmoji
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DeleteCustomEmojiCopyWith<DeleteCustomEmoji> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -569,6 +599,8 @@ class _$DeleteCustomEmojiCopyWithImpl<$Res, $Val extends DeleteCustomEmoji>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DeleteCustomEmoji
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -607,6 +639,8 @@ class __$$DeleteCustomEmojiImplCopyWithImpl<$Res>
       $Res Function(_$DeleteCustomEmojiImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DeleteCustomEmoji
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -655,11 +689,13 @@ class _$DeleteCustomEmojiImpl extends _DeleteCustomEmoji {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeleteCustomEmoji
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DeleteCustomEmojiImplCopyWith<_$DeleteCustomEmojiImpl> get copyWith =>
@@ -683,11 +719,14 @@ abstract class _DeleteCustomEmoji extends DeleteCustomEmoji {
       _$DeleteCustomEmojiImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  String? get auth;
+  int get id; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String? get auth;
+
+  /// Create a copy of DeleteCustomEmoji
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeleteCustomEmojiImplCopyWith<_$DeleteCustomEmojiImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -8,7 +8,7 @@ part of 'instance.dart';
 
 _$InstanceImpl _$$InstanceImplFromJson(Map<String, dynamic> json) =>
     _$InstanceImpl(
-      id: json['id'] as int,
+      id: (json['id'] as num).toInt(),
       domain: json['domain'] as String,
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
       updated: _$JsonConverterFromJson<String, DateTime>(

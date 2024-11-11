@@ -22,8 +22,12 @@ GetSite _$GetSiteFromJson(Map<String, dynamic> json) {
 mixin _$GetSite {
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this GetSite to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetSite
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetSiteCopyWith<GetSite> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -45,6 +49,8 @@ class _$GetSiteCopyWithImpl<$Res, $Val extends GetSite>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetSite
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -77,6 +83,8 @@ class __$$GetSiteImplCopyWithImpl<$Res>
       _$GetSiteImpl _value, $Res Function(_$GetSiteImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetSite
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -116,11 +124,13 @@ class _$GetSiteImpl extends _GetSite {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetSite
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetSiteImplCopyWith<_$GetSiteImpl> get copyWith =>
@@ -142,8 +152,11 @@ abstract class _GetSite extends GetSite {
 
   @override
   String? get auth;
+
+  /// Create a copy of GetSite
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetSiteImplCopyWith<_$GetSiteImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -220,8 +233,12 @@ mixin _$CreateSite {
       throw _privateConstructorUsedError; // v0.19.4 (optional)
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this CreateSite to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CreateSite
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CreateSiteCopyWith<CreateSite> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -289,6 +306,8 @@ class _$CreateSiteCopyWithImpl<$Res, $Val extends CreateSite>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CreateSite
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -581,6 +600,8 @@ class __$$CreateSiteImplCopyWithImpl<$Res>
       _$CreateSiteImpl _value, $Res Function(_$CreateSiteImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CreateSite
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1123,7 +1144,7 @@ class _$CreateSiteImpl extends _CreateSite {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -1173,7 +1194,9 @@ class _$CreateSiteImpl extends _CreateSite {
         auth
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CreateSite
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CreateSiteImplCopyWith<_$CreateSiteImpl> get copyWith =>
@@ -1239,96 +1262,99 @@ abstract class _CreateSite extends CreateSite {
       _$CreateSiteImpl.fromJson;
 
   @override
-  String get name;
-  @override // v0.18.0
-  String? get sidebar;
-  @override // v0.18.0
-  String? get description;
-  @override // v0.18.0
-  String? get icon;
-  @override // v0.18.0
-  String? get banner;
-  @override // v0.18.0
-  bool? get enableDownvotes;
-  @override // v0.18.0
-  bool? get enableNsfw;
-  @override // v0.18.0
-  bool? get communityCreationAdminOnly;
-  @override // v0.18.0
-  bool? get requireEmailVerification;
-  @override // v0.18.0
-  String? get applicationQuestion;
-  @override // v0.18.0
-  bool? get privateInstance;
-  @override // v0.18.0
-  String? get defaultTheme;
-  @override // v0.18.0
-  ListingType? get defaultPostListingType;
-  @override // v0.18.0
-  SortType? get defaultSortType;
-  @override // v0.19.4 (optional)
-  String? get legalInformation;
-  @override // v0.18.0
-  bool? get applicationEmailAdmins;
-  @override // v0.18.0
-  bool? get hideModlogModNames;
-  @override // v0.18.0
-  List<int>? get discussionLanguages;
-  @override // v0.18.0
-  String? get slurFilterRegex;
-  @override // v0.18.0
-  int? get actorNameMaxLength;
-  @override // v0.18.0
-  int? get rateLimitMessage;
-  @override // v0.18.0
-  int? get rateLimitMessagePerSecond;
-  @override // v0.18.0
-  int? get rateLimitPost;
-  @override // v0.18.0
-  int? get rateLimitPostPerSecond;
-  @override // v0.18.0
-  int? get rateLimitRegister;
-  @override // v0.18.0
-  int? get rateLimitRegisterPerSecond;
-  @override // v0.18.0
-  int? get rateLimitImage;
-  @override // v0.18.0
-  int? get rateLimitImagePerSecond;
-  @override // v0.18.0
-  int? get rateLimitComment;
-  @override // v0.18.0
-  int? get rateLimitCommentPerSecond;
-  @override // v0.18.0
-  int? get rateLimitSearch;
-  @override // v0.18.0
-  int? get rateLimitSearchPerSecond;
-  @override // v0.18.0
-  bool? get federationEnabled;
-  @override // v0.18.0
-  bool? get federationDebug;
-  @override // v0.18.0
-  @deprecated
-  int? get federationWorkerCount;
-  @override // v0.18.0 [deprecated in v0.18.1]
-  bool? get captchaEnabled;
-  @override // v0.18.0
-  String? get captchaDifficulty;
-  @override // v0.18.0
-  List<String>? get allowedInstances;
-  @override // v0.18.0
-  List<String>? get blockedInstances;
-  @override // v0.18.0
-  List<String>? get taglines;
-  @override // v0.18.0
-  RegistrationMode? get registrationMode;
-  @override // v0.18.0
-  String? get contentWarning;
-  @override // v0.19.4 (optional)
-  String? get defaultPostListingMode;
-  @override // v0.19.4 (optional)
-  String? get auth;
+  String get name; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String? get sidebar; // v0.18.0
+  @override
+  String? get description; // v0.18.0
+  @override
+  String? get icon; // v0.18.0
+  @override
+  String? get banner; // v0.18.0
+  @override
+  bool? get enableDownvotes; // v0.18.0
+  @override
+  bool? get enableNsfw; // v0.18.0
+  @override
+  bool? get communityCreationAdminOnly; // v0.18.0
+  @override
+  bool? get requireEmailVerification; // v0.18.0
+  @override
+  String? get applicationQuestion; // v0.18.0
+  @override
+  bool? get privateInstance; // v0.18.0
+  @override
+  String? get defaultTheme; // v0.18.0
+  @override
+  ListingType? get defaultPostListingType; // v0.18.0
+  @override
+  SortType? get defaultSortType; // v0.19.4 (optional)
+  @override
+  String? get legalInformation; // v0.18.0
+  @override
+  bool? get applicationEmailAdmins; // v0.18.0
+  @override
+  bool? get hideModlogModNames; // v0.18.0
+  @override
+  List<int>? get discussionLanguages; // v0.18.0
+  @override
+  String? get slurFilterRegex; // v0.18.0
+  @override
+  int? get actorNameMaxLength; // v0.18.0
+  @override
+  int? get rateLimitMessage; // v0.18.0
+  @override
+  int? get rateLimitMessagePerSecond; // v0.18.0
+  @override
+  int? get rateLimitPost; // v0.18.0
+  @override
+  int? get rateLimitPostPerSecond; // v0.18.0
+  @override
+  int? get rateLimitRegister; // v0.18.0
+  @override
+  int? get rateLimitRegisterPerSecond; // v0.18.0
+  @override
+  int? get rateLimitImage; // v0.18.0
+  @override
+  int? get rateLimitImagePerSecond; // v0.18.0
+  @override
+  int? get rateLimitComment; // v0.18.0
+  @override
+  int? get rateLimitCommentPerSecond; // v0.18.0
+  @override
+  int? get rateLimitSearch; // v0.18.0
+  @override
+  int? get rateLimitSearchPerSecond; // v0.18.0
+  @override
+  bool? get federationEnabled; // v0.18.0
+  @override
+  bool? get federationDebug; // v0.18.0
+  @override
+  @deprecated
+  int? get federationWorkerCount; // v0.18.0 [deprecated in v0.18.1]
+  @override
+  bool? get captchaEnabled; // v0.18.0
+  @override
+  String? get captchaDifficulty; // v0.18.0
+  @override
+  List<String>? get allowedInstances; // v0.18.0
+  @override
+  List<String>? get blockedInstances; // v0.18.0
+  @override
+  List<String>? get taglines; // v0.18.0
+  @override
+  RegistrationMode? get registrationMode; // v0.18.0
+  @override
+  String? get contentWarning; // v0.19.4 (optional)
+  @override
+  String? get defaultPostListingMode; // v0.19.4 (optional)
+  @override
+  String? get auth;
+
+  /// Create a copy of CreateSite
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CreateSiteImplCopyWith<_$CreateSiteImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1408,8 +1434,12 @@ mixin _$EditSite {
       throw _privateConstructorUsedError; // v0.19.4 (optional)
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this EditSite to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of EditSite
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $EditSiteCopyWith<EditSite> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1478,6 +1508,8 @@ class _$EditSiteCopyWithImpl<$Res, $Val extends EditSite>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of EditSite
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1782,6 +1814,8 @@ class __$$EditSiteImplCopyWithImpl<$Res>
       _$EditSiteImpl _value, $Res Function(_$EditSiteImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of EditSite
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2354,7 +2388,7 @@ class _$EditSiteImpl extends _EditSite {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -2406,7 +2440,9 @@ class _$EditSiteImpl extends _EditSite {
         auth
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EditSite
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EditSiteImplCopyWith<_$EditSiteImpl> get copyWith =>
@@ -2474,100 +2510,103 @@ abstract class _EditSite extends EditSite {
       _$EditSiteImpl.fromJson;
 
   @override
-  String? get name;
-  @override // v0.18.0
-  String? get sidebar;
-  @override // v0.18.0
-  String? get description;
-  @override // v0.18.0
-  String? get icon;
-  @override // v0.18.0
-  String? get banner;
-  @override // v0.18.0
-  bool? get enableDownvotes;
-  @override // v0.18.0
-  bool? get enableNsfw;
-  @override // v0.18.0
-  bool? get communityCreationAdminOnly;
-  @override // v0.18.0
-  bool? get requireEmailVerification;
-  @override // v0.18.0
-  String? get applicationQuestion;
-  @override // v0.18.0
-  bool? get privateInstance;
-  @override // v0.18.0
-  String? get defaultTheme;
-  @override // v0.18.0
-  ListingType? get defaultPostListingType;
-  @override // v0.18.0
-  SortType? get defaultSortType;
-  @override // v0.19.4 (optional)
-  String? get legalInformation;
-  @override // v0.18.0
-  bool? get applicationEmailAdmins;
-  @override // v0.18.0
-  bool? get hideModlogModNames;
-  @override // v0.18.0
-  List<int>? get discussionLanguages;
-  @override // v0.18.0
-  String? get slurFilterRegex;
-  @override // v0.18.0
-  int? get actorNameMaxLength;
-  @override // v0.18.0
-  int? get rateLimitMessage;
-  @override // v0.18.0
-  int? get rateLimitMessagePerSecond;
-  @override // v0.18.0
-  int? get rateLimitPost;
-  @override // v0.18.0
-  int? get rateLimitPostPerSecond;
-  @override // v0.18.0
-  int? get rateLimitRegister;
-  @override // v0.18.0
-  int? get rateLimitRegisterPerSecond;
-  @override // v0.18.0
-  int? get rateLimitImage;
-  @override // v0.18.0
-  int? get rateLimitImagePerSecond;
-  @override // v0.18.0
-  int? get rateLimitComment;
-  @override // v0.18.0
-  int? get rateLimitCommentPerSecond;
-  @override // v0.18.0
-  int? get rateLimitSearch;
-  @override // v0.18.0
-  int? get rateLimitSearchPerSecond;
-  @override // v0.18.0
-  bool? get federationEnabled;
-  @override // v0.18.0
-  bool? get federationDebug;
-  @override // v0.18.0
-  @deprecated
-  int? get federationWorkerCount;
-  @override // v0.18.0 [deprecated in v0.18.1]
-  bool? get captchaEnabled;
-  @override // v0.18.0
-  String? get captchaDifficulty;
-  @override // v0.18.0
-  List<String>? get allowedInstances;
-  @override // v0.18.0
-  List<String>? get blockedInstances;
-  @override // v0.18.0
-  List<String>? get blockedUrls;
-  @override // v0.19.4 (optional)
-  List<String>? get taglines;
-  @override // v0.18.0
-  RegistrationMode? get registrationMode;
-  @override // v0.18.0
-  bool? get reportsEmailAdmins;
-  @override // v0.18.0
-  String? get contentWarning;
-  @override // v0.19.4 (optional)
-  String? get defaultPostListingMode;
-  @override // v0.19.4 (optional)
-  String? get auth;
+  String? get name; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String? get sidebar; // v0.18.0
+  @override
+  String? get description; // v0.18.0
+  @override
+  String? get icon; // v0.18.0
+  @override
+  String? get banner; // v0.18.0
+  @override
+  bool? get enableDownvotes; // v0.18.0
+  @override
+  bool? get enableNsfw; // v0.18.0
+  @override
+  bool? get communityCreationAdminOnly; // v0.18.0
+  @override
+  bool? get requireEmailVerification; // v0.18.0
+  @override
+  String? get applicationQuestion; // v0.18.0
+  @override
+  bool? get privateInstance; // v0.18.0
+  @override
+  String? get defaultTheme; // v0.18.0
+  @override
+  ListingType? get defaultPostListingType; // v0.18.0
+  @override
+  SortType? get defaultSortType; // v0.19.4 (optional)
+  @override
+  String? get legalInformation; // v0.18.0
+  @override
+  bool? get applicationEmailAdmins; // v0.18.0
+  @override
+  bool? get hideModlogModNames; // v0.18.0
+  @override
+  List<int>? get discussionLanguages; // v0.18.0
+  @override
+  String? get slurFilterRegex; // v0.18.0
+  @override
+  int? get actorNameMaxLength; // v0.18.0
+  @override
+  int? get rateLimitMessage; // v0.18.0
+  @override
+  int? get rateLimitMessagePerSecond; // v0.18.0
+  @override
+  int? get rateLimitPost; // v0.18.0
+  @override
+  int? get rateLimitPostPerSecond; // v0.18.0
+  @override
+  int? get rateLimitRegister; // v0.18.0
+  @override
+  int? get rateLimitRegisterPerSecond; // v0.18.0
+  @override
+  int? get rateLimitImage; // v0.18.0
+  @override
+  int? get rateLimitImagePerSecond; // v0.18.0
+  @override
+  int? get rateLimitComment; // v0.18.0
+  @override
+  int? get rateLimitCommentPerSecond; // v0.18.0
+  @override
+  int? get rateLimitSearch; // v0.18.0
+  @override
+  int? get rateLimitSearchPerSecond; // v0.18.0
+  @override
+  bool? get federationEnabled; // v0.18.0
+  @override
+  bool? get federationDebug; // v0.18.0
+  @override
+  @deprecated
+  int? get federationWorkerCount; // v0.18.0 [deprecated in v0.18.1]
+  @override
+  bool? get captchaEnabled; // v0.18.0
+  @override
+  String? get captchaDifficulty; // v0.18.0
+  @override
+  List<String>? get allowedInstances; // v0.18.0
+  @override
+  List<String>? get blockedInstances; // v0.18.0
+  @override
+  List<String>? get blockedUrls; // v0.19.4 (optional)
+  @override
+  List<String>? get taglines; // v0.18.0
+  @override
+  RegistrationMode? get registrationMode; // v0.18.0
+  @override
+  bool? get reportsEmailAdmins; // v0.18.0
+  @override
+  String? get contentWarning; // v0.19.4 (optional)
+  @override
+  String? get defaultPostListingMode; // v0.19.4 (optional)
+  @override
+  String? get auth;
+
+  /// Create a copy of EditSite
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EditSiteImplCopyWith<_$EditSiteImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2583,8 +2622,12 @@ mixin _$BlockInstance {
       throw _privateConstructorUsedError; // v0.19.0 (required)
   bool get block => throw _privateConstructorUsedError;
 
+  /// Serializes this BlockInstance to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BlockInstance
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BlockInstanceCopyWith<BlockInstance> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2608,6 +2651,8 @@ class _$BlockInstanceCopyWithImpl<$Res, $Val extends BlockInstance>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of BlockInstance
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2651,6 +2696,8 @@ class __$$BlockInstanceImplCopyWithImpl<$Res>
       _$BlockInstanceImpl _value, $Res Function(_$BlockInstanceImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BlockInstance
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2710,11 +2757,13 @@ class _$BlockInstanceImpl extends _BlockInstance {
             (identical(other.block, block) || other.block == block));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, auth, instanceId, block);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BlockInstance
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BlockInstanceImplCopyWith<_$BlockInstanceImpl> get copyWith =>
@@ -2741,11 +2790,14 @@ abstract class _BlockInstance extends BlockInstance {
   @override
   String? get auth;
   @override
-  int get instanceId;
-  @override // v0.19.0 (required)
-  bool get block;
+  int get instanceId; // v0.19.0 (required)
   @override
-  @JsonKey(ignore: true)
+  bool get block;
+
+  /// Create a copy of BlockInstance
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BlockInstanceImplCopyWith<_$BlockInstanceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

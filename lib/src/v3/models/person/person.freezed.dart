@@ -43,8 +43,12 @@ mixin _$Person {
   String? get banExpires => throw _privateConstructorUsedError; // v0.18.0
   int get instanceId => throw _privateConstructorUsedError;
 
+  /// Serializes this Person to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Person
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PersonCopyWith<Person> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -84,6 +88,8 @@ class _$PersonCopyWithImpl<$Res, $Val extends Person>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Person
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -219,6 +225,8 @@ class __$$PersonImplCopyWithImpl<$Res>
       _$PersonImpl _value, $Res Function(_$PersonImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Person
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -439,7 +447,7 @@ class _$PersonImpl extends _Person {
                 other.instanceId == instanceId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -462,7 +470,9 @@ class _$PersonImpl extends _Person {
       banExpires,
       instanceId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Person
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PersonImplCopyWith<_$PersonImpl> get copyWith =>
@@ -501,45 +511,48 @@ abstract class _Person extends Person {
   factory _Person.fromJson(Map<String, dynamic> json) = _$PersonImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  String get name;
-  @override // v0.18.0
-  String? get displayName;
-  @override // v0.18.0
-  String? get avatar;
-  @override // v0.18.0
-  bool get banned;
-  @override // v0.18.0
-  DateTime get published;
-  @override // v0.18.0
-  DateTime? get updated;
-  @override // v0.18.0
-  String get actorId;
-  @override // v0.18.0
-  String? get bio;
-  @override // v0.18.0
-  bool get local;
-  @override // v0.18.0
-  String? get banner;
-  @override // v0.18.0
-  bool get deleted;
-  @override // v0.18.0
-  @deprecated
-  String? get inboxUrl;
-  @override // v0.18.1 [deprecated in v0.19.0]
-  String? get matrixUserId;
-  @override // v0.18.0
-  @deprecated
-  bool? get admin;
-  @override // v0.18.0 [deprecated in v0.19.0]
-  bool get botAccount;
-  @override // v0.18.0
-  String? get banExpires;
-  @override // v0.18.0
-  int get instanceId;
+  int get id; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String get name; // v0.18.0
+  @override
+  String? get displayName; // v0.18.0
+  @override
+  String? get avatar; // v0.18.0
+  @override
+  bool get banned; // v0.18.0
+  @override
+  DateTime get published; // v0.18.0
+  @override
+  DateTime? get updated; // v0.18.0
+  @override
+  String get actorId; // v0.18.0
+  @override
+  String? get bio; // v0.18.0
+  @override
+  bool get local; // v0.18.0
+  @override
+  String? get banner; // v0.18.0
+  @override
+  bool get deleted; // v0.18.0
+  @override
+  @deprecated
+  String? get inboxUrl; // v0.18.1 [deprecated in v0.19.0]
+  @override
+  String? get matrixUserId; // v0.18.0
+  @override
+  @deprecated
+  bool? get admin; // v0.18.0 [deprecated in v0.19.0]
+  @override
+  bool get botAccount; // v0.18.0
+  @override
+  String? get banExpires; // v0.18.0
+  @override
+  int get instanceId;
+
+  /// Create a copy of Person
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PersonImplCopyWith<_$PersonImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

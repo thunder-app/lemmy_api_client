@@ -26,8 +26,12 @@ mixin _$LinkMetadata {
   String? get embedVideoUrl => throw _privateConstructorUsedError; // v0.18.0
   String? get contentType => throw _privateConstructorUsedError;
 
+  /// Serializes this LinkMetadata to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LinkMetadata
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LinkMetadataCopyWith<LinkMetadata> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$LinkMetadataCopyWithImpl<$Res, $Val extends LinkMetadata>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LinkMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -114,6 +120,8 @@ class __$$LinkMetadataImplCopyWithImpl<$Res>
       _$LinkMetadataImpl _value, $Res Function(_$LinkMetadataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LinkMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -198,12 +206,14 @@ class _$LinkMetadataImpl extends _LinkMetadata {
                 other.contentType == contentType));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, title, description, image, embedVideoUrl, contentType);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LinkMetadata
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LinkMetadataImplCopyWith<_$LinkMetadataImpl> get copyWith =>
@@ -230,17 +240,20 @@ abstract class _LinkMetadata extends LinkMetadata {
       _$LinkMetadataImpl.fromJson;
 
   @override
-  String? get title;
-  @override // v0.18.0
-  String? get description;
-  @override // v0.18.0
-  String? get image;
-  @override // v0.18.0
-  String? get embedVideoUrl;
-  @override // v0.18.0
-  String? get contentType;
+  String? get title; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String? get description; // v0.18.0
+  @override
+  String? get image; // v0.18.0
+  @override
+  String? get embedVideoUrl; // v0.18.0
+  @override
+  String? get contentType;
+
+  /// Create a copy of LinkMetadata
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LinkMetadataImplCopyWith<_$LinkMetadataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

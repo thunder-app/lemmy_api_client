@@ -29,8 +29,12 @@ mixin _$SaveUserSettingsResponse {
   bool? get verifyEmailSent => throw _privateConstructorUsedError;
   bool? get success => throw _privateConstructorUsedError;
 
+  /// Serializes this SaveUserSettingsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SaveUserSettingsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SaveUserSettingsResponseCopyWith<SaveUserSettingsResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -59,6 +63,8 @@ class _$SaveUserSettingsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SaveUserSettingsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -114,6 +120,8 @@ class __$$SaveUserSettingsResponseImplCopyWithImpl<$Res>
       $Res Function(_$SaveUserSettingsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SaveUserSettingsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -187,12 +195,14 @@ class _$SaveUserSettingsResponseImpl extends _SaveUserSettingsResponse {
             (identical(other.success, success) || other.success == success));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, jwt, registrationCreated, verifyEmailSent, success);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SaveUserSettingsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SaveUserSettingsResponseImplCopyWith<_$SaveUserSettingsResponseImpl>
@@ -229,8 +239,11 @@ abstract class _SaveUserSettingsResponse extends SaveUserSettingsResponse {
   bool? get verifyEmailSent;
   @override
   bool? get success;
+
+  /// Create a copy of SaveUserSettingsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SaveUserSettingsResponseImplCopyWith<_$SaveUserSettingsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

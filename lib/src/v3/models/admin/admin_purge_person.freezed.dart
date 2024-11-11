@@ -26,8 +26,12 @@ mixin _$AdminPurgePerson {
   @JsonKey(name: 'when_')
   String get when => throw _privateConstructorUsedError;
 
+  /// Serializes this AdminPurgePerson to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AdminPurgePerson
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdminPurgePersonCopyWith<AdminPurgePerson> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$AdminPurgePersonCopyWithImpl<$Res, $Val extends AdminPurgePerson>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AdminPurgePerson
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -107,6 +113,8 @@ class __$$AdminPurgePersonImplCopyWithImpl<$Res>
       $Res Function(_$AdminPurgePersonImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AdminPurgePerson
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -180,11 +188,13 @@ class _$AdminPurgePersonImpl extends _AdminPurgePerson {
             (identical(other.when, when) || other.when == when));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, adminPersonId, reason, when);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AdminPurgePerson
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdminPurgePersonImplCopyWith<_$AdminPurgePersonImpl> get copyWith =>
@@ -212,16 +222,19 @@ abstract class _AdminPurgePerson extends AdminPurgePerson {
       _$AdminPurgePersonImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  int get adminPersonId;
-  @override // v0.18.0
-  String? get reason;
-  @override // v0.18.0
+  int get id; // v0.18.0
+  @override
+  int get adminPersonId; // v0.18.0
+  @override
+  String? get reason; // v0.18.0
+  @override
   @JsonKey(name: 'when_')
   String get when;
+
+  /// Create a copy of AdminPurgePerson
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdminPurgePersonImplCopyWith<_$AdminPurgePersonImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

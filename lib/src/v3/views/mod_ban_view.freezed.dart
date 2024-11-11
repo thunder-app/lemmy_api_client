@@ -24,8 +24,12 @@ mixin _$ModBanView {
   Person? get moderator => throw _privateConstructorUsedError; // v0.18.0
   Person get bannedPerson => throw _privateConstructorUsedError;
 
+  /// Serializes this ModBanView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ModBanView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ModBanViewCopyWith<ModBanView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$ModBanViewCopyWithImpl<$Res, $Val extends ModBanView>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ModBanView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -76,6 +82,8 @@ class _$ModBanViewCopyWithImpl<$Res, $Val extends ModBanView>
     ) as $Val);
   }
 
+  /// Create a copy of ModBanView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ModBanCopyWith<$Res> get modBan {
@@ -84,6 +92,8 @@ class _$ModBanViewCopyWithImpl<$Res, $Val extends ModBanView>
     });
   }
 
+  /// Create a copy of ModBanView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res>? get moderator {
@@ -96,6 +106,8 @@ class _$ModBanViewCopyWithImpl<$Res, $Val extends ModBanView>
     });
   }
 
+  /// Create a copy of ModBanView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res> get bannedPerson {
@@ -131,6 +143,8 @@ class __$$ModBanViewImplCopyWithImpl<$Res>
       _$ModBanViewImpl _value, $Res Function(_$ModBanViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ModBanView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -192,11 +206,13 @@ class _$ModBanViewImpl extends _ModBanView {
                 other.bannedPerson == bannedPerson));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, modBan, moderator, bannedPerson);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ModBanView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ModBanViewImplCopyWith<_$ModBanViewImpl> get copyWith =>
@@ -221,13 +237,16 @@ abstract class _ModBanView extends ModBanView {
       _$ModBanViewImpl.fromJson;
 
   @override
-  ModBan get modBan;
-  @override // v0.18.0
-  Person? get moderator;
-  @override // v0.18.0
-  Person get bannedPerson;
+  ModBan get modBan; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  Person? get moderator; // v0.18.0
+  @override
+  Person get bannedPerson;
+
+  /// Create a copy of ModBanView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ModBanViewImplCopyWith<_$ModBanViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -29,8 +29,12 @@ mixin _$GetPersonDetailsResponse {
   List<CommunityModeratorView> get moderates =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this GetPersonDetailsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetPersonDetailsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetPersonDetailsResponseCopyWith<GetPersonDetailsResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -63,6 +67,8 @@ class _$GetPersonDetailsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetPersonDetailsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -96,6 +102,8 @@ class _$GetPersonDetailsResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of GetPersonDetailsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonViewCopyWith<$Res> get personView {
@@ -104,6 +112,8 @@ class _$GetPersonDetailsResponseCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of GetPersonDetailsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SiteCopyWith<$Res>? get site {
@@ -149,6 +159,8 @@ class __$$GetPersonDetailsResponseImplCopyWithImpl<$Res>
       $Res Function(_$GetPersonDetailsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetPersonDetailsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -255,7 +267,7 @@ class _$GetPersonDetailsResponseImpl extends _GetPersonDetailsResponse {
                 .equals(other._moderates, _moderates));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -265,7 +277,9 @@ class _$GetPersonDetailsResponseImpl extends _GetPersonDetailsResponse {
       const DeepCollectionEquality().hash(_posts),
       const DeepCollectionEquality().hash(_moderates));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetPersonDetailsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetPersonDetailsResponseImplCopyWith<_$GetPersonDetailsResponseImpl>
@@ -294,17 +308,20 @@ abstract class _GetPersonDetailsResponse extends GetPersonDetailsResponse {
       _$GetPersonDetailsResponseImpl.fromJson;
 
   @override
-  PersonView get personView;
-  @override // v0.18.0
-  Site? get site;
-  @override // v0.19.2 (optional)
-  List<CommentView> get comments;
-  @override // v0.18.0
-  List<PostView> get posts;
-  @override // v0.18.0
-  List<CommunityModeratorView> get moderates;
+  PersonView get personView; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  Site? get site; // v0.19.2 (optional)
+  @override
+  List<CommentView> get comments; // v0.18.0
+  @override
+  List<PostView> get posts; // v0.18.0
+  @override
+  List<CommunityModeratorView> get moderates;
+
+  /// Create a copy of GetPersonDetailsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetPersonDetailsResponseImplCopyWith<_$GetPersonDetailsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

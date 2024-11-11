@@ -27,8 +27,12 @@ mixin _$ModTransferCommunity {
   @JsonKey(name: 'when_')
   String get when => throw _privateConstructorUsedError;
 
+  /// Serializes this ModTransferCommunity to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ModTransferCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ModTransferCommunityCopyWith<ModTransferCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,6 +62,8 @@ class _$ModTransferCommunityCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ModTransferCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -116,6 +122,8 @@ class __$$ModTransferCommunityImplCopyWithImpl<$Res>
       $Res Function(_$ModTransferCommunityImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ModTransferCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -201,12 +209,14 @@ class _$ModTransferCommunityImpl extends _ModTransferCommunity {
             (identical(other.when, when) || other.when == when));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, modPersonId, otherPersonId, communityId, when);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ModTransferCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ModTransferCommunityImplCopyWith<_$ModTransferCommunityImpl>
@@ -236,18 +246,21 @@ abstract class _ModTransferCommunity extends ModTransferCommunity {
       _$ModTransferCommunityImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  int get modPersonId;
-  @override // v0.18.0
-  int get otherPersonId;
-  @override // v0.18.0
-  int get communityId;
-  @override // v0.18.0
+  int get id; // v0.18.0
+  @override
+  int get modPersonId; // v0.18.0
+  @override
+  int get otherPersonId; // v0.18.0
+  @override
+  int get communityId; // v0.18.0
+  @override
   @JsonKey(name: 'when_')
   String get when;
+
+  /// Create a copy of ModTransferCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ModTransferCommunityImplCopyWith<_$ModTransferCommunityImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

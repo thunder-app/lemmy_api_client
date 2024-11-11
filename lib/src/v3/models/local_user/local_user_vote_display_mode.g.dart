@@ -9,7 +9,7 @@ part of 'local_user_vote_display_mode.dart';
 _$LocalUserVoteDisplayModeImpl _$$LocalUserVoteDisplayModeImplFromJson(
         Map<String, dynamic> json) =>
     _$LocalUserVoteDisplayModeImpl(
-      localUserId: json['local_user_id'] as int?,
+      localUserId: (json['local_user_id'] as num?)?.toInt(),
       score: json['score'] as bool?,
       upvotes: json['upvotes'] as bool?,
       downvotes: json['downvotes'] as bool?,

@@ -23,8 +23,12 @@ mixin _$PictrsUploadFile {
   String get deleteToken => throw _privateConstructorUsedError;
   String get file => throw _privateConstructorUsedError;
 
+  /// Serializes this PictrsUploadFile to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PictrsUploadFile
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PictrsUploadFileCopyWith<PictrsUploadFile> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$PictrsUploadFileCopyWithImpl<$Res, $Val extends PictrsUploadFile>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PictrsUploadFile
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$PictrsUploadFileImplCopyWithImpl<$Res>
       $Res Function(_$PictrsUploadFileImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PictrsUploadFile
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -135,11 +143,13 @@ class _$PictrsUploadFileImpl extends _PictrsUploadFile {
             (identical(other.file, file) || other.file == file));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, deleteToken, file);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PictrsUploadFile
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PictrsUploadFileImplCopyWith<_$PictrsUploadFileImpl> get copyWith =>
@@ -167,8 +177,11 @@ abstract class _PictrsUploadFile extends PictrsUploadFile {
   String get deleteToken;
   @override
   String get file;
+
+  /// Create a copy of PictrsUploadFile
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PictrsUploadFileImplCopyWith<_$PictrsUploadFileImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -183,8 +196,12 @@ mixin _$PictrsUpload {
   List<PictrsUploadFile> get files => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
+  /// Serializes this PictrsUpload to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PictrsUpload
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PictrsUploadCopyWith<PictrsUpload> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -208,6 +225,8 @@ class _$PictrsUploadCopyWithImpl<$Res, $Val extends PictrsUpload>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PictrsUpload
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -251,6 +270,8 @@ class __$$PictrsUploadImplCopyWithImpl<$Res>
       _$PictrsUploadImpl _value, $Res Function(_$PictrsUploadImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PictrsUpload
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -318,12 +339,14 @@ class _$PictrsUploadImpl extends _PictrsUpload {
                 other.instanceHost == instanceHost));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, msg,
       const DeepCollectionEquality().hash(_files), instanceHost);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PictrsUpload
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PictrsUploadImplCopyWith<_$PictrsUploadImpl> get copyWith =>
@@ -353,8 +376,11 @@ abstract class _PictrsUpload extends PictrsUpload {
   List<PictrsUploadFile> get files;
   @override
   String get instanceHost;
+
+  /// Create a copy of PictrsUpload
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PictrsUploadImplCopyWith<_$PictrsUploadImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

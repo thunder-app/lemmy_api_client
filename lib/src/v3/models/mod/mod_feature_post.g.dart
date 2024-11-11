@@ -8,9 +8,9 @@ part of 'mod_feature_post.dart';
 
 _$ModFeaturePostImpl _$$ModFeaturePostImplFromJson(Map<String, dynamic> json) =>
     _$ModFeaturePostImpl(
-      id: json['id'] as int,
-      modPersonId: json['mod_person_id'] as int,
-      postId: json['post_id'] as int,
+      id: (json['id'] as num).toInt(),
+      modPersonId: (json['mod_person_id'] as num).toInt(),
+      postId: (json['post_id'] as num).toInt(),
       featured: json['featured'] as bool,
       when: json['when_'] as String,
       isFeaturedCommunity: json['is_featured_community'] as bool,

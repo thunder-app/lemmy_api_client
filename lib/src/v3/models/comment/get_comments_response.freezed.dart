@@ -22,8 +22,12 @@ GetCommentsResponse _$GetCommentsResponseFromJson(Map<String, dynamic> json) {
 mixin _$GetCommentsResponse {
   List<CommentView> get comments => throw _privateConstructorUsedError;
 
+  /// Serializes this GetCommentsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetCommentsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetCommentsResponseCopyWith<GetCommentsResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$GetCommentsResponseCopyWithImpl<$Res, $Val extends GetCommentsResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetCommentsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$GetCommentsResponseImplCopyWithImpl<$Res>
       $Res Function(_$GetCommentsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetCommentsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -126,12 +134,14 @@ class _$GetCommentsResponseImpl extends _GetCommentsResponse {
             const DeepCollectionEquality().equals(other._comments, _comments));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_comments));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetCommentsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetCommentsResponseImplCopyWith<_$GetCommentsResponseImpl> get copyWith =>
@@ -156,8 +166,11 @@ abstract class _GetCommentsResponse extends GetCommentsResponse {
 
   @override
   List<CommentView> get comments;
+
+  /// Create a copy of GetCommentsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetCommentsResponseImplCopyWith<_$GetCommentsResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

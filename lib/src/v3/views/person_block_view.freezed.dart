@@ -23,8 +23,12 @@ mixin _$PersonBlockView {
   Person get person => throw _privateConstructorUsedError; // v0.18.0
   Person get target => throw _privateConstructorUsedError;
 
+  /// Serializes this PersonBlockView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PersonBlockView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PersonBlockViewCopyWith<PersonBlockView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$PersonBlockViewCopyWithImpl<$Res, $Val extends PersonBlockView>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PersonBlockView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -69,6 +75,8 @@ class _$PersonBlockViewCopyWithImpl<$Res, $Val extends PersonBlockView>
     ) as $Val);
   }
 
+  /// Create a copy of PersonBlockView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res> get person {
@@ -77,6 +85,8 @@ class _$PersonBlockViewCopyWithImpl<$Res, $Val extends PersonBlockView>
     });
   }
 
+  /// Create a copy of PersonBlockView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res> get target {
@@ -110,6 +120,8 @@ class __$$PersonBlockViewImplCopyWithImpl<$Res>
       _$PersonBlockViewImpl _value, $Res Function(_$PersonBlockViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PersonBlockView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -159,11 +171,13 @@ class _$PersonBlockViewImpl extends _PersonBlockView {
             (identical(other.target, target) || other.target == target));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, person, target);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PersonBlockView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PersonBlockViewImplCopyWith<_$PersonBlockViewImpl> get copyWith =>
@@ -188,11 +202,14 @@ abstract class _PersonBlockView extends PersonBlockView {
       _$PersonBlockViewImpl.fromJson;
 
   @override
-  Person get person;
-  @override // v0.18.0
-  Person get target;
+  Person get person; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  Person get target;
+
+  /// Create a copy of PersonBlockView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PersonBlockViewImplCopyWith<_$PersonBlockViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

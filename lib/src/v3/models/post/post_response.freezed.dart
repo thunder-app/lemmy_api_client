@@ -22,8 +22,12 @@ PostResponse _$PostResponseFromJson(Map<String, dynamic> json) {
 mixin _$PostResponse {
   PostView get postView => throw _privateConstructorUsedError;
 
+  /// Serializes this PostResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PostResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PostResponseCopyWith<PostResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$PostResponseCopyWithImpl<$Res, $Val extends PostResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PostResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -62,6 +68,8 @@ class _$PostResponseCopyWithImpl<$Res, $Val extends PostResponse>
     ) as $Val);
   }
 
+  /// Create a copy of PostResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PostViewCopyWith<$Res> get postView {
@@ -93,6 +101,8 @@ class __$$PostResponseImplCopyWithImpl<$Res>
       _$PostResponseImpl _value, $Res Function(_$PostResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PostResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -133,11 +143,13 @@ class _$PostResponseImpl extends _PostResponse {
                 other.postView == postView));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, postView);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PostResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PostResponseImplCopyWith<_$PostResponseImpl> get copyWith =>
@@ -161,8 +173,11 @@ abstract class _PostResponse extends PostResponse {
 
   @override
   PostView get postView;
+
+  /// Create a copy of PostResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PostResponseImplCopyWith<_$PostResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

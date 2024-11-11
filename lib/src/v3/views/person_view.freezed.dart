@@ -24,8 +24,12 @@ mixin _$PersonView {
   PersonAggregates get counts => throw _privateConstructorUsedError; // v0.18.0
   bool? get isAdmin => throw _privateConstructorUsedError;
 
+  /// Serializes this PersonView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PersonView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PersonViewCopyWith<PersonView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$PersonViewCopyWithImpl<$Res, $Val extends PersonView>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PersonView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -75,6 +81,8 @@ class _$PersonViewCopyWithImpl<$Res, $Val extends PersonView>
     ) as $Val);
   }
 
+  /// Create a copy of PersonView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res> get person {
@@ -83,6 +91,8 @@ class _$PersonViewCopyWithImpl<$Res, $Val extends PersonView>
     });
   }
 
+  /// Create a copy of PersonView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonAggregatesCopyWith<$Res> get counts {
@@ -116,6 +126,8 @@ class __$$PersonViewImplCopyWithImpl<$Res>
       _$PersonViewImpl _value, $Res Function(_$PersonViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PersonView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -175,11 +187,13 @@ class _$PersonViewImpl extends _PersonView {
             (identical(other.isAdmin, isAdmin) || other.isAdmin == isAdmin));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, person, counts, isAdmin);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PersonView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PersonViewImplCopyWith<_$PersonViewImpl> get copyWith =>
@@ -204,13 +218,16 @@ abstract class _PersonView extends PersonView {
       _$PersonViewImpl.fromJson;
 
   @override
-  Person get person;
-  @override // v0.18.0
-  PersonAggregates get counts;
-  @override // v0.18.0
-  bool? get isAdmin;
+  Person get person; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  PersonAggregates get counts; // v0.18.0
+  @override
+  bool? get isAdmin;
+
+  /// Create a copy of PersonView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PersonViewImplCopyWith<_$PersonViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

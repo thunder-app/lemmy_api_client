@@ -24,8 +24,12 @@ mixin _$CommunityFollowerView {
   Community get community => throw _privateConstructorUsedError; // v0.18.0
   Person get follower => throw _privateConstructorUsedError;
 
+  /// Serializes this CommunityFollowerView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CommunityFollowerView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CommunityFollowerViewCopyWith<CommunityFollowerView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$CommunityFollowerViewCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CommunityFollowerView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -71,6 +77,8 @@ class _$CommunityFollowerViewCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of CommunityFollowerView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommunityCopyWith<$Res> get community {
@@ -79,6 +87,8 @@ class _$CommunityFollowerViewCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of CommunityFollowerView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res> get follower {
@@ -114,6 +124,8 @@ class __$$CommunityFollowerViewImplCopyWithImpl<$Res>
       $Res Function(_$CommunityFollowerViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CommunityFollowerView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -166,11 +178,13 @@ class _$CommunityFollowerViewImpl extends _CommunityFollowerView {
                 other.follower == follower));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, community, follower);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CommunityFollowerView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CommunityFollowerViewImplCopyWith<_$CommunityFollowerViewImpl>
@@ -195,11 +209,14 @@ abstract class _CommunityFollowerView extends CommunityFollowerView {
       _$CommunityFollowerViewImpl.fromJson;
 
   @override
-  Community get community;
-  @override // v0.18.0
-  Person get follower;
+  Community get community; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  Person get follower;
+
+  /// Create a copy of CommunityFollowerView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CommunityFollowerViewImplCopyWith<_$CommunityFollowerViewImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

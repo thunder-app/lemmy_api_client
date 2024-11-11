@@ -27,8 +27,12 @@ mixin _$Instance {
   String? get software => throw _privateConstructorUsedError; // v0.18.0
   String? get version => throw _privateConstructorUsedError;
 
+  /// Serializes this Instance to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Instance
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InstanceCopyWith<Instance> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -57,6 +61,8 @@ class _$InstanceCopyWithImpl<$Res, $Val extends Instance>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Instance
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -121,6 +127,8 @@ class __$$InstanceImplCopyWithImpl<$Res>
       _$InstanceImpl _value, $Res Function(_$InstanceImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Instance
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -214,12 +222,14 @@ class _$InstanceImpl extends _Instance {
             (identical(other.version, version) || other.version == version));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, domain, published, updated, software, version);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Instance
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InstanceImplCopyWith<_$InstanceImpl> get copyWith =>
@@ -247,19 +257,22 @@ abstract class _Instance extends Instance {
       _$InstanceImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  String get domain;
-  @override // v0.18.0
-  DateTime get published;
-  @override // v0.18.0
-  DateTime? get updated;
-  @override // v0.18.0
-  String? get software;
-  @override // v0.18.0
-  String? get version;
+  int get id; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String get domain; // v0.18.0
+  @override
+  DateTime get published; // v0.18.0
+  @override
+  DateTime? get updated; // v0.18.0
+  @override
+  String? get software; // v0.18.0
+  @override
+  String? get version;
+
+  /// Create a copy of Instance
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InstanceImplCopyWith<_$InstanceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

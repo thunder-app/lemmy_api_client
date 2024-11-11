@@ -25,8 +25,12 @@ mixin _$CommentResponse {
   @deprecated
   String? get formId => throw _privateConstructorUsedError;
 
+  /// Serializes this CommentResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CommentResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CommentResponseCopyWith<CommentResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$CommentResponseCopyWithImpl<$Res, $Val extends CommentResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CommentResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -78,6 +84,8 @@ class _$CommentResponseCopyWithImpl<$Res, $Val extends CommentResponse>
     ) as $Val);
   }
 
+  /// Create a copy of CommentResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommentViewCopyWith<$Res> get commentView {
@@ -112,6 +120,8 @@ class __$$CommentResponseImplCopyWithImpl<$Res>
       _$CommentResponseImpl _value, $Res Function(_$CommentResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CommentResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -184,12 +194,14 @@ class _$CommentResponseImpl extends _CommentResponse {
             (identical(other.formId, formId) || other.formId == formId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, commentView,
       const DeepCollectionEquality().hash(_recipientIds), formId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CommentResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CommentResponseImplCopyWith<_$CommentResponseImpl> get copyWith =>
@@ -215,14 +227,17 @@ abstract class _CommentResponse extends CommentResponse {
       _$CommentResponseImpl.fromJson;
 
   @override
-  CommentView get commentView;
-  @override // v0.18.0
-  List<int> get recipientIds;
-  @override // v0.18.0
+  CommentView get commentView; // v0.18.0
+  @override
+  List<int> get recipientIds; // v0.18.0
+  @override
   @deprecated
   String? get formId;
+
+  /// Create a copy of CommentResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CommentResponseImplCopyWith<_$CommentResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

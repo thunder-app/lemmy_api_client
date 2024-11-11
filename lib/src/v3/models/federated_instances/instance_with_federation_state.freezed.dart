@@ -34,8 +34,12 @@ mixin _$InstanceWithFederationState {
   ReadableFederationState? get federationState =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this InstanceWithFederationState to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of InstanceWithFederationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InstanceWithFederationStateCopyWith<InstanceWithFederationState>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -71,6 +75,8 @@ class _$InstanceWithFederationStateCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of InstanceWithFederationState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -114,6 +120,8 @@ class _$InstanceWithFederationStateCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of InstanceWithFederationState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReadableFederationStateCopyWith<$Res>? get federationState {
@@ -160,6 +168,8 @@ class __$$InstanceWithFederationStateImplCopyWithImpl<$Res>
       $Res Function(_$InstanceWithFederationStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InstanceWithFederationState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -265,12 +275,14 @@ class _$InstanceWithFederationStateImpl extends _InstanceWithFederationState {
                 other.federationState == federationState));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, domain, published, updated,
       software, version, federationState);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InstanceWithFederationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InstanceWithFederationStateImplCopyWith<_$InstanceWithFederationStateImpl>
@@ -302,21 +314,24 @@ abstract class _InstanceWithFederationState
       _$InstanceWithFederationStateImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.19.0 (required)
-  String get domain;
-  @override // v0.19.0 (required)
-  DateTime get published;
-  @override // v0.19.0 (required)
-  DateTime? get updated;
-  @override // v0.19.0 (optional)
-  String? get software;
-  @override // v0.19.0 (optional)
-  String? get version;
-  @override // v0.19.0 (optional)
-  ReadableFederationState? get federationState;
+  int get id; // v0.19.0 (required)
   @override
-  @JsonKey(ignore: true)
+  String get domain; // v0.19.0 (required)
+  @override
+  DateTime get published; // v0.19.0 (required)
+  @override
+  DateTime? get updated; // v0.19.0 (optional)
+  @override
+  String? get software; // v0.19.0 (optional)
+  @override
+  String? get version; // v0.19.0 (optional)
+  @override
+  ReadableFederationState? get federationState;
+
+  /// Create a copy of InstanceWithFederationState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InstanceWithFederationStateImplCopyWith<_$InstanceWithFederationStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

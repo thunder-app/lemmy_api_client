@@ -25,8 +25,12 @@ mixin _$GetUnreadCountResponse {
   int get mentions => throw _privateConstructorUsedError; // v0.18.0
   int get privateMessages => throw _privateConstructorUsedError;
 
+  /// Serializes this GetUnreadCountResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetUnreadCountResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetUnreadCountResponseCopyWith<GetUnreadCountResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$GetUnreadCountResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetUnreadCountResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -97,6 +103,8 @@ class __$$GetUnreadCountResponseImplCopyWithImpl<$Res>
       $Res Function(_$GetUnreadCountResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetUnreadCountResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -160,12 +168,14 @@ class _$GetUnreadCountResponseImpl extends _GetUnreadCountResponse {
                 other.privateMessages == privateMessages));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, replies, mentions, privateMessages);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetUnreadCountResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetUnreadCountResponseImplCopyWith<_$GetUnreadCountResponseImpl>
@@ -191,13 +201,16 @@ abstract class _GetUnreadCountResponse extends GetUnreadCountResponse {
       _$GetUnreadCountResponseImpl.fromJson;
 
   @override
-  int get replies;
-  @override // v0.18.0
-  int get mentions;
-  @override // v0.18.0
-  int get privateMessages;
+  int get replies; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  int get mentions; // v0.18.0
+  @override
+  int get privateMessages;
+
+  /// Create a copy of GetUnreadCountResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetUnreadCountResponseImplCopyWith<_$GetUnreadCountResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -24,8 +24,12 @@ mixin _$ListPrivateMessageReportsResponse {
   List<PrivateMessageReportView> get privateMessageReports =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this ListPrivateMessageReportsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ListPrivateMessageReportsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ListPrivateMessageReportsResponseCopyWith<ListPrivateMessageReportsResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$ListPrivateMessageReportsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ListPrivateMessageReportsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -88,6 +94,8 @@ class __$$ListPrivateMessageReportsResponseImplCopyWithImpl<$Res>
       $Res Function(_$ListPrivateMessageReportsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ListPrivateMessageReportsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -139,12 +147,14 @@ class _$ListPrivateMessageReportsResponseImpl
                 .equals(other._privateMessageReports, _privateMessageReports));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_privateMessageReports));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ListPrivateMessageReportsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ListPrivateMessageReportsResponseImplCopyWith<
@@ -173,8 +183,11 @@ abstract class _ListPrivateMessageReportsResponse
 
   @override
   List<PrivateMessageReportView> get privateMessageReports;
+
+  /// Create a copy of ListPrivateMessageReportsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ListPrivateMessageReportsResponseImplCopyWith<
           _$ListPrivateMessageReportsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;

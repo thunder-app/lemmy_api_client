@@ -27,8 +27,12 @@ mixin _$AdminPurgeComment {
   @JsonKey(name: 'when_')
   String get when => throw _privateConstructorUsedError;
 
+  /// Serializes this AdminPurgeComment to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AdminPurgeComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdminPurgeCommentCopyWith<AdminPurgeComment> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -57,6 +61,8 @@ class _$AdminPurgeCommentCopyWithImpl<$Res, $Val extends AdminPurgeComment>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AdminPurgeComment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -115,6 +121,8 @@ class __$$AdminPurgeCommentImplCopyWithImpl<$Res>
       $Res Function(_$AdminPurgeCommentImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AdminPurgeComment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -198,12 +206,14 @@ class _$AdminPurgeCommentImpl extends _AdminPurgeComment {
             (identical(other.when, when) || other.when == when));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, adminPersonId, postId, reason, when);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AdminPurgeComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdminPurgeCommentImplCopyWith<_$AdminPurgeCommentImpl> get copyWith =>
@@ -232,18 +242,21 @@ abstract class _AdminPurgeComment extends AdminPurgeComment {
       _$AdminPurgeCommentImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  int get adminPersonId;
-  @override // v0.18.0
-  int get postId;
-  @override // v0.18.0
-  String? get reason;
-  @override // v0.18.0
+  int get id; // v0.18.0
+  @override
+  int get adminPersonId; // v0.18.0
+  @override
+  int get postId; // v0.18.0
+  @override
+  String? get reason; // v0.18.0
+  @override
   @JsonKey(name: 'when_')
   String get when;
+
+  /// Create a copy of AdminPurgeComment
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdminPurgeCommentImplCopyWith<_$AdminPurgeCommentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

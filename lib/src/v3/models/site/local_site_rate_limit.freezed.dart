@@ -42,8 +42,12 @@ mixin _$LocalSiteRateLimit {
       throw _privateConstructorUsedError; // v0.19.0 (required)
   int? get importUserSettingsPerSecond => throw _privateConstructorUsedError;
 
+  /// Serializes this LocalSiteRateLimit to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LocalSiteRateLimit
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LocalSiteRateLimitCopyWith<LocalSiteRateLimit> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -85,6 +89,8 @@ class _$LocalSiteRateLimitCopyWithImpl<$Res, $Val extends LocalSiteRateLimit>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LocalSiteRateLimit
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -221,6 +227,8 @@ class __$$LocalSiteRateLimitImplCopyWithImpl<$Res>
       $Res Function(_$LocalSiteRateLimitImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LocalSiteRateLimit
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -446,7 +454,7 @@ class _$LocalSiteRateLimitImpl extends _LocalSiteRateLimit {
                     importUserSettingsPerSecond));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -469,7 +477,9 @@ class _$LocalSiteRateLimitImpl extends _LocalSiteRateLimit {
       importUserSettings,
       importUserSettingsPerSecond);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LocalSiteRateLimit
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LocalSiteRateLimitImplCopyWith<_$LocalSiteRateLimitImpl> get copyWith =>
@@ -511,43 +521,46 @@ abstract class _LocalSiteRateLimit extends LocalSiteRateLimit {
 
   @override
   @deprecated
-  int? get id;
-  @override // v0.18.0 [deprecated in v0.19.0]
-  int get localSiteId;
-  @override // v0.18.0
-  int get message;
-  @override // v0.18.0
-  int get messagePerSecond;
-  @override // v0.18.0
-  int get post;
-  @override // v0.18.0
-  int get postPerSecond;
-  @override // v0.18.0
-  int get register;
-  @override // v0.18.0
-  int get registerPerSecond;
-  @override // v0.18.0
-  int get image;
-  @override // v0.18.0
-  int get imagePerSecond;
-  @override // v0.18.0
-  int get comment;
-  @override // v0.18.0
-  int get commentPerSecond;
-  @override // v0.18.0
-  int get search;
-  @override // v0.18.0
-  int get searchPerSecond;
-  @override // v0.18.0
-  DateTime get published;
-  @override // v0.18.0
-  DateTime? get updated;
-  @override // v0.18.0
-  int? get importUserSettings;
-  @override // v0.19.0 (required)
-  int? get importUserSettingsPerSecond;
+  int? get id; // v0.18.0 [deprecated in v0.19.0]
   @override
-  @JsonKey(ignore: true)
+  int get localSiteId; // v0.18.0
+  @override
+  int get message; // v0.18.0
+  @override
+  int get messagePerSecond; // v0.18.0
+  @override
+  int get post; // v0.18.0
+  @override
+  int get postPerSecond; // v0.18.0
+  @override
+  int get register; // v0.18.0
+  @override
+  int get registerPerSecond; // v0.18.0
+  @override
+  int get image; // v0.18.0
+  @override
+  int get imagePerSecond; // v0.18.0
+  @override
+  int get comment; // v0.18.0
+  @override
+  int get commentPerSecond; // v0.18.0
+  @override
+  int get search; // v0.18.0
+  @override
+  int get searchPerSecond; // v0.18.0
+  @override
+  DateTime get published; // v0.18.0
+  @override
+  DateTime? get updated; // v0.18.0
+  @override
+  int? get importUserSettings; // v0.19.0 (required)
+  @override
+  int? get importUserSettingsPerSecond;
+
+  /// Create a copy of LocalSiteRateLimit
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LocalSiteRateLimitImplCopyWith<_$LocalSiteRateLimitImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

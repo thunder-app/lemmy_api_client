@@ -25,8 +25,12 @@ mixin _$InstanceBlockView {
       throw _privateConstructorUsedError; // v0.19.0 (required)
   Site? get site => throw _privateConstructorUsedError;
 
+  /// Serializes this InstanceBlockView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of InstanceBlockView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InstanceBlockViewCopyWith<InstanceBlockView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -54,6 +58,8 @@ class _$InstanceBlockViewCopyWithImpl<$Res, $Val extends InstanceBlockView>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of InstanceBlockView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -77,6 +83,8 @@ class _$InstanceBlockViewCopyWithImpl<$Res, $Val extends InstanceBlockView>
     ) as $Val);
   }
 
+  /// Create a copy of InstanceBlockView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res> get person {
@@ -85,6 +93,8 @@ class _$InstanceBlockViewCopyWithImpl<$Res, $Val extends InstanceBlockView>
     });
   }
 
+  /// Create a copy of InstanceBlockView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $InstanceCopyWith<$Res> get instance {
@@ -93,6 +103,8 @@ class _$InstanceBlockViewCopyWithImpl<$Res, $Val extends InstanceBlockView>
     });
   }
 
+  /// Create a copy of InstanceBlockView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SiteCopyWith<$Res>? get site {
@@ -132,6 +144,8 @@ class __$$InstanceBlockViewImplCopyWithImpl<$Res>
       $Res Function(_$InstanceBlockViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InstanceBlockView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -192,11 +206,13 @@ class _$InstanceBlockViewImpl extends _InstanceBlockView {
             (identical(other.site, site) || other.site == site));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, person, instance, site);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InstanceBlockView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InstanceBlockViewImplCopyWith<_$InstanceBlockViewImpl> get copyWith =>
@@ -222,13 +238,16 @@ abstract class _InstanceBlockView extends InstanceBlockView {
       _$InstanceBlockViewImpl.fromJson;
 
   @override
-  Person get person;
-  @override // v0.19.0 (required)
-  Instance get instance;
-  @override // v0.19.0 (required)
-  Site? get site;
+  Person get person; // v0.19.0 (required)
   @override
-  @JsonKey(ignore: true)
+  Instance get instance; // v0.19.0 (required)
+  @override
+  Site? get site;
+
+  /// Create a copy of InstanceBlockView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InstanceBlockViewImplCopyWith<_$InstanceBlockViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

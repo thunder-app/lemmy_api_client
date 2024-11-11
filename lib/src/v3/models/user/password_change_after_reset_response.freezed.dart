@@ -29,8 +29,12 @@ mixin _$PasswordChangeAfterResetResponse {
   bool? get verifyEmailSent => throw _privateConstructorUsedError;
   bool? get success => throw _privateConstructorUsedError;
 
+  /// Serializes this PasswordChangeAfterResetResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PasswordChangeAfterResetResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PasswordChangeAfterResetResponseCopyWith<PasswordChangeAfterResetResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -61,6 +65,8 @@ class _$PasswordChangeAfterResetResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PasswordChangeAfterResetResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -116,6 +122,8 @@ class __$$PasswordChangeAfterResetResponseImplCopyWithImpl<$Res>
       $Res Function(_$PasswordChangeAfterResetResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PasswordChangeAfterResetResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -191,12 +199,14 @@ class _$PasswordChangeAfterResetResponseImpl
             (identical(other.success, success) || other.success == success));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, jwt, registrationCreated, verifyEmailSent, success);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PasswordChangeAfterResetResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PasswordChangeAfterResetResponseImplCopyWith<
@@ -236,8 +246,11 @@ abstract class _PasswordChangeAfterResetResponse
   bool? get verifyEmailSent;
   @override
   bool? get success;
+
+  /// Create a copy of PasswordChangeAfterResetResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PasswordChangeAfterResetResponseImplCopyWith<
           _$PasswordChangeAfterResetResponseImpl>
       get copyWith => throw _privateConstructorUsedError;

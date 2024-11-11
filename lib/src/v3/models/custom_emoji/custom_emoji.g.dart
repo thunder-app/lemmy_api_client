@@ -8,8 +8,8 @@ part of 'custom_emoji.dart';
 
 _$CustomEmojiImpl _$$CustomEmojiImplFromJson(Map<String, dynamic> json) =>
     _$CustomEmojiImpl(
-      id: json['id'] as int,
-      localSiteId: json['local_site_id'] as int,
+      id: (json['id'] as num).toInt(),
+      localSiteId: (json['local_site_id'] as num).toInt(),
       shortcode: json['shortcode'] as String,
       imageUrl: json['image_url'] as String,
       altText: json['alt_text'] as String,

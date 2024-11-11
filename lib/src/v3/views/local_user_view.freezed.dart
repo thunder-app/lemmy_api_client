@@ -26,8 +26,12 @@ mixin _$LocalUserView {
   Person get person => throw _privateConstructorUsedError; // v0.18.0
   PersonAggregates get counts => throw _privateConstructorUsedError;
 
+  /// Serializes this LocalUserView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LocalUserView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LocalUserViewCopyWith<LocalUserView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,6 +64,8 @@ class _$LocalUserViewCopyWithImpl<$Res, $Val extends LocalUserView>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LocalUserView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -88,6 +94,8 @@ class _$LocalUserViewCopyWithImpl<$Res, $Val extends LocalUserView>
     ) as $Val);
   }
 
+  /// Create a copy of LocalUserView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $LocalUserCopyWith<$Res> get localUser {
@@ -96,6 +104,8 @@ class _$LocalUserViewCopyWithImpl<$Res, $Val extends LocalUserView>
     });
   }
 
+  /// Create a copy of LocalUserView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $LocalUserVoteDisplayModeCopyWith<$Res>? get localUserVoteDisplayMode {
@@ -109,6 +119,8 @@ class _$LocalUserViewCopyWithImpl<$Res, $Val extends LocalUserView>
     });
   }
 
+  /// Create a copy of LocalUserView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res> get person {
@@ -117,6 +129,8 @@ class _$LocalUserViewCopyWithImpl<$Res, $Val extends LocalUserView>
     });
   }
 
+  /// Create a copy of LocalUserView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonAggregatesCopyWith<$Res> get counts {
@@ -158,6 +172,8 @@ class __$$LocalUserViewImplCopyWithImpl<$Res>
       _$LocalUserViewImpl _value, $Res Function(_$LocalUserViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LocalUserView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -232,12 +248,14 @@ class _$LocalUserViewImpl extends _LocalUserView {
             (identical(other.counts, counts) || other.counts == counts));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, localUser, localUserVoteDisplayMode, person, counts);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LocalUserView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LocalUserViewImplCopyWith<_$LocalUserViewImpl> get copyWith =>
@@ -263,15 +281,18 @@ abstract class _LocalUserView extends LocalUserView {
       _$LocalUserViewImpl.fromJson;
 
   @override
-  LocalUser get localUser;
-  @override // v0.18.0
-  LocalUserVoteDisplayMode? get localUserVoteDisplayMode;
-  @override // v0.19.4 (required)
-  Person get person;
-  @override // v0.18.0
-  PersonAggregates get counts;
+  LocalUser get localUser; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  LocalUserVoteDisplayMode? get localUserVoteDisplayMode; // v0.19.4 (required)
+  @override
+  Person get person; // v0.18.0
+  @override
+  PersonAggregates get counts;
+
+  /// Create a copy of LocalUserView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LocalUserViewImplCopyWith<_$LocalUserViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

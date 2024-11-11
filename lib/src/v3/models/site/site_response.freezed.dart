@@ -23,8 +23,12 @@ mixin _$SiteResponse {
   SiteView get siteView => throw _privateConstructorUsedError; // v0.18.0
   List<Tagline> get taglines => throw _privateConstructorUsedError;
 
+  /// Serializes this SiteResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SiteResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SiteResponseCopyWith<SiteResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$SiteResponseCopyWithImpl<$Res, $Val extends SiteResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SiteResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -68,6 +74,8 @@ class _$SiteResponseCopyWithImpl<$Res, $Val extends SiteResponse>
     ) as $Val);
   }
 
+  /// Create a copy of SiteResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SiteViewCopyWith<$Res> get siteView {
@@ -99,6 +107,8 @@ class __$$SiteResponseImplCopyWithImpl<$Res>
       _$SiteResponseImpl _value, $Res Function(_$SiteResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SiteResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -157,12 +167,14 @@ class _$SiteResponseImpl extends _SiteResponse {
             const DeepCollectionEquality().equals(other._taglines, _taglines));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, siteView, const DeepCollectionEquality().hash(_taglines));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SiteResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SiteResponseImplCopyWith<_$SiteResponseImpl> get copyWith =>
@@ -186,11 +198,14 @@ abstract class _SiteResponse extends SiteResponse {
       _$SiteResponseImpl.fromJson;
 
   @override
-  SiteView get siteView;
-  @override // v0.18.0
-  List<Tagline> get taglines;
+  SiteView get siteView; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  List<Tagline> get taglines;
+
+  /// Create a copy of SiteResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SiteResponseImplCopyWith<_$SiteResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

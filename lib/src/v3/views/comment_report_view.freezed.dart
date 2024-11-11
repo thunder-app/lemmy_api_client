@@ -42,8 +42,12 @@ mixin _$CommentReportView {
   num? get myVote => throw _privateConstructorUsedError; // v0.18.0
   Person? get resolver => throw _privateConstructorUsedError;
 
+  /// Serializes this CommentReportView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CommentReportView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CommentReportViewCopyWith<CommentReportView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -91,6 +95,8 @@ class _$CommentReportViewCopyWithImpl<$Res, $Val extends CommentReportView>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CommentReportView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -174,6 +180,8 @@ class _$CommentReportViewCopyWithImpl<$Res, $Val extends CommentReportView>
     ) as $Val);
   }
 
+  /// Create a copy of CommentReportView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommentReportCopyWith<$Res> get commentReport {
@@ -182,6 +190,8 @@ class _$CommentReportViewCopyWithImpl<$Res, $Val extends CommentReportView>
     });
   }
 
+  /// Create a copy of CommentReportView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommentCopyWith<$Res> get comment {
@@ -190,6 +200,8 @@ class _$CommentReportViewCopyWithImpl<$Res, $Val extends CommentReportView>
     });
   }
 
+  /// Create a copy of CommentReportView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PostCopyWith<$Res> get post {
@@ -198,6 +210,8 @@ class _$CommentReportViewCopyWithImpl<$Res, $Val extends CommentReportView>
     });
   }
 
+  /// Create a copy of CommentReportView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommunityCopyWith<$Res> get community {
@@ -206,6 +220,8 @@ class _$CommentReportViewCopyWithImpl<$Res, $Val extends CommentReportView>
     });
   }
 
+  /// Create a copy of CommentReportView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res> get creator {
@@ -214,6 +230,8 @@ class _$CommentReportViewCopyWithImpl<$Res, $Val extends CommentReportView>
     });
   }
 
+  /// Create a copy of CommentReportView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res> get commentCreator {
@@ -222,6 +240,8 @@ class _$CommentReportViewCopyWithImpl<$Res, $Val extends CommentReportView>
     });
   }
 
+  /// Create a copy of CommentReportView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommentAggregatesCopyWith<$Res> get counts {
@@ -230,6 +250,8 @@ class _$CommentReportViewCopyWithImpl<$Res, $Val extends CommentReportView>
     });
   }
 
+  /// Create a copy of CommentReportView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res>? get resolver {
@@ -294,6 +316,8 @@ class __$$CommentReportViewImplCopyWithImpl<$Res>
       $Res Function(_$CommentReportViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CommentReportView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -486,7 +510,7 @@ class _$CommentReportViewImpl extends _CommentReportView {
                 other.resolver == resolver));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -506,7 +530,9 @@ class _$CommentReportViewImpl extends _CommentReportView {
       myVote,
       resolver);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CommentReportView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CommentReportViewImplCopyWith<_$CommentReportViewImpl> get copyWith =>
@@ -544,37 +570,40 @@ abstract class _CommentReportView extends CommentReportView {
       _$CommentReportViewImpl.fromJson;
 
   @override
-  CommentReport get commentReport;
-  @override // v0.18.0
-  Comment get comment;
-  @override // v0.18.0
-  Post get post;
-  @override // v0.18.0
-  Community get community;
-  @override // v0.18.0
-  Person get creator;
-  @override // v0.18.0
-  Person get commentCreator;
-  @override // v0.18.0
-  CommentAggregates get counts;
-  @override // v0.18.0
-  bool get creatorBannedFromCommunity;
-  @override // v0.18.0
-  bool? get creatorIsModerator;
-  @override // v0.19.4 (required)
-  bool? get creatorIsAdmin;
-  @override // v0.19.4 (required)
-  bool? get creatorBlocked;
-  @override // v0.19.4 (required)
-  SubscribedType? get subscribed;
-  @override // v0.19.4 (required)
-  bool? get saved;
-  @override // v0.19.4 (required)
-  num? get myVote;
-  @override // v0.18.0
-  Person? get resolver;
+  CommentReport get commentReport; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  Comment get comment; // v0.18.0
+  @override
+  Post get post; // v0.18.0
+  @override
+  Community get community; // v0.18.0
+  @override
+  Person get creator; // v0.18.0
+  @override
+  Person get commentCreator; // v0.18.0
+  @override
+  CommentAggregates get counts; // v0.18.0
+  @override
+  bool get creatorBannedFromCommunity; // v0.18.0
+  @override
+  bool? get creatorIsModerator; // v0.19.4 (required)
+  @override
+  bool? get creatorIsAdmin; // v0.19.4 (required)
+  @override
+  bool? get creatorBlocked; // v0.19.4 (required)
+  @override
+  SubscribedType? get subscribed; // v0.19.4 (required)
+  @override
+  bool? get saved; // v0.19.4 (required)
+  @override
+  num? get myVote; // v0.18.0
+  @override
+  Person? get resolver;
+
+  /// Create a copy of CommentReportView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CommentReportViewImplCopyWith<_$CommentReportViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

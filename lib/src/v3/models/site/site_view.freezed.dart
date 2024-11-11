@@ -26,8 +26,12 @@ mixin _$SiteView {
       throw _privateConstructorUsedError; // v0.18.0
   SiteAggregates get counts => throw _privateConstructorUsedError;
 
+  /// Serializes this SiteView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SiteView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SiteViewCopyWith<SiteView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -59,6 +63,8 @@ class _$SiteViewCopyWithImpl<$Res, $Val extends SiteView>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SiteView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -87,6 +93,8 @@ class _$SiteViewCopyWithImpl<$Res, $Val extends SiteView>
     ) as $Val);
   }
 
+  /// Create a copy of SiteView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SiteCopyWith<$Res> get site {
@@ -95,6 +103,8 @@ class _$SiteViewCopyWithImpl<$Res, $Val extends SiteView>
     });
   }
 
+  /// Create a copy of SiteView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $LocalSiteCopyWith<$Res> get localSite {
@@ -103,6 +113,8 @@ class _$SiteViewCopyWithImpl<$Res, $Val extends SiteView>
     });
   }
 
+  /// Create a copy of SiteView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $LocalSiteRateLimitCopyWith<$Res> get localSiteRateLimit {
@@ -112,6 +124,8 @@ class _$SiteViewCopyWithImpl<$Res, $Val extends SiteView>
     });
   }
 
+  /// Create a copy of SiteView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SiteAggregatesCopyWith<$Res> get counts {
@@ -153,6 +167,8 @@ class __$$SiteViewImplCopyWithImpl<$Res>
       _$SiteViewImpl _value, $Res Function(_$SiteViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SiteView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -226,12 +242,14 @@ class _$SiteViewImpl extends _SiteView {
             (identical(other.counts, counts) || other.counts == counts));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, site, localSite, localSiteRateLimit, counts);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SiteView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SiteViewImplCopyWith<_$SiteViewImpl> get copyWith =>
@@ -257,15 +275,18 @@ abstract class _SiteView extends SiteView {
       _$SiteViewImpl.fromJson;
 
   @override
-  Site get site;
-  @override // v0.18.0
-  LocalSite get localSite;
-  @override // v0.18.0
-  LocalSiteRateLimit get localSiteRateLimit;
-  @override // v0.18.0
-  SiteAggregates get counts;
+  Site get site; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  LocalSite get localSite; // v0.18.0
+  @override
+  LocalSiteRateLimit get localSiteRateLimit; // v0.18.0
+  @override
+  SiteAggregates get counts;
+
+  /// Create a copy of SiteView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SiteViewImplCopyWith<_$SiteViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

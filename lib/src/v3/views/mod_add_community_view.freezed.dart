@@ -26,8 +26,12 @@ mixin _$ModAddCommunityView {
   Community get community => throw _privateConstructorUsedError; // v0.18.0
   Person get moddedPerson => throw _privateConstructorUsedError;
 
+  /// Serializes this ModAddCommunityView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ModAddCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ModAddCommunityViewCopyWith<ModAddCommunityView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,6 +64,8 @@ class _$ModAddCommunityViewCopyWithImpl<$Res, $Val extends ModAddCommunityView>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ModAddCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -88,6 +94,8 @@ class _$ModAddCommunityViewCopyWithImpl<$Res, $Val extends ModAddCommunityView>
     ) as $Val);
   }
 
+  /// Create a copy of ModAddCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ModAddCommunityCopyWith<$Res> get modAddCommunity {
@@ -96,6 +104,8 @@ class _$ModAddCommunityViewCopyWithImpl<$Res, $Val extends ModAddCommunityView>
     });
   }
 
+  /// Create a copy of ModAddCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res>? get moderator {
@@ -108,6 +118,8 @@ class _$ModAddCommunityViewCopyWithImpl<$Res, $Val extends ModAddCommunityView>
     });
   }
 
+  /// Create a copy of ModAddCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommunityCopyWith<$Res> get community {
@@ -116,6 +128,8 @@ class _$ModAddCommunityViewCopyWithImpl<$Res, $Val extends ModAddCommunityView>
     });
   }
 
+  /// Create a copy of ModAddCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res> get moddedPerson {
@@ -157,6 +171,8 @@ class __$$ModAddCommunityViewImplCopyWithImpl<$Res>
       $Res Function(_$ModAddCommunityViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ModAddCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -232,12 +248,14 @@ class _$ModAddCommunityViewImpl extends _ModAddCommunityView {
                 other.moddedPerson == moddedPerson));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, modAddCommunity, moderator, community, moddedPerson);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ModAddCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ModAddCommunityViewImplCopyWith<_$ModAddCommunityViewImpl> get copyWith =>
@@ -264,15 +282,18 @@ abstract class _ModAddCommunityView extends ModAddCommunityView {
       _$ModAddCommunityViewImpl.fromJson;
 
   @override
-  ModAddCommunity get modAddCommunity;
-  @override // v0.18.0
-  Person? get moderator;
-  @override // v0.18.0
-  Community get community;
-  @override // v0.18.0
-  Person get moddedPerson;
+  ModAddCommunity get modAddCommunity; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  Person? get moderator; // v0.18.0
+  @override
+  Community get community; // v0.18.0
+  @override
+  Person get moddedPerson;
+
+  /// Create a copy of ModAddCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ModAddCommunityViewImplCopyWith<_$ModAddCommunityViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

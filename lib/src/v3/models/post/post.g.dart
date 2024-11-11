@@ -7,12 +7,12 @@ part of 'post.dart';
 // **************************************************************************
 
 _$PostImpl _$$PostImplFromJson(Map<String, dynamic> json) => _$PostImpl(
-      id: json['id'] as int,
+      id: (json['id'] as num).toInt(),
       name: json['name'] as String,
       url: json['url'] as String?,
       body: json['body'] as String?,
-      creatorId: json['creator_id'] as int,
-      communityId: json['community_id'] as int,
+      creatorId: (json['creator_id'] as num).toInt(),
+      communityId: (json['community_id'] as num).toInt(),
       removed: json['removed'] as bool,
       locked: json['locked'] as bool,
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
@@ -26,7 +26,7 @@ _$PostImpl _$$PostImplFromJson(Map<String, dynamic> json) => _$PostImpl(
       apId: json['ap_id'] as String,
       local: json['local'] as bool,
       embedVideoUrl: json['embed_video_url'] as String?,
-      languageId: json['language_id'] as int,
+      languageId: (json['language_id'] as num).toInt(),
       featuredCommunity: json['featured_community'] as bool,
       featuredLocal: json['featured_local'] as bool,
       urlContentType: json['url_content_type'] as String?,

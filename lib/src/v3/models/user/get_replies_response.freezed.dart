@@ -22,8 +22,12 @@ GetRepliesResponse _$GetRepliesResponseFromJson(Map<String, dynamic> json) {
 mixin _$GetRepliesResponse {
   List<CommentReplyView> get replies => throw _privateConstructorUsedError;
 
+  /// Serializes this GetRepliesResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetRepliesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetRepliesResponseCopyWith<GetRepliesResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$GetRepliesResponseCopyWithImpl<$Res, $Val extends GetRepliesResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetRepliesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$GetRepliesResponseImplCopyWithImpl<$Res>
       $Res Function(_$GetRepliesResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetRepliesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -127,12 +135,14 @@ class _$GetRepliesResponseImpl extends _GetRepliesResponse {
             const DeepCollectionEquality().equals(other._replies, _replies));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_replies));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetRepliesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetRepliesResponseImplCopyWith<_$GetRepliesResponseImpl> get copyWith =>
@@ -158,8 +168,11 @@ abstract class _GetRepliesResponse extends GetRepliesResponse {
 
   @override
   List<CommentReplyView> get replies;
+
+  /// Create a copy of GetRepliesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetRepliesResponseImplCopyWith<_$GetRepliesResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

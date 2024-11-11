@@ -23,8 +23,12 @@ mixin _$BlockPersonResponse {
   PersonView get personView => throw _privateConstructorUsedError; // v0.18.0
   bool get blocked => throw _privateConstructorUsedError;
 
+  /// Serializes this BlockPersonResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BlockPersonResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BlockPersonResponseCopyWith<BlockPersonResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$BlockPersonResponseCopyWithImpl<$Res, $Val extends BlockPersonResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of BlockPersonResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -68,6 +74,8 @@ class _$BlockPersonResponseCopyWithImpl<$Res, $Val extends BlockPersonResponse>
     ) as $Val);
   }
 
+  /// Create a copy of BlockPersonResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonViewCopyWith<$Res> get personView {
@@ -99,6 +107,8 @@ class __$$BlockPersonResponseImplCopyWithImpl<$Res>
       $Res Function(_$BlockPersonResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BlockPersonResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -150,11 +160,13 @@ class _$BlockPersonResponseImpl extends _BlockPersonResponse {
             (identical(other.blocked, blocked) || other.blocked == blocked));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, personView, blocked);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BlockPersonResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BlockPersonResponseImplCopyWith<_$BlockPersonResponseImpl> get copyWith =>
@@ -179,11 +191,14 @@ abstract class _BlockPersonResponse extends BlockPersonResponse {
       _$BlockPersonResponseImpl.fromJson;
 
   @override
-  PersonView get personView;
-  @override // v0.18.0
-  bool get blocked;
+  PersonView get personView; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  bool get blocked;
+
+  /// Create a copy of BlockPersonResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BlockPersonResponseImplCopyWith<_$BlockPersonResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

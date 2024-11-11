@@ -49,8 +49,12 @@ mixin _$GetModlogResponse {
   List<ModHideCommunityView> get hiddenCommunities =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this GetModlogResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetModlogResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetModlogResponseCopyWith<GetModlogResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -89,6 +93,8 @@ class _$GetModlogResponseCopyWithImpl<$Res, $Val extends GetModlogResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetModlogResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -207,6 +213,8 @@ class __$$GetModlogResponseImplCopyWithImpl<$Res>
       $Res Function(_$GetModlogResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetModlogResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -528,7 +536,7 @@ class _$GetModlogResponseImpl extends _GetModlogResponse {
                 .equals(other._hiddenCommunities, _hiddenCommunities));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -548,7 +556,9 @@ class _$GetModlogResponseImpl extends _GetModlogResponse {
       const DeepCollectionEquality().hash(_adminPurgedComments),
       const DeepCollectionEquality().hash(_hiddenCommunities));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetModlogResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetModlogResponseImplCopyWith<_$GetModlogResponseImpl> get copyWith =>
@@ -587,37 +597,40 @@ abstract class _GetModlogResponse extends GetModlogResponse {
       _$GetModlogResponseImpl.fromJson;
 
   @override
-  List<ModRemovePostView> get removedPosts;
-  @override // v0.18.0
-  List<ModLockPostView> get lockedPosts;
-  @override // v0.18.0
-  List<ModFeaturePostView> get featuredPosts;
-  @override // v0.18.0
-  List<ModRemoveCommentView> get removedComments;
-  @override // v0.18.0
-  List<ModRemoveCommunityView> get removedCommunities;
-  @override // v0.18.0
-  List<ModBanFromCommunityView> get bannedFromCommunity;
-  @override // v0.18.0
-  List<ModBanView> get banned;
-  @override // v0.18.0
-  List<ModAddCommunityView> get addedToCommunity;
-  @override // v0.18.0
-  List<ModTransferCommunityView> get transferredToCommunity;
-  @override // v0.18.0
-  List<ModAddView> get added;
-  @override // v0.18.0
-  List<AdminPurgePersonView> get adminPurgedPersons;
-  @override // v0.18.0
-  List<AdminPurgeCommunityView> get adminPurgedCommunities;
-  @override // v0.18.0
-  List<AdminPurgePostView> get adminPurgedPosts;
-  @override // v0.18.0
-  List<AdminPurgeCommentView> get adminPurgedComments;
-  @override // v0.18.0
-  List<ModHideCommunityView> get hiddenCommunities;
+  List<ModRemovePostView> get removedPosts; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  List<ModLockPostView> get lockedPosts; // v0.18.0
+  @override
+  List<ModFeaturePostView> get featuredPosts; // v0.18.0
+  @override
+  List<ModRemoveCommentView> get removedComments; // v0.18.0
+  @override
+  List<ModRemoveCommunityView> get removedCommunities; // v0.18.0
+  @override
+  List<ModBanFromCommunityView> get bannedFromCommunity; // v0.18.0
+  @override
+  List<ModBanView> get banned; // v0.18.0
+  @override
+  List<ModAddCommunityView> get addedToCommunity; // v0.18.0
+  @override
+  List<ModTransferCommunityView> get transferredToCommunity; // v0.18.0
+  @override
+  List<ModAddView> get added; // v0.18.0
+  @override
+  List<AdminPurgePersonView> get adminPurgedPersons; // v0.18.0
+  @override
+  List<AdminPurgeCommunityView> get adminPurgedCommunities; // v0.18.0
+  @override
+  List<AdminPurgePostView> get adminPurgedPosts; // v0.18.0
+  @override
+  List<AdminPurgeCommentView> get adminPurgedComments; // v0.18.0
+  @override
+  List<ModHideCommunityView> get hiddenCommunities;
+
+  /// Create a copy of GetModlogResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetModlogResponseImplCopyWith<_$GetModlogResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

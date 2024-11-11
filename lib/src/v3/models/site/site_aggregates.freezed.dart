@@ -33,8 +33,12 @@ mixin _$SiteAggregates {
   int get usersActiveMonth => throw _privateConstructorUsedError; // v0.18.0
   int get usersActiveHalfYear => throw _privateConstructorUsedError;
 
+  /// Serializes this SiteAggregates to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SiteAggregates
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SiteAggregatesCopyWith<SiteAggregates> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -68,6 +72,8 @@ class _$SiteAggregatesCopyWithImpl<$Res, $Val extends SiteAggregates>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SiteAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -156,6 +162,8 @@ class __$$SiteAggregatesImplCopyWithImpl<$Res>
       _$SiteAggregatesImpl _value, $Res Function(_$SiteAggregatesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SiteAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -294,7 +302,7 @@ class _$SiteAggregatesImpl extends _SiteAggregates {
                 other.usersActiveHalfYear == usersActiveHalfYear));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -309,7 +317,9 @@ class _$SiteAggregatesImpl extends _SiteAggregates {
       usersActiveMonth,
       usersActiveHalfYear);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SiteAggregates
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SiteAggregatesImplCopyWith<_$SiteAggregatesImpl> get copyWith =>
@@ -343,27 +353,30 @@ abstract class _SiteAggregates extends SiteAggregates {
 
   @override
   @deprecated
-  int? get id;
-  @override // v0.18.0 [deprecated in v0.19.0]
-  int get siteId;
-  @override // v0.18.0
-  int get users;
-  @override // v0.18.0
-  int get posts;
-  @override // v0.18.0
-  int get comments;
-  @override // v0.18.0
-  int get communities;
-  @override // v0.18.0
-  int get usersActiveDay;
-  @override // v0.18.0
-  int get usersActiveWeek;
-  @override // v0.18.0
-  int get usersActiveMonth;
-  @override // v0.18.0
-  int get usersActiveHalfYear;
+  int? get id; // v0.18.0 [deprecated in v0.19.0]
   @override
-  @JsonKey(ignore: true)
+  int get siteId; // v0.18.0
+  @override
+  int get users; // v0.18.0
+  @override
+  int get posts; // v0.18.0
+  @override
+  int get comments; // v0.18.0
+  @override
+  int get communities; // v0.18.0
+  @override
+  int get usersActiveDay; // v0.18.0
+  @override
+  int get usersActiveWeek; // v0.18.0
+  @override
+  int get usersActiveMonth; // v0.18.0
+  @override
+  int get usersActiveHalfYear;
+
+  /// Create a copy of SiteAggregates
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SiteAggregatesImplCopyWith<_$SiteAggregatesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

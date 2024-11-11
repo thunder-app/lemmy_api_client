@@ -23,8 +23,12 @@ PasswordResetResponse _$PasswordResetResponseFromJson(
 mixin _$PasswordResetResponse {
   bool? get success => throw _privateConstructorUsedError;
 
+  /// Serializes this PasswordResetResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PasswordResetResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PasswordResetResponseCopyWith<PasswordResetResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$PasswordResetResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PasswordResetResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -84,6 +90,8 @@ class __$$PasswordResetResponseImplCopyWithImpl<$Res>
       $Res Function(_$PasswordResetResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PasswordResetResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -123,11 +131,13 @@ class _$PasswordResetResponseImpl extends _PasswordResetResponse {
             (identical(other.success, success) || other.success == success));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, success);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PasswordResetResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PasswordResetResponseImplCopyWith<_$PasswordResetResponseImpl>
@@ -152,8 +162,11 @@ abstract class _PasswordResetResponse extends PasswordResetResponse {
 
   @override
   bool? get success;
+
+  /// Create a copy of PasswordResetResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PasswordResetResponseImplCopyWith<_$PasswordResetResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

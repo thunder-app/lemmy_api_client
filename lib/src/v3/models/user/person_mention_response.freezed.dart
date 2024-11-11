@@ -23,8 +23,12 @@ PersonMentionResponse _$PersonMentionResponseFromJson(
 mixin _$PersonMentionResponse {
   PersonMentionView get personMentionView => throw _privateConstructorUsedError;
 
+  /// Serializes this PersonMentionResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PersonMentionResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PersonMentionResponseCopyWith<PersonMentionResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$PersonMentionResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PersonMentionResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -64,6 +70,8 @@ class _$PersonMentionResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of PersonMentionResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonMentionViewCopyWith<$Res> get personMentionView {
@@ -97,6 +105,8 @@ class __$$PersonMentionResponseImplCopyWithImpl<$Res>
       $Res Function(_$PersonMentionResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PersonMentionResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -138,11 +148,13 @@ class _$PersonMentionResponseImpl extends _PersonMentionResponse {
                 other.personMentionView == personMentionView));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, personMentionView);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PersonMentionResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PersonMentionResponseImplCopyWith<_$PersonMentionResponseImpl>
@@ -168,8 +180,11 @@ abstract class _PersonMentionResponse extends PersonMentionResponse {
 
   @override
   PersonMentionView get personMentionView;
+
+  /// Create a copy of PersonMentionResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PersonMentionResponseImplCopyWith<_$PersonMentionResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

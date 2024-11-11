@@ -23,8 +23,12 @@ mixin _$CustomEmojiView {
   CustomEmoji get customEmoji => throw _privateConstructorUsedError; // v0.18.0
   List<CustomEmojiKeyword> get keywords => throw _privateConstructorUsedError;
 
+  /// Serializes this CustomEmojiView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CustomEmojiView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CustomEmojiViewCopyWith<CustomEmojiView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$CustomEmojiViewCopyWithImpl<$Res, $Val extends CustomEmojiView>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CustomEmojiView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -68,6 +74,8 @@ class _$CustomEmojiViewCopyWithImpl<$Res, $Val extends CustomEmojiView>
     ) as $Val);
   }
 
+  /// Create a copy of CustomEmojiView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CustomEmojiCopyWith<$Res> get customEmoji {
@@ -99,6 +107,8 @@ class __$$CustomEmojiViewImplCopyWithImpl<$Res>
       _$CustomEmojiViewImpl _value, $Res Function(_$CustomEmojiViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CustomEmojiView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -158,12 +168,14 @@ class _$CustomEmojiViewImpl extends _CustomEmojiView {
             const DeepCollectionEquality().equals(other._keywords, _keywords));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, customEmoji, const DeepCollectionEquality().hash(_keywords));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CustomEmojiView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CustomEmojiViewImplCopyWith<_$CustomEmojiViewImpl> get copyWith =>
@@ -189,11 +201,14 @@ abstract class _CustomEmojiView extends CustomEmojiView {
       _$CustomEmojiViewImpl.fromJson;
 
   @override
-  CustomEmoji get customEmoji;
-  @override // v0.18.0
-  List<CustomEmojiKeyword> get keywords;
+  CustomEmoji get customEmoji; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  List<CustomEmojiKeyword> get keywords;
+
+  /// Create a copy of CustomEmojiView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CustomEmojiViewImplCopyWith<_$CustomEmojiViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

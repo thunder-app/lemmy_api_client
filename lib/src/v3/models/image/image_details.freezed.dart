@@ -25,8 +25,12 @@ mixin _$ImageDetails {
   int get height => throw _privateConstructorUsedError; // v0.19.6 (required)
   String get contentType => throw _privateConstructorUsedError;
 
+  /// Serializes this ImageDetails to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ImageDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ImageDetailsCopyWith<ImageDetails> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$ImageDetailsCopyWithImpl<$Res, $Val extends ImageDetails>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ImageDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -98,6 +104,8 @@ class __$$ImageDetailsImplCopyWithImpl<$Res>
       _$ImageDetailsImpl _value, $Res Function(_$ImageDetailsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ImageDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -170,12 +178,14 @@ class _$ImageDetailsImpl extends _ImageDetails {
                 other.contentType == contentType));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, link, width, height, contentType);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ImageDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ImageDetailsImplCopyWith<_$ImageDetailsImpl> get copyWith =>
@@ -201,15 +211,18 @@ abstract class _ImageDetails extends ImageDetails {
       _$ImageDetailsImpl.fromJson;
 
   @override
-  String get link;
-  @override // v0.19.6 (required)
-  int get width;
-  @override // v0.19.6 (required)
-  int get height;
-  @override // v0.19.6 (required)
-  String get contentType;
+  String get link; // v0.19.6 (required)
   @override
-  @JsonKey(ignore: true)
+  int get width; // v0.19.6 (required)
+  @override
+  int get height; // v0.19.6 (required)
+  @override
+  String get contentType;
+
+  /// Create a copy of ImageDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ImageDetailsImplCopyWith<_$ImageDetailsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

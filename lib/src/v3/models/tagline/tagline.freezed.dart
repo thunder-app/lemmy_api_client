@@ -26,8 +26,12 @@ mixin _$Tagline {
   DateTime get published => throw _privateConstructorUsedError; // v0.18.0
   DateTime? get updated => throw _privateConstructorUsedError;
 
+  /// Serializes this Tagline to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Tagline
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TaglineCopyWith<Tagline> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -54,6 +58,8 @@ class _$TaglineCopyWithImpl<$Res, $Val extends Tagline>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Tagline
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -111,6 +117,8 @@ class __$$TaglineImplCopyWithImpl<$Res>
       _$TaglineImpl _value, $Res Function(_$TaglineImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Tagline
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -194,12 +202,14 @@ class _$TaglineImpl extends _Tagline {
             (identical(other.updated, updated) || other.updated == updated));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, localSiteId, content, published, updated);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Tagline
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TaglineImplCopyWith<_$TaglineImpl> get copyWith =>
@@ -225,17 +235,20 @@ abstract class _Tagline extends Tagline {
   factory _Tagline.fromJson(Map<String, dynamic> json) = _$TaglineImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  int get localSiteId;
-  @override // v0.18.0
-  String get content;
-  @override // v0.18.0
-  DateTime get published;
-  @override // v0.18.0
-  DateTime? get updated;
+  int get id; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  int get localSiteId; // v0.18.0
+  @override
+  String get content; // v0.18.0
+  @override
+  DateTime get published; // v0.18.0
+  @override
+  DateTime? get updated;
+
+  /// Create a copy of Tagline
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TaglineImplCopyWith<_$TaglineImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

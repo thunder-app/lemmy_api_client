@@ -7,9 +7,9 @@ part of 'mod_ban.dart';
 // **************************************************************************
 
 _$ModBanImpl _$$ModBanImplFromJson(Map<String, dynamic> json) => _$ModBanImpl(
-      id: json['id'] as int,
-      modPersonId: json['mod_person_id'] as int,
-      otherPersonId: json['other_person_id'] as int,
+      id: (json['id'] as num).toInt(),
+      modPersonId: (json['mod_person_id'] as num).toInt(),
+      otherPersonId: (json['other_person_id'] as num).toInt(),
       reason: json['reason'] as String?,
       banned: json['banned'] as bool,
       expires: json['expires'] as String?,

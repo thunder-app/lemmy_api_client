@@ -9,10 +9,10 @@ part of 'get_report_count_response.dart';
 _$GetReportCountResponseImpl _$$GetReportCountResponseImplFromJson(
         Map<String, dynamic> json) =>
     _$GetReportCountResponseImpl(
-      communityId: json['community_id'] as int?,
-      commentReports: json['comment_reports'] as int,
-      postReports: json['post_reports'] as int,
-      privateMessageReports: json['private_message_reports'] as int?,
+      communityId: (json['community_id'] as num?)?.toInt(),
+      commentReports: (json['comment_reports'] as num).toInt(),
+      postReports: (json['post_reports'] as num).toInt(),
+      privateMessageReports: (json['private_message_reports'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$GetReportCountResponseImplToJson(

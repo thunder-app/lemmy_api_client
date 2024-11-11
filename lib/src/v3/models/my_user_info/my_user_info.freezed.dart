@@ -34,8 +34,12 @@ mixin _$MyUserInfo {
       throw _privateConstructorUsedError; // v0.18.0
   List<int> get discussionLanguages => throw _privateConstructorUsedError;
 
+  /// Serializes this MyUserInfo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MyUserInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MyUserInfoCopyWith<MyUserInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -68,6 +72,8 @@ class _$MyUserInfoCopyWithImpl<$Res, $Val extends MyUserInfo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MyUserInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -111,6 +117,8 @@ class _$MyUserInfoCopyWithImpl<$Res, $Val extends MyUserInfo>
     ) as $Val);
   }
 
+  /// Create a copy of MyUserInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $LocalUserViewCopyWith<$Res> get localUserView {
@@ -149,6 +157,8 @@ class __$$MyUserInfoImplCopyWithImpl<$Res>
       _$MyUserInfoImpl _value, $Res Function(_$MyUserInfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MyUserInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -306,7 +316,7 @@ class _$MyUserInfoImpl extends _MyUserInfo {
                 .equals(other._discussionLanguages, _discussionLanguages));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -318,7 +328,9 @@ class _$MyUserInfoImpl extends _MyUserInfo {
       const DeepCollectionEquality().hash(_personBlocks),
       const DeepCollectionEquality().hash(_discussionLanguages));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MyUserInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MyUserInfoImplCopyWith<_$MyUserInfoImpl> get copyWith =>
@@ -347,21 +359,24 @@ abstract class _MyUserInfo extends MyUserInfo {
       _$MyUserInfoImpl.fromJson;
 
   @override
-  LocalUserView get localUserView;
-  @override // v0.18.0
-  List<CommunityFollowerView> get follows;
-  @override // v0.18.0
-  List<CommunityModeratorView> get moderates;
-  @override // v0.18.0
-  List<CommunityBlockView> get communityBlocks;
-  @override // v0.18.0
-  List<InstanceBlockView>? get instanceBlocks;
-  @override // v0.19.0 (required)
-  List<PersonBlockView> get personBlocks;
-  @override // v0.18.0
-  List<int> get discussionLanguages;
+  LocalUserView get localUserView; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  List<CommunityFollowerView> get follows; // v0.18.0
+  @override
+  List<CommunityModeratorView> get moderates; // v0.18.0
+  @override
+  List<CommunityBlockView> get communityBlocks; // v0.18.0
+  @override
+  List<InstanceBlockView>? get instanceBlocks; // v0.19.0 (required)
+  @override
+  List<PersonBlockView> get personBlocks; // v0.18.0
+  @override
+  List<int> get discussionLanguages;
+
+  /// Create a copy of MyUserInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MyUserInfoImplCopyWith<_$MyUserInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

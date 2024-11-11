@@ -27,8 +27,12 @@ mixin _$GetPostResponse {
       throw _privateConstructorUsedError; // v0.18.0
   List<PostView> get crossPosts => throw _privateConstructorUsedError;
 
+  /// Serializes this GetPostResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetPostResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetPostResponseCopyWith<GetPostResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -59,6 +63,8 @@ class _$GetPostResponseCopyWithImpl<$Res, $Val extends GetPostResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetPostResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -87,6 +93,8 @@ class _$GetPostResponseCopyWithImpl<$Res, $Val extends GetPostResponse>
     ) as $Val);
   }
 
+  /// Create a copy of GetPostResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PostViewCopyWith<$Res> get postView {
@@ -95,6 +103,8 @@ class _$GetPostResponseCopyWithImpl<$Res, $Val extends GetPostResponse>
     });
   }
 
+  /// Create a copy of GetPostResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommunityViewCopyWith<$Res> get communityView {
@@ -132,6 +142,8 @@ class __$$GetPostResponseImplCopyWithImpl<$Res>
       _$GetPostResponseImpl _value, $Res Function(_$GetPostResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetPostResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -222,7 +234,7 @@ class _$GetPostResponseImpl extends _GetPostResponse {
                 .equals(other._crossPosts, _crossPosts));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -231,7 +243,9 @@ class _$GetPostResponseImpl extends _GetPostResponse {
       const DeepCollectionEquality().hash(_moderators),
       const DeepCollectionEquality().hash(_crossPosts));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetPostResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetPostResponseImplCopyWith<_$GetPostResponseImpl> get copyWith =>
@@ -258,15 +272,18 @@ abstract class _GetPostResponse extends GetPostResponse {
       _$GetPostResponseImpl.fromJson;
 
   @override
-  PostView get postView;
-  @override // v0.18.0
-  CommunityView get communityView;
-  @override // v0.18.0
-  List<CommunityModeratorView> get moderators;
-  @override // v0.18.0
-  List<PostView> get crossPosts;
+  PostView get postView; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  CommunityView get communityView; // v0.18.0
+  @override
+  List<CommunityModeratorView> get moderators; // v0.18.0
+  @override
+  List<PostView> get crossPosts;
+
+  /// Create a copy of GetPostResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetPostResponseImplCopyWith<_$GetPostResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

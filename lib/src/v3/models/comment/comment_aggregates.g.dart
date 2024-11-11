@@ -9,14 +9,14 @@ part of 'comment_aggregates.dart';
 _$CommentAggregatesImpl _$$CommentAggregatesImplFromJson(
         Map<String, dynamic> json) =>
     _$CommentAggregatesImpl(
-      id: json['id'] as int?,
-      commentId: json['comment_id'] as int,
-      score: json['score'] as int,
-      upvotes: json['upvotes'] as int,
-      downvotes: json['downvotes'] as int,
+      id: (json['id'] as num?)?.toInt(),
+      commentId: (json['comment_id'] as num).toInt(),
+      score: (json['score'] as num).toInt(),
+      upvotes: (json['upvotes'] as num).toInt(),
+      downvotes: (json['downvotes'] as num).toInt(),
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
-      childCount: json['child_count'] as int,
-      hotRank: json['hot_rank'] as int?,
+      childCount: (json['child_count'] as num).toInt(),
+      hotRank: (json['hot_rank'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$CommentAggregatesImplToJson(

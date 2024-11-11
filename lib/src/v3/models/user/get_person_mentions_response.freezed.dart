@@ -23,8 +23,12 @@ GetPersonMentionsResponse _$GetPersonMentionsResponseFromJson(
 mixin _$GetPersonMentionsResponse {
   List<PersonMentionView> get mentions => throw _privateConstructorUsedError;
 
+  /// Serializes this GetPersonMentionsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetPersonMentionsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetPersonMentionsResponseCopyWith<GetPersonMentionsResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$GetPersonMentionsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetPersonMentionsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,6 +91,8 @@ class __$$GetPersonMentionsResponseImplCopyWithImpl<$Res>
       $Res Function(_$GetPersonMentionsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetPersonMentionsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -132,12 +140,14 @@ class _$GetPersonMentionsResponseImpl extends _GetPersonMentionsResponse {
             const DeepCollectionEquality().equals(other._mentions, _mentions));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_mentions));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetPersonMentionsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetPersonMentionsResponseImplCopyWith<_$GetPersonMentionsResponseImpl>
@@ -163,8 +173,11 @@ abstract class _GetPersonMentionsResponse extends GetPersonMentionsResponse {
 
   @override
   List<PersonMentionView> get mentions;
+
+  /// Create a copy of GetPersonMentionsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetPersonMentionsResponseImplCopyWith<_$GetPersonMentionsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

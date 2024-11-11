@@ -8,9 +8,9 @@ part of 'mod_remove_post.dart';
 
 _$ModRemovePostImpl _$$ModRemovePostImplFromJson(Map<String, dynamic> json) =>
     _$ModRemovePostImpl(
-      id: json['id'] as int,
-      modPersonId: json['mod_person_id'] as int,
-      postId: json['post_id'] as int,
+      id: (json['id'] as num).toInt(),
+      modPersonId: (json['mod_person_id'] as num).toInt(),
+      postId: (json['post_id'] as num).toInt(),
       reason: json['reason'] as String?,
       removed: json['removed'] as bool,
       when: json['when_'] as String,

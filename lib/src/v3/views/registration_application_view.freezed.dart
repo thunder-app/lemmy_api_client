@@ -28,8 +28,12 @@ mixin _$RegistrationApplicationView {
   Person get creator => throw _privateConstructorUsedError; // v0.18.0
   Person? get admin => throw _privateConstructorUsedError;
 
+  /// Serializes this RegistrationApplicationView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RegistrationApplicationView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RegistrationApplicationViewCopyWith<RegistrationApplicationView>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -65,6 +69,8 @@ class _$RegistrationApplicationViewCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RegistrationApplicationView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -93,6 +99,8 @@ class _$RegistrationApplicationViewCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of RegistrationApplicationView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RegistrationApplicationCopyWith<$Res> get registrationApplication {
@@ -102,6 +110,8 @@ class _$RegistrationApplicationViewCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of RegistrationApplicationView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $LocalUserCopyWith<$Res> get creatorLocalUser {
@@ -110,6 +120,8 @@ class _$RegistrationApplicationViewCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of RegistrationApplicationView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res> get creator {
@@ -118,6 +130,8 @@ class _$RegistrationApplicationViewCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of RegistrationApplicationView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res>? get admin {
@@ -166,6 +180,8 @@ class __$$RegistrationApplicationViewImplCopyWithImpl<$Res>
       $Res Function(_$RegistrationApplicationViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RegistrationApplicationView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -241,12 +257,14 @@ class _$RegistrationApplicationViewImpl extends _RegistrationApplicationView {
             (identical(other.admin, admin) || other.admin == admin));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, registrationApplication, creatorLocalUser, creator, admin);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RegistrationApplicationView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RegistrationApplicationViewImplCopyWith<_$RegistrationApplicationViewImpl>
@@ -274,15 +292,18 @@ abstract class _RegistrationApplicationView
       _$RegistrationApplicationViewImpl.fromJson;
 
   @override
-  RegistrationApplication get registrationApplication;
-  @override // v0.18.0
-  LocalUser get creatorLocalUser;
-  @override // v0.18.0
-  Person get creator;
-  @override // v0.18.0
-  Person? get admin;
+  RegistrationApplication get registrationApplication; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  LocalUser get creatorLocalUser; // v0.18.0
+  @override
+  Person get creator; // v0.18.0
+  @override
+  Person? get admin;
+
+  /// Create a copy of RegistrationApplicationView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RegistrationApplicationViewImplCopyWith<_$RegistrationApplicationViewImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -34,8 +34,12 @@ mixin _$Comment {
   bool get distinguished => throw _privateConstructorUsedError; // v0.18.0
   int get languageId => throw _privateConstructorUsedError;
 
+  /// Serializes this Comment to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Comment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CommentCopyWith<Comment> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -70,6 +74,8 @@ class _$CommentCopyWithImpl<$Res, $Val extends Comment>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Comment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -175,6 +181,8 @@ class __$$CommentImplCopyWithImpl<$Res>
       _$CommentImpl _value, $Res Function(_$CommentImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Comment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -340,7 +348,7 @@ class _$CommentImpl extends _Comment {
                 other.languageId == languageId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -358,7 +366,9 @@ class _$CommentImpl extends _Comment {
       distinguished,
       languageId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Comment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CommentImplCopyWith<_$CommentImpl> get copyWith =>
@@ -392,33 +402,36 @@ abstract class _Comment extends Comment {
   factory _Comment.fromJson(Map<String, dynamic> json) = _$CommentImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  int get creatorId;
-  @override // v0.18.0
-  int get postId;
-  @override // v0.18.0
-  String get content;
-  @override // v0.18.0
-  bool get removed;
-  @override // v0.18.0
-  DateTime get published;
-  @override // v0.18.0
-  DateTime? get updated;
-  @override // v0.18.0
-  bool get deleted;
-  @override // v0.18.0
-  String get apId;
-  @override // v0.18.0
-  bool get local;
-  @override // v0.18.0
-  String get path;
-  @override // v0.18.0
-  bool get distinguished;
-  @override // v0.18.0
-  int get languageId;
+  int get id; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  int get creatorId; // v0.18.0
+  @override
+  int get postId; // v0.18.0
+  @override
+  String get content; // v0.18.0
+  @override
+  bool get removed; // v0.18.0
+  @override
+  DateTime get published; // v0.18.0
+  @override
+  DateTime? get updated; // v0.18.0
+  @override
+  bool get deleted; // v0.18.0
+  @override
+  String get apId; // v0.18.0
+  @override
+  bool get local; // v0.18.0
+  @override
+  String get path; // v0.18.0
+  @override
+  bool get distinguished; // v0.18.0
+  @override
+  int get languageId;
+
+  /// Create a copy of Comment
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CommentImplCopyWith<_$CommentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

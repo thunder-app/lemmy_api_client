@@ -23,8 +23,12 @@ mixin _$GetPostsResponse {
   List<PostView> get posts => throw _privateConstructorUsedError; // v0.18.0
   String? get nextPage => throw _privateConstructorUsedError;
 
+  /// Serializes this GetPostsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetPostsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetPostsResponseCopyWith<GetPostsResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$GetPostsResponseCopyWithImpl<$Res, $Val extends GetPostsResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetPostsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$GetPostsResponseImplCopyWithImpl<$Res>
       $Res Function(_$GetPostsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetPostsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -144,12 +152,14 @@ class _$GetPostsResponseImpl extends _GetPostsResponse {
                 other.nextPage == nextPage));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_posts), nextPage);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetPostsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetPostsResponseImplCopyWith<_$GetPostsResponseImpl> get copyWith =>
@@ -174,11 +184,14 @@ abstract class _GetPostsResponse extends GetPostsResponse {
       _$GetPostsResponseImpl.fromJson;
 
   @override
-  List<PostView> get posts;
-  @override // v0.18.0
-  String? get nextPage;
+  List<PostView> get posts; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String? get nextPage;
+
+  /// Create a copy of GetPostsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetPostsResponseImplCopyWith<_$GetPostsResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

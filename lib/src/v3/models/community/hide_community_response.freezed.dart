@@ -27,8 +27,12 @@ mixin _$HideCommunityResponse {
   List<int>? get discussionLanguages => throw _privateConstructorUsedError;
   bool? get success => throw _privateConstructorUsedError;
 
+  /// Serializes this HideCommunityResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HideCommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $HideCommunityResponseCopyWith<HideCommunityResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,6 +62,8 @@ class _$HideCommunityResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of HideCommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -81,6 +87,8 @@ class _$HideCommunityResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of HideCommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommunityViewCopyWith<$Res>? get communityView {
@@ -121,6 +129,8 @@ class __$$HideCommunityResponseImplCopyWithImpl<$Res>
       $Res Function(_$HideCommunityResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HideCommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -194,12 +204,14 @@ class _$HideCommunityResponseImpl extends _HideCommunityResponse {
             (identical(other.success, success) || other.success == success));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, communityView,
       const DeepCollectionEquality().hash(_discussionLanguages), success);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HideCommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$HideCommunityResponseImplCopyWith<_$HideCommunityResponseImpl>
@@ -232,8 +244,11 @@ abstract class _HideCommunityResponse extends HideCommunityResponse {
   List<int>? get discussionLanguages;
   @override
   bool? get success;
+
+  /// Create a copy of HideCommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HideCommunityResponseImplCopyWith<_$HideCommunityResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

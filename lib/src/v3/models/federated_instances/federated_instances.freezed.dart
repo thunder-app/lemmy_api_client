@@ -27,8 +27,12 @@ mixin _$FederatedInstances {
   List<InstanceWithFederationState> get blocked =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this FederatedInstances to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FederatedInstances
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FederatedInstancesCopyWith<FederatedInstances> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$FederatedInstancesCopyWithImpl<$Res, $Val extends FederatedInstances>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FederatedInstances
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -101,6 +107,8 @@ class __$$FederatedInstancesImplCopyWithImpl<$Res>
       $Res Function(_$FederatedInstancesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FederatedInstances
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -184,7 +192,7 @@ class _$FederatedInstancesImpl extends _FederatedInstances {
             const DeepCollectionEquality().equals(other._blocked, _blocked));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -192,7 +200,9 @@ class _$FederatedInstancesImpl extends _FederatedInstances {
       const DeepCollectionEquality().hash(_allowed),
       const DeepCollectionEquality().hash(_blocked));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FederatedInstances
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FederatedInstancesImplCopyWith<_$FederatedInstancesImpl> get copyWith =>
@@ -219,13 +229,16 @@ abstract class _FederatedInstances extends FederatedInstances {
       _$FederatedInstancesImpl.fromJson;
 
   @override
-  List<InstanceWithFederationState> get linked;
-  @override // v0.18.0
-  List<InstanceWithFederationState> get allowed;
-  @override // v0.18.0
-  List<InstanceWithFederationState> get blocked;
+  List<InstanceWithFederationState> get linked; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  List<InstanceWithFederationState> get allowed; // v0.18.0
+  @override
+  List<InstanceWithFederationState> get blocked;
+
+  /// Create a copy of FederatedInstances
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FederatedInstancesImplCopyWith<_$FederatedInstancesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

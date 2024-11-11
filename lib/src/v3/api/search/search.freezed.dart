@@ -32,8 +32,12 @@ mixin _$Search {
   int? get limit => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this Search to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Search
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SearchCopyWith<Search> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -65,6 +69,8 @@ class _$SearchCopyWithImpl<$Res, $Val extends Search>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Search
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -152,6 +158,8 @@ class __$$SearchImplCopyWithImpl<$Res>
       _$SearchImpl _value, $Res Function(_$SearchImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Search
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -288,12 +296,14 @@ class _$SearchImpl extends _Search {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, q, communityId, communityName,
       creatorId, type, sort, listingType, page, limit, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Search
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchImplCopyWith<_$SearchImpl> get copyWith =>
@@ -324,28 +334,31 @@ abstract class _Search extends Search {
   factory _Search.fromJson(Map<String, dynamic> json) = _$SearchImpl.fromJson;
 
   @override
-  String get q;
-  @override // v0.18.0
-  int? get communityId;
-  @override // v0.18.0
-  String? get communityName;
-  @override // v0.18.0
-  int? get creatorId;
-  @override // v0.18.0
-  @JsonKey(name: 'type_')
-  SearchType? get type;
-  @override // v0.18.0
-  SortType? get sort;
-  @override // v0.18.0
-  ListingType? get listingType;
-  @override // v0.18.0
-  int? get page;
-  @override // v0.18.0
-  int? get limit;
-  @override // v0.18.0
-  String? get auth;
+  String get q; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  int? get communityId; // v0.18.0
+  @override
+  String? get communityName; // v0.18.0
+  @override
+  int? get creatorId; // v0.18.0
+  @override
+  @JsonKey(name: 'type_')
+  SearchType? get type; // v0.18.0
+  @override
+  SortType? get sort; // v0.18.0
+  @override
+  ListingType? get listingType; // v0.18.0
+  @override
+  int? get page; // v0.18.0
+  @override
+  int? get limit; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of Search
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchImplCopyWith<_$SearchImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -31,8 +31,12 @@ mixin _$PrivateMessage {
   String get apId => throw _privateConstructorUsedError; // v0.18.0
   bool get local => throw _privateConstructorUsedError;
 
+  /// Serializes this PrivateMessage to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PrivateMessage
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PrivateMessageCopyWith<PrivateMessage> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -66,6 +70,8 @@ class _$PrivateMessageCopyWithImpl<$Res, $Val extends PrivateMessage>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PrivateMessage
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -154,6 +160,8 @@ class __$$PrivateMessageImplCopyWithImpl<$Res>
       _$PrivateMessageImpl _value, $Res Function(_$PrivateMessageImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PrivateMessage
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -288,12 +296,14 @@ class _$PrivateMessageImpl extends _PrivateMessage {
             (identical(other.local, local) || other.local == local));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, creatorId, recipientId,
       content, deleted, read, published, updated, apId, local);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PrivateMessage
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PrivateMessageImplCopyWith<_$PrivateMessageImpl> get copyWith =>
@@ -326,27 +336,30 @@ abstract class _PrivateMessage extends PrivateMessage {
       _$PrivateMessageImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  int get creatorId;
-  @override // v0.18.0
-  int get recipientId;
-  @override // v0.18.0
-  String get content;
-  @override // v0.18.0
-  bool get deleted;
-  @override // v0.18.0
-  bool get read;
-  @override // v0.18.0
-  DateTime get published;
-  @override // v0.18.0
-  DateTime? get updated;
-  @override // v0.18.0
-  String get apId;
-  @override // v0.18.0
-  bool get local;
+  int get id; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  int get creatorId; // v0.18.0
+  @override
+  int get recipientId; // v0.18.0
+  @override
+  String get content; // v0.18.0
+  @override
+  bool get deleted; // v0.18.0
+  @override
+  bool get read; // v0.18.0
+  @override
+  DateTime get published; // v0.18.0
+  @override
+  DateTime? get updated; // v0.18.0
+  @override
+  String get apId; // v0.18.0
+  @override
+  bool get local;
+
+  /// Create a copy of PrivateMessage
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PrivateMessageImplCopyWith<_$PrivateMessageImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -26,8 +26,12 @@ mixin _$DeleteCustomEmojiResponse {
       throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
   bool get success => throw _privateConstructorUsedError;
 
+  /// Serializes this DeleteCustomEmojiResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DeleteCustomEmojiResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DeleteCustomEmojiResponseCopyWith<DeleteCustomEmojiResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$DeleteCustomEmojiResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DeleteCustomEmojiResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -93,6 +99,8 @@ class __$$DeleteCustomEmojiResponseImplCopyWithImpl<$Res>
       $Res Function(_$DeleteCustomEmojiResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DeleteCustomEmojiResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -144,11 +152,13 @@ class _$DeleteCustomEmojiResponseImpl extends _DeleteCustomEmojiResponse {
             (identical(other.success, success) || other.success == success));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, success);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeleteCustomEmojiResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DeleteCustomEmojiResponseImplCopyWith<_$DeleteCustomEmojiResponseImpl>
@@ -174,11 +184,14 @@ abstract class _DeleteCustomEmojiResponse extends DeleteCustomEmojiResponse {
 
   @override
   @deprecated
-  int? get id;
-  @override // v0.18.0 [deprecated in v0.19.0]
-  bool get success;
+  int? get id; // v0.18.0 [deprecated in v0.19.0]
   @override
-  @JsonKey(ignore: true)
+  bool get success;
+
+  /// Create a copy of DeleteCustomEmojiResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeleteCustomEmojiResponseImplCopyWith<_$DeleteCustomEmojiResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

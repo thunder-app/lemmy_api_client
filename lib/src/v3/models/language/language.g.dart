@@ -8,7 +8,7 @@ part of 'language.dart';
 
 _$LanguageImpl _$$LanguageImplFromJson(Map<String, dynamic> json) =>
     _$LanguageImpl(
-      id: json['id'] as int,
+      id: (json['id'] as num).toInt(),
       code: json['code'] as String,
       name: json['name'] as String,
     );

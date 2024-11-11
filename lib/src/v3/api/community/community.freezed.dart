@@ -24,8 +24,12 @@ mixin _$GetCommunity {
   String? get name => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this GetCommunity to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetCommunityCopyWith<GetCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$GetCommunityCopyWithImpl<$Res, $Val extends GetCommunity>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +98,8 @@ class __$$GetCommunityImplCopyWithImpl<$Res>
       _$GetCommunityImpl _value, $Res Function(_$GetCommunityImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -149,11 +157,13 @@ class _$GetCommunityImpl extends _GetCommunity {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, name, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetCommunityImplCopyWith<_$GetCommunityImpl> get copyWith =>
@@ -178,13 +188,16 @@ abstract class _GetCommunity extends GetCommunity {
       _$GetCommunityImpl.fromJson;
 
   @override
-  int? get id;
-  @override // v0.18.0
-  String? get name;
-  @override // v0.18.0
-  String? get auth;
+  int? get id; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String? get name; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of GetCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetCommunityImplCopyWith<_$GetCommunityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -209,8 +222,12 @@ mixin _$CreateCommunity {
       throw _privateConstructorUsedError; // v0.19.4 (optional)
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this CreateCommunity to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CreateCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CreateCommunityCopyWith<CreateCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -244,6 +261,8 @@ class _$CreateCommunityCopyWithImpl<$Res, $Val extends CreateCommunity>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CreateCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -332,6 +351,8 @@ class __$$CreateCommunityImplCopyWithImpl<$Res>
       _$CreateCommunityImpl _value, $Res Function(_$CreateCommunityImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CreateCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -479,7 +500,7 @@ class _$CreateCommunityImpl extends _CreateCommunity {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -494,7 +515,9 @@ class _$CreateCommunityImpl extends _CreateCommunity {
       visibility,
       auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CreateCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CreateCommunityImplCopyWith<_$CreateCommunityImpl> get copyWith =>
@@ -527,27 +550,30 @@ abstract class _CreateCommunity extends CreateCommunity {
       _$CreateCommunityImpl.fromJson;
 
   @override
-  String get name;
-  @override // v0.18.0
-  String get title;
-  @override // v0.18.0
-  String? get description;
-  @override // v0.18.0
-  String? get icon;
-  @override // v0.18.0
-  String? get banner;
-  @override // v0.18.0
-  bool? get nsfw;
-  @override // v0.18.0
-  bool? get postingRestrictedToMods;
-  @override // v0.18.0
-  List<int>? get discussionLanguages;
-  @override // v0.18.0
-  CommunityVisibility? get visibility;
-  @override // v0.19.4 (optional)
-  String? get auth;
+  String get name; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String get title; // v0.18.0
+  @override
+  String? get description; // v0.18.0
+  @override
+  String? get icon; // v0.18.0
+  @override
+  String? get banner; // v0.18.0
+  @override
+  bool? get nsfw; // v0.18.0
+  @override
+  bool? get postingRestrictedToMods; // v0.18.0
+  @override
+  List<int>? get discussionLanguages; // v0.18.0
+  @override
+  CommunityVisibility? get visibility; // v0.19.4 (optional)
+  @override
+  String? get auth;
+
+  /// Create a copy of CreateCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CreateCommunityImplCopyWith<_$CreateCommunityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -572,8 +598,12 @@ mixin _$EditCommunity {
       throw _privateConstructorUsedError; // v0.19.4 (required)
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this EditCommunity to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of EditCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $EditCommunityCopyWith<EditCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -607,6 +637,8 @@ class _$EditCommunityCopyWithImpl<$Res, $Val extends EditCommunity>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of EditCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -695,6 +727,8 @@ class __$$EditCommunityImplCopyWithImpl<$Res>
       _$EditCommunityImpl _value, $Res Function(_$EditCommunityImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of EditCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -843,7 +877,7 @@ class _$EditCommunityImpl extends _EditCommunity {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -858,7 +892,9 @@ class _$EditCommunityImpl extends _EditCommunity {
       visibility,
       auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EditCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EditCommunityImplCopyWith<_$EditCommunityImpl> get copyWith =>
@@ -890,27 +926,30 @@ abstract class _EditCommunity extends EditCommunity {
       _$EditCommunityImpl.fromJson;
 
   @override
-  int get communityId;
-  @override // v0.18.0
-  String? get title;
-  @override // v0.18.0
-  String? get description;
-  @override // v0.18.0
-  String? get icon;
-  @override // v0.18.0
-  String? get banner;
-  @override // v0.18.0
-  bool? get nsfw;
-  @override // v0.18.0
-  bool? get postingRestrictedToMods;
-  @override // v0.18.0
-  List<int>? get discussionLanguages;
-  @override // v0.18.0
-  CommunityVisibility? get visibility;
-  @override // v0.19.4 (required)
-  String? get auth;
+  int get communityId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String? get title; // v0.18.0
+  @override
+  String? get description; // v0.18.0
+  @override
+  String? get icon; // v0.18.0
+  @override
+  String? get banner; // v0.18.0
+  @override
+  bool? get nsfw; // v0.18.0
+  @override
+  bool? get postingRestrictedToMods; // v0.18.0
+  @override
+  List<int>? get discussionLanguages; // v0.18.0
+  @override
+  CommunityVisibility? get visibility; // v0.19.4 (required)
+  @override
+  String? get auth;
+
+  /// Create a copy of EditCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EditCommunityImplCopyWith<_$EditCommunityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -929,8 +968,12 @@ mixin _$ListCommunities {
   bool? get showNsfw => throw _privateConstructorUsedError; // v0.18.1
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this ListCommunities to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ListCommunities
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ListCommunitiesCopyWith<ListCommunities> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -960,6 +1003,8 @@ class _$ListCommunitiesCopyWithImpl<$Res, $Val extends ListCommunities>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ListCommunities
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1024,6 +1069,8 @@ class __$$ListCommunitiesImplCopyWithImpl<$Res>
       _$ListCommunitiesImpl _value, $Res Function(_$ListCommunitiesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ListCommunities
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1117,12 +1164,14 @@ class _$ListCommunitiesImpl extends _ListCommunities {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, type, sort, page, limit, showNsfw, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ListCommunities
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ListCommunitiesImplCopyWith<_$ListCommunitiesImpl> get copyWith =>
@@ -1152,19 +1201,22 @@ abstract class _ListCommunities extends ListCommunities {
 
   @override
   @JsonKey(name: 'type_')
-  ListingType? get type;
-  @override // v0.18.0
-  SortType? get sort;
-  @override // v0.18.0
-  int? get page;
-  @override // v0.18.0
-  int? get limit;
-  @override // v0.18.0
-  bool? get showNsfw;
-  @override // v0.18.1
-  String? get auth;
+  ListingType? get type; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  SortType? get sort; // v0.18.0
+  @override
+  int? get page; // v0.18.0
+  @override
+  int? get limit; // v0.18.0
+  @override
+  bool? get showNsfw; // v0.18.1
+  @override
+  String? get auth;
+
+  /// Create a copy of ListCommunities
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ListCommunitiesImplCopyWith<_$ListCommunitiesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1179,8 +1231,12 @@ mixin _$FollowCommunity {
   bool get follow => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this FollowCommunity to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FollowCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FollowCommunityCopyWith<FollowCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1204,6 +1260,8 @@ class _$FollowCommunityCopyWithImpl<$Res, $Val extends FollowCommunity>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FollowCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1247,6 +1305,8 @@ class __$$FollowCommunityImplCopyWithImpl<$Res>
       _$FollowCommunityImpl _value, $Res Function(_$FollowCommunityImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FollowCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1307,11 +1367,13 @@ class _$FollowCommunityImpl extends _FollowCommunity {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, communityId, follow, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FollowCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FollowCommunityImplCopyWith<_$FollowCommunityImpl> get copyWith =>
@@ -1337,13 +1399,16 @@ abstract class _FollowCommunity extends FollowCommunity {
       _$FollowCommunityImpl.fromJson;
 
   @override
-  int get communityId;
-  @override // v0.18.0
-  bool get follow;
-  @override // v0.18.0
-  String? get auth;
+  int get communityId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  bool get follow; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of FollowCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FollowCommunityImplCopyWith<_$FollowCommunityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1358,8 +1423,12 @@ mixin _$BlockCommunity {
   bool get block => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this BlockCommunity to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BlockCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BlockCommunityCopyWith<BlockCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1383,6 +1452,8 @@ class _$BlockCommunityCopyWithImpl<$Res, $Val extends BlockCommunity>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of BlockCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1426,6 +1497,8 @@ class __$$BlockCommunityImplCopyWithImpl<$Res>
       _$BlockCommunityImpl _value, $Res Function(_$BlockCommunityImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BlockCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1486,11 +1559,13 @@ class _$BlockCommunityImpl extends _BlockCommunity {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, communityId, block, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BlockCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BlockCommunityImplCopyWith<_$BlockCommunityImpl> get copyWith =>
@@ -1516,13 +1591,16 @@ abstract class _BlockCommunity extends BlockCommunity {
       _$BlockCommunityImpl.fromJson;
 
   @override
-  int get communityId;
-  @override // v0.18.0
-  bool get block;
-  @override // v0.18.0
-  String? get auth;
+  int get communityId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  bool get block; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of BlockCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BlockCommunityImplCopyWith<_$BlockCommunityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1537,8 +1615,12 @@ mixin _$DeleteCommunity {
   bool get deleted => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this DeleteCommunity to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DeleteCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DeleteCommunityCopyWith<DeleteCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1562,6 +1644,8 @@ class _$DeleteCommunityCopyWithImpl<$Res, $Val extends DeleteCommunity>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DeleteCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1605,6 +1689,8 @@ class __$$DeleteCommunityImplCopyWithImpl<$Res>
       _$DeleteCommunityImpl _value, $Res Function(_$DeleteCommunityImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DeleteCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1665,11 +1751,13 @@ class _$DeleteCommunityImpl extends _DeleteCommunity {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, communityId, deleted, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeleteCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DeleteCommunityImplCopyWith<_$DeleteCommunityImpl> get copyWith =>
@@ -1695,13 +1783,16 @@ abstract class _DeleteCommunity extends DeleteCommunity {
       _$DeleteCommunityImpl.fromJson;
 
   @override
-  int get communityId;
-  @override // v0.18.0
-  bool get deleted;
-  @override // v0.18.0
-  String? get auth;
+  int get communityId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  bool get deleted; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of DeleteCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeleteCommunityImplCopyWith<_$DeleteCommunityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1717,8 +1808,12 @@ mixin _$HideCommunity {
   String? get reason => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this HideCommunity to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HideCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $HideCommunityCopyWith<HideCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1742,6 +1837,8 @@ class _$HideCommunityCopyWithImpl<$Res, $Val extends HideCommunity>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of HideCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1790,6 +1887,8 @@ class __$$HideCommunityImplCopyWithImpl<$Res>
       _$HideCommunityImpl _value, $Res Function(_$HideCommunityImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HideCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1859,12 +1958,14 @@ class _$HideCommunityImpl extends _HideCommunity {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, communityId, hidden, reason, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HideCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$HideCommunityImplCopyWith<_$HideCommunityImpl> get copyWith =>
@@ -1890,15 +1991,18 @@ abstract class _HideCommunity extends HideCommunity {
       _$HideCommunityImpl.fromJson;
 
   @override
-  int get communityId;
-  @override // v0.18.0
-  bool get hidden;
-  @override // v0.18.0
-  String? get reason;
-  @override // v0.18.0
-  String? get auth;
+  int get communityId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  bool get hidden; // v0.18.0
+  @override
+  String? get reason; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of HideCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HideCommunityImplCopyWith<_$HideCommunityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1917,8 +2021,12 @@ mixin _$RemoveCommunity {
       throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this RemoveCommunity to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RemoveCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RemoveCommunityCopyWith<RemoveCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1947,6 +2055,8 @@ class _$RemoveCommunityCopyWithImpl<$Res, $Val extends RemoveCommunity>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RemoveCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2005,6 +2115,8 @@ class __$$RemoveCommunityImplCopyWithImpl<$Res>
       _$RemoveCommunityImpl _value, $Res Function(_$RemoveCommunityImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RemoveCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2088,12 +2200,14 @@ class _$RemoveCommunityImpl extends _RemoveCommunity {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, communityId, removed, reason, expires, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RemoveCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RemoveCommunityImplCopyWith<_$RemoveCommunityImpl> get copyWith =>
@@ -2121,18 +2235,21 @@ abstract class _RemoveCommunity extends RemoveCommunity {
       _$RemoveCommunityImpl.fromJson;
 
   @override
-  int get communityId;
-  @override // v0.18.0
-  bool get removed;
-  @override // v0.18.0
-  String? get reason;
-  @override // v0.18.0
-  @deprecated
-  int? get expires;
-  @override // v0.18.0 [deprecated in v0.19.0]
-  String? get auth;
+  int get communityId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  bool get removed; // v0.18.0
+  @override
+  String? get reason; // v0.18.0
+  @override
+  @deprecated
+  int? get expires; // v0.18.0 [deprecated in v0.19.0]
+  @override
+  String? get auth;
+
+  /// Create a copy of RemoveCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RemoveCommunityImplCopyWith<_$RemoveCommunityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2147,8 +2264,12 @@ mixin _$TransferCommunity {
   int get personId => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this TransferCommunity to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of TransferCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TransferCommunityCopyWith<TransferCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2172,6 +2293,8 @@ class _$TransferCommunityCopyWithImpl<$Res, $Val extends TransferCommunity>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TransferCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2215,6 +2338,8 @@ class __$$TransferCommunityImplCopyWithImpl<$Res>
       $Res Function(_$TransferCommunityImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TransferCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2276,11 +2401,13 @@ class _$TransferCommunityImpl extends _TransferCommunity {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, communityId, personId, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TransferCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TransferCommunityImplCopyWith<_$TransferCommunityImpl> get copyWith =>
@@ -2306,13 +2433,16 @@ abstract class _TransferCommunity extends TransferCommunity {
       _$TransferCommunityImpl.fromJson;
 
   @override
-  int get communityId;
-  @override // v0.18.0
-  int get personId;
-  @override // v0.18.0
-  String? get auth;
+  int get communityId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  int get personId; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of TransferCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TransferCommunityImplCopyWith<_$TransferCommunityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2331,8 +2461,12 @@ mixin _$BanFromCommunity {
   int? get expires => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this BanFromCommunity to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BanFromCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BanFromCommunityCopyWith<BanFromCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2363,6 +2497,8 @@ class _$BanFromCommunityCopyWithImpl<$Res, $Val extends BanFromCommunity>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of BanFromCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2433,6 +2569,8 @@ class __$$BanFromCommunityImplCopyWithImpl<$Res>
       $Res Function(_$BanFromCommunityImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BanFromCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2537,12 +2675,14 @@ class _$BanFromCommunityImpl extends _BanFromCommunity {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, communityId, personId, ban,
       removeData, reason, expires, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BanFromCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BanFromCommunityImplCopyWith<_$BanFromCommunityImpl> get copyWith =>
@@ -2572,21 +2712,24 @@ abstract class _BanFromCommunity extends BanFromCommunity {
       _$BanFromCommunityImpl.fromJson;
 
   @override
-  int get communityId;
-  @override // v0.18.0
-  int get personId;
-  @override // v0.18.0
-  bool get ban;
-  @override // v0.18.0
-  bool? get removeData;
-  @override // v0.18.0
-  String? get reason;
-  @override // v0.18.0
-  int? get expires;
-  @override // v0.18.0
-  String? get auth;
+  int get communityId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  int get personId; // v0.18.0
+  @override
+  bool get ban; // v0.18.0
+  @override
+  bool? get removeData; // v0.18.0
+  @override
+  String? get reason; // v0.18.0
+  @override
+  int? get expires; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of BanFromCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BanFromCommunityImplCopyWith<_$BanFromCommunityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2602,8 +2745,12 @@ mixin _$AddModToCommunity {
   bool get added => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this AddModToCommunity to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AddModToCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AddModToCommunityCopyWith<AddModToCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2627,6 +2774,8 @@ class _$AddModToCommunityCopyWithImpl<$Res, $Val extends AddModToCommunity>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AddModToCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2675,6 +2824,8 @@ class __$$AddModToCommunityImplCopyWithImpl<$Res>
       $Res Function(_$AddModToCommunityImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AddModToCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2748,12 +2899,14 @@ class _$AddModToCommunityImpl extends _AddModToCommunity {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, communityId, personId, added, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AddModToCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AddModToCommunityImplCopyWith<_$AddModToCommunityImpl> get copyWith =>
@@ -2780,15 +2933,18 @@ abstract class _AddModToCommunity extends AddModToCommunity {
       _$AddModToCommunityImpl.fromJson;
 
   @override
-  int get communityId;
-  @override // v0.18.0
-  int get personId;
-  @override // v0.18.0
-  bool get added;
-  @override // v0.18.0
-  String? get auth;
+  int get communityId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  int get personId; // v0.18.0
+  @override
+  bool get added; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of AddModToCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddModToCommunityImplCopyWith<_$AddModToCommunityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

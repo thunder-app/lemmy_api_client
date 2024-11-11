@@ -32,8 +32,12 @@ mixin _$ReadableFederationState {
       throw _privateConstructorUsedError; // v0.19.0 (optional)
   DateTime? get nextRetry => throw _privateConstructorUsedError;
 
+  /// Serializes this ReadableFederationState to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReadableFederationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ReadableFederationStateCopyWith<ReadableFederationState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -64,6 +68,8 @@ class _$ReadableFederationStateCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ReadableFederationState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -131,6 +137,8 @@ class __$$ReadableFederationStateImplCopyWithImpl<$Res>
       $Res Function(_$ReadableFederationStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReadableFederationState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -230,12 +238,14 @@ class _$ReadableFederationStateImpl extends _ReadableFederationState {
                 other.nextRetry == nextRetry));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, instanceId, lastSuccessfulId,
       lastSuccessfulPublishedTime, failCount, lastRetry, nextRetry);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReadableFederationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ReadableFederationStateImplCopyWith<_$ReadableFederationStateImpl>
@@ -264,19 +274,22 @@ abstract class _ReadableFederationState extends ReadableFederationState {
       _$ReadableFederationStateImpl.fromJson;
 
   @override
-  int get instanceId;
-  @override // v0.19.0 (required)
-  int? get lastSuccessfulId;
-  @override // v0.19.0 (optional)
-  DateTime? get lastSuccessfulPublishedTime;
-  @override // v0.19.0 (optional)
-  int get failCount;
-  @override // v0.19.0 (required)
-  DateTime? get lastRetry;
-  @override // v0.19.0 (optional)
-  DateTime? get nextRetry;
+  int get instanceId; // v0.19.0 (required)
   @override
-  @JsonKey(ignore: true)
+  int? get lastSuccessfulId; // v0.19.0 (optional)
+  @override
+  DateTime? get lastSuccessfulPublishedTime; // v0.19.0 (optional)
+  @override
+  int get failCount; // v0.19.0 (required)
+  @override
+  DateTime? get lastRetry; // v0.19.0 (optional)
+  @override
+  DateTime? get nextRetry;
+
+  /// Create a copy of ReadableFederationState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReadableFederationStateImplCopyWith<_$ReadableFederationStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -23,8 +23,12 @@ GenerateTotpSecretResponse _$GenerateTotpSecretResponseFromJson(
 mixin _$GenerateTotpSecretResponse {
   String get totpSecretUrl => throw _privateConstructorUsedError;
 
+  /// Serializes this GenerateTotpSecretResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GenerateTotpSecretResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GenerateTotpSecretResponseCopyWith<GenerateTotpSecretResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$GenerateTotpSecretResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GenerateTotpSecretResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$GenerateTotpSecretResponseImplCopyWithImpl<$Res>
       $Res Function(_$GenerateTotpSecretResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GenerateTotpSecretResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -128,11 +136,13 @@ class _$GenerateTotpSecretResponseImpl extends _GenerateTotpSecretResponse {
                 other.totpSecretUrl == totpSecretUrl));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, totpSecretUrl);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GenerateTotpSecretResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GenerateTotpSecretResponseImplCopyWith<_$GenerateTotpSecretResponseImpl>
@@ -157,8 +167,11 @@ abstract class _GenerateTotpSecretResponse extends GenerateTotpSecretResponse {
 
   @override
   String get totpSecretUrl;
+
+  /// Create a copy of GenerateTotpSecretResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GenerateTotpSecretResponseImplCopyWith<_$GenerateTotpSecretResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

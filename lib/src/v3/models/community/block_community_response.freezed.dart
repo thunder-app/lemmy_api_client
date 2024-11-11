@@ -25,8 +25,12 @@ mixin _$BlockCommunityResponse {
       throw _privateConstructorUsedError; // v0.18.0
   bool get blocked => throw _privateConstructorUsedError;
 
+  /// Serializes this BlockCommunityResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BlockCommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BlockCommunityResponseCopyWith<BlockCommunityResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$BlockCommunityResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of BlockCommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -71,6 +77,8 @@ class _$BlockCommunityResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of BlockCommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommunityViewCopyWith<$Res> get communityView {
@@ -105,6 +113,8 @@ class __$$BlockCommunityResponseImplCopyWithImpl<$Res>
       $Res Function(_$BlockCommunityResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BlockCommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -156,11 +166,13 @@ class _$BlockCommunityResponseImpl extends _BlockCommunityResponse {
             (identical(other.blocked, blocked) || other.blocked == blocked));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, communityView, blocked);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BlockCommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BlockCommunityResponseImplCopyWith<_$BlockCommunityResponseImpl>
@@ -185,11 +197,14 @@ abstract class _BlockCommunityResponse extends BlockCommunityResponse {
       _$BlockCommunityResponseImpl.fromJson;
 
   @override
-  CommunityView get communityView;
-  @override // v0.18.0
-  bool get blocked;
+  CommunityView get communityView; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  bool get blocked;
+
+  /// Create a copy of BlockCommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BlockCommunityResponseImplCopyWith<_$BlockCommunityResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

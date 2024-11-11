@@ -9,12 +9,12 @@ part of 'readable_federation_state.dart';
 _$ReadableFederationStateImpl _$$ReadableFederationStateImplFromJson(
         Map<String, dynamic> json) =>
     _$ReadableFederationStateImpl(
-      instanceId: json['instance_id'] as int,
-      lastSuccessfulId: json['last_successful_id'] as int?,
+      instanceId: (json['instance_id'] as num).toInt(),
+      lastSuccessfulId: (json['last_successful_id'] as num?)?.toInt(),
       lastSuccessfulPublishedTime: _$JsonConverterFromJson<String, DateTime>(
           json['last_successful_published_time'],
           const ForceUtcDateTime().fromJson),
-      failCount: json['fail_count'] as int,
+      failCount: (json['fail_count'] as num).toInt(),
       lastRetry: _$JsonConverterFromJson<String, DateTime>(
           json['last_retry'], const ForceUtcDateTime().fromJson),
       nextRetry: _$JsonConverterFromJson<String, DateTime>(

@@ -24,8 +24,12 @@ mixin _$RegistrationApplicationResponse {
   RegistrationApplicationView get registrationApplication =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this RegistrationApplicationResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RegistrationApplicationResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RegistrationApplicationResponseCopyWith<RegistrationApplicationResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -54,6 +58,8 @@ class _$RegistrationApplicationResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RegistrationApplicationResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -67,6 +73,8 @@ class _$RegistrationApplicationResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of RegistrationApplicationResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RegistrationApplicationViewCopyWith<$Res> get registrationApplication {
@@ -102,6 +110,8 @@ class __$$RegistrationApplicationResponseImplCopyWithImpl<$Res>
       $Res Function(_$RegistrationApplicationResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RegistrationApplicationResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -147,11 +157,13 @@ class _$RegistrationApplicationResponseImpl
                 other.registrationApplication == registrationApplication));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, registrationApplication);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RegistrationApplicationResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RegistrationApplicationResponseImplCopyWith<
@@ -179,8 +191,11 @@ abstract class _RegistrationApplicationResponse
 
   @override
   RegistrationApplicationView get registrationApplication;
+
+  /// Create a copy of RegistrationApplicationResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RegistrationApplicationResponseImplCopyWith<
           _$RegistrationApplicationResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
