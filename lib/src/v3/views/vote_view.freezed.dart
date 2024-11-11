@@ -26,8 +26,12 @@ mixin _$VoteView {
       throw _privateConstructorUsedError; // v0.19.4 (required)
   int get score => throw _privateConstructorUsedError;
 
+  /// Serializes this VoteView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of VoteView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $VoteViewCopyWith<VoteView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$VoteViewCopyWithImpl<$Res, $Val extends VoteView>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of VoteView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -75,6 +81,8 @@ class _$VoteViewCopyWithImpl<$Res, $Val extends VoteView>
     ) as $Val);
   }
 
+  /// Create a copy of VoteView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res> get creator {
@@ -106,6 +114,8 @@ class __$$VoteViewImplCopyWithImpl<$Res>
       _$VoteViewImpl _value, $Res Function(_$VoteViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of VoteView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -170,12 +180,14 @@ class _$VoteViewImpl extends _VoteView {
             (identical(other.score, score) || other.score == score));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, creator, creatorBannedFromCommunity, score);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of VoteView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$VoteViewImplCopyWith<_$VoteViewImpl> get copyWith =>
@@ -200,13 +212,16 @@ abstract class _VoteView extends VoteView {
       _$VoteViewImpl.fromJson;
 
   @override
-  Person get creator;
-  @override // v0.19.2 (required)
-  bool? get creatorBannedFromCommunity;
-  @override // v0.19.4 (required)
-  int get score;
+  Person get creator; // v0.19.2 (required)
   @override
-  @JsonKey(ignore: true)
+  bool? get creatorBannedFromCommunity; // v0.19.4 (required)
+  @override
+  int get score;
+
+  /// Create a copy of VoteView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$VoteViewImplCopyWith<_$VoteViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -28,8 +28,12 @@ mixin _$ModHideCommunity {
   String? get reason => throw _privateConstructorUsedError; // v0.18.0
   bool get hidden => throw _privateConstructorUsedError;
 
+  /// Serializes this ModHideCommunity to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ModHideCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ModHideCommunityCopyWith<ModHideCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -59,6 +63,8 @@ class _$ModHideCommunityCopyWithImpl<$Res, $Val extends ModHideCommunity>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ModHideCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -123,6 +129,8 @@ class __$$ModHideCommunityImplCopyWithImpl<$Res>
       $Res Function(_$ModHideCommunityImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ModHideCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -217,12 +225,14 @@ class _$ModHideCommunityImpl extends _ModHideCommunity {
             (identical(other.hidden, hidden) || other.hidden == hidden));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, communityId, modPersonId, when, reason, hidden);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ModHideCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ModHideCommunityImplCopyWith<_$ModHideCommunityImpl> get copyWith =>
@@ -251,20 +261,23 @@ abstract class _ModHideCommunity extends ModHideCommunity {
       _$ModHideCommunityImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  int get communityId;
-  @override // v0.18.0
-  int get modPersonId;
-  @override // v0.18.0
-  @JsonKey(name: 'when_')
-  String get when;
-  @override // v0.18.0
-  String? get reason;
-  @override // v0.18.0
-  bool get hidden;
+  int get id; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  int get communityId; // v0.18.0
+  @override
+  int get modPersonId; // v0.18.0
+  @override
+  @JsonKey(name: 'when_')
+  String get when; // v0.18.0
+  @override
+  String? get reason; // v0.18.0
+  @override
+  bool get hidden;
+
+  /// Create a copy of ModHideCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ModHideCommunityImplCopyWith<_$ModHideCommunityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

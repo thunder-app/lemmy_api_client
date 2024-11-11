@@ -28,8 +28,12 @@ mixin _$ModRemoveCommentView {
   Post get post => throw _privateConstructorUsedError; // v0.18.0
   Community get community => throw _privateConstructorUsedError;
 
+  /// Serializes this ModRemoveCommentView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ModRemoveCommentView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ModRemoveCommentViewCopyWith<ModRemoveCommentView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -67,6 +71,8 @@ class _$ModRemoveCommentViewCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ModRemoveCommentView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -105,6 +111,8 @@ class _$ModRemoveCommentViewCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ModRemoveCommentView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ModRemoveCommentCopyWith<$Res> get modRemoveComment {
@@ -113,6 +121,8 @@ class _$ModRemoveCommentViewCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ModRemoveCommentView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res>? get moderator {
@@ -125,6 +135,8 @@ class _$ModRemoveCommentViewCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ModRemoveCommentView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommentCopyWith<$Res> get comment {
@@ -133,6 +145,8 @@ class _$ModRemoveCommentViewCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ModRemoveCommentView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res> get commenter {
@@ -141,6 +155,8 @@ class _$ModRemoveCommentViewCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ModRemoveCommentView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PostCopyWith<$Res> get post {
@@ -149,6 +165,8 @@ class _$ModRemoveCommentViewCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ModRemoveCommentView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommunityCopyWith<$Res> get community {
@@ -196,6 +214,8 @@ class __$$ModRemoveCommentViewImplCopyWithImpl<$Res>
       $Res Function(_$ModRemoveCommentViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ModRemoveCommentView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -291,12 +311,14 @@ class _$ModRemoveCommentViewImpl extends _ModRemoveCommentView {
                 other.community == community));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, modRemoveComment, moderator,
       comment, commenter, post, community);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ModRemoveCommentView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ModRemoveCommentViewImplCopyWith<_$ModRemoveCommentViewImpl>
@@ -326,19 +348,22 @@ abstract class _ModRemoveCommentView extends ModRemoveCommentView {
       _$ModRemoveCommentViewImpl.fromJson;
 
   @override
-  ModRemoveComment get modRemoveComment;
-  @override // v0.18.0
-  Person? get moderator;
-  @override // v0.18.0
-  Comment get comment;
-  @override // v0.18.0
-  Person get commenter;
-  @override // v0.18.0
-  Post get post;
-  @override // v0.18.0
-  Community get community;
+  ModRemoveComment get modRemoveComment; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  Person? get moderator; // v0.18.0
+  @override
+  Comment get comment; // v0.18.0
+  @override
+  Person get commenter; // v0.18.0
+  @override
+  Post get post; // v0.18.0
+  @override
+  Community get community;
+
+  /// Create a copy of ModRemoveCommentView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ModRemoveCommentViewImplCopyWith<_$ModRemoveCommentViewImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

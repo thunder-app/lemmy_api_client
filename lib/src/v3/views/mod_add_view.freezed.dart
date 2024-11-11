@@ -24,8 +24,12 @@ mixin _$ModAddView {
   Person? get moderator => throw _privateConstructorUsedError; // v0.18.0
   Person get moddedPerson => throw _privateConstructorUsedError;
 
+  /// Serializes this ModAddView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ModAddView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ModAddViewCopyWith<ModAddView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$ModAddViewCopyWithImpl<$Res, $Val extends ModAddView>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ModAddView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -76,6 +82,8 @@ class _$ModAddViewCopyWithImpl<$Res, $Val extends ModAddView>
     ) as $Val);
   }
 
+  /// Create a copy of ModAddView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ModAddCopyWith<$Res> get modAdd {
@@ -84,6 +92,8 @@ class _$ModAddViewCopyWithImpl<$Res, $Val extends ModAddView>
     });
   }
 
+  /// Create a copy of ModAddView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res>? get moderator {
@@ -96,6 +106,8 @@ class _$ModAddViewCopyWithImpl<$Res, $Val extends ModAddView>
     });
   }
 
+  /// Create a copy of ModAddView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res> get moddedPerson {
@@ -131,6 +143,8 @@ class __$$ModAddViewImplCopyWithImpl<$Res>
       _$ModAddViewImpl _value, $Res Function(_$ModAddViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ModAddView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -192,11 +206,13 @@ class _$ModAddViewImpl extends _ModAddView {
                 other.moddedPerson == moddedPerson));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, modAdd, moderator, moddedPerson);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ModAddView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ModAddViewImplCopyWith<_$ModAddViewImpl> get copyWith =>
@@ -221,13 +237,16 @@ abstract class _ModAddView extends ModAddView {
       _$ModAddViewImpl.fromJson;
 
   @override
-  ModAdd get modAdd;
-  @override // v0.18.0
-  Person? get moderator;
-  @override // v0.18.0
-  Person get moddedPerson;
+  ModAdd get modAdd; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  Person? get moderator; // v0.18.0
+  @override
+  Person get moddedPerson;
+
+  /// Create a copy of ModAddView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ModAddViewImplCopyWith<_$ModAddViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

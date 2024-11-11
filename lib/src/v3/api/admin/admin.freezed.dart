@@ -24,8 +24,12 @@ mixin _$AddAdmin {
   bool get added => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this AddAdmin to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AddAdmin
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AddAdminCopyWith<AddAdmin> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$AddAdminCopyWithImpl<$Res, $Val extends AddAdmin>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AddAdmin
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,6 +97,8 @@ class __$$AddAdminImplCopyWithImpl<$Res>
       _$AddAdminImpl _value, $Res Function(_$AddAdminImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AddAdmin
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -150,11 +158,13 @@ class _$AddAdminImpl extends _AddAdmin {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, personId, added, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AddAdmin
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AddAdminImplCopyWith<_$AddAdminImpl> get copyWith =>
@@ -179,13 +189,16 @@ abstract class _AddAdmin extends AddAdmin {
       _$AddAdminImpl.fromJson;
 
   @override
-  int get personId;
-  @override // v0.18.0
-  bool get added;
-  @override // v0.18.0
-  String? get auth;
+  int get personId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  bool get added; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of AddAdmin
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddAdminImplCopyWith<_$AddAdminImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -199,8 +212,12 @@ GetUnreadRegistrationApplicationCount
 mixin _$GetUnreadRegistrationApplicationCount {
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this GetUnreadRegistrationApplicationCount to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetUnreadRegistrationApplicationCount
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetUnreadRegistrationApplicationCountCopyWith<
           GetUnreadRegistrationApplicationCount>
       get copyWith => throw _privateConstructorUsedError;
@@ -228,6 +245,8 @@ class _$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetUnreadRegistrationApplicationCount
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -264,6 +283,8 @@ class __$$GetUnreadRegistrationApplicationCountImplCopyWithImpl<$Res>
       $Res Function(_$GetUnreadRegistrationApplicationCountImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetUnreadRegistrationApplicationCount
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -305,11 +326,13 @@ class _$GetUnreadRegistrationApplicationCountImpl
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetUnreadRegistrationApplicationCount
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetUnreadRegistrationApplicationCountImplCopyWith<
@@ -337,8 +360,11 @@ abstract class _GetUnreadRegistrationApplicationCount
 
   @override
   String? get auth;
+
+  /// Create a copy of GetUnreadRegistrationApplicationCount
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetUnreadRegistrationApplicationCountImplCopyWith<
           _$GetUnreadRegistrationApplicationCountImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -356,8 +382,12 @@ mixin _$ListRegistrationApplications {
   int? get limit => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this ListRegistrationApplications to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ListRegistrationApplications
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ListRegistrationApplicationsCopyWith<ListRegistrationApplications>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -384,6 +414,8 @@ class _$ListRegistrationApplicationsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ListRegistrationApplications
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -435,6 +467,8 @@ class __$$ListRegistrationApplicationsImplCopyWithImpl<$Res>
       $Res Function(_$ListRegistrationApplicationsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ListRegistrationApplications
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -505,11 +539,13 @@ class _$ListRegistrationApplicationsImpl extends _ListRegistrationApplications {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, unreadOnly, page, limit, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ListRegistrationApplications
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ListRegistrationApplicationsImplCopyWith<
@@ -538,15 +574,18 @@ abstract class _ListRegistrationApplications
       _$ListRegistrationApplicationsImpl.fromJson;
 
   @override
-  bool? get unreadOnly;
-  @override // v0.18.0
-  int? get page;
-  @override // v0.18.0
-  int? get limit;
-  @override // v0.18.0
-  String? get auth;
+  bool? get unreadOnly; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  int? get page; // v0.18.0
+  @override
+  int? get limit; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of ListRegistrationApplications
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ListRegistrationApplicationsImplCopyWith<
           _$ListRegistrationApplicationsImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -564,8 +603,12 @@ mixin _$ApproveRegistrationApplication {
   String? get denyReason => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this ApproveRegistrationApplication to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ApproveRegistrationApplication
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ApproveRegistrationApplicationCopyWith<ApproveRegistrationApplication>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -592,6 +635,8 @@ class _$ApproveRegistrationApplicationCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ApproveRegistrationApplication
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -643,6 +688,8 @@ class __$$ApproveRegistrationApplicationImplCopyWithImpl<$Res>
       $Res Function(_$ApproveRegistrationApplicationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ApproveRegistrationApplication
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -714,11 +761,13 @@ class _$ApproveRegistrationApplicationImpl
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, approve, denyReason, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ApproveRegistrationApplication
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ApproveRegistrationApplicationImplCopyWith<
@@ -747,15 +796,18 @@ abstract class _ApproveRegistrationApplication
       _$ApproveRegistrationApplicationImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  bool get approve;
-  @override // v0.18.0
-  String? get denyReason;
-  @override // v0.18.0
-  String? get auth;
+  int get id; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  bool get approve; // v0.18.0
+  @override
+  String? get denyReason; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of ApproveRegistrationApplication
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ApproveRegistrationApplicationImplCopyWith<
           _$ApproveRegistrationApplicationImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -771,8 +823,12 @@ mixin _$GetRegistrationApplication {
   int get personId => throw _privateConstructorUsedError; // v0.19.6 (required)
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this GetRegistrationApplication to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetRegistrationApplication
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetRegistrationApplicationCopyWith<GetRegistrationApplication>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -798,6 +854,8 @@ class _$GetRegistrationApplicationCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetRegistrationApplication
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -839,6 +897,8 @@ class __$$GetRegistrationApplicationImplCopyWithImpl<$Res>
       $Res Function(_$GetRegistrationApplicationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetRegistrationApplication
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -890,11 +950,13 @@ class _$GetRegistrationApplicationImpl extends _GetRegistrationApplication {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, personId, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetRegistrationApplication
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetRegistrationApplicationImplCopyWith<_$GetRegistrationApplicationImpl>
@@ -919,11 +981,14 @@ abstract class _GetRegistrationApplication extends GetRegistrationApplication {
       _$GetRegistrationApplicationImpl.fromJson;
 
   @override
-  int get personId;
-  @override // v0.19.6 (required)
-  String? get auth;
+  int get personId; // v0.19.6 (required)
   @override
-  @JsonKey(ignore: true)
+  String? get auth;
+
+  /// Create a copy of GetRegistrationApplication
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetRegistrationApplicationImplCopyWith<_$GetRegistrationApplicationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -938,8 +1003,12 @@ mixin _$PurgePerson {
   String? get reason => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this PurgePerson to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PurgePerson
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PurgePersonCopyWith<PurgePerson> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -963,6 +1032,8 @@ class _$PurgePersonCopyWithImpl<$Res, $Val extends PurgePerson>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PurgePerson
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1006,6 +1077,8 @@ class __$$PurgePersonImplCopyWithImpl<$Res>
       _$PurgePersonImpl _value, $Res Function(_$PurgePersonImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PurgePerson
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1065,11 +1138,13 @@ class _$PurgePersonImpl extends _PurgePerson {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, personId, reason, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PurgePerson
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PurgePersonImplCopyWith<_$PurgePersonImpl> get copyWith =>
@@ -1094,13 +1169,16 @@ abstract class _PurgePerson extends PurgePerson {
       _$PurgePersonImpl.fromJson;
 
   @override
-  int get personId;
-  @override // v0.18.0
-  String? get reason;
-  @override // v0.18.0
-  String? get auth;
+  int get personId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String? get reason; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of PurgePerson
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PurgePersonImplCopyWith<_$PurgePersonImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1115,8 +1193,12 @@ mixin _$PurgeCommunity {
   String? get reason => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this PurgeCommunity to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PurgeCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PurgeCommunityCopyWith<PurgeCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1140,6 +1222,8 @@ class _$PurgeCommunityCopyWithImpl<$Res, $Val extends PurgeCommunity>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PurgeCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1183,6 +1267,8 @@ class __$$PurgeCommunityImplCopyWithImpl<$Res>
       _$PurgeCommunityImpl _value, $Res Function(_$PurgeCommunityImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PurgeCommunity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1243,11 +1329,13 @@ class _$PurgeCommunityImpl extends _PurgeCommunity {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, communityId, reason, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PurgeCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PurgeCommunityImplCopyWith<_$PurgeCommunityImpl> get copyWith =>
@@ -1273,13 +1361,16 @@ abstract class _PurgeCommunity extends PurgeCommunity {
       _$PurgeCommunityImpl.fromJson;
 
   @override
-  int get communityId;
-  @override // v0.18.0
-  String? get reason;
-  @override // v0.18.0
-  String? get auth;
+  int get communityId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String? get reason; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of PurgeCommunity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PurgeCommunityImplCopyWith<_$PurgeCommunityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1294,8 +1385,12 @@ mixin _$PurgePost {
   String? get reason => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this PurgePost to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PurgePost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PurgePostCopyWith<PurgePost> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1318,6 +1413,8 @@ class _$PurgePostCopyWithImpl<$Res, $Val extends PurgePost>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PurgePost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1361,6 +1458,8 @@ class __$$PurgePostImplCopyWithImpl<$Res>
       _$PurgePostImpl _value, $Res Function(_$PurgePostImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PurgePost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1419,11 +1518,13 @@ class _$PurgePostImpl extends _PurgePost {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, postId, reason, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PurgePost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PurgePostImplCopyWith<_$PurgePostImpl> get copyWith =>
@@ -1448,13 +1549,16 @@ abstract class _PurgePost extends PurgePost {
       _$PurgePostImpl.fromJson;
 
   @override
-  int get postId;
-  @override // v0.18.0
-  String? get reason;
-  @override // v0.18.0
-  String? get auth;
+  int get postId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String? get reason; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of PurgePost
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PurgePostImplCopyWith<_$PurgePostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1469,8 +1573,12 @@ mixin _$PurgeComment {
   String? get reason => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this PurgeComment to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PurgeComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PurgeCommentCopyWith<PurgeComment> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1494,6 +1602,8 @@ class _$PurgeCommentCopyWithImpl<$Res, $Val extends PurgeComment>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PurgeComment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1537,6 +1647,8 @@ class __$$PurgeCommentImplCopyWithImpl<$Res>
       _$PurgeCommentImpl _value, $Res Function(_$PurgeCommentImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PurgeComment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1596,11 +1708,13 @@ class _$PurgeCommentImpl extends _PurgeComment {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, commentId, reason, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PurgeComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PurgeCommentImplCopyWith<_$PurgeCommentImpl> get copyWith =>
@@ -1625,13 +1739,16 @@ abstract class _PurgeComment extends PurgeComment {
       _$PurgeCommentImpl.fromJson;
 
   @override
-  int get commentId;
-  @override // v0.18.0
-  String? get reason;
-  @override // v0.18.0
-  String? get auth;
+  int get commentId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String? get reason; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of PurgeComment
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PurgeCommentImplCopyWith<_$PurgeCommentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1646,8 +1763,12 @@ mixin _$ListAllMedia {
   int? get limit => throw _privateConstructorUsedError; // v0.19.4 (optional)
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this ListAllMedia to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ListAllMedia
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ListAllMediaCopyWith<ListAllMedia> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1671,6 +1792,8 @@ class _$ListAllMediaCopyWithImpl<$Res, $Val extends ListAllMedia>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ListAllMedia
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1714,6 +1837,8 @@ class __$$ListAllMediaImplCopyWithImpl<$Res>
       _$ListAllMediaImpl _value, $Res Function(_$ListAllMediaImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ListAllMedia
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1771,11 +1896,13 @@ class _$ListAllMediaImpl extends _ListAllMedia {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, page, limit, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ListAllMedia
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ListAllMediaImplCopyWith<_$ListAllMediaImpl> get copyWith =>
@@ -1800,13 +1927,16 @@ abstract class _ListAllMedia extends ListAllMedia {
       _$ListAllMediaImpl.fromJson;
 
   @override
-  int? get page;
-  @override // v0.19.4 (optional)
-  int? get limit;
-  @override // v0.19.4 (optional)
-  String? get auth;
+  int? get page; // v0.19.4 (optional)
   @override
-  @JsonKey(ignore: true)
+  int? get limit; // v0.19.4 (optional)
+  @override
+  String? get auth;
+
+  /// Create a copy of ListAllMedia
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ListAllMediaImplCopyWith<_$ListAllMediaImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

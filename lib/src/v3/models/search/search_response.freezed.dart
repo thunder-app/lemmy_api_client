@@ -29,8 +29,12 @@ mixin _$SearchResponse {
       throw _privateConstructorUsedError; // v0.18.0
   List<PersonView> get users => throw _privateConstructorUsedError;
 
+  /// Serializes this SearchResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SearchResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SearchResponseCopyWith<SearchResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -59,6 +63,8 @@ class _$SearchResponseCopyWithImpl<$Res, $Val extends SearchResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SearchResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -117,6 +123,8 @@ class __$$SearchResponseImplCopyWithImpl<$Res>
       _$SearchResponseImpl _value, $Res Function(_$SearchResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -231,7 +239,7 @@ class _$SearchResponseImpl extends _SearchResponse {
             const DeepCollectionEquality().equals(other._users, _users));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -241,7 +249,9 @@ class _$SearchResponseImpl extends _SearchResponse {
       const DeepCollectionEquality().hash(_communities),
       const DeepCollectionEquality().hash(_users));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchResponseImplCopyWith<_$SearchResponseImpl> get copyWith =>
@@ -270,17 +280,20 @@ abstract class _SearchResponse extends SearchResponse {
 
   @override
   @JsonKey(name: 'type_')
-  SearchType get type;
-  @override // v0.18.0
-  List<CommentView> get comments;
-  @override // v0.18.0
-  List<PostView> get posts;
-  @override // v0.18.0
-  List<CommunityView> get communities;
-  @override // v0.18.0
-  List<PersonView> get users;
+  SearchType get type; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  List<CommentView> get comments; // v0.18.0
+  @override
+  List<PostView> get posts; // v0.18.0
+  @override
+  List<CommunityView> get communities; // v0.18.0
+  @override
+  List<PersonView> get users;
+
+  /// Create a copy of SearchResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchResponseImplCopyWith<_$SearchResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

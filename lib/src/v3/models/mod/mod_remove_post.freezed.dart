@@ -28,8 +28,12 @@ mixin _$ModRemovePost {
   @JsonKey(name: 'when_')
   String get when => throw _privateConstructorUsedError;
 
+  /// Serializes this ModRemovePost to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ModRemovePost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ModRemovePostCopyWith<ModRemovePost> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -59,6 +63,8 @@ class _$ModRemovePostCopyWithImpl<$Res, $Val extends ModRemovePost>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ModRemovePost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -123,6 +129,8 @@ class __$$ModRemovePostImplCopyWithImpl<$Res>
       _$ModRemovePostImpl _value, $Res Function(_$ModRemovePostImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ModRemovePost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -216,12 +224,14 @@ class _$ModRemovePostImpl extends _ModRemovePost {
             (identical(other.when, when) || other.when == when));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, modPersonId, postId, reason, removed, when);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ModRemovePost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ModRemovePostImplCopyWith<_$ModRemovePostImpl> get copyWith =>
@@ -250,20 +260,23 @@ abstract class _ModRemovePost extends ModRemovePost {
       _$ModRemovePostImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  int get modPersonId;
-  @override // v0.18.0
-  int get postId;
-  @override // v0.18.0
-  String? get reason;
-  @override // v0.18.0
-  bool get removed;
-  @override // v0.18.0
+  int get id; // v0.18.0
+  @override
+  int get modPersonId; // v0.18.0
+  @override
+  int get postId; // v0.18.0
+  @override
+  String? get reason; // v0.18.0
+  @override
+  bool get removed; // v0.18.0
+  @override
   @JsonKey(name: 'when_')
   String get when;
+
+  /// Create a copy of ModRemovePost
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ModRemovePostImplCopyWith<_$ModRemovePostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

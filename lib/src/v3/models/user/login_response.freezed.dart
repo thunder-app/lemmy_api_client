@@ -24,8 +24,12 @@ mixin _$LoginResponse {
   bool get registrationCreated => throw _privateConstructorUsedError; // v0.18.0
   bool get verifyEmailSent => throw _privateConstructorUsedError;
 
+  /// Serializes this LoginResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LoginResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LoginResponseCopyWith<LoginResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$LoginResponseCopyWithImpl<$Res, $Val extends LoginResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LoginResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +98,8 @@ class __$$LoginResponseImplCopyWithImpl<$Res>
       _$LoginResponseImpl _value, $Res Function(_$LoginResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LoginResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -155,12 +163,14 @@ class _$LoginResponseImpl extends _LoginResponse {
                 other.verifyEmailSent == verifyEmailSent));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, jwt, registrationCreated, verifyEmailSent);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LoginResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoginResponseImplCopyWith<_$LoginResponseImpl> get copyWith =>
@@ -185,13 +195,16 @@ abstract class _LoginResponse extends LoginResponse {
       _$LoginResponseImpl.fromJson;
 
   @override
-  String? get jwt;
-  @override // v0.18.0
-  bool get registrationCreated;
-  @override // v0.18.0
-  bool get verifyEmailSent;
+  String? get jwt; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  bool get registrationCreated; // v0.18.0
+  @override
+  bool get verifyEmailSent;
+
+  /// Create a copy of LoginResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoginResponseImplCopyWith<_$LoginResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

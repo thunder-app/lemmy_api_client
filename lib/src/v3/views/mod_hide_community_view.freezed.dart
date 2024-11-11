@@ -25,8 +25,12 @@ mixin _$ModHideCommunityView {
   Person? get admin => throw _privateConstructorUsedError; // v0.18.0
   Community get community => throw _privateConstructorUsedError;
 
+  /// Serializes this ModHideCommunityView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ModHideCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ModHideCommunityViewCopyWith<ModHideCommunityView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$ModHideCommunityViewCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ModHideCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -79,6 +85,8 @@ class _$ModHideCommunityViewCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ModHideCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ModHideCommunityCopyWith<$Res> get modHideCommunity {
@@ -87,6 +95,8 @@ class _$ModHideCommunityViewCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ModHideCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res>? get admin {
@@ -99,6 +109,8 @@ class _$ModHideCommunityViewCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ModHideCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommunityCopyWith<$Res> get community {
@@ -135,6 +147,8 @@ class __$$ModHideCommunityViewImplCopyWithImpl<$Res>
       $Res Function(_$ModHideCommunityViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ModHideCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -196,12 +210,14 @@ class _$ModHideCommunityViewImpl extends _ModHideCommunityView {
                 other.community == community));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, modHideCommunity, admin, community);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ModHideCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ModHideCommunityViewImplCopyWith<_$ModHideCommunityViewImpl>
@@ -228,13 +244,16 @@ abstract class _ModHideCommunityView extends ModHideCommunityView {
       _$ModHideCommunityViewImpl.fromJson;
 
   @override
-  ModHideCommunity get modHideCommunity;
-  @override // v0.18.0
-  Person? get admin;
-  @override // v0.18.0
-  Community get community;
+  ModHideCommunity get modHideCommunity; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  Person? get admin; // v0.18.0
+  @override
+  Community get community;
+
+  /// Create a copy of ModHideCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ModHideCommunityViewImplCopyWith<_$ModHideCommunityViewImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

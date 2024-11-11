@@ -9,9 +9,9 @@ part of 'mod_remove_comment.dart';
 _$ModRemoveCommentImpl _$$ModRemoveCommentImplFromJson(
         Map<String, dynamic> json) =>
     _$ModRemoveCommentImpl(
-      id: json['id'] as int,
-      modPersonId: json['mod_person_id'] as int,
-      commentId: json['comment_id'] as int,
+      id: (json['id'] as num).toInt(),
+      modPersonId: (json['mod_person_id'] as num).toInt(),
+      commentId: (json['comment_id'] as num).toInt(),
       reason: json['reason'] as String?,
       removed: json['removed'] as bool,
       when: json['when_'] as String,

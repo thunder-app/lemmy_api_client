@@ -9,8 +9,8 @@ part of 'custom_emoji_keyword.dart';
 _$CustomEmojiKeywordImpl _$$CustomEmojiKeywordImplFromJson(
         Map<String, dynamic> json) =>
     _$CustomEmojiKeywordImpl(
-      id: json['id'] as int?,
-      customEmojiId: json['custom_emoji_id'] as int,
+      id: (json['id'] as num?)?.toInt(),
+      customEmojiId: (json['custom_emoji_id'] as num).toInt(),
       keyword: json['keyword'] as String,
     );
 

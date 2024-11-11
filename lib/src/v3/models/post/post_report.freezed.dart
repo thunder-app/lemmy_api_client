@@ -32,8 +32,12 @@ mixin _$PostReport {
   DateTime get published => throw _privateConstructorUsedError; // v0.18.0
   DateTime? get updated => throw _privateConstructorUsedError;
 
+  /// Serializes this PostReport to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PostReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PostReportCopyWith<PostReport> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -68,6 +72,8 @@ class _$PostReportCopyWithImpl<$Res, $Val extends PostReport>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PostReport
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -162,6 +168,8 @@ class __$$PostReportImplCopyWithImpl<$Res>
       _$PostReportImpl _value, $Res Function(_$PostReportImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PostReport
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -310,7 +318,7 @@ class _$PostReportImpl extends _PostReport {
             (identical(other.updated, updated) || other.updated == updated));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -326,7 +334,9 @@ class _$PostReportImpl extends _PostReport {
       published,
       updated);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PostReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PostReportImplCopyWith<_$PostReportImpl> get copyWith =>
@@ -359,29 +369,32 @@ abstract class _PostReport extends PostReport {
       _$PostReportImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  int get creatorId;
-  @override // v0.18.0
-  int get postId;
-  @override // v0.18.0
-  String get originalPostName;
-  @override // v0.18.0
-  String? get originalPostUrl;
-  @override // v0.18.0
-  String? get originalPostBody;
-  @override // v0.18.0
-  String get reason;
-  @override // v0.18.0
-  bool get resolved;
-  @override // v0.18.0
-  int? get resolverId;
-  @override // v0.18.0
-  DateTime get published;
-  @override // v0.18.0
-  DateTime? get updated;
+  int get id; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  int get creatorId; // v0.18.0
+  @override
+  int get postId; // v0.18.0
+  @override
+  String get originalPostName; // v0.18.0
+  @override
+  String? get originalPostUrl; // v0.18.0
+  @override
+  String? get originalPostBody; // v0.18.0
+  @override
+  String get reason; // v0.18.0
+  @override
+  bool get resolved; // v0.18.0
+  @override
+  int? get resolverId; // v0.18.0
+  @override
+  DateTime get published; // v0.18.0
+  @override
+  DateTime? get updated;
+
+  /// Create a copy of PostReport
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PostReportImplCopyWith<_$PostReportImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

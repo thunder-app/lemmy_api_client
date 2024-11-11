@@ -23,8 +23,12 @@ ListPostLikesResponse _$ListPostLikesResponseFromJson(
 mixin _$ListPostLikesResponse {
   List<VoteView> get postLikes => throw _privateConstructorUsedError;
 
+  /// Serializes this ListPostLikesResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ListPostLikesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ListPostLikesResponseCopyWith<ListPostLikesResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$ListPostLikesResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ListPostLikesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -84,6 +90,8 @@ class __$$ListPostLikesResponseImplCopyWithImpl<$Res>
       $Res Function(_$ListPostLikesResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ListPostLikesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -131,12 +139,14 @@ class _$ListPostLikesResponseImpl extends _ListPostLikesResponse {
                 .equals(other._postLikes, _postLikes));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_postLikes));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ListPostLikesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ListPostLikesResponseImplCopyWith<_$ListPostLikesResponseImpl>
@@ -161,8 +171,11 @@ abstract class _ListPostLikesResponse extends ListPostLikesResponse {
 
   @override
   List<VoteView> get postLikes;
+
+  /// Create a copy of ListPostLikesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ListPostLikesResponseImplCopyWith<_$ListPostLikesResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

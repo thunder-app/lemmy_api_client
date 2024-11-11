@@ -23,8 +23,12 @@ GetSiteMetadataResponse _$GetSiteMetadataResponseFromJson(
 mixin _$GetSiteMetadataResponse {
   LinkMetadata get metadata => throw _privateConstructorUsedError;
 
+  /// Serializes this GetSiteMetadataResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetSiteMetadataResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetSiteMetadataResponseCopyWith<GetSiteMetadataResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$GetSiteMetadataResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetSiteMetadataResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -64,6 +70,8 @@ class _$GetSiteMetadataResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of GetSiteMetadataResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $LinkMetadataCopyWith<$Res> get metadata {
@@ -98,6 +106,8 @@ class __$$GetSiteMetadataResponseImplCopyWithImpl<$Res>
       $Res Function(_$GetSiteMetadataResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetSiteMetadataResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -138,11 +148,13 @@ class _$GetSiteMetadataResponseImpl extends _GetSiteMetadataResponse {
                 other.metadata == metadata));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, metadata);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetSiteMetadataResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetSiteMetadataResponseImplCopyWith<_$GetSiteMetadataResponseImpl>
@@ -167,8 +179,11 @@ abstract class _GetSiteMetadataResponse extends GetSiteMetadataResponse {
 
   @override
   LinkMetadata get metadata;
+
+  /// Create a copy of GetSiteMetadataResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetSiteMetadataResponseImplCopyWith<_$GetSiteMetadataResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

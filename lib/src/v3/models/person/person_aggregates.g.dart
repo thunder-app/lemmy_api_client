@@ -9,12 +9,12 @@ part of 'person_aggregates.dart';
 _$PersonAggregatesImpl _$$PersonAggregatesImplFromJson(
         Map<String, dynamic> json) =>
     _$PersonAggregatesImpl(
-      id: json['id'] as int?,
-      personId: json['person_id'] as int,
-      postCount: json['post_count'] as int,
-      postScore: json['post_score'] as int?,
-      commentCount: json['comment_count'] as int,
-      commentScore: json['comment_score'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      personId: (json['person_id'] as num).toInt(),
+      postCount: (json['post_count'] as num).toInt(),
+      postScore: (json['post_score'] as num?)?.toInt(),
+      commentCount: (json['comment_count'] as num).toInt(),
+      commentScore: (json['comment_score'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$PersonAggregatesImplToJson(

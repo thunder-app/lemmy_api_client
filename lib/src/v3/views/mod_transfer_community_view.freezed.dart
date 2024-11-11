@@ -27,8 +27,12 @@ mixin _$ModTransferCommunityView {
   Community get community => throw _privateConstructorUsedError; // v0.18.0
   Person get moddedPerson => throw _privateConstructorUsedError;
 
+  /// Serializes this ModTransferCommunityView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ModTransferCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ModTransferCommunityViewCopyWith<ModTransferCommunityView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -62,6 +66,8 @@ class _$ModTransferCommunityViewCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ModTransferCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -90,6 +96,8 @@ class _$ModTransferCommunityViewCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ModTransferCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ModTransferCommunityCopyWith<$Res> get modTransferCommunity {
@@ -99,6 +107,8 @@ class _$ModTransferCommunityViewCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ModTransferCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res>? get moderator {
@@ -111,6 +121,8 @@ class _$ModTransferCommunityViewCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ModTransferCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommunityCopyWith<$Res> get community {
@@ -119,6 +131,8 @@ class _$ModTransferCommunityViewCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ModTransferCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res> get moddedPerson {
@@ -163,6 +177,8 @@ class __$$ModTransferCommunityViewImplCopyWithImpl<$Res>
       $Res Function(_$ModTransferCommunityViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ModTransferCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -238,12 +254,14 @@ class _$ModTransferCommunityViewImpl extends _ModTransferCommunityView {
                 other.moddedPerson == moddedPerson));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, modTransferCommunity, moderator, community, moddedPerson);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ModTransferCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ModTransferCommunityViewImplCopyWith<_$ModTransferCommunityViewImpl>
@@ -270,15 +288,18 @@ abstract class _ModTransferCommunityView extends ModTransferCommunityView {
       _$ModTransferCommunityViewImpl.fromJson;
 
   @override
-  ModTransferCommunity get modTransferCommunity;
-  @override // v0.18.0
-  Person? get moderator;
-  @override // v0.18.0
-  Community get community;
-  @override // v0.18.0
-  Person get moddedPerson;
+  ModTransferCommunity get modTransferCommunity; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  Person? get moderator; // v0.18.0
+  @override
+  Community get community; // v0.18.0
+  @override
+  Person get moddedPerson;
+
+  /// Create a copy of ModTransferCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ModTransferCommunityViewImplCopyWith<_$ModTransferCommunityViewImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

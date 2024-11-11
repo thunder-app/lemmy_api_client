@@ -23,8 +23,12 @@ ListCommunitiesResponse _$ListCommunitiesResponseFromJson(
 mixin _$ListCommunitiesResponse {
   List<CommunityView> get communities => throw _privateConstructorUsedError;
 
+  /// Serializes this ListCommunitiesResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ListCommunitiesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ListCommunitiesResponseCopyWith<ListCommunitiesResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$ListCommunitiesResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ListCommunitiesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,6 +91,8 @@ class __$$ListCommunitiesResponseImplCopyWithImpl<$Res>
       $Res Function(_$ListCommunitiesResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ListCommunitiesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -133,12 +141,14 @@ class _$ListCommunitiesResponseImpl extends _ListCommunitiesResponse {
                 .equals(other._communities, _communities));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_communities));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ListCommunitiesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ListCommunitiesResponseImplCopyWith<_$ListCommunitiesResponseImpl>
@@ -164,8 +174,11 @@ abstract class _ListCommunitiesResponse extends ListCommunitiesResponse {
 
   @override
   List<CommunityView> get communities;
+
+  /// Create a copy of ListCommunitiesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ListCommunitiesResponseImplCopyWith<_$ListCommunitiesResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

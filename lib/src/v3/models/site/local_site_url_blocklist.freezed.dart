@@ -27,8 +27,12 @@ mixin _$LocalSiteUrlBlocklist {
       throw _privateConstructorUsedError; // v0.19.4 (required)
   DateTime? get updated => throw _privateConstructorUsedError;
 
+  /// Serializes this LocalSiteUrlBlocklist to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LocalSiteUrlBlocklist
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LocalSiteUrlBlocklistCopyWith<LocalSiteUrlBlocklist> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$LocalSiteUrlBlocklistCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LocalSiteUrlBlocklist
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -103,6 +109,8 @@ class __$$LocalSiteUrlBlocklistImplCopyWithImpl<$Res>
       $Res Function(_$LocalSiteUrlBlocklistImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LocalSiteUrlBlocklist
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -172,11 +180,13 @@ class _$LocalSiteUrlBlocklistImpl extends _LocalSiteUrlBlocklist {
             (identical(other.updated, updated) || other.updated == updated));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, url, published, updated);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LocalSiteUrlBlocklist
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LocalSiteUrlBlocklistImplCopyWith<_$LocalSiteUrlBlocklistImpl>
@@ -203,15 +213,18 @@ abstract class _LocalSiteUrlBlocklist extends LocalSiteUrlBlocklist {
       _$LocalSiteUrlBlocklistImpl.fromJson;
 
   @override
-  int? get id;
-  @override // v0.19.4 (required)
-  String? get url;
-  @override // v0.19.4 (required)
-  DateTime? get published;
-  @override // v0.19.4 (required)
-  DateTime? get updated;
+  int? get id; // v0.19.4 (required)
   @override
-  @JsonKey(ignore: true)
+  String? get url; // v0.19.4 (required)
+  @override
+  DateTime? get published; // v0.19.4 (required)
+  @override
+  DateTime? get updated;
+
+  /// Create a copy of LocalSiteUrlBlocklist
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LocalSiteUrlBlocklistImplCopyWith<_$LocalSiteUrlBlocklistImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

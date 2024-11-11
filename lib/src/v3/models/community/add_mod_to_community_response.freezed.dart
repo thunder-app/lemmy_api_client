@@ -24,8 +24,12 @@ mixin _$AddModToCommunityResponse {
   List<CommunityModeratorView> get moderators =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this AddModToCommunityResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AddModToCommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AddModToCommunityResponseCopyWith<AddModToCommunityResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$AddModToCommunityResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AddModToCommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$AddModToCommunityResponseImplCopyWithImpl<$Res>
       $Res Function(_$AddModToCommunityResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AddModToCommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -134,12 +142,14 @@ class _$AddModToCommunityResponseImpl extends _AddModToCommunityResponse {
                 .equals(other._moderators, _moderators));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_moderators));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AddModToCommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AddModToCommunityResponseImplCopyWith<_$AddModToCommunityResponseImpl>
@@ -165,8 +175,11 @@ abstract class _AddModToCommunityResponse extends AddModToCommunityResponse {
 
   @override
   List<CommunityModeratorView> get moderators;
+
+  /// Create a copy of AddModToCommunityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddModToCommunityResponseImplCopyWith<_$AddModToCommunityResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

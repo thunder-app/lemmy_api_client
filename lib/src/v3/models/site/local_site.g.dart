@@ -8,8 +8,8 @@ part of 'local_site.dart';
 
 _$LocalSiteImpl _$$LocalSiteImplFromJson(Map<String, dynamic> json) =>
     _$LocalSiteImpl(
-      id: json['id'] as int,
-      siteId: json['site_id'] as int,
+      id: (json['id'] as num).toInt(),
+      siteId: (json['site_id'] as num).toInt(),
       siteSetup: json['site_setup'] as bool,
       enableDownvotes: json['enable_downvotes'] as bool,
       enableNsfw: json['enable_nsfw'] as bool,
@@ -24,9 +24,9 @@ _$LocalSiteImpl _$$LocalSiteImplFromJson(Map<String, dynamic> json) =>
       hideModlogModNames: json['hide_modlog_mod_names'] as bool,
       applicationEmailAdmins: json['application_email_admins'] as bool,
       slurFilterRegex: json['slur_filter_regex'] as String?,
-      actorNameMaxLength: json['actor_name_max_length'] as int,
+      actorNameMaxLength: (json['actor_name_max_length'] as num).toInt(),
       federationEnabled: json['federation_enabled'] as bool,
-      federationWorkerCount: json['federation_worker_count'] as int?,
+      federationWorkerCount: (json['federation_worker_count'] as num?)?.toInt(),
       captchaEnabled: json['captcha_enabled'] as bool,
       captchaDifficulty: json['captcha_difficulty'] as String,
       published: const ForceUtcDateTime().fromJson(json['published'] as String),

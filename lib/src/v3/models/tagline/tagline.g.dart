@@ -8,8 +8,8 @@ part of 'tagline.dart';
 
 _$TaglineImpl _$$TaglineImplFromJson(Map<String, dynamic> json) =>
     _$TaglineImpl(
-      id: json['id'] as int,
-      localSiteId: json['local_site_id'] as int,
+      id: (json['id'] as num).toInt(),
+      localSiteId: (json['local_site_id'] as num).toInt(),
       content: json['content'] as String,
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
       updated: _$JsonConverterFromJson<String, DateTime>(

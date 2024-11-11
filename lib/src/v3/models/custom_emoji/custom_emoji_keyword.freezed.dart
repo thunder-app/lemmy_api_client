@@ -26,8 +26,12 @@ mixin _$CustomEmojiKeyword {
   int get customEmojiId => throw _privateConstructorUsedError; // v0.18.0
   String get keyword => throw _privateConstructorUsedError;
 
+  /// Serializes this CustomEmojiKeyword to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CustomEmojiKeyword
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CustomEmojiKeywordCopyWith<CustomEmojiKeyword> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$CustomEmojiKeywordCopyWithImpl<$Res, $Val extends CustomEmojiKeyword>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CustomEmojiKeyword
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -94,6 +100,8 @@ class __$$CustomEmojiKeywordImplCopyWithImpl<$Res>
       $Res Function(_$CustomEmojiKeywordImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CustomEmojiKeyword
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -155,11 +163,13 @@ class _$CustomEmojiKeywordImpl extends _CustomEmojiKeyword {
             (identical(other.keyword, keyword) || other.keyword == keyword));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, customEmojiId, keyword);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CustomEmojiKeyword
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CustomEmojiKeywordImplCopyWith<_$CustomEmojiKeywordImpl> get copyWith =>
@@ -186,13 +196,16 @@ abstract class _CustomEmojiKeyword extends CustomEmojiKeyword {
 
   @override
   @deprecated
-  int? get id;
-  @override // v0.18.0 [deprecated in v0.19.0]
-  int get customEmojiId;
-  @override // v0.18.0
-  String get keyword;
+  int? get id; // v0.18.0 [deprecated in v0.19.0]
   @override
-  @JsonKey(ignore: true)
+  int get customEmojiId; // v0.18.0
+  @override
+  String get keyword;
+
+  /// Create a copy of CustomEmojiKeyword
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CustomEmojiKeywordImplCopyWith<_$CustomEmojiKeywordImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

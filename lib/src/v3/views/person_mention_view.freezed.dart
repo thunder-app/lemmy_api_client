@@ -42,8 +42,12 @@ mixin _$PersonMentionView {
   bool get creatorBlocked => throw _privateConstructorUsedError; // v0.18.0
   int? get myVote => throw _privateConstructorUsedError;
 
+  /// Serializes this PersonMentionView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PersonMentionView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PersonMentionViewCopyWith<PersonMentionView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -90,6 +94,8 @@ class _$PersonMentionViewCopyWithImpl<$Res, $Val extends PersonMentionView>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PersonMentionView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -173,6 +179,8 @@ class _$PersonMentionViewCopyWithImpl<$Res, $Val extends PersonMentionView>
     ) as $Val);
   }
 
+  /// Create a copy of PersonMentionView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonMentionCopyWith<$Res> get personMention {
@@ -181,6 +189,8 @@ class _$PersonMentionViewCopyWithImpl<$Res, $Val extends PersonMentionView>
     });
   }
 
+  /// Create a copy of PersonMentionView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommentCopyWith<$Res> get comment {
@@ -189,6 +199,8 @@ class _$PersonMentionViewCopyWithImpl<$Res, $Val extends PersonMentionView>
     });
   }
 
+  /// Create a copy of PersonMentionView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res> get creator {
@@ -197,6 +209,8 @@ class _$PersonMentionViewCopyWithImpl<$Res, $Val extends PersonMentionView>
     });
   }
 
+  /// Create a copy of PersonMentionView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PostCopyWith<$Res> get post {
@@ -205,6 +219,8 @@ class _$PersonMentionViewCopyWithImpl<$Res, $Val extends PersonMentionView>
     });
   }
 
+  /// Create a copy of PersonMentionView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommunityCopyWith<$Res> get community {
@@ -213,6 +229,8 @@ class _$PersonMentionViewCopyWithImpl<$Res, $Val extends PersonMentionView>
     });
   }
 
+  /// Create a copy of PersonMentionView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res> get recipient {
@@ -221,6 +239,8 @@ class _$PersonMentionViewCopyWithImpl<$Res, $Val extends PersonMentionView>
     });
   }
 
+  /// Create a copy of PersonMentionView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommentAggregatesCopyWith<$Res> get counts {
@@ -279,6 +299,8 @@ class __$$PersonMentionViewImplCopyWithImpl<$Res>
       $Res Function(_$PersonMentionViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PersonMentionView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -471,7 +493,7 @@ class _$PersonMentionViewImpl extends _PersonMentionView {
             (identical(other.myVote, myVote) || other.myVote == myVote));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -491,7 +513,9 @@ class _$PersonMentionViewImpl extends _PersonMentionView {
       creatorBlocked,
       myVote);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PersonMentionView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PersonMentionViewImplCopyWith<_$PersonMentionViewImpl> get copyWith =>
@@ -529,37 +553,40 @@ abstract class _PersonMentionView extends PersonMentionView {
       _$PersonMentionViewImpl.fromJson;
 
   @override
-  PersonMention get personMention;
-  @override // v0.18.0
-  Comment get comment;
-  @override // v0.18.0
-  Person get creator;
-  @override // v0.18.0
-  Post get post;
-  @override // v0.18.0
-  Community get community;
-  @override // v0.18.0
-  Person get recipient;
-  @override // v0.18.0
-  CommentAggregates get counts;
-  @override // v0.18.0
-  bool get creatorBannedFromCommunity;
-  @override // v0.18.0
-  bool? get bannedFromCommunity;
-  @override // v0.19.4 (required)
-  bool? get creatorIsModerator;
-  @override // v0.19.0 (required)
-  bool? get creatorIsAdmin;
-  @override // v0.19.0 (required)
-  SubscribedType get subscribed;
-  @override // v0.18.0
-  bool get saved;
-  @override // v0.18.0
-  bool get creatorBlocked;
-  @override // v0.18.0
-  int? get myVote;
+  PersonMention get personMention; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  Comment get comment; // v0.18.0
+  @override
+  Person get creator; // v0.18.0
+  @override
+  Post get post; // v0.18.0
+  @override
+  Community get community; // v0.18.0
+  @override
+  Person get recipient; // v0.18.0
+  @override
+  CommentAggregates get counts; // v0.18.0
+  @override
+  bool get creatorBannedFromCommunity; // v0.18.0
+  @override
+  bool? get bannedFromCommunity; // v0.19.4 (required)
+  @override
+  bool? get creatorIsModerator; // v0.19.0 (required)
+  @override
+  bool? get creatorIsAdmin; // v0.19.0 (required)
+  @override
+  SubscribedType get subscribed; // v0.18.0
+  @override
+  bool get saved; // v0.18.0
+  @override
+  bool get creatorBlocked; // v0.18.0
+  @override
+  int? get myVote;
+
+  /// Create a copy of PersonMentionView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PersonMentionViewImplCopyWith<_$PersonMentionViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

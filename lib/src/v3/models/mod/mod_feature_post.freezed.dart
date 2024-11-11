@@ -28,8 +28,12 @@ mixin _$ModFeaturePost {
   String get when => throw _privateConstructorUsedError; // v0.18.0
   bool get isFeaturedCommunity => throw _privateConstructorUsedError;
 
+  /// Serializes this ModFeaturePost to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ModFeaturePost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ModFeaturePostCopyWith<ModFeaturePost> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -59,6 +63,8 @@ class _$ModFeaturePostCopyWithImpl<$Res, $Val extends ModFeaturePost>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ModFeaturePost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -123,6 +129,8 @@ class __$$ModFeaturePostImplCopyWithImpl<$Res>
       _$ModFeaturePostImpl _value, $Res Function(_$ModFeaturePostImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ModFeaturePost
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -218,12 +226,14 @@ class _$ModFeaturePostImpl extends _ModFeaturePost {
                 other.isFeaturedCommunity == isFeaturedCommunity));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, modPersonId, postId,
       featured, when, isFeaturedCommunity);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ModFeaturePost
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ModFeaturePostImplCopyWith<_$ModFeaturePostImpl> get copyWith =>
@@ -252,20 +262,23 @@ abstract class _ModFeaturePost extends ModFeaturePost {
       _$ModFeaturePostImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  int get modPersonId;
-  @override // v0.18.0
-  int get postId;
-  @override // v0.18.0
-  bool get featured;
-  @override // v0.18.0
-  @JsonKey(name: 'when_')
-  String get when;
-  @override // v0.18.0
-  bool get isFeaturedCommunity;
+  int get id; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  int get modPersonId; // v0.18.0
+  @override
+  int get postId; // v0.18.0
+  @override
+  bool get featured; // v0.18.0
+  @override
+  @JsonKey(name: 'when_')
+  String get when; // v0.18.0
+  @override
+  bool get isFeaturedCommunity;
+
+  /// Create a copy of ModFeaturePost
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ModFeaturePostImplCopyWith<_$ModFeaturePostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -29,8 +29,12 @@ mixin _$CustomEmoji {
   DateTime get published => throw _privateConstructorUsedError; // v0.18.0
   DateTime? get updated => throw _privateConstructorUsedError;
 
+  /// Serializes this CustomEmoji to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CustomEmoji
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CustomEmojiCopyWith<CustomEmoji> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -62,6 +66,8 @@ class _$CustomEmojiCopyWithImpl<$Res, $Val extends CustomEmoji>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CustomEmoji
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -138,6 +144,8 @@ class __$$CustomEmojiImplCopyWithImpl<$Res>
       _$CustomEmojiImpl _value, $Res Function(_$CustomEmojiImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CustomEmoji
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -254,12 +262,14 @@ class _$CustomEmojiImpl extends _CustomEmoji {
             (identical(other.updated, updated) || other.updated == updated));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, localSiteId, shortcode,
       imageUrl, altText, category, published, updated);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CustomEmoji
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CustomEmojiImplCopyWith<_$CustomEmojiImpl> get copyWith =>
@@ -289,23 +299,26 @@ abstract class _CustomEmoji extends CustomEmoji {
       _$CustomEmojiImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  int get localSiteId;
-  @override // v0.18.0
-  String get shortcode;
-  @override // v0.18.0
-  String get imageUrl;
-  @override // v0.18.0
-  String get altText;
-  @override // v0.18.0
-  String get category;
-  @override // v0.18.0
-  DateTime get published;
-  @override // v0.18.0
-  DateTime? get updated;
+  int get id; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  int get localSiteId; // v0.18.0
+  @override
+  String get shortcode; // v0.18.0
+  @override
+  String get imageUrl; // v0.18.0
+  @override
+  String get altText; // v0.18.0
+  @override
+  String get category; // v0.18.0
+  @override
+  DateTime get published; // v0.18.0
+  @override
+  DateTime? get updated;
+
+  /// Create a copy of CustomEmoji
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CustomEmojiImplCopyWith<_$CustomEmojiImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

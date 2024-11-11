@@ -8,19 +8,19 @@ part of 'post_aggregates.dart';
 
 _$PostAggregatesImpl _$$PostAggregatesImplFromJson(Map<String, dynamic> json) =>
     _$PostAggregatesImpl(
-      id: json['id'] as int?,
-      postId: json['post_id'] as int,
-      comments: json['comments'] as int,
-      score: json['score'] as int,
-      upvotes: json['upvotes'] as int,
-      downvotes: json['downvotes'] as int,
+      id: (json['id'] as num?)?.toInt(),
+      postId: (json['post_id'] as num).toInt(),
+      comments: (json['comments'] as num).toInt(),
+      score: (json['score'] as num).toInt(),
+      upvotes: (json['upvotes'] as num).toInt(),
+      downvotes: (json['downvotes'] as num).toInt(),
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
       newestCommentTimeNecro: json['newest_comment_time_necro'] as String?,
       newestCommentTime: json['newest_comment_time'] as String?,
       featuredCommunity: json['featured_community'] as bool?,
       featuredLocal: json['featured_local'] as bool?,
-      hotRank: json['hot_rank'] as int?,
-      hotRankActive: json['hot_rank_active'] as int?,
+      hotRank: (json['hot_rank'] as num?)?.toInt(),
+      hotRankActive: (json['hot_rank_active'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$PostAggregatesImplToJson(

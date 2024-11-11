@@ -27,8 +27,12 @@ mixin _$ModAdd {
   @JsonKey(name: 'when_')
   String get when => throw _privateConstructorUsedError;
 
+  /// Serializes this ModAdd to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ModAdd
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ModAddCopyWith<ModAdd> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -55,6 +59,8 @@ class _$ModAddCopyWithImpl<$Res, $Val extends ModAdd>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ModAdd
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -112,6 +118,8 @@ class __$$ModAddImplCopyWithImpl<$Res>
       _$ModAddImpl _value, $Res Function(_$ModAddImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ModAdd
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -196,12 +204,14 @@ class _$ModAddImpl extends _ModAdd {
             (identical(other.when, when) || other.when == when));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, modPersonId, otherPersonId, removed, when);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ModAdd
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ModAddImplCopyWith<_$ModAddImpl> get copyWith =>
@@ -227,18 +237,21 @@ abstract class _ModAdd extends ModAdd {
   factory _ModAdd.fromJson(Map<String, dynamic> json) = _$ModAddImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  int get modPersonId;
-  @override // v0.18.0
-  int get otherPersonId;
-  @override // v0.18.0
-  bool get removed;
-  @override // v0.18.0
+  int get id; // v0.18.0
+  @override
+  int get modPersonId; // v0.18.0
+  @override
+  int get otherPersonId; // v0.18.0
+  @override
+  bool get removed; // v0.18.0
+  @override
   @JsonKey(name: 'when_')
   String get when;
+
+  /// Create a copy of ModAdd
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ModAddImplCopyWith<_$ModAddImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

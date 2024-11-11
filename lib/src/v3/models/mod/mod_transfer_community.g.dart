@@ -9,10 +9,10 @@ part of 'mod_transfer_community.dart';
 _$ModTransferCommunityImpl _$$ModTransferCommunityImplFromJson(
         Map<String, dynamic> json) =>
     _$ModTransferCommunityImpl(
-      id: json['id'] as int,
-      modPersonId: json['mod_person_id'] as int,
-      otherPersonId: json['other_person_id'] as int,
-      communityId: json['community_id'] as int,
+      id: (json['id'] as num).toInt(),
+      modPersonId: (json['mod_person_id'] as num).toInt(),
+      otherPersonId: (json['other_person_id'] as num).toInt(),
+      communityId: (json['community_id'] as num).toInt(),
       when: json['when_'] as String,
     );
 

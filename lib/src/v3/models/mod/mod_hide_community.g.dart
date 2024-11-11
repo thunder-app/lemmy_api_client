@@ -9,9 +9,9 @@ part of 'mod_hide_community.dart';
 _$ModHideCommunityImpl _$$ModHideCommunityImplFromJson(
         Map<String, dynamic> json) =>
     _$ModHideCommunityImpl(
-      id: json['id'] as int,
-      communityId: json['community_id'] as int,
-      modPersonId: json['mod_person_id'] as int,
+      id: (json['id'] as num).toInt(),
+      communityId: (json['community_id'] as num).toInt(),
+      modPersonId: (json['mod_person_id'] as num).toInt(),
       when: json['when_'] as String,
       reason: json['reason'] as String?,
       hidden: json['hidden'] as bool,

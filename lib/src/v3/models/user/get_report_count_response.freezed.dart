@@ -26,8 +26,12 @@ mixin _$GetReportCountResponse {
   int get postReports => throw _privateConstructorUsedError; // v0.18.0
   int? get privateMessageReports => throw _privateConstructorUsedError;
 
+  /// Serializes this GetReportCountResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetReportCountResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetReportCountResponseCopyWith<GetReportCountResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$GetReportCountResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetReportCountResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -111,6 +117,8 @@ class __$$GetReportCountResponseImplCopyWithImpl<$Res>
       $Res Function(_$GetReportCountResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetReportCountResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -186,12 +194,14 @@ class _$GetReportCountResponseImpl extends _GetReportCountResponse {
                 other.privateMessageReports == privateMessageReports));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, communityId, commentReports,
       postReports, privateMessageReports);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetReportCountResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetReportCountResponseImplCopyWith<_$GetReportCountResponseImpl>
@@ -218,15 +228,18 @@ abstract class _GetReportCountResponse extends GetReportCountResponse {
       _$GetReportCountResponseImpl.fromJson;
 
   @override
-  int? get communityId;
-  @override // v0.18.0
-  int get commentReports;
-  @override // v0.18.0
-  int get postReports;
-  @override // v0.18.0
-  int? get privateMessageReports;
+  int? get communityId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  int get commentReports; // v0.18.0
+  @override
+  int get postReports; // v0.18.0
+  @override
+  int? get privateMessageReports;
+
+  /// Create a copy of GetReportCountResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetReportCountResponseImplCopyWith<_$GetReportCountResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

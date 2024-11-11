@@ -58,8 +58,12 @@ mixin _$LocalSite {
       throw _privateConstructorUsedError; // v0.19.4 (required)
   SortType? get defaultSortType => throw _privateConstructorUsedError;
 
+  /// Serializes this LocalSite to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LocalSite
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LocalSiteCopyWith<LocalSite> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -109,6 +113,8 @@ class _$LocalSiteCopyWithImpl<$Res, $Val extends LocalSite>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LocalSite
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -299,6 +305,8 @@ class __$$LocalSiteImplCopyWithImpl<$Res>
       _$LocalSiteImpl _value, $Res Function(_$LocalSiteImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LocalSite
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -627,7 +635,7 @@ class _$LocalSiteImpl extends _LocalSite {
                 other.defaultSortType == defaultSortType));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -660,7 +668,9 @@ class _$LocalSiteImpl extends _LocalSite {
         defaultSortType
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LocalSite
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LocalSiteImplCopyWith<_$LocalSiteImpl> get copyWith =>
@@ -709,62 +719,65 @@ abstract class _LocalSite extends LocalSite {
       _$LocalSiteImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  int get siteId;
-  @override // v0.18.0
-  bool get siteSetup;
-  @override // v0.18.0
-  bool get enableDownvotes;
-  @override // v0.18.0
-  bool get enableNsfw;
-  @override // v0.18.0
-  bool get communityCreationAdminOnly;
-  @override // v0.18.0
-  bool get requireEmailVerification;
-  @override // v0.18.0
-  String? get applicationQuestion;
-  @override // v0.18.0
-  bool get privateInstance;
-  @override // v0.18.0
-  String get defaultTheme;
-  @override // v0.18.0
-  ListingType get defaultPostListingType;
-  @override // v0.18.0
-  String? get legalInformation;
-  @override // v0.18.0
-  bool get hideModlogModNames;
-  @override // v0.18.0
-  bool get applicationEmailAdmins;
-  @override // v0.18.0
-  String? get slurFilterRegex;
-  @override // v0.18.0
-  int get actorNameMaxLength;
-  @override // v0.18.0
-  bool get federationEnabled;
-  @override // v0.18.0
-  @deprecated
-  int? get federationWorkerCount;
-  @override // v0.18.0 [deprecated in v0.18.1]
-  bool get captchaEnabled;
-  @override // v0.18.0
-  String get captchaDifficulty;
-  @override // v0.18.0
-  DateTime get published;
-  @override // v0.18.0
-  DateTime? get updated;
-  @override // v0.18.0
-  RegistrationMode get registrationMode;
-  @override // v0.18.0
-  bool get reportsEmailAdmins;
-  @override // v0.18.0
-  bool? get federationSignedFetch;
-  @override // v0.19.0 (required)
-  String? get defaultPostListingMode;
-  @override // v0.19.4 (required)
-  SortType? get defaultSortType;
+  int get id; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  int get siteId; // v0.18.0
+  @override
+  bool get siteSetup; // v0.18.0
+  @override
+  bool get enableDownvotes; // v0.18.0
+  @override
+  bool get enableNsfw; // v0.18.0
+  @override
+  bool get communityCreationAdminOnly; // v0.18.0
+  @override
+  bool get requireEmailVerification; // v0.18.0
+  @override
+  String? get applicationQuestion; // v0.18.0
+  @override
+  bool get privateInstance; // v0.18.0
+  @override
+  String get defaultTheme; // v0.18.0
+  @override
+  ListingType get defaultPostListingType; // v0.18.0
+  @override
+  String? get legalInformation; // v0.18.0
+  @override
+  bool get hideModlogModNames; // v0.18.0
+  @override
+  bool get applicationEmailAdmins; // v0.18.0
+  @override
+  String? get slurFilterRegex; // v0.18.0
+  @override
+  int get actorNameMaxLength; // v0.18.0
+  @override
+  bool get federationEnabled; // v0.18.0
+  @override
+  @deprecated
+  int? get federationWorkerCount; // v0.18.0 [deprecated in v0.18.1]
+  @override
+  bool get captchaEnabled; // v0.18.0
+  @override
+  String get captchaDifficulty; // v0.18.0
+  @override
+  DateTime get published; // v0.18.0
+  @override
+  DateTime? get updated; // v0.18.0
+  @override
+  RegistrationMode get registrationMode; // v0.18.0
+  @override
+  bool get reportsEmailAdmins; // v0.18.0
+  @override
+  bool? get federationSignedFetch; // v0.19.0 (required)
+  @override
+  String? get defaultPostListingMode; // v0.19.4 (required)
+  @override
+  SortType? get defaultSortType;
+
+  /// Create a copy of LocalSite
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LocalSiteImplCopyWith<_$LocalSiteImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

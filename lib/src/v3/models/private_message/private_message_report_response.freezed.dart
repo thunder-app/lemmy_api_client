@@ -24,8 +24,12 @@ mixin _$PrivateMessageReportResponse {
   PrivateMessageReportView get privateMessageReportView =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this PrivateMessageReportResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PrivateMessageReportResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PrivateMessageReportResponseCopyWith<PrivateMessageReportResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -54,6 +58,8 @@ class _$PrivateMessageReportResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PrivateMessageReportResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -67,6 +73,8 @@ class _$PrivateMessageReportResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of PrivateMessageReportResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PrivateMessageReportViewCopyWith<$Res> get privateMessageReportView {
@@ -102,6 +110,8 @@ class __$$PrivateMessageReportResponseImplCopyWithImpl<$Res>
       $Res Function(_$PrivateMessageReportResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PrivateMessageReportResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -146,11 +156,13 @@ class _$PrivateMessageReportResponseImpl extends _PrivateMessageReportResponse {
                 other.privateMessageReportView == privateMessageReportView));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, privateMessageReportView);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PrivateMessageReportResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PrivateMessageReportResponseImplCopyWith<
@@ -178,8 +190,11 @@ abstract class _PrivateMessageReportResponse
 
   @override
   PrivateMessageReportView get privateMessageReportView;
+
+  /// Create a copy of PrivateMessageReportResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PrivateMessageReportResponseImplCopyWith<
           _$PrivateMessageReportResponseImpl>
       get copyWith => throw _privateConstructorUsedError;

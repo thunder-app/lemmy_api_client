@@ -43,8 +43,12 @@ mixin _$PostView {
   int? get myVote => throw _privateConstructorUsedError; // v0.18.0
   int get unreadComments => throw _privateConstructorUsedError;
 
+  /// Serializes this PostView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PostView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PostViewCopyWith<PostView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -89,6 +93,8 @@ class _$PostViewCopyWithImpl<$Res, $Val extends PostView>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PostView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -177,6 +183,8 @@ class _$PostViewCopyWithImpl<$Res, $Val extends PostView>
     ) as $Val);
   }
 
+  /// Create a copy of PostView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PostCopyWith<$Res> get post {
@@ -185,6 +193,8 @@ class _$PostViewCopyWithImpl<$Res, $Val extends PostView>
     });
   }
 
+  /// Create a copy of PostView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res> get creator {
@@ -193,6 +203,8 @@ class _$PostViewCopyWithImpl<$Res, $Val extends PostView>
     });
   }
 
+  /// Create a copy of PostView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommunityCopyWith<$Res> get community {
@@ -201,6 +213,8 @@ class _$PostViewCopyWithImpl<$Res, $Val extends PostView>
     });
   }
 
+  /// Create a copy of PostView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ImageDetailsCopyWith<$Res>? get imageDetails {
@@ -213,6 +227,8 @@ class _$PostViewCopyWithImpl<$Res, $Val extends PostView>
     });
   }
 
+  /// Create a copy of PostView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PostAggregatesCopyWith<$Res> get counts {
@@ -268,6 +284,8 @@ class __$$PostViewImplCopyWithImpl<$Res>
       _$PostViewImpl _value, $Res Function(_$PostViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PostView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -470,7 +488,7 @@ class _$PostViewImpl extends _PostView {
                 other.unreadComments == unreadComments));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -491,7 +509,9 @@ class _$PostViewImpl extends _PostView {
       myVote,
       unreadComments);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PostView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PostViewImplCopyWith<_$PostViewImpl> get copyWith =>
@@ -529,39 +549,42 @@ abstract class _PostView extends PostView {
       _$PostViewImpl.fromJson;
 
   @override
-  Post get post;
-  @override // v0.18.0
-  Person get creator;
-  @override // v0.18.0
-  Community get community;
-  @override // v0.18.0
-  ImageDetails? get imageDetails;
-  @override // v0.19.6 (optional)
-  bool get creatorBannedFromCommunity;
-  @override // v0.18.0
-  bool? get bannedFromCommunity;
-  @override // v0.19.4 (required)
-  bool? get creatorIsModerator;
-  @override // v0.19.0 (required)
-  bool? get creatorIsAdmin;
-  @override // v0.19.0 (required)
-  PostAggregates get counts;
-  @override // v0.18.0
-  SubscribedType get subscribed;
-  @override // v0.18.0
-  bool get saved;
-  @override // v0.18.0
-  bool get read;
-  @override // v0.18.0
-  bool? get hidden;
-  @override // v0.19.4 (required)
-  bool get creatorBlocked;
-  @override // v0.18.0
-  int? get myVote;
-  @override // v0.18.0
-  int get unreadComments;
+  Post get post; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  Person get creator; // v0.18.0
+  @override
+  Community get community; // v0.18.0
+  @override
+  ImageDetails? get imageDetails; // v0.19.6 (optional)
+  @override
+  bool get creatorBannedFromCommunity; // v0.18.0
+  @override
+  bool? get bannedFromCommunity; // v0.19.4 (required)
+  @override
+  bool? get creatorIsModerator; // v0.19.0 (required)
+  @override
+  bool? get creatorIsAdmin; // v0.19.0 (required)
+  @override
+  PostAggregates get counts; // v0.18.0
+  @override
+  SubscribedType get subscribed; // v0.18.0
+  @override
+  bool get saved; // v0.18.0
+  @override
+  bool get read; // v0.18.0
+  @override
+  bool? get hidden; // v0.19.4 (required)
+  @override
+  bool get creatorBlocked; // v0.18.0
+  @override
+  int? get myVote; // v0.18.0
+  @override
+  int get unreadComments;
+
+  /// Create a copy of PostView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PostViewImplCopyWith<_$PostViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

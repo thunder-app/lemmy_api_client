@@ -24,8 +24,12 @@ mixin _$CommunityModeratorView {
   Community get community => throw _privateConstructorUsedError; // v0.18.0
   Person get moderator => throw _privateConstructorUsedError;
 
+  /// Serializes this CommunityModeratorView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CommunityModeratorView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CommunityModeratorViewCopyWith<CommunityModeratorView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$CommunityModeratorViewCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CommunityModeratorView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -71,6 +77,8 @@ class _$CommunityModeratorViewCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of CommunityModeratorView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommunityCopyWith<$Res> get community {
@@ -79,6 +87,8 @@ class _$CommunityModeratorViewCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of CommunityModeratorView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res> get moderator {
@@ -115,6 +125,8 @@ class __$$CommunityModeratorViewImplCopyWithImpl<$Res>
       $Res Function(_$CommunityModeratorViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CommunityModeratorView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -167,11 +179,13 @@ class _$CommunityModeratorViewImpl extends _CommunityModeratorView {
                 other.moderator == moderator));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, community, moderator);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CommunityModeratorView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CommunityModeratorViewImplCopyWith<_$CommunityModeratorViewImpl>
@@ -196,11 +210,14 @@ abstract class _CommunityModeratorView extends CommunityModeratorView {
       _$CommunityModeratorViewImpl.fromJson;
 
   @override
-  Community get community;
-  @override // v0.18.0
-  Person get moderator;
+  Community get community; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  Person get moderator;
+
+  /// Create a copy of CommunityModeratorView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CommunityModeratorViewImplCopyWith<_$CommunityModeratorViewImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

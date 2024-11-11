@@ -31,8 +31,12 @@ mixin _$CommentReport {
   DateTime get published => throw _privateConstructorUsedError; // v0.18.0
   DateTime? get updated => throw _privateConstructorUsedError;
 
+  /// Serializes this CommentReport to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CommentReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CommentReportCopyWith<CommentReport> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -65,6 +69,8 @@ class _$CommentReportCopyWithImpl<$Res, $Val extends CommentReport>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CommentReport
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -147,6 +153,8 @@ class __$$CommentReportImplCopyWithImpl<$Res>
       _$CommentReportImpl _value, $Res Function(_$CommentReportImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CommentReport
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -274,12 +282,14 @@ class _$CommentReportImpl extends _CommentReport {
             (identical(other.updated, updated) || other.updated == updated));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, creatorId, commentId,
       originalCommentText, reason, resolved, resolverId, published, updated);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CommentReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CommentReportImplCopyWith<_$CommentReportImpl> get copyWith =>
@@ -310,25 +320,28 @@ abstract class _CommentReport extends CommentReport {
       _$CommentReportImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  int get creatorId;
-  @override // v0.18.0
-  int get commentId;
-  @override // v0.18.0
-  String get originalCommentText;
-  @override // v0.18.0
-  String get reason;
-  @override // v0.18.0
-  bool get resolved;
-  @override // v0.18.0
-  int? get resolverId;
-  @override // v0.18.0
-  DateTime get published;
-  @override // v0.18.0
-  DateTime? get updated;
+  int get id; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  int get creatorId; // v0.18.0
+  @override
+  int get commentId; // v0.18.0
+  @override
+  String get originalCommentText; // v0.18.0
+  @override
+  String get reason; // v0.18.0
+  @override
+  bool get resolved; // v0.18.0
+  @override
+  int? get resolverId; // v0.18.0
+  @override
+  DateTime get published; // v0.18.0
+  @override
+  DateTime? get updated;
+
+  /// Create a copy of CommentReport
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CommentReportImplCopyWith<_$CommentReportImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

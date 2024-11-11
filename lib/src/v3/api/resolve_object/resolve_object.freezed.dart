@@ -23,8 +23,12 @@ mixin _$ResolveObject {
   String get q => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this ResolveObject to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ResolveObject
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ResolveObjectCopyWith<ResolveObject> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$ResolveObjectCopyWithImpl<$Res, $Val extends ResolveObject>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ResolveObject
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$ResolveObjectImplCopyWithImpl<$Res>
       _$ResolveObjectImpl _value, $Res Function(_$ResolveObjectImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ResolveObject
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -134,11 +142,13 @@ class _$ResolveObjectImpl extends _ResolveObject {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, q, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResolveObject
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ResolveObjectImplCopyWith<_$ResolveObjectImpl> get copyWith =>
@@ -161,11 +171,14 @@ abstract class _ResolveObject extends ResolveObject {
       _$ResolveObjectImpl.fromJson;
 
   @override
-  String get q;
-  @override // v0.18.0
-  String? get auth;
+  String get q; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String? get auth;
+
+  /// Create a copy of ResolveObject
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ResolveObjectImplCopyWith<_$ResolveObjectImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

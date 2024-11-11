@@ -8,16 +8,16 @@ part of 'site_aggregates.dart';
 
 _$SiteAggregatesImpl _$$SiteAggregatesImplFromJson(Map<String, dynamic> json) =>
     _$SiteAggregatesImpl(
-      id: json['id'] as int?,
-      siteId: json['site_id'] as int,
-      users: json['users'] as int,
-      posts: json['posts'] as int,
-      comments: json['comments'] as int,
-      communities: json['communities'] as int,
-      usersActiveDay: json['users_active_day'] as int,
-      usersActiveWeek: json['users_active_week'] as int,
-      usersActiveMonth: json['users_active_month'] as int,
-      usersActiveHalfYear: json['users_active_half_year'] as int,
+      id: (json['id'] as num?)?.toInt(),
+      siteId: (json['site_id'] as num).toInt(),
+      users: (json['users'] as num).toInt(),
+      posts: (json['posts'] as num).toInt(),
+      comments: (json['comments'] as num).toInt(),
+      communities: (json['communities'] as num).toInt(),
+      usersActiveDay: (json['users_active_day'] as num).toInt(),
+      usersActiveWeek: (json['users_active_week'] as num).toInt(),
+      usersActiveMonth: (json['users_active_month'] as num).toInt(),
+      usersActiveHalfYear: (json['users_active_half_year'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$SiteAggregatesImplToJson(

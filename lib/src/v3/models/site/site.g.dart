@@ -7,7 +7,7 @@ part of 'site.dart';
 // **************************************************************************
 
 _$SiteImpl _$$SiteImplFromJson(Map<String, dynamic> json) => _$SiteImpl(
-      id: json['id'] as int,
+      id: (json['id'] as num).toInt(),
       name: json['name'] as String,
       sidebar: json['sidebar'] as String?,
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
@@ -22,7 +22,7 @@ _$SiteImpl _$$SiteImplFromJson(Map<String, dynamic> json) => _$SiteImpl(
       inboxUrl: json['inbox_url'] as String,
       privateKey: json['private_key'] as String?,
       publicKey: json['public_key'] as String?,
-      instanceId: json['instance_id'] as int,
+      instanceId: (json['instance_id'] as num).toInt(),
       contentWarning: json['content_warning'] as String?,
     );
 

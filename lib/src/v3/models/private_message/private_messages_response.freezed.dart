@@ -24,8 +24,12 @@ mixin _$PrivateMessagesResponse {
   List<PrivateMessageView> get privateMessages =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this PrivateMessagesResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PrivateMessagesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PrivateMessagesResponseCopyWith<PrivateMessagesResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$PrivateMessagesResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PrivateMessagesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$PrivateMessagesResponseImplCopyWithImpl<$Res>
       $Res Function(_$PrivateMessagesResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PrivateMessagesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -134,12 +142,14 @@ class _$PrivateMessagesResponseImpl extends _PrivateMessagesResponse {
                 .equals(other._privateMessages, _privateMessages));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_privateMessages));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PrivateMessagesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PrivateMessagesResponseImplCopyWith<_$PrivateMessagesResponseImpl>
@@ -165,8 +175,11 @@ abstract class _PrivateMessagesResponse extends PrivateMessagesResponse {
 
   @override
   List<PrivateMessageView> get privateMessages;
+
+  /// Create a copy of PrivateMessagesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PrivateMessagesResponseImplCopyWith<_$PrivateMessagesResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

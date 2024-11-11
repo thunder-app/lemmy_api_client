@@ -32,8 +32,12 @@ mixin _$CommentAggregates {
   @deprecated
   int? get hotRank => throw _privateConstructorUsedError;
 
+  /// Serializes this CommentAggregates to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CommentAggregates
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CommentAggregatesCopyWith<CommentAggregates> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -65,6 +69,8 @@ class _$CommentAggregatesCopyWithImpl<$Res, $Val extends CommentAggregates>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CommentAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -141,6 +147,8 @@ class __$$CommentAggregatesImplCopyWithImpl<$Res>
       $Res Function(_$CommentAggregatesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CommentAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -258,12 +266,14 @@ class _$CommentAggregatesImpl extends _CommentAggregates {
             (identical(other.hotRank, hotRank) || other.hotRank == hotRank));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, commentId, score, upvotes,
       downvotes, published, childCount, hotRank);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CommentAggregates
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CommentAggregatesImplCopyWith<_$CommentAggregatesImpl> get copyWith =>
@@ -295,24 +305,27 @@ abstract class _CommentAggregates extends CommentAggregates {
 
   @override
   @deprecated
-  int? get id;
-  @override // v0.18.0 [deprecated in v0.19.0]
-  int get commentId;
-  @override // v0.18.0
-  int get score;
-  @override // v0.18.0
-  int get upvotes;
-  @override // v0.18.0
-  int get downvotes;
-  @override // v0.18.0
-  DateTime get published;
-  @override // v0.18.0
-  int get childCount;
-  @override // v0.18.0
+  int? get id; // v0.18.0 [deprecated in v0.19.0]
+  @override
+  int get commentId; // v0.18.0
+  @override
+  int get score; // v0.18.0
+  @override
+  int get upvotes; // v0.18.0
+  @override
+  int get downvotes; // v0.18.0
+  @override
+  DateTime get published; // v0.18.0
+  @override
+  int get childCount; // v0.18.0
+  @override
   @deprecated
   int? get hotRank;
+
+  /// Create a copy of CommentAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CommentAggregatesImplCopyWith<_$CommentAggregatesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

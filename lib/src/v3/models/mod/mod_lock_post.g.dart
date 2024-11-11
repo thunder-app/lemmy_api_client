@@ -8,9 +8,9 @@ part of 'mod_lock_post.dart';
 
 _$ModLockPostImpl _$$ModLockPostImplFromJson(Map<String, dynamic> json) =>
     _$ModLockPostImpl(
-      id: json['id'] as int,
-      modPersonId: json['mod_person_id'] as int,
-      postId: json['post_id'] as int,
+      id: (json['id'] as num).toInt(),
+      modPersonId: (json['mod_person_id'] as num).toInt(),
+      postId: (json['post_id'] as num).toInt(),
       locked: json['locked'] as bool,
       when: json['when_'] as String,
     );

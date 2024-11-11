@@ -37,8 +37,12 @@ mixin _$CommunityAggregates {
       throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
   int? get subscribersLocal => throw _privateConstructorUsedError;
 
+  /// Serializes this CommunityAggregates to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CommunityAggregates
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CommunityAggregatesCopyWith<CommunityAggregates> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -74,6 +78,8 @@ class _$CommunityAggregatesCopyWithImpl<$Res, $Val extends CommunityAggregates>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CommunityAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -174,6 +180,8 @@ class __$$CommunityAggregatesImplCopyWithImpl<$Res>
       $Res Function(_$CommunityAggregatesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CommunityAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -336,7 +344,7 @@ class _$CommunityAggregatesImpl extends _CommunityAggregates {
                 other.subscribersLocal == subscribersLocal));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -353,7 +361,9 @@ class _$CommunityAggregatesImpl extends _CommunityAggregates {
       hotRank,
       subscribersLocal);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CommunityAggregates
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CommunityAggregatesImplCopyWith<_$CommunityAggregatesImpl> get copyWith =>
@@ -389,32 +399,35 @@ abstract class _CommunityAggregates extends CommunityAggregates {
 
   @override
   @deprecated
-  int? get id;
-  @override // v0.18.0 [deprecated in v0.19.0]
-  int get communityId;
-  @override // v0.18.0
-  int get subscribers;
-  @override // v0.18.0
-  int get posts;
-  @override // v0.18.0
-  int get comments;
-  @override // v0.18.0
-  DateTime get published;
-  @override // v0.18.0
-  int get usersActiveDay;
-  @override // v0.18.0
-  int get usersActiveWeek;
-  @override // v0.18.0
-  int get usersActiveMonth;
-  @override // v0.18.0
-  int get usersActiveHalfYear;
-  @override // v0.18.0
-  @deprecated
-  int? get hotRank;
-  @override // v0.18.0 [deprecated in v0.19.0]
-  int? get subscribersLocal;
+  int? get id; // v0.18.0 [deprecated in v0.19.0]
   @override
-  @JsonKey(ignore: true)
+  int get communityId; // v0.18.0
+  @override
+  int get subscribers; // v0.18.0
+  @override
+  int get posts; // v0.18.0
+  @override
+  int get comments; // v0.18.0
+  @override
+  DateTime get published; // v0.18.0
+  @override
+  int get usersActiveDay; // v0.18.0
+  @override
+  int get usersActiveWeek; // v0.18.0
+  @override
+  int get usersActiveMonth; // v0.18.0
+  @override
+  int get usersActiveHalfYear; // v0.18.0
+  @override
+  @deprecated
+  int? get hotRank; // v0.18.0 [deprecated in v0.19.0]
+  @override
+  int? get subscribersLocal;
+
+  /// Create a copy of CommunityAggregates
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CommunityAggregatesImplCopyWith<_$CommunityAggregatesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

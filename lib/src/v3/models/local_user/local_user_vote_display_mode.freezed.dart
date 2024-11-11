@@ -29,8 +29,12 @@ mixin _$LocalUserVoteDisplayMode {
       throw _privateConstructorUsedError; // v0.19.4 (required)
   bool? get upvotePercentage => throw _privateConstructorUsedError;
 
+  /// Serializes this LocalUserVoteDisplayMode to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LocalUserVoteDisplayMode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LocalUserVoteDisplayModeCopyWith<LocalUserVoteDisplayMode> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,6 +64,8 @@ class _$LocalUserVoteDisplayModeCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LocalUserVoteDisplayMode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -121,6 +127,8 @@ class __$$LocalUserVoteDisplayModeImplCopyWithImpl<$Res>
       $Res Function(_$LocalUserVoteDisplayModeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LocalUserVoteDisplayMode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -205,12 +213,14 @@ class _$LocalUserVoteDisplayModeImpl extends _LocalUserVoteDisplayMode {
                 other.upvotePercentage == upvotePercentage));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, localUserId, score, upvotes, downvotes, upvotePercentage);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LocalUserVoteDisplayMode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LocalUserVoteDisplayModeImplCopyWith<_$LocalUserVoteDisplayModeImpl>
@@ -238,17 +248,20 @@ abstract class _LocalUserVoteDisplayMode extends LocalUserVoteDisplayMode {
       _$LocalUserVoteDisplayModeImpl.fromJson;
 
   @override
-  int? get localUserId;
-  @override // v0.19.4 (required)
-  bool? get score;
-  @override // v0.19.4 (required)
-  bool? get upvotes;
-  @override // v0.19.4 (required)
-  bool? get downvotes;
-  @override // v0.19.4 (required)
-  bool? get upvotePercentage;
+  int? get localUserId; // v0.19.4 (required)
   @override
-  @JsonKey(ignore: true)
+  bool? get score; // v0.19.4 (required)
+  @override
+  bool? get upvotes; // v0.19.4 (required)
+  @override
+  bool? get downvotes; // v0.19.4 (required)
+  @override
+  bool? get upvotePercentage;
+
+  /// Create a copy of LocalUserVoteDisplayMode
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LocalUserVoteDisplayModeImplCopyWith<_$LocalUserVoteDisplayModeImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

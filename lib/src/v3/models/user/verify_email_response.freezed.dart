@@ -22,8 +22,12 @@ VerifyEmailResponse _$VerifyEmailResponseFromJson(Map<String, dynamic> json) {
 mixin _$VerifyEmailResponse {
   bool? get success => throw _privateConstructorUsedError;
 
+  /// Serializes this VerifyEmailResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of VerifyEmailResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $VerifyEmailResponseCopyWith<VerifyEmailResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$VerifyEmailResponseCopyWithImpl<$Res, $Val extends VerifyEmailResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of VerifyEmailResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$VerifyEmailResponseImplCopyWithImpl<$Res>
       $Res Function(_$VerifyEmailResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of VerifyEmailResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -119,11 +127,13 @@ class _$VerifyEmailResponseImpl extends _VerifyEmailResponse {
             (identical(other.success, success) || other.success == success));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, success);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of VerifyEmailResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$VerifyEmailResponseImplCopyWith<_$VerifyEmailResponseImpl> get copyWith =>
@@ -148,8 +158,11 @@ abstract class _VerifyEmailResponse extends VerifyEmailResponse {
 
   @override
   bool? get success;
+
+  /// Create a copy of VerifyEmailResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$VerifyEmailResponseImplCopyWith<_$VerifyEmailResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -27,8 +27,12 @@ mixin _$ModBanFromCommunityView {
   Community get community => throw _privateConstructorUsedError; // v0.18.0
   Person get bannedPerson => throw _privateConstructorUsedError;
 
+  /// Serializes this ModBanFromCommunityView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ModBanFromCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ModBanFromCommunityViewCopyWith<ModBanFromCommunityView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -62,6 +66,8 @@ class _$ModBanFromCommunityViewCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ModBanFromCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -90,6 +96,8 @@ class _$ModBanFromCommunityViewCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ModBanFromCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ModBanFromCommunityCopyWith<$Res> get modBanFromCommunity {
@@ -99,6 +107,8 @@ class _$ModBanFromCommunityViewCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ModBanFromCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res>? get moderator {
@@ -111,6 +121,8 @@ class _$ModBanFromCommunityViewCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ModBanFromCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommunityCopyWith<$Res> get community {
@@ -119,6 +131,8 @@ class _$ModBanFromCommunityViewCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ModBanFromCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res> get bannedPerson {
@@ -163,6 +177,8 @@ class __$$ModBanFromCommunityViewImplCopyWithImpl<$Res>
       $Res Function(_$ModBanFromCommunityViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ModBanFromCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -238,12 +254,14 @@ class _$ModBanFromCommunityViewImpl extends _ModBanFromCommunityView {
                 other.bannedPerson == bannedPerson));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, modBanFromCommunity, moderator, community, bannedPerson);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ModBanFromCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ModBanFromCommunityViewImplCopyWith<_$ModBanFromCommunityViewImpl>
@@ -270,15 +288,18 @@ abstract class _ModBanFromCommunityView extends ModBanFromCommunityView {
       _$ModBanFromCommunityViewImpl.fromJson;
 
   @override
-  ModBanFromCommunity get modBanFromCommunity;
-  @override // v0.18.0
-  Person? get moderator;
-  @override // v0.18.0
-  Community get community;
-  @override // v0.18.0
-  Person get bannedPerson;
+  ModBanFromCommunity get modBanFromCommunity; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  Person? get moderator; // v0.18.0
+  @override
+  Community get community; // v0.18.0
+  @override
+  Person get bannedPerson;
+
+  /// Create a copy of ModBanFromCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ModBanFromCommunityViewImplCopyWith<_$ModBanFromCommunityViewImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

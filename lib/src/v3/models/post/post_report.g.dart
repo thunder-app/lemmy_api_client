@@ -8,15 +8,15 @@ part of 'post_report.dart';
 
 _$PostReportImpl _$$PostReportImplFromJson(Map<String, dynamic> json) =>
     _$PostReportImpl(
-      id: json['id'] as int,
-      creatorId: json['creator_id'] as int,
-      postId: json['post_id'] as int,
+      id: (json['id'] as num).toInt(),
+      creatorId: (json['creator_id'] as num).toInt(),
+      postId: (json['post_id'] as num).toInt(),
       originalPostName: json['original_post_name'] as String,
       originalPostUrl: json['original_post_url'] as String?,
       originalPostBody: json['original_post_body'] as String?,
       reason: json['reason'] as String,
       resolved: json['resolved'] as bool,
-      resolverId: json['resolver_id'] as int?,
+      resolverId: (json['resolver_id'] as num?)?.toInt(),
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
       updated: _$JsonConverterFromJson<String, DateTime>(
           json['updated'], const ForceUtcDateTime().fromJson),

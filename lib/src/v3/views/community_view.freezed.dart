@@ -28,8 +28,12 @@ mixin _$CommunityView {
       throw _privateConstructorUsedError; // v0.18.0
   bool? get bannedFromCommunity => throw _privateConstructorUsedError;
 
+  /// Serializes this CommunityView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CommunityViewCopyWith<CommunityView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -61,6 +65,8 @@ class _$CommunityViewCopyWithImpl<$Res, $Val extends CommunityView>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -94,6 +100,8 @@ class _$CommunityViewCopyWithImpl<$Res, $Val extends CommunityView>
     ) as $Val);
   }
 
+  /// Create a copy of CommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommunityCopyWith<$Res> get community {
@@ -102,6 +110,8 @@ class _$CommunityViewCopyWithImpl<$Res, $Val extends CommunityView>
     });
   }
 
+  /// Create a copy of CommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommunityAggregatesCopyWith<$Res> get counts {
@@ -140,6 +150,8 @@ class __$$CommunityViewImplCopyWithImpl<$Res>
       _$CommunityViewImpl _value, $Res Function(_$CommunityViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -224,12 +236,14 @@ class _$CommunityViewImpl extends _CommunityView {
                 other.bannedFromCommunity == bannedFromCommunity));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, community, subscribed, blocked, counts, bannedFromCommunity);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CommunityViewImplCopyWith<_$CommunityViewImpl> get copyWith =>
@@ -256,17 +270,20 @@ abstract class _CommunityView extends CommunityView {
       _$CommunityViewImpl.fromJson;
 
   @override
-  Community get community;
-  @override // v0.18.0
-  SubscribedType get subscribed;
-  @override // v0.18.0
-  bool get blocked;
-  @override // v0.18.0
-  CommunityAggregates get counts;
-  @override // v0.18.0
-  bool? get bannedFromCommunity;
+  Community get community; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  SubscribedType get subscribed; // v0.18.0
+  @override
+  bool get blocked; // v0.18.0
+  @override
+  CommunityAggregates get counts; // v0.18.0
+  @override
+  bool? get bannedFromCommunity;
+
+  /// Create a copy of CommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CommunityViewImplCopyWith<_$CommunityViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

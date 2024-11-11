@@ -34,8 +34,12 @@ mixin _$GetSiteResponse {
   List<LocalSiteUrlBlocklist>? get blockedUrls =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this GetSiteResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetSiteResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetSiteResponseCopyWith<GetSiteResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -71,6 +75,8 @@ class _$GetSiteResponseCopyWithImpl<$Res, $Val extends GetSiteResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetSiteResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -124,6 +130,8 @@ class _$GetSiteResponseCopyWithImpl<$Res, $Val extends GetSiteResponse>
     ) as $Val);
   }
 
+  /// Create a copy of GetSiteResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SiteViewCopyWith<$Res> get siteView {
@@ -132,6 +140,8 @@ class _$GetSiteResponseCopyWithImpl<$Res, $Val extends GetSiteResponse>
     });
   }
 
+  /// Create a copy of GetSiteResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MyUserInfoCopyWith<$Res>? get myUser {
@@ -178,6 +188,8 @@ class __$$GetSiteResponseImplCopyWithImpl<$Res>
       _$GetSiteResponseImpl _value, $Res Function(_$GetSiteResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetSiteResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -354,7 +366,7 @@ class _$GetSiteResponseImpl extends _GetSiteResponse {
                 .equals(other._blockedUrls, _blockedUrls));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -368,7 +380,9 @@ class _$GetSiteResponseImpl extends _GetSiteResponse {
       const DeepCollectionEquality().hash(_customEmojis),
       const DeepCollectionEquality().hash(_blockedUrls));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetSiteResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetSiteResponseImplCopyWith<_$GetSiteResponseImpl> get copyWith =>
@@ -400,25 +414,28 @@ abstract class _GetSiteResponse extends GetSiteResponse {
       _$GetSiteResponseImpl.fromJson;
 
   @override
-  SiteView get siteView;
-  @override // v0.18.0
-  List<PersonView> get admins;
-  @override // v0.18.0
-  String get version;
-  @override // v0.18.0
-  MyUserInfo? get myUser;
-  @override // v0.18.0
-  List<Language> get allLanguages;
-  @override // v0.18.0
-  List<int> get discussionLanguages;
-  @override // v0.18.0
-  List<Tagline> get taglines;
-  @override // v0.18.0
-  List<CustomEmojiView> get customEmojis;
-  @override // v0.18.0
-  List<LocalSiteUrlBlocklist>? get blockedUrls;
+  SiteView get siteView; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  List<PersonView> get admins; // v0.18.0
+  @override
+  String get version; // v0.18.0
+  @override
+  MyUserInfo? get myUser; // v0.18.0
+  @override
+  List<Language> get allLanguages; // v0.18.0
+  @override
+  List<int> get discussionLanguages; // v0.18.0
+  @override
+  List<Tagline> get taglines; // v0.18.0
+  @override
+  List<CustomEmojiView> get customEmojis; // v0.18.0
+  @override
+  List<LocalSiteUrlBlocklist>? get blockedUrls;
+
+  /// Create a copy of GetSiteResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetSiteResponseImplCopyWith<_$GetSiteResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

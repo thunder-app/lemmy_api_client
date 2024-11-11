@@ -22,8 +22,12 @@ GetCaptchaResponse _$GetCaptchaResponseFromJson(Map<String, dynamic> json) {
 mixin _$GetCaptchaResponse {
   CaptchaResponse? get ok => throw _privateConstructorUsedError;
 
+  /// Serializes this GetCaptchaResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetCaptchaResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetCaptchaResponseCopyWith<GetCaptchaResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$GetCaptchaResponseCopyWithImpl<$Res, $Val extends GetCaptchaResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetCaptchaResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -62,6 +68,8 @@ class _$GetCaptchaResponseCopyWithImpl<$Res, $Val extends GetCaptchaResponse>
     ) as $Val);
   }
 
+  /// Create a copy of GetCaptchaResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CaptchaResponseCopyWith<$Res>? get ok {
@@ -97,6 +105,8 @@ class __$$GetCaptchaResponseImplCopyWithImpl<$Res>
       $Res Function(_$GetCaptchaResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetCaptchaResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -136,11 +146,13 @@ class _$GetCaptchaResponseImpl extends _GetCaptchaResponse {
             (identical(other.ok, ok) || other.ok == ok));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, ok);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetCaptchaResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetCaptchaResponseImplCopyWith<_$GetCaptchaResponseImpl> get copyWith =>
@@ -165,8 +177,11 @@ abstract class _GetCaptchaResponse extends GetCaptchaResponse {
 
   @override
   CaptchaResponse? get ok;
+
+  /// Create a copy of GetCaptchaResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetCaptchaResponseImplCopyWith<_$GetCaptchaResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

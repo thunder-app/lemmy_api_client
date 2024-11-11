@@ -9,26 +9,26 @@ part of 'local_site_rate_limit.dart';
 _$LocalSiteRateLimitImpl _$$LocalSiteRateLimitImplFromJson(
         Map<String, dynamic> json) =>
     _$LocalSiteRateLimitImpl(
-      id: json['id'] as int?,
-      localSiteId: json['local_site_id'] as int,
-      message: json['message'] as int,
-      messagePerSecond: json['message_per_second'] as int,
-      post: json['post'] as int,
-      postPerSecond: json['post_per_second'] as int,
-      register: json['register'] as int,
-      registerPerSecond: json['register_per_second'] as int,
-      image: json['image'] as int,
-      imagePerSecond: json['image_per_second'] as int,
-      comment: json['comment'] as int,
-      commentPerSecond: json['comment_per_second'] as int,
-      search: json['search'] as int,
-      searchPerSecond: json['search_per_second'] as int,
+      id: (json['id'] as num?)?.toInt(),
+      localSiteId: (json['local_site_id'] as num).toInt(),
+      message: (json['message'] as num).toInt(),
+      messagePerSecond: (json['message_per_second'] as num).toInt(),
+      post: (json['post'] as num).toInt(),
+      postPerSecond: (json['post_per_second'] as num).toInt(),
+      register: (json['register'] as num).toInt(),
+      registerPerSecond: (json['register_per_second'] as num).toInt(),
+      image: (json['image'] as num).toInt(),
+      imagePerSecond: (json['image_per_second'] as num).toInt(),
+      comment: (json['comment'] as num).toInt(),
+      commentPerSecond: (json['comment_per_second'] as num).toInt(),
+      search: (json['search'] as num).toInt(),
+      searchPerSecond: (json['search_per_second'] as num).toInt(),
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
       updated: _$JsonConverterFromJson<String, DateTime>(
           json['updated'], const ForceUtcDateTime().fromJson),
-      importUserSettings: json['import_user_settings'] as int?,
+      importUserSettings: (json['import_user_settings'] as num?)?.toInt(),
       importUserSettingsPerSecond:
-          json['import_user_settings_per_second'] as int?,
+          (json['import_user_settings_per_second'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$LocalSiteRateLimitImplToJson(

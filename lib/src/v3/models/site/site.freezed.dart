@@ -40,8 +40,12 @@ mixin _$Site {
   int get instanceId => throw _privateConstructorUsedError; // v0.18.0
   String? get contentWarning => throw _privateConstructorUsedError;
 
+  /// Serializes this Site to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Site
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SiteCopyWith<Site> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -78,6 +82,8 @@ class _$SiteCopyWithImpl<$Res, $Val extends Site>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Site
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -194,6 +200,8 @@ class __$$SiteImplCopyWithImpl<$Res>
   __$$SiteImplCopyWithImpl(_$SiteImpl _value, $Res Function(_$SiteImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Site
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -385,7 +393,7 @@ class _$SiteImpl extends _Site {
                 other.contentWarning == contentWarning));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -405,7 +413,9 @@ class _$SiteImpl extends _Site {
       instanceId,
       contentWarning);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Site
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SiteImplCopyWith<_$SiteImpl> get copyWith =>
@@ -441,39 +451,42 @@ abstract class _Site extends Site {
   factory _Site.fromJson(Map<String, dynamic> json) = _$SiteImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  String get name;
-  @override // v0.18.0
-  String? get sidebar;
-  @override // v0.18.0
-  DateTime get published;
-  @override // v0.18.0
-  DateTime? get updated;
-  @override // v0.18.0
-  String? get icon;
-  @override // v0.18.0
-  String? get banner;
-  @override // v0.18.0
-  String? get description;
-  @override // v0.18.0
-  String get actorId;
-  @override // v0.18.0
-  DateTime get lastRefreshedAt;
-  @override // v0.18.0
-  String get inboxUrl;
-  @override // v0.18.0
-  @deprecated
-  String? get privateKey;
-  @override // v0.18.0 [deprecated in v0.19.4]
-  @deprecated
-  String? get publicKey;
-  @override // v0.18.0 [deprecated in v0.19.4]
-  int get instanceId;
-  @override // v0.18.0
-  String? get contentWarning;
+  int get id; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String get name; // v0.18.0
+  @override
+  String? get sidebar; // v0.18.0
+  @override
+  DateTime get published; // v0.18.0
+  @override
+  DateTime? get updated; // v0.18.0
+  @override
+  String? get icon; // v0.18.0
+  @override
+  String? get banner; // v0.18.0
+  @override
+  String? get description; // v0.18.0
+  @override
+  String get actorId; // v0.18.0
+  @override
+  DateTime get lastRefreshedAt; // v0.18.0
+  @override
+  String get inboxUrl; // v0.18.0
+  @override
+  @deprecated
+  String? get privateKey; // v0.18.0 [deprecated in v0.19.4]
+  @override
+  @deprecated
+  String? get publicKey; // v0.18.0 [deprecated in v0.19.4]
+  @override
+  int get instanceId; // v0.18.0
+  @override
+  String? get contentWarning;
+
+  /// Create a copy of Site
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SiteImplCopyWith<_$SiteImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

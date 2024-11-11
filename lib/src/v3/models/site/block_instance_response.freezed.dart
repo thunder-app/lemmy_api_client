@@ -23,8 +23,12 @@ BlockInstanceResponse _$BlockInstanceResponseFromJson(
 mixin _$BlockInstanceResponse {
   bool get blocked => throw _privateConstructorUsedError;
 
+  /// Serializes this BlockInstanceResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BlockInstanceResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BlockInstanceResponseCopyWith<BlockInstanceResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$BlockInstanceResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of BlockInstanceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -84,6 +90,8 @@ class __$$BlockInstanceResponseImplCopyWithImpl<$Res>
       $Res Function(_$BlockInstanceResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BlockInstanceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -123,11 +131,13 @@ class _$BlockInstanceResponseImpl extends _BlockInstanceResponse {
             (identical(other.blocked, blocked) || other.blocked == blocked));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, blocked);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BlockInstanceResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BlockInstanceResponseImplCopyWith<_$BlockInstanceResponseImpl>
@@ -152,8 +162,11 @@ abstract class _BlockInstanceResponse extends BlockInstanceResponse {
 
   @override
   bool get blocked;
+
+  /// Create a copy of BlockInstanceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BlockInstanceResponseImplCopyWith<_$BlockInstanceResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

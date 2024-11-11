@@ -29,8 +29,12 @@ mixin _$CreateComment {
       throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this CreateComment to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CreateComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CreateCommentCopyWith<CreateComment> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,6 +64,8 @@ class _$CreateCommentCopyWithImpl<$Res, $Val extends CreateComment>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CreateComment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -124,6 +130,8 @@ class __$$CreateCommentImplCopyWithImpl<$Res>
       _$CreateCommentImpl _value, $Res Function(_$CreateCommentImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CreateComment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -218,12 +226,14 @@ class _$CreateCommentImpl extends _CreateComment {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, content, postId, parentId, languageId, formId, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CreateComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CreateCommentImplCopyWith<_$CreateCommentImpl> get copyWith =>
@@ -251,20 +261,23 @@ abstract class _CreateComment extends CreateComment {
       _$CreateCommentImpl.fromJson;
 
   @override
-  String get content;
-  @override // v0.18.0
-  int get postId;
-  @override // v0.18.0
-  int? get parentId;
-  @override // v0.18.0
-  int? get languageId;
-  @override // v0.18.0
-  @deprecated
-  String? get formId;
-  @override // v0.18.0 [deprecated in v0.19.0]
-  String? get auth;
+  String get content; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  int get postId; // v0.18.0
+  @override
+  int? get parentId; // v0.18.0
+  @override
+  int? get languageId; // v0.18.0
+  @override
+  @deprecated
+  String? get formId; // v0.18.0 [deprecated in v0.19.0]
+  @override
+  String? get auth;
+
+  /// Create a copy of CreateComment
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CreateCommentImplCopyWith<_$CreateCommentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -283,8 +296,12 @@ mixin _$EditComment {
       throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this EditComment to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of EditComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $EditCommentCopyWith<EditComment> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -313,6 +330,8 @@ class _$EditCommentCopyWithImpl<$Res, $Val extends EditComment>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of EditComment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -371,6 +390,8 @@ class __$$EditCommentImplCopyWithImpl<$Res>
       _$EditCommentImpl _value, $Res Function(_$EditCommentImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of EditComment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -455,12 +476,14 @@ class _$EditCommentImpl extends _EditComment {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, commentId, content, languageId, formId, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EditComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EditCommentImplCopyWith<_$EditCommentImpl> get copyWith =>
@@ -487,18 +510,21 @@ abstract class _EditComment extends EditComment {
       _$EditCommentImpl.fromJson;
 
   @override
-  int get commentId;
-  @override // v0.18.0
-  String? get content;
-  @override // v0.18.0
-  int? get languageId;
-  @override // v0.18.0
-  @deprecated
-  String? get formId;
-  @override // v0.18.0 [deprecated in v0.19.0]
-  String? get auth;
+  int get commentId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String? get content; // v0.18.0
+  @override
+  int? get languageId; // v0.18.0
+  @override
+  @deprecated
+  String? get formId; // v0.18.0 [deprecated in v0.19.0]
+  @override
+  String? get auth;
+
+  /// Create a copy of EditComment
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EditCommentImplCopyWith<_$EditCommentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -513,8 +539,12 @@ mixin _$DeleteComment {
   bool get deleted => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this DeleteComment to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DeleteComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DeleteCommentCopyWith<DeleteComment> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -538,6 +568,8 @@ class _$DeleteCommentCopyWithImpl<$Res, $Val extends DeleteComment>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DeleteComment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -581,6 +613,8 @@ class __$$DeleteCommentImplCopyWithImpl<$Res>
       _$DeleteCommentImpl _value, $Res Function(_$DeleteCommentImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DeleteComment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -641,11 +675,13 @@ class _$DeleteCommentImpl extends _DeleteComment {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, commentId, deleted, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeleteComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DeleteCommentImplCopyWith<_$DeleteCommentImpl> get copyWith =>
@@ -670,13 +706,16 @@ abstract class _DeleteComment extends DeleteComment {
       _$DeleteCommentImpl.fromJson;
 
   @override
-  int get commentId;
-  @override // v0.18.0
-  bool get deleted;
-  @override // v0.18.0
-  String? get auth;
+  int get commentId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  bool get deleted; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of DeleteComment
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeleteCommentImplCopyWith<_$DeleteCommentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -692,8 +731,12 @@ mixin _$RemoveComment {
   String? get reason => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this RemoveComment to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RemoveComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RemoveCommentCopyWith<RemoveComment> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -717,6 +760,8 @@ class _$RemoveCommentCopyWithImpl<$Res, $Val extends RemoveComment>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RemoveComment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -765,6 +810,8 @@ class __$$RemoveCommentImplCopyWithImpl<$Res>
       _$RemoveCommentImpl _value, $Res Function(_$RemoveCommentImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RemoveComment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -834,12 +881,14 @@ class _$RemoveCommentImpl extends _RemoveComment {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, commentId, removed, reason, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RemoveComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RemoveCommentImplCopyWith<_$RemoveCommentImpl> get copyWith =>
@@ -865,15 +914,18 @@ abstract class _RemoveComment extends RemoveComment {
       _$RemoveCommentImpl.fromJson;
 
   @override
-  int get commentId;
-  @override // v0.18.0
-  bool get removed;
-  @override // v0.18.0
-  String? get reason;
-  @override // v0.18.0
-  String? get auth;
+  int get commentId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  bool get removed; // v0.18.0
+  @override
+  String? get reason; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of RemoveComment
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RemoveCommentImplCopyWith<_$RemoveCommentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -889,8 +941,12 @@ mixin _$MarkCommentReplyAsRead {
   bool get read => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this MarkCommentReplyAsRead to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MarkCommentReplyAsRead
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MarkCommentReplyAsReadCopyWith<MarkCommentReplyAsRead> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -915,6 +971,8 @@ class _$MarkCommentReplyAsReadCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MarkCommentReplyAsRead
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -961,6 +1019,8 @@ class __$$MarkCommentReplyAsReadImplCopyWithImpl<$Res>
       $Res Function(_$MarkCommentReplyAsReadImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MarkCommentReplyAsRead
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1021,11 +1081,13 @@ class _$MarkCommentReplyAsReadImpl extends _MarkCommentReplyAsRead {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, commentReplyId, read, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MarkCommentReplyAsRead
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MarkCommentReplyAsReadImplCopyWith<_$MarkCommentReplyAsReadImpl>
@@ -1051,13 +1113,16 @@ abstract class _MarkCommentReplyAsRead extends MarkCommentReplyAsRead {
       _$MarkCommentReplyAsReadImpl.fromJson;
 
   @override
-  int get commentReplyId;
-  @override // v0.18.0
-  bool get read;
-  @override // v0.18.0
-  String? get auth;
+  int get commentReplyId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  bool get read; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of MarkCommentReplyAsRead
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MarkCommentReplyAsReadImplCopyWith<_$MarkCommentReplyAsReadImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1072,8 +1137,12 @@ mixin _$CreateCommentLike {
   num get score => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this CreateCommentLike to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CreateCommentLike
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CreateCommentLikeCopyWith<CreateCommentLike> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1097,6 +1166,8 @@ class _$CreateCommentLikeCopyWithImpl<$Res, $Val extends CreateCommentLike>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CreateCommentLike
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1140,6 +1211,8 @@ class __$$CreateCommentLikeImplCopyWithImpl<$Res>
       $Res Function(_$CreateCommentLikeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CreateCommentLike
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1200,11 +1273,13 @@ class _$CreateCommentLikeImpl extends _CreateCommentLike {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, commentId, score, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CreateCommentLike
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CreateCommentLikeImplCopyWith<_$CreateCommentLikeImpl> get copyWith =>
@@ -1230,13 +1305,16 @@ abstract class _CreateCommentLike extends CreateCommentLike {
       _$CreateCommentLikeImpl.fromJson;
 
   @override
-  int get commentId;
-  @override // v0.18.0
-  num get score;
-  @override // v0.18.0
-  String? get auth;
+  int get commentId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  num get score; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of CreateCommentLike
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CreateCommentLikeImplCopyWith<_$CreateCommentLikeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1252,8 +1330,12 @@ mixin _$ListCommentLikes {
   int? get limit => throw _privateConstructorUsedError; // v0.19.2 (optional)
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this ListCommentLikes to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ListCommentLikes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ListCommentLikesCopyWith<ListCommentLikes> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1277,6 +1359,8 @@ class _$ListCommentLikesCopyWithImpl<$Res, $Val extends ListCommentLikes>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ListCommentLikes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1325,6 +1409,8 @@ class __$$ListCommentLikesImplCopyWithImpl<$Res>
       $Res Function(_$ListCommentLikesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ListCommentLikes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1394,11 +1480,13 @@ class _$ListCommentLikesImpl extends _ListCommentLikes {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, commentId, page, limit, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ListCommentLikes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ListCommentLikesImplCopyWith<_$ListCommentLikesImpl> get copyWith =>
@@ -1425,15 +1513,18 @@ abstract class _ListCommentLikes extends ListCommentLikes {
       _$ListCommentLikesImpl.fromJson;
 
   @override
-  int get commentId;
-  @override // v0.19.2 (required)
-  int? get page;
-  @override // v0.19.2 (optional)
-  int? get limit;
-  @override // v0.19.2 (optional)
-  String? get auth;
+  int get commentId; // v0.19.2 (required)
   @override
-  @JsonKey(ignore: true)
+  int? get page; // v0.19.2 (optional)
+  @override
+  int? get limit; // v0.19.2 (optional)
+  @override
+  String? get auth;
+
+  /// Create a copy of ListCommentLikes
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ListCommentLikesImplCopyWith<_$ListCommentLikesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1448,8 +1539,12 @@ mixin _$SaveComment {
   bool get save => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this SaveComment to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SaveComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SaveCommentCopyWith<SaveComment> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1473,6 +1568,8 @@ class _$SaveCommentCopyWithImpl<$Res, $Val extends SaveComment>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SaveComment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1516,6 +1613,8 @@ class __$$SaveCommentImplCopyWithImpl<$Res>
       _$SaveCommentImpl _value, $Res Function(_$SaveCommentImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SaveComment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1576,11 +1675,13 @@ class _$SaveCommentImpl extends _SaveComment {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, commentId, save, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SaveComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SaveCommentImplCopyWith<_$SaveCommentImpl> get copyWith =>
@@ -1605,13 +1706,16 @@ abstract class _SaveComment extends SaveComment {
       _$SaveCommentImpl.fromJson;
 
   @override
-  int get commentId;
-  @override // v0.18.0
-  bool get save;
-  @override // v0.18.0
-  String? get auth;
+  int get commentId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  bool get save; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of SaveComment
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SaveCommentImplCopyWith<_$SaveCommentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1626,8 +1730,12 @@ mixin _$DistinguishComment {
   bool get distinguished => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this DistinguishComment to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DistinguishComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DistinguishCommentCopyWith<DistinguishComment> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1651,6 +1759,8 @@ class _$DistinguishCommentCopyWithImpl<$Res, $Val extends DistinguishComment>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DistinguishComment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1694,6 +1804,8 @@ class __$$DistinguishCommentImplCopyWithImpl<$Res>
       $Res Function(_$DistinguishCommentImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DistinguishComment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1755,11 +1867,13 @@ class _$DistinguishCommentImpl extends _DistinguishComment {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, commentId, distinguished, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DistinguishComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DistinguishCommentImplCopyWith<_$DistinguishCommentImpl> get copyWith =>
@@ -1785,13 +1899,16 @@ abstract class _DistinguishComment extends DistinguishComment {
       _$DistinguishCommentImpl.fromJson;
 
   @override
-  int get commentId;
-  @override // v0.18.0
-  bool get distinguished;
-  @override // v0.18.0
-  String? get auth;
+  int get commentId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  bool get distinguished; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of DistinguishComment
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DistinguishCommentImplCopyWith<_$DistinguishCommentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1819,8 +1936,12 @@ mixin _$GetComments {
       throw _privateConstructorUsedError; // v0.19.0 (optional)
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this GetComments to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetComments
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetCommentsCopyWith<GetComments> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1857,6 +1978,8 @@ class _$GetCommentsCopyWithImpl<$Res, $Val extends GetComments>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetComments
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1963,6 +2086,8 @@ class __$$GetCommentsImplCopyWithImpl<$Res>
       _$GetCommentsImpl _value, $Res Function(_$GetCommentsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetComments
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2132,7 +2257,7 @@ class _$GetCommentsImpl extends _GetComments {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2150,7 +2275,9 @@ class _$GetCommentsImpl extends _GetComments {
       dislikedOnly,
       auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetComments
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetCommentsImplCopyWith<_$GetCommentsImpl> get copyWith =>
@@ -2186,33 +2313,36 @@ abstract class _GetComments extends GetComments {
 
   @override
   @JsonKey(name: 'type_')
-  ListingType? get type;
-  @override // v0.18.0
-  CommentSortType? get sort;
-  @override // v0.18.0
-  int? get maxDepth;
-  @override // v0.18.0
-  int? get page;
-  @override // v0.18.0
-  int? get limit;
-  @override // v0.18.0
-  int? get communityId;
-  @override // v0.18.0
-  String? get communityName;
-  @override // v0.18.0
-  int? get postId;
-  @override // v0.18.0
-  int? get parentId;
-  @override // v0.18.0
-  bool? get savedOnly;
-  @override // v0.18.0
-  bool? get likedOnly;
-  @override // v0.19.0 (optional)
-  bool? get dislikedOnly;
-  @override // v0.19.0 (optional)
-  String? get auth;
+  ListingType? get type; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  CommentSortType? get sort; // v0.18.0
+  @override
+  int? get maxDepth; // v0.18.0
+  @override
+  int? get page; // v0.18.0
+  @override
+  int? get limit; // v0.18.0
+  @override
+  int? get communityId; // v0.18.0
+  @override
+  String? get communityName; // v0.18.0
+  @override
+  int? get postId; // v0.18.0
+  @override
+  int? get parentId; // v0.18.0
+  @override
+  bool? get savedOnly; // v0.18.0
+  @override
+  bool? get likedOnly; // v0.19.0 (optional)
+  @override
+  bool? get dislikedOnly; // v0.19.0 (optional)
+  @override
+  String? get auth;
+
+  /// Create a copy of GetComments
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetCommentsImplCopyWith<_$GetCommentsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2226,8 +2356,12 @@ mixin _$GetComment {
   int get id => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this GetComment to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetCommentCopyWith<GetComment> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2251,6 +2385,8 @@ class _$GetCommentCopyWithImpl<$Res, $Val extends GetComment>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetComment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2289,6 +2425,8 @@ class __$$GetCommentImplCopyWithImpl<$Res>
       _$GetCommentImpl _value, $Res Function(_$GetCommentImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetComment
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2337,11 +2475,13 @@ class _$GetCommentImpl extends _GetComment {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetComment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetCommentImplCopyWith<_$GetCommentImpl> get copyWith =>
@@ -2364,11 +2504,14 @@ abstract class _GetComment extends GetComment {
       _$GetCommentImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  String? get auth;
+  int get id; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String? get auth;
+
+  /// Create a copy of GetComment
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetCommentImplCopyWith<_$GetCommentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2383,8 +2526,12 @@ mixin _$CreateCommentReport {
   String get reason => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this CreateCommentReport to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CreateCommentReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CreateCommentReportCopyWith<CreateCommentReport> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2408,6 +2555,8 @@ class _$CreateCommentReportCopyWithImpl<$Res, $Val extends CreateCommentReport>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CreateCommentReport
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2451,6 +2600,8 @@ class __$$CreateCommentReportImplCopyWithImpl<$Res>
       $Res Function(_$CreateCommentReportImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CreateCommentReport
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2511,11 +2662,13 @@ class _$CreateCommentReportImpl extends _CreateCommentReport {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, commentId, reason, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CreateCommentReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CreateCommentReportImplCopyWith<_$CreateCommentReportImpl> get copyWith =>
@@ -2541,13 +2694,16 @@ abstract class _CreateCommentReport extends CreateCommentReport {
       _$CreateCommentReportImpl.fromJson;
 
   @override
-  int get commentId;
-  @override // v0.18.0
-  String get reason;
-  @override // v0.18.0
-  String? get auth;
+  int get commentId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String get reason; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of CreateCommentReport
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CreateCommentReportImplCopyWith<_$CreateCommentReportImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2562,8 +2718,12 @@ mixin _$ResolveCommentReport {
   bool get resolved => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this ResolveCommentReport to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ResolveCommentReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ResolveCommentReportCopyWith<ResolveCommentReport> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2588,6 +2748,8 @@ class _$ResolveCommentReportCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ResolveCommentReport
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2631,6 +2793,8 @@ class __$$ResolveCommentReportImplCopyWithImpl<$Res>
       $Res Function(_$ResolveCommentReportImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ResolveCommentReport
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2692,11 +2856,13 @@ class _$ResolveCommentReportImpl extends _ResolveCommentReport {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, reportId, resolved, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResolveCommentReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ResolveCommentReportImplCopyWith<_$ResolveCommentReportImpl>
@@ -2723,13 +2889,16 @@ abstract class _ResolveCommentReport extends ResolveCommentReport {
       _$ResolveCommentReportImpl.fromJson;
 
   @override
-  int get reportId;
-  @override // v0.18.0
-  bool get resolved;
-  @override // v0.18.0
-  String? get auth;
+  int get reportId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  bool get resolved; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of ResolveCommentReport
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ResolveCommentReportImplCopyWith<_$ResolveCommentReportImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2748,8 +2917,12 @@ mixin _$ListCommentReports {
   int? get communityId => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this ListCommentReports to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ListCommentReports
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ListCommentReportsCopyWith<ListCommentReports> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2779,6 +2952,8 @@ class _$ListCommentReportsCopyWithImpl<$Res, $Val extends ListCommentReports>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ListCommentReports
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2843,6 +3018,8 @@ class __$$ListCommentReportsImplCopyWithImpl<$Res>
       $Res Function(_$ListCommentReportsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ListCommentReports
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2937,12 +3114,14 @@ class _$ListCommentReportsImpl extends _ListCommentReports {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, commentId, page, limit, unresolvedOnly, communityId, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ListCommentReports
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ListCommentReportsImplCopyWith<_$ListCommentReportsImpl> get copyWith =>
@@ -2971,19 +3150,22 @@ abstract class _ListCommentReports extends ListCommentReports {
       _$ListCommentReportsImpl.fromJson;
 
   @override
-  int? get commentId;
-  @override // v0.19.4 (optional)
-  int? get page;
-  @override // v0.18.0
-  int? get limit;
-  @override // v0.18.0
-  bool? get unresolvedOnly;
-  @override // v0.18.0
-  int? get communityId;
-  @override // v0.18.0
-  String? get auth;
+  int? get commentId; // v0.19.4 (optional)
   @override
-  @JsonKey(ignore: true)
+  int? get page; // v0.18.0
+  @override
+  int? get limit; // v0.18.0
+  @override
+  bool? get unresolvedOnly; // v0.18.0
+  @override
+  int? get communityId; // v0.18.0
+  @override
+  String? get auth;
+
+  /// Create a copy of ListCommentReports
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ListCommentReportsImplCopyWith<_$ListCommentReportsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

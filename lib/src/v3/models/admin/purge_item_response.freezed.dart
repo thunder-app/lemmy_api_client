@@ -22,8 +22,12 @@ PurgeItemResponse _$PurgeItemResponseFromJson(Map<String, dynamic> json) {
 mixin _$PurgeItemResponse {
   bool get success => throw _privateConstructorUsedError;
 
+  /// Serializes this PurgeItemResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PurgeItemResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PurgeItemResponseCopyWith<PurgeItemResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$PurgeItemResponseCopyWithImpl<$Res, $Val extends PurgeItemResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PurgeItemResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$PurgeItemResponseImplCopyWithImpl<$Res>
       $Res Function(_$PurgeItemResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PurgeItemResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -119,11 +127,13 @@ class _$PurgeItemResponseImpl extends _PurgeItemResponse {
             (identical(other.success, success) || other.success == success));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, success);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PurgeItemResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PurgeItemResponseImplCopyWith<_$PurgeItemResponseImpl> get copyWith =>
@@ -148,8 +158,11 @@ abstract class _PurgeItemResponse extends PurgeItemResponse {
 
   @override
   bool get success;
+
+  /// Create a copy of PurgeItemResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PurgeItemResponseImplCopyWith<_$PurgeItemResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

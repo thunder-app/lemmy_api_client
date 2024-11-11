@@ -23,8 +23,12 @@ ListPostReportsResponse _$ListPostReportsResponseFromJson(
 mixin _$ListPostReportsResponse {
   List<PostReportView> get postReports => throw _privateConstructorUsedError;
 
+  /// Serializes this ListPostReportsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ListPostReportsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ListPostReportsResponseCopyWith<ListPostReportsResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$ListPostReportsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ListPostReportsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,6 +91,8 @@ class __$$ListPostReportsResponseImplCopyWithImpl<$Res>
       $Res Function(_$ListPostReportsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ListPostReportsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -133,12 +141,14 @@ class _$ListPostReportsResponseImpl extends _ListPostReportsResponse {
                 .equals(other._postReports, _postReports));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_postReports));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ListPostReportsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ListPostReportsResponseImplCopyWith<_$ListPostReportsResponseImpl>
@@ -164,8 +174,11 @@ abstract class _ListPostReportsResponse extends ListPostReportsResponse {
 
   @override
   List<PostReportView> get postReports;
+
+  /// Create a copy of ListPostReportsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ListPostReportsResponseImplCopyWith<_$ListPostReportsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

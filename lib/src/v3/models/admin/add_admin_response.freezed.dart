@@ -22,8 +22,12 @@ AddAdminResponse _$AddAdminResponseFromJson(Map<String, dynamic> json) {
 mixin _$AddAdminResponse {
   List<PersonView> get admins => throw _privateConstructorUsedError;
 
+  /// Serializes this AddAdminResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AddAdminResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AddAdminResponseCopyWith<AddAdminResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$AddAdminResponseCopyWithImpl<$Res, $Val extends AddAdminResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AddAdminResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$AddAdminResponseImplCopyWithImpl<$Res>
       $Res Function(_$AddAdminResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AddAdminResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -126,12 +134,14 @@ class _$AddAdminResponseImpl extends _AddAdminResponse {
             const DeepCollectionEquality().equals(other._admins, _admins));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_admins));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AddAdminResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AddAdminResponseImplCopyWith<_$AddAdminResponseImpl> get copyWith =>
@@ -156,8 +166,11 @@ abstract class _AddAdminResponse extends AddAdminResponse {
 
   @override
   List<PersonView> get admins;
+
+  /// Create a copy of AddAdminResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddAdminResponseImplCopyWith<_$AddAdminResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

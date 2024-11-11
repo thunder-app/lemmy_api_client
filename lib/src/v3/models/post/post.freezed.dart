@@ -45,8 +45,12 @@ mixin _$Post {
       throw _privateConstructorUsedError; // v0.19.4 (optional)
   String? get altText => throw _privateConstructorUsedError;
 
+  /// Serializes this Post to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Post
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PostCopyWith<Post> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -91,6 +95,8 @@ class _$PostCopyWithImpl<$Res, $Val extends Post>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Post
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -255,6 +261,8 @@ class __$$PostImplCopyWithImpl<$Res>
   __$$PostImplCopyWithImpl(_$PostImpl _value, $Res Function(_$PostImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Post
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -527,7 +535,7 @@ class _$PostImpl extends _Post {
             (identical(other.altText, altText) || other.altText == altText));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -556,7 +564,9 @@ class _$PostImpl extends _Post {
         altText
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Post
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PostImplCopyWith<_$PostImpl> get copyWith =>
@@ -600,53 +610,56 @@ abstract class _Post extends Post {
   factory _Post.fromJson(Map<String, dynamic> json) = _$PostImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  String get name;
-  @override // v0.18.0
-  String? get url;
-  @override // v0.18.0
-  String? get body;
-  @override // v0.18.0
-  int get creatorId;
-  @override // v0.18.0
-  int get communityId;
-  @override // v0.18.0
-  bool get removed;
-  @override // v0.18.0
-  bool get locked;
-  @override // v0.18.0
-  DateTime get published;
-  @override // v0.18.0
-  DateTime? get updated;
-  @override // v0.18.0
-  bool get deleted;
-  @override // v0.18.0
-  bool get nsfw;
-  @override // v0.18.0
-  String? get embedTitle;
-  @override // v0.18.0
-  String? get embedDescription;
-  @override // v0.18.0
-  String? get thumbnailUrl;
-  @override // v0.18.0
-  String get apId;
-  @override // v0.18.0
-  bool get local;
-  @override // v0.18.0
-  String? get embedVideoUrl;
-  @override // v0.18.0
-  int get languageId;
-  @override // v0.18.0
-  bool get featuredCommunity;
-  @override // v0.18.0
-  bool get featuredLocal;
-  @override // v0.18.0
-  String? get urlContentType;
-  @override // v0.19.4 (optional)
-  String? get altText;
+  int get id; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String get name; // v0.18.0
+  @override
+  String? get url; // v0.18.0
+  @override
+  String? get body; // v0.18.0
+  @override
+  int get creatorId; // v0.18.0
+  @override
+  int get communityId; // v0.18.0
+  @override
+  bool get removed; // v0.18.0
+  @override
+  bool get locked; // v0.18.0
+  @override
+  DateTime get published; // v0.18.0
+  @override
+  DateTime? get updated; // v0.18.0
+  @override
+  bool get deleted; // v0.18.0
+  @override
+  bool get nsfw; // v0.18.0
+  @override
+  String? get embedTitle; // v0.18.0
+  @override
+  String? get embedDescription; // v0.18.0
+  @override
+  String? get thumbnailUrl; // v0.18.0
+  @override
+  String get apId; // v0.18.0
+  @override
+  bool get local; // v0.18.0
+  @override
+  String? get embedVideoUrl; // v0.18.0
+  @override
+  int get languageId; // v0.18.0
+  @override
+  bool get featuredCommunity; // v0.18.0
+  @override
+  bool get featuredLocal; // v0.18.0
+  @override
+  String? get urlContentType; // v0.19.4 (optional)
+  @override
+  String? get altText;
+
+  /// Create a copy of Post
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PostImplCopyWith<_$PostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

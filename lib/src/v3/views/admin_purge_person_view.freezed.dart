@@ -24,8 +24,12 @@ mixin _$AdminPurgePersonView {
       throw _privateConstructorUsedError; // v0.18.0
   Person? get admin => throw _privateConstructorUsedError;
 
+  /// Serializes this AdminPurgePersonView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AdminPurgePersonView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdminPurgePersonViewCopyWith<AdminPurgePersonView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$AdminPurgePersonViewCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AdminPurgePersonView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -71,6 +77,8 @@ class _$AdminPurgePersonViewCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of AdminPurgePersonView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AdminPurgePersonCopyWith<$Res> get adminPurgePerson {
@@ -79,6 +87,8 @@ class _$AdminPurgePersonViewCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of AdminPurgePersonView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res>? get admin {
@@ -116,6 +126,8 @@ class __$$AdminPurgePersonViewImplCopyWithImpl<$Res>
       $Res Function(_$AdminPurgePersonViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AdminPurgePersonView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -166,11 +178,13 @@ class _$AdminPurgePersonViewImpl extends _AdminPurgePersonView {
             (identical(other.admin, admin) || other.admin == admin));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, adminPurgePerson, admin);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AdminPurgePersonView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdminPurgePersonViewImplCopyWith<_$AdminPurgePersonViewImpl>
@@ -196,11 +210,14 @@ abstract class _AdminPurgePersonView extends AdminPurgePersonView {
       _$AdminPurgePersonViewImpl.fromJson;
 
   @override
-  AdminPurgePerson get adminPurgePerson;
-  @override // v0.18.0
-  Person? get admin;
+  AdminPurgePerson get adminPurgePerson; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  Person? get admin;
+
+  /// Create a copy of AdminPurgePersonView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdminPurgePersonViewImplCopyWith<_$AdminPurgePersonViewImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

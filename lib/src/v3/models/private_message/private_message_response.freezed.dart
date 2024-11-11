@@ -24,8 +24,12 @@ mixin _$PrivateMessageResponse {
   PrivateMessageView get privateMessageView =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this PrivateMessageResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PrivateMessageResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PrivateMessageResponseCopyWith<PrivateMessageResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$PrivateMessageResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PrivateMessageResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -65,6 +71,8 @@ class _$PrivateMessageResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of PrivateMessageResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PrivateMessageViewCopyWith<$Res> get privateMessageView {
@@ -100,6 +108,8 @@ class __$$PrivateMessageResponseImplCopyWithImpl<$Res>
       $Res Function(_$PrivateMessageResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PrivateMessageResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -141,11 +151,13 @@ class _$PrivateMessageResponseImpl extends _PrivateMessageResponse {
                 other.privateMessageView == privateMessageView));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, privateMessageView);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PrivateMessageResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PrivateMessageResponseImplCopyWith<_$PrivateMessageResponseImpl>
@@ -171,8 +183,11 @@ abstract class _PrivateMessageResponse extends PrivateMessageResponse {
 
   @override
   PrivateMessageView get privateMessageView;
+
+  /// Create a copy of PrivateMessageResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PrivateMessageResponseImplCopyWith<_$PrivateMessageResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

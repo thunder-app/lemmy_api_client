@@ -44,8 +44,12 @@ mixin _$PostReportView {
   PostAggregates get counts => throw _privateConstructorUsedError; // v0.18.0
   Person? get resolver => throw _privateConstructorUsedError;
 
+  /// Serializes this PostReportView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PostReportView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PostReportViewCopyWith<PostReportView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -94,6 +98,8 @@ class _$PostReportViewCopyWithImpl<$Res, $Val extends PostReportView>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PostReportView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -187,6 +193,8 @@ class _$PostReportViewCopyWithImpl<$Res, $Val extends PostReportView>
     ) as $Val);
   }
 
+  /// Create a copy of PostReportView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PostReportCopyWith<$Res> get postReport {
@@ -195,6 +203,8 @@ class _$PostReportViewCopyWithImpl<$Res, $Val extends PostReportView>
     });
   }
 
+  /// Create a copy of PostReportView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PostCopyWith<$Res> get post {
@@ -203,6 +213,8 @@ class _$PostReportViewCopyWithImpl<$Res, $Val extends PostReportView>
     });
   }
 
+  /// Create a copy of PostReportView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommunityCopyWith<$Res> get community {
@@ -211,6 +223,8 @@ class _$PostReportViewCopyWithImpl<$Res, $Val extends PostReportView>
     });
   }
 
+  /// Create a copy of PostReportView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res> get creator {
@@ -219,6 +233,8 @@ class _$PostReportViewCopyWithImpl<$Res, $Val extends PostReportView>
     });
   }
 
+  /// Create a copy of PostReportView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res> get postCreator {
@@ -227,6 +243,8 @@ class _$PostReportViewCopyWithImpl<$Res, $Val extends PostReportView>
     });
   }
 
+  /// Create a copy of PostReportView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PostAggregatesCopyWith<$Res> get counts {
@@ -235,6 +253,8 @@ class _$PostReportViewCopyWithImpl<$Res, $Val extends PostReportView>
     });
   }
 
+  /// Create a copy of PostReportView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res>? get resolver {
@@ -299,6 +319,8 @@ class __$$PostReportViewImplCopyWithImpl<$Res>
       _$PostReportViewImpl _value, $Res Function(_$PostReportViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PostReportView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -512,7 +534,7 @@ class _$PostReportViewImpl extends _PostReportView {
                 other.resolver == resolver));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -534,7 +556,9 @@ class _$PostReportViewImpl extends _PostReportView {
       counts,
       resolver);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PostReportView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PostReportViewImplCopyWith<_$PostReportViewImpl> get copyWith =>
@@ -574,41 +598,44 @@ abstract class _PostReportView extends PostReportView {
       _$PostReportViewImpl.fromJson;
 
   @override
-  PostReport get postReport;
-  @override // v0.18.0
-  Post get post;
-  @override // v0.18.0
-  Community get community;
-  @override // v0.18.0
-  Person get creator;
-  @override // v0.18.0
-  Person get postCreator;
-  @override // v0.18.0
-  bool get creatorBannedFromCommunity;
-  @override // v0.18.0
-  bool? get creatorIsModerator;
-  @override // v0.19.4 (required)
-  bool? get creatorIsAdmin;
-  @override // v0.19.4 (required)
-  SubscribedType? get subscribed;
-  @override // v0.19.4 (required)
-  bool? get saved;
-  @override // v0.19.4 (required)
-  bool? get read;
-  @override // v0.19.4 (required)
-  bool? get hidden;
-  @override // v0.19.4 (required)
-  bool? get creatorBlocked;
-  @override // v0.19.4 (required)
-  num? get myVote;
-  @override // v0.18.0
-  int? get unreadComments;
-  @override // v0.19.4 (required)
-  PostAggregates get counts;
-  @override // v0.18.0
-  Person? get resolver;
+  PostReport get postReport; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  Post get post; // v0.18.0
+  @override
+  Community get community; // v0.18.0
+  @override
+  Person get creator; // v0.18.0
+  @override
+  Person get postCreator; // v0.18.0
+  @override
+  bool get creatorBannedFromCommunity; // v0.18.0
+  @override
+  bool? get creatorIsModerator; // v0.19.4 (required)
+  @override
+  bool? get creatorIsAdmin; // v0.19.4 (required)
+  @override
+  SubscribedType? get subscribed; // v0.19.4 (required)
+  @override
+  bool? get saved; // v0.19.4 (required)
+  @override
+  bool? get read; // v0.19.4 (required)
+  @override
+  bool? get hidden; // v0.19.4 (required)
+  @override
+  bool? get creatorBlocked; // v0.19.4 (required)
+  @override
+  num? get myVote; // v0.18.0
+  @override
+  int? get unreadComments; // v0.19.4 (required)
+  @override
+  PostAggregates get counts; // v0.18.0
+  @override
+  Person? get resolver;
+
+  /// Create a copy of PostReportView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PostReportViewImplCopyWith<_$PostReportViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

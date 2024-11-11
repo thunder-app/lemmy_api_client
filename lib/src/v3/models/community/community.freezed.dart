@@ -45,8 +45,12 @@ mixin _$Community {
   int get instanceId => throw _privateConstructorUsedError; // v0.18.0
   CommunityVisibility? get visibility => throw _privateConstructorUsedError;
 
+  /// Serializes this Community to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Community
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CommunityCopyWith<Community> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -88,6 +92,8 @@ class _$CommunityCopyWithImpl<$Res, $Val extends Community>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Community
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -230,6 +236,8 @@ class __$$CommunityImplCopyWithImpl<$Res>
       _$CommunityImpl _value, $Res Function(_$CommunityImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Community
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -461,7 +469,7 @@ class _$CommunityImpl extends _Community {
                 other.visibility == visibility));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -486,7 +494,9 @@ class _$CommunityImpl extends _Community {
         visibility
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Community
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CommunityImplCopyWith<_$CommunityImpl> get copyWith =>
@@ -527,47 +537,50 @@ abstract class _Community extends Community {
       _$CommunityImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  String get name;
-  @override // v0.18.0
-  String get title;
-  @override // v0.18.0
-  String? get description;
-  @override // v0.18.0
-  bool get removed;
-  @override // v0.18.0
-  DateTime get published;
-  @override // v0.18.0
-  DateTime? get updated;
-  @override // v0.18.0
-  bool get deleted;
-  @override // v0.18.0
-  bool get nsfw;
-  @override // v0.18.0
-  String get actorId;
-  @override // v0.18.0
-  bool get local;
-  @override // v0.18.0
-  String? get icon;
-  @override // v0.18.0
-  String? get banner;
-  @override // v0.18.0
-  @deprecated
-  String? get followersUrl;
-  @override // v0.18.1 [deprecated in v0.19.0]
-  @deprecated
-  String? get inboxUrl;
-  @override // v0.18.1 [deprecated in v0.19.0]
-  bool get hidden;
-  @override // v0.18.0
-  bool get postingRestrictedToMods;
-  @override // v0.18.0
-  int get instanceId;
-  @override // v0.18.0
-  CommunityVisibility? get visibility;
+  int get id; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  String get name; // v0.18.0
+  @override
+  String get title; // v0.18.0
+  @override
+  String? get description; // v0.18.0
+  @override
+  bool get removed; // v0.18.0
+  @override
+  DateTime get published; // v0.18.0
+  @override
+  DateTime? get updated; // v0.18.0
+  @override
+  bool get deleted; // v0.18.0
+  @override
+  bool get nsfw; // v0.18.0
+  @override
+  String get actorId; // v0.18.0
+  @override
+  bool get local; // v0.18.0
+  @override
+  String? get icon; // v0.18.0
+  @override
+  String? get banner; // v0.18.0
+  @override
+  @deprecated
+  String? get followersUrl; // v0.18.1 [deprecated in v0.19.0]
+  @override
+  @deprecated
+  String? get inboxUrl; // v0.18.1 [deprecated in v0.19.0]
+  @override
+  bool get hidden; // v0.18.0
+  @override
+  bool get postingRestrictedToMods; // v0.18.0
+  @override
+  int get instanceId; // v0.18.0
+  @override
+  CommunityVisibility? get visibility;
+
+  /// Create a copy of Community
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CommunityImplCopyWith<_$CommunityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

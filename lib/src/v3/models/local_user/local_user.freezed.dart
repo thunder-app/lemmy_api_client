@@ -62,8 +62,12 @@ mixin _$LocalUser {
       throw _privateConstructorUsedError; // v0.19.0 (required)
   bool? get collapseBotComments => throw _privateConstructorUsedError;
 
+  /// Serializes this LocalUser to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LocalUser
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LocalUserCopyWith<LocalUser> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -114,6 +118,8 @@ class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LocalUser
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -310,6 +316,8 @@ class __$$LocalUserImplCopyWithImpl<$Res>
       _$LocalUserImpl _value, $Res Function(_$LocalUserImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LocalUser
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -650,7 +658,7 @@ class _$LocalUserImpl extends _LocalUser {
                 other.collapseBotComments == collapseBotComments));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -684,7 +692,9 @@ class _$LocalUserImpl extends _LocalUser {
         collapseBotComments
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LocalUser
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LocalUserImplCopyWith<_$LocalUserImpl> get copyWith =>
@@ -734,66 +744,69 @@ abstract class _LocalUser extends LocalUser {
       _$LocalUserImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  int get personId;
-  @override // v0.18.0
-  String? get email;
-  @override // v0.18.0
-  bool get showNsfw;
-  @override // v0.18.0
-  bool? get blurNsfw;
-  @override // v0.18.3
-  bool? get autoExpand;
-  @override // v0.18.3
-  String get theme;
-  @override // v0.18.0
-  SortType get defaultSortType;
-  @override // v0.18.0
-  ListingType get defaultListingType;
-  @override // v0.18.0
-  String get interfaceLanguage;
-  @override // v0.18.0
-  bool get showAvatars;
-  @override // v0.18.0
-  bool get sendNotificationsToEmail;
-  @override // v0.18.0
-  @deprecated
-  String? get validatorTime;
-  @override // v0.18.0 [deprecated in v0.19.0]
-  bool get showScores;
-  @override // v0.18.0
-  bool get showBotAccounts;
-  @override // v0.18.0
-  bool get showReadPosts;
-  @override // v0.18.0
-  @deprecated
-  bool? get showNewPostNotifs;
-  @override // v0.18.0 [deprecated in v0.19.0]
-  bool get emailVerified;
-  @override // v0.18.0
-  bool get acceptedApplication;
-  @override // v0.18.0
-  @deprecated
-  String? get totp2faUrl;
-  @override // v0.18.0 [deprecated in v0.19.0]
-  bool? get openLinksInNewTab;
-  @override // v0.18.1
-  bool? get infiniteScrollEnabled;
-  @override // v0.19.0 (required)
-  bool? get admin;
-  @override // v0.19.0 (required)
-  String? get postListingMode;
-  @override // v0.19.0 (required)
-  bool? get totp2faEnabled;
-  @override // v0.19.0 (required)
-  bool? get enableKeyboardNavigation;
-  @override // v0.19.0 (required)
-  bool? get enableAnimatedImages;
-  @override // v0.19.0 (required)
-  bool? get collapseBotComments;
+  int get id; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  int get personId; // v0.18.0
+  @override
+  String? get email; // v0.18.0
+  @override
+  bool get showNsfw; // v0.18.0
+  @override
+  bool? get blurNsfw; // v0.18.3
+  @override
+  bool? get autoExpand; // v0.18.3
+  @override
+  String get theme; // v0.18.0
+  @override
+  SortType get defaultSortType; // v0.18.0
+  @override
+  ListingType get defaultListingType; // v0.18.0
+  @override
+  String get interfaceLanguage; // v0.18.0
+  @override
+  bool get showAvatars; // v0.18.0
+  @override
+  bool get sendNotificationsToEmail; // v0.18.0
+  @override
+  @deprecated
+  String? get validatorTime; // v0.18.0 [deprecated in v0.19.0]
+  @override
+  bool get showScores; // v0.18.0
+  @override
+  bool get showBotAccounts; // v0.18.0
+  @override
+  bool get showReadPosts; // v0.18.0
+  @override
+  @deprecated
+  bool? get showNewPostNotifs; // v0.18.0 [deprecated in v0.19.0]
+  @override
+  bool get emailVerified; // v0.18.0
+  @override
+  bool get acceptedApplication; // v0.18.0
+  @override
+  @deprecated
+  String? get totp2faUrl; // v0.18.0 [deprecated in v0.19.0]
+  @override
+  bool? get openLinksInNewTab; // v0.18.1
+  @override
+  bool? get infiniteScrollEnabled; // v0.19.0 (required)
+  @override
+  bool? get admin; // v0.19.0 (required)
+  @override
+  String? get postListingMode; // v0.19.0 (required)
+  @override
+  bool? get totp2faEnabled; // v0.19.0 (required)
+  @override
+  bool? get enableKeyboardNavigation; // v0.19.0 (required)
+  @override
+  bool? get enableAnimatedImages; // v0.19.0 (required)
+  @override
+  bool? get collapseBotComments;
+
+  /// Create a copy of LocalUser
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LocalUserImplCopyWith<_$LocalUserImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

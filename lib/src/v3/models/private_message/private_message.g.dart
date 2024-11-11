@@ -8,9 +8,9 @@ part of 'private_message.dart';
 
 _$PrivateMessageImpl _$$PrivateMessageImplFromJson(Map<String, dynamic> json) =>
     _$PrivateMessageImpl(
-      id: json['id'] as int,
-      creatorId: json['creator_id'] as int,
-      recipientId: json['recipient_id'] as int,
+      id: (json['id'] as num).toInt(),
+      creatorId: (json['creator_id'] as num).toInt(),
+      recipientId: (json['recipient_id'] as num).toInt(),
       content: json['content'] as String,
       deleted: json['deleted'] as bool,
       read: json['read'] as bool,

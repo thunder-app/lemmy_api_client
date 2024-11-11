@@ -25,8 +25,12 @@ mixin _$AdminPurgeCommunityView {
       throw _privateConstructorUsedError; // v0.18.0
   Person? get admin => throw _privateConstructorUsedError;
 
+  /// Serializes this AdminPurgeCommunityView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AdminPurgeCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdminPurgeCommunityViewCopyWith<AdminPurgeCommunityView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -54,6 +58,8 @@ class _$AdminPurgeCommunityViewCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AdminPurgeCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -72,6 +78,8 @@ class _$AdminPurgeCommunityViewCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of AdminPurgeCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AdminPurgeCommunityCopyWith<$Res> get adminPurgeCommunity {
@@ -81,6 +89,8 @@ class _$AdminPurgeCommunityViewCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of AdminPurgeCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res>? get admin {
@@ -121,6 +131,8 @@ class __$$AdminPurgeCommunityViewImplCopyWithImpl<$Res>
       $Res Function(_$AdminPurgeCommunityViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AdminPurgeCommunityView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -172,11 +184,13 @@ class _$AdminPurgeCommunityViewImpl extends _AdminPurgeCommunityView {
             (identical(other.admin, admin) || other.admin == admin));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, adminPurgeCommunity, admin);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AdminPurgeCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdminPurgeCommunityViewImplCopyWith<_$AdminPurgeCommunityViewImpl>
@@ -201,11 +215,14 @@ abstract class _AdminPurgeCommunityView extends AdminPurgeCommunityView {
       _$AdminPurgeCommunityViewImpl.fromJson;
 
   @override
-  AdminPurgeCommunity get adminPurgeCommunity;
-  @override // v0.18.0
-  Person? get admin;
+  AdminPurgeCommunity get adminPurgeCommunity; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  Person? get admin;
+
+  /// Create a copy of AdminPurgeCommunityView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdminPurgeCommunityViewImplCopyWith<_$AdminPurgeCommunityViewImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -7,7 +7,7 @@ part of 'person.dart';
 // **************************************************************************
 
 _$PersonImpl _$$PersonImplFromJson(Map<String, dynamic> json) => _$PersonImpl(
-      id: json['id'] as int,
+      id: (json['id'] as num).toInt(),
       name: json['name'] as String,
       displayName: json['display_name'] as String?,
       avatar: json['avatar'] as String?,
@@ -25,7 +25,7 @@ _$PersonImpl _$$PersonImplFromJson(Map<String, dynamic> json) => _$PersonImpl(
       admin: json['admin'] as bool?,
       botAccount: json['bot_account'] as bool,
       banExpires: json['ban_expires'] as String?,
-      instanceId: json['instance_id'] as int,
+      instanceId: (json['instance_id'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$PersonImplToJson(_$PersonImpl instance) =>

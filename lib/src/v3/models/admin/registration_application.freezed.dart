@@ -28,8 +28,12 @@ mixin _$RegistrationApplication {
   String? get denyReason => throw _privateConstructorUsedError; // v0.18.0
   DateTime get published => throw _privateConstructorUsedError;
 
+  /// Serializes this RegistrationApplication to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RegistrationApplication
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RegistrationApplicationCopyWith<RegistrationApplication> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,6 +64,8 @@ class _$RegistrationApplicationCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RegistrationApplication
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -127,6 +133,8 @@ class __$$RegistrationApplicationImplCopyWithImpl<$Res>
       $Res Function(_$RegistrationApplicationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RegistrationApplication
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -221,12 +229,14 @@ class _$RegistrationApplicationImpl extends _RegistrationApplication {
                 other.published == published));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, localUserId, answer, adminId, denyReason, published);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RegistrationApplication
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RegistrationApplicationImplCopyWith<_$RegistrationApplicationImpl>
@@ -255,19 +265,22 @@ abstract class _RegistrationApplication extends RegistrationApplication {
       _$RegistrationApplicationImpl.fromJson;
 
   @override
-  int get id;
-  @override // v0.18.0
-  int get localUserId;
-  @override // v0.18.0
-  String get answer;
-  @override // v0.18.0
-  int? get adminId;
-  @override // v0.18.0
-  String? get denyReason;
-  @override // v0.18.0
-  DateTime get published;
+  int get id; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  int get localUserId; // v0.18.0
+  @override
+  String get answer; // v0.18.0
+  @override
+  int? get adminId; // v0.18.0
+  @override
+  String? get denyReason; // v0.18.0
+  @override
+  DateTime get published;
+
+  /// Create a copy of RegistrationApplication
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RegistrationApplicationImplCopyWith<_$RegistrationApplicationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -26,8 +26,12 @@ mixin _$ModFeaturePostView {
   Post get post => throw _privateConstructorUsedError; // v0.18.0
   Community get community => throw _privateConstructorUsedError;
 
+  /// Serializes this ModFeaturePostView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ModFeaturePostView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ModFeaturePostViewCopyWith<ModFeaturePostView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,6 +64,8 @@ class _$ModFeaturePostViewCopyWithImpl<$Res, $Val extends ModFeaturePostView>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ModFeaturePostView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -88,6 +94,8 @@ class _$ModFeaturePostViewCopyWithImpl<$Res, $Val extends ModFeaturePostView>
     ) as $Val);
   }
 
+  /// Create a copy of ModFeaturePostView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ModFeaturePostCopyWith<$Res> get modFeaturePost {
@@ -96,6 +104,8 @@ class _$ModFeaturePostViewCopyWithImpl<$Res, $Val extends ModFeaturePostView>
     });
   }
 
+  /// Create a copy of ModFeaturePostView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res>? get moderator {
@@ -108,6 +118,8 @@ class _$ModFeaturePostViewCopyWithImpl<$Res, $Val extends ModFeaturePostView>
     });
   }
 
+  /// Create a copy of ModFeaturePostView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PostCopyWith<$Res> get post {
@@ -116,6 +128,8 @@ class _$ModFeaturePostViewCopyWithImpl<$Res, $Val extends ModFeaturePostView>
     });
   }
 
+  /// Create a copy of ModFeaturePostView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommunityCopyWith<$Res> get community {
@@ -157,6 +171,8 @@ class __$$ModFeaturePostViewImplCopyWithImpl<$Res>
       $Res Function(_$ModFeaturePostViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ModFeaturePostView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -231,12 +247,14 @@ class _$ModFeaturePostViewImpl extends _ModFeaturePostView {
                 other.community == community));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, modFeaturePost, moderator, post, community);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ModFeaturePostView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ModFeaturePostViewImplCopyWith<_$ModFeaturePostViewImpl> get copyWith =>
@@ -263,15 +281,18 @@ abstract class _ModFeaturePostView extends ModFeaturePostView {
       _$ModFeaturePostViewImpl.fromJson;
 
   @override
-  ModFeaturePost get modFeaturePost;
-  @override // v0.18.0
-  Person? get moderator;
-  @override // v0.18.0
-  Post get post;
-  @override // v0.18.0
-  Community get community;
+  ModFeaturePost get modFeaturePost; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  Person? get moderator; // v0.18.0
+  @override
+  Post get post; // v0.18.0
+  @override
+  Community get community;
+
+  /// Create a copy of ModFeaturePostView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ModFeaturePostViewImplCopyWith<_$ModFeaturePostViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

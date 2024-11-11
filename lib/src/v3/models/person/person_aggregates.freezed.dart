@@ -32,8 +32,12 @@ mixin _$PersonAggregates {
   @deprecated
   int? get commentScore => throw _privateConstructorUsedError;
 
+  /// Serializes this PersonAggregates to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PersonAggregates
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PersonAggregatesCopyWith<PersonAggregates> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -63,6 +67,8 @@ class _$PersonAggregatesCopyWithImpl<$Res, $Val extends PersonAggregates>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PersonAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -127,6 +133,8 @@ class __$$PersonAggregatesImplCopyWithImpl<$Res>
       $Res Function(_$PersonAggregatesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PersonAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -226,12 +234,14 @@ class _$PersonAggregatesImpl extends _PersonAggregates {
                 other.commentScore == commentScore));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, personId, postCount,
       postScore, commentCount, commentScore);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PersonAggregates
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PersonAggregatesImplCopyWith<_$PersonAggregatesImpl> get copyWith =>
@@ -261,21 +271,24 @@ abstract class _PersonAggregates extends PersonAggregates {
 
   @override
   @deprecated
-  int? get id;
-  @override // v0.18.0 [deprecated in v0.19.0]
-  int get personId;
-  @override // v0.18.0
-  int get postCount;
-  @override // v0.18.0
+  int? get id; // v0.18.0 [deprecated in v0.19.0]
+  @override
+  int get personId; // v0.18.0
+  @override
+  int get postCount; // v0.18.0
+  @override
   @deprecated
-  int? get postScore;
-  @override // v0.18.0 [deprecated in v0.19.0]
-  int get commentCount;
-  @override // v0.18.0
+  int? get postScore; // v0.18.0 [deprecated in v0.19.0]
+  @override
+  int get commentCount; // v0.18.0
+  @override
   @deprecated
   int? get commentScore;
+
+  /// Create a copy of PersonAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PersonAggregatesImplCopyWith<_$PersonAggregatesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

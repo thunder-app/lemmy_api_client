@@ -24,8 +24,12 @@ mixin _$ListRegistrationApplicationsResponse {
   List<RegistrationApplicationView> get registrationApplications =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this ListRegistrationApplicationsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ListRegistrationApplicationsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ListRegistrationApplicationsResponseCopyWith<
           ListRegistrationApplicationsResponse>
       get copyWith => throw _privateConstructorUsedError;
@@ -53,6 +57,8 @@ class _$ListRegistrationApplicationsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ListRegistrationApplicationsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -89,6 +95,8 @@ class __$$ListRegistrationApplicationsResponseImplCopyWithImpl<$Res>
       $Res Function(_$ListRegistrationApplicationsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ListRegistrationApplicationsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -141,12 +149,14 @@ class _$ListRegistrationApplicationsResponseImpl
                 other._registrationApplications, _registrationApplications));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_registrationApplications));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ListRegistrationApplicationsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ListRegistrationApplicationsResponseImplCopyWith<
@@ -176,8 +186,11 @@ abstract class _ListRegistrationApplicationsResponse
 
   @override
   List<RegistrationApplicationView> get registrationApplications;
+
+  /// Create a copy of ListRegistrationApplicationsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ListRegistrationApplicationsResponseImplCopyWith<
           _$ListRegistrationApplicationsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;

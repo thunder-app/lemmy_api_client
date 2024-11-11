@@ -7,9 +7,9 @@ part of 'mod_add.dart';
 // **************************************************************************
 
 _$ModAddImpl _$$ModAddImplFromJson(Map<String, dynamic> json) => _$ModAddImpl(
-      id: json['id'] as int,
-      modPersonId: json['mod_person_id'] as int,
-      otherPersonId: json['other_person_id'] as int,
+      id: (json['id'] as num).toInt(),
+      modPersonId: (json['mod_person_id'] as num).toInt(),
+      otherPersonId: (json['other_person_id'] as num).toInt(),
       removed: json['removed'] as bool,
       when: json['when_'] as String,
     );

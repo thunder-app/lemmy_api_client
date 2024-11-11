@@ -22,8 +22,12 @@ UpdateTotpResponse _$UpdateTotpResponseFromJson(Map<String, dynamic> json) {
 mixin _$UpdateTotpResponse {
   bool get enabled => throw _privateConstructorUsedError;
 
+  /// Serializes this UpdateTotpResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateTotpResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UpdateTotpResponseCopyWith<UpdateTotpResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$UpdateTotpResponseCopyWithImpl<$Res, $Val extends UpdateTotpResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UpdateTotpResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class __$$UpdateTotpResponseImplCopyWithImpl<$Res>
       $Res Function(_$UpdateTotpResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateTotpResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -119,11 +127,13 @@ class _$UpdateTotpResponseImpl extends _UpdateTotpResponse {
             (identical(other.enabled, enabled) || other.enabled == enabled));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, enabled);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateTotpResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UpdateTotpResponseImplCopyWith<_$UpdateTotpResponseImpl> get copyWith =>
@@ -148,8 +158,11 @@ abstract class _UpdateTotpResponse extends UpdateTotpResponse {
 
   @override
   bool get enabled;
+
+  /// Create a copy of UpdateTotpResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UpdateTotpResponseImplCopyWith<_$UpdateTotpResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

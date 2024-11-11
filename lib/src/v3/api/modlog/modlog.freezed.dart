@@ -32,8 +32,12 @@ mixin _$GetModlog {
       throw _privateConstructorUsedError; // v0.19.4 (optional)
   String? get auth => throw _privateConstructorUsedError;
 
+  /// Serializes this GetModlog to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetModlog
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetModlogCopyWith<GetModlog> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -65,6 +69,8 @@ class _$GetModlogCopyWithImpl<$Res, $Val extends GetModlog>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetModlog
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -147,6 +153,8 @@ class __$$GetModlogImplCopyWithImpl<$Res>
       _$GetModlogImpl _value, $Res Function(_$GetModlogImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetModlog
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -273,12 +281,14 @@ class _$GetModlogImpl extends _GetModlog {
             (identical(other.auth, auth) || other.auth == auth));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, modPersonId, communityId, page,
       limit, type, otherPersonId, postId, commentId, auth);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetModlog
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetModlogImplCopyWith<_$GetModlogImpl> get copyWith =>
@@ -309,26 +319,29 @@ abstract class _GetModlog extends GetModlog {
       _$GetModlogImpl.fromJson;
 
   @override
-  int? get modPersonId;
-  @override // v0.18.0
-  int? get communityId;
-  @override // v0.18.0
-  int? get page;
-  @override // v0.18.0
-  int? get limit;
-  @override // v0.18.0
-  @JsonKey(name: 'type_')
-  ModlogActionType? get type;
-  @override // v0.18.0
-  int? get otherPersonId;
-  @override // v0.18.0
-  int? get postId;
-  @override // v0.19.4 (optional)
-  int? get commentId;
-  @override // v0.19.4 (optional)
-  String? get auth;
+  int? get modPersonId; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  int? get communityId; // v0.18.0
+  @override
+  int? get page; // v0.18.0
+  @override
+  int? get limit; // v0.18.0
+  @override
+  @JsonKey(name: 'type_')
+  ModlogActionType? get type; // v0.18.0
+  @override
+  int? get otherPersonId; // v0.18.0
+  @override
+  int? get postId; // v0.19.4 (optional)
+  @override
+  int? get commentId; // v0.19.4 (optional)
+  @override
+  String? get auth;
+
+  /// Create a copy of GetModlog
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetModlogImplCopyWith<_$GetModlogImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

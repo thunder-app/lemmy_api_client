@@ -26,8 +26,12 @@ mixin _$ResolveObjectResponse {
   CommunityView? get community => throw _privateConstructorUsedError; // v0.18.0
   PersonView? get person => throw _privateConstructorUsedError;
 
+  /// Serializes this ResolveObjectResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ResolveObjectResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ResolveObjectResponseCopyWith<ResolveObjectResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -61,6 +65,8 @@ class _$ResolveObjectResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ResolveObjectResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -89,6 +95,8 @@ class _$ResolveObjectResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ResolveObjectResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommentViewCopyWith<$Res>? get comment {
@@ -101,6 +109,8 @@ class _$ResolveObjectResponseCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ResolveObjectResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PostViewCopyWith<$Res>? get post {
@@ -113,6 +123,8 @@ class _$ResolveObjectResponseCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ResolveObjectResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommunityViewCopyWith<$Res>? get community {
@@ -125,6 +137,8 @@ class _$ResolveObjectResponseCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ResolveObjectResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonViewCopyWith<$Res>? get person {
@@ -172,6 +186,8 @@ class __$$ResolveObjectResponseImplCopyWithImpl<$Res>
       $Res Function(_$ResolveObjectResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ResolveObjectResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -241,12 +257,14 @@ class _$ResolveObjectResponseImpl extends _ResolveObjectResponse {
             (identical(other.person, person) || other.person == person));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, comment, post, community, person);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResolveObjectResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ResolveObjectResponseImplCopyWith<_$ResolveObjectResponseImpl>
@@ -273,15 +291,18 @@ abstract class _ResolveObjectResponse extends ResolveObjectResponse {
       _$ResolveObjectResponseImpl.fromJson;
 
   @override
-  CommentView? get comment;
-  @override // v0.18.0
-  PostView? get post;
-  @override // v0.18.0
-  CommunityView? get community;
-  @override // v0.18.0
-  PersonView? get person;
+  CommentView? get comment; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  PostView? get post; // v0.18.0
+  @override
+  CommunityView? get community; // v0.18.0
+  @override
+  PersonView? get person;
+
+  /// Create a copy of ResolveObjectResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ResolveObjectResponseImplCopyWith<_$ResolveObjectResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

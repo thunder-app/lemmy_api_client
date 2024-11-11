@@ -25,8 +25,12 @@ mixin _$AdminPurgePostView {
   Person? get admin => throw _privateConstructorUsedError; // v0.18.0
   Community get community => throw _privateConstructorUsedError;
 
+  /// Serializes this AdminPurgePostView to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AdminPurgePostView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AdminPurgePostViewCopyWith<AdminPurgePostView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$AdminPurgePostViewCopyWithImpl<$Res, $Val extends AdminPurgePostView>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AdminPurgePostView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -78,6 +84,8 @@ class _$AdminPurgePostViewCopyWithImpl<$Res, $Val extends AdminPurgePostView>
     ) as $Val);
   }
 
+  /// Create a copy of AdminPurgePostView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AdminPurgePostCopyWith<$Res> get adminPurgePost {
@@ -86,6 +94,8 @@ class _$AdminPurgePostViewCopyWithImpl<$Res, $Val extends AdminPurgePostView>
     });
   }
 
+  /// Create a copy of AdminPurgePostView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PersonCopyWith<$Res>? get admin {
@@ -98,6 +108,8 @@ class _$AdminPurgePostViewCopyWithImpl<$Res, $Val extends AdminPurgePostView>
     });
   }
 
+  /// Create a copy of AdminPurgePostView
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CommunityCopyWith<$Res> get community {
@@ -134,6 +146,8 @@ class __$$AdminPurgePostViewImplCopyWithImpl<$Res>
       $Res Function(_$AdminPurgePostViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AdminPurgePostView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -195,12 +209,14 @@ class _$AdminPurgePostViewImpl extends _AdminPurgePostView {
                 other.community == community));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, adminPurgePost, admin, community);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AdminPurgePostView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AdminPurgePostViewImplCopyWith<_$AdminPurgePostViewImpl> get copyWith =>
@@ -226,13 +242,16 @@ abstract class _AdminPurgePostView extends AdminPurgePostView {
       _$AdminPurgePostViewImpl.fromJson;
 
   @override
-  AdminPurgePost get adminPurgePost;
-  @override // v0.18.0
-  Person? get admin;
-  @override // v0.18.0
-  Community get community;
+  AdminPurgePost get adminPurgePost; // v0.18.0
   @override
-  @JsonKey(ignore: true)
+  Person? get admin; // v0.18.0
+  @override
+  Community get community;
+
+  /// Create a copy of AdminPurgePostView
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AdminPurgePostViewImplCopyWith<_$AdminPurgePostViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

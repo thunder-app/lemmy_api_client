@@ -8,13 +8,13 @@ part of 'comment_report.dart';
 
 _$CommentReportImpl _$$CommentReportImplFromJson(Map<String, dynamic> json) =>
     _$CommentReportImpl(
-      id: json['id'] as int,
-      creatorId: json['creator_id'] as int,
-      commentId: json['comment_id'] as int,
+      id: (json['id'] as num).toInt(),
+      creatorId: (json['creator_id'] as num).toInt(),
+      commentId: (json['comment_id'] as num).toInt(),
       originalCommentText: json['original_comment_text'] as String,
       reason: json['reason'] as String,
       resolved: json['resolved'] as bool,
-      resolverId: json['resolver_id'] as int?,
+      resolverId: (json['resolver_id'] as num?)?.toInt(),
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
       updated: _$JsonConverterFromJson<String, DateTime>(
           json['updated'], const ForceUtcDateTime().fromJson),

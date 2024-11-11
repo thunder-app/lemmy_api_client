@@ -46,8 +46,12 @@ mixin _$PostAggregates {
   @deprecated
   int? get hotRankActive => throw _privateConstructorUsedError;
 
+  /// Serializes this PostAggregates to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PostAggregates
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PostAggregatesCopyWith<PostAggregates> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -84,6 +88,8 @@ class _$PostAggregatesCopyWithImpl<$Res, $Val extends PostAggregates>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PostAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -190,6 +196,8 @@ class __$$PostAggregatesImplCopyWithImpl<$Res>
       _$PostAggregatesImpl _value, $Res Function(_$PostAggregatesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PostAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -365,7 +373,7 @@ class _$PostAggregatesImpl extends _PostAggregates {
                 other.hotRankActive == hotRankActive));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -383,7 +391,9 @@ class _$PostAggregatesImpl extends _PostAggregates {
       hotRank,
       hotRankActive);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PostAggregates
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PostAggregatesImplCopyWith<_$PostAggregatesImpl> get copyWith =>
@@ -420,38 +430,42 @@ abstract class _PostAggregates extends PostAggregates {
 
   @override
   @deprecated
-  int? get id;
-  @override // v0.18.0 [deprecated in v0.19.0]
-  int get postId;
-  @override // v0.18.0
-  int get comments;
-  @override // v0.18.0
-  int get score;
-  @override // v0.18.0
-  int get upvotes;
-  @override // v0.18.0
-  int get downvotes;
-  @override // v0.18.0
-  DateTime get published;
-  @override // v0.18.0
+  int? get id; // v0.18.0 [deprecated in v0.19.0]
+  @override
+  int get postId; // v0.18.0
+  @override
+  int get comments; // v0.18.0
+  @override
+  int get score; // v0.18.0
+  @override
+  int get upvotes; // v0.18.0
+  @override
+  int get downvotes; // v0.18.0
+  @override
+  DateTime get published; // v0.18.0
+  @override
   @deprecated
-  String? get newestCommentTimeNecro;
-  @override // v0.18.0 [deprecated in v0.19.0]
-  String? get newestCommentTime;
-  @override // v0.18.0, deprecated in v0.19.0, reintroduced in v0.19.2 (required)
+  String? get newestCommentTimeNecro; // v0.18.0 [deprecated in v0.19.0]
+  @override
+  String?
+      get newestCommentTime; // v0.18.0, deprecated in v0.19.0, reintroduced in v0.19.2 (required)
+  @override
   @deprecated
-  bool? get featuredCommunity;
-  @override // v0.18.0 [deprecated in v0.19.0]
+  bool? get featuredCommunity; // v0.18.0 [deprecated in v0.19.0]
+  @override
   @deprecated
-  bool? get featuredLocal;
-  @override // v0.18.0 [deprecated in v0.19.0]
+  bool? get featuredLocal; // v0.18.0 [deprecated in v0.19.0]
+  @override
   @deprecated
-  int? get hotRank;
-  @override // v0.18.0 [deprecated in v0.19.0]
+  int? get hotRank; // v0.18.0 [deprecated in v0.19.0]
+  @override
   @deprecated
   int? get hotRankActive;
+
+  /// Create a copy of PostAggregates
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PostAggregatesImplCopyWith<_$PostAggregatesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
