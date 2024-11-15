@@ -15,7 +15,12 @@ _$LocalUserImpl _$$LocalUserImplFromJson(Map<String, dynamic> json) =>
       blurNsfw: json['blur_nsfw'] as bool?,
       autoExpand: json['auto_expand'] as bool?,
       theme: json['theme'] as String,
-      defaultSortType: SortType.fromJson(json['default_sort_type']),
+      defaultSortType: json['default_sort_type'] == null
+          ? null
+          : SortType.fromJson(json['default_sort_type']),
+      defaultCommentSortType:
+          SortType.fromJson(json['default_comment_sort_type']),
+      defaultPostSortType: SortType.fromJson(json['default_post_sort_type']),
       defaultListingType: ListingType.fromJson(json['default_listing_type']),
       interfaceLanguage: json['interface_language'] as String,
       showAvatars: json['show_avatars'] as bool,
@@ -47,7 +52,9 @@ Map<String, dynamic> _$$LocalUserImplToJson(_$LocalUserImpl instance) =>
       'blur_nsfw': instance.blurNsfw,
       'auto_expand': instance.autoExpand,
       'theme': instance.theme,
-      'default_sort_type': instance.defaultSortType.toJson(),
+      'default_sort_type': instance.defaultSortType?.toJson(),
+      'default_comment_sort_type': instance.defaultCommentSortType.toJson(),
+      'default_post_sort_type': instance.defaultPostSortType.toJson(),
       'default_listing_type': instance.defaultListingType.toJson(),
       'interface_language': instance.interfaceLanguage,
       'show_avatars': instance.showAvatars,
