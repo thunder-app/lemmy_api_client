@@ -17,7 +17,9 @@ class LocalUser with _$LocalUser {
     bool? blurNsfw, // v0.18.3
     bool? autoExpand, // v0.18.3
     required String theme, // v0.18.0
-    required SortType defaultSortType, // v0.18.0
+    @deprecated SortType? defaultSortType, // v0.18.0 [deprecated in v0.20.0]
+    required SortType defaultCommentSortType, // v0.20.0
+    required SortType defaultPostSortType, // v0.20.0
     required ListingType defaultListingType, // v0.18.0
     required String interfaceLanguage, // v0.18.0
     required bool showAvatars, // v0.18.0
