@@ -26,7 +26,7 @@ _$LocalUserImpl _$$LocalUserImplFromJson(Map<String, dynamic> json) =>
       showAvatars: json['show_avatars'] as bool,
       sendNotificationsToEmail: json['send_notifications_to_email'] as bool,
       validatorTime: json['validator_time'] as String?,
-      showScores: json['show_scores'] as bool,
+      showScores: json['show_scores'] as bool?,
       showBotAccounts: json['show_bot_accounts'] as bool,
       showReadPosts: json['show_read_posts'] as bool,
       showNewPostNotifs: json['show_new_post_notifs'] as bool?,

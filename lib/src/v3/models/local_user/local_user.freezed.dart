@@ -43,7 +43,9 @@ mixin _$LocalUser {
   @deprecated
   String? get validatorTime =>
       throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
-  bool get showScores => throw _privateConstructorUsedError; // v0.18.0
+  @deprecated
+  bool? get showScores =>
+      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.20.0]
   bool get showBotAccounts => throw _privateConstructorUsedError; // v0.18.0
   bool get showReadPosts => throw _privateConstructorUsedError; // v0.18.0
   @deprecated
@@ -99,7 +101,7 @@ abstract class $LocalUserCopyWith<$Res> {
       bool showAvatars,
       bool sendNotificationsToEmail,
       @deprecated String? validatorTime,
-      bool showScores,
+      @deprecated bool? showScores,
       bool showBotAccounts,
       bool showReadPosts,
       @deprecated bool? showNewPostNotifs,
@@ -146,7 +148,7 @@ class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
     Object? showAvatars = null,
     Object? sendNotificationsToEmail = null,
     Object? validatorTime = freezed,
-    Object? showScores = null,
+    Object? showScores = freezed,
     Object? showBotAccounts = null,
     Object? showReadPosts = null,
     Object? showNewPostNotifs = freezed,
@@ -223,10 +225,10 @@ class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
           ? _value.validatorTime
           : validatorTime // ignore: cast_nullable_to_non_nullable
               as String?,
-      showScores: null == showScores
+      showScores: freezed == showScores
           ? _value.showScores
           : showScores // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       showBotAccounts: null == showBotAccounts
           ? _value.showBotAccounts
           : showBotAccounts // ignore: cast_nullable_to_non_nullable
@@ -311,7 +313,7 @@ abstract class _$$LocalUserImplCopyWith<$Res>
       bool showAvatars,
       bool sendNotificationsToEmail,
       @deprecated String? validatorTime,
-      bool showScores,
+      @deprecated bool? showScores,
       bool showBotAccounts,
       bool showReadPosts,
       @deprecated bool? showNewPostNotifs,
@@ -356,7 +358,7 @@ class __$$LocalUserImplCopyWithImpl<$Res>
     Object? showAvatars = null,
     Object? sendNotificationsToEmail = null,
     Object? validatorTime = freezed,
-    Object? showScores = null,
+    Object? showScores = freezed,
     Object? showBotAccounts = null,
     Object? showReadPosts = null,
     Object? showNewPostNotifs = freezed,
@@ -433,10 +435,10 @@ class __$$LocalUserImplCopyWithImpl<$Res>
           ? _value.validatorTime
           : validatorTime // ignore: cast_nullable_to_non_nullable
               as String?,
-      showScores: null == showScores
+      showScores: freezed == showScores
           ? _value.showScores
           : showScores // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       showBotAccounts: null == showBotAccounts
           ? _value.showBotAccounts
           : showBotAccounts // ignore: cast_nullable_to_non_nullable
@@ -517,7 +519,7 @@ class _$LocalUserImpl extends _LocalUser {
       required this.showAvatars,
       required this.sendNotificationsToEmail,
       @deprecated this.validatorTime,
-      required this.showScores,
+      @deprecated this.showScores,
       required this.showBotAccounts,
       required this.showReadPosts,
       @deprecated this.showNewPostNotifs,
@@ -585,8 +587,9 @@ class _$LocalUserImpl extends _LocalUser {
   final String? validatorTime;
 // v0.18.0 [deprecated in v0.19.0]
   @override
-  final bool showScores;
-// v0.18.0
+  @deprecated
+  final bool? showScores;
+// v0.18.0 [deprecated in v0.20.0]
   @override
   final bool showBotAccounts;
 // v0.18.0
@@ -770,7 +773,7 @@ abstract class _LocalUser extends LocalUser {
       required final bool showAvatars,
       required final bool sendNotificationsToEmail,
       @deprecated final String? validatorTime,
-      required final bool showScores,
+      @deprecated final bool? showScores,
       required final bool showBotAccounts,
       required final bool showReadPosts,
       @deprecated final bool? showNewPostNotifs,
@@ -823,7 +826,8 @@ abstract class _LocalUser extends LocalUser {
   @deprecated
   String? get validatorTime; // v0.18.0 [deprecated in v0.19.0]
   @override
-  bool get showScores; // v0.18.0
+  @deprecated
+  bool? get showScores; // v0.18.0 [deprecated in v0.20.0]
   @override
   bool get showBotAccounts; // v0.18.0
   @override
