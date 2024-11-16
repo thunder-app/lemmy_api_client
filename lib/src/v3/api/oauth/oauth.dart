@@ -29,4 +29,12 @@ class AuthenticateWithOAuth
 
   final path = '/oauth/authenticate';
   final httpMethod = HttpMethod.post;
+
+  @override
+  LoginResponse responseFactory(Map<String, dynamic> json) {
+    // TODO: Check if this needs to be implemented.
+    // At this point I don't think so, I don't think this returns anything.
+    // Instead, I think the OAuth provider hits the redirect_uri route.
+    throw UnimplementedError();
+  }
 }
