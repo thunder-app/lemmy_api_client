@@ -30,9 +30,9 @@ mixin _$LocalUser {
   @deprecated
   SortType? get defaultSortType =>
       throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.20.0]
-  SortType get defaultCommentSortType =>
+  SortType? get defaultCommentSortType =>
       throw _privateConstructorUsedError; // v0.20.0
-  SortType get defaultPostSortType =>
+  SortType? get defaultPostSortType =>
       throw _privateConstructorUsedError; // v0.20.0
   ListingType get defaultListingType =>
       throw _privateConstructorUsedError; // v0.18.0
@@ -94,8 +94,8 @@ abstract class $LocalUserCopyWith<$Res> {
       bool? autoExpand,
       String theme,
       @deprecated SortType? defaultSortType,
-      SortType defaultCommentSortType,
-      SortType defaultPostSortType,
+      SortType? defaultCommentSortType,
+      SortType? defaultPostSortType,
       ListingType defaultListingType,
       String interfaceLanguage,
       bool showAvatars,
@@ -141,8 +141,8 @@ class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
     Object? autoExpand = freezed,
     Object? theme = null,
     Object? defaultSortType = freezed,
-    Object? defaultCommentSortType = null,
-    Object? defaultPostSortType = null,
+    Object? defaultCommentSortType = freezed,
+    Object? defaultPostSortType = freezed,
     Object? defaultListingType = null,
     Object? interfaceLanguage = null,
     Object? showAvatars = null,
@@ -197,14 +197,14 @@ class _$LocalUserCopyWithImpl<$Res, $Val extends LocalUser>
           ? _value.defaultSortType
           : defaultSortType // ignore: cast_nullable_to_non_nullable
               as SortType?,
-      defaultCommentSortType: null == defaultCommentSortType
+      defaultCommentSortType: freezed == defaultCommentSortType
           ? _value.defaultCommentSortType
           : defaultCommentSortType // ignore: cast_nullable_to_non_nullable
-              as SortType,
-      defaultPostSortType: null == defaultPostSortType
+              as SortType?,
+      defaultPostSortType: freezed == defaultPostSortType
           ? _value.defaultPostSortType
           : defaultPostSortType // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       defaultListingType: null == defaultListingType
           ? _value.defaultListingType
           : defaultListingType // ignore: cast_nullable_to_non_nullable
@@ -306,8 +306,8 @@ abstract class _$$LocalUserImplCopyWith<$Res>
       bool? autoExpand,
       String theme,
       @deprecated SortType? defaultSortType,
-      SortType defaultCommentSortType,
-      SortType defaultPostSortType,
+      SortType? defaultCommentSortType,
+      SortType? defaultPostSortType,
       ListingType defaultListingType,
       String interfaceLanguage,
       bool showAvatars,
@@ -351,8 +351,8 @@ class __$$LocalUserImplCopyWithImpl<$Res>
     Object? autoExpand = freezed,
     Object? theme = null,
     Object? defaultSortType = freezed,
-    Object? defaultCommentSortType = null,
-    Object? defaultPostSortType = null,
+    Object? defaultCommentSortType = freezed,
+    Object? defaultPostSortType = freezed,
     Object? defaultListingType = null,
     Object? interfaceLanguage = null,
     Object? showAvatars = null,
@@ -407,14 +407,14 @@ class __$$LocalUserImplCopyWithImpl<$Res>
           ? _value.defaultSortType
           : defaultSortType // ignore: cast_nullable_to_non_nullable
               as SortType?,
-      defaultCommentSortType: null == defaultCommentSortType
+      defaultCommentSortType: freezed == defaultCommentSortType
           ? _value.defaultCommentSortType
           : defaultCommentSortType // ignore: cast_nullable_to_non_nullable
-              as SortType,
-      defaultPostSortType: null == defaultPostSortType
+              as SortType?,
+      defaultPostSortType: freezed == defaultPostSortType
           ? _value.defaultPostSortType
           : defaultPostSortType // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       defaultListingType: null == defaultListingType
           ? _value.defaultListingType
           : defaultListingType // ignore: cast_nullable_to_non_nullable
@@ -512,8 +512,8 @@ class _$LocalUserImpl extends _LocalUser {
       this.autoExpand,
       required this.theme,
       @deprecated this.defaultSortType,
-      required this.defaultCommentSortType,
-      required this.defaultPostSortType,
+      this.defaultCommentSortType,
+      this.defaultPostSortType,
       required this.defaultListingType,
       required this.interfaceLanguage,
       required this.showAvatars,
@@ -565,10 +565,10 @@ class _$LocalUserImpl extends _LocalUser {
   final SortType? defaultSortType;
 // v0.18.0 [deprecated in v0.20.0]
   @override
-  final SortType defaultCommentSortType;
+  final SortType? defaultCommentSortType;
 // v0.20.0
   @override
-  final SortType defaultPostSortType;
+  final SortType? defaultPostSortType;
 // v0.20.0
   @override
   final ListingType defaultListingType;
@@ -766,8 +766,8 @@ abstract class _LocalUser extends LocalUser {
       final bool? autoExpand,
       required final String theme,
       @deprecated final SortType? defaultSortType,
-      required final SortType defaultCommentSortType,
-      required final SortType defaultPostSortType,
+      final SortType? defaultCommentSortType,
+      final SortType? defaultPostSortType,
       required final ListingType defaultListingType,
       required final String interfaceLanguage,
       required final bool showAvatars,
@@ -811,9 +811,9 @@ abstract class _LocalUser extends LocalUser {
   @deprecated
   SortType? get defaultSortType; // v0.18.0 [deprecated in v0.20.0]
   @override
-  SortType get defaultCommentSortType; // v0.20.0
+  SortType? get defaultCommentSortType; // v0.20.0
   @override
-  SortType get defaultPostSortType; // v0.20.0
+  SortType? get defaultPostSortType; // v0.20.0
   @override
   ListingType get defaultListingType; // v0.18.0
   @override
