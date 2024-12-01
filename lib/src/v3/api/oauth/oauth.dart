@@ -11,26 +11,22 @@ part 'oauth.g.dart';
 ///
 /// `HTTP.POST /oauth/authenticate`
 @freezed
-class AuthenticateWithOAuth
-    with _$AuthenticateWithOAuth
-    implements LemmyApiQuery<LoginResponse> {
+class AuthenticateWithOAuth with _$AuthenticateWithOAuth implements LemmyApiQuery<LoginResponse> {
   @apiSerde
   const factory AuthenticateWithOAuth({
     required String code,
-    required String oauth_provider_id,
+    required int oauth_provider_id,
     required String redirect_uri,
     String? username,
     String? answer,
   }) = _AuthenticateWithOAuth;
 
   const AuthenticateWithOAuth._();
-  factory AuthenticateWithOAuth.fromJson(Map<String, dynamic> json) =>
-      _$AuthenticateWithOAuthFromJson(json);
+  factory AuthenticateWithOAuth.fromJson(Map<String, dynamic> json) => _$AuthenticateWithOAuthFromJson(json);
 
   final path = '/oauth/authenticate';
   final httpMethod = HttpMethod.post;
 
   @override
-  LoginResponse responseFactory(Map<String, dynamic> json) =>
-      LoginResponse.fromJson(json);
+  LoginResponse responseFactory(Map<String, dynamic> json) => LoginResponse.fromJson(json);
 }

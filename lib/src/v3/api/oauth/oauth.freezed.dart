@@ -22,7 +22,7 @@ AuthenticateWithOAuth _$AuthenticateWithOAuthFromJson(
 /// @nodoc
 mixin _$AuthenticateWithOAuth {
   String get code => throw _privateConstructorUsedError;
-  String get oauth_provider_id => throw _privateConstructorUsedError;
+  int get oauth_provider_id => throw _privateConstructorUsedError;
   String get redirect_uri => throw _privateConstructorUsedError;
   String? get username => throw _privateConstructorUsedError;
   String? get answer => throw _privateConstructorUsedError;
@@ -45,7 +45,7 @@ abstract class $AuthenticateWithOAuthCopyWith<$Res> {
   @useResult
   $Res call(
       {String code,
-      String oauth_provider_id,
+      int oauth_provider_id,
       String redirect_uri,
       String? username,
       String? answer});
@@ -81,7 +81,7 @@ class _$AuthenticateWithOAuthCopyWithImpl<$Res,
       oauth_provider_id: null == oauth_provider_id
           ? _value.oauth_provider_id
           : oauth_provider_id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       redirect_uri: null == redirect_uri
           ? _value.redirect_uri
           : redirect_uri // ignore: cast_nullable_to_non_nullable
@@ -109,7 +109,7 @@ abstract class _$$AuthenticateWithOAuthImplCopyWith<$Res>
   @useResult
   $Res call(
       {String code,
-      String oauth_provider_id,
+      int oauth_provider_id,
       String redirect_uri,
       String? username,
       String? answer});
@@ -143,7 +143,7 @@ class __$$AuthenticateWithOAuthImplCopyWithImpl<$Res>
       oauth_provider_id: null == oauth_provider_id
           ? _value.oauth_provider_id
           : oauth_provider_id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       redirect_uri: null == redirect_uri
           ? _value.redirect_uri
           : redirect_uri // ignore: cast_nullable_to_non_nullable
@@ -178,7 +178,7 @@ class _$AuthenticateWithOAuthImpl extends _AuthenticateWithOAuth {
   @override
   final String code;
   @override
-  final String oauth_provider_id;
+  final int oauth_provider_id;
   @override
   final String redirect_uri;
   @override
@@ -231,7 +231,7 @@ class _$AuthenticateWithOAuthImpl extends _AuthenticateWithOAuth {
 abstract class _AuthenticateWithOAuth extends AuthenticateWithOAuth {
   const factory _AuthenticateWithOAuth(
       {required final String code,
-      required final String oauth_provider_id,
+      required final int oauth_provider_id,
       required final String redirect_uri,
       final String? username,
       final String? answer}) = _$AuthenticateWithOAuthImpl;
@@ -243,7 +243,7 @@ abstract class _AuthenticateWithOAuth extends AuthenticateWithOAuth {
   @override
   String get code;
   @override
-  String get oauth_provider_id;
+  int get oauth_provider_id;
   @override
   String get redirect_uri;
   @override

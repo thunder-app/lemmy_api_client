@@ -10,7 +10,7 @@ _$AuthenticateWithOAuthImpl _$$AuthenticateWithOAuthImplFromJson(
         Map<String, dynamic> json) =>
     _$AuthenticateWithOAuthImpl(
       code: json['code'] as String,
-      oauth_provider_id: json['oauth_provider_id'] as String,
+      oauth_provider_id: (json['oauth_provider_id'] as num).toInt(),
       redirect_uri: json['redirect_uri'] as String,
       username: json['username'] as String?,
       answer: json['answer'] as String?,
