@@ -14,8 +14,8 @@ class LocalSite with _$LocalSite {
     required int id, // v0.18.0
     required int siteId, // v0.18.0
     required bool siteSetup, // v0.18.0
-    required bool enableDownvotes, // v0.18.0
-    required bool enableNsfw, // v0.18.0
+    @deprecated bool? enableDownvotes, // v0.18.0 [deprecated in v0.20.0]
+    @deprecated bool? enableNsfw, // v0.18.0 [deprecated in v0.20.0]
     required bool communityCreationAdminOnly, // v0.18.0
     required bool requireEmailVerification, // v0.18.0
     String? applicationQuestion, // v0.18.0

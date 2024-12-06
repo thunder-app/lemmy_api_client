@@ -17,13 +17,15 @@ class LocalUser with _$LocalUser {
     bool? blurNsfw, // v0.18.3
     bool? autoExpand, // v0.18.3
     required String theme, // v0.18.0
-    required SortType defaultSortType, // v0.18.0
+    @deprecated SortType? defaultSortType, // v0.18.0 [deprecated in v0.20.0]
+    SortType? defaultCommentSortType, // v0.20.0
+    SortType? defaultPostSortType, // v0.20.0
     required ListingType defaultListingType, // v0.18.0
     required String interfaceLanguage, // v0.18.0
     required bool showAvatars, // v0.18.0
     required bool sendNotificationsToEmail, // v0.18.0
     @deprecated String? validatorTime, // v0.18.0 [deprecated in v0.19.0]
-    required bool showScores, // v0.18.0
+    @deprecated bool? showScores, // v0.18.0 [deprecated in v0.20.0]
     required bool showBotAccounts, // v0.18.0
     required bool showReadPosts, // v0.18.0
     @deprecated bool? showNewPostNotifs, // v0.18.0 [deprecated in v0.19.0]
