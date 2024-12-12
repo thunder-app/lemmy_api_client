@@ -11,9 +11,9 @@ class ProviderView with _$ProviderView {
   @modelSerde
   const factory ProviderView({
     required int id, // v0.20.0
-    required String display_name, // v0.20.0
-    required String authorization_endpoint, // v0.20.0
-    required String client_id, // v0.20.0
+    required String displayName, // v0.20.0
+    required String authorizationEndpoint, // v0.20.0
+    required String clientId, // v0.20.0
     required String scopes, // v0.20.0
   }) = _ProviderView;
 

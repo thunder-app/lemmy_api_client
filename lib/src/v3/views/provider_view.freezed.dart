@@ -21,10 +21,10 @@ ProviderView _$ProviderViewFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ProviderView {
   int get id => throw _privateConstructorUsedError; // v0.20.0
-  String get display_name => throw _privateConstructorUsedError; // v0.20.0
-  String get authorization_endpoint =>
+  String get displayName => throw _privateConstructorUsedError; // v0.20.0
+  String get authorizationEndpoint =>
       throw _privateConstructorUsedError; // v0.20.0
-  String get client_id => throw _privateConstructorUsedError; // v0.20.0
+  String get clientId => throw _privateConstructorUsedError; // v0.20.0
   String get scopes => throw _privateConstructorUsedError;
 
   /// Serializes this ProviderView to a JSON map.
@@ -45,9 +45,9 @@ abstract class $ProviderViewCopyWith<$Res> {
   @useResult
   $Res call(
       {int id,
-      String display_name,
-      String authorization_endpoint,
-      String client_id,
+      String displayName,
+      String authorizationEndpoint,
+      String clientId,
       String scopes});
 }
 
@@ -67,9 +67,9 @@ class _$ProviderViewCopyWithImpl<$Res, $Val extends ProviderView>
   @override
   $Res call({
     Object? id = null,
-    Object? display_name = null,
-    Object? authorization_endpoint = null,
-    Object? client_id = null,
+    Object? displayName = null,
+    Object? authorizationEndpoint = null,
+    Object? clientId = null,
     Object? scopes = null,
   }) {
     return _then(_value.copyWith(
@@ -77,17 +77,17 @@ class _$ProviderViewCopyWithImpl<$Res, $Val extends ProviderView>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      display_name: null == display_name
-          ? _value.display_name
-          : display_name // ignore: cast_nullable_to_non_nullable
+      displayName: null == displayName
+          ? _value.displayName
+          : displayName // ignore: cast_nullable_to_non_nullable
               as String,
-      authorization_endpoint: null == authorization_endpoint
-          ? _value.authorization_endpoint
-          : authorization_endpoint // ignore: cast_nullable_to_non_nullable
+      authorizationEndpoint: null == authorizationEndpoint
+          ? _value.authorizationEndpoint
+          : authorizationEndpoint // ignore: cast_nullable_to_non_nullable
               as String,
-      client_id: null == client_id
-          ? _value.client_id
-          : client_id // ignore: cast_nullable_to_non_nullable
+      clientId: null == clientId
+          ? _value.clientId
+          : clientId // ignore: cast_nullable_to_non_nullable
               as String,
       scopes: null == scopes
           ? _value.scopes
@@ -107,9 +107,9 @@ abstract class _$$ProviderViewImplCopyWith<$Res>
   @useResult
   $Res call(
       {int id,
-      String display_name,
-      String authorization_endpoint,
-      String client_id,
+      String displayName,
+      String authorizationEndpoint,
+      String clientId,
       String scopes});
 }
 
@@ -127,9 +127,9 @@ class __$$ProviderViewImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = null,
-    Object? display_name = null,
-    Object? authorization_endpoint = null,
-    Object? client_id = null,
+    Object? displayName = null,
+    Object? authorizationEndpoint = null,
+    Object? clientId = null,
     Object? scopes = null,
   }) {
     return _then(_$ProviderViewImpl(
@@ -137,17 +137,17 @@ class __$$ProviderViewImplCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      display_name: null == display_name
-          ? _value.display_name
-          : display_name // ignore: cast_nullable_to_non_nullable
+      displayName: null == displayName
+          ? _value.displayName
+          : displayName // ignore: cast_nullable_to_non_nullable
               as String,
-      authorization_endpoint: null == authorization_endpoint
-          ? _value.authorization_endpoint
-          : authorization_endpoint // ignore: cast_nullable_to_non_nullable
+      authorizationEndpoint: null == authorizationEndpoint
+          ? _value.authorizationEndpoint
+          : authorizationEndpoint // ignore: cast_nullable_to_non_nullable
               as String,
-      client_id: null == client_id
-          ? _value.client_id
-          : client_id // ignore: cast_nullable_to_non_nullable
+      clientId: null == clientId
+          ? _value.clientId
+          : clientId // ignore: cast_nullable_to_non_nullable
               as String,
       scopes: null == scopes
           ? _value.scopes
@@ -163,9 +163,9 @@ class __$$ProviderViewImplCopyWithImpl<$Res>
 class _$ProviderViewImpl extends _ProviderView {
   const _$ProviderViewImpl(
       {required this.id,
-      required this.display_name,
-      required this.authorization_endpoint,
-      required this.client_id,
+      required this.displayName,
+      required this.authorizationEndpoint,
+      required this.clientId,
       required this.scopes})
       : super._();
 
@@ -176,20 +176,20 @@ class _$ProviderViewImpl extends _ProviderView {
   final int id;
 // v0.20.0
   @override
-  final String display_name;
+  final String displayName;
 // v0.20.0
   @override
-  final String authorization_endpoint;
+  final String authorizationEndpoint;
 // v0.20.0
   @override
-  final String client_id;
+  final String clientId;
 // v0.20.0
   @override
   final String scopes;
 
   @override
   String toString() {
-    return 'ProviderView(id: $id, display_name: $display_name, authorization_endpoint: $authorization_endpoint, client_id: $client_id, scopes: $scopes)';
+    return 'ProviderView(id: $id, displayName: $displayName, authorizationEndpoint: $authorizationEndpoint, clientId: $clientId, scopes: $scopes)';
   }
 
   @override
@@ -198,19 +198,19 @@ class _$ProviderViewImpl extends _ProviderView {
         (other.runtimeType == runtimeType &&
             other is _$ProviderViewImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.display_name, display_name) ||
-                other.display_name == display_name) &&
-            (identical(other.authorization_endpoint, authorization_endpoint) ||
-                other.authorization_endpoint == authorization_endpoint) &&
-            (identical(other.client_id, client_id) ||
-                other.client_id == client_id) &&
+            (identical(other.displayName, displayName) ||
+                other.displayName == displayName) &&
+            (identical(other.authorizationEndpoint, authorizationEndpoint) ||
+                other.authorizationEndpoint == authorizationEndpoint) &&
+            (identical(other.clientId, clientId) ||
+                other.clientId == clientId) &&
             (identical(other.scopes, scopes) || other.scopes == scopes));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType, id, display_name, authorization_endpoint, client_id, scopes);
+      runtimeType, id, displayName, authorizationEndpoint, clientId, scopes);
 
   /// Create a copy of ProviderView
   /// with the given fields replaced by the non-null parameter values.
@@ -231,9 +231,9 @@ class _$ProviderViewImpl extends _ProviderView {
 abstract class _ProviderView extends ProviderView {
   const factory _ProviderView(
       {required final int id,
-      required final String display_name,
-      required final String authorization_endpoint,
-      required final String client_id,
+      required final String displayName,
+      required final String authorizationEndpoint,
+      required final String clientId,
       required final String scopes}) = _$ProviderViewImpl;
   const _ProviderView._() : super._();
 
@@ -243,11 +243,11 @@ abstract class _ProviderView extends ProviderView {
   @override
   int get id; // v0.20.0
   @override
-  String get display_name; // v0.20.0
+  String get displayName; // v0.20.0
   @override
-  String get authorization_endpoint; // v0.20.0
+  String get authorizationEndpoint; // v0.20.0
   @override
-  String get client_id; // v0.20.0
+  String get clientId; // v0.20.0
   @override
   String get scopes;
 
