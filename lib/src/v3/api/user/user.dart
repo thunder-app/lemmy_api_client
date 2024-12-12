@@ -128,7 +128,10 @@ class ExportSettings
 @freezed
 class ImportSettings
     with _$ImportSettings
-    implements LemmyApiQuery<SuccessResponse>, LemmyApiAuthenticatedQuery {
+    implements
+        LemmyApiQuery<SuccessResponse>,
+        LemmyApiAuthenticatedQuery,
+        PassthroughParameter {
   @apiSerde
   const factory ImportSettings({
     String? auth,
@@ -146,6 +149,9 @@ class ImportSettings
   @override
   SuccessResponse responseFactory(Map<String, dynamic> json) =>
       SuccessResponse.fromJson(json);
+
+  @override
+  String get parameter => 'data';
 }
 
 /// Only available in lemmy v0.19.0 and above
