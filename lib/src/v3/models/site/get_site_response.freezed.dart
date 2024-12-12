@@ -31,6 +31,8 @@ mixin _$GetSiteResponse {
   List<Tagline> get taglines => throw _privateConstructorUsedError; // v0.18.0
   List<CustomEmojiView> get customEmojis =>
       throw _privateConstructorUsedError; // v0.18.0
+  List<ProviderView>? get oauthProviders =>
+      throw _privateConstructorUsedError; // v0.20.0
   List<LocalSiteUrlBlocklist>? get blockedUrls =>
       throw _privateConstructorUsedError;
 
@@ -59,6 +61,7 @@ abstract class $GetSiteResponseCopyWith<$Res> {
       List<int> discussionLanguages,
       List<Tagline> taglines,
       List<CustomEmojiView> customEmojis,
+      List<ProviderView>? oauthProviders,
       List<LocalSiteUrlBlocklist>? blockedUrls});
 
   $SiteViewCopyWith<$Res> get siteView;
@@ -88,6 +91,7 @@ class _$GetSiteResponseCopyWithImpl<$Res, $Val extends GetSiteResponse>
     Object? discussionLanguages = null,
     Object? taglines = null,
     Object? customEmojis = null,
+    Object? oauthProviders = freezed,
     Object? blockedUrls = freezed,
   }) {
     return _then(_value.copyWith(
@@ -123,6 +127,10 @@ class _$GetSiteResponseCopyWithImpl<$Res, $Val extends GetSiteResponse>
           ? _value.customEmojis
           : customEmojis // ignore: cast_nullable_to_non_nullable
               as List<CustomEmojiView>,
+      oauthProviders: freezed == oauthProviders
+          ? _value.oauthProviders
+          : oauthProviders // ignore: cast_nullable_to_non_nullable
+              as List<ProviderView>?,
       blockedUrls: freezed == blockedUrls
           ? _value.blockedUrls
           : blockedUrls // ignore: cast_nullable_to_non_nullable
@@ -172,6 +180,7 @@ abstract class _$$GetSiteResponseImplCopyWith<$Res>
       List<int> discussionLanguages,
       List<Tagline> taglines,
       List<CustomEmojiView> customEmojis,
+      List<ProviderView>? oauthProviders,
       List<LocalSiteUrlBlocklist>? blockedUrls});
 
   @override
@@ -201,6 +210,7 @@ class __$$GetSiteResponseImplCopyWithImpl<$Res>
     Object? discussionLanguages = null,
     Object? taglines = null,
     Object? customEmojis = null,
+    Object? oauthProviders = freezed,
     Object? blockedUrls = freezed,
   }) {
     return _then(_$GetSiteResponseImpl(
@@ -236,6 +246,10 @@ class __$$GetSiteResponseImplCopyWithImpl<$Res>
           ? _value._customEmojis
           : customEmojis // ignore: cast_nullable_to_non_nullable
               as List<CustomEmojiView>,
+      oauthProviders: freezed == oauthProviders
+          ? _value._oauthProviders
+          : oauthProviders // ignore: cast_nullable_to_non_nullable
+              as List<ProviderView>?,
       blockedUrls: freezed == blockedUrls
           ? _value._blockedUrls
           : blockedUrls // ignore: cast_nullable_to_non_nullable
@@ -257,12 +271,14 @@ class _$GetSiteResponseImpl extends _GetSiteResponse {
       required final List<int> discussionLanguages,
       required final List<Tagline> taglines,
       required final List<CustomEmojiView> customEmojis,
+      final List<ProviderView>? oauthProviders,
       final List<LocalSiteUrlBlocklist>? blockedUrls})
       : _admins = admins,
         _allLanguages = allLanguages,
         _discussionLanguages = discussionLanguages,
         _taglines = taglines,
         _customEmojis = customEmojis,
+        _oauthProviders = oauthProviders,
         _blockedUrls = blockedUrls,
         super._();
 
@@ -329,8 +345,20 @@ class _$GetSiteResponseImpl extends _GetSiteResponse {
   }
 
 // v0.18.0
-  final List<LocalSiteUrlBlocklist>? _blockedUrls;
+  final List<ProviderView>? _oauthProviders;
 // v0.18.0
+  @override
+  List<ProviderView>? get oauthProviders {
+    final value = _oauthProviders;
+    if (value == null) return null;
+    if (_oauthProviders is EqualUnmodifiableListView) return _oauthProviders;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+// v0.20.0
+  final List<LocalSiteUrlBlocklist>? _blockedUrls;
+// v0.20.0
   @override
   List<LocalSiteUrlBlocklist>? get blockedUrls {
     final value = _blockedUrls;
@@ -342,7 +370,7 @@ class _$GetSiteResponseImpl extends _GetSiteResponse {
 
   @override
   String toString() {
-    return 'GetSiteResponse(siteView: $siteView, admins: $admins, version: $version, myUser: $myUser, allLanguages: $allLanguages, discussionLanguages: $discussionLanguages, taglines: $taglines, customEmojis: $customEmojis, blockedUrls: $blockedUrls)';
+    return 'GetSiteResponse(siteView: $siteView, admins: $admins, version: $version, myUser: $myUser, allLanguages: $allLanguages, discussionLanguages: $discussionLanguages, taglines: $taglines, customEmojis: $customEmojis, oauthProviders: $oauthProviders, blockedUrls: $blockedUrls)';
   }
 
   @override
@@ -363,6 +391,8 @@ class _$GetSiteResponseImpl extends _GetSiteResponse {
             const DeepCollectionEquality()
                 .equals(other._customEmojis, _customEmojis) &&
             const DeepCollectionEquality()
+                .equals(other._oauthProviders, _oauthProviders) &&
+            const DeepCollectionEquality()
                 .equals(other._blockedUrls, _blockedUrls));
   }
 
@@ -378,6 +408,7 @@ class _$GetSiteResponseImpl extends _GetSiteResponse {
       const DeepCollectionEquality().hash(_discussionLanguages),
       const DeepCollectionEquality().hash(_taglines),
       const DeepCollectionEquality().hash(_customEmojis),
+      const DeepCollectionEquality().hash(_oauthProviders),
       const DeepCollectionEquality().hash(_blockedUrls));
 
   /// Create a copy of GetSiteResponse
@@ -407,6 +438,7 @@ abstract class _GetSiteResponse extends GetSiteResponse {
       required final List<int> discussionLanguages,
       required final List<Tagline> taglines,
       required final List<CustomEmojiView> customEmojis,
+      final List<ProviderView>? oauthProviders,
       final List<LocalSiteUrlBlocklist>? blockedUrls}) = _$GetSiteResponseImpl;
   const _GetSiteResponse._() : super._();
 
@@ -429,6 +461,8 @@ abstract class _GetSiteResponse extends GetSiteResponse {
   List<Tagline> get taglines; // v0.18.0
   @override
   List<CustomEmojiView> get customEmojis; // v0.18.0
+  @override
+  List<ProviderView>? get oauthProviders; // v0.20.0
   @override
   List<LocalSiteUrlBlocklist>? get blockedUrls;
 

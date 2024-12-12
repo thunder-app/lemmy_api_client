@@ -30,5 +30,6 @@ export 'post_report_view.dart';
 export 'post_view.dart';
 export 'private_message_report_view.dart';
 export 'private_message_view.dart';
+export 'provider_view.dart';
 export 'registration_application_view.dart';
 export 'vote_view.dart';
