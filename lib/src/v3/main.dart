@@ -22,8 +22,14 @@ class LemmyApiV3 {
     // get a future based on http method
 
     String? auth;
+    String? passthroughParameter;
+
     if (query is LemmyApiAuthenticatedQuery) {
       auth = (query as LemmyApiAuthenticatedQuery).auth;
+    }
+
+    if (query is PassthroughParameter) {
+      passthroughParameter = (query as PassthroughParameter).parameter;
     }
 
     if (debug) {
@@ -57,7 +63,7 @@ class LemmyApiV3 {
               host: host,
               path: '$extraPath${query.path}',
             ),
-            body: jsonEncode(query.toJson()),
+            body: passthroughParameter != null ? query.toJson()[passthroughParameter] as String : jsonEncode(query.toJson()),
             headers: {
               'Content-Type': 'application/json',
               if (auth != null) 'Authorization': 'Bearer $auth',
