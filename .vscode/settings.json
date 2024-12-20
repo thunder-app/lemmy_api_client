@@ -1,0 +1,16 @@
+{
+    "dart.lineLength": 200,
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            200
+        ],
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "always",
+        }
+    },
+    "files.exclude": {
+        "**/.git": false,
+    }
+}

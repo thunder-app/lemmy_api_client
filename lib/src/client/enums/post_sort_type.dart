@@ -1,0 +1,21 @@
+enum PostSortType {
+  active,
+  hot,
+  newPost,
+  old,
+  topDay,
+  topWeek,
+  topMonth,
+  topYear,
+  topAll,
+  mostComments,
+  newComments,
+  topHour,
+  topSixHour,
+  topTwelveHour,
+  topThreeMonths,
+  topSixMonths,
+  topNineMonths,
+  controversial,
+  scaled
+}
