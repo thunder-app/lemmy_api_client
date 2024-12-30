@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="lemmy_dart_client API docs, for the Dart programming language.">
+  <title>lemmy_dart_client - Dart API docs</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li class="self-crumb">lemmy_dart_client package</li>
+  </ol>
+  <div class="self-name">lemmy_dart_client</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+  <div id="dartdoc-main-content" class="main-content">
+      
+<section class="desc markdown">
+  <h1 id="lemmy-dart-api-client">Lemmy Dart API Client</h1>
+<div align="center">
+<img width="200px" height="200px" src="https://raw.githubusercontent.com/LemmurOrg/lemmy_dart_client/master/logo.svg">
+<p>A Lemmy API Client built with Dart. Continuation of the original <a href="https://github.com/LemmurOrg/lemmy_dart_client">Lemmy Dart API</a> and <a href="https://github.com/liftoff-app/lemmy_dart_client">Liftoff Dart API</a>.</p>
+<img alt="Unsupported" src="https://img.shields.io/badge/0.17.x-unsupported-red">
+<img alt="Limited support" src="https://img.shields.io/badge/0.18.x-limited_support-yellow">
+<img alt="Supported version" src="https://img.shields.io/badge/0.19.x-supported-blue">
+</div>
+<h2 id="information">Information</h2>
+<p>Updates are done at a best-effort basis to ensure compatibility with the current major version of Lemmy. Due to the unstable nature of Lemmy API, there will be limited support for the last major version.</p>
+<p>Notice: While efforts are made to keep as much parity as possible with the Lemmy API, it is not guaranteed. If a particular endpoint or feature is missing, feel free to create a feature request or a pull request implementing that endpoint.</p>
+<h2 id="usage">Usage</h2>
+<pre class="language-dart"><code class="language-dart">import 'package:lemmy_dart_client/v3.dart';
+
+Future&lt;void&gt; main() async {
+  // Initialize the Lemmy API Client with the given instance URI
+  const lemmy = LemmyApiV3('lemmy.ml');
+
+  // Fetch posts
+  final response = await lemmy.run(const GetPosts());
+
+  print(response);
+}
+</code></pre>
+<h2 id="conventions">Conventions</h2>
+<p>When implementing a new endpoint, try to follow the existing conventions. A basic summary of these conventions are mentioned below.</p>
+<h3 id="api-methods-and-naming">API Methods and Naming</h3>
+<p>Any high-level API methods should be placed under <code>/api</code> directory matching the endpoint. For example, <code>GET /community</code> should be placed under <code>api/community/community.dart</code> file.</p>
+<ul>
+<li>Always attempt to match the naming of the API or model with the <a href="https://github.com/LemmyNet/lemmy-js-client">official API client</a>. This helps with parity checking and general organization.</li>
+</ul>
+<h3 id="deprecating-fields">Deprecating Fields</h3>
+<p>When a field or attribute is being deprecated in the upcoming version of Lemmy, mark it as such by <strong>annotating the field with <code>@deprecated</code></strong> and making the field <strong>optional</strong>.</p>
+<p>This example shows deprecation for the <code>community</code> field. Whenever possible, add an additional comment on which API version deprecates the field</p>
+<pre class="language-dart"><code class="language-dart">const factory CommunityView({
+  required Community community,
+  required SubscribedType subscribed,
+  required bool blocked,
+  required CommunityAggregates counts,
+}) = _CommunityView;
+</code></pre>
+<pre class="language-dart"><code class="language-dart">const factory CommunityView({
+  @deprecated Community? community, // v0.18.0 (required) [deprecated in v0.43.0]
+  required SubscribedType subscribed,
+  required bool blocked,
+  required CommunityAggregates counts,
+}) = _CommunityView;
+</code></pre>
+<h3 id="adding-fields">Adding Fields</h3>
+<p>When a field or attribute is introduced in an upcoming version of Lemmy, keep that attribute <strong>optional</strong> regardless of what the Lemmy API version denotes, and denote whether the field is optional/required. This is to ensure compatibility with the current and upcoming version of Lemmy. Furthermore, add a comment to denote which version introduces that field.</p>
+<p>This example shows addition for the <code>follow</code> field:</p>
+<pre class="language-dart"><code class="language-dart">const factory CommunityView({
+  required Community community,
+  required SubscribedType subscribed,
+  required bool blocked,
+  required CommunityAggregates counts,
+}) = _CommunityView;
+</code></pre>
+<pre class="language-dart"><code class="language-dart">const factory CommunityView({
+  required Community community,
+  required SubscribedType subscribed,
+  required bool blocked,
+  required CommunityAggregates counts,
+  bool? follow, // v0.64.0 (required)
+}) = _CommunityView;
+</code></pre>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<h3 id="logo">Logo</h3>
+<p>Original Lemmy logo made by Andy Cuccaro (@andycuccaro) under the CC-BY-SA 4.0 license. Remixed by Marcin Wojnarowski (@shilangyu) and re-released under the CC-BY-SA 4.0 license.</p>
+</section>
+
+
+      <section class="summary">
+          <h2>Libraries</h2>
+        <dl>
+          <dt id="lemmy_dart_client">
+  <span class="name"><a href="lemmy_dart_client/lemmy_dart_client-library.html">lemmy_dart_client</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+        </dl>
+      </section>
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li class="self-crumb">lemmy_dart_client package</li>
+</ol>
+
+    <h5 class="hidden-xs"><span class="package-name">lemmy_dart_client</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="lemmy_dart_client/lemmy_dart_client-library.html">lemmy_dart_client</a></li>
+</ol>
+
+  </div>
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div>
+</main>
+<footer>
+  <span class="no-break">
+    lemmy_dart_client
+      1.0.0
+  </span>
+  
+</footer>
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+

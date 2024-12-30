@@ -1,12 +1,10 @@
-# Flutter/Dart/Pub related
-**/doc/api/
+# https://dart.dev/guides/libraries/private-files
+# Created by `dart pub`
 .dart_tool/
-.packages
-.pub-cache/
-.pub/
-/build/
+
+# Avoid committing pubspec.lock for library packages; see
+# https://dart.dev/guides/libraries/private-files#pubspeclock.
 pubspec.lock
 
-# dev
-Taskfile.yml
-.idea
+# Contains credentials for tests
+test/config.dart
