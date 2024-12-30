@@ -1,7 +1,7 @@
-name: lemmy_api_client
+name: lemmy_dart_client
 description: Future-based http client for the Lemmy API. Provides an easy interface and statically typed responses.
 version: 1.0.0
-repository: https://github.com/thunder-app/lemmy_api_client
+repository: https://github.com/thunder-app/lemmy_dart_client
 
 environment:
   sdk: ^3.6.0

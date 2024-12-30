@@ -1,5 +1,5 @@
-import 'package:lemmy_api_client/src/client/client.dart';
-import 'package:lemmy_api_client/src/client/site/site.dart';
+import 'package:lemmy_dart_client/src/client/client.dart';
+import 'package:lemmy_dart_client/src/client/site/site.dart';
 
 /// This defines a series of actions that can be performed on a given site.
 class SiteHelper {

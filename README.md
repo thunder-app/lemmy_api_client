@@ -1,9 +1,9 @@
 # Lemmy Dart API Client
 
 <div align="center">
-<img width=200px height=200px src="https://raw.githubusercontent.com/LemmurOrg/lemmy_api_client/master/logo.svg"/>
+<img width=200px height=200px src="https://raw.githubusercontent.com/LemmurOrg/lemmy_dart_client/master/logo.svg"/>
 
-A Lemmy API Client built with Dart. Continuation of the original [Lemmy Dart API](https://github.com/LemmurOrg/lemmy_api_client) and [Liftoff Dart API](https://github.com/liftoff-app/lemmy_api_client).
+A Lemmy API Client built with Dart. Continuation of the original [Lemmy Dart API](https://github.com/LemmurOrg/lemmy_dart_client) and [Liftoff Dart API](https://github.com/liftoff-app/lemmy_dart_client).
 
 <img alt="Unsupported" src="https://img.shields.io/badge/0.17.x-unsupported-red">
 <img alt="Limited support" src="https://img.shields.io/badge/0.18.x-limited_support-yellow">
@@ -19,7 +19,7 @@ Notice: While efforts are made to keep as much parity as possible with the Lemmy
 ## Usage
 
 ```dart
-import 'package:lemmy_api_client/v3.dart';
+import 'package:lemmy_dart_client/v3.dart';
 
 Future<void> main() async {
   // Initialize the Lemmy API Client with the given instance URI

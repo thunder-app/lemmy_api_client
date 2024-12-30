@@ -1,8 +1,9 @@
-import 'package:lemmy_api_client/lemmy_api_client.dart' hide Account;
-import 'package:lemmy_api_client/src/client/utils/endpoints.dart';
-import 'package:lemmy_api_client/src/models/v4/models.dart' as models_v4;
-import 'package:lemmy_api_client/src/models/v3/models.dart' as models_v3;
-import 'package:lemmy_api_client/src/client/notification/notification_helper.dart';
+import 'package:lemmy_dart_client/lemmy_api_client.dart';
+import 'package:lemmy_dart_client/src/client/enums/enums.dart';
+import 'package:lemmy_dart_client/src/client/utils/endpoints.dart';
+import 'package:lemmy_dart_client/src/models/v4/models.dart' as models_v4;
+import 'package:lemmy_dart_client/src/models/v3/models.dart' as models_v3;
+import 'package:lemmy_dart_client/src/client/notification/notification_helper.dart';
 
 /// This defines a series of actions that can be performed on an account.
 ///
@@ -112,6 +113,19 @@ class AccountHelper {
     }
 
     return result;
+  }
+
+  Future<List<dynamic>> subscriptions() async {
+    assert(_client.auth != null, 'Requires authentication');
+    assert(_client.account.info != null, 'Account information cannot be null');
+
+    // Refresh the account information before fetching subscriptions
+    await refresh();
+
+    List<dynamic> subscriptions = [];
+    if (_client.account.info?.containsKey('follows') == true) subscriptions = _client.account.info!['follows'];
+
+    return subscriptions;
   }
 
   Future<List<dynamic>> posts({

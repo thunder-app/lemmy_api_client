@@ -1,7 +1,7 @@
-import 'package:lemmy_api_client/src/client/client.dart';
-import 'package:lemmy_api_client/src/client/utils/endpoints.dart';
-import 'package:lemmy_api_client/src/models/v4/models.dart' as models_v4;
-import 'package:lemmy_api_client/src/models/v3/models.dart' as models_v3;
+import 'package:lemmy_dart_client/src/client/client.dart';
+import 'package:lemmy_dart_client/src/client/utils/endpoints.dart';
+import 'package:lemmy_dart_client/src/models/v4/models.dart' as models_v4;
+import 'package:lemmy_dart_client/src/models/v3/models.dart' as models_v3;
 
 class NotificationHelper {
   final LemmyClient _client;

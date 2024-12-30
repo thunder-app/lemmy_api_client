@@ -2,11 +2,11 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-import 'package:lemmy_api_client/src/client/account/account_helper.dart';
-import 'package:lemmy_api_client/src/client/community/community_helper.dart';
-import 'package:lemmy_api_client/src/client/feed/feed_helper.dart';
-import 'package:lemmy_api_client/src/client/site/site_helper.dart';
-import 'package:lemmy_api_client/src/client/user/user_helper.dart';
+import 'package:lemmy_dart_client/src/client/account/account_helper.dart';
+import 'package:lemmy_dart_client/src/client/community/community_helper.dart';
+import 'package:lemmy_dart_client/src/client/feed/feed_helper.dart';
+import 'package:lemmy_dart_client/src/client/site/site_helper.dart';
+import 'package:lemmy_dart_client/src/client/user/user_helper.dart';
 
 /// A client that interacts with a Lemmy instance. The client must be initialized before it can be used.
 /// When performing a request, the client will return a Map of the JSON response.

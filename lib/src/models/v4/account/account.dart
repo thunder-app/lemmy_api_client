@@ -1,7 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'package:lemmy_api_client/src/client/enums/enums.dart';
-import 'package:lemmy_api_client/src/client/utils/serialization_methods.dart';
+import 'package:lemmy_dart_client/src/client/enums/enums.dart';
+import 'package:lemmy_dart_client/src/client/utils/serialization_methods.dart';
 
 part 'account.g.dart';
 

@@ -1,7 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'package:lemmy_api_client/src/models/v3/models.dart';
-import 'package:lemmy_api_client/src/models/v3/view/site_view.dart';
+import 'package:lemmy_dart_client/src/models/v3/models.dart';
+import 'package:lemmy_dart_client/src/models/v3/view/site_view.dart';
 
 part 'site_response.g.dart';
 

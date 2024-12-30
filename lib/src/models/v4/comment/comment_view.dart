@@ -1,8 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'package:lemmy_api_client/src/client/enums/enums.dart';
-import 'package:lemmy_api_client/src/client/utils/serialization_methods.dart';
-import 'package:lemmy_api_client/src/models/v4/models.dart';
+import 'package:lemmy_dart_client/src/client/enums/enums.dart';
+import 'package:lemmy_dart_client/src/client/utils/serialization_methods.dart';
+import 'package:lemmy_dart_client/src/models/v4/models.dart';
 
 part 'comment_view.g.dart';
 

@@ -1,6 +1,6 @@
-import 'package:lemmy_api_client/src/client/client.dart';
-import 'package:lemmy_api_client/src/client/enums/enums.dart';
-import 'package:lemmy_api_client/src/models/v4/models.dart';
+import 'package:lemmy_dart_client/src/client/client.dart';
+import 'package:lemmy_dart_client/src/client/enums/enums.dart';
+import 'package:lemmy_dart_client/src/models/v4/models.dart';
 
 class Community {
   final LemmyClient _client;

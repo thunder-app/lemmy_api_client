@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'package:lemmy_api_client/src/models/v3/response/captcha_response.dart';
+import 'package:lemmy_dart_client/src/models/v3/response/captcha_response.dart';
 
 part 'get_captcha_response.g.dart';
 

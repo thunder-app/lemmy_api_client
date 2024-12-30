@@ -1,4 +1,4 @@
-import 'package:lemmy_api_client/src/client/enums/enums.dart';
+import 'package:lemmy_dart_client/src/client/enums/enums.dart';
 
 CommunityVisibility lowercaseCommunityVisibilityFromJson(String? value) {
   if (value == null) return CommunityVisibility.public;

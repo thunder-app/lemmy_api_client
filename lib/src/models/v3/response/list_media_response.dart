@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'package:lemmy_api_client/src/models/v3/view/local_image_view.dart';
+import 'package:lemmy_dart_client/src/models/v3/view/local_image_view.dart';
 
 part 'list_media_response.g.dart';
 

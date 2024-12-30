@@ -1,8 +1,8 @@
-import 'package:lemmy_api_client/src/client/community/community.dart';
-import 'package:lemmy_api_client/src/client/enums/enums.dart';
-import 'package:lemmy_api_client/src/models/v4/models.dart' as models;
-import 'package:lemmy_api_client/src/client/client.dart';
-import 'package:lemmy_api_client/src/client/utils/serialization_methods.dart';
+import 'package:lemmy_dart_client/src/client/community/community.dart';
+import 'package:lemmy_dart_client/src/client/enums/enums.dart';
+import 'package:lemmy_dart_client/src/models/v4/models.dart' as models;
+import 'package:lemmy_dart_client/src/client/client.dart';
+import 'package:lemmy_dart_client/src/client/utils/serialization_methods.dart';
 
 /// This defines a series of actions that can be performed on a given community.
 ///

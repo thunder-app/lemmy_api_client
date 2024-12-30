@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'package:lemmy_api_client/src/models/v3/models.dart';
+import 'package:lemmy_dart_client/src/models/v3/models.dart';
 
 part 'list_private_message_reports_response.g.dart';
 

@@ -1,5 +1,5 @@
-import 'package:lemmy_api_client/src/client/client.dart';
-import 'package:lemmy_api_client/src/models/v4/models.dart';
+import 'package:lemmy_dart_client/src/client/client.dart';
+import 'package:lemmy_dart_client/src/models/v4/models.dart';
 import 'package:test/test.dart';
 
 void main() {

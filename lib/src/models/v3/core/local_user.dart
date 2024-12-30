@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'package:lemmy_api_client/src/enums/v3/enums.dart';
+import 'package:lemmy_dart_client/src/enums/v3/enums.dart';
 
 part 'local_user.g.dart';
 

@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:lemmy_api_client/src/client/client.dart';
+import 'package:lemmy_dart_client/src/client/client.dart';
 import 'package:test/test.dart';
 
 import '../config.dart';
@@ -66,6 +66,17 @@ void main() {
       expect(results, isNotNull);
       expect(results, isNonZero);
       expect(results, isPositive);
+    });
+  });
+
+  group('Account Subscriptions', () {
+    test('should properly fetch the current account subscriptions', () async {
+      await client.account.login(username: username, password: password);
+      final results = await client.account.subscriptions();
+
+      expect(results, isNotNull);
+      expect(results.length, isNonZero);
+      expect(results.length, isPositive);
     });
   });
 
