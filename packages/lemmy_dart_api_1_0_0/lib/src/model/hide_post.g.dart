@@ -1,0 +1,106 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'hide_post.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+class _$HidePost extends HidePost {
+  @override
+  final bool hide_;
+  @override
+  final double postId;
+
+  factory _$HidePost([void Function(HidePostBuilder)? updates]) =>
+      (new HidePostBuilder()..update(updates))._build();
+
+  _$HidePost._({required this.hide_, required this.postId}) : super._() {
+    BuiltValueNullFieldError.checkNotNull(hide_, r'HidePost', 'hide_');
+    BuiltValueNullFieldError.checkNotNull(postId, r'HidePost', 'postId');
+  }
+
+  @override
+  HidePost rebuild(void Function(HidePostBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  HidePostBuilder toBuilder() => new HidePostBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is HidePost && hide_ == other.hide_ && postId == other.postId;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, hide_.hashCode);
+    _$hash = $jc(_$hash, postId.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'HidePost')
+          ..add('hide_', hide_)
+          ..add('postId', postId))
+        .toString();
+  }
+}
+
+class HidePostBuilder implements Builder<HidePost, HidePostBuilder> {
+  _$HidePost? _$v;
+
+  bool? _hide_;
+  bool? get hide_ => _$this._hide_;
+  set hide_(bool? hide_) => _$this._hide_ = hide_;
+
+  double? _postId;
+  double? get postId => _$this._postId;
+  set postId(double? postId) => _$this._postId = postId;
+
+  HidePostBuilder() {
+    HidePost._defaults(this);
+  }
+
+  HidePostBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _hide_ = $v.hide_;
+      _postId = $v.postId;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(HidePost other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$HidePost;
+  }
+
+  @override
+  void update(void Function(HidePostBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  HidePost build() => _build();
+
+  _$HidePost _build() {
+    final _$result = _$v ??
+        new _$HidePost._(
+          hide_: BuiltValueNullFieldError.checkNotNull(
+              hide_, r'HidePost', 'hide_'),
+          postId: BuiltValueNullFieldError.checkNotNull(
+              postId, r'HidePost', 'postId'),
+        );
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

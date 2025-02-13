@@ -1,0 +1,19 @@
+# lemmy_dart_api_1_0_0.model.PersonPostMention
+
+## Load the model package
+```dart
+import 'package:lemmy_dart_api_1_0_0/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**published** | **String** |  | 
+**read** | **bool** |  | 
+**postId** | **double** | The post id. | 
+**recipientId** | **double** | The person id. | 
+**id** | **double** | The person post mention id. | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

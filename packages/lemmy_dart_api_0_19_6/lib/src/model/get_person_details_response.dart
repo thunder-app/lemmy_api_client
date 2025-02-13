@@ -1,0 +1,190 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+
+// ignore_for_file: unused_element
+import 'package:lemmy_dart_api_0_19_6/src/model/comment_view.dart';
+import 'package:lemmy_dart_api_0_19_6/src/model/site.dart';
+import 'package:built_collection/built_collection.dart';
+import 'package:lemmy_dart_api_0_19_6/src/model/community_moderator_view.dart';
+import 'package:lemmy_dart_api_0_19_6/src/model/post_view.dart';
+import 'package:lemmy_dart_api_0_19_6/src/model/person_view.dart';
+import 'package:built_value/built_value.dart';
+import 'package:built_value/serializer.dart';
+
+part 'get_person_details_response.g.dart';
+
+/// GetPersonDetailsResponse
+///
+/// Properties:
+/// * [personView]
+/// * [comments]
+/// * [posts]
+/// * [moderates]
+/// * [site]
+@BuiltValue()
+abstract class GetPersonDetailsResponse
+    implements
+        Built<GetPersonDetailsResponse, GetPersonDetailsResponseBuilder> {
+  @BuiltValueField(wireName: r'person_view')
+  PersonView get personView;
+
+  @BuiltValueField(wireName: r'comments')
+  BuiltList<CommentView> get comments;
+
+  @BuiltValueField(wireName: r'posts')
+  BuiltList<PostView> get posts;
+
+  @BuiltValueField(wireName: r'moderates')
+  BuiltList<CommunityModeratorView> get moderates;
+
+  @BuiltValueField(wireName: r'site')
+  Site? get site;
+
+  GetPersonDetailsResponse._();
+
+  factory GetPersonDetailsResponse(
+          [void updates(GetPersonDetailsResponseBuilder b)]) =
+      _$GetPersonDetailsResponse;
+
+  @BuiltValueHook(initializeBuilder: true)
+  static void _defaults(GetPersonDetailsResponseBuilder b) => b;
+
+  @BuiltValueSerializer(custom: true)
+  static Serializer<GetPersonDetailsResponse> get serializer =>
+      _$GetPersonDetailsResponseSerializer();
+}
+
+class _$GetPersonDetailsResponseSerializer
+    implements PrimitiveSerializer<GetPersonDetailsResponse> {
+  @override
+  final Iterable<Type> types = const [
+    GetPersonDetailsResponse,
+    _$GetPersonDetailsResponse
+  ];
+
+  @override
+  final String wireName = r'GetPersonDetailsResponse';
+
+  Iterable<Object?> _serializeProperties(
+    Serializers serializers,
+    GetPersonDetailsResponse object, {
+    FullType specifiedType = FullType.unspecified,
+  }) sync* {
+    yield r'person_view';
+    yield serializers.serialize(
+      object.personView,
+      specifiedType: const FullType(PersonView),
+    );
+    yield r'comments';
+    yield serializers.serialize(
+      object.comments,
+      specifiedType: const FullType(BuiltList, [FullType(CommentView)]),
+    );
+    yield r'posts';
+    yield serializers.serialize(
+      object.posts,
+      specifiedType: const FullType(BuiltList, [FullType(PostView)]),
+    );
+    yield r'moderates';
+    yield serializers.serialize(
+      object.moderates,
+      specifiedType:
+          const FullType(BuiltList, [FullType(CommunityModeratorView)]),
+    );
+    if (object.site != null) {
+      yield r'site';
+      yield serializers.serialize(
+        object.site,
+        specifiedType: const FullType(Site),
+      );
+    }
+  }
+
+  @override
+  Object serialize(
+    Serializers serializers,
+    GetPersonDetailsResponse object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
+  }
+
+  void _deserializeProperties(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+    required List<Object?> serializedList,
+    required GetPersonDetailsResponseBuilder result,
+    required List<Object?> unhandled,
+  }) {
+    for (var i = 0; i < serializedList.length; i += 2) {
+      final key = serializedList[i] as String;
+      final value = serializedList[i + 1];
+      switch (key) {
+        case r'person_view':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(PersonView),
+          ) as PersonView;
+          result.personView.replace(valueDes);
+          break;
+        case r'comments':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(BuiltList, [FullType(CommentView)]),
+          ) as BuiltList<CommentView>;
+          result.comments.replace(valueDes);
+          break;
+        case r'posts':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(BuiltList, [FullType(PostView)]),
+          ) as BuiltList<PostView>;
+          result.posts.replace(valueDes);
+          break;
+        case r'moderates':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType:
+                const FullType(BuiltList, [FullType(CommunityModeratorView)]),
+          ) as BuiltList<CommunityModeratorView>;
+          result.moderates.replace(valueDes);
+          break;
+        case r'site':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(Site),
+          ) as Site;
+          result.site.replace(valueDes);
+          break;
+        default:
+          unhandled.add(key);
+          unhandled.add(value);
+          break;
+      }
+    }
+  }
+
+  @override
+  GetPersonDetailsResponse deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = GetPersonDetailsResponseBuilder();
+    final serializedList = (serialized as Iterable<Object?>).toList();
+    final unhandled = <Object?>[];
+    _deserializeProperties(
+      serializers,
+      serialized,
+      specifiedType: specifiedType,
+      serializedList: serializedList,
+      unhandled: unhandled,
+      result: result,
+    );
+    return result.build();
+  }
+}
