@@ -24,8 +24,10 @@ mixin _$LocalSite {
   int get id => throw _privateConstructorUsedError; // v0.18.0
   int get siteId => throw _privateConstructorUsedError; // v0.18.0
   bool get siteSetup => throw _privateConstructorUsedError; // v0.18.0
-  bool get enableDownvotes => throw _privateConstructorUsedError; // v0.18.0
-  bool get enableNsfw => throw _privateConstructorUsedError; // v0.18.0
+  @deprecated
+  bool? get enableDownvotes => throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.20.0]
+  @deprecated
+  bool? get enableNsfw => throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.20.0]
   bool get communityCreationAdminOnly => throw _privateConstructorUsedError; // v0.18.0
   bool get requireEmailVerification => throw _privateConstructorUsedError; // v0.18.0
   String? get applicationQuestion => throw _privateConstructorUsedError; // v0.18.0
@@ -67,8 +69,8 @@ abstract class $LocalSiteCopyWith<$Res> {
     int id,
     int siteId,
     bool siteSetup,
-    bool enableDownvotes,
-    bool enableNsfw,
+    @deprecated bool? enableDownvotes,
+    @deprecated bool? enableNsfw,
     bool communityCreationAdminOnly,
     bool requireEmailVerification,
     String? applicationQuestion,
@@ -111,8 +113,8 @@ class _$LocalSiteCopyWithImpl<$Res, $Val extends LocalSite> implements $LocalSit
     Object? id = null,
     Object? siteId = null,
     Object? siteSetup = null,
-    Object? enableDownvotes = null,
-    Object? enableNsfw = null,
+    Object? enableDownvotes = freezed,
+    Object? enableNsfw = freezed,
     Object? communityCreationAdminOnly = null,
     Object? requireEmailVerification = null,
     Object? applicationQuestion = freezed,
@@ -154,15 +156,15 @@ class _$LocalSiteCopyWithImpl<$Res, $Val extends LocalSite> implements $LocalSit
                     : siteSetup // ignore: cast_nullable_to_non_nullable
                         as bool,
             enableDownvotes:
-                null == enableDownvotes
+                freezed == enableDownvotes
                     ? _value.enableDownvotes
                     : enableDownvotes // ignore: cast_nullable_to_non_nullable
-                        as bool,
+                        as bool?,
             enableNsfw:
-                null == enableNsfw
+                freezed == enableNsfw
                     ? _value.enableNsfw
                     : enableNsfw // ignore: cast_nullable_to_non_nullable
-                        as bool,
+                        as bool?,
             communityCreationAdminOnly:
                 null == communityCreationAdminOnly
                     ? _value.communityCreationAdminOnly
@@ -288,8 +290,8 @@ abstract class _$$LocalSiteImplCopyWith<$Res> implements $LocalSiteCopyWith<$Res
     int id,
     int siteId,
     bool siteSetup,
-    bool enableDownvotes,
-    bool enableNsfw,
+    @deprecated bool? enableDownvotes,
+    @deprecated bool? enableNsfw,
     bool communityCreationAdminOnly,
     bool requireEmailVerification,
     String? applicationQuestion,
@@ -327,8 +329,8 @@ class __$$LocalSiteImplCopyWithImpl<$Res> extends _$LocalSiteCopyWithImpl<$Res, 
     Object? id = null,
     Object? siteId = null,
     Object? siteSetup = null,
-    Object? enableDownvotes = null,
-    Object? enableNsfw = null,
+    Object? enableDownvotes = freezed,
+    Object? enableNsfw = freezed,
     Object? communityCreationAdminOnly = null,
     Object? requireEmailVerification = null,
     Object? applicationQuestion = freezed,
@@ -370,15 +372,15 @@ class __$$LocalSiteImplCopyWithImpl<$Res> extends _$LocalSiteCopyWithImpl<$Res, 
                 : siteSetup // ignore: cast_nullable_to_non_nullable
                     as bool,
         enableDownvotes:
-            null == enableDownvotes
+            freezed == enableDownvotes
                 ? _value.enableDownvotes
                 : enableDownvotes // ignore: cast_nullable_to_non_nullable
-                    as bool,
+                    as bool?,
         enableNsfw:
-            null == enableNsfw
+            freezed == enableNsfw
                 ? _value.enableNsfw
                 : enableNsfw // ignore: cast_nullable_to_non_nullable
-                    as bool,
+                    as bool?,
         communityCreationAdminOnly:
             null == communityCreationAdminOnly
                 ? _value.communityCreationAdminOnly
@@ -502,8 +504,8 @@ class _$LocalSiteImpl extends _LocalSite {
     required this.id,
     required this.siteId,
     required this.siteSetup,
-    required this.enableDownvotes,
-    required this.enableNsfw,
+    @deprecated this.enableDownvotes,
+    @deprecated this.enableNsfw,
     required this.communityCreationAdminOnly,
     required this.requireEmailVerification,
     this.applicationQuestion,
@@ -540,11 +542,13 @@ class _$LocalSiteImpl extends _LocalSite {
   final bool siteSetup;
   // v0.18.0
   @override
-  final bool enableDownvotes;
-  // v0.18.0
+  @deprecated
+  final bool? enableDownvotes;
+  // v0.18.0 [deprecated in v0.20.0]
   @override
-  final bool enableNsfw;
-  // v0.18.0
+  @deprecated
+  final bool? enableNsfw;
+  // v0.18.0 [deprecated in v0.20.0]
   @override
   final bool communityCreationAdminOnly;
   // v0.18.0
@@ -702,8 +706,8 @@ abstract class _LocalSite extends LocalSite {
     required final int id,
     required final int siteId,
     required final bool siteSetup,
-    required final bool enableDownvotes,
-    required final bool enableNsfw,
+    @deprecated final bool? enableDownvotes,
+    @deprecated final bool? enableNsfw,
     required final bool communityCreationAdminOnly,
     required final bool requireEmailVerification,
     final String? applicationQuestion,
@@ -738,9 +742,11 @@ abstract class _LocalSite extends LocalSite {
   @override
   bool get siteSetup; // v0.18.0
   @override
-  bool get enableDownvotes; // v0.18.0
+  @deprecated
+  bool? get enableDownvotes; // v0.18.0 [deprecated in v0.20.0]
   @override
-  bool get enableNsfw; // v0.18.0
+  @deprecated
+  bool? get enableNsfw; // v0.18.0 [deprecated in v0.20.0]
   @override
   bool get communityCreationAdminOnly; // v0.18.0
   @override

@@ -15,6 +15,7 @@ _$GetSiteResponseImpl _$$GetSiteResponseImplFromJson(Map<String, dynamic> json) 
   discussionLanguages: (json['discussion_languages'] as List<dynamic>).map((e) => (e as num).toInt()).toList(),
   taglines: (json['taglines'] as List<dynamic>).map((e) => Tagline.fromJson(e as Map<String, dynamic>)).toList(),
   customEmojis: (json['custom_emojis'] as List<dynamic>).map((e) => CustomEmojiView.fromJson(e as Map<String, dynamic>)).toList(),
+  oauthProviders: (json['oauth_providers'] as List<dynamic>?)?.map((e) => ProviderView.fromJson(e as Map<String, dynamic>)).toList(),
   blockedUrls: (json['blocked_urls'] as List<dynamic>?)?.map((e) => LocalSiteUrlBlocklist.fromJson(e as Map<String, dynamic>)).toList(),
 );
 
@@ -27,5 +28,6 @@ Map<String, dynamic> _$$GetSiteResponseImplToJson(_$GetSiteResponseImpl instance
   'discussion_languages': instance.discussionLanguages,
   'taglines': instance.taglines.map((e) => e.toJson()).toList(),
   'custom_emojis': instance.customEmojis.map((e) => e.toJson()).toList(),
+  'oauth_providers': instance.oauthProviders?.map((e) => e.toJson()).toList(),
   'blocked_urls': instance.blockedUrls?.map((e) => e.toJson()).toList(),
 };
