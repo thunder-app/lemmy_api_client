@@ -13,13 +13,7 @@ part 'oauth.g.dart';
 @freezed
 class AuthenticateWithOAuth with _$AuthenticateWithOAuth implements LemmyApiQuery<LoginResponse> {
   @apiSerde
-  const factory AuthenticateWithOAuth({
-    required String code,
-    required int oauth_provider_id,
-    required String redirect_uri,
-    String? username,
-    String? answer,
-  }) = _AuthenticateWithOAuth;
+  const factory AuthenticateWithOAuth({required String code, required int oauth_provider_id, required String redirect_uri, String? username, String? answer}) = _AuthenticateWithOAuth;
 
   const AuthenticateWithOAuth._();
   factory AuthenticateWithOAuth.fromJson(Map<String, dynamic> json) => _$AuthenticateWithOAuthFromJson(json);

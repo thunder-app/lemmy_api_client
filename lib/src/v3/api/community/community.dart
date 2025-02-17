@@ -12,9 +12,7 @@ part 'community.g.dart';
 ///
 /// `HTTP.GET /community`
 @freezed
-class GetCommunity
-    with _$GetCommunity
-    implements LemmyApiQuery<GetCommunityResponse>, LemmyApiAuthenticatedQuery {
+class GetCommunity with _$GetCommunity implements LemmyApiQuery<GetCommunityResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory GetCommunity({
     int? id, // v0.18.0
@@ -23,25 +21,21 @@ class GetCommunity
   }) = _GetCommunity;
 
   const GetCommunity._();
-  factory GetCommunity.fromJson(Map<String, dynamic> json) =>
-      _$GetCommunityFromJson(json);
+  factory GetCommunity.fromJson(Map<String, dynamic> json) => _$GetCommunityFromJson(json);
 
   final path = '/community';
 
   final httpMethod = HttpMethod.get;
 
   @override
-  GetCommunityResponse responseFactory(Map<String, dynamic> json) =>
-      GetCommunityResponse.fromJson(json);
+  GetCommunityResponse responseFactory(Map<String, dynamic> json) => GetCommunityResponse.fromJson(json);
 }
 
 /// Create a new community.
 ///
 /// `HTTP.POST /community`
 @freezed
-class CreateCommunity
-    with _$CreateCommunity
-    implements LemmyApiQuery<CommunityResponse>, LemmyApiAuthenticatedQuery {
+class CreateCommunity with _$CreateCommunity implements LemmyApiQuery<CommunityResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory CreateCommunity({
     required String name, // v0.18.0
@@ -57,25 +51,21 @@ class CreateCommunity
   }) = _CreateCommunity;
 
   const CreateCommunity._();
-  factory CreateCommunity.fromJson(Map<String, dynamic> json) =>
-      _$CreateCommunityFromJson(json);
+  factory CreateCommunity.fromJson(Map<String, dynamic> json) => _$CreateCommunityFromJson(json);
 
   final path = '/community';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  CommunityResponse responseFactory(Map<String, dynamic> json) =>
-      CommunityResponse.fromJson(json);
+  CommunityResponse responseFactory(Map<String, dynamic> json) => CommunityResponse.fromJson(json);
 }
 
 /// Edit a community.
 ///
 /// `HTTP.PUT /community`
 @freezed
-class EditCommunity
-    with _$EditCommunity
-    implements LemmyApiQuery<CommunityResponse>, LemmyApiAuthenticatedQuery {
+class EditCommunity with _$EditCommunity implements LemmyApiQuery<CommunityResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory EditCommunity({
     required int communityId, // v0.18.0
@@ -91,27 +81,21 @@ class EditCommunity
   }) = _EditCommunity;
 
   const EditCommunity._();
-  factory EditCommunity.fromJson(Map<String, dynamic> json) =>
-      _$EditCommunityFromJson(json);
+  factory EditCommunity.fromJson(Map<String, dynamic> json) => _$EditCommunityFromJson(json);
 
   final path = '/community';
 
   final httpMethod = HttpMethod.put;
 
   @override
-  CommunityResponse responseFactory(Map<String, dynamic> json) =>
-      CommunityResponse.fromJson(json);
+  CommunityResponse responseFactory(Map<String, dynamic> json) => CommunityResponse.fromJson(json);
 }
 
 /// List communities, with various filters.
 ///
 /// `HTTP.GET /community/list`
 @freezed
-class ListCommunities
-    with _$ListCommunities
-    implements
-        LemmyApiQuery<ListCommunitiesResponse>,
-        LemmyApiAuthenticatedQuery {
+class ListCommunities with _$ListCommunities implements LemmyApiQuery<ListCommunitiesResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory ListCommunities({
     @JsonKey(name: 'type_') ListingType? type, // v0.18.0
@@ -123,25 +107,21 @@ class ListCommunities
   }) = _ListCommunities;
 
   const ListCommunities._();
-  factory ListCommunities.fromJson(Map<String, dynamic> json) =>
-      _$ListCommunitiesFromJson(json);
+  factory ListCommunities.fromJson(Map<String, dynamic> json) => _$ListCommunitiesFromJson(json);
 
   final path = '/community/list';
 
   final httpMethod = HttpMethod.get;
 
   @override
-  ListCommunitiesResponse responseFactory(Map<String, dynamic> json) =>
-      ListCommunitiesResponse.fromJson(json);
+  ListCommunitiesResponse responseFactory(Map<String, dynamic> json) => ListCommunitiesResponse.fromJson(json);
 }
 
 /// Follow / subscribe to a community.
 ///
 /// `HTTP.POST /community/follow`
 @freezed
-class FollowCommunity
-    with _$FollowCommunity
-    implements LemmyApiQuery<CommunityResponse>, LemmyApiAuthenticatedQuery {
+class FollowCommunity with _$FollowCommunity implements LemmyApiQuery<CommunityResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory FollowCommunity({
     required int communityId, // v0.18.0
@@ -150,27 +130,21 @@ class FollowCommunity
   }) = _FollowCommunity;
 
   const FollowCommunity._();
-  factory FollowCommunity.fromJson(Map<String, dynamic> json) =>
-      _$FollowCommunityFromJson(json);
+  factory FollowCommunity.fromJson(Map<String, dynamic> json) => _$FollowCommunityFromJson(json);
 
   final path = '/community/follow';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  CommunityResponse responseFactory(Map<String, dynamic> json) =>
-      CommunityResponse.fromJson(json);
+  CommunityResponse responseFactory(Map<String, dynamic> json) => CommunityResponse.fromJson(json);
 }
 
 /// Block a community.
 ///
 /// `HTTP.POST /community/block`
 @freezed
-class BlockCommunity
-    with _$BlockCommunity
-    implements
-        LemmyApiQuery<BlockCommunityResponse>,
-        LemmyApiAuthenticatedQuery {
+class BlockCommunity with _$BlockCommunity implements LemmyApiQuery<BlockCommunityResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory BlockCommunity({
     required int communityId, // v0.18.0
@@ -179,25 +153,21 @@ class BlockCommunity
   }) = _BlockCommunity;
 
   const BlockCommunity._();
-  factory BlockCommunity.fromJson(Map<String, dynamic> json) =>
-      _$BlockCommunityFromJson(json);
+  factory BlockCommunity.fromJson(Map<String, dynamic> json) => _$BlockCommunityFromJson(json);
 
   final path = '/community/block';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  BlockCommunityResponse responseFactory(Map<String, dynamic> json) =>
-      BlockCommunityResponse.fromJson(json);
+  BlockCommunityResponse responseFactory(Map<String, dynamic> json) => BlockCommunityResponse.fromJson(json);
 }
 
 /// Delete a community.
 ///
 /// `HTTP.POST /community/delete`
 @freezed
-class DeleteCommunity
-    with _$DeleteCommunity
-    implements LemmyApiQuery<CommunityResponse>, LemmyApiAuthenticatedQuery {
+class DeleteCommunity with _$DeleteCommunity implements LemmyApiQuery<CommunityResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory DeleteCommunity({
     required int communityId, // v0.18.0
@@ -206,16 +176,14 @@ class DeleteCommunity
   }) = _DeleteCommunity;
 
   const DeleteCommunity._();
-  factory DeleteCommunity.fromJson(Map<String, dynamic> json) =>
-      _$DeleteCommunityFromJson(json);
+  factory DeleteCommunity.fromJson(Map<String, dynamic> json) => _$DeleteCommunityFromJson(json);
 
   final path = '/community/delete';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  CommunityResponse responseFactory(Map<String, dynamic> json) =>
-      CommunityResponse.fromJson(json);
+  CommunityResponse responseFactory(Map<String, dynamic> json) => CommunityResponse.fromJson(json);
 }
 
 /// Only available in lemmy v0.19.0 and above
@@ -224,11 +192,7 @@ class DeleteCommunity
 ///
 /// `HTTP.PUT /community/hide`
 @freezed
-class HideCommunity
-    with _$HideCommunity
-    implements
-        LemmyApiQuery<HideCommunityResponse>,
-        LemmyApiAuthenticatedQuery {
+class HideCommunity with _$HideCommunity implements LemmyApiQuery<HideCommunityResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory HideCommunity({
     required int communityId, // v0.18.0
@@ -238,25 +202,21 @@ class HideCommunity
   }) = _HideCommunity;
 
   const HideCommunity._();
-  factory HideCommunity.fromJson(Map<String, dynamic> json) =>
-      _$HideCommunityFromJson(json);
+  factory HideCommunity.fromJson(Map<String, dynamic> json) => _$HideCommunityFromJson(json);
 
   final path = '/community/hide';
 
   final httpMethod = HttpMethod.put;
 
   @override
-  HideCommunityResponse responseFactory(Map<String, dynamic> json) =>
-      HideCommunityResponse.fromJson(json);
+  HideCommunityResponse responseFactory(Map<String, dynamic> json) => HideCommunityResponse.fromJson(json);
 }
 
 /// A moderator remove for a community.
 ///
 /// `HTTP.POST /community/remove`
 @freezed
-class RemoveCommunity
-    with _$RemoveCommunity
-    implements LemmyApiQuery<CommunityResponse>, LemmyApiAuthenticatedQuery {
+class RemoveCommunity with _$RemoveCommunity implements LemmyApiQuery<CommunityResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory RemoveCommunity({
     required int communityId, // v0.18.0
@@ -267,25 +227,21 @@ class RemoveCommunity
   }) = _RemoveCommunity;
 
   const RemoveCommunity._();
-  factory RemoveCommunity.fromJson(Map<String, dynamic> json) =>
-      _$RemoveCommunityFromJson(json);
+  factory RemoveCommunity.fromJson(Map<String, dynamic> json) => _$RemoveCommunityFromJson(json);
 
   final path = '/community/remove';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  CommunityResponse responseFactory(Map<String, dynamic> json) =>
-      CommunityResponse.fromJson(json);
+  CommunityResponse responseFactory(Map<String, dynamic> json) => CommunityResponse.fromJson(json);
 }
 
 /// Transfer your community to an existing moderator.
 ///
 /// `HTTP.POST /community/transfer`
 @freezed
-class TransferCommunity
-    with _$TransferCommunity
-    implements LemmyApiQuery<GetCommunityResponse>, LemmyApiAuthenticatedQuery {
+class TransferCommunity with _$TransferCommunity implements LemmyApiQuery<GetCommunityResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory TransferCommunity({
     required int communityId, // v0.18.0
@@ -294,27 +250,21 @@ class TransferCommunity
   }) = _TransferCommunity;
 
   const TransferCommunity._();
-  factory TransferCommunity.fromJson(Map<String, dynamic> json) =>
-      _$TransferCommunityFromJson(json);
+  factory TransferCommunity.fromJson(Map<String, dynamic> json) => _$TransferCommunityFromJson(json);
 
   final path = '/community/transfer';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  GetCommunityResponse responseFactory(Map<String, dynamic> json) =>
-      GetCommunityResponse.fromJson(json);
+  GetCommunityResponse responseFactory(Map<String, dynamic> json) => GetCommunityResponse.fromJson(json);
 }
 
 /// Ban a user from a community.
 ///
 /// `HTTP.POST /community/ban_user`
 @freezed
-class BanFromCommunity
-    with _$BanFromCommunity
-    implements
-        LemmyApiQuery<BanFromCommunityResponse>,
-        LemmyApiAuthenticatedQuery {
+class BanFromCommunity with _$BanFromCommunity implements LemmyApiQuery<BanFromCommunityResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory BanFromCommunity({
     required int communityId, // v0.18.0
@@ -327,27 +277,21 @@ class BanFromCommunity
   }) = _BanFromCommunity;
 
   const BanFromCommunity._();
-  factory BanFromCommunity.fromJson(Map<String, dynamic> json) =>
-      _$BanFromCommunityFromJson(json);
+  factory BanFromCommunity.fromJson(Map<String, dynamic> json) => _$BanFromCommunityFromJson(json);
 
   final path = '/community/ban_user';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  BanFromCommunityResponse responseFactory(Map<String, dynamic> json) =>
-      BanFromCommunityResponse.fromJson(json);
+  BanFromCommunityResponse responseFactory(Map<String, dynamic> json) => BanFromCommunityResponse.fromJson(json);
 }
 
 /// Add a moderator to your community.
 ///
 /// `HTTP.POST /community/mod`
 @freezed
-class AddModToCommunity
-    with _$AddModToCommunity
-    implements
-        LemmyApiQuery<AddModToCommunityResponse>,
-        LemmyApiAuthenticatedQuery {
+class AddModToCommunity with _$AddModToCommunity implements LemmyApiQuery<AddModToCommunityResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory AddModToCommunity({
     required int communityId, // v0.18.0
@@ -357,14 +301,12 @@ class AddModToCommunity
   }) = _AddModToCommunity;
 
   const AddModToCommunity._();
-  factory AddModToCommunity.fromJson(Map<String, dynamic> json) =>
-      _$AddModToCommunityFromJson(json);
+  factory AddModToCommunity.fromJson(Map<String, dynamic> json) => _$AddModToCommunityFromJson(json);
 
   final path = '/community/mod';
 
   final httpMethod = HttpMethod.post;
 
   @override
-  AddModToCommunityResponse responseFactory(Map<String, dynamic> json) =>
-      AddModToCommunityResponse.fromJson(json);
+  AddModToCommunityResponse responseFactory(Map<String, dynamic> json) => AddModToCommunityResponse.fromJson(json);
 }

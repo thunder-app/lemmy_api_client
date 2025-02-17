@@ -12,7 +12,8 @@ part of 'admin.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 AddAdmin _$AddAdminFromJson(Map<String, dynamic> json) {
   return _AddAdmin.fromJson(json);
@@ -30,21 +31,18 @@ mixin _$AddAdmin {
   /// Create a copy of AddAdmin
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $AddAdminCopyWith<AddAdmin> get copyWith =>
-      throw _privateConstructorUsedError;
+  $AddAdminCopyWith<AddAdmin> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AddAdminCopyWith<$Res> {
-  factory $AddAdminCopyWith(AddAdmin value, $Res Function(AddAdmin) then) =
-      _$AddAdminCopyWithImpl<$Res, AddAdmin>;
+  factory $AddAdminCopyWith(AddAdmin value, $Res Function(AddAdmin) then) = _$AddAdminCopyWithImpl<$Res, AddAdmin>;
   @useResult
   $Res call({int personId, bool added, String? auth});
 }
 
 /// @nodoc
-class _$AddAdminCopyWithImpl<$Res, $Val extends AddAdmin>
-    implements $AddAdminCopyWith<$Res> {
+class _$AddAdminCopyWithImpl<$Res, $Val extends AddAdmin> implements $AddAdminCopyWith<$Res> {
   _$AddAdminCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -56,70 +54,66 @@ class _$AddAdminCopyWithImpl<$Res, $Val extends AddAdmin>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? personId = null,
-    Object? added = null,
-    Object? auth = freezed,
-  }) {
-    return _then(_value.copyWith(
-      personId: null == personId
-          ? _value.personId
-          : personId // ignore: cast_nullable_to_non_nullable
-              as int,
-      added: null == added
-          ? _value.added
-          : added // ignore: cast_nullable_to_non_nullable
-              as bool,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  $Res call({Object? personId = null, Object? added = null, Object? auth = freezed}) {
+    return _then(
+      _value.copyWith(
+            personId:
+                null == personId
+                    ? _value.personId
+                    : personId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            added:
+                null == added
+                    ? _value.added
+                    : added // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$AddAdminImplCopyWith<$Res>
-    implements $AddAdminCopyWith<$Res> {
-  factory _$$AddAdminImplCopyWith(
-          _$AddAdminImpl value, $Res Function(_$AddAdminImpl) then) =
-      __$$AddAdminImplCopyWithImpl<$Res>;
+abstract class _$$AddAdminImplCopyWith<$Res> implements $AddAdminCopyWith<$Res> {
+  factory _$$AddAdminImplCopyWith(_$AddAdminImpl value, $Res Function(_$AddAdminImpl) then) = __$$AddAdminImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int personId, bool added, String? auth});
 }
 
 /// @nodoc
-class __$$AddAdminImplCopyWithImpl<$Res>
-    extends _$AddAdminCopyWithImpl<$Res, _$AddAdminImpl>
-    implements _$$AddAdminImplCopyWith<$Res> {
-  __$$AddAdminImplCopyWithImpl(
-      _$AddAdminImpl _value, $Res Function(_$AddAdminImpl) _then)
-      : super(_value, _then);
+class __$$AddAdminImplCopyWithImpl<$Res> extends _$AddAdminCopyWithImpl<$Res, _$AddAdminImpl> implements _$$AddAdminImplCopyWith<$Res> {
+  __$$AddAdminImplCopyWithImpl(_$AddAdminImpl _value, $Res Function(_$AddAdminImpl) _then) : super(_value, _then);
 
   /// Create a copy of AddAdmin
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? personId = null,
-    Object? added = null,
-    Object? auth = freezed,
-  }) {
-    return _then(_$AddAdminImpl(
-      personId: null == personId
-          ? _value.personId
-          : personId // ignore: cast_nullable_to_non_nullable
-              as int,
-      added: null == added
-          ? _value.added
-          : added // ignore: cast_nullable_to_non_nullable
-              as bool,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? personId = null, Object? added = null, Object? auth = freezed}) {
+    return _then(
+      _$AddAdminImpl(
+        personId:
+            null == personId
+                ? _value.personId
+                : personId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        added:
+            null == added
+                ? _value.added
+                : added // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -127,18 +121,16 @@ class __$$AddAdminImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$AddAdminImpl extends _AddAdmin {
-  const _$AddAdminImpl({required this.personId, required this.added, this.auth})
-      : super._();
+  const _$AddAdminImpl({required this.personId, required this.added, this.auth}) : super._();
 
-  factory _$AddAdminImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AddAdminImplFromJson(json);
+  factory _$AddAdminImpl.fromJson(Map<String, dynamic> json) => _$$AddAdminImplFromJson(json);
 
   @override
   final int personId;
-// v0.18.0
+  // v0.18.0
   @override
   final bool added;
-// v0.18.0
+  // v0.18.0
   @override
   final String? auth;
 
@@ -152,8 +144,7 @@ class _$AddAdminImpl extends _AddAdmin {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AddAdminImpl &&
-            (identical(other.personId, personId) ||
-                other.personId == personId) &&
+            (identical(other.personId, personId) || other.personId == personId) &&
             (identical(other.added, added) || other.added == added) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
@@ -167,26 +158,19 @@ class _$AddAdminImpl extends _AddAdmin {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$AddAdminImplCopyWith<_$AddAdminImpl> get copyWith =>
-      __$$AddAdminImplCopyWithImpl<_$AddAdminImpl>(this, _$identity);
+  _$$AddAdminImplCopyWith<_$AddAdminImpl> get copyWith => __$$AddAdminImplCopyWithImpl<_$AddAdminImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AddAdminImplToJson(
-      this,
-    );
+    return _$$AddAdminImplToJson(this);
   }
 }
 
 abstract class _AddAdmin extends AddAdmin {
-  const factory _AddAdmin(
-      {required final int personId,
-      required final bool added,
-      final String? auth}) = _$AddAdminImpl;
+  const factory _AddAdmin({required final int personId, required final bool added, final String? auth}) = _$AddAdminImpl;
   const _AddAdmin._() : super._();
 
-  factory _AddAdmin.fromJson(Map<String, dynamic> json) =
-      _$AddAdminImpl.fromJson;
+  factory _AddAdmin.fromJson(Map<String, dynamic> json) = _$AddAdminImpl.fromJson;
 
   @override
   int get personId; // v0.18.0
@@ -199,12 +183,10 @@ abstract class _AddAdmin extends AddAdmin {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AddAdminImplCopyWith<_$AddAdminImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$AddAdminImplCopyWith<_$AddAdminImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
-GetUnreadRegistrationApplicationCount
-    _$GetUnreadRegistrationApplicationCountFromJson(Map<String, dynamic> json) {
+GetUnreadRegistrationApplicationCount _$GetUnreadRegistrationApplicationCountFromJson(Map<String, dynamic> json) {
   return _GetUnreadRegistrationApplicationCount.fromJson(json);
 }
 
@@ -218,26 +200,19 @@ mixin _$GetUnreadRegistrationApplicationCount {
   /// Create a copy of GetUnreadRegistrationApplicationCount
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $GetUnreadRegistrationApplicationCountCopyWith<
-          GetUnreadRegistrationApplicationCount>
-      get copyWith => throw _privateConstructorUsedError;
+  $GetUnreadRegistrationApplicationCountCopyWith<GetUnreadRegistrationApplicationCount> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GetUnreadRegistrationApplicationCountCopyWith<$Res> {
-  factory $GetUnreadRegistrationApplicationCountCopyWith(
-          GetUnreadRegistrationApplicationCount value,
-          $Res Function(GetUnreadRegistrationApplicationCount) then) =
-      _$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res,
-          GetUnreadRegistrationApplicationCount>;
+  factory $GetUnreadRegistrationApplicationCountCopyWith(GetUnreadRegistrationApplicationCount value, $Res Function(GetUnreadRegistrationApplicationCount) then) =
+      _$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res, GetUnreadRegistrationApplicationCount>;
   @useResult
   $Res call({String? auth});
 }
 
 /// @nodoc
-class _$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res,
-        $Val extends GetUnreadRegistrationApplicationCount>
-    implements $GetUnreadRegistrationApplicationCountCopyWith<$Res> {
+class _$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res, $Val extends GetUnreadRegistrationApplicationCount> implements $GetUnreadRegistrationApplicationCountCopyWith<$Res> {
   _$GetUnreadRegistrationApplicationCountCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -249,24 +224,23 @@ class _$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? auth = freezed,
-  }) {
-    return _then(_value.copyWith(
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  $Res call({Object? auth = freezed}) {
+    return _then(
+      _value.copyWith(
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$GetUnreadRegistrationApplicationCountImplCopyWith<$Res>
-    implements $GetUnreadRegistrationApplicationCountCopyWith<$Res> {
-  factory _$$GetUnreadRegistrationApplicationCountImplCopyWith(
-          _$GetUnreadRegistrationApplicationCountImpl value,
-          $Res Function(_$GetUnreadRegistrationApplicationCountImpl) then) =
+abstract class _$$GetUnreadRegistrationApplicationCountImplCopyWith<$Res> implements $GetUnreadRegistrationApplicationCountCopyWith<$Res> {
+  factory _$$GetUnreadRegistrationApplicationCountImplCopyWith(_$GetUnreadRegistrationApplicationCountImpl value, $Res Function(_$GetUnreadRegistrationApplicationCountImpl) then) =
       __$$GetUnreadRegistrationApplicationCountImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -274,41 +248,35 @@ abstract class _$$GetUnreadRegistrationApplicationCountImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$GetUnreadRegistrationApplicationCountImplCopyWithImpl<$Res>
-    extends _$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res,
-        _$GetUnreadRegistrationApplicationCountImpl>
+class __$$GetUnreadRegistrationApplicationCountImplCopyWithImpl<$Res> extends _$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res, _$GetUnreadRegistrationApplicationCountImpl>
     implements _$$GetUnreadRegistrationApplicationCountImplCopyWith<$Res> {
-  __$$GetUnreadRegistrationApplicationCountImplCopyWithImpl(
-      _$GetUnreadRegistrationApplicationCountImpl _value,
-      $Res Function(_$GetUnreadRegistrationApplicationCountImpl) _then)
-      : super(_value, _then);
+  __$$GetUnreadRegistrationApplicationCountImplCopyWithImpl(_$GetUnreadRegistrationApplicationCountImpl _value, $Res Function(_$GetUnreadRegistrationApplicationCountImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of GetUnreadRegistrationApplicationCount
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? auth = freezed,
-  }) {
-    return _then(_$GetUnreadRegistrationApplicationCountImpl(
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? auth = freezed}) {
+    return _then(
+      _$GetUnreadRegistrationApplicationCountImpl(
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 @apiSerde
-class _$GetUnreadRegistrationApplicationCountImpl
-    extends _GetUnreadRegistrationApplicationCount {
+class _$GetUnreadRegistrationApplicationCountImpl extends _GetUnreadRegistrationApplicationCount {
   const _$GetUnreadRegistrationApplicationCountImpl({this.auth}) : super._();
 
-  factory _$GetUnreadRegistrationApplicationCountImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$GetUnreadRegistrationApplicationCountImplFromJson(json);
+  factory _$GetUnreadRegistrationApplicationCountImpl.fromJson(Map<String, dynamic> json) => _$$GetUnreadRegistrationApplicationCountImplFromJson(json);
 
   @override
   final String? auth;
@@ -320,10 +288,7 @@ class _$GetUnreadRegistrationApplicationCountImpl
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$GetUnreadRegistrationApplicationCountImpl &&
-            (identical(other.auth, auth) || other.auth == auth));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$GetUnreadRegistrationApplicationCountImpl && (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -335,28 +300,20 @@ class _$GetUnreadRegistrationApplicationCountImpl
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetUnreadRegistrationApplicationCountImplCopyWith<
-          _$GetUnreadRegistrationApplicationCountImpl>
-      get copyWith => __$$GetUnreadRegistrationApplicationCountImplCopyWithImpl<
-          _$GetUnreadRegistrationApplicationCountImpl>(this, _$identity);
+  _$$GetUnreadRegistrationApplicationCountImplCopyWith<_$GetUnreadRegistrationApplicationCountImpl> get copyWith =>
+      __$$GetUnreadRegistrationApplicationCountImplCopyWithImpl<_$GetUnreadRegistrationApplicationCountImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetUnreadRegistrationApplicationCountImplToJson(
-      this,
-    );
+    return _$$GetUnreadRegistrationApplicationCountImplToJson(this);
   }
 }
 
-abstract class _GetUnreadRegistrationApplicationCount
-    extends GetUnreadRegistrationApplicationCount {
-  const factory _GetUnreadRegistrationApplicationCount({final String? auth}) =
-      _$GetUnreadRegistrationApplicationCountImpl;
+abstract class _GetUnreadRegistrationApplicationCount extends GetUnreadRegistrationApplicationCount {
+  const factory _GetUnreadRegistrationApplicationCount({final String? auth}) = _$GetUnreadRegistrationApplicationCountImpl;
   const _GetUnreadRegistrationApplicationCount._() : super._();
 
-  factory _GetUnreadRegistrationApplicationCount.fromJson(
-          Map<String, dynamic> json) =
-      _$GetUnreadRegistrationApplicationCountImpl.fromJson;
+  factory _GetUnreadRegistrationApplicationCount.fromJson(Map<String, dynamic> json) = _$GetUnreadRegistrationApplicationCountImpl.fromJson;
 
   @override
   String? get auth;
@@ -365,13 +322,10 @@ abstract class _GetUnreadRegistrationApplicationCount
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetUnreadRegistrationApplicationCountImplCopyWith<
-          _$GetUnreadRegistrationApplicationCountImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$GetUnreadRegistrationApplicationCountImplCopyWith<_$GetUnreadRegistrationApplicationCountImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
-ListRegistrationApplications _$ListRegistrationApplicationsFromJson(
-    Map<String, dynamic> json) {
+ListRegistrationApplications _$ListRegistrationApplicationsFromJson(Map<String, dynamic> json) {
   return _ListRegistrationApplications.fromJson(json);
 }
 
@@ -388,25 +342,19 @@ mixin _$ListRegistrationApplications {
   /// Create a copy of ListRegistrationApplications
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ListRegistrationApplicationsCopyWith<ListRegistrationApplications>
-      get copyWith => throw _privateConstructorUsedError;
+  $ListRegistrationApplicationsCopyWith<ListRegistrationApplications> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ListRegistrationApplicationsCopyWith<$Res> {
-  factory $ListRegistrationApplicationsCopyWith(
-          ListRegistrationApplications value,
-          $Res Function(ListRegistrationApplications) then) =
-      _$ListRegistrationApplicationsCopyWithImpl<$Res,
-          ListRegistrationApplications>;
+  factory $ListRegistrationApplicationsCopyWith(ListRegistrationApplications value, $Res Function(ListRegistrationApplications) then) =
+      _$ListRegistrationApplicationsCopyWithImpl<$Res, ListRegistrationApplications>;
   @useResult
   $Res call({bool? unreadOnly, int? page, int? limit, String? auth});
 }
 
 /// @nodoc
-class _$ListRegistrationApplicationsCopyWithImpl<$Res,
-        $Val extends ListRegistrationApplications>
-    implements $ListRegistrationApplicationsCopyWith<$Res> {
+class _$ListRegistrationApplicationsCopyWithImpl<$Res, $Val extends ListRegistrationApplications> implements $ListRegistrationApplicationsCopyWith<$Res> {
   _$ListRegistrationApplicationsCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -418,39 +366,38 @@ class _$ListRegistrationApplicationsCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? unreadOnly = freezed,
-    Object? page = freezed,
-    Object? limit = freezed,
-    Object? auth = freezed,
-  }) {
-    return _then(_value.copyWith(
-      unreadOnly: freezed == unreadOnly
-          ? _value.unreadOnly
-          : unreadOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      page: freezed == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as int?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  $Res call({Object? unreadOnly = freezed, Object? page = freezed, Object? limit = freezed, Object? auth = freezed}) {
+    return _then(
+      _value.copyWith(
+            unreadOnly:
+                freezed == unreadOnly
+                    ? _value.unreadOnly
+                    : unreadOnly // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            page:
+                freezed == page
+                    ? _value.page
+                    : page // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$ListRegistrationApplicationsImplCopyWith<$Res>
-    implements $ListRegistrationApplicationsCopyWith<$Res> {
-  factory _$$ListRegistrationApplicationsImplCopyWith(
-          _$ListRegistrationApplicationsImpl value,
-          $Res Function(_$ListRegistrationApplicationsImpl) then) =
+abstract class _$$ListRegistrationApplicationsImplCopyWith<$Res> implements $ListRegistrationApplicationsCopyWith<$Res> {
+  factory _$$ListRegistrationApplicationsImplCopyWith(_$ListRegistrationApplicationsImpl value, $Res Function(_$ListRegistrationApplicationsImpl) then) =
       __$$ListRegistrationApplicationsImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -458,43 +405,39 @@ abstract class _$$ListRegistrationApplicationsImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ListRegistrationApplicationsImplCopyWithImpl<$Res>
-    extends _$ListRegistrationApplicationsCopyWithImpl<$Res,
-        _$ListRegistrationApplicationsImpl>
+class __$$ListRegistrationApplicationsImplCopyWithImpl<$Res> extends _$ListRegistrationApplicationsCopyWithImpl<$Res, _$ListRegistrationApplicationsImpl>
     implements _$$ListRegistrationApplicationsImplCopyWith<$Res> {
-  __$$ListRegistrationApplicationsImplCopyWithImpl(
-      _$ListRegistrationApplicationsImpl _value,
-      $Res Function(_$ListRegistrationApplicationsImpl) _then)
-      : super(_value, _then);
+  __$$ListRegistrationApplicationsImplCopyWithImpl(_$ListRegistrationApplicationsImpl _value, $Res Function(_$ListRegistrationApplicationsImpl) _then) : super(_value, _then);
 
   /// Create a copy of ListRegistrationApplications
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? unreadOnly = freezed,
-    Object? page = freezed,
-    Object? limit = freezed,
-    Object? auth = freezed,
-  }) {
-    return _then(_$ListRegistrationApplicationsImpl(
-      unreadOnly: freezed == unreadOnly
-          ? _value.unreadOnly
-          : unreadOnly // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      page: freezed == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as int?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? unreadOnly = freezed, Object? page = freezed, Object? limit = freezed, Object? auth = freezed}) {
+    return _then(
+      _$ListRegistrationApplicationsImpl(
+        unreadOnly:
+            freezed == unreadOnly
+                ? _value.unreadOnly
+                : unreadOnly // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        page:
+            freezed == page
+                ? _value.page
+                : page // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -502,23 +445,19 @@ class __$$ListRegistrationApplicationsImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$ListRegistrationApplicationsImpl extends _ListRegistrationApplications {
-  const _$ListRegistrationApplicationsImpl(
-      {this.unreadOnly, this.page, this.limit, this.auth})
-      : super._();
+  const _$ListRegistrationApplicationsImpl({this.unreadOnly, this.page, this.limit, this.auth}) : super._();
 
-  factory _$ListRegistrationApplicationsImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$ListRegistrationApplicationsImplFromJson(json);
+  factory _$ListRegistrationApplicationsImpl.fromJson(Map<String, dynamic> json) => _$$ListRegistrationApplicationsImplFromJson(json);
 
   @override
   final bool? unreadOnly;
-// v0.18.0
+  // v0.18.0
   @override
   final int? page;
-// v0.18.0
+  // v0.18.0
   @override
   final int? limit;
-// v0.18.0
+  // v0.18.0
   @override
   final String? auth;
 
@@ -532,8 +471,7 @@ class _$ListRegistrationApplicationsImpl extends _ListRegistrationApplications {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ListRegistrationApplicationsImpl &&
-            (identical(other.unreadOnly, unreadOnly) ||
-                other.unreadOnly == unreadOnly) &&
+            (identical(other.unreadOnly, unreadOnly) || other.unreadOnly == unreadOnly) &&
             (identical(other.page, page) || other.page == page) &&
             (identical(other.limit, limit) || other.limit == limit) &&
             (identical(other.auth, auth) || other.auth == auth));
@@ -548,30 +486,20 @@ class _$ListRegistrationApplicationsImpl extends _ListRegistrationApplications {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ListRegistrationApplicationsImplCopyWith<
-          _$ListRegistrationApplicationsImpl>
-      get copyWith => __$$ListRegistrationApplicationsImplCopyWithImpl<
-          _$ListRegistrationApplicationsImpl>(this, _$identity);
+  _$$ListRegistrationApplicationsImplCopyWith<_$ListRegistrationApplicationsImpl> get copyWith =>
+      __$$ListRegistrationApplicationsImplCopyWithImpl<_$ListRegistrationApplicationsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ListRegistrationApplicationsImplToJson(
-      this,
-    );
+    return _$$ListRegistrationApplicationsImplToJson(this);
   }
 }
 
-abstract class _ListRegistrationApplications
-    extends ListRegistrationApplications {
-  const factory _ListRegistrationApplications(
-      {final bool? unreadOnly,
-      final int? page,
-      final int? limit,
-      final String? auth}) = _$ListRegistrationApplicationsImpl;
+abstract class _ListRegistrationApplications extends ListRegistrationApplications {
+  const factory _ListRegistrationApplications({final bool? unreadOnly, final int? page, final int? limit, final String? auth}) = _$ListRegistrationApplicationsImpl;
   const _ListRegistrationApplications._() : super._();
 
-  factory _ListRegistrationApplications.fromJson(Map<String, dynamic> json) =
-      _$ListRegistrationApplicationsImpl.fromJson;
+  factory _ListRegistrationApplications.fromJson(Map<String, dynamic> json) = _$ListRegistrationApplicationsImpl.fromJson;
 
   @override
   bool? get unreadOnly; // v0.18.0
@@ -586,13 +514,10 @@ abstract class _ListRegistrationApplications
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ListRegistrationApplicationsImplCopyWith<
-          _$ListRegistrationApplicationsImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$ListRegistrationApplicationsImplCopyWith<_$ListRegistrationApplicationsImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
-ApproveRegistrationApplication _$ApproveRegistrationApplicationFromJson(
-    Map<String, dynamic> json) {
+ApproveRegistrationApplication _$ApproveRegistrationApplicationFromJson(Map<String, dynamic> json) {
   return _ApproveRegistrationApplication.fromJson(json);
 }
 
@@ -609,25 +534,19 @@ mixin _$ApproveRegistrationApplication {
   /// Create a copy of ApproveRegistrationApplication
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ApproveRegistrationApplicationCopyWith<ApproveRegistrationApplication>
-      get copyWith => throw _privateConstructorUsedError;
+  $ApproveRegistrationApplicationCopyWith<ApproveRegistrationApplication> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ApproveRegistrationApplicationCopyWith<$Res> {
-  factory $ApproveRegistrationApplicationCopyWith(
-          ApproveRegistrationApplication value,
-          $Res Function(ApproveRegistrationApplication) then) =
-      _$ApproveRegistrationApplicationCopyWithImpl<$Res,
-          ApproveRegistrationApplication>;
+  factory $ApproveRegistrationApplicationCopyWith(ApproveRegistrationApplication value, $Res Function(ApproveRegistrationApplication) then) =
+      _$ApproveRegistrationApplicationCopyWithImpl<$Res, ApproveRegistrationApplication>;
   @useResult
   $Res call({int id, bool approve, String? denyReason, String? auth});
 }
 
 /// @nodoc
-class _$ApproveRegistrationApplicationCopyWithImpl<$Res,
-        $Val extends ApproveRegistrationApplication>
-    implements $ApproveRegistrationApplicationCopyWith<$Res> {
+class _$ApproveRegistrationApplicationCopyWithImpl<$Res, $Val extends ApproveRegistrationApplication> implements $ApproveRegistrationApplicationCopyWith<$Res> {
   _$ApproveRegistrationApplicationCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -639,39 +558,38 @@ class _$ApproveRegistrationApplicationCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? approve = null,
-    Object? denyReason = freezed,
-    Object? auth = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      approve: null == approve
-          ? _value.approve
-          : approve // ignore: cast_nullable_to_non_nullable
-              as bool,
-      denyReason: freezed == denyReason
-          ? _value.denyReason
-          : denyReason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  $Res call({Object? id = null, Object? approve = null, Object? denyReason = freezed, Object? auth = freezed}) {
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as int,
+            approve:
+                null == approve
+                    ? _value.approve
+                    : approve // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            denyReason:
+                freezed == denyReason
+                    ? _value.denyReason
+                    : denyReason // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$ApproveRegistrationApplicationImplCopyWith<$Res>
-    implements $ApproveRegistrationApplicationCopyWith<$Res> {
-  factory _$$ApproveRegistrationApplicationImplCopyWith(
-          _$ApproveRegistrationApplicationImpl value,
-          $Res Function(_$ApproveRegistrationApplicationImpl) then) =
+abstract class _$$ApproveRegistrationApplicationImplCopyWith<$Res> implements $ApproveRegistrationApplicationCopyWith<$Res> {
+  factory _$$ApproveRegistrationApplicationImplCopyWith(_$ApproveRegistrationApplicationImpl value, $Res Function(_$ApproveRegistrationApplicationImpl) then) =
       __$$ApproveRegistrationApplicationImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -679,68 +597,59 @@ abstract class _$$ApproveRegistrationApplicationImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ApproveRegistrationApplicationImplCopyWithImpl<$Res>
-    extends _$ApproveRegistrationApplicationCopyWithImpl<$Res,
-        _$ApproveRegistrationApplicationImpl>
+class __$$ApproveRegistrationApplicationImplCopyWithImpl<$Res> extends _$ApproveRegistrationApplicationCopyWithImpl<$Res, _$ApproveRegistrationApplicationImpl>
     implements _$$ApproveRegistrationApplicationImplCopyWith<$Res> {
-  __$$ApproveRegistrationApplicationImplCopyWithImpl(
-      _$ApproveRegistrationApplicationImpl _value,
-      $Res Function(_$ApproveRegistrationApplicationImpl) _then)
-      : super(_value, _then);
+  __$$ApproveRegistrationApplicationImplCopyWithImpl(_$ApproveRegistrationApplicationImpl _value, $Res Function(_$ApproveRegistrationApplicationImpl) _then) : super(_value, _then);
 
   /// Create a copy of ApproveRegistrationApplication
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? approve = null,
-    Object? denyReason = freezed,
-    Object? auth = freezed,
-  }) {
-    return _then(_$ApproveRegistrationApplicationImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      approve: null == approve
-          ? _value.approve
-          : approve // ignore: cast_nullable_to_non_nullable
-              as bool,
-      denyReason: freezed == denyReason
-          ? _value.denyReason
-          : denyReason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? id = null, Object? approve = null, Object? denyReason = freezed, Object? auth = freezed}) {
+    return _then(
+      _$ApproveRegistrationApplicationImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as int,
+        approve:
+            null == approve
+                ? _value.approve
+                : approve // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        denyReason:
+            freezed == denyReason
+                ? _value.denyReason
+                : denyReason // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 @apiSerde
-class _$ApproveRegistrationApplicationImpl
-    extends _ApproveRegistrationApplication {
-  const _$ApproveRegistrationApplicationImpl(
-      {required this.id, required this.approve, this.denyReason, this.auth})
-      : super._();
+class _$ApproveRegistrationApplicationImpl extends _ApproveRegistrationApplication {
+  const _$ApproveRegistrationApplicationImpl({required this.id, required this.approve, this.denyReason, this.auth}) : super._();
 
-  factory _$ApproveRegistrationApplicationImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$ApproveRegistrationApplicationImplFromJson(json);
+  factory _$ApproveRegistrationApplicationImpl.fromJson(Map<String, dynamic> json) => _$$ApproveRegistrationApplicationImplFromJson(json);
 
   @override
   final int id;
-// v0.18.0
+  // v0.18.0
   @override
   final bool approve;
-// v0.18.0
+  // v0.18.0
   @override
   final String? denyReason;
-// v0.18.0
+  // v0.18.0
   @override
   final String? auth;
 
@@ -756,8 +665,7 @@ class _$ApproveRegistrationApplicationImpl
             other is _$ApproveRegistrationApplicationImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.approve, approve) || other.approve == approve) &&
-            (identical(other.denyReason, denyReason) ||
-                other.denyReason == denyReason) &&
+            (identical(other.denyReason, denyReason) || other.denyReason == denyReason) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
@@ -770,30 +678,20 @@ class _$ApproveRegistrationApplicationImpl
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ApproveRegistrationApplicationImplCopyWith<
-          _$ApproveRegistrationApplicationImpl>
-      get copyWith => __$$ApproveRegistrationApplicationImplCopyWithImpl<
-          _$ApproveRegistrationApplicationImpl>(this, _$identity);
+  _$$ApproveRegistrationApplicationImplCopyWith<_$ApproveRegistrationApplicationImpl> get copyWith =>
+      __$$ApproveRegistrationApplicationImplCopyWithImpl<_$ApproveRegistrationApplicationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ApproveRegistrationApplicationImplToJson(
-      this,
-    );
+    return _$$ApproveRegistrationApplicationImplToJson(this);
   }
 }
 
-abstract class _ApproveRegistrationApplication
-    extends ApproveRegistrationApplication {
-  const factory _ApproveRegistrationApplication(
-      {required final int id,
-      required final bool approve,
-      final String? denyReason,
-      final String? auth}) = _$ApproveRegistrationApplicationImpl;
+abstract class _ApproveRegistrationApplication extends ApproveRegistrationApplication {
+  const factory _ApproveRegistrationApplication({required final int id, required final bool approve, final String? denyReason, final String? auth}) = _$ApproveRegistrationApplicationImpl;
   const _ApproveRegistrationApplication._() : super._();
 
-  factory _ApproveRegistrationApplication.fromJson(Map<String, dynamic> json) =
-      _$ApproveRegistrationApplicationImpl.fromJson;
+  factory _ApproveRegistrationApplication.fromJson(Map<String, dynamic> json) = _$ApproveRegistrationApplicationImpl.fromJson;
 
   @override
   int get id; // v0.18.0
@@ -808,13 +706,10 @@ abstract class _ApproveRegistrationApplication
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ApproveRegistrationApplicationImplCopyWith<
-          _$ApproveRegistrationApplicationImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$ApproveRegistrationApplicationImplCopyWith<_$ApproveRegistrationApplicationImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
-GetRegistrationApplication _$GetRegistrationApplicationFromJson(
-    Map<String, dynamic> json) {
+GetRegistrationApplication _$GetRegistrationApplicationFromJson(Map<String, dynamic> json) {
   return _GetRegistrationApplication.fromJson(json);
 }
 
@@ -829,24 +724,19 @@ mixin _$GetRegistrationApplication {
   /// Create a copy of GetRegistrationApplication
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $GetRegistrationApplicationCopyWith<GetRegistrationApplication>
-      get copyWith => throw _privateConstructorUsedError;
+  $GetRegistrationApplicationCopyWith<GetRegistrationApplication> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GetRegistrationApplicationCopyWith<$Res> {
-  factory $GetRegistrationApplicationCopyWith(GetRegistrationApplication value,
-          $Res Function(GetRegistrationApplication) then) =
-      _$GetRegistrationApplicationCopyWithImpl<$Res,
-          GetRegistrationApplication>;
+  factory $GetRegistrationApplicationCopyWith(GetRegistrationApplication value, $Res Function(GetRegistrationApplication) then) =
+      _$GetRegistrationApplicationCopyWithImpl<$Res, GetRegistrationApplication>;
   @useResult
   $Res call({int personId, String? auth});
 }
 
 /// @nodoc
-class _$GetRegistrationApplicationCopyWithImpl<$Res,
-        $Val extends GetRegistrationApplication>
-    implements $GetRegistrationApplicationCopyWith<$Res> {
+class _$GetRegistrationApplicationCopyWithImpl<$Res, $Val extends GetRegistrationApplication> implements $GetRegistrationApplicationCopyWith<$Res> {
   _$GetRegistrationApplicationCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -858,29 +748,28 @@ class _$GetRegistrationApplicationCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? personId = null,
-    Object? auth = freezed,
-  }) {
-    return _then(_value.copyWith(
-      personId: null == personId
-          ? _value.personId
-          : personId // ignore: cast_nullable_to_non_nullable
-              as int,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  $Res call({Object? personId = null, Object? auth = freezed}) {
+    return _then(
+      _value.copyWith(
+            personId:
+                null == personId
+                    ? _value.personId
+                    : personId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$GetRegistrationApplicationImplCopyWith<$Res>
-    implements $GetRegistrationApplicationCopyWith<$Res> {
-  factory _$$GetRegistrationApplicationImplCopyWith(
-          _$GetRegistrationApplicationImpl value,
-          $Res Function(_$GetRegistrationApplicationImpl) then) =
+abstract class _$$GetRegistrationApplicationImplCopyWith<$Res> implements $GetRegistrationApplicationCopyWith<$Res> {
+  factory _$$GetRegistrationApplicationImplCopyWith(_$GetRegistrationApplicationImpl value, $Res Function(_$GetRegistrationApplicationImpl) then) =
       __$$GetRegistrationApplicationImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -888,33 +777,29 @@ abstract class _$$GetRegistrationApplicationImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$GetRegistrationApplicationImplCopyWithImpl<$Res>
-    extends _$GetRegistrationApplicationCopyWithImpl<$Res,
-        _$GetRegistrationApplicationImpl>
+class __$$GetRegistrationApplicationImplCopyWithImpl<$Res> extends _$GetRegistrationApplicationCopyWithImpl<$Res, _$GetRegistrationApplicationImpl>
     implements _$$GetRegistrationApplicationImplCopyWith<$Res> {
-  __$$GetRegistrationApplicationImplCopyWithImpl(
-      _$GetRegistrationApplicationImpl _value,
-      $Res Function(_$GetRegistrationApplicationImpl) _then)
-      : super(_value, _then);
+  __$$GetRegistrationApplicationImplCopyWithImpl(_$GetRegistrationApplicationImpl _value, $Res Function(_$GetRegistrationApplicationImpl) _then) : super(_value, _then);
 
   /// Create a copy of GetRegistrationApplication
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? personId = null,
-    Object? auth = freezed,
-  }) {
-    return _then(_$GetRegistrationApplicationImpl(
-      personId: null == personId
-          ? _value.personId
-          : personId // ignore: cast_nullable_to_non_nullable
-              as int,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? personId = null, Object? auth = freezed}) {
+    return _then(
+      _$GetRegistrationApplicationImpl(
+        personId:
+            null == personId
+                ? _value.personId
+                : personId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -922,16 +807,13 @@ class __$$GetRegistrationApplicationImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$GetRegistrationApplicationImpl extends _GetRegistrationApplication {
-  const _$GetRegistrationApplicationImpl({required this.personId, this.auth})
-      : super._();
+  const _$GetRegistrationApplicationImpl({required this.personId, this.auth}) : super._();
 
-  factory _$GetRegistrationApplicationImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$GetRegistrationApplicationImplFromJson(json);
+  factory _$GetRegistrationApplicationImpl.fromJson(Map<String, dynamic> json) => _$$GetRegistrationApplicationImplFromJson(json);
 
   @override
   final int personId;
-// v0.19.6 (required)
+  // v0.19.6 (required)
   @override
   final String? auth;
 
@@ -945,8 +827,7 @@ class _$GetRegistrationApplicationImpl extends _GetRegistrationApplication {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetRegistrationApplicationImpl &&
-            (identical(other.personId, personId) ||
-                other.personId == personId) &&
+            (identical(other.personId, personId) || other.personId == personId) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
@@ -959,26 +840,19 @@ class _$GetRegistrationApplicationImpl extends _GetRegistrationApplication {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetRegistrationApplicationImplCopyWith<_$GetRegistrationApplicationImpl>
-      get copyWith => __$$GetRegistrationApplicationImplCopyWithImpl<
-          _$GetRegistrationApplicationImpl>(this, _$identity);
+  _$$GetRegistrationApplicationImplCopyWith<_$GetRegistrationApplicationImpl> get copyWith => __$$GetRegistrationApplicationImplCopyWithImpl<_$GetRegistrationApplicationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetRegistrationApplicationImplToJson(
-      this,
-    );
+    return _$$GetRegistrationApplicationImplToJson(this);
   }
 }
 
 abstract class _GetRegistrationApplication extends GetRegistrationApplication {
-  const factory _GetRegistrationApplication(
-      {required final int personId,
-      final String? auth}) = _$GetRegistrationApplicationImpl;
+  const factory _GetRegistrationApplication({required final int personId, final String? auth}) = _$GetRegistrationApplicationImpl;
   const _GetRegistrationApplication._() : super._();
 
-  factory _GetRegistrationApplication.fromJson(Map<String, dynamic> json) =
-      _$GetRegistrationApplicationImpl.fromJson;
+  factory _GetRegistrationApplication.fromJson(Map<String, dynamic> json) = _$GetRegistrationApplicationImpl.fromJson;
 
   @override
   int get personId; // v0.19.6 (required)
@@ -989,8 +863,7 @@ abstract class _GetRegistrationApplication extends GetRegistrationApplication {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetRegistrationApplicationImplCopyWith<_$GetRegistrationApplicationImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$GetRegistrationApplicationImplCopyWith<_$GetRegistrationApplicationImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 PurgePerson _$PurgePersonFromJson(Map<String, dynamic> json) {
@@ -1009,22 +882,18 @@ mixin _$PurgePerson {
   /// Create a copy of PurgePerson
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PurgePersonCopyWith<PurgePerson> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PurgePersonCopyWith<PurgePerson> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PurgePersonCopyWith<$Res> {
-  factory $PurgePersonCopyWith(
-          PurgePerson value, $Res Function(PurgePerson) then) =
-      _$PurgePersonCopyWithImpl<$Res, PurgePerson>;
+  factory $PurgePersonCopyWith(PurgePerson value, $Res Function(PurgePerson) then) = _$PurgePersonCopyWithImpl<$Res, PurgePerson>;
   @useResult
   $Res call({int personId, String? reason, String? auth});
 }
 
 /// @nodoc
-class _$PurgePersonCopyWithImpl<$Res, $Val extends PurgePerson>
-    implements $PurgePersonCopyWith<$Res> {
+class _$PurgePersonCopyWithImpl<$Res, $Val extends PurgePerson> implements $PurgePersonCopyWith<$Res> {
   _$PurgePersonCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1036,70 +905,66 @@ class _$PurgePersonCopyWithImpl<$Res, $Val extends PurgePerson>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? personId = null,
-    Object? reason = freezed,
-    Object? auth = freezed,
-  }) {
-    return _then(_value.copyWith(
-      personId: null == personId
-          ? _value.personId
-          : personId // ignore: cast_nullable_to_non_nullable
-              as int,
-      reason: freezed == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  $Res call({Object? personId = null, Object? reason = freezed, Object? auth = freezed}) {
+    return _then(
+      _value.copyWith(
+            personId:
+                null == personId
+                    ? _value.personId
+                    : personId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            reason:
+                freezed == reason
+                    ? _value.reason
+                    : reason // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$PurgePersonImplCopyWith<$Res>
-    implements $PurgePersonCopyWith<$Res> {
-  factory _$$PurgePersonImplCopyWith(
-          _$PurgePersonImpl value, $Res Function(_$PurgePersonImpl) then) =
-      __$$PurgePersonImplCopyWithImpl<$Res>;
+abstract class _$$PurgePersonImplCopyWith<$Res> implements $PurgePersonCopyWith<$Res> {
+  factory _$$PurgePersonImplCopyWith(_$PurgePersonImpl value, $Res Function(_$PurgePersonImpl) then) = __$$PurgePersonImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int personId, String? reason, String? auth});
 }
 
 /// @nodoc
-class __$$PurgePersonImplCopyWithImpl<$Res>
-    extends _$PurgePersonCopyWithImpl<$Res, _$PurgePersonImpl>
-    implements _$$PurgePersonImplCopyWith<$Res> {
-  __$$PurgePersonImplCopyWithImpl(
-      _$PurgePersonImpl _value, $Res Function(_$PurgePersonImpl) _then)
-      : super(_value, _then);
+class __$$PurgePersonImplCopyWithImpl<$Res> extends _$PurgePersonCopyWithImpl<$Res, _$PurgePersonImpl> implements _$$PurgePersonImplCopyWith<$Res> {
+  __$$PurgePersonImplCopyWithImpl(_$PurgePersonImpl _value, $Res Function(_$PurgePersonImpl) _then) : super(_value, _then);
 
   /// Create a copy of PurgePerson
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? personId = null,
-    Object? reason = freezed,
-    Object? auth = freezed,
-  }) {
-    return _then(_$PurgePersonImpl(
-      personId: null == personId
-          ? _value.personId
-          : personId // ignore: cast_nullable_to_non_nullable
-              as int,
-      reason: freezed == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? personId = null, Object? reason = freezed, Object? auth = freezed}) {
+    return _then(
+      _$PurgePersonImpl(
+        personId:
+            null == personId
+                ? _value.personId
+                : personId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        reason:
+            freezed == reason
+                ? _value.reason
+                : reason // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -1107,18 +972,16 @@ class __$$PurgePersonImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$PurgePersonImpl extends _PurgePerson {
-  const _$PurgePersonImpl({required this.personId, this.reason, this.auth})
-      : super._();
+  const _$PurgePersonImpl({required this.personId, this.reason, this.auth}) : super._();
 
-  factory _$PurgePersonImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PurgePersonImplFromJson(json);
+  factory _$PurgePersonImpl.fromJson(Map<String, dynamic> json) => _$$PurgePersonImplFromJson(json);
 
   @override
   final int personId;
-// v0.18.0
+  // v0.18.0
   @override
   final String? reason;
-// v0.18.0
+  // v0.18.0
   @override
   final String? auth;
 
@@ -1132,8 +995,7 @@ class _$PurgePersonImpl extends _PurgePerson {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PurgePersonImpl &&
-            (identical(other.personId, personId) ||
-                other.personId == personId) &&
+            (identical(other.personId, personId) || other.personId == personId) &&
             (identical(other.reason, reason) || other.reason == reason) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
@@ -1147,26 +1009,19 @@ class _$PurgePersonImpl extends _PurgePerson {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$PurgePersonImplCopyWith<_$PurgePersonImpl> get copyWith =>
-      __$$PurgePersonImplCopyWithImpl<_$PurgePersonImpl>(this, _$identity);
+  _$$PurgePersonImplCopyWith<_$PurgePersonImpl> get copyWith => __$$PurgePersonImplCopyWithImpl<_$PurgePersonImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PurgePersonImplToJson(
-      this,
-    );
+    return _$$PurgePersonImplToJson(this);
   }
 }
 
 abstract class _PurgePerson extends PurgePerson {
-  const factory _PurgePerson(
-      {required final int personId,
-      final String? reason,
-      final String? auth}) = _$PurgePersonImpl;
+  const factory _PurgePerson({required final int personId, final String? reason, final String? auth}) = _$PurgePersonImpl;
   const _PurgePerson._() : super._();
 
-  factory _PurgePerson.fromJson(Map<String, dynamic> json) =
-      _$PurgePersonImpl.fromJson;
+  factory _PurgePerson.fromJson(Map<String, dynamic> json) = _$PurgePersonImpl.fromJson;
 
   @override
   int get personId; // v0.18.0
@@ -1179,8 +1034,7 @@ abstract class _PurgePerson extends PurgePerson {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PurgePersonImplCopyWith<_$PurgePersonImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PurgePersonImplCopyWith<_$PurgePersonImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 PurgeCommunity _$PurgeCommunityFromJson(Map<String, dynamic> json) {
@@ -1199,22 +1053,18 @@ mixin _$PurgeCommunity {
   /// Create a copy of PurgeCommunity
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PurgeCommunityCopyWith<PurgeCommunity> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PurgeCommunityCopyWith<PurgeCommunity> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PurgeCommunityCopyWith<$Res> {
-  factory $PurgeCommunityCopyWith(
-          PurgeCommunity value, $Res Function(PurgeCommunity) then) =
-      _$PurgeCommunityCopyWithImpl<$Res, PurgeCommunity>;
+  factory $PurgeCommunityCopyWith(PurgeCommunity value, $Res Function(PurgeCommunity) then) = _$PurgeCommunityCopyWithImpl<$Res, PurgeCommunity>;
   @useResult
   $Res call({int communityId, String? reason, String? auth});
 }
 
 /// @nodoc
-class _$PurgeCommunityCopyWithImpl<$Res, $Val extends PurgeCommunity>
-    implements $PurgeCommunityCopyWith<$Res> {
+class _$PurgeCommunityCopyWithImpl<$Res, $Val extends PurgeCommunity> implements $PurgeCommunityCopyWith<$Res> {
   _$PurgeCommunityCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1226,70 +1076,66 @@ class _$PurgeCommunityCopyWithImpl<$Res, $Val extends PurgeCommunity>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? communityId = null,
-    Object? reason = freezed,
-    Object? auth = freezed,
-  }) {
-    return _then(_value.copyWith(
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      reason: freezed == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  $Res call({Object? communityId = null, Object? reason = freezed, Object? auth = freezed}) {
+    return _then(
+      _value.copyWith(
+            communityId:
+                null == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            reason:
+                freezed == reason
+                    ? _value.reason
+                    : reason // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$PurgeCommunityImplCopyWith<$Res>
-    implements $PurgeCommunityCopyWith<$Res> {
-  factory _$$PurgeCommunityImplCopyWith(_$PurgeCommunityImpl value,
-          $Res Function(_$PurgeCommunityImpl) then) =
-      __$$PurgeCommunityImplCopyWithImpl<$Res>;
+abstract class _$$PurgeCommunityImplCopyWith<$Res> implements $PurgeCommunityCopyWith<$Res> {
+  factory _$$PurgeCommunityImplCopyWith(_$PurgeCommunityImpl value, $Res Function(_$PurgeCommunityImpl) then) = __$$PurgeCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int communityId, String? reason, String? auth});
 }
 
 /// @nodoc
-class __$$PurgeCommunityImplCopyWithImpl<$Res>
-    extends _$PurgeCommunityCopyWithImpl<$Res, _$PurgeCommunityImpl>
-    implements _$$PurgeCommunityImplCopyWith<$Res> {
-  __$$PurgeCommunityImplCopyWithImpl(
-      _$PurgeCommunityImpl _value, $Res Function(_$PurgeCommunityImpl) _then)
-      : super(_value, _then);
+class __$$PurgeCommunityImplCopyWithImpl<$Res> extends _$PurgeCommunityCopyWithImpl<$Res, _$PurgeCommunityImpl> implements _$$PurgeCommunityImplCopyWith<$Res> {
+  __$$PurgeCommunityImplCopyWithImpl(_$PurgeCommunityImpl _value, $Res Function(_$PurgeCommunityImpl) _then) : super(_value, _then);
 
   /// Create a copy of PurgeCommunity
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? communityId = null,
-    Object? reason = freezed,
-    Object? auth = freezed,
-  }) {
-    return _then(_$PurgeCommunityImpl(
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      reason: freezed == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? communityId = null, Object? reason = freezed, Object? auth = freezed}) {
+    return _then(
+      _$PurgeCommunityImpl(
+        communityId:
+            null == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        reason:
+            freezed == reason
+                ? _value.reason
+                : reason // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -1297,19 +1143,16 @@ class __$$PurgeCommunityImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$PurgeCommunityImpl extends _PurgeCommunity {
-  const _$PurgeCommunityImpl(
-      {required this.communityId, this.reason, this.auth})
-      : super._();
+  const _$PurgeCommunityImpl({required this.communityId, this.reason, this.auth}) : super._();
 
-  factory _$PurgeCommunityImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PurgeCommunityImplFromJson(json);
+  factory _$PurgeCommunityImpl.fromJson(Map<String, dynamic> json) => _$$PurgeCommunityImplFromJson(json);
 
   @override
   final int communityId;
-// v0.18.0
+  // v0.18.0
   @override
   final String? reason;
-// v0.18.0
+  // v0.18.0
   @override
   final String? auth;
 
@@ -1323,8 +1166,7 @@ class _$PurgeCommunityImpl extends _PurgeCommunity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PurgeCommunityImpl &&
-            (identical(other.communityId, communityId) ||
-                other.communityId == communityId) &&
+            (identical(other.communityId, communityId) || other.communityId == communityId) &&
             (identical(other.reason, reason) || other.reason == reason) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
@@ -1338,27 +1180,19 @@ class _$PurgeCommunityImpl extends _PurgeCommunity {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$PurgeCommunityImplCopyWith<_$PurgeCommunityImpl> get copyWith =>
-      __$$PurgeCommunityImplCopyWithImpl<_$PurgeCommunityImpl>(
-          this, _$identity);
+  _$$PurgeCommunityImplCopyWith<_$PurgeCommunityImpl> get copyWith => __$$PurgeCommunityImplCopyWithImpl<_$PurgeCommunityImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PurgeCommunityImplToJson(
-      this,
-    );
+    return _$$PurgeCommunityImplToJson(this);
   }
 }
 
 abstract class _PurgeCommunity extends PurgeCommunity {
-  const factory _PurgeCommunity(
-      {required final int communityId,
-      final String? reason,
-      final String? auth}) = _$PurgeCommunityImpl;
+  const factory _PurgeCommunity({required final int communityId, final String? reason, final String? auth}) = _$PurgeCommunityImpl;
   const _PurgeCommunity._() : super._();
 
-  factory _PurgeCommunity.fromJson(Map<String, dynamic> json) =
-      _$PurgeCommunityImpl.fromJson;
+  factory _PurgeCommunity.fromJson(Map<String, dynamic> json) = _$PurgeCommunityImpl.fromJson;
 
   @override
   int get communityId; // v0.18.0
@@ -1371,8 +1205,7 @@ abstract class _PurgeCommunity extends PurgeCommunity {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PurgeCommunityImplCopyWith<_$PurgeCommunityImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PurgeCommunityImplCopyWith<_$PurgeCommunityImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 PurgePost _$PurgePostFromJson(Map<String, dynamic> json) {
@@ -1391,21 +1224,18 @@ mixin _$PurgePost {
   /// Create a copy of PurgePost
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PurgePostCopyWith<PurgePost> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PurgePostCopyWith<PurgePost> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PurgePostCopyWith<$Res> {
-  factory $PurgePostCopyWith(PurgePost value, $Res Function(PurgePost) then) =
-      _$PurgePostCopyWithImpl<$Res, PurgePost>;
+  factory $PurgePostCopyWith(PurgePost value, $Res Function(PurgePost) then) = _$PurgePostCopyWithImpl<$Res, PurgePost>;
   @useResult
   $Res call({int postId, String? reason, String? auth});
 }
 
 /// @nodoc
-class _$PurgePostCopyWithImpl<$Res, $Val extends PurgePost>
-    implements $PurgePostCopyWith<$Res> {
+class _$PurgePostCopyWithImpl<$Res, $Val extends PurgePost> implements $PurgePostCopyWith<$Res> {
   _$PurgePostCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1417,70 +1247,66 @@ class _$PurgePostCopyWithImpl<$Res, $Val extends PurgePost>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postId = null,
-    Object? reason = freezed,
-    Object? auth = freezed,
-  }) {
-    return _then(_value.copyWith(
-      postId: null == postId
-          ? _value.postId
-          : postId // ignore: cast_nullable_to_non_nullable
-              as int,
-      reason: freezed == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  $Res call({Object? postId = null, Object? reason = freezed, Object? auth = freezed}) {
+    return _then(
+      _value.copyWith(
+            postId:
+                null == postId
+                    ? _value.postId
+                    : postId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            reason:
+                freezed == reason
+                    ? _value.reason
+                    : reason // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$PurgePostImplCopyWith<$Res>
-    implements $PurgePostCopyWith<$Res> {
-  factory _$$PurgePostImplCopyWith(
-          _$PurgePostImpl value, $Res Function(_$PurgePostImpl) then) =
-      __$$PurgePostImplCopyWithImpl<$Res>;
+abstract class _$$PurgePostImplCopyWith<$Res> implements $PurgePostCopyWith<$Res> {
+  factory _$$PurgePostImplCopyWith(_$PurgePostImpl value, $Res Function(_$PurgePostImpl) then) = __$$PurgePostImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int postId, String? reason, String? auth});
 }
 
 /// @nodoc
-class __$$PurgePostImplCopyWithImpl<$Res>
-    extends _$PurgePostCopyWithImpl<$Res, _$PurgePostImpl>
-    implements _$$PurgePostImplCopyWith<$Res> {
-  __$$PurgePostImplCopyWithImpl(
-      _$PurgePostImpl _value, $Res Function(_$PurgePostImpl) _then)
-      : super(_value, _then);
+class __$$PurgePostImplCopyWithImpl<$Res> extends _$PurgePostCopyWithImpl<$Res, _$PurgePostImpl> implements _$$PurgePostImplCopyWith<$Res> {
+  __$$PurgePostImplCopyWithImpl(_$PurgePostImpl _value, $Res Function(_$PurgePostImpl) _then) : super(_value, _then);
 
   /// Create a copy of PurgePost
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postId = null,
-    Object? reason = freezed,
-    Object? auth = freezed,
-  }) {
-    return _then(_$PurgePostImpl(
-      postId: null == postId
-          ? _value.postId
-          : postId // ignore: cast_nullable_to_non_nullable
-              as int,
-      reason: freezed == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? postId = null, Object? reason = freezed, Object? auth = freezed}) {
+    return _then(
+      _$PurgePostImpl(
+        postId:
+            null == postId
+                ? _value.postId
+                : postId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        reason:
+            freezed == reason
+                ? _value.reason
+                : reason // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -1488,18 +1314,16 @@ class __$$PurgePostImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$PurgePostImpl extends _PurgePost {
-  const _$PurgePostImpl({required this.postId, this.reason, this.auth})
-      : super._();
+  const _$PurgePostImpl({required this.postId, this.reason, this.auth}) : super._();
 
-  factory _$PurgePostImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PurgePostImplFromJson(json);
+  factory _$PurgePostImpl.fromJson(Map<String, dynamic> json) => _$$PurgePostImplFromJson(json);
 
   @override
   final int postId;
-// v0.18.0
+  // v0.18.0
   @override
   final String? reason;
-// v0.18.0
+  // v0.18.0
   @override
   final String? auth;
 
@@ -1527,26 +1351,19 @@ class _$PurgePostImpl extends _PurgePost {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$PurgePostImplCopyWith<_$PurgePostImpl> get copyWith =>
-      __$$PurgePostImplCopyWithImpl<_$PurgePostImpl>(this, _$identity);
+  _$$PurgePostImplCopyWith<_$PurgePostImpl> get copyWith => __$$PurgePostImplCopyWithImpl<_$PurgePostImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PurgePostImplToJson(
-      this,
-    );
+    return _$$PurgePostImplToJson(this);
   }
 }
 
 abstract class _PurgePost extends PurgePost {
-  const factory _PurgePost(
-      {required final int postId,
-      final String? reason,
-      final String? auth}) = _$PurgePostImpl;
+  const factory _PurgePost({required final int postId, final String? reason, final String? auth}) = _$PurgePostImpl;
   const _PurgePost._() : super._();
 
-  factory _PurgePost.fromJson(Map<String, dynamic> json) =
-      _$PurgePostImpl.fromJson;
+  factory _PurgePost.fromJson(Map<String, dynamic> json) = _$PurgePostImpl.fromJson;
 
   @override
   int get postId; // v0.18.0
@@ -1559,8 +1376,7 @@ abstract class _PurgePost extends PurgePost {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PurgePostImplCopyWith<_$PurgePostImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PurgePostImplCopyWith<_$PurgePostImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 PurgeComment _$PurgeCommentFromJson(Map<String, dynamic> json) {
@@ -1579,22 +1395,18 @@ mixin _$PurgeComment {
   /// Create a copy of PurgeComment
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PurgeCommentCopyWith<PurgeComment> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PurgeCommentCopyWith<PurgeComment> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PurgeCommentCopyWith<$Res> {
-  factory $PurgeCommentCopyWith(
-          PurgeComment value, $Res Function(PurgeComment) then) =
-      _$PurgeCommentCopyWithImpl<$Res, PurgeComment>;
+  factory $PurgeCommentCopyWith(PurgeComment value, $Res Function(PurgeComment) then) = _$PurgeCommentCopyWithImpl<$Res, PurgeComment>;
   @useResult
   $Res call({int commentId, String? reason, String? auth});
 }
 
 /// @nodoc
-class _$PurgeCommentCopyWithImpl<$Res, $Val extends PurgeComment>
-    implements $PurgeCommentCopyWith<$Res> {
+class _$PurgeCommentCopyWithImpl<$Res, $Val extends PurgeComment> implements $PurgeCommentCopyWith<$Res> {
   _$PurgeCommentCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1606,70 +1418,66 @@ class _$PurgeCommentCopyWithImpl<$Res, $Val extends PurgeComment>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? commentId = null,
-    Object? reason = freezed,
-    Object? auth = freezed,
-  }) {
-    return _then(_value.copyWith(
-      commentId: null == commentId
-          ? _value.commentId
-          : commentId // ignore: cast_nullable_to_non_nullable
-              as int,
-      reason: freezed == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  $Res call({Object? commentId = null, Object? reason = freezed, Object? auth = freezed}) {
+    return _then(
+      _value.copyWith(
+            commentId:
+                null == commentId
+                    ? _value.commentId
+                    : commentId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            reason:
+                freezed == reason
+                    ? _value.reason
+                    : reason // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$PurgeCommentImplCopyWith<$Res>
-    implements $PurgeCommentCopyWith<$Res> {
-  factory _$$PurgeCommentImplCopyWith(
-          _$PurgeCommentImpl value, $Res Function(_$PurgeCommentImpl) then) =
-      __$$PurgeCommentImplCopyWithImpl<$Res>;
+abstract class _$$PurgeCommentImplCopyWith<$Res> implements $PurgeCommentCopyWith<$Res> {
+  factory _$$PurgeCommentImplCopyWith(_$PurgeCommentImpl value, $Res Function(_$PurgeCommentImpl) then) = __$$PurgeCommentImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int commentId, String? reason, String? auth});
 }
 
 /// @nodoc
-class __$$PurgeCommentImplCopyWithImpl<$Res>
-    extends _$PurgeCommentCopyWithImpl<$Res, _$PurgeCommentImpl>
-    implements _$$PurgeCommentImplCopyWith<$Res> {
-  __$$PurgeCommentImplCopyWithImpl(
-      _$PurgeCommentImpl _value, $Res Function(_$PurgeCommentImpl) _then)
-      : super(_value, _then);
+class __$$PurgeCommentImplCopyWithImpl<$Res> extends _$PurgeCommentCopyWithImpl<$Res, _$PurgeCommentImpl> implements _$$PurgeCommentImplCopyWith<$Res> {
+  __$$PurgeCommentImplCopyWithImpl(_$PurgeCommentImpl _value, $Res Function(_$PurgeCommentImpl) _then) : super(_value, _then);
 
   /// Create a copy of PurgeComment
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? commentId = null,
-    Object? reason = freezed,
-    Object? auth = freezed,
-  }) {
-    return _then(_$PurgeCommentImpl(
-      commentId: null == commentId
-          ? _value.commentId
-          : commentId // ignore: cast_nullable_to_non_nullable
-              as int,
-      reason: freezed == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? commentId = null, Object? reason = freezed, Object? auth = freezed}) {
+    return _then(
+      _$PurgeCommentImpl(
+        commentId:
+            null == commentId
+                ? _value.commentId
+                : commentId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        reason:
+            freezed == reason
+                ? _value.reason
+                : reason // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -1677,18 +1485,16 @@ class __$$PurgeCommentImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$PurgeCommentImpl extends _PurgeComment {
-  const _$PurgeCommentImpl({required this.commentId, this.reason, this.auth})
-      : super._();
+  const _$PurgeCommentImpl({required this.commentId, this.reason, this.auth}) : super._();
 
-  factory _$PurgeCommentImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PurgeCommentImplFromJson(json);
+  factory _$PurgeCommentImpl.fromJson(Map<String, dynamic> json) => _$$PurgeCommentImplFromJson(json);
 
   @override
   final int commentId;
-// v0.18.0
+  // v0.18.0
   @override
   final String? reason;
-// v0.18.0
+  // v0.18.0
   @override
   final String? auth;
 
@@ -1702,8 +1508,7 @@ class _$PurgeCommentImpl extends _PurgeComment {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PurgeCommentImpl &&
-            (identical(other.commentId, commentId) ||
-                other.commentId == commentId) &&
+            (identical(other.commentId, commentId) || other.commentId == commentId) &&
             (identical(other.reason, reason) || other.reason == reason) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
@@ -1717,26 +1522,19 @@ class _$PurgeCommentImpl extends _PurgeComment {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$PurgeCommentImplCopyWith<_$PurgeCommentImpl> get copyWith =>
-      __$$PurgeCommentImplCopyWithImpl<_$PurgeCommentImpl>(this, _$identity);
+  _$$PurgeCommentImplCopyWith<_$PurgeCommentImpl> get copyWith => __$$PurgeCommentImplCopyWithImpl<_$PurgeCommentImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PurgeCommentImplToJson(
-      this,
-    );
+    return _$$PurgeCommentImplToJson(this);
   }
 }
 
 abstract class _PurgeComment extends PurgeComment {
-  const factory _PurgeComment(
-      {required final int commentId,
-      final String? reason,
-      final String? auth}) = _$PurgeCommentImpl;
+  const factory _PurgeComment({required final int commentId, final String? reason, final String? auth}) = _$PurgeCommentImpl;
   const _PurgeComment._() : super._();
 
-  factory _PurgeComment.fromJson(Map<String, dynamic> json) =
-      _$PurgeCommentImpl.fromJson;
+  factory _PurgeComment.fromJson(Map<String, dynamic> json) = _$PurgeCommentImpl.fromJson;
 
   @override
   int get commentId; // v0.18.0
@@ -1749,8 +1547,7 @@ abstract class _PurgeComment extends PurgeComment {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PurgeCommentImplCopyWith<_$PurgeCommentImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PurgeCommentImplCopyWith<_$PurgeCommentImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 ListAllMedia _$ListAllMediaFromJson(Map<String, dynamic> json) {
@@ -1769,22 +1566,18 @@ mixin _$ListAllMedia {
   /// Create a copy of ListAllMedia
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ListAllMediaCopyWith<ListAllMedia> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ListAllMediaCopyWith<ListAllMedia> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ListAllMediaCopyWith<$Res> {
-  factory $ListAllMediaCopyWith(
-          ListAllMedia value, $Res Function(ListAllMedia) then) =
-      _$ListAllMediaCopyWithImpl<$Res, ListAllMedia>;
+  factory $ListAllMediaCopyWith(ListAllMedia value, $Res Function(ListAllMedia) then) = _$ListAllMediaCopyWithImpl<$Res, ListAllMedia>;
   @useResult
   $Res call({int? page, int? limit, String? auth});
 }
 
 /// @nodoc
-class _$ListAllMediaCopyWithImpl<$Res, $Val extends ListAllMedia>
-    implements $ListAllMediaCopyWith<$Res> {
+class _$ListAllMediaCopyWithImpl<$Res, $Val extends ListAllMedia> implements $ListAllMediaCopyWith<$Res> {
   _$ListAllMediaCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1796,70 +1589,66 @@ class _$ListAllMediaCopyWithImpl<$Res, $Val extends ListAllMedia>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? page = freezed,
-    Object? limit = freezed,
-    Object? auth = freezed,
-  }) {
-    return _then(_value.copyWith(
-      page: freezed == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as int?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  $Res call({Object? page = freezed, Object? limit = freezed, Object? auth = freezed}) {
+    return _then(
+      _value.copyWith(
+            page:
+                freezed == page
+                    ? _value.page
+                    : page // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$ListAllMediaImplCopyWith<$Res>
-    implements $ListAllMediaCopyWith<$Res> {
-  factory _$$ListAllMediaImplCopyWith(
-          _$ListAllMediaImpl value, $Res Function(_$ListAllMediaImpl) then) =
-      __$$ListAllMediaImplCopyWithImpl<$Res>;
+abstract class _$$ListAllMediaImplCopyWith<$Res> implements $ListAllMediaCopyWith<$Res> {
+  factory _$$ListAllMediaImplCopyWith(_$ListAllMediaImpl value, $Res Function(_$ListAllMediaImpl) then) = __$$ListAllMediaImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? page, int? limit, String? auth});
 }
 
 /// @nodoc
-class __$$ListAllMediaImplCopyWithImpl<$Res>
-    extends _$ListAllMediaCopyWithImpl<$Res, _$ListAllMediaImpl>
-    implements _$$ListAllMediaImplCopyWith<$Res> {
-  __$$ListAllMediaImplCopyWithImpl(
-      _$ListAllMediaImpl _value, $Res Function(_$ListAllMediaImpl) _then)
-      : super(_value, _then);
+class __$$ListAllMediaImplCopyWithImpl<$Res> extends _$ListAllMediaCopyWithImpl<$Res, _$ListAllMediaImpl> implements _$$ListAllMediaImplCopyWith<$Res> {
+  __$$ListAllMediaImplCopyWithImpl(_$ListAllMediaImpl _value, $Res Function(_$ListAllMediaImpl) _then) : super(_value, _then);
 
   /// Create a copy of ListAllMedia
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? page = freezed,
-    Object? limit = freezed,
-    Object? auth = freezed,
-  }) {
-    return _then(_$ListAllMediaImpl(
-      page: freezed == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as int?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? page = freezed, Object? limit = freezed, Object? auth = freezed}) {
+    return _then(
+      _$ListAllMediaImpl(
+        page:
+            freezed == page
+                ? _value.page
+                : page // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -1869,15 +1658,14 @@ class __$$ListAllMediaImplCopyWithImpl<$Res>
 class _$ListAllMediaImpl extends _ListAllMedia {
   const _$ListAllMediaImpl({this.page, this.limit, this.auth}) : super._();
 
-  factory _$ListAllMediaImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ListAllMediaImplFromJson(json);
+  factory _$ListAllMediaImpl.fromJson(Map<String, dynamic> json) => _$$ListAllMediaImplFromJson(json);
 
   @override
   final int? page;
-// v0.19.4 (optional)
+  // v0.19.4 (optional)
   @override
   final int? limit;
-// v0.19.4 (optional)
+  // v0.19.4 (optional)
   @override
   final String? auth;
 
@@ -1905,26 +1693,19 @@ class _$ListAllMediaImpl extends _ListAllMedia {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ListAllMediaImplCopyWith<_$ListAllMediaImpl> get copyWith =>
-      __$$ListAllMediaImplCopyWithImpl<_$ListAllMediaImpl>(this, _$identity);
+  _$$ListAllMediaImplCopyWith<_$ListAllMediaImpl> get copyWith => __$$ListAllMediaImplCopyWithImpl<_$ListAllMediaImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ListAllMediaImplToJson(
-      this,
-    );
+    return _$$ListAllMediaImplToJson(this);
   }
 }
 
 abstract class _ListAllMedia extends ListAllMedia {
-  const factory _ListAllMedia(
-      {final int? page,
-      final int? limit,
-      final String? auth}) = _$ListAllMediaImpl;
+  const factory _ListAllMedia({final int? page, final int? limit, final String? auth}) = _$ListAllMediaImpl;
   const _ListAllMedia._() : super._();
 
-  factory _ListAllMedia.fromJson(Map<String, dynamic> json) =
-      _$ListAllMediaImpl.fromJson;
+  factory _ListAllMedia.fromJson(Map<String, dynamic> json) = _$ListAllMediaImpl.fromJson;
 
   @override
   int? get page; // v0.19.4 (optional)
@@ -1937,6 +1718,5 @@ abstract class _ListAllMedia extends ListAllMedia {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ListAllMediaImplCopyWith<_$ListAllMediaImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ListAllMediaImplCopyWith<_$ListAllMediaImpl> get copyWith => throw _privateConstructorUsedError;
 }

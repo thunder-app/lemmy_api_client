@@ -6,8 +6,7 @@ enum RegistrationMode {
   final String value;
   const RegistrationMode(this.value);
 
-  factory RegistrationMode.fromJson(String value) =>
-      values.firstWhere((e) => e.value == value);
+  factory RegistrationMode.fromJson(String value) => values.firstWhere((e) => e.value == value);
 
   String toJson() => value;
 

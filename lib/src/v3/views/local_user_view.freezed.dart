@@ -12,7 +12,8 @@ part of 'local_user_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 LocalUserView _$LocalUserViewFromJson(Map<String, dynamic> json) {
   return _LocalUserView.fromJson(json);
@@ -21,8 +22,7 @@ LocalUserView _$LocalUserViewFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$LocalUserView {
   LocalUser get localUser => throw _privateConstructorUsedError; // v0.18.0
-  LocalUserVoteDisplayMode? get localUserVoteDisplayMode =>
-      throw _privateConstructorUsedError; // v0.19.4 (required)
+  LocalUserVoteDisplayMode? get localUserVoteDisplayMode => throw _privateConstructorUsedError; // v0.19.4 (required)
   Person get person => throw _privateConstructorUsedError; // v0.18.0
   PersonAggregates get counts => throw _privateConstructorUsedError;
 
@@ -32,21 +32,14 @@ mixin _$LocalUserView {
   /// Create a copy of LocalUserView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $LocalUserViewCopyWith<LocalUserView> get copyWith =>
-      throw _privateConstructorUsedError;
+  $LocalUserViewCopyWith<LocalUserView> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $LocalUserViewCopyWith<$Res> {
-  factory $LocalUserViewCopyWith(
-          LocalUserView value, $Res Function(LocalUserView) then) =
-      _$LocalUserViewCopyWithImpl<$Res, LocalUserView>;
+  factory $LocalUserViewCopyWith(LocalUserView value, $Res Function(LocalUserView) then) = _$LocalUserViewCopyWithImpl<$Res, LocalUserView>;
   @useResult
-  $Res call(
-      {LocalUser localUser,
-      LocalUserVoteDisplayMode? localUserVoteDisplayMode,
-      Person person,
-      PersonAggregates counts});
+  $Res call({LocalUser localUser, LocalUserVoteDisplayMode? localUserVoteDisplayMode, Person person, PersonAggregates counts});
 
   $LocalUserCopyWith<$Res> get localUser;
   $LocalUserVoteDisplayModeCopyWith<$Res>? get localUserVoteDisplayMode;
@@ -55,8 +48,7 @@ abstract class $LocalUserViewCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$LocalUserViewCopyWithImpl<$Res, $Val extends LocalUserView>
-    implements $LocalUserViewCopyWith<$Res> {
+class _$LocalUserViewCopyWithImpl<$Res, $Val extends LocalUserView> implements $LocalUserViewCopyWith<$Res> {
   _$LocalUserViewCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -68,30 +60,32 @@ class _$LocalUserViewCopyWithImpl<$Res, $Val extends LocalUserView>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? localUser = null,
-    Object? localUserVoteDisplayMode = freezed,
-    Object? person = null,
-    Object? counts = null,
-  }) {
-    return _then(_value.copyWith(
-      localUser: null == localUser
-          ? _value.localUser
-          : localUser // ignore: cast_nullable_to_non_nullable
-              as LocalUser,
-      localUserVoteDisplayMode: freezed == localUserVoteDisplayMode
-          ? _value.localUserVoteDisplayMode
-          : localUserVoteDisplayMode // ignore: cast_nullable_to_non_nullable
-              as LocalUserVoteDisplayMode?,
-      person: null == person
-          ? _value.person
-          : person // ignore: cast_nullable_to_non_nullable
-              as Person,
-      counts: null == counts
-          ? _value.counts
-          : counts // ignore: cast_nullable_to_non_nullable
-              as PersonAggregates,
-    ) as $Val);
+  $Res call({Object? localUser = null, Object? localUserVoteDisplayMode = freezed, Object? person = null, Object? counts = null}) {
+    return _then(
+      _value.copyWith(
+            localUser:
+                null == localUser
+                    ? _value.localUser
+                    : localUser // ignore: cast_nullable_to_non_nullable
+                        as LocalUser,
+            localUserVoteDisplayMode:
+                freezed == localUserVoteDisplayMode
+                    ? _value.localUserVoteDisplayMode
+                    : localUserVoteDisplayMode // ignore: cast_nullable_to_non_nullable
+                        as LocalUserVoteDisplayMode?,
+            person:
+                null == person
+                    ? _value.person
+                    : person // ignore: cast_nullable_to_non_nullable
+                        as Person,
+            counts:
+                null == counts
+                    ? _value.counts
+                    : counts // ignore: cast_nullable_to_non_nullable
+                        as PersonAggregates,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of LocalUserView
@@ -113,8 +107,7 @@ class _$LocalUserViewCopyWithImpl<$Res, $Val extends LocalUserView>
       return null;
     }
 
-    return $LocalUserVoteDisplayModeCopyWith<$Res>(
-        _value.localUserVoteDisplayMode!, (value) {
+    return $LocalUserVoteDisplayModeCopyWith<$Res>(_value.localUserVoteDisplayMode!, (value) {
       return _then(_value.copyWith(localUserVoteDisplayMode: value) as $Val);
     });
   }
@@ -141,18 +134,11 @@ class _$LocalUserViewCopyWithImpl<$Res, $Val extends LocalUserView>
 }
 
 /// @nodoc
-abstract class _$$LocalUserViewImplCopyWith<$Res>
-    implements $LocalUserViewCopyWith<$Res> {
-  factory _$$LocalUserViewImplCopyWith(
-          _$LocalUserViewImpl value, $Res Function(_$LocalUserViewImpl) then) =
-      __$$LocalUserViewImplCopyWithImpl<$Res>;
+abstract class _$$LocalUserViewImplCopyWith<$Res> implements $LocalUserViewCopyWith<$Res> {
+  factory _$$LocalUserViewImplCopyWith(_$LocalUserViewImpl value, $Res Function(_$LocalUserViewImpl) then) = __$$LocalUserViewImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {LocalUser localUser,
-      LocalUserVoteDisplayMode? localUserVoteDisplayMode,
-      Person person,
-      PersonAggregates counts});
+  $Res call({LocalUser localUser, LocalUserVoteDisplayMode? localUserVoteDisplayMode, Person person, PersonAggregates counts});
 
   @override
   $LocalUserCopyWith<$Res> get localUser;
@@ -165,41 +151,38 @@ abstract class _$$LocalUserViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$LocalUserViewImplCopyWithImpl<$Res>
-    extends _$LocalUserViewCopyWithImpl<$Res, _$LocalUserViewImpl>
-    implements _$$LocalUserViewImplCopyWith<$Res> {
-  __$$LocalUserViewImplCopyWithImpl(
-      _$LocalUserViewImpl _value, $Res Function(_$LocalUserViewImpl) _then)
-      : super(_value, _then);
+class __$$LocalUserViewImplCopyWithImpl<$Res> extends _$LocalUserViewCopyWithImpl<$Res, _$LocalUserViewImpl> implements _$$LocalUserViewImplCopyWith<$Res> {
+  __$$LocalUserViewImplCopyWithImpl(_$LocalUserViewImpl _value, $Res Function(_$LocalUserViewImpl) _then) : super(_value, _then);
 
   /// Create a copy of LocalUserView
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? localUser = null,
-    Object? localUserVoteDisplayMode = freezed,
-    Object? person = null,
-    Object? counts = null,
-  }) {
-    return _then(_$LocalUserViewImpl(
-      localUser: null == localUser
-          ? _value.localUser
-          : localUser // ignore: cast_nullable_to_non_nullable
-              as LocalUser,
-      localUserVoteDisplayMode: freezed == localUserVoteDisplayMode
-          ? _value.localUserVoteDisplayMode
-          : localUserVoteDisplayMode // ignore: cast_nullable_to_non_nullable
-              as LocalUserVoteDisplayMode?,
-      person: null == person
-          ? _value.person
-          : person // ignore: cast_nullable_to_non_nullable
-              as Person,
-      counts: null == counts
-          ? _value.counts
-          : counts // ignore: cast_nullable_to_non_nullable
-              as PersonAggregates,
-    ));
+  $Res call({Object? localUser = null, Object? localUserVoteDisplayMode = freezed, Object? person = null, Object? counts = null}) {
+    return _then(
+      _$LocalUserViewImpl(
+        localUser:
+            null == localUser
+                ? _value.localUser
+                : localUser // ignore: cast_nullable_to_non_nullable
+                    as LocalUser,
+        localUserVoteDisplayMode:
+            freezed == localUserVoteDisplayMode
+                ? _value.localUserVoteDisplayMode
+                : localUserVoteDisplayMode // ignore: cast_nullable_to_non_nullable
+                    as LocalUserVoteDisplayMode?,
+        person:
+            null == person
+                ? _value.person
+                : person // ignore: cast_nullable_to_non_nullable
+                    as Person,
+        counts:
+            null == counts
+                ? _value.counts
+                : counts // ignore: cast_nullable_to_non_nullable
+                    as PersonAggregates,
+      ),
+    );
   }
 }
 
@@ -207,25 +190,19 @@ class __$$LocalUserViewImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$LocalUserViewImpl extends _LocalUserView {
-  const _$LocalUserViewImpl(
-      {required this.localUser,
-      this.localUserVoteDisplayMode,
-      required this.person,
-      required this.counts})
-      : super._();
+  const _$LocalUserViewImpl({required this.localUser, this.localUserVoteDisplayMode, required this.person, required this.counts}) : super._();
 
-  factory _$LocalUserViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$LocalUserViewImplFromJson(json);
+  factory _$LocalUserViewImpl.fromJson(Map<String, dynamic> json) => _$$LocalUserViewImplFromJson(json);
 
   @override
   final LocalUser localUser;
-// v0.18.0
+  // v0.18.0
   @override
   final LocalUserVoteDisplayMode? localUserVoteDisplayMode;
-// v0.19.4 (required)
+  // v0.19.4 (required)
   @override
   final Person person;
-// v0.18.0
+  // v0.18.0
   @override
   final PersonAggregates counts;
 
@@ -239,46 +216,35 @@ class _$LocalUserViewImpl extends _LocalUserView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LocalUserViewImpl &&
-            (identical(other.localUser, localUser) ||
-                other.localUser == localUser) &&
-            (identical(
-                    other.localUserVoteDisplayMode, localUserVoteDisplayMode) ||
-                other.localUserVoteDisplayMode == localUserVoteDisplayMode) &&
+            (identical(other.localUser, localUser) || other.localUser == localUser) &&
+            (identical(other.localUserVoteDisplayMode, localUserVoteDisplayMode) || other.localUserVoteDisplayMode == localUserVoteDisplayMode) &&
             (identical(other.person, person) || other.person == person) &&
             (identical(other.counts, counts) || other.counts == counts));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, localUser, localUserVoteDisplayMode, person, counts);
+  int get hashCode => Object.hash(runtimeType, localUser, localUserVoteDisplayMode, person, counts);
 
   /// Create a copy of LocalUserView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$LocalUserViewImplCopyWith<_$LocalUserViewImpl> get copyWith =>
-      __$$LocalUserViewImplCopyWithImpl<_$LocalUserViewImpl>(this, _$identity);
+  _$$LocalUserViewImplCopyWith<_$LocalUserViewImpl> get copyWith => __$$LocalUserViewImplCopyWithImpl<_$LocalUserViewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$LocalUserViewImplToJson(
-      this,
-    );
+    return _$$LocalUserViewImplToJson(this);
   }
 }
 
 abstract class _LocalUserView extends LocalUserView {
-  const factory _LocalUserView(
-      {required final LocalUser localUser,
-      final LocalUserVoteDisplayMode? localUserVoteDisplayMode,
-      required final Person person,
-      required final PersonAggregates counts}) = _$LocalUserViewImpl;
+  const factory _LocalUserView({required final LocalUser localUser, final LocalUserVoteDisplayMode? localUserVoteDisplayMode, required final Person person, required final PersonAggregates counts}) =
+      _$LocalUserViewImpl;
   const _LocalUserView._() : super._();
 
-  factory _LocalUserView.fromJson(Map<String, dynamic> json) =
-      _$LocalUserViewImpl.fromJson;
+  factory _LocalUserView.fromJson(Map<String, dynamic> json) = _$LocalUserViewImpl.fromJson;
 
   @override
   LocalUser get localUser; // v0.18.0
@@ -293,6 +259,5 @@ abstract class _LocalUserView extends LocalUserView {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LocalUserViewImplCopyWith<_$LocalUserViewImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$LocalUserViewImplCopyWith<_$LocalUserViewImpl> get copyWith => throw _privateConstructorUsedError;
 }

@@ -16,6 +16,5 @@ class ModBanView with _$ModBanView {
   }) = _ModBanView;
 
   const ModBanView._();
-  factory ModBanView.fromJson(Map<String, dynamic> json) =>
-      _$ModBanViewFromJson(json);
+  factory ModBanView.fromJson(Map<String, dynamic> json) => _$ModBanViewFromJson(json);
 }

@@ -15,6 +15,5 @@ class AdminPurgeCommunityView with _$AdminPurgeCommunityView {
   }) = _AdminPurgeCommunityView;
 
   const AdminPurgeCommunityView._();
-  factory AdminPurgeCommunityView.fromJson(Map<String, dynamic> json) =>
-      _$AdminPurgeCommunityViewFromJson(json);
+  factory AdminPurgeCommunityView.fromJson(Map<String, dynamic> json) => _$AdminPurgeCommunityViewFromJson(json);
 }

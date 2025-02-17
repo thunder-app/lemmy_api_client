@@ -15,6 +15,5 @@ class LocalImageView with _$LocalImageView {
   }) = _LocalImageView;
 
   const LocalImageView._();
-  factory LocalImageView.fromJson(Map<String, dynamic> json) =>
-      _$LocalImageViewFromJson(json);
+  factory LocalImageView.fromJson(Map<String, dynamic> json) => _$LocalImageViewFromJson(json);
 }

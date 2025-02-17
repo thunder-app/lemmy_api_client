@@ -12,10 +12,10 @@ part of 'get_report_count_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
-GetReportCountResponse _$GetReportCountResponseFromJson(
-    Map<String, dynamic> json) {
+GetReportCountResponse _$GetReportCountResponseFromJson(Map<String, dynamic> json) {
   return _GetReportCountResponse.fromJson(json);
 }
 
@@ -32,27 +32,18 @@ mixin _$GetReportCountResponse {
   /// Create a copy of GetReportCountResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $GetReportCountResponseCopyWith<GetReportCountResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $GetReportCountResponseCopyWith<GetReportCountResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GetReportCountResponseCopyWith<$Res> {
-  factory $GetReportCountResponseCopyWith(GetReportCountResponse value,
-          $Res Function(GetReportCountResponse) then) =
-      _$GetReportCountResponseCopyWithImpl<$Res, GetReportCountResponse>;
+  factory $GetReportCountResponseCopyWith(GetReportCountResponse value, $Res Function(GetReportCountResponse) then) = _$GetReportCountResponseCopyWithImpl<$Res, GetReportCountResponse>;
   @useResult
-  $Res call(
-      {int? communityId,
-      int commentReports,
-      int postReports,
-      int? privateMessageReports});
+  $Res call({int? communityId, int commentReports, int postReports, int? privateMessageReports});
 }
 
 /// @nodoc
-class _$GetReportCountResponseCopyWithImpl<$Res,
-        $Val extends GetReportCountResponse>
-    implements $GetReportCountResponseCopyWith<$Res> {
+class _$GetReportCountResponseCopyWithImpl<$Res, $Val extends GetReportCountResponse> implements $GetReportCountResponseCopyWith<$Res> {
   _$GetReportCountResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -64,87 +55,76 @@ class _$GetReportCountResponseCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? communityId = freezed,
-    Object? commentReports = null,
-    Object? postReports = null,
-    Object? privateMessageReports = freezed,
-  }) {
-    return _then(_value.copyWith(
-      communityId: freezed == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      commentReports: null == commentReports
-          ? _value.commentReports
-          : commentReports // ignore: cast_nullable_to_non_nullable
-              as int,
-      postReports: null == postReports
-          ? _value.postReports
-          : postReports // ignore: cast_nullable_to_non_nullable
-              as int,
-      privateMessageReports: freezed == privateMessageReports
-          ? _value.privateMessageReports
-          : privateMessageReports // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
+  $Res call({Object? communityId = freezed, Object? commentReports = null, Object? postReports = null, Object? privateMessageReports = freezed}) {
+    return _then(
+      _value.copyWith(
+            communityId:
+                freezed == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            commentReports:
+                null == commentReports
+                    ? _value.commentReports
+                    : commentReports // ignore: cast_nullable_to_non_nullable
+                        as int,
+            postReports:
+                null == postReports
+                    ? _value.postReports
+                    : postReports // ignore: cast_nullable_to_non_nullable
+                        as int,
+            privateMessageReports:
+                freezed == privateMessageReports
+                    ? _value.privateMessageReports
+                    : privateMessageReports // ignore: cast_nullable_to_non_nullable
+                        as int?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$GetReportCountResponseImplCopyWith<$Res>
-    implements $GetReportCountResponseCopyWith<$Res> {
-  factory _$$GetReportCountResponseImplCopyWith(
-          _$GetReportCountResponseImpl value,
-          $Res Function(_$GetReportCountResponseImpl) then) =
-      __$$GetReportCountResponseImplCopyWithImpl<$Res>;
+abstract class _$$GetReportCountResponseImplCopyWith<$Res> implements $GetReportCountResponseCopyWith<$Res> {
+  factory _$$GetReportCountResponseImplCopyWith(_$GetReportCountResponseImpl value, $Res Function(_$GetReportCountResponseImpl) then) = __$$GetReportCountResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int? communityId,
-      int commentReports,
-      int postReports,
-      int? privateMessageReports});
+  $Res call({int? communityId, int commentReports, int postReports, int? privateMessageReports});
 }
 
 /// @nodoc
-class __$$GetReportCountResponseImplCopyWithImpl<$Res>
-    extends _$GetReportCountResponseCopyWithImpl<$Res,
-        _$GetReportCountResponseImpl>
-    implements _$$GetReportCountResponseImplCopyWith<$Res> {
-  __$$GetReportCountResponseImplCopyWithImpl(
-      _$GetReportCountResponseImpl _value,
-      $Res Function(_$GetReportCountResponseImpl) _then)
-      : super(_value, _then);
+class __$$GetReportCountResponseImplCopyWithImpl<$Res> extends _$GetReportCountResponseCopyWithImpl<$Res, _$GetReportCountResponseImpl> implements _$$GetReportCountResponseImplCopyWith<$Res> {
+  __$$GetReportCountResponseImplCopyWithImpl(_$GetReportCountResponseImpl _value, $Res Function(_$GetReportCountResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of GetReportCountResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? communityId = freezed,
-    Object? commentReports = null,
-    Object? postReports = null,
-    Object? privateMessageReports = freezed,
-  }) {
-    return _then(_$GetReportCountResponseImpl(
-      communityId: freezed == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      commentReports: null == commentReports
-          ? _value.commentReports
-          : commentReports // ignore: cast_nullable_to_non_nullable
-              as int,
-      postReports: null == postReports
-          ? _value.postReports
-          : postReports // ignore: cast_nullable_to_non_nullable
-              as int,
-      privateMessageReports: freezed == privateMessageReports
-          ? _value.privateMessageReports
-          : privateMessageReports // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
+  $Res call({Object? communityId = freezed, Object? commentReports = null, Object? postReports = null, Object? privateMessageReports = freezed}) {
+    return _then(
+      _$GetReportCountResponseImpl(
+        communityId:
+            freezed == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        commentReports:
+            null == commentReports
+                ? _value.commentReports
+                : commentReports // ignore: cast_nullable_to_non_nullable
+                    as int,
+        postReports:
+            null == postReports
+                ? _value.postReports
+                : postReports // ignore: cast_nullable_to_non_nullable
+                    as int,
+        privateMessageReports:
+            freezed == privateMessageReports
+                ? _value.privateMessageReports
+                : privateMessageReports // ignore: cast_nullable_to_non_nullable
+                    as int?,
+      ),
+    );
   }
 }
 
@@ -152,25 +132,19 @@ class __$$GetReportCountResponseImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$GetReportCountResponseImpl extends _GetReportCountResponse {
-  const _$GetReportCountResponseImpl(
-      {this.communityId,
-      required this.commentReports,
-      required this.postReports,
-      this.privateMessageReports})
-      : super._();
+  const _$GetReportCountResponseImpl({this.communityId, required this.commentReports, required this.postReports, this.privateMessageReports}) : super._();
 
-  factory _$GetReportCountResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GetReportCountResponseImplFromJson(json);
+  factory _$GetReportCountResponseImpl.fromJson(Map<String, dynamic> json) => _$$GetReportCountResponseImplFromJson(json);
 
   @override
   final int? communityId;
-// v0.18.0
+  // v0.18.0
   @override
   final int commentReports;
-// v0.18.0
+  // v0.18.0
   @override
   final int postReports;
-// v0.18.0
+  // v0.18.0
   @override
   final int? privateMessageReports;
 
@@ -184,48 +158,34 @@ class _$GetReportCountResponseImpl extends _GetReportCountResponse {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetReportCountResponseImpl &&
-            (identical(other.communityId, communityId) ||
-                other.communityId == communityId) &&
-            (identical(other.commentReports, commentReports) ||
-                other.commentReports == commentReports) &&
-            (identical(other.postReports, postReports) ||
-                other.postReports == postReports) &&
-            (identical(other.privateMessageReports, privateMessageReports) ||
-                other.privateMessageReports == privateMessageReports));
+            (identical(other.communityId, communityId) || other.communityId == communityId) &&
+            (identical(other.commentReports, commentReports) || other.commentReports == commentReports) &&
+            (identical(other.postReports, postReports) || other.postReports == postReports) &&
+            (identical(other.privateMessageReports, privateMessageReports) || other.privateMessageReports == privateMessageReports));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, communityId, commentReports,
-      postReports, privateMessageReports);
+  int get hashCode => Object.hash(runtimeType, communityId, commentReports, postReports, privateMessageReports);
 
   /// Create a copy of GetReportCountResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetReportCountResponseImplCopyWith<_$GetReportCountResponseImpl>
-      get copyWith => __$$GetReportCountResponseImplCopyWithImpl<
-          _$GetReportCountResponseImpl>(this, _$identity);
+  _$$GetReportCountResponseImplCopyWith<_$GetReportCountResponseImpl> get copyWith => __$$GetReportCountResponseImplCopyWithImpl<_$GetReportCountResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetReportCountResponseImplToJson(
-      this,
-    );
+    return _$$GetReportCountResponseImplToJson(this);
   }
 }
 
 abstract class _GetReportCountResponse extends GetReportCountResponse {
-  const factory _GetReportCountResponse(
-      {final int? communityId,
-      required final int commentReports,
-      required final int postReports,
-      final int? privateMessageReports}) = _$GetReportCountResponseImpl;
+  const factory _GetReportCountResponse({final int? communityId, required final int commentReports, required final int postReports, final int? privateMessageReports}) = _$GetReportCountResponseImpl;
   const _GetReportCountResponse._() : super._();
 
-  factory _GetReportCountResponse.fromJson(Map<String, dynamic> json) =
-      _$GetReportCountResponseImpl.fromJson;
+  factory _GetReportCountResponse.fromJson(Map<String, dynamic> json) = _$GetReportCountResponseImpl.fromJson;
 
   @override
   int? get communityId; // v0.18.0
@@ -240,6 +200,5 @@ abstract class _GetReportCountResponse extends GetReportCountResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetReportCountResponseImplCopyWith<_$GetReportCountResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$GetReportCountResponseImplCopyWith<_$GetReportCountResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

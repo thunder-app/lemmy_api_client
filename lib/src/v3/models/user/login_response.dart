@@ -15,6 +15,5 @@ class LoginResponse with _$LoginResponse {
   }) = _LoginResponse;
 
   const LoginResponse._();
-  factory LoginResponse.fromJson(Map<String, dynamic> json) =>
-      _$LoginResponseFromJson(json);
+  factory LoginResponse.fromJson(Map<String, dynamic> json) => _$LoginResponseFromJson(json);
 }

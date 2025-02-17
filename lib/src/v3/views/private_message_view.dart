@@ -16,6 +16,5 @@ class PrivateMessageView with _$PrivateMessageView {
   }) = _PrivateMessageView;
 
   const PrivateMessageView._();
-  factory PrivateMessageView.fromJson(Map<String, dynamic> json) =>
-      _$PrivateMessageViewFromJson(json);
+  factory PrivateMessageView.fromJson(Map<String, dynamic> json) => _$PrivateMessageViewFromJson(json);
 }

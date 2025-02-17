@@ -14,6 +14,5 @@ class AddAdminResponse with _$AddAdminResponse {
   }) = _AddAdminResponse;
 
   const AddAdminResponse._();
-  factory AddAdminResponse.fromJson(Map<String, dynamic> json) =>
-      _$AddAdminResponseFromJson(json);
+  factory AddAdminResponse.fromJson(Map<String, dynamic> json) => _$AddAdminResponseFromJson(json);
 }

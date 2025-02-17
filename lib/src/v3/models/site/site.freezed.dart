@@ -12,7 +12,8 @@ part of 'site.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 Site _$SiteFromJson(Map<String, dynamic> json) {
   return _Site.fromJson(json);
@@ -32,11 +33,9 @@ mixin _$Site {
   DateTime get lastRefreshedAt => throw _privateConstructorUsedError; // v0.18.0
   String get inboxUrl => throw _privateConstructorUsedError; // v0.18.0
   @deprecated
-  String? get privateKey =>
-      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.4]
+  String? get privateKey => throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.4]
   @deprecated
-  String? get publicKey =>
-      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.4]
+  String? get publicKey => throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.4]
   int get instanceId => throw _privateConstructorUsedError; // v0.18.0
   String? get contentWarning => throw _privateConstructorUsedError;
 
@@ -51,30 +50,29 @@ mixin _$Site {
 
 /// @nodoc
 abstract class $SiteCopyWith<$Res> {
-  factory $SiteCopyWith(Site value, $Res Function(Site) then) =
-      _$SiteCopyWithImpl<$Res, Site>;
+  factory $SiteCopyWith(Site value, $Res Function(Site) then) = _$SiteCopyWithImpl<$Res, Site>;
   @useResult
-  $Res call(
-      {int id,
-      String name,
-      String? sidebar,
-      DateTime published,
-      DateTime? updated,
-      String? icon,
-      String? banner,
-      String? description,
-      String actorId,
-      DateTime lastRefreshedAt,
-      String inboxUrl,
-      @deprecated String? privateKey,
-      @deprecated String? publicKey,
-      int instanceId,
-      String? contentWarning});
+  $Res call({
+    int id,
+    String name,
+    String? sidebar,
+    DateTime published,
+    DateTime? updated,
+    String? icon,
+    String? banner,
+    String? description,
+    String actorId,
+    DateTime lastRefreshedAt,
+    String inboxUrl,
+    @deprecated String? privateKey,
+    @deprecated String? publicKey,
+    int instanceId,
+    String? contentWarning,
+  });
 }
 
 /// @nodoc
-class _$SiteCopyWithImpl<$Res, $Val extends Site>
-    implements $SiteCopyWith<$Res> {
+class _$SiteCopyWithImpl<$Res, $Val extends Site> implements $SiteCopyWith<$Res> {
   _$SiteCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -103,102 +101,116 @@ class _$SiteCopyWithImpl<$Res, $Val extends Site>
     Object? instanceId = null,
     Object? contentWarning = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      sidebar: freezed == sidebar
-          ? _value.sidebar
-          : sidebar // ignore: cast_nullable_to_non_nullable
-              as String?,
-      published: null == published
-          ? _value.published
-          : published // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updated: freezed == updated
-          ? _value.updated
-          : updated // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      icon: freezed == icon
-          ? _value.icon
-          : icon // ignore: cast_nullable_to_non_nullable
-              as String?,
-      banner: freezed == banner
-          ? _value.banner
-          : banner // ignore: cast_nullable_to_non_nullable
-              as String?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      actorId: null == actorId
-          ? _value.actorId
-          : actorId // ignore: cast_nullable_to_non_nullable
-              as String,
-      lastRefreshedAt: null == lastRefreshedAt
-          ? _value.lastRefreshedAt
-          : lastRefreshedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      inboxUrl: null == inboxUrl
-          ? _value.inboxUrl
-          : inboxUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      privateKey: freezed == privateKey
-          ? _value.privateKey
-          : privateKey // ignore: cast_nullable_to_non_nullable
-              as String?,
-      publicKey: freezed == publicKey
-          ? _value.publicKey
-          : publicKey // ignore: cast_nullable_to_non_nullable
-              as String?,
-      instanceId: null == instanceId
-          ? _value.instanceId
-          : instanceId // ignore: cast_nullable_to_non_nullable
-              as int,
-      contentWarning: freezed == contentWarning
-          ? _value.contentWarning
-          : contentWarning // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as int,
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            sidebar:
+                freezed == sidebar
+                    ? _value.sidebar
+                    : sidebar // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            published:
+                null == published
+                    ? _value.published
+                    : published // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            updated:
+                freezed == updated
+                    ? _value.updated
+                    : updated // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            icon:
+                freezed == icon
+                    ? _value.icon
+                    : icon // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            banner:
+                freezed == banner
+                    ? _value.banner
+                    : banner // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            description:
+                freezed == description
+                    ? _value.description
+                    : description // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            actorId:
+                null == actorId
+                    ? _value.actorId
+                    : actorId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            lastRefreshedAt:
+                null == lastRefreshedAt
+                    ? _value.lastRefreshedAt
+                    : lastRefreshedAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            inboxUrl:
+                null == inboxUrl
+                    ? _value.inboxUrl
+                    : inboxUrl // ignore: cast_nullable_to_non_nullable
+                        as String,
+            privateKey:
+                freezed == privateKey
+                    ? _value.privateKey
+                    : privateKey // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            publicKey:
+                freezed == publicKey
+                    ? _value.publicKey
+                    : publicKey // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            instanceId:
+                null == instanceId
+                    ? _value.instanceId
+                    : instanceId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            contentWarning:
+                freezed == contentWarning
+                    ? _value.contentWarning
+                    : contentWarning // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$SiteImplCopyWith<$Res> implements $SiteCopyWith<$Res> {
-  factory _$$SiteImplCopyWith(
-          _$SiteImpl value, $Res Function(_$SiteImpl) then) =
-      __$$SiteImplCopyWithImpl<$Res>;
+  factory _$$SiteImplCopyWith(_$SiteImpl value, $Res Function(_$SiteImpl) then) = __$$SiteImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int id,
-      String name,
-      String? sidebar,
-      DateTime published,
-      DateTime? updated,
-      String? icon,
-      String? banner,
-      String? description,
-      String actorId,
-      DateTime lastRefreshedAt,
-      String inboxUrl,
-      @deprecated String? privateKey,
-      @deprecated String? publicKey,
-      int instanceId,
-      String? contentWarning});
+  $Res call({
+    int id,
+    String name,
+    String? sidebar,
+    DateTime published,
+    DateTime? updated,
+    String? icon,
+    String? banner,
+    String? description,
+    String actorId,
+    DateTime lastRefreshedAt,
+    String inboxUrl,
+    @deprecated String? privateKey,
+    @deprecated String? publicKey,
+    int instanceId,
+    String? contentWarning,
+  });
 }
 
 /// @nodoc
-class __$$SiteImplCopyWithImpl<$Res>
-    extends _$SiteCopyWithImpl<$Res, _$SiteImpl>
-    implements _$$SiteImplCopyWith<$Res> {
-  __$$SiteImplCopyWithImpl(_$SiteImpl _value, $Res Function(_$SiteImpl) _then)
-      : super(_value, _then);
+class __$$SiteImplCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res, _$SiteImpl> implements _$$SiteImplCopyWith<$Res> {
+  __$$SiteImplCopyWithImpl(_$SiteImpl _value, $Res Function(_$SiteImpl) _then) : super(_value, _then);
 
   /// Create a copy of Site
   /// with the given fields replaced by the non-null parameter values.
@@ -221,68 +233,85 @@ class __$$SiteImplCopyWithImpl<$Res>
     Object? instanceId = null,
     Object? contentWarning = freezed,
   }) {
-    return _then(_$SiteImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      sidebar: freezed == sidebar
-          ? _value.sidebar
-          : sidebar // ignore: cast_nullable_to_non_nullable
-              as String?,
-      published: null == published
-          ? _value.published
-          : published // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updated: freezed == updated
-          ? _value.updated
-          : updated // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      icon: freezed == icon
-          ? _value.icon
-          : icon // ignore: cast_nullable_to_non_nullable
-              as String?,
-      banner: freezed == banner
-          ? _value.banner
-          : banner // ignore: cast_nullable_to_non_nullable
-              as String?,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      actorId: null == actorId
-          ? _value.actorId
-          : actorId // ignore: cast_nullable_to_non_nullable
-              as String,
-      lastRefreshedAt: null == lastRefreshedAt
-          ? _value.lastRefreshedAt
-          : lastRefreshedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      inboxUrl: null == inboxUrl
-          ? _value.inboxUrl
-          : inboxUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      privateKey: freezed == privateKey
-          ? _value.privateKey
-          : privateKey // ignore: cast_nullable_to_non_nullable
-              as String?,
-      publicKey: freezed == publicKey
-          ? _value.publicKey
-          : publicKey // ignore: cast_nullable_to_non_nullable
-              as String?,
-      instanceId: null == instanceId
-          ? _value.instanceId
-          : instanceId // ignore: cast_nullable_to_non_nullable
-              as int,
-      contentWarning: freezed == contentWarning
-          ? _value.contentWarning
-          : contentWarning // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$SiteImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as int,
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        sidebar:
+            freezed == sidebar
+                ? _value.sidebar
+                : sidebar // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        published:
+            null == published
+                ? _value.published
+                : published // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        updated:
+            freezed == updated
+                ? _value.updated
+                : updated // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        icon:
+            freezed == icon
+                ? _value.icon
+                : icon // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        banner:
+            freezed == banner
+                ? _value.banner
+                : banner // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        description:
+            freezed == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        actorId:
+            null == actorId
+                ? _value.actorId
+                : actorId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        lastRefreshedAt:
+            null == lastRefreshedAt
+                ? _value.lastRefreshedAt
+                : lastRefreshedAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        inboxUrl:
+            null == inboxUrl
+                ? _value.inboxUrl
+                : inboxUrl // ignore: cast_nullable_to_non_nullable
+                    as String,
+        privateKey:
+            freezed == privateKey
+                ? _value.privateKey
+                : privateKey // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        publicKey:
+            freezed == publicKey
+                ? _value.publicKey
+                : publicKey // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        instanceId:
+            null == instanceId
+                ? _value.instanceId
+                : instanceId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        contentWarning:
+            freezed == contentWarning
+                ? _value.contentWarning
+                : contentWarning // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -290,71 +319,70 @@ class __$$SiteImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$SiteImpl extends _Site {
-  const _$SiteImpl(
-      {required this.id,
-      required this.name,
-      this.sidebar,
-      required this.published,
-      this.updated,
-      this.icon,
-      this.banner,
-      this.description,
-      required this.actorId,
-      required this.lastRefreshedAt,
-      required this.inboxUrl,
-      @deprecated this.privateKey,
-      @deprecated this.publicKey,
-      required this.instanceId,
-      this.contentWarning})
-      : super._();
+  const _$SiteImpl({
+    required this.id,
+    required this.name,
+    this.sidebar,
+    required this.published,
+    this.updated,
+    this.icon,
+    this.banner,
+    this.description,
+    required this.actorId,
+    required this.lastRefreshedAt,
+    required this.inboxUrl,
+    @deprecated this.privateKey,
+    @deprecated this.publicKey,
+    required this.instanceId,
+    this.contentWarning,
+  }) : super._();
 
-  factory _$SiteImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SiteImplFromJson(json);
+  factory _$SiteImpl.fromJson(Map<String, dynamic> json) => _$$SiteImplFromJson(json);
 
   @override
   final int id;
-// v0.18.0
+  // v0.18.0
   @override
   final String name;
-// v0.18.0
+  // v0.18.0
   @override
   final String? sidebar;
-// v0.18.0
+  // v0.18.0
   @override
   final DateTime published;
-// v0.18.0
+  // v0.18.0
   @override
   final DateTime? updated;
-// v0.18.0
+  // v0.18.0
   @override
   final String? icon;
-// v0.18.0
+  // v0.18.0
   @override
   final String? banner;
-// v0.18.0
+  // v0.18.0
   @override
   final String? description;
-// v0.18.0
+  // v0.18.0
   @override
   final String actorId;
-// v0.18.0
+  // v0.18.0
   @override
   final DateTime lastRefreshedAt;
-// v0.18.0
+  // v0.18.0
   @override
   final String inboxUrl;
-// v0.18.0
+  // v0.18.0
   @override
   @deprecated
   final String? privateKey;
-// v0.18.0 [deprecated in v0.19.4]
+  // v0.18.0 [deprecated in v0.19.4]
   @override
   @deprecated
   final String? publicKey;
-// v0.18.0 [deprecated in v0.19.4]
+  // v0.18.0 [deprecated in v0.19.4]
   @override
   final int instanceId;
-// v0.18.0
+  // v0.18.0
   @override
   final String? contentWarning;
 
@@ -371,81 +399,55 @@ class _$SiteImpl extends _Site {
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.sidebar, sidebar) || other.sidebar == sidebar) &&
-            (identical(other.published, published) ||
-                other.published == published) &&
+            (identical(other.published, published) || other.published == published) &&
             (identical(other.updated, updated) || other.updated == updated) &&
             (identical(other.icon, icon) || other.icon == icon) &&
             (identical(other.banner, banner) || other.banner == banner) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
+            (identical(other.description, description) || other.description == description) &&
             (identical(other.actorId, actorId) || other.actorId == actorId) &&
-            (identical(other.lastRefreshedAt, lastRefreshedAt) ||
-                other.lastRefreshedAt == lastRefreshedAt) &&
-            (identical(other.inboxUrl, inboxUrl) ||
-                other.inboxUrl == inboxUrl) &&
-            (identical(other.privateKey, privateKey) ||
-                other.privateKey == privateKey) &&
-            (identical(other.publicKey, publicKey) ||
-                other.publicKey == publicKey) &&
-            (identical(other.instanceId, instanceId) ||
-                other.instanceId == instanceId) &&
-            (identical(other.contentWarning, contentWarning) ||
-                other.contentWarning == contentWarning));
+            (identical(other.lastRefreshedAt, lastRefreshedAt) || other.lastRefreshedAt == lastRefreshedAt) &&
+            (identical(other.inboxUrl, inboxUrl) || other.inboxUrl == inboxUrl) &&
+            (identical(other.privateKey, privateKey) || other.privateKey == privateKey) &&
+            (identical(other.publicKey, publicKey) || other.publicKey == publicKey) &&
+            (identical(other.instanceId, instanceId) || other.instanceId == instanceId) &&
+            (identical(other.contentWarning, contentWarning) || other.contentWarning == contentWarning));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      name,
-      sidebar,
-      published,
-      updated,
-      icon,
-      banner,
-      description,
-      actorId,
-      lastRefreshedAt,
-      inboxUrl,
-      privateKey,
-      publicKey,
-      instanceId,
-      contentWarning);
+  int get hashCode => Object.hash(runtimeType, id, name, sidebar, published, updated, icon, banner, description, actorId, lastRefreshedAt, inboxUrl, privateKey, publicKey, instanceId, contentWarning);
 
   /// Create a copy of Site
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$SiteImplCopyWith<_$SiteImpl> get copyWith =>
-      __$$SiteImplCopyWithImpl<_$SiteImpl>(this, _$identity);
+  _$$SiteImplCopyWith<_$SiteImpl> get copyWith => __$$SiteImplCopyWithImpl<_$SiteImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SiteImplToJson(
-      this,
-    );
+    return _$$SiteImplToJson(this);
   }
 }
 
 abstract class _Site extends Site {
-  const factory _Site(
-      {required final int id,
-      required final String name,
-      final String? sidebar,
-      required final DateTime published,
-      final DateTime? updated,
-      final String? icon,
-      final String? banner,
-      final String? description,
-      required final String actorId,
-      required final DateTime lastRefreshedAt,
-      required final String inboxUrl,
-      @deprecated final String? privateKey,
-      @deprecated final String? publicKey,
-      required final int instanceId,
-      final String? contentWarning}) = _$SiteImpl;
+  const factory _Site({
+    required final int id,
+    required final String name,
+    final String? sidebar,
+    required final DateTime published,
+    final DateTime? updated,
+    final String? icon,
+    final String? banner,
+    final String? description,
+    required final String actorId,
+    required final DateTime lastRefreshedAt,
+    required final String inboxUrl,
+    @deprecated final String? privateKey,
+    @deprecated final String? publicKey,
+    required final int instanceId,
+    final String? contentWarning,
+  }) = _$SiteImpl;
   const _Site._() : super._();
 
   factory _Site.fromJson(Map<String, dynamic> json) = _$SiteImpl.fromJson;
@@ -487,6 +489,5 @@ abstract class _Site extends Site {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SiteImplCopyWith<_$SiteImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SiteImplCopyWith<_$SiteImpl> get copyWith => throw _privateConstructorUsedError;
 }

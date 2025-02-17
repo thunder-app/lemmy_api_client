@@ -18,6 +18,5 @@ class ModAddCommunity with _$ModAddCommunity {
   }) = _ModAddCommunity;
 
   const ModAddCommunity._();
-  factory ModAddCommunity.fromJson(Map<String, dynamic> json) =>
-      _$ModAddCommunityFromJson(json);
+  factory ModAddCommunity.fromJson(Map<String, dynamic> json) => _$ModAddCommunityFromJson(json);
 }

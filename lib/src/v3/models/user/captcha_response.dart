@@ -15,6 +15,5 @@ class CaptchaResponse with _$CaptchaResponse {
   }) = _CaptchaResponse;
 
   const CaptchaResponse._();
-  factory CaptchaResponse.fromJson(Map<String, dynamic> json) =>
-      _$CaptchaResponseFromJson(json);
+  factory CaptchaResponse.fromJson(Map<String, dynamic> json) => _$CaptchaResponseFromJson(json);
 }

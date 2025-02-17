@@ -9,11 +9,8 @@ part 'list_media_response.g.dart';
 @freezed
 class ListMediaResponse with _$ListMediaResponse {
   @modelSerde
-  const factory ListMediaResponse({
-    required List<LocalImageView> images,
-  }) = _ListMediaResponse;
+  const factory ListMediaResponse({required List<LocalImageView> images}) = _ListMediaResponse;
 
   const ListMediaResponse._();
-  factory ListMediaResponse.fromJson(Map<String, dynamic> json) =>
-      _$ListMediaResponseFromJson(json);
+  factory ListMediaResponse.fromJson(Map<String, dynamic> json) => _$ListMediaResponseFromJson(json);
 }

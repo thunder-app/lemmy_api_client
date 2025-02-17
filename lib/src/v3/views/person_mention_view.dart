@@ -29,6 +29,5 @@ class PersonMentionView with _$PersonMentionView {
   }) = _PersonMentionView;
 
   const PersonMentionView._();
-  factory PersonMentionView.fromJson(Map<String, dynamic> json) =>
-      _$PersonMentionViewFromJson(json);
+  factory PersonMentionView.fromJson(Map<String, dynamic> json) => _$PersonMentionViewFromJson(json);
 }

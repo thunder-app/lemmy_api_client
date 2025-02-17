@@ -12,10 +12,10 @@ part of 'oauth.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
-AuthenticateWithOAuth _$AuthenticateWithOAuthFromJson(
-    Map<String, dynamic> json) {
+AuthenticateWithOAuth _$AuthenticateWithOAuthFromJson(Map<String, dynamic> json) {
   return _AuthenticateWithOAuth.fromJson(json);
 }
 
@@ -33,28 +33,18 @@ mixin _$AuthenticateWithOAuth {
   /// Create a copy of AuthenticateWithOAuth
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $AuthenticateWithOAuthCopyWith<AuthenticateWithOAuth> get copyWith =>
-      throw _privateConstructorUsedError;
+  $AuthenticateWithOAuthCopyWith<AuthenticateWithOAuth> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AuthenticateWithOAuthCopyWith<$Res> {
-  factory $AuthenticateWithOAuthCopyWith(AuthenticateWithOAuth value,
-          $Res Function(AuthenticateWithOAuth) then) =
-      _$AuthenticateWithOAuthCopyWithImpl<$Res, AuthenticateWithOAuth>;
+  factory $AuthenticateWithOAuthCopyWith(AuthenticateWithOAuth value, $Res Function(AuthenticateWithOAuth) then) = _$AuthenticateWithOAuthCopyWithImpl<$Res, AuthenticateWithOAuth>;
   @useResult
-  $Res call(
-      {String code,
-      int oauth_provider_id,
-      String redirect_uri,
-      String? username,
-      String? answer});
+  $Res call({String code, int oauth_provider_id, String redirect_uri, String? username, String? answer});
 }
 
 /// @nodoc
-class _$AuthenticateWithOAuthCopyWithImpl<$Res,
-        $Val extends AuthenticateWithOAuth>
-    implements $AuthenticateWithOAuthCopyWith<$Res> {
+class _$AuthenticateWithOAuthCopyWithImpl<$Res, $Val extends AuthenticateWithOAuth> implements $AuthenticateWithOAuthCopyWith<$Res> {
   _$AuthenticateWithOAuthCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -66,97 +56,86 @@ class _$AuthenticateWithOAuthCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? code = null,
-    Object? oauth_provider_id = null,
-    Object? redirect_uri = null,
-    Object? username = freezed,
-    Object? answer = freezed,
-  }) {
-    return _then(_value.copyWith(
-      code: null == code
-          ? _value.code
-          : code // ignore: cast_nullable_to_non_nullable
-              as String,
-      oauth_provider_id: null == oauth_provider_id
-          ? _value.oauth_provider_id
-          : oauth_provider_id // ignore: cast_nullable_to_non_nullable
-              as int,
-      redirect_uri: null == redirect_uri
-          ? _value.redirect_uri
-          : redirect_uri // ignore: cast_nullable_to_non_nullable
-              as String,
-      username: freezed == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String?,
-      answer: freezed == answer
-          ? _value.answer
-          : answer // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  $Res call({Object? code = null, Object? oauth_provider_id = null, Object? redirect_uri = null, Object? username = freezed, Object? answer = freezed}) {
+    return _then(
+      _value.copyWith(
+            code:
+                null == code
+                    ? _value.code
+                    : code // ignore: cast_nullable_to_non_nullable
+                        as String,
+            oauth_provider_id:
+                null == oauth_provider_id
+                    ? _value.oauth_provider_id
+                    : oauth_provider_id // ignore: cast_nullable_to_non_nullable
+                        as int,
+            redirect_uri:
+                null == redirect_uri
+                    ? _value.redirect_uri
+                    : redirect_uri // ignore: cast_nullable_to_non_nullable
+                        as String,
+            username:
+                freezed == username
+                    ? _value.username
+                    : username // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            answer:
+                freezed == answer
+                    ? _value.answer
+                    : answer // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$AuthenticateWithOAuthImplCopyWith<$Res>
-    implements $AuthenticateWithOAuthCopyWith<$Res> {
-  factory _$$AuthenticateWithOAuthImplCopyWith(
-          _$AuthenticateWithOAuthImpl value,
-          $Res Function(_$AuthenticateWithOAuthImpl) then) =
-      __$$AuthenticateWithOAuthImplCopyWithImpl<$Res>;
+abstract class _$$AuthenticateWithOAuthImplCopyWith<$Res> implements $AuthenticateWithOAuthCopyWith<$Res> {
+  factory _$$AuthenticateWithOAuthImplCopyWith(_$AuthenticateWithOAuthImpl value, $Res Function(_$AuthenticateWithOAuthImpl) then) = __$$AuthenticateWithOAuthImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String code,
-      int oauth_provider_id,
-      String redirect_uri,
-      String? username,
-      String? answer});
+  $Res call({String code, int oauth_provider_id, String redirect_uri, String? username, String? answer});
 }
 
 /// @nodoc
-class __$$AuthenticateWithOAuthImplCopyWithImpl<$Res>
-    extends _$AuthenticateWithOAuthCopyWithImpl<$Res,
-        _$AuthenticateWithOAuthImpl>
-    implements _$$AuthenticateWithOAuthImplCopyWith<$Res> {
-  __$$AuthenticateWithOAuthImplCopyWithImpl(_$AuthenticateWithOAuthImpl _value,
-      $Res Function(_$AuthenticateWithOAuthImpl) _then)
-      : super(_value, _then);
+class __$$AuthenticateWithOAuthImplCopyWithImpl<$Res> extends _$AuthenticateWithOAuthCopyWithImpl<$Res, _$AuthenticateWithOAuthImpl> implements _$$AuthenticateWithOAuthImplCopyWith<$Res> {
+  __$$AuthenticateWithOAuthImplCopyWithImpl(_$AuthenticateWithOAuthImpl _value, $Res Function(_$AuthenticateWithOAuthImpl) _then) : super(_value, _then);
 
   /// Create a copy of AuthenticateWithOAuth
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? code = null,
-    Object? oauth_provider_id = null,
-    Object? redirect_uri = null,
-    Object? username = freezed,
-    Object? answer = freezed,
-  }) {
-    return _then(_$AuthenticateWithOAuthImpl(
-      code: null == code
-          ? _value.code
-          : code // ignore: cast_nullable_to_non_nullable
-              as String,
-      oauth_provider_id: null == oauth_provider_id
-          ? _value.oauth_provider_id
-          : oauth_provider_id // ignore: cast_nullable_to_non_nullable
-              as int,
-      redirect_uri: null == redirect_uri
-          ? _value.redirect_uri
-          : redirect_uri // ignore: cast_nullable_to_non_nullable
-              as String,
-      username: freezed == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String?,
-      answer: freezed == answer
-          ? _value.answer
-          : answer // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? code = null, Object? oauth_provider_id = null, Object? redirect_uri = null, Object? username = freezed, Object? answer = freezed}) {
+    return _then(
+      _$AuthenticateWithOAuthImpl(
+        code:
+            null == code
+                ? _value.code
+                : code // ignore: cast_nullable_to_non_nullable
+                    as String,
+        oauth_provider_id:
+            null == oauth_provider_id
+                ? _value.oauth_provider_id
+                : oauth_provider_id // ignore: cast_nullable_to_non_nullable
+                    as int,
+        redirect_uri:
+            null == redirect_uri
+                ? _value.redirect_uri
+                : redirect_uri // ignore: cast_nullable_to_non_nullable
+                    as String,
+        username:
+            freezed == username
+                ? _value.username
+                : username // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        answer:
+            freezed == answer
+                ? _value.answer
+                : answer // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -164,16 +143,9 @@ class __$$AuthenticateWithOAuthImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$AuthenticateWithOAuthImpl extends _AuthenticateWithOAuth {
-  const _$AuthenticateWithOAuthImpl(
-      {required this.code,
-      required this.oauth_provider_id,
-      required this.redirect_uri,
-      this.username,
-      this.answer})
-      : super._();
+  const _$AuthenticateWithOAuthImpl({required this.code, required this.oauth_provider_id, required this.redirect_uri, this.username, this.answer}) : super._();
 
-  factory _$AuthenticateWithOAuthImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AuthenticateWithOAuthImplFromJson(json);
+  factory _$AuthenticateWithOAuthImpl.fromJson(Map<String, dynamic> json) => _$$AuthenticateWithOAuthImplFromJson(json);
 
   @override
   final String code;
@@ -197,48 +169,35 @@ class _$AuthenticateWithOAuthImpl extends _AuthenticateWithOAuth {
         (other.runtimeType == runtimeType &&
             other is _$AuthenticateWithOAuthImpl &&
             (identical(other.code, code) || other.code == code) &&
-            (identical(other.oauth_provider_id, oauth_provider_id) ||
-                other.oauth_provider_id == oauth_provider_id) &&
-            (identical(other.redirect_uri, redirect_uri) ||
-                other.redirect_uri == redirect_uri) &&
-            (identical(other.username, username) ||
-                other.username == username) &&
+            (identical(other.oauth_provider_id, oauth_provider_id) || other.oauth_provider_id == oauth_provider_id) &&
+            (identical(other.redirect_uri, redirect_uri) || other.redirect_uri == redirect_uri) &&
+            (identical(other.username, username) || other.username == username) &&
             (identical(other.answer, answer) || other.answer == answer));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, code, oauth_provider_id, redirect_uri, username, answer);
+  int get hashCode => Object.hash(runtimeType, code, oauth_provider_id, redirect_uri, username, answer);
 
   /// Create a copy of AuthenticateWithOAuth
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$AuthenticateWithOAuthImplCopyWith<_$AuthenticateWithOAuthImpl>
-      get copyWith => __$$AuthenticateWithOAuthImplCopyWithImpl<
-          _$AuthenticateWithOAuthImpl>(this, _$identity);
+  _$$AuthenticateWithOAuthImplCopyWith<_$AuthenticateWithOAuthImpl> get copyWith => __$$AuthenticateWithOAuthImplCopyWithImpl<_$AuthenticateWithOAuthImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AuthenticateWithOAuthImplToJson(
-      this,
-    );
+    return _$$AuthenticateWithOAuthImplToJson(this);
   }
 }
 
 abstract class _AuthenticateWithOAuth extends AuthenticateWithOAuth {
-  const factory _AuthenticateWithOAuth(
-      {required final String code,
-      required final int oauth_provider_id,
-      required final String redirect_uri,
-      final String? username,
-      final String? answer}) = _$AuthenticateWithOAuthImpl;
+  const factory _AuthenticateWithOAuth({required final String code, required final int oauth_provider_id, required final String redirect_uri, final String? username, final String? answer}) =
+      _$AuthenticateWithOAuthImpl;
   const _AuthenticateWithOAuth._() : super._();
 
-  factory _AuthenticateWithOAuth.fromJson(Map<String, dynamic> json) =
-      _$AuthenticateWithOAuthImpl.fromJson;
+  factory _AuthenticateWithOAuth.fromJson(Map<String, dynamic> json) = _$AuthenticateWithOAuthImpl.fromJson;
 
   @override
   String get code;
@@ -255,6 +214,5 @@ abstract class _AuthenticateWithOAuth extends AuthenticateWithOAuth {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AuthenticateWithOAuthImplCopyWith<_$AuthenticateWithOAuthImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$AuthenticateWithOAuthImplCopyWith<_$AuthenticateWithOAuthImpl> get copyWith => throw _privateConstructorUsedError;
 }

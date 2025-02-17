@@ -12,10 +12,10 @@ part of 'list_post_reports_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
-ListPostReportsResponse _$ListPostReportsResponseFromJson(
-    Map<String, dynamic> json) {
+ListPostReportsResponse _$ListPostReportsResponseFromJson(Map<String, dynamic> json) {
   return _ListPostReportsResponse.fromJson(json);
 }
 
@@ -29,23 +29,18 @@ mixin _$ListPostReportsResponse {
   /// Create a copy of ListPostReportsResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ListPostReportsResponseCopyWith<ListPostReportsResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ListPostReportsResponseCopyWith<ListPostReportsResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ListPostReportsResponseCopyWith<$Res> {
-  factory $ListPostReportsResponseCopyWith(ListPostReportsResponse value,
-          $Res Function(ListPostReportsResponse) then) =
-      _$ListPostReportsResponseCopyWithImpl<$Res, ListPostReportsResponse>;
+  factory $ListPostReportsResponseCopyWith(ListPostReportsResponse value, $Res Function(ListPostReportsResponse) then) = _$ListPostReportsResponseCopyWithImpl<$Res, ListPostReportsResponse>;
   @useResult
   $Res call({List<PostReportView> postReports});
 }
 
 /// @nodoc
-class _$ListPostReportsResponseCopyWithImpl<$Res,
-        $Val extends ListPostReportsResponse>
-    implements $ListPostReportsResponseCopyWith<$Res> {
+class _$ListPostReportsResponseCopyWithImpl<$Res, $Val extends ListPostReportsResponse> implements $ListPostReportsResponseCopyWith<$Res> {
   _$ListPostReportsResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -57,53 +52,46 @@ class _$ListPostReportsResponseCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postReports = null,
-  }) {
-    return _then(_value.copyWith(
-      postReports: null == postReports
-          ? _value.postReports
-          : postReports // ignore: cast_nullable_to_non_nullable
-              as List<PostReportView>,
-    ) as $Val);
+  $Res call({Object? postReports = null}) {
+    return _then(
+      _value.copyWith(
+            postReports:
+                null == postReports
+                    ? _value.postReports
+                    : postReports // ignore: cast_nullable_to_non_nullable
+                        as List<PostReportView>,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$ListPostReportsResponseImplCopyWith<$Res>
-    implements $ListPostReportsResponseCopyWith<$Res> {
-  factory _$$ListPostReportsResponseImplCopyWith(
-          _$ListPostReportsResponseImpl value,
-          $Res Function(_$ListPostReportsResponseImpl) then) =
-      __$$ListPostReportsResponseImplCopyWithImpl<$Res>;
+abstract class _$$ListPostReportsResponseImplCopyWith<$Res> implements $ListPostReportsResponseCopyWith<$Res> {
+  factory _$$ListPostReportsResponseImplCopyWith(_$ListPostReportsResponseImpl value, $Res Function(_$ListPostReportsResponseImpl) then) = __$$ListPostReportsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<PostReportView> postReports});
 }
 
 /// @nodoc
-class __$$ListPostReportsResponseImplCopyWithImpl<$Res>
-    extends _$ListPostReportsResponseCopyWithImpl<$Res,
-        _$ListPostReportsResponseImpl>
-    implements _$$ListPostReportsResponseImplCopyWith<$Res> {
-  __$$ListPostReportsResponseImplCopyWithImpl(
-      _$ListPostReportsResponseImpl _value,
-      $Res Function(_$ListPostReportsResponseImpl) _then)
-      : super(_value, _then);
+class __$$ListPostReportsResponseImplCopyWithImpl<$Res> extends _$ListPostReportsResponseCopyWithImpl<$Res, _$ListPostReportsResponseImpl> implements _$$ListPostReportsResponseImplCopyWith<$Res> {
+  __$$ListPostReportsResponseImplCopyWithImpl(_$ListPostReportsResponseImpl _value, $Res Function(_$ListPostReportsResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of ListPostReportsResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postReports = null,
-  }) {
-    return _then(_$ListPostReportsResponseImpl(
-      postReports: null == postReports
-          ? _value._postReports
-          : postReports // ignore: cast_nullable_to_non_nullable
-              as List<PostReportView>,
-    ));
+  $Res call({Object? postReports = null}) {
+    return _then(
+      _$ListPostReportsResponseImpl(
+        postReports:
+            null == postReports
+                ? _value._postReports
+                : postReports // ignore: cast_nullable_to_non_nullable
+                    as List<PostReportView>,
+      ),
+    );
   }
 }
 
@@ -111,13 +99,9 @@ class __$$ListPostReportsResponseImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$ListPostReportsResponseImpl extends _ListPostReportsResponse {
-  const _$ListPostReportsResponseImpl(
-      {required final List<PostReportView> postReports})
-      : _postReports = postReports,
-        super._();
+  const _$ListPostReportsResponseImpl({required final List<PostReportView> postReports}) : _postReports = postReports, super._();
 
-  factory _$ListPostReportsResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ListPostReportsResponseImplFromJson(json);
+  factory _$ListPostReportsResponseImpl.fromJson(Map<String, dynamic> json) => _$$ListPostReportsResponseImplFromJson(json);
 
   final List<PostReportView> _postReports;
   @override
@@ -134,43 +118,31 @@ class _$ListPostReportsResponseImpl extends _ListPostReportsResponse {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ListPostReportsResponseImpl &&
-            const DeepCollectionEquality()
-                .equals(other._postReports, _postReports));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$ListPostReportsResponseImpl && const DeepCollectionEquality().equals(other._postReports, _postReports));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_postReports));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_postReports));
 
   /// Create a copy of ListPostReportsResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ListPostReportsResponseImplCopyWith<_$ListPostReportsResponseImpl>
-      get copyWith => __$$ListPostReportsResponseImplCopyWithImpl<
-          _$ListPostReportsResponseImpl>(this, _$identity);
+  _$$ListPostReportsResponseImplCopyWith<_$ListPostReportsResponseImpl> get copyWith => __$$ListPostReportsResponseImplCopyWithImpl<_$ListPostReportsResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ListPostReportsResponseImplToJson(
-      this,
-    );
+    return _$$ListPostReportsResponseImplToJson(this);
   }
 }
 
 abstract class _ListPostReportsResponse extends ListPostReportsResponse {
-  const factory _ListPostReportsResponse(
-          {required final List<PostReportView> postReports}) =
-      _$ListPostReportsResponseImpl;
+  const factory _ListPostReportsResponse({required final List<PostReportView> postReports}) = _$ListPostReportsResponseImpl;
   const _ListPostReportsResponse._() : super._();
 
-  factory _ListPostReportsResponse.fromJson(Map<String, dynamic> json) =
-      _$ListPostReportsResponseImpl.fromJson;
+  factory _ListPostReportsResponse.fromJson(Map<String, dynamic> json) = _$ListPostReportsResponseImpl.fromJson;
 
   @override
   List<PostReportView> get postReports;
@@ -179,6 +151,5 @@ abstract class _ListPostReportsResponse extends ListPostReportsResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ListPostReportsResponseImplCopyWith<_$ListPostReportsResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$ListPostReportsResponseImplCopyWith<_$ListPostReportsResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

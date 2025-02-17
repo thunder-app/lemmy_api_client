@@ -12,7 +12,8 @@ part of 'site_aggregates.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 SiteAggregates _$SiteAggregatesFromJson(Map<String, dynamic> json) {
   return _SiteAggregates.fromJson(json);
@@ -21,8 +22,7 @@ SiteAggregates _$SiteAggregatesFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$SiteAggregates {
   @deprecated
-  int? get id =>
-      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
+  int? get id => throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
   int get siteId => throw _privateConstructorUsedError; // v0.18.0
   int get users => throw _privateConstructorUsedError; // v0.18.0
   int get posts => throw _privateConstructorUsedError; // v0.18.0
@@ -39,32 +39,18 @@ mixin _$SiteAggregates {
   /// Create a copy of SiteAggregates
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $SiteAggregatesCopyWith<SiteAggregates> get copyWith =>
-      throw _privateConstructorUsedError;
+  $SiteAggregatesCopyWith<SiteAggregates> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SiteAggregatesCopyWith<$Res> {
-  factory $SiteAggregatesCopyWith(
-          SiteAggregates value, $Res Function(SiteAggregates) then) =
-      _$SiteAggregatesCopyWithImpl<$Res, SiteAggregates>;
+  factory $SiteAggregatesCopyWith(SiteAggregates value, $Res Function(SiteAggregates) then) = _$SiteAggregatesCopyWithImpl<$Res, SiteAggregates>;
   @useResult
-  $Res call(
-      {@deprecated int? id,
-      int siteId,
-      int users,
-      int posts,
-      int comments,
-      int communities,
-      int usersActiveDay,
-      int usersActiveWeek,
-      int usersActiveMonth,
-      int usersActiveHalfYear});
+  $Res call({@deprecated int? id, int siteId, int users, int posts, int comments, int communities, int usersActiveDay, int usersActiveWeek, int usersActiveMonth, int usersActiveHalfYear});
 }
 
 /// @nodoc
-class _$SiteAggregatesCopyWithImpl<$Res, $Val extends SiteAggregates>
-    implements $SiteAggregatesCopyWith<$Res> {
+class _$SiteAggregatesCopyWithImpl<$Res, $Val extends SiteAggregates> implements $SiteAggregatesCopyWith<$Res> {
   _$SiteAggregatesCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -88,79 +74,75 @@ class _$SiteAggregatesCopyWithImpl<$Res, $Val extends SiteAggregates>
     Object? usersActiveMonth = null,
     Object? usersActiveHalfYear = null,
   }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      siteId: null == siteId
-          ? _value.siteId
-          : siteId // ignore: cast_nullable_to_non_nullable
-              as int,
-      users: null == users
-          ? _value.users
-          : users // ignore: cast_nullable_to_non_nullable
-              as int,
-      posts: null == posts
-          ? _value.posts
-          : posts // ignore: cast_nullable_to_non_nullable
-              as int,
-      comments: null == comments
-          ? _value.comments
-          : comments // ignore: cast_nullable_to_non_nullable
-              as int,
-      communities: null == communities
-          ? _value.communities
-          : communities // ignore: cast_nullable_to_non_nullable
-              as int,
-      usersActiveDay: null == usersActiveDay
-          ? _value.usersActiveDay
-          : usersActiveDay // ignore: cast_nullable_to_non_nullable
-              as int,
-      usersActiveWeek: null == usersActiveWeek
-          ? _value.usersActiveWeek
-          : usersActiveWeek // ignore: cast_nullable_to_non_nullable
-              as int,
-      usersActiveMonth: null == usersActiveMonth
-          ? _value.usersActiveMonth
-          : usersActiveMonth // ignore: cast_nullable_to_non_nullable
-              as int,
-      usersActiveHalfYear: null == usersActiveHalfYear
-          ? _value.usersActiveHalfYear
-          : usersActiveHalfYear // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                freezed == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            siteId:
+                null == siteId
+                    ? _value.siteId
+                    : siteId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            users:
+                null == users
+                    ? _value.users
+                    : users // ignore: cast_nullable_to_non_nullable
+                        as int,
+            posts:
+                null == posts
+                    ? _value.posts
+                    : posts // ignore: cast_nullable_to_non_nullable
+                        as int,
+            comments:
+                null == comments
+                    ? _value.comments
+                    : comments // ignore: cast_nullable_to_non_nullable
+                        as int,
+            communities:
+                null == communities
+                    ? _value.communities
+                    : communities // ignore: cast_nullable_to_non_nullable
+                        as int,
+            usersActiveDay:
+                null == usersActiveDay
+                    ? _value.usersActiveDay
+                    : usersActiveDay // ignore: cast_nullable_to_non_nullable
+                        as int,
+            usersActiveWeek:
+                null == usersActiveWeek
+                    ? _value.usersActiveWeek
+                    : usersActiveWeek // ignore: cast_nullable_to_non_nullable
+                        as int,
+            usersActiveMonth:
+                null == usersActiveMonth
+                    ? _value.usersActiveMonth
+                    : usersActiveMonth // ignore: cast_nullable_to_non_nullable
+                        as int,
+            usersActiveHalfYear:
+                null == usersActiveHalfYear
+                    ? _value.usersActiveHalfYear
+                    : usersActiveHalfYear // ignore: cast_nullable_to_non_nullable
+                        as int,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$SiteAggregatesImplCopyWith<$Res>
-    implements $SiteAggregatesCopyWith<$Res> {
-  factory _$$SiteAggregatesImplCopyWith(_$SiteAggregatesImpl value,
-          $Res Function(_$SiteAggregatesImpl) then) =
-      __$$SiteAggregatesImplCopyWithImpl<$Res>;
+abstract class _$$SiteAggregatesImplCopyWith<$Res> implements $SiteAggregatesCopyWith<$Res> {
+  factory _$$SiteAggregatesImplCopyWith(_$SiteAggregatesImpl value, $Res Function(_$SiteAggregatesImpl) then) = __$$SiteAggregatesImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {@deprecated int? id,
-      int siteId,
-      int users,
-      int posts,
-      int comments,
-      int communities,
-      int usersActiveDay,
-      int usersActiveWeek,
-      int usersActiveMonth,
-      int usersActiveHalfYear});
+  $Res call({@deprecated int? id, int siteId, int users, int posts, int comments, int communities, int usersActiveDay, int usersActiveWeek, int usersActiveMonth, int usersActiveHalfYear});
 }
 
 /// @nodoc
-class __$$SiteAggregatesImplCopyWithImpl<$Res>
-    extends _$SiteAggregatesCopyWithImpl<$Res, _$SiteAggregatesImpl>
-    implements _$$SiteAggregatesImplCopyWith<$Res> {
-  __$$SiteAggregatesImplCopyWithImpl(
-      _$SiteAggregatesImpl _value, $Res Function(_$SiteAggregatesImpl) _then)
-      : super(_value, _then);
+class __$$SiteAggregatesImplCopyWithImpl<$Res> extends _$SiteAggregatesCopyWithImpl<$Res, _$SiteAggregatesImpl> implements _$$SiteAggregatesImplCopyWith<$Res> {
+  __$$SiteAggregatesImplCopyWithImpl(_$SiteAggregatesImpl _value, $Res Function(_$SiteAggregatesImpl) _then) : super(_value, _then);
 
   /// Create a copy of SiteAggregates
   /// with the given fields replaced by the non-null parameter values.
@@ -178,48 +160,60 @@ class __$$SiteAggregatesImplCopyWithImpl<$Res>
     Object? usersActiveMonth = null,
     Object? usersActiveHalfYear = null,
   }) {
-    return _then(_$SiteAggregatesImpl(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      siteId: null == siteId
-          ? _value.siteId
-          : siteId // ignore: cast_nullable_to_non_nullable
-              as int,
-      users: null == users
-          ? _value.users
-          : users // ignore: cast_nullable_to_non_nullable
-              as int,
-      posts: null == posts
-          ? _value.posts
-          : posts // ignore: cast_nullable_to_non_nullable
-              as int,
-      comments: null == comments
-          ? _value.comments
-          : comments // ignore: cast_nullable_to_non_nullable
-              as int,
-      communities: null == communities
-          ? _value.communities
-          : communities // ignore: cast_nullable_to_non_nullable
-              as int,
-      usersActiveDay: null == usersActiveDay
-          ? _value.usersActiveDay
-          : usersActiveDay // ignore: cast_nullable_to_non_nullable
-              as int,
-      usersActiveWeek: null == usersActiveWeek
-          ? _value.usersActiveWeek
-          : usersActiveWeek // ignore: cast_nullable_to_non_nullable
-              as int,
-      usersActiveMonth: null == usersActiveMonth
-          ? _value.usersActiveMonth
-          : usersActiveMonth // ignore: cast_nullable_to_non_nullable
-              as int,
-      usersActiveHalfYear: null == usersActiveHalfYear
-          ? _value.usersActiveHalfYear
-          : usersActiveHalfYear // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
+    return _then(
+      _$SiteAggregatesImpl(
+        id:
+            freezed == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        siteId:
+            null == siteId
+                ? _value.siteId
+                : siteId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        users:
+            null == users
+                ? _value.users
+                : users // ignore: cast_nullable_to_non_nullable
+                    as int,
+        posts:
+            null == posts
+                ? _value.posts
+                : posts // ignore: cast_nullable_to_non_nullable
+                    as int,
+        comments:
+            null == comments
+                ? _value.comments
+                : comments // ignore: cast_nullable_to_non_nullable
+                    as int,
+        communities:
+            null == communities
+                ? _value.communities
+                : communities // ignore: cast_nullable_to_non_nullable
+                    as int,
+        usersActiveDay:
+            null == usersActiveDay
+                ? _value.usersActiveDay
+                : usersActiveDay // ignore: cast_nullable_to_non_nullable
+                    as int,
+        usersActiveWeek:
+            null == usersActiveWeek
+                ? _value.usersActiveWeek
+                : usersActiveWeek // ignore: cast_nullable_to_non_nullable
+                    as int,
+        usersActiveMonth:
+            null == usersActiveMonth
+                ? _value.usersActiveMonth
+                : usersActiveMonth // ignore: cast_nullable_to_non_nullable
+                    as int,
+        usersActiveHalfYear:
+            null == usersActiveHalfYear
+                ? _value.usersActiveHalfYear
+                : usersActiveHalfYear // ignore: cast_nullable_to_non_nullable
+                    as int,
+      ),
+    );
   }
 }
 
@@ -227,50 +221,49 @@ class __$$SiteAggregatesImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$SiteAggregatesImpl extends _SiteAggregates {
-  const _$SiteAggregatesImpl(
-      {@deprecated this.id,
-      required this.siteId,
-      required this.users,
-      required this.posts,
-      required this.comments,
-      required this.communities,
-      required this.usersActiveDay,
-      required this.usersActiveWeek,
-      required this.usersActiveMonth,
-      required this.usersActiveHalfYear})
-      : super._();
+  const _$SiteAggregatesImpl({
+    @deprecated this.id,
+    required this.siteId,
+    required this.users,
+    required this.posts,
+    required this.comments,
+    required this.communities,
+    required this.usersActiveDay,
+    required this.usersActiveWeek,
+    required this.usersActiveMonth,
+    required this.usersActiveHalfYear,
+  }) : super._();
 
-  factory _$SiteAggregatesImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SiteAggregatesImplFromJson(json);
+  factory _$SiteAggregatesImpl.fromJson(Map<String, dynamic> json) => _$$SiteAggregatesImplFromJson(json);
 
   @override
   @deprecated
   final int? id;
-// v0.18.0 [deprecated in v0.19.0]
+  // v0.18.0 [deprecated in v0.19.0]
   @override
   final int siteId;
-// v0.18.0
+  // v0.18.0
   @override
   final int users;
-// v0.18.0
+  // v0.18.0
   @override
   final int posts;
-// v0.18.0
+  // v0.18.0
   @override
   final int comments;
-// v0.18.0
+  // v0.18.0
   @override
   final int communities;
-// v0.18.0
+  // v0.18.0
   @override
   final int usersActiveDay;
-// v0.18.0
+  // v0.18.0
   @override
   final int usersActiveWeek;
-// v0.18.0
+  // v0.18.0
   @override
   final int usersActiveMonth;
-// v0.18.0
+  // v0.18.0
   @override
   final int usersActiveHalfYear;
 
@@ -288,68 +281,47 @@ class _$SiteAggregatesImpl extends _SiteAggregates {
             (identical(other.siteId, siteId) || other.siteId == siteId) &&
             (identical(other.users, users) || other.users == users) &&
             (identical(other.posts, posts) || other.posts == posts) &&
-            (identical(other.comments, comments) ||
-                other.comments == comments) &&
-            (identical(other.communities, communities) ||
-                other.communities == communities) &&
-            (identical(other.usersActiveDay, usersActiveDay) ||
-                other.usersActiveDay == usersActiveDay) &&
-            (identical(other.usersActiveWeek, usersActiveWeek) ||
-                other.usersActiveWeek == usersActiveWeek) &&
-            (identical(other.usersActiveMonth, usersActiveMonth) ||
-                other.usersActiveMonth == usersActiveMonth) &&
-            (identical(other.usersActiveHalfYear, usersActiveHalfYear) ||
-                other.usersActiveHalfYear == usersActiveHalfYear));
+            (identical(other.comments, comments) || other.comments == comments) &&
+            (identical(other.communities, communities) || other.communities == communities) &&
+            (identical(other.usersActiveDay, usersActiveDay) || other.usersActiveDay == usersActiveDay) &&
+            (identical(other.usersActiveWeek, usersActiveWeek) || other.usersActiveWeek == usersActiveWeek) &&
+            (identical(other.usersActiveMonth, usersActiveMonth) || other.usersActiveMonth == usersActiveMonth) &&
+            (identical(other.usersActiveHalfYear, usersActiveHalfYear) || other.usersActiveHalfYear == usersActiveHalfYear));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      siteId,
-      users,
-      posts,
-      comments,
-      communities,
-      usersActiveDay,
-      usersActiveWeek,
-      usersActiveMonth,
-      usersActiveHalfYear);
+  int get hashCode => Object.hash(runtimeType, id, siteId, users, posts, comments, communities, usersActiveDay, usersActiveWeek, usersActiveMonth, usersActiveHalfYear);
 
   /// Create a copy of SiteAggregates
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$SiteAggregatesImplCopyWith<_$SiteAggregatesImpl> get copyWith =>
-      __$$SiteAggregatesImplCopyWithImpl<_$SiteAggregatesImpl>(
-          this, _$identity);
+  _$$SiteAggregatesImplCopyWith<_$SiteAggregatesImpl> get copyWith => __$$SiteAggregatesImplCopyWithImpl<_$SiteAggregatesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SiteAggregatesImplToJson(
-      this,
-    );
+    return _$$SiteAggregatesImplToJson(this);
   }
 }
 
 abstract class _SiteAggregates extends SiteAggregates {
-  const factory _SiteAggregates(
-      {@deprecated final int? id,
-      required final int siteId,
-      required final int users,
-      required final int posts,
-      required final int comments,
-      required final int communities,
-      required final int usersActiveDay,
-      required final int usersActiveWeek,
-      required final int usersActiveMonth,
-      required final int usersActiveHalfYear}) = _$SiteAggregatesImpl;
+  const factory _SiteAggregates({
+    @deprecated final int? id,
+    required final int siteId,
+    required final int users,
+    required final int posts,
+    required final int comments,
+    required final int communities,
+    required final int usersActiveDay,
+    required final int usersActiveWeek,
+    required final int usersActiveMonth,
+    required final int usersActiveHalfYear,
+  }) = _$SiteAggregatesImpl;
   const _SiteAggregates._() : super._();
 
-  factory _SiteAggregates.fromJson(Map<String, dynamic> json) =
-      _$SiteAggregatesImpl.fromJson;
+  factory _SiteAggregates.fromJson(Map<String, dynamic> json) = _$SiteAggregatesImpl.fromJson;
 
   @override
   @deprecated
@@ -377,6 +349,5 @@ abstract class _SiteAggregates extends SiteAggregates {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SiteAggregatesImplCopyWith<_$SiteAggregatesImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SiteAggregatesImplCopyWith<_$SiteAggregatesImpl> get copyWith => throw _privateConstructorUsedError;
 }

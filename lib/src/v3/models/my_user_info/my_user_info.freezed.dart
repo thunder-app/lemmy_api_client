@@ -12,7 +12,8 @@ part of 'my_user_info.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 MyUserInfo _$MyUserInfoFromJson(Map<String, dynamic> json) {
   return _MyUserInfo.fromJson(json);
@@ -20,18 +21,12 @@ MyUserInfo _$MyUserInfoFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MyUserInfo {
-  LocalUserView get localUserView =>
-      throw _privateConstructorUsedError; // v0.18.0
-  List<CommunityFollowerView> get follows =>
-      throw _privateConstructorUsedError; // v0.18.0
-  List<CommunityModeratorView> get moderates =>
-      throw _privateConstructorUsedError; // v0.18.0
-  List<CommunityBlockView> get communityBlocks =>
-      throw _privateConstructorUsedError; // v0.18.0
-  List<InstanceBlockView>? get instanceBlocks =>
-      throw _privateConstructorUsedError; // v0.19.0 (required)
-  List<PersonBlockView> get personBlocks =>
-      throw _privateConstructorUsedError; // v0.18.0
+  LocalUserView get localUserView => throw _privateConstructorUsedError; // v0.18.0
+  List<CommunityFollowerView> get follows => throw _privateConstructorUsedError; // v0.18.0
+  List<CommunityModeratorView> get moderates => throw _privateConstructorUsedError; // v0.18.0
+  List<CommunityBlockView> get communityBlocks => throw _privateConstructorUsedError; // v0.18.0
+  List<InstanceBlockView>? get instanceBlocks => throw _privateConstructorUsedError; // v0.19.0 (required)
+  List<PersonBlockView> get personBlocks => throw _privateConstructorUsedError; // v0.18.0
   List<int> get discussionLanguages => throw _privateConstructorUsedError;
 
   /// Serializes this MyUserInfo to a JSON map.
@@ -40,31 +35,28 @@ mixin _$MyUserInfo {
   /// Create a copy of MyUserInfo
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $MyUserInfoCopyWith<MyUserInfo> get copyWith =>
-      throw _privateConstructorUsedError;
+  $MyUserInfoCopyWith<MyUserInfo> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $MyUserInfoCopyWith<$Res> {
-  factory $MyUserInfoCopyWith(
-          MyUserInfo value, $Res Function(MyUserInfo) then) =
-      _$MyUserInfoCopyWithImpl<$Res, MyUserInfo>;
+  factory $MyUserInfoCopyWith(MyUserInfo value, $Res Function(MyUserInfo) then) = _$MyUserInfoCopyWithImpl<$Res, MyUserInfo>;
   @useResult
-  $Res call(
-      {LocalUserView localUserView,
-      List<CommunityFollowerView> follows,
-      List<CommunityModeratorView> moderates,
-      List<CommunityBlockView> communityBlocks,
-      List<InstanceBlockView>? instanceBlocks,
-      List<PersonBlockView> personBlocks,
-      List<int> discussionLanguages});
+  $Res call({
+    LocalUserView localUserView,
+    List<CommunityFollowerView> follows,
+    List<CommunityModeratorView> moderates,
+    List<CommunityBlockView> communityBlocks,
+    List<InstanceBlockView>? instanceBlocks,
+    List<PersonBlockView> personBlocks,
+    List<int> discussionLanguages,
+  });
 
   $LocalUserViewCopyWith<$Res> get localUserView;
 }
 
 /// @nodoc
-class _$MyUserInfoCopyWithImpl<$Res, $Val extends MyUserInfo>
-    implements $MyUserInfoCopyWith<$Res> {
+class _$MyUserInfoCopyWithImpl<$Res, $Val extends MyUserInfo> implements $MyUserInfoCopyWith<$Res> {
   _$MyUserInfoCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -85,36 +77,46 @@ class _$MyUserInfoCopyWithImpl<$Res, $Val extends MyUserInfo>
     Object? personBlocks = null,
     Object? discussionLanguages = null,
   }) {
-    return _then(_value.copyWith(
-      localUserView: null == localUserView
-          ? _value.localUserView
-          : localUserView // ignore: cast_nullable_to_non_nullable
-              as LocalUserView,
-      follows: null == follows
-          ? _value.follows
-          : follows // ignore: cast_nullable_to_non_nullable
-              as List<CommunityFollowerView>,
-      moderates: null == moderates
-          ? _value.moderates
-          : moderates // ignore: cast_nullable_to_non_nullable
-              as List<CommunityModeratorView>,
-      communityBlocks: null == communityBlocks
-          ? _value.communityBlocks
-          : communityBlocks // ignore: cast_nullable_to_non_nullable
-              as List<CommunityBlockView>,
-      instanceBlocks: freezed == instanceBlocks
-          ? _value.instanceBlocks
-          : instanceBlocks // ignore: cast_nullable_to_non_nullable
-              as List<InstanceBlockView>?,
-      personBlocks: null == personBlocks
-          ? _value.personBlocks
-          : personBlocks // ignore: cast_nullable_to_non_nullable
-              as List<PersonBlockView>,
-      discussionLanguages: null == discussionLanguages
-          ? _value.discussionLanguages
-          : discussionLanguages // ignore: cast_nullable_to_non_nullable
-              as List<int>,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            localUserView:
+                null == localUserView
+                    ? _value.localUserView
+                    : localUserView // ignore: cast_nullable_to_non_nullable
+                        as LocalUserView,
+            follows:
+                null == follows
+                    ? _value.follows
+                    : follows // ignore: cast_nullable_to_non_nullable
+                        as List<CommunityFollowerView>,
+            moderates:
+                null == moderates
+                    ? _value.moderates
+                    : moderates // ignore: cast_nullable_to_non_nullable
+                        as List<CommunityModeratorView>,
+            communityBlocks:
+                null == communityBlocks
+                    ? _value.communityBlocks
+                    : communityBlocks // ignore: cast_nullable_to_non_nullable
+                        as List<CommunityBlockView>,
+            instanceBlocks:
+                freezed == instanceBlocks
+                    ? _value.instanceBlocks
+                    : instanceBlocks // ignore: cast_nullable_to_non_nullable
+                        as List<InstanceBlockView>?,
+            personBlocks:
+                null == personBlocks
+                    ? _value.personBlocks
+                    : personBlocks // ignore: cast_nullable_to_non_nullable
+                        as List<PersonBlockView>,
+            discussionLanguages:
+                null == discussionLanguages
+                    ? _value.discussionLanguages
+                    : discussionLanguages // ignore: cast_nullable_to_non_nullable
+                        as List<int>,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of MyUserInfo
@@ -129,33 +131,27 @@ class _$MyUserInfoCopyWithImpl<$Res, $Val extends MyUserInfo>
 }
 
 /// @nodoc
-abstract class _$$MyUserInfoImplCopyWith<$Res>
-    implements $MyUserInfoCopyWith<$Res> {
-  factory _$$MyUserInfoImplCopyWith(
-          _$MyUserInfoImpl value, $Res Function(_$MyUserInfoImpl) then) =
-      __$$MyUserInfoImplCopyWithImpl<$Res>;
+abstract class _$$MyUserInfoImplCopyWith<$Res> implements $MyUserInfoCopyWith<$Res> {
+  factory _$$MyUserInfoImplCopyWith(_$MyUserInfoImpl value, $Res Function(_$MyUserInfoImpl) then) = __$$MyUserInfoImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {LocalUserView localUserView,
-      List<CommunityFollowerView> follows,
-      List<CommunityModeratorView> moderates,
-      List<CommunityBlockView> communityBlocks,
-      List<InstanceBlockView>? instanceBlocks,
-      List<PersonBlockView> personBlocks,
-      List<int> discussionLanguages});
+  $Res call({
+    LocalUserView localUserView,
+    List<CommunityFollowerView> follows,
+    List<CommunityModeratorView> moderates,
+    List<CommunityBlockView> communityBlocks,
+    List<InstanceBlockView>? instanceBlocks,
+    List<PersonBlockView> personBlocks,
+    List<int> discussionLanguages,
+  });
 
   @override
   $LocalUserViewCopyWith<$Res> get localUserView;
 }
 
 /// @nodoc
-class __$$MyUserInfoImplCopyWithImpl<$Res>
-    extends _$MyUserInfoCopyWithImpl<$Res, _$MyUserInfoImpl>
-    implements _$$MyUserInfoImplCopyWith<$Res> {
-  __$$MyUserInfoImplCopyWithImpl(
-      _$MyUserInfoImpl _value, $Res Function(_$MyUserInfoImpl) _then)
-      : super(_value, _then);
+class __$$MyUserInfoImplCopyWithImpl<$Res> extends _$MyUserInfoCopyWithImpl<$Res, _$MyUserInfoImpl> implements _$$MyUserInfoImplCopyWith<$Res> {
+  __$$MyUserInfoImplCopyWithImpl(_$MyUserInfoImpl _value, $Res Function(_$MyUserInfoImpl) _then) : super(_value, _then);
 
   /// Create a copy of MyUserInfo
   /// with the given fields replaced by the non-null parameter values.
@@ -170,36 +166,45 @@ class __$$MyUserInfoImplCopyWithImpl<$Res>
     Object? personBlocks = null,
     Object? discussionLanguages = null,
   }) {
-    return _then(_$MyUserInfoImpl(
-      localUserView: null == localUserView
-          ? _value.localUserView
-          : localUserView // ignore: cast_nullable_to_non_nullable
-              as LocalUserView,
-      follows: null == follows
-          ? _value._follows
-          : follows // ignore: cast_nullable_to_non_nullable
-              as List<CommunityFollowerView>,
-      moderates: null == moderates
-          ? _value._moderates
-          : moderates // ignore: cast_nullable_to_non_nullable
-              as List<CommunityModeratorView>,
-      communityBlocks: null == communityBlocks
-          ? _value._communityBlocks
-          : communityBlocks // ignore: cast_nullable_to_non_nullable
-              as List<CommunityBlockView>,
-      instanceBlocks: freezed == instanceBlocks
-          ? _value._instanceBlocks
-          : instanceBlocks // ignore: cast_nullable_to_non_nullable
-              as List<InstanceBlockView>?,
-      personBlocks: null == personBlocks
-          ? _value._personBlocks
-          : personBlocks // ignore: cast_nullable_to_non_nullable
-              as List<PersonBlockView>,
-      discussionLanguages: null == discussionLanguages
-          ? _value._discussionLanguages
-          : discussionLanguages // ignore: cast_nullable_to_non_nullable
-              as List<int>,
-    ));
+    return _then(
+      _$MyUserInfoImpl(
+        localUserView:
+            null == localUserView
+                ? _value.localUserView
+                : localUserView // ignore: cast_nullable_to_non_nullable
+                    as LocalUserView,
+        follows:
+            null == follows
+                ? _value._follows
+                : follows // ignore: cast_nullable_to_non_nullable
+                    as List<CommunityFollowerView>,
+        moderates:
+            null == moderates
+                ? _value._moderates
+                : moderates // ignore: cast_nullable_to_non_nullable
+                    as List<CommunityModeratorView>,
+        communityBlocks:
+            null == communityBlocks
+                ? _value._communityBlocks
+                : communityBlocks // ignore: cast_nullable_to_non_nullable
+                    as List<CommunityBlockView>,
+        instanceBlocks:
+            freezed == instanceBlocks
+                ? _value._instanceBlocks
+                : instanceBlocks // ignore: cast_nullable_to_non_nullable
+                    as List<InstanceBlockView>?,
+        personBlocks:
+            null == personBlocks
+                ? _value._personBlocks
+                : personBlocks // ignore: cast_nullable_to_non_nullable
+                    as List<PersonBlockView>,
+        discussionLanguages:
+            null == discussionLanguages
+                ? _value._discussionLanguages
+                : discussionLanguages // ignore: cast_nullable_to_non_nullable
+                    as List<int>,
+      ),
+    );
   }
 }
 
@@ -207,30 +212,29 @@ class __$$MyUserInfoImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$MyUserInfoImpl extends _MyUserInfo {
-  const _$MyUserInfoImpl(
-      {required this.localUserView,
-      required final List<CommunityFollowerView> follows,
-      required final List<CommunityModeratorView> moderates,
-      required final List<CommunityBlockView> communityBlocks,
-      final List<InstanceBlockView>? instanceBlocks,
-      required final List<PersonBlockView> personBlocks,
-      required final List<int> discussionLanguages})
-      : _follows = follows,
-        _moderates = moderates,
-        _communityBlocks = communityBlocks,
-        _instanceBlocks = instanceBlocks,
-        _personBlocks = personBlocks,
-        _discussionLanguages = discussionLanguages,
-        super._();
+  const _$MyUserInfoImpl({
+    required this.localUserView,
+    required final List<CommunityFollowerView> follows,
+    required final List<CommunityModeratorView> moderates,
+    required final List<CommunityBlockView> communityBlocks,
+    final List<InstanceBlockView>? instanceBlocks,
+    required final List<PersonBlockView> personBlocks,
+    required final List<int> discussionLanguages,
+  }) : _follows = follows,
+       _moderates = moderates,
+       _communityBlocks = communityBlocks,
+       _instanceBlocks = instanceBlocks,
+       _personBlocks = personBlocks,
+       _discussionLanguages = discussionLanguages,
+       super._();
 
-  factory _$MyUserInfoImpl.fromJson(Map<String, dynamic> json) =>
-      _$$MyUserInfoImplFromJson(json);
+  factory _$MyUserInfoImpl.fromJson(Map<String, dynamic> json) => _$$MyUserInfoImplFromJson(json);
 
   @override
   final LocalUserView localUserView;
-// v0.18.0
+  // v0.18.0
   final List<CommunityFollowerView> _follows;
-// v0.18.0
+  // v0.18.0
   @override
   List<CommunityFollowerView> get follows {
     if (_follows is EqualUnmodifiableListView) return _follows;
@@ -238,9 +242,9 @@ class _$MyUserInfoImpl extends _MyUserInfo {
     return EqualUnmodifiableListView(_follows);
   }
 
-// v0.18.0
+  // v0.18.0
   final List<CommunityModeratorView> _moderates;
-// v0.18.0
+  // v0.18.0
   @override
   List<CommunityModeratorView> get moderates {
     if (_moderates is EqualUnmodifiableListView) return _moderates;
@@ -248,9 +252,9 @@ class _$MyUserInfoImpl extends _MyUserInfo {
     return EqualUnmodifiableListView(_moderates);
   }
 
-// v0.18.0
+  // v0.18.0
   final List<CommunityBlockView> _communityBlocks;
-// v0.18.0
+  // v0.18.0
   @override
   List<CommunityBlockView> get communityBlocks {
     if (_communityBlocks is EqualUnmodifiableListView) return _communityBlocks;
@@ -258,9 +262,9 @@ class _$MyUserInfoImpl extends _MyUserInfo {
     return EqualUnmodifiableListView(_communityBlocks);
   }
 
-// v0.18.0
+  // v0.18.0
   final List<InstanceBlockView>? _instanceBlocks;
-// v0.18.0
+  // v0.18.0
   @override
   List<InstanceBlockView>? get instanceBlocks {
     final value = _instanceBlocks;
@@ -270,9 +274,9 @@ class _$MyUserInfoImpl extends _MyUserInfo {
     return EqualUnmodifiableListView(value);
   }
 
-// v0.19.0 (required)
+  // v0.19.0 (required)
   final List<PersonBlockView> _personBlocks;
-// v0.19.0 (required)
+  // v0.19.0 (required)
   @override
   List<PersonBlockView> get personBlocks {
     if (_personBlocks is EqualUnmodifiableListView) return _personBlocks;
@@ -280,13 +284,12 @@ class _$MyUserInfoImpl extends _MyUserInfo {
     return EqualUnmodifiableListView(_personBlocks);
   }
 
-// v0.18.0
+  // v0.18.0
   final List<int> _discussionLanguages;
-// v0.18.0
+  // v0.18.0
   @override
   List<int> get discussionLanguages {
-    if (_discussionLanguages is EqualUnmodifiableListView)
-      return _discussionLanguages;
+    if (_discussionLanguages is EqualUnmodifiableListView) return _discussionLanguages;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_discussionLanguages);
   }
@@ -301,62 +304,54 @@ class _$MyUserInfoImpl extends _MyUserInfo {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MyUserInfoImpl &&
-            (identical(other.localUserView, localUserView) ||
-                other.localUserView == localUserView) &&
+            (identical(other.localUserView, localUserView) || other.localUserView == localUserView) &&
             const DeepCollectionEquality().equals(other._follows, _follows) &&
-            const DeepCollectionEquality()
-                .equals(other._moderates, _moderates) &&
-            const DeepCollectionEquality()
-                .equals(other._communityBlocks, _communityBlocks) &&
-            const DeepCollectionEquality()
-                .equals(other._instanceBlocks, _instanceBlocks) &&
-            const DeepCollectionEquality()
-                .equals(other._personBlocks, _personBlocks) &&
-            const DeepCollectionEquality()
-                .equals(other._discussionLanguages, _discussionLanguages));
+            const DeepCollectionEquality().equals(other._moderates, _moderates) &&
+            const DeepCollectionEquality().equals(other._communityBlocks, _communityBlocks) &&
+            const DeepCollectionEquality().equals(other._instanceBlocks, _instanceBlocks) &&
+            const DeepCollectionEquality().equals(other._personBlocks, _personBlocks) &&
+            const DeepCollectionEquality().equals(other._discussionLanguages, _discussionLanguages));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      localUserView,
-      const DeepCollectionEquality().hash(_follows),
-      const DeepCollectionEquality().hash(_moderates),
-      const DeepCollectionEquality().hash(_communityBlocks),
-      const DeepCollectionEquality().hash(_instanceBlocks),
-      const DeepCollectionEquality().hash(_personBlocks),
-      const DeepCollectionEquality().hash(_discussionLanguages));
+    runtimeType,
+    localUserView,
+    const DeepCollectionEquality().hash(_follows),
+    const DeepCollectionEquality().hash(_moderates),
+    const DeepCollectionEquality().hash(_communityBlocks),
+    const DeepCollectionEquality().hash(_instanceBlocks),
+    const DeepCollectionEquality().hash(_personBlocks),
+    const DeepCollectionEquality().hash(_discussionLanguages),
+  );
 
   /// Create a copy of MyUserInfo
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$MyUserInfoImplCopyWith<_$MyUserInfoImpl> get copyWith =>
-      __$$MyUserInfoImplCopyWithImpl<_$MyUserInfoImpl>(this, _$identity);
+  _$$MyUserInfoImplCopyWith<_$MyUserInfoImpl> get copyWith => __$$MyUserInfoImplCopyWithImpl<_$MyUserInfoImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MyUserInfoImplToJson(
-      this,
-    );
+    return _$$MyUserInfoImplToJson(this);
   }
 }
 
 abstract class _MyUserInfo extends MyUserInfo {
-  const factory _MyUserInfo(
-      {required final LocalUserView localUserView,
-      required final List<CommunityFollowerView> follows,
-      required final List<CommunityModeratorView> moderates,
-      required final List<CommunityBlockView> communityBlocks,
-      final List<InstanceBlockView>? instanceBlocks,
-      required final List<PersonBlockView> personBlocks,
-      required final List<int> discussionLanguages}) = _$MyUserInfoImpl;
+  const factory _MyUserInfo({
+    required final LocalUserView localUserView,
+    required final List<CommunityFollowerView> follows,
+    required final List<CommunityModeratorView> moderates,
+    required final List<CommunityBlockView> communityBlocks,
+    final List<InstanceBlockView>? instanceBlocks,
+    required final List<PersonBlockView> personBlocks,
+    required final List<int> discussionLanguages,
+  }) = _$MyUserInfoImpl;
   const _MyUserInfo._() : super._();
 
-  factory _MyUserInfo.fromJson(Map<String, dynamic> json) =
-      _$MyUserInfoImpl.fromJson;
+  factory _MyUserInfo.fromJson(Map<String, dynamic> json) = _$MyUserInfoImpl.fromJson;
 
   @override
   LocalUserView get localUserView; // v0.18.0
@@ -377,6 +372,5 @@ abstract class _MyUserInfo extends MyUserInfo {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$MyUserInfoImplCopyWith<_$MyUserInfoImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$MyUserInfoImplCopyWith<_$MyUserInfoImpl> get copyWith => throw _privateConstructorUsedError;
 }

@@ -17,6 +17,5 @@ class ModLockPostView with _$ModLockPostView {
   }) = _ModLockPostView;
 
   const ModLockPostView._();
-  factory ModLockPostView.fromJson(Map<String, dynamic> json) =>
-      _$ModLockPostViewFromJson(json);
+  factory ModLockPostView.fromJson(Map<String, dynamic> json) => _$ModLockPostViewFromJson(json);
 }

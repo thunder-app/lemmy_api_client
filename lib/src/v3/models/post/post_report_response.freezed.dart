@@ -12,7 +12,8 @@ part of 'post_report_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 PostReportResponse _$PostReportResponseFromJson(Map<String, dynamic> json) {
   return _PostReportResponse.fromJson(json);
@@ -28,15 +29,12 @@ mixin _$PostReportResponse {
   /// Create a copy of PostReportResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PostReportResponseCopyWith<PostReportResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PostReportResponseCopyWith<PostReportResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PostReportResponseCopyWith<$Res> {
-  factory $PostReportResponseCopyWith(
-          PostReportResponse value, $Res Function(PostReportResponse) then) =
-      _$PostReportResponseCopyWithImpl<$Res, PostReportResponse>;
+  factory $PostReportResponseCopyWith(PostReportResponse value, $Res Function(PostReportResponse) then) = _$PostReportResponseCopyWithImpl<$Res, PostReportResponse>;
   @useResult
   $Res call({PostReportView postReportView});
 
@@ -44,8 +42,7 @@ abstract class $PostReportResponseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PostReportResponseCopyWithImpl<$Res, $Val extends PostReportResponse>
-    implements $PostReportResponseCopyWith<$Res> {
+class _$PostReportResponseCopyWithImpl<$Res, $Val extends PostReportResponse> implements $PostReportResponseCopyWith<$Res> {
   _$PostReportResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -57,15 +54,17 @@ class _$PostReportResponseCopyWithImpl<$Res, $Val extends PostReportResponse>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postReportView = null,
-  }) {
-    return _then(_value.copyWith(
-      postReportView: null == postReportView
-          ? _value.postReportView
-          : postReportView // ignore: cast_nullable_to_non_nullable
-              as PostReportView,
-    ) as $Val);
+  $Res call({Object? postReportView = null}) {
+    return _then(
+      _value.copyWith(
+            postReportView:
+                null == postReportView
+                    ? _value.postReportView
+                    : postReportView // ignore: cast_nullable_to_non_nullable
+                        as PostReportView,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of PostReportResponse
@@ -80,11 +79,8 @@ class _$PostReportResponseCopyWithImpl<$Res, $Val extends PostReportResponse>
 }
 
 /// @nodoc
-abstract class _$$PostReportResponseImplCopyWith<$Res>
-    implements $PostReportResponseCopyWith<$Res> {
-  factory _$$PostReportResponseImplCopyWith(_$PostReportResponseImpl value,
-          $Res Function(_$PostReportResponseImpl) then) =
-      __$$PostReportResponseImplCopyWithImpl<$Res>;
+abstract class _$$PostReportResponseImplCopyWith<$Res> implements $PostReportResponseCopyWith<$Res> {
+  factory _$$PostReportResponseImplCopyWith(_$PostReportResponseImpl value, $Res Function(_$PostReportResponseImpl) then) = __$$PostReportResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({PostReportView postReportView});
@@ -94,26 +90,23 @@ abstract class _$$PostReportResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PostReportResponseImplCopyWithImpl<$Res>
-    extends _$PostReportResponseCopyWithImpl<$Res, _$PostReportResponseImpl>
-    implements _$$PostReportResponseImplCopyWith<$Res> {
-  __$$PostReportResponseImplCopyWithImpl(_$PostReportResponseImpl _value,
-      $Res Function(_$PostReportResponseImpl) _then)
-      : super(_value, _then);
+class __$$PostReportResponseImplCopyWithImpl<$Res> extends _$PostReportResponseCopyWithImpl<$Res, _$PostReportResponseImpl> implements _$$PostReportResponseImplCopyWith<$Res> {
+  __$$PostReportResponseImplCopyWithImpl(_$PostReportResponseImpl _value, $Res Function(_$PostReportResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of PostReportResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postReportView = null,
-  }) {
-    return _then(_$PostReportResponseImpl(
-      postReportView: null == postReportView
-          ? _value.postReportView
-          : postReportView // ignore: cast_nullable_to_non_nullable
-              as PostReportView,
-    ));
+  $Res call({Object? postReportView = null}) {
+    return _then(
+      _$PostReportResponseImpl(
+        postReportView:
+            null == postReportView
+                ? _value.postReportView
+                : postReportView // ignore: cast_nullable_to_non_nullable
+                    as PostReportView,
+      ),
+    );
   }
 }
 
@@ -123,8 +116,7 @@ class __$$PostReportResponseImplCopyWithImpl<$Res>
 class _$PostReportResponseImpl extends _PostReportResponse {
   const _$PostReportResponseImpl({required this.postReportView}) : super._();
 
-  factory _$PostReportResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PostReportResponseImplFromJson(json);
+  factory _$PostReportResponseImpl.fromJson(Map<String, dynamic> json) => _$$PostReportResponseImplFromJson(json);
 
   @override
   final PostReportView postReportView;
@@ -137,10 +129,7 @@ class _$PostReportResponseImpl extends _PostReportResponse {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PostReportResponseImpl &&
-            (identical(other.postReportView, postReportView) ||
-                other.postReportView == postReportView));
+        (other.runtimeType == runtimeType && other is _$PostReportResponseImpl && (identical(other.postReportView, postReportView) || other.postReportView == postReportView));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -152,26 +141,19 @@ class _$PostReportResponseImpl extends _PostReportResponse {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$PostReportResponseImplCopyWith<_$PostReportResponseImpl> get copyWith =>
-      __$$PostReportResponseImplCopyWithImpl<_$PostReportResponseImpl>(
-          this, _$identity);
+  _$$PostReportResponseImplCopyWith<_$PostReportResponseImpl> get copyWith => __$$PostReportResponseImplCopyWithImpl<_$PostReportResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PostReportResponseImplToJson(
-      this,
-    );
+    return _$$PostReportResponseImplToJson(this);
   }
 }
 
 abstract class _PostReportResponse extends PostReportResponse {
-  const factory _PostReportResponse(
-          {required final PostReportView postReportView}) =
-      _$PostReportResponseImpl;
+  const factory _PostReportResponse({required final PostReportView postReportView}) = _$PostReportResponseImpl;
   const _PostReportResponse._() : super._();
 
-  factory _PostReportResponse.fromJson(Map<String, dynamic> json) =
-      _$PostReportResponseImpl.fromJson;
+  factory _PostReportResponse.fromJson(Map<String, dynamic> json) = _$PostReportResponseImpl.fromJson;
 
   @override
   PostReportView get postReportView;
@@ -180,6 +162,5 @@ abstract class _PostReportResponse extends PostReportResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PostReportResponseImplCopyWith<_$PostReportResponseImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PostReportResponseImplCopyWith<_$PostReportResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

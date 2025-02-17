@@ -12,7 +12,8 @@ part of 'admin_purge_person_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 AdminPurgePersonView _$AdminPurgePersonViewFromJson(Map<String, dynamic> json) {
   return _AdminPurgePersonView.fromJson(json);
@@ -20,8 +21,7 @@ AdminPurgePersonView _$AdminPurgePersonViewFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AdminPurgePersonView {
-  AdminPurgePerson get adminPurgePerson =>
-      throw _privateConstructorUsedError; // v0.18.0
+  AdminPurgePerson get adminPurgePerson => throw _privateConstructorUsedError; // v0.18.0
   Person? get admin => throw _privateConstructorUsedError;
 
   /// Serializes this AdminPurgePersonView to a JSON map.
@@ -30,15 +30,12 @@ mixin _$AdminPurgePersonView {
   /// Create a copy of AdminPurgePersonView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $AdminPurgePersonViewCopyWith<AdminPurgePersonView> get copyWith =>
-      throw _privateConstructorUsedError;
+  $AdminPurgePersonViewCopyWith<AdminPurgePersonView> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AdminPurgePersonViewCopyWith<$Res> {
-  factory $AdminPurgePersonViewCopyWith(AdminPurgePersonView value,
-          $Res Function(AdminPurgePersonView) then) =
-      _$AdminPurgePersonViewCopyWithImpl<$Res, AdminPurgePersonView>;
+  factory $AdminPurgePersonViewCopyWith(AdminPurgePersonView value, $Res Function(AdminPurgePersonView) then) = _$AdminPurgePersonViewCopyWithImpl<$Res, AdminPurgePersonView>;
   @useResult
   $Res call({AdminPurgePerson adminPurgePerson, Person? admin});
 
@@ -47,9 +44,7 @@ abstract class $AdminPurgePersonViewCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AdminPurgePersonViewCopyWithImpl<$Res,
-        $Val extends AdminPurgePersonView>
-    implements $AdminPurgePersonViewCopyWith<$Res> {
+class _$AdminPurgePersonViewCopyWithImpl<$Res, $Val extends AdminPurgePersonView> implements $AdminPurgePersonViewCopyWith<$Res> {
   _$AdminPurgePersonViewCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -61,20 +56,22 @@ class _$AdminPurgePersonViewCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? adminPurgePerson = null,
-    Object? admin = freezed,
-  }) {
-    return _then(_value.copyWith(
-      adminPurgePerson: null == adminPurgePerson
-          ? _value.adminPurgePerson
-          : adminPurgePerson // ignore: cast_nullable_to_non_nullable
-              as AdminPurgePerson,
-      admin: freezed == admin
-          ? _value.admin
-          : admin // ignore: cast_nullable_to_non_nullable
-              as Person?,
-    ) as $Val);
+  $Res call({Object? adminPurgePerson = null, Object? admin = freezed}) {
+    return _then(
+      _value.copyWith(
+            adminPurgePerson:
+                null == adminPurgePerson
+                    ? _value.adminPurgePerson
+                    : adminPurgePerson // ignore: cast_nullable_to_non_nullable
+                        as AdminPurgePerson,
+            admin:
+                freezed == admin
+                    ? _value.admin
+                    : admin // ignore: cast_nullable_to_non_nullable
+                        as Person?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of AdminPurgePersonView
@@ -103,11 +100,8 @@ class _$AdminPurgePersonViewCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$AdminPurgePersonViewImplCopyWith<$Res>
-    implements $AdminPurgePersonViewCopyWith<$Res> {
-  factory _$$AdminPurgePersonViewImplCopyWith(_$AdminPurgePersonViewImpl value,
-          $Res Function(_$AdminPurgePersonViewImpl) then) =
-      __$$AdminPurgePersonViewImplCopyWithImpl<$Res>;
+abstract class _$$AdminPurgePersonViewImplCopyWith<$Res> implements $AdminPurgePersonViewCopyWith<$Res> {
+  factory _$$AdminPurgePersonViewImplCopyWith(_$AdminPurgePersonViewImpl value, $Res Function(_$AdminPurgePersonViewImpl) then) = __$$AdminPurgePersonViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({AdminPurgePerson adminPurgePerson, Person? admin});
@@ -119,31 +113,28 @@ abstract class _$$AdminPurgePersonViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$AdminPurgePersonViewImplCopyWithImpl<$Res>
-    extends _$AdminPurgePersonViewCopyWithImpl<$Res, _$AdminPurgePersonViewImpl>
-    implements _$$AdminPurgePersonViewImplCopyWith<$Res> {
-  __$$AdminPurgePersonViewImplCopyWithImpl(_$AdminPurgePersonViewImpl _value,
-      $Res Function(_$AdminPurgePersonViewImpl) _then)
-      : super(_value, _then);
+class __$$AdminPurgePersonViewImplCopyWithImpl<$Res> extends _$AdminPurgePersonViewCopyWithImpl<$Res, _$AdminPurgePersonViewImpl> implements _$$AdminPurgePersonViewImplCopyWith<$Res> {
+  __$$AdminPurgePersonViewImplCopyWithImpl(_$AdminPurgePersonViewImpl _value, $Res Function(_$AdminPurgePersonViewImpl) _then) : super(_value, _then);
 
   /// Create a copy of AdminPurgePersonView
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? adminPurgePerson = null,
-    Object? admin = freezed,
-  }) {
-    return _then(_$AdminPurgePersonViewImpl(
-      adminPurgePerson: null == adminPurgePerson
-          ? _value.adminPurgePerson
-          : adminPurgePerson // ignore: cast_nullable_to_non_nullable
-              as AdminPurgePerson,
-      admin: freezed == admin
-          ? _value.admin
-          : admin // ignore: cast_nullable_to_non_nullable
-              as Person?,
-    ));
+  $Res call({Object? adminPurgePerson = null, Object? admin = freezed}) {
+    return _then(
+      _$AdminPurgePersonViewImpl(
+        adminPurgePerson:
+            null == adminPurgePerson
+                ? _value.adminPurgePerson
+                : adminPurgePerson // ignore: cast_nullable_to_non_nullable
+                    as AdminPurgePerson,
+        admin:
+            freezed == admin
+                ? _value.admin
+                : admin // ignore: cast_nullable_to_non_nullable
+                    as Person?,
+      ),
+    );
   }
 }
 
@@ -151,15 +142,13 @@ class __$$AdminPurgePersonViewImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$AdminPurgePersonViewImpl extends _AdminPurgePersonView {
-  const _$AdminPurgePersonViewImpl({required this.adminPurgePerson, this.admin})
-      : super._();
+  const _$AdminPurgePersonViewImpl({required this.adminPurgePerson, this.admin}) : super._();
 
-  factory _$AdminPurgePersonViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AdminPurgePersonViewImplFromJson(json);
+  factory _$AdminPurgePersonViewImpl.fromJson(Map<String, dynamic> json) => _$$AdminPurgePersonViewImplFromJson(json);
 
   @override
   final AdminPurgePerson adminPurgePerson;
-// v0.18.0
+  // v0.18.0
   @override
   final Person? admin;
 
@@ -173,8 +162,7 @@ class _$AdminPurgePersonViewImpl extends _AdminPurgePersonView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AdminPurgePersonViewImpl &&
-            (identical(other.adminPurgePerson, adminPurgePerson) ||
-                other.adminPurgePerson == adminPurgePerson) &&
+            (identical(other.adminPurgePerson, adminPurgePerson) || other.adminPurgePerson == adminPurgePerson) &&
             (identical(other.admin, admin) || other.admin == admin));
   }
 
@@ -187,27 +175,19 @@ class _$AdminPurgePersonViewImpl extends _AdminPurgePersonView {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$AdminPurgePersonViewImplCopyWith<_$AdminPurgePersonViewImpl>
-      get copyWith =>
-          __$$AdminPurgePersonViewImplCopyWithImpl<_$AdminPurgePersonViewImpl>(
-              this, _$identity);
+  _$$AdminPurgePersonViewImplCopyWith<_$AdminPurgePersonViewImpl> get copyWith => __$$AdminPurgePersonViewImplCopyWithImpl<_$AdminPurgePersonViewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AdminPurgePersonViewImplToJson(
-      this,
-    );
+    return _$$AdminPurgePersonViewImplToJson(this);
   }
 }
 
 abstract class _AdminPurgePersonView extends AdminPurgePersonView {
-  const factory _AdminPurgePersonView(
-      {required final AdminPurgePerson adminPurgePerson,
-      final Person? admin}) = _$AdminPurgePersonViewImpl;
+  const factory _AdminPurgePersonView({required final AdminPurgePerson adminPurgePerson, final Person? admin}) = _$AdminPurgePersonViewImpl;
   const _AdminPurgePersonView._() : super._();
 
-  factory _AdminPurgePersonView.fromJson(Map<String, dynamic> json) =
-      _$AdminPurgePersonViewImpl.fromJson;
+  factory _AdminPurgePersonView.fromJson(Map<String, dynamic> json) = _$AdminPurgePersonViewImpl.fromJson;
 
   @override
   AdminPurgePerson get adminPurgePerson; // v0.18.0
@@ -218,6 +198,5 @@ abstract class _AdminPurgePersonView extends AdminPurgePersonView {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AdminPurgePersonViewImplCopyWith<_$AdminPurgePersonViewImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$AdminPurgePersonViewImplCopyWith<_$AdminPurgePersonViewImpl> get copyWith => throw _privateConstructorUsedError;
 }

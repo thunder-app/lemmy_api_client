@@ -9,8 +9,7 @@ enum SearchType {
   final String value;
   const SearchType(this.value);
 
-  factory SearchType.fromJson(String value) =>
-      values.firstWhere((e) => e.value == value);
+  factory SearchType.fromJson(String value) => values.firstWhere((e) => e.value == value);
 
   String toJson() => value;
 

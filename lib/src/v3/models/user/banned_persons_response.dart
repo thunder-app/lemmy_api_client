@@ -14,6 +14,5 @@ class BannedPersonsResponse with _$BannedPersonsResponse {
   }) = _BannedPersonsResponse;
 
   const BannedPersonsResponse._();
-  factory BannedPersonsResponse.fromJson(Map<String, dynamic> json) =>
-      _$BannedPersonsResponseFromJson(json);
+  factory BannedPersonsResponse.fromJson(Map<String, dynamic> json) => _$BannedPersonsResponseFromJson(json);
 }

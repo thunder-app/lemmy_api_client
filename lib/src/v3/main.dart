@@ -22,14 +22,18 @@ class LemmyApiV3 {
     // get a future based on http method
 
     String? auth;
+    String? passthroughParameter;
+
     if (query is LemmyApiAuthenticatedQuery) {
       auth = (query as LemmyApiAuthenticatedQuery).auth;
     }
 
+    if (query is PassthroughParameter) {
+      passthroughParameter = (query as PassthroughParameter).parameter;
+    }
+
     if (debug) {
-      print(
-        '${DateTime.now().toIso8601String()}: ${query.httpMethod} ${query.path}',
-      );
+      print('${DateTime.now().toIso8601String()}: ${query.httpMethod} ${query.path}');
     }
 
     // TLS can only be disable in debug mode.
@@ -39,42 +43,20 @@ class LemmyApiV3 {
       switch (query.httpMethod) {
         case HttpMethod.get:
           return http.get(
-            Uri(
-              scheme: scheme,
-              host: host,
-              path: '$extraPath${query.path}',
-              queryParameters: <String, String>{
-                for (final entry in query.toJson().entries)
-                  entry.key: entry.value.toString(),
-              },
-            ),
+            Uri(scheme: scheme, host: host, path: '$extraPath${query.path}', queryParameters: <String, String>{for (final entry in query.toJson().entries) entry.key: entry.value.toString()}),
             headers: (auth != null) ? {'Authorization': 'Bearer $auth'} : null,
           );
         case HttpMethod.post:
           return http.post(
-            Uri(
-              scheme: scheme,
-              host: host,
-              path: '$extraPath${query.path}',
-            ),
-            body: jsonEncode(query.toJson()),
-            headers: {
-              'Content-Type': 'application/json',
-              if (auth != null) 'Authorization': 'Bearer $auth',
-            },
+            Uri(scheme: scheme, host: host, path: '$extraPath${query.path}'),
+            body: passthroughParameter != null ? query.toJson()[passthroughParameter] as String : jsonEncode(query.toJson()),
+            headers: {'Content-Type': 'application/json', if (auth != null) 'Authorization': 'Bearer $auth'},
           );
         case HttpMethod.put:
           return http.put(
-            Uri(
-              scheme: scheme,
-              host: host,
-              path: '$extraPath${query.path}',
-            ),
+            Uri(scheme: scheme, host: host, path: '$extraPath${query.path}'),
             body: jsonEncode(query.toJson()),
-            headers: {
-              'Content-Type': 'application/json',
-              if (auth != null) 'Authorization': 'Bearer $auth',
-            },
+            headers: {'Content-Type': 'application/json', if (auth != null) 'Authorization': 'Bearer $auth'},
           );
       }
     }();

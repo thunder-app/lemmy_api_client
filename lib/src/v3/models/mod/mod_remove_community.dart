@@ -19,6 +19,5 @@ class ModRemoveCommunity with _$ModRemoveCommunity {
   }) = _ModRemoveCommunity;
 
   const ModRemoveCommunity._();
-  factory ModRemoveCommunity.fromJson(Map<String, dynamic> json) =>
-      _$ModRemoveCommunityFromJson(json);
+  factory ModRemoveCommunity.fromJson(Map<String, dynamic> json) => _$ModRemoveCommunityFromJson(json);
 }

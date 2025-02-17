@@ -12,10 +12,10 @@ part of 'resolve_object_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
-ResolveObjectResponse _$ResolveObjectResponseFromJson(
-    Map<String, dynamic> json) {
+ResolveObjectResponse _$ResolveObjectResponseFromJson(Map<String, dynamic> json) {
   return _ResolveObjectResponse.fromJson(json);
 }
 
@@ -32,21 +32,14 @@ mixin _$ResolveObjectResponse {
   /// Create a copy of ResolveObjectResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ResolveObjectResponseCopyWith<ResolveObjectResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ResolveObjectResponseCopyWith<ResolveObjectResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ResolveObjectResponseCopyWith<$Res> {
-  factory $ResolveObjectResponseCopyWith(ResolveObjectResponse value,
-          $Res Function(ResolveObjectResponse) then) =
-      _$ResolveObjectResponseCopyWithImpl<$Res, ResolveObjectResponse>;
+  factory $ResolveObjectResponseCopyWith(ResolveObjectResponse value, $Res Function(ResolveObjectResponse) then) = _$ResolveObjectResponseCopyWithImpl<$Res, ResolveObjectResponse>;
   @useResult
-  $Res call(
-      {CommentView? comment,
-      PostView? post,
-      CommunityView? community,
-      PersonView? person});
+  $Res call({CommentView? comment, PostView? post, CommunityView? community, PersonView? person});
 
   $CommentViewCopyWith<$Res>? get comment;
   $PostViewCopyWith<$Res>? get post;
@@ -55,9 +48,7 @@ abstract class $ResolveObjectResponseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ResolveObjectResponseCopyWithImpl<$Res,
-        $Val extends ResolveObjectResponse>
-    implements $ResolveObjectResponseCopyWith<$Res> {
+class _$ResolveObjectResponseCopyWithImpl<$Res, $Val extends ResolveObjectResponse> implements $ResolveObjectResponseCopyWith<$Res> {
   _$ResolveObjectResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -69,30 +60,32 @@ class _$ResolveObjectResponseCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? comment = freezed,
-    Object? post = freezed,
-    Object? community = freezed,
-    Object? person = freezed,
-  }) {
-    return _then(_value.copyWith(
-      comment: freezed == comment
-          ? _value.comment
-          : comment // ignore: cast_nullable_to_non_nullable
-              as CommentView?,
-      post: freezed == post
-          ? _value.post
-          : post // ignore: cast_nullable_to_non_nullable
-              as PostView?,
-      community: freezed == community
-          ? _value.community
-          : community // ignore: cast_nullable_to_non_nullable
-              as CommunityView?,
-      person: freezed == person
-          ? _value.person
-          : person // ignore: cast_nullable_to_non_nullable
-              as PersonView?,
-    ) as $Val);
+  $Res call({Object? comment = freezed, Object? post = freezed, Object? community = freezed, Object? person = freezed}) {
+    return _then(
+      _value.copyWith(
+            comment:
+                freezed == comment
+                    ? _value.comment
+                    : comment // ignore: cast_nullable_to_non_nullable
+                        as CommentView?,
+            post:
+                freezed == post
+                    ? _value.post
+                    : post // ignore: cast_nullable_to_non_nullable
+                        as PostView?,
+            community:
+                freezed == community
+                    ? _value.community
+                    : community // ignore: cast_nullable_to_non_nullable
+                        as CommunityView?,
+            person:
+                freezed == person
+                    ? _value.person
+                    : person // ignore: cast_nullable_to_non_nullable
+                        as PersonView?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of ResolveObjectResponse
@@ -153,19 +146,11 @@ class _$ResolveObjectResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$ResolveObjectResponseImplCopyWith<$Res>
-    implements $ResolveObjectResponseCopyWith<$Res> {
-  factory _$$ResolveObjectResponseImplCopyWith(
-          _$ResolveObjectResponseImpl value,
-          $Res Function(_$ResolveObjectResponseImpl) then) =
-      __$$ResolveObjectResponseImplCopyWithImpl<$Res>;
+abstract class _$$ResolveObjectResponseImplCopyWith<$Res> implements $ResolveObjectResponseCopyWith<$Res> {
+  factory _$$ResolveObjectResponseImplCopyWith(_$ResolveObjectResponseImpl value, $Res Function(_$ResolveObjectResponseImpl) then) = __$$ResolveObjectResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {CommentView? comment,
-      PostView? post,
-      CommunityView? community,
-      PersonView? person});
+  $Res call({CommentView? comment, PostView? post, CommunityView? community, PersonView? person});
 
   @override
   $CommentViewCopyWith<$Res>? get comment;
@@ -178,42 +163,38 @@ abstract class _$$ResolveObjectResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ResolveObjectResponseImplCopyWithImpl<$Res>
-    extends _$ResolveObjectResponseCopyWithImpl<$Res,
-        _$ResolveObjectResponseImpl>
-    implements _$$ResolveObjectResponseImplCopyWith<$Res> {
-  __$$ResolveObjectResponseImplCopyWithImpl(_$ResolveObjectResponseImpl _value,
-      $Res Function(_$ResolveObjectResponseImpl) _then)
-      : super(_value, _then);
+class __$$ResolveObjectResponseImplCopyWithImpl<$Res> extends _$ResolveObjectResponseCopyWithImpl<$Res, _$ResolveObjectResponseImpl> implements _$$ResolveObjectResponseImplCopyWith<$Res> {
+  __$$ResolveObjectResponseImplCopyWithImpl(_$ResolveObjectResponseImpl _value, $Res Function(_$ResolveObjectResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of ResolveObjectResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? comment = freezed,
-    Object? post = freezed,
-    Object? community = freezed,
-    Object? person = freezed,
-  }) {
-    return _then(_$ResolveObjectResponseImpl(
-      comment: freezed == comment
-          ? _value.comment
-          : comment // ignore: cast_nullable_to_non_nullable
-              as CommentView?,
-      post: freezed == post
-          ? _value.post
-          : post // ignore: cast_nullable_to_non_nullable
-              as PostView?,
-      community: freezed == community
-          ? _value.community
-          : community // ignore: cast_nullable_to_non_nullable
-              as CommunityView?,
-      person: freezed == person
-          ? _value.person
-          : person // ignore: cast_nullable_to_non_nullable
-              as PersonView?,
-    ));
+  $Res call({Object? comment = freezed, Object? post = freezed, Object? community = freezed, Object? person = freezed}) {
+    return _then(
+      _$ResolveObjectResponseImpl(
+        comment:
+            freezed == comment
+                ? _value.comment
+                : comment // ignore: cast_nullable_to_non_nullable
+                    as CommentView?,
+        post:
+            freezed == post
+                ? _value.post
+                : post // ignore: cast_nullable_to_non_nullable
+                    as PostView?,
+        community:
+            freezed == community
+                ? _value.community
+                : community // ignore: cast_nullable_to_non_nullable
+                    as CommunityView?,
+        person:
+            freezed == person
+                ? _value.person
+                : person // ignore: cast_nullable_to_non_nullable
+                    as PersonView?,
+      ),
+    );
   }
 }
 
@@ -221,22 +202,19 @@ class __$$ResolveObjectResponseImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$ResolveObjectResponseImpl extends _ResolveObjectResponse {
-  const _$ResolveObjectResponseImpl(
-      {this.comment, this.post, this.community, this.person})
-      : super._();
+  const _$ResolveObjectResponseImpl({this.comment, this.post, this.community, this.person}) : super._();
 
-  factory _$ResolveObjectResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ResolveObjectResponseImplFromJson(json);
+  factory _$ResolveObjectResponseImpl.fromJson(Map<String, dynamic> json) => _$$ResolveObjectResponseImplFromJson(json);
 
   @override
   final CommentView? comment;
-// v0.18.0
+  // v0.18.0
   @override
   final PostView? post;
-// v0.18.0
+  // v0.18.0
   @override
   final CommunityView? community;
-// v0.18.0
+  // v0.18.0
   @override
   final PersonView? person;
 
@@ -252,43 +230,32 @@ class _$ResolveObjectResponseImpl extends _ResolveObjectResponse {
             other is _$ResolveObjectResponseImpl &&
             (identical(other.comment, comment) || other.comment == comment) &&
             (identical(other.post, post) || other.post == post) &&
-            (identical(other.community, community) ||
-                other.community == community) &&
+            (identical(other.community, community) || other.community == community) &&
             (identical(other.person, person) || other.person == person));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, comment, post, community, person);
+  int get hashCode => Object.hash(runtimeType, comment, post, community, person);
 
   /// Create a copy of ResolveObjectResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ResolveObjectResponseImplCopyWith<_$ResolveObjectResponseImpl>
-      get copyWith => __$$ResolveObjectResponseImplCopyWithImpl<
-          _$ResolveObjectResponseImpl>(this, _$identity);
+  _$$ResolveObjectResponseImplCopyWith<_$ResolveObjectResponseImpl> get copyWith => __$$ResolveObjectResponseImplCopyWithImpl<_$ResolveObjectResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ResolveObjectResponseImplToJson(
-      this,
-    );
+    return _$$ResolveObjectResponseImplToJson(this);
   }
 }
 
 abstract class _ResolveObjectResponse extends ResolveObjectResponse {
-  const factory _ResolveObjectResponse(
-      {final CommentView? comment,
-      final PostView? post,
-      final CommunityView? community,
-      final PersonView? person}) = _$ResolveObjectResponseImpl;
+  const factory _ResolveObjectResponse({final CommentView? comment, final PostView? post, final CommunityView? community, final PersonView? person}) = _$ResolveObjectResponseImpl;
   const _ResolveObjectResponse._() : super._();
 
-  factory _ResolveObjectResponse.fromJson(Map<String, dynamic> json) =
-      _$ResolveObjectResponseImpl.fromJson;
+  factory _ResolveObjectResponse.fromJson(Map<String, dynamic> json) = _$ResolveObjectResponseImpl.fromJson;
 
   @override
   CommentView? get comment; // v0.18.0
@@ -303,6 +270,5 @@ abstract class _ResolveObjectResponse extends ResolveObjectResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ResolveObjectResponseImplCopyWith<_$ResolveObjectResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$ResolveObjectResponseImplCopyWith<_$ResolveObjectResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

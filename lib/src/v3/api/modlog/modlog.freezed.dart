@@ -12,7 +12,8 @@ part of 'modlog.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 GetModlog _$GetModlogFromJson(Map<String, dynamic> json) {
   return _GetModlog.fromJson(json);
@@ -28,8 +29,7 @@ mixin _$GetModlog {
   ModlogActionType? get type => throw _privateConstructorUsedError; // v0.18.0
   int? get otherPersonId => throw _privateConstructorUsedError; // v0.18.0
   int? get postId => throw _privateConstructorUsedError; // v0.19.4 (optional)
-  int? get commentId =>
-      throw _privateConstructorUsedError; // v0.19.4 (optional)
+  int? get commentId => throw _privateConstructorUsedError; // v0.19.4 (optional)
   String? get auth => throw _privateConstructorUsedError;
 
   /// Serializes this GetModlog to a JSON map.
@@ -38,30 +38,18 @@ mixin _$GetModlog {
   /// Create a copy of GetModlog
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $GetModlogCopyWith<GetModlog> get copyWith =>
-      throw _privateConstructorUsedError;
+  $GetModlogCopyWith<GetModlog> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GetModlogCopyWith<$Res> {
-  factory $GetModlogCopyWith(GetModlog value, $Res Function(GetModlog) then) =
-      _$GetModlogCopyWithImpl<$Res, GetModlog>;
+  factory $GetModlogCopyWith(GetModlog value, $Res Function(GetModlog) then) = _$GetModlogCopyWithImpl<$Res, GetModlog>;
   @useResult
-  $Res call(
-      {int? modPersonId,
-      int? communityId,
-      int? page,
-      int? limit,
-      @JsonKey(name: 'type_') ModlogActionType? type,
-      int? otherPersonId,
-      int? postId,
-      int? commentId,
-      String? auth});
+  $Res call({int? modPersonId, int? communityId, int? page, int? limit, @JsonKey(name: 'type_') ModlogActionType? type, int? otherPersonId, int? postId, int? commentId, String? auth});
 }
 
 /// @nodoc
-class _$GetModlogCopyWithImpl<$Res, $Val extends GetModlog>
-    implements $GetModlogCopyWith<$Res> {
+class _$GetModlogCopyWithImpl<$Res, $Val extends GetModlog> implements $GetModlogCopyWith<$Res> {
   _$GetModlogCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -84,74 +72,70 @@ class _$GetModlogCopyWithImpl<$Res, $Val extends GetModlog>
     Object? commentId = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_value.copyWith(
-      modPersonId: freezed == modPersonId
-          ? _value.modPersonId
-          : modPersonId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      communityId: freezed == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      page: freezed == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as int?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as ModlogActionType?,
-      otherPersonId: freezed == otherPersonId
-          ? _value.otherPersonId
-          : otherPersonId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      postId: freezed == postId
-          ? _value.postId
-          : postId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      commentId: freezed == commentId
-          ? _value.commentId
-          : commentId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            modPersonId:
+                freezed == modPersonId
+                    ? _value.modPersonId
+                    : modPersonId // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            communityId:
+                freezed == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            page:
+                freezed == page
+                    ? _value.page
+                    : page // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            type:
+                freezed == type
+                    ? _value.type
+                    : type // ignore: cast_nullable_to_non_nullable
+                        as ModlogActionType?,
+            otherPersonId:
+                freezed == otherPersonId
+                    ? _value.otherPersonId
+                    : otherPersonId // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            postId:
+                freezed == postId
+                    ? _value.postId
+                    : postId // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            commentId:
+                freezed == commentId
+                    ? _value.commentId
+                    : commentId // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$GetModlogImplCopyWith<$Res>
-    implements $GetModlogCopyWith<$Res> {
-  factory _$$GetModlogImplCopyWith(
-          _$GetModlogImpl value, $Res Function(_$GetModlogImpl) then) =
-      __$$GetModlogImplCopyWithImpl<$Res>;
+abstract class _$$GetModlogImplCopyWith<$Res> implements $GetModlogCopyWith<$Res> {
+  factory _$$GetModlogImplCopyWith(_$GetModlogImpl value, $Res Function(_$GetModlogImpl) then) = __$$GetModlogImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int? modPersonId,
-      int? communityId,
-      int? page,
-      int? limit,
-      @JsonKey(name: 'type_') ModlogActionType? type,
-      int? otherPersonId,
-      int? postId,
-      int? commentId,
-      String? auth});
+  $Res call({int? modPersonId, int? communityId, int? page, int? limit, @JsonKey(name: 'type_') ModlogActionType? type, int? otherPersonId, int? postId, int? commentId, String? auth});
 }
 
 /// @nodoc
-class __$$GetModlogImplCopyWithImpl<$Res>
-    extends _$GetModlogCopyWithImpl<$Res, _$GetModlogImpl>
-    implements _$$GetModlogImplCopyWith<$Res> {
-  __$$GetModlogImplCopyWithImpl(
-      _$GetModlogImpl _value, $Res Function(_$GetModlogImpl) _then)
-      : super(_value, _then);
+class __$$GetModlogImplCopyWithImpl<$Res> extends _$GetModlogCopyWithImpl<$Res, _$GetModlogImpl> implements _$$GetModlogImplCopyWith<$Res> {
+  __$$GetModlogImplCopyWithImpl(_$GetModlogImpl _value, $Res Function(_$GetModlogImpl) _then) : super(_value, _then);
 
   /// Create a copy of GetModlog
   /// with the given fields replaced by the non-null parameter values.
@@ -168,44 +152,55 @@ class __$$GetModlogImplCopyWithImpl<$Res>
     Object? commentId = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_$GetModlogImpl(
-      modPersonId: freezed == modPersonId
-          ? _value.modPersonId
-          : modPersonId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      communityId: freezed == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      page: freezed == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as int?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as ModlogActionType?,
-      otherPersonId: freezed == otherPersonId
-          ? _value.otherPersonId
-          : otherPersonId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      postId: freezed == postId
-          ? _value.postId
-          : postId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      commentId: freezed == commentId
-          ? _value.commentId
-          : commentId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$GetModlogImpl(
+        modPersonId:
+            freezed == modPersonId
+                ? _value.modPersonId
+                : modPersonId // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        communityId:
+            freezed == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        page:
+            freezed == page
+                ? _value.page
+                : page // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        type:
+            freezed == type
+                ? _value.type
+                : type // ignore: cast_nullable_to_non_nullable
+                    as ModlogActionType?,
+        otherPersonId:
+            freezed == otherPersonId
+                ? _value.otherPersonId
+                : otherPersonId // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        postId:
+            freezed == postId
+                ? _value.postId
+                : postId // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        commentId:
+            freezed == commentId
+                ? _value.commentId
+                : commentId // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -213,46 +208,35 @@ class __$$GetModlogImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$GetModlogImpl extends _GetModlog {
-  const _$GetModlogImpl(
-      {this.modPersonId,
-      this.communityId,
-      this.page,
-      this.limit,
-      @JsonKey(name: 'type_') this.type,
-      this.otherPersonId,
-      this.postId,
-      this.commentId,
-      this.auth})
-      : super._();
+  const _$GetModlogImpl({this.modPersonId, this.communityId, this.page, this.limit, @JsonKey(name: 'type_') this.type, this.otherPersonId, this.postId, this.commentId, this.auth}) : super._();
 
-  factory _$GetModlogImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GetModlogImplFromJson(json);
+  factory _$GetModlogImpl.fromJson(Map<String, dynamic> json) => _$$GetModlogImplFromJson(json);
 
   @override
   final int? modPersonId;
-// v0.18.0
+  // v0.18.0
   @override
   final int? communityId;
-// v0.18.0
+  // v0.18.0
   @override
   final int? page;
-// v0.18.0
+  // v0.18.0
   @override
   final int? limit;
-// v0.18.0
+  // v0.18.0
   @override
   @JsonKey(name: 'type_')
   final ModlogActionType? type;
-// v0.18.0
+  // v0.18.0
   @override
   final int? otherPersonId;
-// v0.18.0
+  // v0.18.0
   @override
   final int? postId;
-// v0.19.4 (optional)
+  // v0.19.4 (optional)
   @override
   final int? commentId;
-// v0.19.4 (optional)
+  // v0.19.4 (optional)
   @override
   final String? auth;
 
@@ -266,57 +250,49 @@ class _$GetModlogImpl extends _GetModlog {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetModlogImpl &&
-            (identical(other.modPersonId, modPersonId) ||
-                other.modPersonId == modPersonId) &&
-            (identical(other.communityId, communityId) ||
-                other.communityId == communityId) &&
+            (identical(other.modPersonId, modPersonId) || other.modPersonId == modPersonId) &&
+            (identical(other.communityId, communityId) || other.communityId == communityId) &&
             (identical(other.page, page) || other.page == page) &&
             (identical(other.limit, limit) || other.limit == limit) &&
             (identical(other.type, type) || other.type == type) &&
-            (identical(other.otherPersonId, otherPersonId) ||
-                other.otherPersonId == otherPersonId) &&
+            (identical(other.otherPersonId, otherPersonId) || other.otherPersonId == otherPersonId) &&
             (identical(other.postId, postId) || other.postId == postId) &&
-            (identical(other.commentId, commentId) ||
-                other.commentId == commentId) &&
+            (identical(other.commentId, commentId) || other.commentId == commentId) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, modPersonId, communityId, page,
-      limit, type, otherPersonId, postId, commentId, auth);
+  int get hashCode => Object.hash(runtimeType, modPersonId, communityId, page, limit, type, otherPersonId, postId, commentId, auth);
 
   /// Create a copy of GetModlog
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetModlogImplCopyWith<_$GetModlogImpl> get copyWith =>
-      __$$GetModlogImplCopyWithImpl<_$GetModlogImpl>(this, _$identity);
+  _$$GetModlogImplCopyWith<_$GetModlogImpl> get copyWith => __$$GetModlogImplCopyWithImpl<_$GetModlogImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetModlogImplToJson(
-      this,
-    );
+    return _$$GetModlogImplToJson(this);
   }
 }
 
 abstract class _GetModlog extends GetModlog {
-  const factory _GetModlog(
-      {final int? modPersonId,
-      final int? communityId,
-      final int? page,
-      final int? limit,
-      @JsonKey(name: 'type_') final ModlogActionType? type,
-      final int? otherPersonId,
-      final int? postId,
-      final int? commentId,
-      final String? auth}) = _$GetModlogImpl;
+  const factory _GetModlog({
+    final int? modPersonId,
+    final int? communityId,
+    final int? page,
+    final int? limit,
+    @JsonKey(name: 'type_') final ModlogActionType? type,
+    final int? otherPersonId,
+    final int? postId,
+    final int? commentId,
+    final String? auth,
+  }) = _$GetModlogImpl;
   const _GetModlog._() : super._();
 
-  factory _GetModlog.fromJson(Map<String, dynamic> json) =
-      _$GetModlogImpl.fromJson;
+  factory _GetModlog.fromJson(Map<String, dynamic> json) = _$GetModlogImpl.fromJson;
 
   @override
   int? get modPersonId; // v0.18.0
@@ -342,6 +318,5 @@ abstract class _GetModlog extends GetModlog {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetModlogImplCopyWith<_$GetModlogImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetModlogImplCopyWith<_$GetModlogImpl> get copyWith => throw _privateConstructorUsedError;
 }

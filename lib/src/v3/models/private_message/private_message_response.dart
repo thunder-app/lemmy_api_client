@@ -14,6 +14,5 @@ class PrivateMessageResponse with _$PrivateMessageResponse {
   }) = _PrivateMessageResponse;
 
   const PrivateMessageResponse._();
-  factory PrivateMessageResponse.fromJson(Map<String, dynamic> json) =>
-      _$PrivateMessageResponseFromJson(json);
+  factory PrivateMessageResponse.fromJson(Map<String, dynamic> json) => _$PrivateMessageResponseFromJson(json);
 }

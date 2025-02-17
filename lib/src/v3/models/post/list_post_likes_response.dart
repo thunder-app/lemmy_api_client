@@ -14,6 +14,5 @@ class ListPostLikesResponse with _$ListPostLikesResponse {
   }) = _ListPostLikesResponse;
 
   const ListPostLikesResponse._();
-  factory ListPostLikesResponse.fromJson(Map<String, dynamic> json) =>
-      _$ListPostLikesResponseFromJson(json);
+  factory ListPostLikesResponse.fromJson(Map<String, dynamic> json) => _$ListPostLikesResponseFromJson(json);
 }

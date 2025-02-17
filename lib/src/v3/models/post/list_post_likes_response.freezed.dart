@@ -12,10 +12,10 @@ part of 'list_post_likes_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
-ListPostLikesResponse _$ListPostLikesResponseFromJson(
-    Map<String, dynamic> json) {
+ListPostLikesResponse _$ListPostLikesResponseFromJson(Map<String, dynamic> json) {
   return _ListPostLikesResponse.fromJson(json);
 }
 
@@ -29,23 +29,18 @@ mixin _$ListPostLikesResponse {
   /// Create a copy of ListPostLikesResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ListPostLikesResponseCopyWith<ListPostLikesResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ListPostLikesResponseCopyWith<ListPostLikesResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ListPostLikesResponseCopyWith<$Res> {
-  factory $ListPostLikesResponseCopyWith(ListPostLikesResponse value,
-          $Res Function(ListPostLikesResponse) then) =
-      _$ListPostLikesResponseCopyWithImpl<$Res, ListPostLikesResponse>;
+  factory $ListPostLikesResponseCopyWith(ListPostLikesResponse value, $Res Function(ListPostLikesResponse) then) = _$ListPostLikesResponseCopyWithImpl<$Res, ListPostLikesResponse>;
   @useResult
   $Res call({List<VoteView> postLikes});
 }
 
 /// @nodoc
-class _$ListPostLikesResponseCopyWithImpl<$Res,
-        $Val extends ListPostLikesResponse>
-    implements $ListPostLikesResponseCopyWith<$Res> {
+class _$ListPostLikesResponseCopyWithImpl<$Res, $Val extends ListPostLikesResponse> implements $ListPostLikesResponseCopyWith<$Res> {
   _$ListPostLikesResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -57,52 +52,46 @@ class _$ListPostLikesResponseCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postLikes = null,
-  }) {
-    return _then(_value.copyWith(
-      postLikes: null == postLikes
-          ? _value.postLikes
-          : postLikes // ignore: cast_nullable_to_non_nullable
-              as List<VoteView>,
-    ) as $Val);
+  $Res call({Object? postLikes = null}) {
+    return _then(
+      _value.copyWith(
+            postLikes:
+                null == postLikes
+                    ? _value.postLikes
+                    : postLikes // ignore: cast_nullable_to_non_nullable
+                        as List<VoteView>,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$ListPostLikesResponseImplCopyWith<$Res>
-    implements $ListPostLikesResponseCopyWith<$Res> {
-  factory _$$ListPostLikesResponseImplCopyWith(
-          _$ListPostLikesResponseImpl value,
-          $Res Function(_$ListPostLikesResponseImpl) then) =
-      __$$ListPostLikesResponseImplCopyWithImpl<$Res>;
+abstract class _$$ListPostLikesResponseImplCopyWith<$Res> implements $ListPostLikesResponseCopyWith<$Res> {
+  factory _$$ListPostLikesResponseImplCopyWith(_$ListPostLikesResponseImpl value, $Res Function(_$ListPostLikesResponseImpl) then) = __$$ListPostLikesResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<VoteView> postLikes});
 }
 
 /// @nodoc
-class __$$ListPostLikesResponseImplCopyWithImpl<$Res>
-    extends _$ListPostLikesResponseCopyWithImpl<$Res,
-        _$ListPostLikesResponseImpl>
-    implements _$$ListPostLikesResponseImplCopyWith<$Res> {
-  __$$ListPostLikesResponseImplCopyWithImpl(_$ListPostLikesResponseImpl _value,
-      $Res Function(_$ListPostLikesResponseImpl) _then)
-      : super(_value, _then);
+class __$$ListPostLikesResponseImplCopyWithImpl<$Res> extends _$ListPostLikesResponseCopyWithImpl<$Res, _$ListPostLikesResponseImpl> implements _$$ListPostLikesResponseImplCopyWith<$Res> {
+  __$$ListPostLikesResponseImplCopyWithImpl(_$ListPostLikesResponseImpl _value, $Res Function(_$ListPostLikesResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of ListPostLikesResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postLikes = null,
-  }) {
-    return _then(_$ListPostLikesResponseImpl(
-      postLikes: null == postLikes
-          ? _value._postLikes
-          : postLikes // ignore: cast_nullable_to_non_nullable
-              as List<VoteView>,
-    ));
+  $Res call({Object? postLikes = null}) {
+    return _then(
+      _$ListPostLikesResponseImpl(
+        postLikes:
+            null == postLikes
+                ? _value._postLikes
+                : postLikes // ignore: cast_nullable_to_non_nullable
+                    as List<VoteView>,
+      ),
+    );
   }
 }
 
@@ -110,12 +99,9 @@ class __$$ListPostLikesResponseImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$ListPostLikesResponseImpl extends _ListPostLikesResponse {
-  const _$ListPostLikesResponseImpl({required final List<VoteView> postLikes})
-      : _postLikes = postLikes,
-        super._();
+  const _$ListPostLikesResponseImpl({required final List<VoteView> postLikes}) : _postLikes = postLikes, super._();
 
-  factory _$ListPostLikesResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ListPostLikesResponseImplFromJson(json);
+  factory _$ListPostLikesResponseImpl.fromJson(Map<String, dynamic> json) => _$$ListPostLikesResponseImplFromJson(json);
 
   final List<VoteView> _postLikes;
   @override
@@ -132,42 +118,31 @@ class _$ListPostLikesResponseImpl extends _ListPostLikesResponse {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ListPostLikesResponseImpl &&
-            const DeepCollectionEquality()
-                .equals(other._postLikes, _postLikes));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$ListPostLikesResponseImpl && const DeepCollectionEquality().equals(other._postLikes, _postLikes));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_postLikes));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_postLikes));
 
   /// Create a copy of ListPostLikesResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ListPostLikesResponseImplCopyWith<_$ListPostLikesResponseImpl>
-      get copyWith => __$$ListPostLikesResponseImplCopyWithImpl<
-          _$ListPostLikesResponseImpl>(this, _$identity);
+  _$$ListPostLikesResponseImplCopyWith<_$ListPostLikesResponseImpl> get copyWith => __$$ListPostLikesResponseImplCopyWithImpl<_$ListPostLikesResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ListPostLikesResponseImplToJson(
-      this,
-    );
+    return _$$ListPostLikesResponseImplToJson(this);
   }
 }
 
 abstract class _ListPostLikesResponse extends ListPostLikesResponse {
-  const factory _ListPostLikesResponse(
-      {required final List<VoteView> postLikes}) = _$ListPostLikesResponseImpl;
+  const factory _ListPostLikesResponse({required final List<VoteView> postLikes}) = _$ListPostLikesResponseImpl;
   const _ListPostLikesResponse._() : super._();
 
-  factory _ListPostLikesResponse.fromJson(Map<String, dynamic> json) =
-      _$ListPostLikesResponseImpl.fromJson;
+  factory _ListPostLikesResponse.fromJson(Map<String, dynamic> json) = _$ListPostLikesResponseImpl.fromJson;
 
   @override
   List<VoteView> get postLikes;
@@ -176,6 +151,5 @@ abstract class _ListPostLikesResponse extends ListPostLikesResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ListPostLikesResponseImplCopyWith<_$ListPostLikesResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$ListPostLikesResponseImplCopyWith<_$ListPostLikesResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

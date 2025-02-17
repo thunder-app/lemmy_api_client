@@ -12,7 +12,8 @@ part of 'person_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 PersonView _$PersonViewFromJson(Map<String, dynamic> json) {
   return _PersonView.fromJson(json);
@@ -30,15 +31,12 @@ mixin _$PersonView {
   /// Create a copy of PersonView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PersonViewCopyWith<PersonView> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PersonViewCopyWith<PersonView> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PersonViewCopyWith<$Res> {
-  factory $PersonViewCopyWith(
-          PersonView value, $Res Function(PersonView) then) =
-      _$PersonViewCopyWithImpl<$Res, PersonView>;
+  factory $PersonViewCopyWith(PersonView value, $Res Function(PersonView) then) = _$PersonViewCopyWithImpl<$Res, PersonView>;
   @useResult
   $Res call({Person person, PersonAggregates counts, bool? isAdmin});
 
@@ -47,8 +45,7 @@ abstract class $PersonViewCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PersonViewCopyWithImpl<$Res, $Val extends PersonView>
-    implements $PersonViewCopyWith<$Res> {
+class _$PersonViewCopyWithImpl<$Res, $Val extends PersonView> implements $PersonViewCopyWith<$Res> {
   _$PersonViewCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -60,25 +57,27 @@ class _$PersonViewCopyWithImpl<$Res, $Val extends PersonView>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? person = null,
-    Object? counts = null,
-    Object? isAdmin = freezed,
-  }) {
-    return _then(_value.copyWith(
-      person: null == person
-          ? _value.person
-          : person // ignore: cast_nullable_to_non_nullable
-              as Person,
-      counts: null == counts
-          ? _value.counts
-          : counts // ignore: cast_nullable_to_non_nullable
-              as PersonAggregates,
-      isAdmin: freezed == isAdmin
-          ? _value.isAdmin
-          : isAdmin // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+  $Res call({Object? person = null, Object? counts = null, Object? isAdmin = freezed}) {
+    return _then(
+      _value.copyWith(
+            person:
+                null == person
+                    ? _value.person
+                    : person // ignore: cast_nullable_to_non_nullable
+                        as Person,
+            counts:
+                null == counts
+                    ? _value.counts
+                    : counts // ignore: cast_nullable_to_non_nullable
+                        as PersonAggregates,
+            isAdmin:
+                freezed == isAdmin
+                    ? _value.isAdmin
+                    : isAdmin // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of PersonView
@@ -103,11 +102,8 @@ class _$PersonViewCopyWithImpl<$Res, $Val extends PersonView>
 }
 
 /// @nodoc
-abstract class _$$PersonViewImplCopyWith<$Res>
-    implements $PersonViewCopyWith<$Res> {
-  factory _$$PersonViewImplCopyWith(
-          _$PersonViewImpl value, $Res Function(_$PersonViewImpl) then) =
-      __$$PersonViewImplCopyWithImpl<$Res>;
+abstract class _$$PersonViewImplCopyWith<$Res> implements $PersonViewCopyWith<$Res> {
+  factory _$$PersonViewImplCopyWith(_$PersonViewImpl value, $Res Function(_$PersonViewImpl) then) = __$$PersonViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Person person, PersonAggregates counts, bool? isAdmin});
@@ -119,36 +115,33 @@ abstract class _$$PersonViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PersonViewImplCopyWithImpl<$Res>
-    extends _$PersonViewCopyWithImpl<$Res, _$PersonViewImpl>
-    implements _$$PersonViewImplCopyWith<$Res> {
-  __$$PersonViewImplCopyWithImpl(
-      _$PersonViewImpl _value, $Res Function(_$PersonViewImpl) _then)
-      : super(_value, _then);
+class __$$PersonViewImplCopyWithImpl<$Res> extends _$PersonViewCopyWithImpl<$Res, _$PersonViewImpl> implements _$$PersonViewImplCopyWith<$Res> {
+  __$$PersonViewImplCopyWithImpl(_$PersonViewImpl _value, $Res Function(_$PersonViewImpl) _then) : super(_value, _then);
 
   /// Create a copy of PersonView
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? person = null,
-    Object? counts = null,
-    Object? isAdmin = freezed,
-  }) {
-    return _then(_$PersonViewImpl(
-      person: null == person
-          ? _value.person
-          : person // ignore: cast_nullable_to_non_nullable
-              as Person,
-      counts: null == counts
-          ? _value.counts
-          : counts // ignore: cast_nullable_to_non_nullable
-              as PersonAggregates,
-      isAdmin: freezed == isAdmin
-          ? _value.isAdmin
-          : isAdmin // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+  $Res call({Object? person = null, Object? counts = null, Object? isAdmin = freezed}) {
+    return _then(
+      _$PersonViewImpl(
+        person:
+            null == person
+                ? _value.person
+                : person // ignore: cast_nullable_to_non_nullable
+                    as Person,
+        counts:
+            null == counts
+                ? _value.counts
+                : counts // ignore: cast_nullable_to_non_nullable
+                    as PersonAggregates,
+        isAdmin:
+            freezed == isAdmin
+                ? _value.isAdmin
+                : isAdmin // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
@@ -156,19 +149,16 @@ class __$$PersonViewImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$PersonViewImpl extends _PersonView {
-  const _$PersonViewImpl(
-      {required this.person, required this.counts, this.isAdmin})
-      : super._();
+  const _$PersonViewImpl({required this.person, required this.counts, this.isAdmin}) : super._();
 
-  factory _$PersonViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PersonViewImplFromJson(json);
+  factory _$PersonViewImpl.fromJson(Map<String, dynamic> json) => _$$PersonViewImplFromJson(json);
 
   @override
   final Person person;
-// v0.18.0
+  // v0.18.0
   @override
   final PersonAggregates counts;
-// v0.18.0
+  // v0.18.0
   @override
   final bool? isAdmin;
 
@@ -196,26 +186,19 @@ class _$PersonViewImpl extends _PersonView {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$PersonViewImplCopyWith<_$PersonViewImpl> get copyWith =>
-      __$$PersonViewImplCopyWithImpl<_$PersonViewImpl>(this, _$identity);
+  _$$PersonViewImplCopyWith<_$PersonViewImpl> get copyWith => __$$PersonViewImplCopyWithImpl<_$PersonViewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PersonViewImplToJson(
-      this,
-    );
+    return _$$PersonViewImplToJson(this);
   }
 }
 
 abstract class _PersonView extends PersonView {
-  const factory _PersonView(
-      {required final Person person,
-      required final PersonAggregates counts,
-      final bool? isAdmin}) = _$PersonViewImpl;
+  const factory _PersonView({required final Person person, required final PersonAggregates counts, final bool? isAdmin}) = _$PersonViewImpl;
   const _PersonView._() : super._();
 
-  factory _PersonView.fromJson(Map<String, dynamic> json) =
-      _$PersonViewImpl.fromJson;
+  factory _PersonView.fromJson(Map<String, dynamic> json) = _$PersonViewImpl.fromJson;
 
   @override
   Person get person; // v0.18.0
@@ -228,6 +211,5 @@ abstract class _PersonView extends PersonView {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PersonViewImplCopyWith<_$PersonViewImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PersonViewImplCopyWith<_$PersonViewImpl> get copyWith => throw _privateConstructorUsedError;
 }

@@ -14,6 +14,5 @@ class PostResponse with _$PostResponse {
   }) = _PostResponse;
 
   const PostResponse._();
-  factory PostResponse.fromJson(Map<String, dynamic> json) =>
-      _$PostResponseFromJson(json);
+  factory PostResponse.fromJson(Map<String, dynamic> json) => _$PostResponseFromJson(json);
 }

@@ -16,6 +16,5 @@ class SaveUserSettingsResponse with _$SaveUserSettingsResponse {
   }) = _SaveUserSettingsResponse;
 
   const SaveUserSettingsResponse._();
-  factory SaveUserSettingsResponse.fromJson(Map<String, dynamic> json) =>
-      _$SaveUserSettingsResponseFromJson(json);
+  factory SaveUserSettingsResponse.fromJson(Map<String, dynamic> json) => _$SaveUserSettingsResponseFromJson(json);
 }

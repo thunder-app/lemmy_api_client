@@ -16,6 +16,5 @@ class FederatedInstances with _$FederatedInstances {
   }) = _FederatedInstances;
 
   const FederatedInstances._();
-  factory FederatedInstances.fromJson(Map<String, dynamic> json) =>
-      _$FederatedInstancesFromJson(json);
+  factory FederatedInstances.fromJson(Map<String, dynamic> json) => _$FederatedInstancesFromJson(json);
 }

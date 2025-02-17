@@ -18,7 +18,5 @@ class ProviderView with _$ProviderView {
   }) = _ProviderView;
 
   const ProviderView._();
-  factory ProviderView.fromJson(Map<String, dynamic> json) =>
-      _$ProviderViewFromJson(json);
+  factory ProviderView.fromJson(Map<String, dynamic> json) => _$ProviderViewFromJson(json);
 }
-

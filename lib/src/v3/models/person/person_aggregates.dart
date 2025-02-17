@@ -18,6 +18,5 @@ class PersonAggregates with _$PersonAggregates {
   }) = _PersonAggregates;
 
   const PersonAggregates._();
-  factory PersonAggregates.fromJson(Map<String, dynamic> json) =>
-      _$PersonAggregatesFromJson(json);
+  factory PersonAggregates.fromJson(Map<String, dynamic> json) => _$PersonAggregatesFromJson(json);
 }

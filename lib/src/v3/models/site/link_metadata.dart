@@ -17,6 +17,5 @@ class LinkMetadata with _$LinkMetadata {
   }) = _LinkMetadata;
 
   const LinkMetadata._();
-  factory LinkMetadata.fromJson(Map<String, dynamic> json) =>
-      _$LinkMetadataFromJson(json);
+  factory LinkMetadata.fromJson(Map<String, dynamic> json) => _$LinkMetadataFromJson(json);
 }

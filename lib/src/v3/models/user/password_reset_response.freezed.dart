@@ -12,10 +12,10 @@ part of 'password_reset_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
-PasswordResetResponse _$PasswordResetResponseFromJson(
-    Map<String, dynamic> json) {
+PasswordResetResponse _$PasswordResetResponseFromJson(Map<String, dynamic> json) {
   return _PasswordResetResponse.fromJson(json);
 }
 
@@ -29,23 +29,18 @@ mixin _$PasswordResetResponse {
   /// Create a copy of PasswordResetResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PasswordResetResponseCopyWith<PasswordResetResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PasswordResetResponseCopyWith<PasswordResetResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PasswordResetResponseCopyWith<$Res> {
-  factory $PasswordResetResponseCopyWith(PasswordResetResponse value,
-          $Res Function(PasswordResetResponse) then) =
-      _$PasswordResetResponseCopyWithImpl<$Res, PasswordResetResponse>;
+  factory $PasswordResetResponseCopyWith(PasswordResetResponse value, $Res Function(PasswordResetResponse) then) = _$PasswordResetResponseCopyWithImpl<$Res, PasswordResetResponse>;
   @useResult
   $Res call({bool? success});
 }
 
 /// @nodoc
-class _$PasswordResetResponseCopyWithImpl<$Res,
-        $Val extends PasswordResetResponse>
-    implements $PasswordResetResponseCopyWith<$Res> {
+class _$PasswordResetResponseCopyWithImpl<$Res, $Val extends PasswordResetResponse> implements $PasswordResetResponseCopyWith<$Res> {
   _$PasswordResetResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -57,52 +52,46 @@ class _$PasswordResetResponseCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? success = freezed,
-  }) {
-    return _then(_value.copyWith(
-      success: freezed == success
-          ? _value.success
-          : success // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+  $Res call({Object? success = freezed}) {
+    return _then(
+      _value.copyWith(
+            success:
+                freezed == success
+                    ? _value.success
+                    : success // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$PasswordResetResponseImplCopyWith<$Res>
-    implements $PasswordResetResponseCopyWith<$Res> {
-  factory _$$PasswordResetResponseImplCopyWith(
-          _$PasswordResetResponseImpl value,
-          $Res Function(_$PasswordResetResponseImpl) then) =
-      __$$PasswordResetResponseImplCopyWithImpl<$Res>;
+abstract class _$$PasswordResetResponseImplCopyWith<$Res> implements $PasswordResetResponseCopyWith<$Res> {
+  factory _$$PasswordResetResponseImplCopyWith(_$PasswordResetResponseImpl value, $Res Function(_$PasswordResetResponseImpl) then) = __$$PasswordResetResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool? success});
 }
 
 /// @nodoc
-class __$$PasswordResetResponseImplCopyWithImpl<$Res>
-    extends _$PasswordResetResponseCopyWithImpl<$Res,
-        _$PasswordResetResponseImpl>
-    implements _$$PasswordResetResponseImplCopyWith<$Res> {
-  __$$PasswordResetResponseImplCopyWithImpl(_$PasswordResetResponseImpl _value,
-      $Res Function(_$PasswordResetResponseImpl) _then)
-      : super(_value, _then);
+class __$$PasswordResetResponseImplCopyWithImpl<$Res> extends _$PasswordResetResponseCopyWithImpl<$Res, _$PasswordResetResponseImpl> implements _$$PasswordResetResponseImplCopyWith<$Res> {
+  __$$PasswordResetResponseImplCopyWithImpl(_$PasswordResetResponseImpl _value, $Res Function(_$PasswordResetResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of PasswordResetResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? success = freezed,
-  }) {
-    return _then(_$PasswordResetResponseImpl(
-      success: freezed == success
-          ? _value.success
-          : success // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+  $Res call({Object? success = freezed}) {
+    return _then(
+      _$PasswordResetResponseImpl(
+        success:
+            freezed == success
+                ? _value.success
+                : success // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
@@ -112,8 +101,7 @@ class __$$PasswordResetResponseImplCopyWithImpl<$Res>
 class _$PasswordResetResponseImpl extends _PasswordResetResponse {
   const _$PasswordResetResponseImpl({this.success}) : super._();
 
-  factory _$PasswordResetResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PasswordResetResponseImplFromJson(json);
+  factory _$PasswordResetResponseImpl.fromJson(Map<String, dynamic> json) => _$$PasswordResetResponseImplFromJson(json);
 
   @override
   final bool? success;
@@ -125,10 +113,7 @@ class _$PasswordResetResponseImpl extends _PasswordResetResponse {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PasswordResetResponseImpl &&
-            (identical(other.success, success) || other.success == success));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$PasswordResetResponseImpl && (identical(other.success, success) || other.success == success));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -140,25 +125,19 @@ class _$PasswordResetResponseImpl extends _PasswordResetResponse {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$PasswordResetResponseImplCopyWith<_$PasswordResetResponseImpl>
-      get copyWith => __$$PasswordResetResponseImplCopyWithImpl<
-          _$PasswordResetResponseImpl>(this, _$identity);
+  _$$PasswordResetResponseImplCopyWith<_$PasswordResetResponseImpl> get copyWith => __$$PasswordResetResponseImplCopyWithImpl<_$PasswordResetResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PasswordResetResponseImplToJson(
-      this,
-    );
+    return _$$PasswordResetResponseImplToJson(this);
   }
 }
 
 abstract class _PasswordResetResponse extends PasswordResetResponse {
-  const factory _PasswordResetResponse({final bool? success}) =
-      _$PasswordResetResponseImpl;
+  const factory _PasswordResetResponse({final bool? success}) = _$PasswordResetResponseImpl;
   const _PasswordResetResponse._() : super._();
 
-  factory _PasswordResetResponse.fromJson(Map<String, dynamic> json) =
-      _$PasswordResetResponseImpl.fromJson;
+  factory _PasswordResetResponse.fromJson(Map<String, dynamic> json) = _$PasswordResetResponseImpl.fromJson;
 
   @override
   bool? get success;
@@ -167,6 +146,5 @@ abstract class _PasswordResetResponse extends PasswordResetResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PasswordResetResponseImplCopyWith<_$PasswordResetResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$PasswordResetResponseImplCopyWith<_$PasswordResetResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

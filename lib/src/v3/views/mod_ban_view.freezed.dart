@@ -12,7 +12,8 @@ part of 'mod_ban_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ModBanView _$ModBanViewFromJson(Map<String, dynamic> json) {
   return _ModBanView.fromJson(json);
@@ -30,15 +31,12 @@ mixin _$ModBanView {
   /// Create a copy of ModBanView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ModBanViewCopyWith<ModBanView> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ModBanViewCopyWith<ModBanView> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ModBanViewCopyWith<$Res> {
-  factory $ModBanViewCopyWith(
-          ModBanView value, $Res Function(ModBanView) then) =
-      _$ModBanViewCopyWithImpl<$Res, ModBanView>;
+  factory $ModBanViewCopyWith(ModBanView value, $Res Function(ModBanView) then) = _$ModBanViewCopyWithImpl<$Res, ModBanView>;
   @useResult
   $Res call({ModBan modBan, Person? moderator, Person bannedPerson});
 
@@ -48,8 +46,7 @@ abstract class $ModBanViewCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ModBanViewCopyWithImpl<$Res, $Val extends ModBanView>
-    implements $ModBanViewCopyWith<$Res> {
+class _$ModBanViewCopyWithImpl<$Res, $Val extends ModBanView> implements $ModBanViewCopyWith<$Res> {
   _$ModBanViewCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -61,25 +58,27 @@ class _$ModBanViewCopyWithImpl<$Res, $Val extends ModBanView>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? modBan = null,
-    Object? moderator = freezed,
-    Object? bannedPerson = null,
-  }) {
-    return _then(_value.copyWith(
-      modBan: null == modBan
-          ? _value.modBan
-          : modBan // ignore: cast_nullable_to_non_nullable
-              as ModBan,
-      moderator: freezed == moderator
-          ? _value.moderator
-          : moderator // ignore: cast_nullable_to_non_nullable
-              as Person?,
-      bannedPerson: null == bannedPerson
-          ? _value.bannedPerson
-          : bannedPerson // ignore: cast_nullable_to_non_nullable
-              as Person,
-    ) as $Val);
+  $Res call({Object? modBan = null, Object? moderator = freezed, Object? bannedPerson = null}) {
+    return _then(
+      _value.copyWith(
+            modBan:
+                null == modBan
+                    ? _value.modBan
+                    : modBan // ignore: cast_nullable_to_non_nullable
+                        as ModBan,
+            moderator:
+                freezed == moderator
+                    ? _value.moderator
+                    : moderator // ignore: cast_nullable_to_non_nullable
+                        as Person?,
+            bannedPerson:
+                null == bannedPerson
+                    ? _value.bannedPerson
+                    : bannedPerson // ignore: cast_nullable_to_non_nullable
+                        as Person,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of ModBanView
@@ -118,11 +117,8 @@ class _$ModBanViewCopyWithImpl<$Res, $Val extends ModBanView>
 }
 
 /// @nodoc
-abstract class _$$ModBanViewImplCopyWith<$Res>
-    implements $ModBanViewCopyWith<$Res> {
-  factory _$$ModBanViewImplCopyWith(
-          _$ModBanViewImpl value, $Res Function(_$ModBanViewImpl) then) =
-      __$$ModBanViewImplCopyWithImpl<$Res>;
+abstract class _$$ModBanViewImplCopyWith<$Res> implements $ModBanViewCopyWith<$Res> {
+  factory _$$ModBanViewImplCopyWith(_$ModBanViewImpl value, $Res Function(_$ModBanViewImpl) then) = __$$ModBanViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({ModBan modBan, Person? moderator, Person bannedPerson});
@@ -136,36 +132,33 @@ abstract class _$$ModBanViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ModBanViewImplCopyWithImpl<$Res>
-    extends _$ModBanViewCopyWithImpl<$Res, _$ModBanViewImpl>
-    implements _$$ModBanViewImplCopyWith<$Res> {
-  __$$ModBanViewImplCopyWithImpl(
-      _$ModBanViewImpl _value, $Res Function(_$ModBanViewImpl) _then)
-      : super(_value, _then);
+class __$$ModBanViewImplCopyWithImpl<$Res> extends _$ModBanViewCopyWithImpl<$Res, _$ModBanViewImpl> implements _$$ModBanViewImplCopyWith<$Res> {
+  __$$ModBanViewImplCopyWithImpl(_$ModBanViewImpl _value, $Res Function(_$ModBanViewImpl) _then) : super(_value, _then);
 
   /// Create a copy of ModBanView
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? modBan = null,
-    Object? moderator = freezed,
-    Object? bannedPerson = null,
-  }) {
-    return _then(_$ModBanViewImpl(
-      modBan: null == modBan
-          ? _value.modBan
-          : modBan // ignore: cast_nullable_to_non_nullable
-              as ModBan,
-      moderator: freezed == moderator
-          ? _value.moderator
-          : moderator // ignore: cast_nullable_to_non_nullable
-              as Person?,
-      bannedPerson: null == bannedPerson
-          ? _value.bannedPerson
-          : bannedPerson // ignore: cast_nullable_to_non_nullable
-              as Person,
-    ));
+  $Res call({Object? modBan = null, Object? moderator = freezed, Object? bannedPerson = null}) {
+    return _then(
+      _$ModBanViewImpl(
+        modBan:
+            null == modBan
+                ? _value.modBan
+                : modBan // ignore: cast_nullable_to_non_nullable
+                    as ModBan,
+        moderator:
+            freezed == moderator
+                ? _value.moderator
+                : moderator // ignore: cast_nullable_to_non_nullable
+                    as Person?,
+        bannedPerson:
+            null == bannedPerson
+                ? _value.bannedPerson
+                : bannedPerson // ignore: cast_nullable_to_non_nullable
+                    as Person,
+      ),
+    );
   }
 }
 
@@ -173,19 +166,16 @@ class __$$ModBanViewImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$ModBanViewImpl extends _ModBanView {
-  const _$ModBanViewImpl(
-      {required this.modBan, this.moderator, required this.bannedPerson})
-      : super._();
+  const _$ModBanViewImpl({required this.modBan, this.moderator, required this.bannedPerson}) : super._();
 
-  factory _$ModBanViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ModBanViewImplFromJson(json);
+  factory _$ModBanViewImpl.fromJson(Map<String, dynamic> json) => _$$ModBanViewImplFromJson(json);
 
   @override
   final ModBan modBan;
-// v0.18.0
+  // v0.18.0
   @override
   final Person? moderator;
-// v0.18.0
+  // v0.18.0
   @override
   final Person bannedPerson;
 
@@ -200,10 +190,8 @@ class _$ModBanViewImpl extends _ModBanView {
         (other.runtimeType == runtimeType &&
             other is _$ModBanViewImpl &&
             (identical(other.modBan, modBan) || other.modBan == modBan) &&
-            (identical(other.moderator, moderator) ||
-                other.moderator == moderator) &&
-            (identical(other.bannedPerson, bannedPerson) ||
-                other.bannedPerson == bannedPerson));
+            (identical(other.moderator, moderator) || other.moderator == moderator) &&
+            (identical(other.bannedPerson, bannedPerson) || other.bannedPerson == bannedPerson));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -215,26 +203,19 @@ class _$ModBanViewImpl extends _ModBanView {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ModBanViewImplCopyWith<_$ModBanViewImpl> get copyWith =>
-      __$$ModBanViewImplCopyWithImpl<_$ModBanViewImpl>(this, _$identity);
+  _$$ModBanViewImplCopyWith<_$ModBanViewImpl> get copyWith => __$$ModBanViewImplCopyWithImpl<_$ModBanViewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ModBanViewImplToJson(
-      this,
-    );
+    return _$$ModBanViewImplToJson(this);
   }
 }
 
 abstract class _ModBanView extends ModBanView {
-  const factory _ModBanView(
-      {required final ModBan modBan,
-      final Person? moderator,
-      required final Person bannedPerson}) = _$ModBanViewImpl;
+  const factory _ModBanView({required final ModBan modBan, final Person? moderator, required final Person bannedPerson}) = _$ModBanViewImpl;
   const _ModBanView._() : super._();
 
-  factory _ModBanView.fromJson(Map<String, dynamic> json) =
-      _$ModBanViewImpl.fromJson;
+  factory _ModBanView.fromJson(Map<String, dynamic> json) = _$ModBanViewImpl.fromJson;
 
   @override
   ModBan get modBan; // v0.18.0
@@ -247,6 +228,5 @@ abstract class _ModBanView extends ModBanView {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ModBanViewImplCopyWith<_$ModBanViewImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ModBanViewImplCopyWith<_$ModBanViewImpl> get copyWith => throw _privateConstructorUsedError;
 }

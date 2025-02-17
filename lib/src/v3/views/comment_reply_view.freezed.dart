@@ -12,7 +12,8 @@ part of 'comment_reply_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 CommentReplyView _$CommentReplyViewFromJson(Map<String, dynamic> json) {
   return _CommentReplyView.fromJson(json);
@@ -20,24 +21,18 @@ CommentReplyView _$CommentReplyViewFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CommentReplyView {
-  CommentReply get commentReply =>
-      throw _privateConstructorUsedError; // v0.18.0
+  CommentReply get commentReply => throw _privateConstructorUsedError; // v0.18.0
   Comment get comment => throw _privateConstructorUsedError; // v0.18.0
   Person get creator => throw _privateConstructorUsedError; // v0.18.0
   Post get post => throw _privateConstructorUsedError; // v0.18.0
   Community get community => throw _privateConstructorUsedError; // v0.18.0
   Person get recipient => throw _privateConstructorUsedError; // v0.18.0
   CommentAggregates get counts => throw _privateConstructorUsedError; // v0.18.0
-  bool get creatorBannedFromCommunity =>
-      throw _privateConstructorUsedError; // v0.18.0
-  bool? get bannedFromCommunity =>
-      throw _privateConstructorUsedError; // v0.19.4 (required)
-  bool? get creatorIsModerator =>
-      throw _privateConstructorUsedError; // v0.19.0 (required)
-  bool? get creatorIsAdmin =>
-      throw _privateConstructorUsedError; // v0.19.0 (required)
-  SubscribedType get subscribed =>
-      throw _privateConstructorUsedError; // v0.18.0
+  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError; // v0.18.0
+  bool? get bannedFromCommunity => throw _privateConstructorUsedError; // v0.19.4 (required)
+  bool? get creatorIsModerator => throw _privateConstructorUsedError; // v0.19.0 (required)
+  bool? get creatorIsAdmin => throw _privateConstructorUsedError; // v0.19.0 (required)
+  SubscribedType get subscribed => throw _privateConstructorUsedError; // v0.18.0
   bool get saved => throw _privateConstructorUsedError; // v0.18.0
   bool get creatorBlocked => throw _privateConstructorUsedError; // v0.18.0
   num? get myVote => throw _privateConstructorUsedError;
@@ -48,32 +43,30 @@ mixin _$CommentReplyView {
   /// Create a copy of CommentReplyView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $CommentReplyViewCopyWith<CommentReplyView> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CommentReplyViewCopyWith<CommentReplyView> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CommentReplyViewCopyWith<$Res> {
-  factory $CommentReplyViewCopyWith(
-          CommentReplyView value, $Res Function(CommentReplyView) then) =
-      _$CommentReplyViewCopyWithImpl<$Res, CommentReplyView>;
+  factory $CommentReplyViewCopyWith(CommentReplyView value, $Res Function(CommentReplyView) then) = _$CommentReplyViewCopyWithImpl<$Res, CommentReplyView>;
   @useResult
-  $Res call(
-      {CommentReply commentReply,
-      Comment comment,
-      Person creator,
-      Post post,
-      Community community,
-      Person recipient,
-      CommentAggregates counts,
-      bool creatorBannedFromCommunity,
-      bool? bannedFromCommunity,
-      bool? creatorIsModerator,
-      bool? creatorIsAdmin,
-      SubscribedType subscribed,
-      bool saved,
-      bool creatorBlocked,
-      num? myVote});
+  $Res call({
+    CommentReply commentReply,
+    Comment comment,
+    Person creator,
+    Post post,
+    Community community,
+    Person recipient,
+    CommentAggregates counts,
+    bool creatorBannedFromCommunity,
+    bool? bannedFromCommunity,
+    bool? creatorIsModerator,
+    bool? creatorIsAdmin,
+    SubscribedType subscribed,
+    bool saved,
+    bool creatorBlocked,
+    num? myVote,
+  });
 
   $CommentReplyCopyWith<$Res> get commentReply;
   $CommentCopyWith<$Res> get comment;
@@ -85,8 +78,7 @@ abstract class $CommentReplyViewCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CommentReplyViewCopyWithImpl<$Res, $Val extends CommentReplyView>
-    implements $CommentReplyViewCopyWith<$Res> {
+class _$CommentReplyViewCopyWithImpl<$Res, $Val extends CommentReplyView> implements $CommentReplyViewCopyWith<$Res> {
   _$CommentReplyViewCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -115,68 +107,86 @@ class _$CommentReplyViewCopyWithImpl<$Res, $Val extends CommentReplyView>
     Object? creatorBlocked = null,
     Object? myVote = freezed,
   }) {
-    return _then(_value.copyWith(
-      commentReply: null == commentReply
-          ? _value.commentReply
-          : commentReply // ignore: cast_nullable_to_non_nullable
-              as CommentReply,
-      comment: null == comment
-          ? _value.comment
-          : comment // ignore: cast_nullable_to_non_nullable
-              as Comment,
-      creator: null == creator
-          ? _value.creator
-          : creator // ignore: cast_nullable_to_non_nullable
-              as Person,
-      post: null == post
-          ? _value.post
-          : post // ignore: cast_nullable_to_non_nullable
-              as Post,
-      community: null == community
-          ? _value.community
-          : community // ignore: cast_nullable_to_non_nullable
-              as Community,
-      recipient: null == recipient
-          ? _value.recipient
-          : recipient // ignore: cast_nullable_to_non_nullable
-              as Person,
-      counts: null == counts
-          ? _value.counts
-          : counts // ignore: cast_nullable_to_non_nullable
-              as CommentAggregates,
-      creatorBannedFromCommunity: null == creatorBannedFromCommunity
-          ? _value.creatorBannedFromCommunity
-          : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
-              as bool,
-      bannedFromCommunity: freezed == bannedFromCommunity
-          ? _value.bannedFromCommunity
-          : bannedFromCommunity // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      creatorIsModerator: freezed == creatorIsModerator
-          ? _value.creatorIsModerator
-          : creatorIsModerator // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      creatorIsAdmin: freezed == creatorIsAdmin
-          ? _value.creatorIsAdmin
-          : creatorIsAdmin // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      subscribed: null == subscribed
-          ? _value.subscribed
-          : subscribed // ignore: cast_nullable_to_non_nullable
-              as SubscribedType,
-      saved: null == saved
-          ? _value.saved
-          : saved // ignore: cast_nullable_to_non_nullable
-              as bool,
-      creatorBlocked: null == creatorBlocked
-          ? _value.creatorBlocked
-          : creatorBlocked // ignore: cast_nullable_to_non_nullable
-              as bool,
-      myVote: freezed == myVote
-          ? _value.myVote
-          : myVote // ignore: cast_nullable_to_non_nullable
-              as num?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            commentReply:
+                null == commentReply
+                    ? _value.commentReply
+                    : commentReply // ignore: cast_nullable_to_non_nullable
+                        as CommentReply,
+            comment:
+                null == comment
+                    ? _value.comment
+                    : comment // ignore: cast_nullable_to_non_nullable
+                        as Comment,
+            creator:
+                null == creator
+                    ? _value.creator
+                    : creator // ignore: cast_nullable_to_non_nullable
+                        as Person,
+            post:
+                null == post
+                    ? _value.post
+                    : post // ignore: cast_nullable_to_non_nullable
+                        as Post,
+            community:
+                null == community
+                    ? _value.community
+                    : community // ignore: cast_nullable_to_non_nullable
+                        as Community,
+            recipient:
+                null == recipient
+                    ? _value.recipient
+                    : recipient // ignore: cast_nullable_to_non_nullable
+                        as Person,
+            counts:
+                null == counts
+                    ? _value.counts
+                    : counts // ignore: cast_nullable_to_non_nullable
+                        as CommentAggregates,
+            creatorBannedFromCommunity:
+                null == creatorBannedFromCommunity
+                    ? _value.creatorBannedFromCommunity
+                    : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            bannedFromCommunity:
+                freezed == bannedFromCommunity
+                    ? _value.bannedFromCommunity
+                    : bannedFromCommunity // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            creatorIsModerator:
+                freezed == creatorIsModerator
+                    ? _value.creatorIsModerator
+                    : creatorIsModerator // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            creatorIsAdmin:
+                freezed == creatorIsAdmin
+                    ? _value.creatorIsAdmin
+                    : creatorIsAdmin // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            subscribed:
+                null == subscribed
+                    ? _value.subscribed
+                    : subscribed // ignore: cast_nullable_to_non_nullable
+                        as SubscribedType,
+            saved:
+                null == saved
+                    ? _value.saved
+                    : saved // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            creatorBlocked:
+                null == creatorBlocked
+                    ? _value.creatorBlocked
+                    : creatorBlocked // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            myVote:
+                freezed == myVote
+                    ? _value.myVote
+                    : myVote // ignore: cast_nullable_to_non_nullable
+                        as num?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of CommentReplyView
@@ -251,29 +261,27 @@ class _$CommentReplyViewCopyWithImpl<$Res, $Val extends CommentReplyView>
 }
 
 /// @nodoc
-abstract class _$$CommentReplyViewImplCopyWith<$Res>
-    implements $CommentReplyViewCopyWith<$Res> {
-  factory _$$CommentReplyViewImplCopyWith(_$CommentReplyViewImpl value,
-          $Res Function(_$CommentReplyViewImpl) then) =
-      __$$CommentReplyViewImplCopyWithImpl<$Res>;
+abstract class _$$CommentReplyViewImplCopyWith<$Res> implements $CommentReplyViewCopyWith<$Res> {
+  factory _$$CommentReplyViewImplCopyWith(_$CommentReplyViewImpl value, $Res Function(_$CommentReplyViewImpl) then) = __$$CommentReplyViewImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {CommentReply commentReply,
-      Comment comment,
-      Person creator,
-      Post post,
-      Community community,
-      Person recipient,
-      CommentAggregates counts,
-      bool creatorBannedFromCommunity,
-      bool? bannedFromCommunity,
-      bool? creatorIsModerator,
-      bool? creatorIsAdmin,
-      SubscribedType subscribed,
-      bool saved,
-      bool creatorBlocked,
-      num? myVote});
+  $Res call({
+    CommentReply commentReply,
+    Comment comment,
+    Person creator,
+    Post post,
+    Community community,
+    Person recipient,
+    CommentAggregates counts,
+    bool creatorBannedFromCommunity,
+    bool? bannedFromCommunity,
+    bool? creatorIsModerator,
+    bool? creatorIsAdmin,
+    SubscribedType subscribed,
+    bool saved,
+    bool creatorBlocked,
+    num? myVote,
+  });
 
   @override
   $CommentReplyCopyWith<$Res> get commentReply;
@@ -292,12 +300,8 @@ abstract class _$$CommentReplyViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CommentReplyViewImplCopyWithImpl<$Res>
-    extends _$CommentReplyViewCopyWithImpl<$Res, _$CommentReplyViewImpl>
-    implements _$$CommentReplyViewImplCopyWith<$Res> {
-  __$$CommentReplyViewImplCopyWithImpl(_$CommentReplyViewImpl _value,
-      $Res Function(_$CommentReplyViewImpl) _then)
-      : super(_value, _then);
+class __$$CommentReplyViewImplCopyWithImpl<$Res> extends _$CommentReplyViewCopyWithImpl<$Res, _$CommentReplyViewImpl> implements _$$CommentReplyViewImplCopyWith<$Res> {
+  __$$CommentReplyViewImplCopyWithImpl(_$CommentReplyViewImpl _value, $Res Function(_$CommentReplyViewImpl) _then) : super(_value, _then);
 
   /// Create a copy of CommentReplyView
   /// with the given fields replaced by the non-null parameter values.
@@ -320,68 +324,85 @@ class __$$CommentReplyViewImplCopyWithImpl<$Res>
     Object? creatorBlocked = null,
     Object? myVote = freezed,
   }) {
-    return _then(_$CommentReplyViewImpl(
-      commentReply: null == commentReply
-          ? _value.commentReply
-          : commentReply // ignore: cast_nullable_to_non_nullable
-              as CommentReply,
-      comment: null == comment
-          ? _value.comment
-          : comment // ignore: cast_nullable_to_non_nullable
-              as Comment,
-      creator: null == creator
-          ? _value.creator
-          : creator // ignore: cast_nullable_to_non_nullable
-              as Person,
-      post: null == post
-          ? _value.post
-          : post // ignore: cast_nullable_to_non_nullable
-              as Post,
-      community: null == community
-          ? _value.community
-          : community // ignore: cast_nullable_to_non_nullable
-              as Community,
-      recipient: null == recipient
-          ? _value.recipient
-          : recipient // ignore: cast_nullable_to_non_nullable
-              as Person,
-      counts: null == counts
-          ? _value.counts
-          : counts // ignore: cast_nullable_to_non_nullable
-              as CommentAggregates,
-      creatorBannedFromCommunity: null == creatorBannedFromCommunity
-          ? _value.creatorBannedFromCommunity
-          : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
-              as bool,
-      bannedFromCommunity: freezed == bannedFromCommunity
-          ? _value.bannedFromCommunity
-          : bannedFromCommunity // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      creatorIsModerator: freezed == creatorIsModerator
-          ? _value.creatorIsModerator
-          : creatorIsModerator // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      creatorIsAdmin: freezed == creatorIsAdmin
-          ? _value.creatorIsAdmin
-          : creatorIsAdmin // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      subscribed: null == subscribed
-          ? _value.subscribed
-          : subscribed // ignore: cast_nullable_to_non_nullable
-              as SubscribedType,
-      saved: null == saved
-          ? _value.saved
-          : saved // ignore: cast_nullable_to_non_nullable
-              as bool,
-      creatorBlocked: null == creatorBlocked
-          ? _value.creatorBlocked
-          : creatorBlocked // ignore: cast_nullable_to_non_nullable
-              as bool,
-      myVote: freezed == myVote
-          ? _value.myVote
-          : myVote // ignore: cast_nullable_to_non_nullable
-              as num?,
-    ));
+    return _then(
+      _$CommentReplyViewImpl(
+        commentReply:
+            null == commentReply
+                ? _value.commentReply
+                : commentReply // ignore: cast_nullable_to_non_nullable
+                    as CommentReply,
+        comment:
+            null == comment
+                ? _value.comment
+                : comment // ignore: cast_nullable_to_non_nullable
+                    as Comment,
+        creator:
+            null == creator
+                ? _value.creator
+                : creator // ignore: cast_nullable_to_non_nullable
+                    as Person,
+        post:
+            null == post
+                ? _value.post
+                : post // ignore: cast_nullable_to_non_nullable
+                    as Post,
+        community:
+            null == community
+                ? _value.community
+                : community // ignore: cast_nullable_to_non_nullable
+                    as Community,
+        recipient:
+            null == recipient
+                ? _value.recipient
+                : recipient // ignore: cast_nullable_to_non_nullable
+                    as Person,
+        counts:
+            null == counts
+                ? _value.counts
+                : counts // ignore: cast_nullable_to_non_nullable
+                    as CommentAggregates,
+        creatorBannedFromCommunity:
+            null == creatorBannedFromCommunity
+                ? _value.creatorBannedFromCommunity
+                : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        bannedFromCommunity:
+            freezed == bannedFromCommunity
+                ? _value.bannedFromCommunity
+                : bannedFromCommunity // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        creatorIsModerator:
+            freezed == creatorIsModerator
+                ? _value.creatorIsModerator
+                : creatorIsModerator // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        creatorIsAdmin:
+            freezed == creatorIsAdmin
+                ? _value.creatorIsAdmin
+                : creatorIsAdmin // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        subscribed:
+            null == subscribed
+                ? _value.subscribed
+                : subscribed // ignore: cast_nullable_to_non_nullable
+                    as SubscribedType,
+        saved:
+            null == saved
+                ? _value.saved
+                : saved // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        creatorBlocked:
+            null == creatorBlocked
+                ? _value.creatorBlocked
+                : creatorBlocked // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        myVote:
+            freezed == myVote
+                ? _value.myVote
+                : myVote // ignore: cast_nullable_to_non_nullable
+                    as num?,
+      ),
+    );
   }
 }
 
@@ -389,69 +410,68 @@ class __$$CommentReplyViewImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$CommentReplyViewImpl extends _CommentReplyView {
-  const _$CommentReplyViewImpl(
-      {required this.commentReply,
-      required this.comment,
-      required this.creator,
-      required this.post,
-      required this.community,
-      required this.recipient,
-      required this.counts,
-      required this.creatorBannedFromCommunity,
-      this.bannedFromCommunity,
-      this.creatorIsModerator,
-      this.creatorIsAdmin,
-      required this.subscribed,
-      required this.saved,
-      required this.creatorBlocked,
-      this.myVote})
-      : super._();
+  const _$CommentReplyViewImpl({
+    required this.commentReply,
+    required this.comment,
+    required this.creator,
+    required this.post,
+    required this.community,
+    required this.recipient,
+    required this.counts,
+    required this.creatorBannedFromCommunity,
+    this.bannedFromCommunity,
+    this.creatorIsModerator,
+    this.creatorIsAdmin,
+    required this.subscribed,
+    required this.saved,
+    required this.creatorBlocked,
+    this.myVote,
+  }) : super._();
 
-  factory _$CommentReplyViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CommentReplyViewImplFromJson(json);
+  factory _$CommentReplyViewImpl.fromJson(Map<String, dynamic> json) => _$$CommentReplyViewImplFromJson(json);
 
   @override
   final CommentReply commentReply;
-// v0.18.0
+  // v0.18.0
   @override
   final Comment comment;
-// v0.18.0
+  // v0.18.0
   @override
   final Person creator;
-// v0.18.0
+  // v0.18.0
   @override
   final Post post;
-// v0.18.0
+  // v0.18.0
   @override
   final Community community;
-// v0.18.0
+  // v0.18.0
   @override
   final Person recipient;
-// v0.18.0
+  // v0.18.0
   @override
   final CommentAggregates counts;
-// v0.18.0
+  // v0.18.0
   @override
   final bool creatorBannedFromCommunity;
-// v0.18.0
+  // v0.18.0
   @override
   final bool? bannedFromCommunity;
-// v0.19.4 (required)
+  // v0.19.4 (required)
   @override
   final bool? creatorIsModerator;
-// v0.19.0 (required)
+  // v0.19.0 (required)
   @override
   final bool? creatorIsAdmin;
-// v0.19.0 (required)
+  // v0.19.0 (required)
   @override
   final SubscribedType subscribed;
-// v0.18.0
+  // v0.18.0
   @override
   final bool saved;
-// v0.18.0
+  // v0.18.0
   @override
   final bool creatorBlocked;
-// v0.18.0
+  // v0.18.0
   @override
   final num? myVote;
 
@@ -465,92 +485,78 @@ class _$CommentReplyViewImpl extends _CommentReplyView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CommentReplyViewImpl &&
-            (identical(other.commentReply, commentReply) ||
-                other.commentReply == commentReply) &&
+            (identical(other.commentReply, commentReply) || other.commentReply == commentReply) &&
             (identical(other.comment, comment) || other.comment == comment) &&
             (identical(other.creator, creator) || other.creator == creator) &&
             (identical(other.post, post) || other.post == post) &&
-            (identical(other.community, community) ||
-                other.community == community) &&
-            (identical(other.recipient, recipient) ||
-                other.recipient == recipient) &&
+            (identical(other.community, community) || other.community == community) &&
+            (identical(other.recipient, recipient) || other.recipient == recipient) &&
             (identical(other.counts, counts) || other.counts == counts) &&
-            (identical(other.creatorBannedFromCommunity,
-                    creatorBannedFromCommunity) ||
-                other.creatorBannedFromCommunity ==
-                    creatorBannedFromCommunity) &&
-            (identical(other.bannedFromCommunity, bannedFromCommunity) ||
-                other.bannedFromCommunity == bannedFromCommunity) &&
-            (identical(other.creatorIsModerator, creatorIsModerator) ||
-                other.creatorIsModerator == creatorIsModerator) &&
-            (identical(other.creatorIsAdmin, creatorIsAdmin) ||
-                other.creatorIsAdmin == creatorIsAdmin) &&
-            (identical(other.subscribed, subscribed) ||
-                other.subscribed == subscribed) &&
+            (identical(other.creatorBannedFromCommunity, creatorBannedFromCommunity) || other.creatorBannedFromCommunity == creatorBannedFromCommunity) &&
+            (identical(other.bannedFromCommunity, bannedFromCommunity) || other.bannedFromCommunity == bannedFromCommunity) &&
+            (identical(other.creatorIsModerator, creatorIsModerator) || other.creatorIsModerator == creatorIsModerator) &&
+            (identical(other.creatorIsAdmin, creatorIsAdmin) || other.creatorIsAdmin == creatorIsAdmin) &&
+            (identical(other.subscribed, subscribed) || other.subscribed == subscribed) &&
             (identical(other.saved, saved) || other.saved == saved) &&
-            (identical(other.creatorBlocked, creatorBlocked) ||
-                other.creatorBlocked == creatorBlocked) &&
+            (identical(other.creatorBlocked, creatorBlocked) || other.creatorBlocked == creatorBlocked) &&
             (identical(other.myVote, myVote) || other.myVote == myVote));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      commentReply,
-      comment,
-      creator,
-      post,
-      community,
-      recipient,
-      counts,
-      creatorBannedFromCommunity,
-      bannedFromCommunity,
-      creatorIsModerator,
-      creatorIsAdmin,
-      subscribed,
-      saved,
-      creatorBlocked,
-      myVote);
+    runtimeType,
+    commentReply,
+    comment,
+    creator,
+    post,
+    community,
+    recipient,
+    counts,
+    creatorBannedFromCommunity,
+    bannedFromCommunity,
+    creatorIsModerator,
+    creatorIsAdmin,
+    subscribed,
+    saved,
+    creatorBlocked,
+    myVote,
+  );
 
   /// Create a copy of CommentReplyView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$CommentReplyViewImplCopyWith<_$CommentReplyViewImpl> get copyWith =>
-      __$$CommentReplyViewImplCopyWithImpl<_$CommentReplyViewImpl>(
-          this, _$identity);
+  _$$CommentReplyViewImplCopyWith<_$CommentReplyViewImpl> get copyWith => __$$CommentReplyViewImplCopyWithImpl<_$CommentReplyViewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CommentReplyViewImplToJson(
-      this,
-    );
+    return _$$CommentReplyViewImplToJson(this);
   }
 }
 
 abstract class _CommentReplyView extends CommentReplyView {
-  const factory _CommentReplyView(
-      {required final CommentReply commentReply,
-      required final Comment comment,
-      required final Person creator,
-      required final Post post,
-      required final Community community,
-      required final Person recipient,
-      required final CommentAggregates counts,
-      required final bool creatorBannedFromCommunity,
-      final bool? bannedFromCommunity,
-      final bool? creatorIsModerator,
-      final bool? creatorIsAdmin,
-      required final SubscribedType subscribed,
-      required final bool saved,
-      required final bool creatorBlocked,
-      final num? myVote}) = _$CommentReplyViewImpl;
+  const factory _CommentReplyView({
+    required final CommentReply commentReply,
+    required final Comment comment,
+    required final Person creator,
+    required final Post post,
+    required final Community community,
+    required final Person recipient,
+    required final CommentAggregates counts,
+    required final bool creatorBannedFromCommunity,
+    final bool? bannedFromCommunity,
+    final bool? creatorIsModerator,
+    final bool? creatorIsAdmin,
+    required final SubscribedType subscribed,
+    required final bool saved,
+    required final bool creatorBlocked,
+    final num? myVote,
+  }) = _$CommentReplyViewImpl;
   const _CommentReplyView._() : super._();
 
-  factory _CommentReplyView.fromJson(Map<String, dynamic> json) =
-      _$CommentReplyViewImpl.fromJson;
+  factory _CommentReplyView.fromJson(Map<String, dynamic> json) = _$CommentReplyViewImpl.fromJson;
 
   @override
   CommentReply get commentReply; // v0.18.0
@@ -587,6 +593,5 @@ abstract class _CommentReplyView extends CommentReplyView {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CommentReplyViewImplCopyWith<_$CommentReplyViewImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CommentReplyViewImplCopyWith<_$CommentReplyViewImpl> get copyWith => throw _privateConstructorUsedError;
 }

@@ -12,7 +12,8 @@ part of 'mod_remove_community.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ModRemoveCommunity _$ModRemoveCommunityFromJson(Map<String, dynamic> json) {
   return _ModRemoveCommunity.fromJson(json);
@@ -26,8 +27,7 @@ mixin _$ModRemoveCommunity {
   String? get reason => throw _privateConstructorUsedError; // v0.18.0
   bool get removed => throw _privateConstructorUsedError; // v0.18.0
   @deprecated
-  String? get expires =>
-      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
+  String? get expires => throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
   @JsonKey(name: 'when_')
   String get when => throw _privateConstructorUsedError;
 
@@ -37,29 +37,18 @@ mixin _$ModRemoveCommunity {
   /// Create a copy of ModRemoveCommunity
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ModRemoveCommunityCopyWith<ModRemoveCommunity> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ModRemoveCommunityCopyWith<ModRemoveCommunity> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ModRemoveCommunityCopyWith<$Res> {
-  factory $ModRemoveCommunityCopyWith(
-          ModRemoveCommunity value, $Res Function(ModRemoveCommunity) then) =
-      _$ModRemoveCommunityCopyWithImpl<$Res, ModRemoveCommunity>;
+  factory $ModRemoveCommunityCopyWith(ModRemoveCommunity value, $Res Function(ModRemoveCommunity) then) = _$ModRemoveCommunityCopyWithImpl<$Res, ModRemoveCommunity>;
   @useResult
-  $Res call(
-      {int id,
-      int modPersonId,
-      int communityId,
-      String? reason,
-      bool removed,
-      @deprecated String? expires,
-      @JsonKey(name: 'when_') String when});
+  $Res call({int id, int modPersonId, int communityId, String? reason, bool removed, @deprecated String? expires, @JsonKey(name: 'when_') String when});
 }
 
 /// @nodoc
-class _$ModRemoveCommunityCopyWithImpl<$Res, $Val extends ModRemoveCommunity>
-    implements $ModRemoveCommunityCopyWith<$Res> {
+class _$ModRemoveCommunityCopyWithImpl<$Res, $Val extends ModRemoveCommunity> implements $ModRemoveCommunityCopyWith<$Res> {
   _$ModRemoveCommunityCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -71,117 +60,106 @@ class _$ModRemoveCommunityCopyWithImpl<$Res, $Val extends ModRemoveCommunity>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? modPersonId = null,
-    Object? communityId = null,
-    Object? reason = freezed,
-    Object? removed = null,
-    Object? expires = freezed,
-    Object? when = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      modPersonId: null == modPersonId
-          ? _value.modPersonId
-          : modPersonId // ignore: cast_nullable_to_non_nullable
-              as int,
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      reason: freezed == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      removed: null == removed
-          ? _value.removed
-          : removed // ignore: cast_nullable_to_non_nullable
-              as bool,
-      expires: freezed == expires
-          ? _value.expires
-          : expires // ignore: cast_nullable_to_non_nullable
-              as String?,
-      when: null == when
-          ? _value.when
-          : when // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? id = null, Object? modPersonId = null, Object? communityId = null, Object? reason = freezed, Object? removed = null, Object? expires = freezed, Object? when = null}) {
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as int,
+            modPersonId:
+                null == modPersonId
+                    ? _value.modPersonId
+                    : modPersonId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            communityId:
+                null == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            reason:
+                freezed == reason
+                    ? _value.reason
+                    : reason // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            removed:
+                null == removed
+                    ? _value.removed
+                    : removed // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            expires:
+                freezed == expires
+                    ? _value.expires
+                    : expires // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            when:
+                null == when
+                    ? _value.when
+                    : when // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$ModRemoveCommunityImplCopyWith<$Res>
-    implements $ModRemoveCommunityCopyWith<$Res> {
-  factory _$$ModRemoveCommunityImplCopyWith(_$ModRemoveCommunityImpl value,
-          $Res Function(_$ModRemoveCommunityImpl) then) =
-      __$$ModRemoveCommunityImplCopyWithImpl<$Res>;
+abstract class _$$ModRemoveCommunityImplCopyWith<$Res> implements $ModRemoveCommunityCopyWith<$Res> {
+  factory _$$ModRemoveCommunityImplCopyWith(_$ModRemoveCommunityImpl value, $Res Function(_$ModRemoveCommunityImpl) then) = __$$ModRemoveCommunityImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int id,
-      int modPersonId,
-      int communityId,
-      String? reason,
-      bool removed,
-      @deprecated String? expires,
-      @JsonKey(name: 'when_') String when});
+  $Res call({int id, int modPersonId, int communityId, String? reason, bool removed, @deprecated String? expires, @JsonKey(name: 'when_') String when});
 }
 
 /// @nodoc
-class __$$ModRemoveCommunityImplCopyWithImpl<$Res>
-    extends _$ModRemoveCommunityCopyWithImpl<$Res, _$ModRemoveCommunityImpl>
-    implements _$$ModRemoveCommunityImplCopyWith<$Res> {
-  __$$ModRemoveCommunityImplCopyWithImpl(_$ModRemoveCommunityImpl _value,
-      $Res Function(_$ModRemoveCommunityImpl) _then)
-      : super(_value, _then);
+class __$$ModRemoveCommunityImplCopyWithImpl<$Res> extends _$ModRemoveCommunityCopyWithImpl<$Res, _$ModRemoveCommunityImpl> implements _$$ModRemoveCommunityImplCopyWith<$Res> {
+  __$$ModRemoveCommunityImplCopyWithImpl(_$ModRemoveCommunityImpl _value, $Res Function(_$ModRemoveCommunityImpl) _then) : super(_value, _then);
 
   /// Create a copy of ModRemoveCommunity
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? modPersonId = null,
-    Object? communityId = null,
-    Object? reason = freezed,
-    Object? removed = null,
-    Object? expires = freezed,
-    Object? when = null,
-  }) {
-    return _then(_$ModRemoveCommunityImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      modPersonId: null == modPersonId
-          ? _value.modPersonId
-          : modPersonId // ignore: cast_nullable_to_non_nullable
-              as int,
-      communityId: null == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int,
-      reason: freezed == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      removed: null == removed
-          ? _value.removed
-          : removed // ignore: cast_nullable_to_non_nullable
-              as bool,
-      expires: freezed == expires
-          ? _value.expires
-          : expires // ignore: cast_nullable_to_non_nullable
-              as String?,
-      when: null == when
-          ? _value.when
-          : when // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? id = null, Object? modPersonId = null, Object? communityId = null, Object? reason = freezed, Object? removed = null, Object? expires = freezed, Object? when = null}) {
+    return _then(
+      _$ModRemoveCommunityImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as int,
+        modPersonId:
+            null == modPersonId
+                ? _value.modPersonId
+                : modPersonId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        communityId:
+            null == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        reason:
+            freezed == reason
+                ? _value.reason
+                : reason // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        removed:
+            null == removed
+                ? _value.removed
+                : removed // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        expires:
+            freezed == expires
+                ? _value.expires
+                : expires // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        when:
+            null == when
+                ? _value.when
+                : when // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -189,38 +167,37 @@ class __$$ModRemoveCommunityImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$ModRemoveCommunityImpl extends _ModRemoveCommunity {
-  const _$ModRemoveCommunityImpl(
-      {required this.id,
-      required this.modPersonId,
-      required this.communityId,
-      this.reason,
-      required this.removed,
-      @deprecated this.expires,
-      @JsonKey(name: 'when_') required this.when})
-      : super._();
+  const _$ModRemoveCommunityImpl({
+    required this.id,
+    required this.modPersonId,
+    required this.communityId,
+    this.reason,
+    required this.removed,
+    @deprecated this.expires,
+    @JsonKey(name: 'when_') required this.when,
+  }) : super._();
 
-  factory _$ModRemoveCommunityImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ModRemoveCommunityImplFromJson(json);
+  factory _$ModRemoveCommunityImpl.fromJson(Map<String, dynamic> json) => _$$ModRemoveCommunityImplFromJson(json);
 
   @override
   final int id;
-// v0.18.0
+  // v0.18.0
   @override
   final int modPersonId;
-// v0.18.0
+  // v0.18.0
   @override
   final int communityId;
-// v0.18.0
+  // v0.18.0
   @override
   final String? reason;
-// v0.18.0
+  // v0.18.0
   @override
   final bool removed;
-// v0.18.0
+  // v0.18.0
   @override
   @deprecated
   final String? expires;
-// v0.18.0 [deprecated in v0.19.0]
+  // v0.18.0 [deprecated in v0.19.0]
   @override
   @JsonKey(name: 'when_')
   final String when;
@@ -236,10 +213,8 @@ class _$ModRemoveCommunityImpl extends _ModRemoveCommunity {
         (other.runtimeType == runtimeType &&
             other is _$ModRemoveCommunityImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.modPersonId, modPersonId) ||
-                other.modPersonId == modPersonId) &&
-            (identical(other.communityId, communityId) ||
-                other.communityId == communityId) &&
+            (identical(other.modPersonId, modPersonId) || other.modPersonId == modPersonId) &&
+            (identical(other.communityId, communityId) || other.communityId == communityId) &&
             (identical(other.reason, reason) || other.reason == reason) &&
             (identical(other.removed, removed) || other.removed == removed) &&
             (identical(other.expires, expires) || other.expires == expires) &&
@@ -248,40 +223,34 @@ class _$ModRemoveCommunityImpl extends _ModRemoveCommunity {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, modPersonId, communityId,
-      reason, removed, expires, when);
+  int get hashCode => Object.hash(runtimeType, id, modPersonId, communityId, reason, removed, expires, when);
 
   /// Create a copy of ModRemoveCommunity
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ModRemoveCommunityImplCopyWith<_$ModRemoveCommunityImpl> get copyWith =>
-      __$$ModRemoveCommunityImplCopyWithImpl<_$ModRemoveCommunityImpl>(
-          this, _$identity);
+  _$$ModRemoveCommunityImplCopyWith<_$ModRemoveCommunityImpl> get copyWith => __$$ModRemoveCommunityImplCopyWithImpl<_$ModRemoveCommunityImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ModRemoveCommunityImplToJson(
-      this,
-    );
+    return _$$ModRemoveCommunityImplToJson(this);
   }
 }
 
 abstract class _ModRemoveCommunity extends ModRemoveCommunity {
-  const factory _ModRemoveCommunity(
-          {required final int id,
-          required final int modPersonId,
-          required final int communityId,
-          final String? reason,
-          required final bool removed,
-          @deprecated final String? expires,
-          @JsonKey(name: 'when_') required final String when}) =
-      _$ModRemoveCommunityImpl;
+  const factory _ModRemoveCommunity({
+    required final int id,
+    required final int modPersonId,
+    required final int communityId,
+    final String? reason,
+    required final bool removed,
+    @deprecated final String? expires,
+    @JsonKey(name: 'when_') required final String when,
+  }) = _$ModRemoveCommunityImpl;
   const _ModRemoveCommunity._() : super._();
 
-  factory _ModRemoveCommunity.fromJson(Map<String, dynamic> json) =
-      _$ModRemoveCommunityImpl.fromJson;
+  factory _ModRemoveCommunity.fromJson(Map<String, dynamic> json) = _$ModRemoveCommunityImpl.fromJson;
 
   @override
   int get id; // v0.18.0
@@ -304,6 +273,5 @@ abstract class _ModRemoveCommunity extends ModRemoveCommunity {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ModRemoveCommunityImplCopyWith<_$ModRemoveCommunityImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ModRemoveCommunityImplCopyWith<_$ModRemoveCommunityImpl> get copyWith => throw _privateConstructorUsedError;
 }

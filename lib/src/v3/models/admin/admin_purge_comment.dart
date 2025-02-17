@@ -17,6 +17,5 @@ class AdminPurgeComment with _$AdminPurgeComment {
   }) = _AdminPurgeComment;
 
   const AdminPurgeComment._();
-  factory AdminPurgeComment.fromJson(Map<String, dynamic> json) =>
-      _$AdminPurgeCommentFromJson(json);
+  factory AdminPurgeComment.fromJson(Map<String, dynamic> json) => _$AdminPurgeCommentFromJson(json);
 }

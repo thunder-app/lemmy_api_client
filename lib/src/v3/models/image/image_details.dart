@@ -16,6 +16,5 @@ class ImageDetails with _$ImageDetails {
   }) = _ImageDetails;
 
   const ImageDetails._();
-  factory ImageDetails.fromJson(Map<String, dynamic> json) =>
-      _$ImageDetailsFromJson(json);
+  factory ImageDetails.fromJson(Map<String, dynamic> json) => _$ImageDetailsFromJson(json);
 }

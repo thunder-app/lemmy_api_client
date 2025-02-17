@@ -17,6 +17,5 @@ class ModRemovePostView with _$ModRemovePostView {
   }) = _ModRemovePostView;
 
   const ModRemovePostView._();
-  factory ModRemovePostView.fromJson(Map<String, dynamic> json) =>
-      _$ModRemovePostViewFromJson(json);
+  factory ModRemovePostView.fromJson(Map<String, dynamic> json) => _$ModRemovePostViewFromJson(json);
 }
