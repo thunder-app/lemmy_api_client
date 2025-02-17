@@ -24,4 +24,4 @@ jobs:
         run: dart format --set-exit-if-changed --output none .
 
       - name: Run lints
-        run: dart analyze --no-fatal-infos --no-fatal-warning
+        run: dart analyze --no-fatal-warnings
