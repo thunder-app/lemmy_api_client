@@ -15,6 +15,5 @@ class CommunityBlockView with _$CommunityBlockView {
   }) = _CommunityBlockView;
 
   const CommunityBlockView._();
-  factory CommunityBlockView.fromJson(Map<String, dynamic> json) =>
-      _$CommunityBlockViewFromJson(json);
+  factory CommunityBlockView.fromJson(Map<String, dynamic> json) => _$CommunityBlockViewFromJson(json);
 }

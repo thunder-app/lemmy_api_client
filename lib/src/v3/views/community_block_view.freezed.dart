@@ -12,7 +12,8 @@ part of 'community_block_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 CommunityBlockView _$CommunityBlockViewFromJson(Map<String, dynamic> json) {
   return _CommunityBlockView.fromJson(json);
@@ -29,15 +30,12 @@ mixin _$CommunityBlockView {
   /// Create a copy of CommunityBlockView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $CommunityBlockViewCopyWith<CommunityBlockView> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CommunityBlockViewCopyWith<CommunityBlockView> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CommunityBlockViewCopyWith<$Res> {
-  factory $CommunityBlockViewCopyWith(
-          CommunityBlockView value, $Res Function(CommunityBlockView) then) =
-      _$CommunityBlockViewCopyWithImpl<$Res, CommunityBlockView>;
+  factory $CommunityBlockViewCopyWith(CommunityBlockView value, $Res Function(CommunityBlockView) then) = _$CommunityBlockViewCopyWithImpl<$Res, CommunityBlockView>;
   @useResult
   $Res call({Person person, Community community});
 
@@ -46,8 +44,7 @@ abstract class $CommunityBlockViewCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CommunityBlockViewCopyWithImpl<$Res, $Val extends CommunityBlockView>
-    implements $CommunityBlockViewCopyWith<$Res> {
+class _$CommunityBlockViewCopyWithImpl<$Res, $Val extends CommunityBlockView> implements $CommunityBlockViewCopyWith<$Res> {
   _$CommunityBlockViewCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -59,20 +56,22 @@ class _$CommunityBlockViewCopyWithImpl<$Res, $Val extends CommunityBlockView>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? person = null,
-    Object? community = null,
-  }) {
-    return _then(_value.copyWith(
-      person: null == person
-          ? _value.person
-          : person // ignore: cast_nullable_to_non_nullable
-              as Person,
-      community: null == community
-          ? _value.community
-          : community // ignore: cast_nullable_to_non_nullable
-              as Community,
-    ) as $Val);
+  $Res call({Object? person = null, Object? community = null}) {
+    return _then(
+      _value.copyWith(
+            person:
+                null == person
+                    ? _value.person
+                    : person // ignore: cast_nullable_to_non_nullable
+                        as Person,
+            community:
+                null == community
+                    ? _value.community
+                    : community // ignore: cast_nullable_to_non_nullable
+                        as Community,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of CommunityBlockView
@@ -97,11 +96,8 @@ class _$CommunityBlockViewCopyWithImpl<$Res, $Val extends CommunityBlockView>
 }
 
 /// @nodoc
-abstract class _$$CommunityBlockViewImplCopyWith<$Res>
-    implements $CommunityBlockViewCopyWith<$Res> {
-  factory _$$CommunityBlockViewImplCopyWith(_$CommunityBlockViewImpl value,
-          $Res Function(_$CommunityBlockViewImpl) then) =
-      __$$CommunityBlockViewImplCopyWithImpl<$Res>;
+abstract class _$$CommunityBlockViewImplCopyWith<$Res> implements $CommunityBlockViewCopyWith<$Res> {
+  factory _$$CommunityBlockViewImplCopyWith(_$CommunityBlockViewImpl value, $Res Function(_$CommunityBlockViewImpl) then) = __$$CommunityBlockViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Person person, Community community});
@@ -113,31 +109,28 @@ abstract class _$$CommunityBlockViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CommunityBlockViewImplCopyWithImpl<$Res>
-    extends _$CommunityBlockViewCopyWithImpl<$Res, _$CommunityBlockViewImpl>
-    implements _$$CommunityBlockViewImplCopyWith<$Res> {
-  __$$CommunityBlockViewImplCopyWithImpl(_$CommunityBlockViewImpl _value,
-      $Res Function(_$CommunityBlockViewImpl) _then)
-      : super(_value, _then);
+class __$$CommunityBlockViewImplCopyWithImpl<$Res> extends _$CommunityBlockViewCopyWithImpl<$Res, _$CommunityBlockViewImpl> implements _$$CommunityBlockViewImplCopyWith<$Res> {
+  __$$CommunityBlockViewImplCopyWithImpl(_$CommunityBlockViewImpl _value, $Res Function(_$CommunityBlockViewImpl) _then) : super(_value, _then);
 
   /// Create a copy of CommunityBlockView
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? person = null,
-    Object? community = null,
-  }) {
-    return _then(_$CommunityBlockViewImpl(
-      person: null == person
-          ? _value.person
-          : person // ignore: cast_nullable_to_non_nullable
-              as Person,
-      community: null == community
-          ? _value.community
-          : community // ignore: cast_nullable_to_non_nullable
-              as Community,
-    ));
+  $Res call({Object? person = null, Object? community = null}) {
+    return _then(
+      _$CommunityBlockViewImpl(
+        person:
+            null == person
+                ? _value.person
+                : person // ignore: cast_nullable_to_non_nullable
+                    as Person,
+        community:
+            null == community
+                ? _value.community
+                : community // ignore: cast_nullable_to_non_nullable
+                    as Community,
+      ),
+    );
   }
 }
 
@@ -145,16 +138,13 @@ class __$$CommunityBlockViewImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$CommunityBlockViewImpl extends _CommunityBlockView {
-  const _$CommunityBlockViewImpl(
-      {required this.person, required this.community})
-      : super._();
+  const _$CommunityBlockViewImpl({required this.person, required this.community}) : super._();
 
-  factory _$CommunityBlockViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CommunityBlockViewImplFromJson(json);
+  factory _$CommunityBlockViewImpl.fromJson(Map<String, dynamic> json) => _$$CommunityBlockViewImplFromJson(json);
 
   @override
   final Person person;
-// v0.18.0
+  // v0.18.0
   @override
   final Community community;
 
@@ -169,8 +159,7 @@ class _$CommunityBlockViewImpl extends _CommunityBlockView {
         (other.runtimeType == runtimeType &&
             other is _$CommunityBlockViewImpl &&
             (identical(other.person, person) || other.person == person) &&
-            (identical(other.community, community) ||
-                other.community == community));
+            (identical(other.community, community) || other.community == community));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -182,26 +171,19 @@ class _$CommunityBlockViewImpl extends _CommunityBlockView {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$CommunityBlockViewImplCopyWith<_$CommunityBlockViewImpl> get copyWith =>
-      __$$CommunityBlockViewImplCopyWithImpl<_$CommunityBlockViewImpl>(
-          this, _$identity);
+  _$$CommunityBlockViewImplCopyWith<_$CommunityBlockViewImpl> get copyWith => __$$CommunityBlockViewImplCopyWithImpl<_$CommunityBlockViewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CommunityBlockViewImplToJson(
-      this,
-    );
+    return _$$CommunityBlockViewImplToJson(this);
   }
 }
 
 abstract class _CommunityBlockView extends CommunityBlockView {
-  const factory _CommunityBlockView(
-      {required final Person person,
-      required final Community community}) = _$CommunityBlockViewImpl;
+  const factory _CommunityBlockView({required final Person person, required final Community community}) = _$CommunityBlockViewImpl;
   const _CommunityBlockView._() : super._();
 
-  factory _CommunityBlockView.fromJson(Map<String, dynamic> json) =
-      _$CommunityBlockViewImpl.fromJson;
+  factory _CommunityBlockView.fromJson(Map<String, dynamic> json) = _$CommunityBlockViewImpl.fromJson;
 
   @override
   Person get person; // v0.18.0
@@ -212,6 +194,5 @@ abstract class _CommunityBlockView extends CommunityBlockView {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CommunityBlockViewImplCopyWith<_$CommunityBlockViewImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CommunityBlockViewImplCopyWith<_$CommunityBlockViewImpl> get copyWith => throw _privateConstructorUsedError;
 }

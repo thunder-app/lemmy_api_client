@@ -12,19 +12,17 @@ part of 'registration_application_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
-RegistrationApplicationView _$RegistrationApplicationViewFromJson(
-    Map<String, dynamic> json) {
+RegistrationApplicationView _$RegistrationApplicationViewFromJson(Map<String, dynamic> json) {
   return _RegistrationApplicationView.fromJson(json);
 }
 
 /// @nodoc
 mixin _$RegistrationApplicationView {
-  RegistrationApplication get registrationApplication =>
-      throw _privateConstructorUsedError; // v0.18.0
-  LocalUser get creatorLocalUser =>
-      throw _privateConstructorUsedError; // v0.18.0
+  RegistrationApplication get registrationApplication => throw _privateConstructorUsedError; // v0.18.0
+  LocalUser get creatorLocalUser => throw _privateConstructorUsedError; // v0.18.0
   Person get creator => throw _privateConstructorUsedError; // v0.18.0
   Person? get admin => throw _privateConstructorUsedError;
 
@@ -34,23 +32,15 @@ mixin _$RegistrationApplicationView {
   /// Create a copy of RegistrationApplicationView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $RegistrationApplicationViewCopyWith<RegistrationApplicationView>
-      get copyWith => throw _privateConstructorUsedError;
+  $RegistrationApplicationViewCopyWith<RegistrationApplicationView> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $RegistrationApplicationViewCopyWith<$Res> {
-  factory $RegistrationApplicationViewCopyWith(
-          RegistrationApplicationView value,
-          $Res Function(RegistrationApplicationView) then) =
-      _$RegistrationApplicationViewCopyWithImpl<$Res,
-          RegistrationApplicationView>;
+  factory $RegistrationApplicationViewCopyWith(RegistrationApplicationView value, $Res Function(RegistrationApplicationView) then) =
+      _$RegistrationApplicationViewCopyWithImpl<$Res, RegistrationApplicationView>;
   @useResult
-  $Res call(
-      {RegistrationApplication registrationApplication,
-      LocalUser creatorLocalUser,
-      Person creator,
-      Person? admin});
+  $Res call({RegistrationApplication registrationApplication, LocalUser creatorLocalUser, Person creator, Person? admin});
 
   $RegistrationApplicationCopyWith<$Res> get registrationApplication;
   $LocalUserCopyWith<$Res> get creatorLocalUser;
@@ -59,9 +49,7 @@ abstract class $RegistrationApplicationViewCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$RegistrationApplicationViewCopyWithImpl<$Res,
-        $Val extends RegistrationApplicationView>
-    implements $RegistrationApplicationViewCopyWith<$Res> {
+class _$RegistrationApplicationViewCopyWithImpl<$Res, $Val extends RegistrationApplicationView> implements $RegistrationApplicationViewCopyWith<$Res> {
   _$RegistrationApplicationViewCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -73,30 +61,32 @@ class _$RegistrationApplicationViewCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? registrationApplication = null,
-    Object? creatorLocalUser = null,
-    Object? creator = null,
-    Object? admin = freezed,
-  }) {
-    return _then(_value.copyWith(
-      registrationApplication: null == registrationApplication
-          ? _value.registrationApplication
-          : registrationApplication // ignore: cast_nullable_to_non_nullable
-              as RegistrationApplication,
-      creatorLocalUser: null == creatorLocalUser
-          ? _value.creatorLocalUser
-          : creatorLocalUser // ignore: cast_nullable_to_non_nullable
-              as LocalUser,
-      creator: null == creator
-          ? _value.creator
-          : creator // ignore: cast_nullable_to_non_nullable
-              as Person,
-      admin: freezed == admin
-          ? _value.admin
-          : admin // ignore: cast_nullable_to_non_nullable
-              as Person?,
-    ) as $Val);
+  $Res call({Object? registrationApplication = null, Object? creatorLocalUser = null, Object? creator = null, Object? admin = freezed}) {
+    return _then(
+      _value.copyWith(
+            registrationApplication:
+                null == registrationApplication
+                    ? _value.registrationApplication
+                    : registrationApplication // ignore: cast_nullable_to_non_nullable
+                        as RegistrationApplication,
+            creatorLocalUser:
+                null == creatorLocalUser
+                    ? _value.creatorLocalUser
+                    : creatorLocalUser // ignore: cast_nullable_to_non_nullable
+                        as LocalUser,
+            creator:
+                null == creator
+                    ? _value.creator
+                    : creator // ignore: cast_nullable_to_non_nullable
+                        as Person,
+            admin:
+                freezed == admin
+                    ? _value.admin
+                    : admin // ignore: cast_nullable_to_non_nullable
+                        as Person?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of RegistrationApplicationView
@@ -104,8 +94,7 @@ class _$RegistrationApplicationViewCopyWithImpl<$Res,
   @override
   @pragma('vm:prefer-inline')
   $RegistrationApplicationCopyWith<$Res> get registrationApplication {
-    return $RegistrationApplicationCopyWith<$Res>(
-        _value.registrationApplication, (value) {
+    return $RegistrationApplicationCopyWith<$Res>(_value.registrationApplication, (value) {
       return _then(_value.copyWith(registrationApplication: value) as $Val);
     });
   }
@@ -146,19 +135,12 @@ class _$RegistrationApplicationViewCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$RegistrationApplicationViewImplCopyWith<$Res>
-    implements $RegistrationApplicationViewCopyWith<$Res> {
-  factory _$$RegistrationApplicationViewImplCopyWith(
-          _$RegistrationApplicationViewImpl value,
-          $Res Function(_$RegistrationApplicationViewImpl) then) =
+abstract class _$$RegistrationApplicationViewImplCopyWith<$Res> implements $RegistrationApplicationViewCopyWith<$Res> {
+  factory _$$RegistrationApplicationViewImplCopyWith(_$RegistrationApplicationViewImpl value, $Res Function(_$RegistrationApplicationViewImpl) then) =
       __$$RegistrationApplicationViewImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {RegistrationApplication registrationApplication,
-      LocalUser creatorLocalUser,
-      Person creator,
-      Person? admin});
+  $Res call({RegistrationApplication registrationApplication, LocalUser creatorLocalUser, Person creator, Person? admin});
 
   @override
   $RegistrationApplicationCopyWith<$Res> get registrationApplication;
@@ -171,43 +153,39 @@ abstract class _$$RegistrationApplicationViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$RegistrationApplicationViewImplCopyWithImpl<$Res>
-    extends _$RegistrationApplicationViewCopyWithImpl<$Res,
-        _$RegistrationApplicationViewImpl>
+class __$$RegistrationApplicationViewImplCopyWithImpl<$Res> extends _$RegistrationApplicationViewCopyWithImpl<$Res, _$RegistrationApplicationViewImpl>
     implements _$$RegistrationApplicationViewImplCopyWith<$Res> {
-  __$$RegistrationApplicationViewImplCopyWithImpl(
-      _$RegistrationApplicationViewImpl _value,
-      $Res Function(_$RegistrationApplicationViewImpl) _then)
-      : super(_value, _then);
+  __$$RegistrationApplicationViewImplCopyWithImpl(_$RegistrationApplicationViewImpl _value, $Res Function(_$RegistrationApplicationViewImpl) _then) : super(_value, _then);
 
   /// Create a copy of RegistrationApplicationView
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? registrationApplication = null,
-    Object? creatorLocalUser = null,
-    Object? creator = null,
-    Object? admin = freezed,
-  }) {
-    return _then(_$RegistrationApplicationViewImpl(
-      registrationApplication: null == registrationApplication
-          ? _value.registrationApplication
-          : registrationApplication // ignore: cast_nullable_to_non_nullable
-              as RegistrationApplication,
-      creatorLocalUser: null == creatorLocalUser
-          ? _value.creatorLocalUser
-          : creatorLocalUser // ignore: cast_nullable_to_non_nullable
-              as LocalUser,
-      creator: null == creator
-          ? _value.creator
-          : creator // ignore: cast_nullable_to_non_nullable
-              as Person,
-      admin: freezed == admin
-          ? _value.admin
-          : admin // ignore: cast_nullable_to_non_nullable
-              as Person?,
-    ));
+  $Res call({Object? registrationApplication = null, Object? creatorLocalUser = null, Object? creator = null, Object? admin = freezed}) {
+    return _then(
+      _$RegistrationApplicationViewImpl(
+        registrationApplication:
+            null == registrationApplication
+                ? _value.registrationApplication
+                : registrationApplication // ignore: cast_nullable_to_non_nullable
+                    as RegistrationApplication,
+        creatorLocalUser:
+            null == creatorLocalUser
+                ? _value.creatorLocalUser
+                : creatorLocalUser // ignore: cast_nullable_to_non_nullable
+                    as LocalUser,
+        creator:
+            null == creator
+                ? _value.creator
+                : creator // ignore: cast_nullable_to_non_nullable
+                    as Person,
+        admin:
+            freezed == admin
+                ? _value.admin
+                : admin // ignore: cast_nullable_to_non_nullable
+                    as Person?,
+      ),
+    );
   }
 }
 
@@ -215,26 +193,19 @@ class __$$RegistrationApplicationViewImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$RegistrationApplicationViewImpl extends _RegistrationApplicationView {
-  const _$RegistrationApplicationViewImpl(
-      {required this.registrationApplication,
-      required this.creatorLocalUser,
-      required this.creator,
-      this.admin})
-      : super._();
+  const _$RegistrationApplicationViewImpl({required this.registrationApplication, required this.creatorLocalUser, required this.creator, this.admin}) : super._();
 
-  factory _$RegistrationApplicationViewImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$RegistrationApplicationViewImplFromJson(json);
+  factory _$RegistrationApplicationViewImpl.fromJson(Map<String, dynamic> json) => _$$RegistrationApplicationViewImplFromJson(json);
 
   @override
   final RegistrationApplication registrationApplication;
-// v0.18.0
+  // v0.18.0
   @override
   final LocalUser creatorLocalUser;
-// v0.18.0
+  // v0.18.0
   @override
   final Person creator;
-// v0.18.0
+  // v0.18.0
   @override
   final Person? admin;
 
@@ -248,48 +219,39 @@ class _$RegistrationApplicationViewImpl extends _RegistrationApplicationView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RegistrationApplicationViewImpl &&
-            (identical(
-                    other.registrationApplication, registrationApplication) ||
-                other.registrationApplication == registrationApplication) &&
-            (identical(other.creatorLocalUser, creatorLocalUser) ||
-                other.creatorLocalUser == creatorLocalUser) &&
+            (identical(other.registrationApplication, registrationApplication) || other.registrationApplication == registrationApplication) &&
+            (identical(other.creatorLocalUser, creatorLocalUser) || other.creatorLocalUser == creatorLocalUser) &&
             (identical(other.creator, creator) || other.creator == creator) &&
             (identical(other.admin, admin) || other.admin == admin));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, registrationApplication, creatorLocalUser, creator, admin);
+  int get hashCode => Object.hash(runtimeType, registrationApplication, creatorLocalUser, creator, admin);
 
   /// Create a copy of RegistrationApplicationView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$RegistrationApplicationViewImplCopyWith<_$RegistrationApplicationViewImpl>
-      get copyWith => __$$RegistrationApplicationViewImplCopyWithImpl<
-          _$RegistrationApplicationViewImpl>(this, _$identity);
+  _$$RegistrationApplicationViewImplCopyWith<_$RegistrationApplicationViewImpl> get copyWith => __$$RegistrationApplicationViewImplCopyWithImpl<_$RegistrationApplicationViewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RegistrationApplicationViewImplToJson(
-      this,
-    );
+    return _$$RegistrationApplicationViewImplToJson(this);
   }
 }
 
-abstract class _RegistrationApplicationView
-    extends RegistrationApplicationView {
-  const factory _RegistrationApplicationView(
-      {required final RegistrationApplication registrationApplication,
-      required final LocalUser creatorLocalUser,
-      required final Person creator,
-      final Person? admin}) = _$RegistrationApplicationViewImpl;
+abstract class _RegistrationApplicationView extends RegistrationApplicationView {
+  const factory _RegistrationApplicationView({
+    required final RegistrationApplication registrationApplication,
+    required final LocalUser creatorLocalUser,
+    required final Person creator,
+    final Person? admin,
+  }) = _$RegistrationApplicationViewImpl;
   const _RegistrationApplicationView._() : super._();
 
-  factory _RegistrationApplicationView.fromJson(Map<String, dynamic> json) =
-      _$RegistrationApplicationViewImpl.fromJson;
+  factory _RegistrationApplicationView.fromJson(Map<String, dynamic> json) = _$RegistrationApplicationViewImpl.fromJson;
 
   @override
   RegistrationApplication get registrationApplication; // v0.18.0
@@ -304,6 +266,5 @@ abstract class _RegistrationApplicationView
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RegistrationApplicationViewImplCopyWith<_$RegistrationApplicationViewImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$RegistrationApplicationViewImplCopyWith<_$RegistrationApplicationViewImpl> get copyWith => throw _privateConstructorUsedError;
 }

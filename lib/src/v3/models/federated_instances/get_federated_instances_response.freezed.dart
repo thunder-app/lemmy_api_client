@@ -12,17 +12,16 @@ part of 'get_federated_instances_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
-GetFederatedInstancesResponse _$GetFederatedInstancesResponseFromJson(
-    Map<String, dynamic> json) {
+GetFederatedInstancesResponse _$GetFederatedInstancesResponseFromJson(Map<String, dynamic> json) {
   return _GetFederatedInstancesResponse.fromJson(json);
 }
 
 /// @nodoc
 mixin _$GetFederatedInstancesResponse {
-  FederatedInstances? get federatedInstances =>
-      throw _privateConstructorUsedError;
+  FederatedInstances? get federatedInstances => throw _privateConstructorUsedError;
 
   /// Serializes this GetFederatedInstancesResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -30,17 +29,13 @@ mixin _$GetFederatedInstancesResponse {
   /// Create a copy of GetFederatedInstancesResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $GetFederatedInstancesResponseCopyWith<GetFederatedInstancesResponse>
-      get copyWith => throw _privateConstructorUsedError;
+  $GetFederatedInstancesResponseCopyWith<GetFederatedInstancesResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GetFederatedInstancesResponseCopyWith<$Res> {
-  factory $GetFederatedInstancesResponseCopyWith(
-          GetFederatedInstancesResponse value,
-          $Res Function(GetFederatedInstancesResponse) then) =
-      _$GetFederatedInstancesResponseCopyWithImpl<$Res,
-          GetFederatedInstancesResponse>;
+  factory $GetFederatedInstancesResponseCopyWith(GetFederatedInstancesResponse value, $Res Function(GetFederatedInstancesResponse) then) =
+      _$GetFederatedInstancesResponseCopyWithImpl<$Res, GetFederatedInstancesResponse>;
   @useResult
   $Res call({FederatedInstances? federatedInstances});
 
@@ -48,9 +43,7 @@ abstract class $GetFederatedInstancesResponseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$GetFederatedInstancesResponseCopyWithImpl<$Res,
-        $Val extends GetFederatedInstancesResponse>
-    implements $GetFederatedInstancesResponseCopyWith<$Res> {
+class _$GetFederatedInstancesResponseCopyWithImpl<$Res, $Val extends GetFederatedInstancesResponse> implements $GetFederatedInstancesResponseCopyWith<$Res> {
   _$GetFederatedInstancesResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -62,15 +55,17 @@ class _$GetFederatedInstancesResponseCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? federatedInstances = freezed,
-  }) {
-    return _then(_value.copyWith(
-      federatedInstances: freezed == federatedInstances
-          ? _value.federatedInstances
-          : federatedInstances // ignore: cast_nullable_to_non_nullable
-              as FederatedInstances?,
-    ) as $Val);
+  $Res call({Object? federatedInstances = freezed}) {
+    return _then(
+      _value.copyWith(
+            federatedInstances:
+                freezed == federatedInstances
+                    ? _value.federatedInstances
+                    : federatedInstances // ignore: cast_nullable_to_non_nullable
+                        as FederatedInstances?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of GetFederatedInstancesResponse
@@ -82,19 +77,15 @@ class _$GetFederatedInstancesResponseCopyWithImpl<$Res,
       return null;
     }
 
-    return $FederatedInstancesCopyWith<$Res>(_value.federatedInstances!,
-        (value) {
+    return $FederatedInstancesCopyWith<$Res>(_value.federatedInstances!, (value) {
       return _then(_value.copyWith(federatedInstances: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$GetFederatedInstancesResponseImplCopyWith<$Res>
-    implements $GetFederatedInstancesResponseCopyWith<$Res> {
-  factory _$$GetFederatedInstancesResponseImplCopyWith(
-          _$GetFederatedInstancesResponseImpl value,
-          $Res Function(_$GetFederatedInstancesResponseImpl) then) =
+abstract class _$$GetFederatedInstancesResponseImplCopyWith<$Res> implements $GetFederatedInstancesResponseCopyWith<$Res> {
+  factory _$$GetFederatedInstancesResponseImplCopyWith(_$GetFederatedInstancesResponseImpl value, $Res Function(_$GetFederatedInstancesResponseImpl) then) =
       __$$GetFederatedInstancesResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -105,42 +96,34 @@ abstract class _$$GetFederatedInstancesResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$GetFederatedInstancesResponseImplCopyWithImpl<$Res>
-    extends _$GetFederatedInstancesResponseCopyWithImpl<$Res,
-        _$GetFederatedInstancesResponseImpl>
+class __$$GetFederatedInstancesResponseImplCopyWithImpl<$Res> extends _$GetFederatedInstancesResponseCopyWithImpl<$Res, _$GetFederatedInstancesResponseImpl>
     implements _$$GetFederatedInstancesResponseImplCopyWith<$Res> {
-  __$$GetFederatedInstancesResponseImplCopyWithImpl(
-      _$GetFederatedInstancesResponseImpl _value,
-      $Res Function(_$GetFederatedInstancesResponseImpl) _then)
-      : super(_value, _then);
+  __$$GetFederatedInstancesResponseImplCopyWithImpl(_$GetFederatedInstancesResponseImpl _value, $Res Function(_$GetFederatedInstancesResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of GetFederatedInstancesResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? federatedInstances = freezed,
-  }) {
-    return _then(_$GetFederatedInstancesResponseImpl(
-      federatedInstances: freezed == federatedInstances
-          ? _value.federatedInstances
-          : federatedInstances // ignore: cast_nullable_to_non_nullable
-              as FederatedInstances?,
-    ));
+  $Res call({Object? federatedInstances = freezed}) {
+    return _then(
+      _$GetFederatedInstancesResponseImpl(
+        federatedInstances:
+            freezed == federatedInstances
+                ? _value.federatedInstances
+                : federatedInstances // ignore: cast_nullable_to_non_nullable
+                    as FederatedInstances?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 @modelSerde
-class _$GetFederatedInstancesResponseImpl
-    extends _GetFederatedInstancesResponse {
-  const _$GetFederatedInstancesResponseImpl({this.federatedInstances})
-      : super._();
+class _$GetFederatedInstancesResponseImpl extends _GetFederatedInstancesResponse {
+  const _$GetFederatedInstancesResponseImpl({this.federatedInstances}) : super._();
 
-  factory _$GetFederatedInstancesResponseImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$GetFederatedInstancesResponseImplFromJson(json);
+  factory _$GetFederatedInstancesResponseImpl.fromJson(Map<String, dynamic> json) => _$$GetFederatedInstancesResponseImplFromJson(json);
 
   @override
   final FederatedInstances? federatedInstances;
@@ -155,8 +138,7 @@ class _$GetFederatedInstancesResponseImpl
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetFederatedInstancesResponseImpl &&
-            (identical(other.federatedInstances, federatedInstances) ||
-                other.federatedInstances == federatedInstances));
+            (identical(other.federatedInstances, federatedInstances) || other.federatedInstances == federatedInstances));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -168,28 +150,20 @@ class _$GetFederatedInstancesResponseImpl
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetFederatedInstancesResponseImplCopyWith<
-          _$GetFederatedInstancesResponseImpl>
-      get copyWith => __$$GetFederatedInstancesResponseImplCopyWithImpl<
-          _$GetFederatedInstancesResponseImpl>(this, _$identity);
+  _$$GetFederatedInstancesResponseImplCopyWith<_$GetFederatedInstancesResponseImpl> get copyWith =>
+      __$$GetFederatedInstancesResponseImplCopyWithImpl<_$GetFederatedInstancesResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetFederatedInstancesResponseImplToJson(
-      this,
-    );
+    return _$$GetFederatedInstancesResponseImplToJson(this);
   }
 }
 
-abstract class _GetFederatedInstancesResponse
-    extends GetFederatedInstancesResponse {
-  const factory _GetFederatedInstancesResponse(
-          {final FederatedInstances? federatedInstances}) =
-      _$GetFederatedInstancesResponseImpl;
+abstract class _GetFederatedInstancesResponse extends GetFederatedInstancesResponse {
+  const factory _GetFederatedInstancesResponse({final FederatedInstances? federatedInstances}) = _$GetFederatedInstancesResponseImpl;
   const _GetFederatedInstancesResponse._() : super._();
 
-  factory _GetFederatedInstancesResponse.fromJson(Map<String, dynamic> json) =
-      _$GetFederatedInstancesResponseImpl.fromJson;
+  factory _GetFederatedInstancesResponse.fromJson(Map<String, dynamic> json) = _$GetFederatedInstancesResponseImpl.fromJson;
 
   @override
   FederatedInstances? get federatedInstances;
@@ -198,7 +172,5 @@ abstract class _GetFederatedInstancesResponse
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetFederatedInstancesResponseImplCopyWith<
-          _$GetFederatedInstancesResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$GetFederatedInstancesResponseImplCopyWith<_$GetFederatedInstancesResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

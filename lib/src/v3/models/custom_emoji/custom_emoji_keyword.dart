@@ -15,6 +15,5 @@ class CustomEmojiKeyword with _$CustomEmojiKeyword {
   }) = _CustomEmojiKeyword;
 
   const CustomEmojiKeyword._();
-  factory CustomEmojiKeyword.fromJson(Map<String, dynamic> json) =>
-      _$CustomEmojiKeywordFromJson(json);
+  factory CustomEmojiKeyword.fromJson(Map<String, dynamic> json) => _$CustomEmojiKeywordFromJson(json);
 }

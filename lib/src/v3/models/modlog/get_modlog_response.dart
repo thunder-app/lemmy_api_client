@@ -28,6 +28,5 @@ class GetModlogResponse with _$GetModlogResponse {
   }) = _GetModlogResponse;
 
   const GetModlogResponse._();
-  factory GetModlogResponse.fromJson(Map<String, dynamic> json) =>
-      _$GetModlogResponseFromJson(json);
+  factory GetModlogResponse.fromJson(Map<String, dynamic> json) => _$GetModlogResponseFromJson(json);
 }

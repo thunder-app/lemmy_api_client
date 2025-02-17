@@ -19,6 +19,5 @@ class ReadableFederationState with _$ReadableFederationState {
   }) = _ReadableFederationState;
 
   const ReadableFederationState._();
-  factory ReadableFederationState.fromJson(Map<String, dynamic> json) =>
-      _$ReadableFederationStateFromJson(json);
+  factory ReadableFederationState.fromJson(Map<String, dynamic> json) => _$ReadableFederationStateFromJson(json);
 }

@@ -41,6 +41,5 @@ class LocalUser with _$LocalUser {
   }) = _LocalUser;
 
   const LocalUser._();
-  factory LocalUser.fromJson(Map<String, dynamic> json) =>
-      _$LocalUserFromJson(json);
+  factory LocalUser.fromJson(Map<String, dynamic> json) => _$LocalUserFromJson(json);
 }

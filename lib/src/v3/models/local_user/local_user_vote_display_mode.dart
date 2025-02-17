@@ -17,6 +17,5 @@ class LocalUserVoteDisplayMode with _$LocalUserVoteDisplayMode {
   }) = _LocalUserVoteDisplayMode;
 
   const LocalUserVoteDisplayMode._();
-  factory LocalUserVoteDisplayMode.fromJson(Map<String, dynamic> json) =>
-      _$LocalUserVoteDisplayModeFromJson(json);
+  factory LocalUserVoteDisplayMode.fromJson(Map<String, dynamic> json) => _$LocalUserVoteDisplayModeFromJson(json);
 }

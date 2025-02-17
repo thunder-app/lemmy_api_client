@@ -21,6 +21,5 @@ class CommentAggregates with _$CommentAggregates {
   }) = _CommentAggregates;
 
   const CommentAggregates._();
-  factory CommentAggregates.fromJson(Map<String, dynamic> json) =>
-      _$CommentAggregatesFromJson(json);
+  factory CommentAggregates.fromJson(Map<String, dynamic> json) => _$CommentAggregatesFromJson(json);
 }

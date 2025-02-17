@@ -8,11 +8,8 @@ part 'success_response.g.dart';
 @freezed
 class SuccessResponse with _$SuccessResponse {
   @modelSerde
-  const factory SuccessResponse({
-    required bool success,
-  }) = _SuccessResponse;
+  const factory SuccessResponse({required bool success}) = _SuccessResponse;
 
   const SuccessResponse._();
-  factory SuccessResponse.fromJson(Map<String, dynamic> json) =>
-      _$SuccessResponseFromJson(json);
+  factory SuccessResponse.fromJson(Map<String, dynamic> json) => _$SuccessResponseFromJson(json);
 }

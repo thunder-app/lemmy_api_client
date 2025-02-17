@@ -12,9 +12,7 @@ part 'search.g.dart';
 ///
 /// `HTTP.GET /search`
 @freezed
-class Search
-    with _$Search
-    implements LemmyApiQuery<SearchResponse>, LemmyApiAuthenticatedQuery {
+class Search with _$Search implements LemmyApiQuery<SearchResponse>, LemmyApiAuthenticatedQuery {
   @apiSerde
   const factory Search({
     required String q, // v0.18.0
@@ -37,6 +35,5 @@ class Search
   final httpMethod = HttpMethod.get;
 
   @override
-  SearchResponse responseFactory(Map<String, dynamic> json) =>
-      SearchResponse.fromJson(json);
+  SearchResponse responseFactory(Map<String, dynamic> json) => SearchResponse.fromJson(json);
 }

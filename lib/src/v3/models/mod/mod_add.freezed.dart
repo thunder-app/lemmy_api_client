@@ -12,7 +12,8 @@ part of 'mod_add.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ModAdd _$ModAddFromJson(Map<String, dynamic> json) {
   return _ModAdd.fromJson(json);
@@ -38,20 +39,13 @@ mixin _$ModAdd {
 
 /// @nodoc
 abstract class $ModAddCopyWith<$Res> {
-  factory $ModAddCopyWith(ModAdd value, $Res Function(ModAdd) then) =
-      _$ModAddCopyWithImpl<$Res, ModAdd>;
+  factory $ModAddCopyWith(ModAdd value, $Res Function(ModAdd) then) = _$ModAddCopyWithImpl<$Res, ModAdd>;
   @useResult
-  $Res call(
-      {int id,
-      int modPersonId,
-      int otherPersonId,
-      bool removed,
-      @JsonKey(name: 'when_') String when});
+  $Res call({int id, int modPersonId, int otherPersonId, bool removed, @JsonKey(name: 'when_') String when});
 }
 
 /// @nodoc
-class _$ModAddCopyWithImpl<$Res, $Val extends ModAdd>
-    implements $ModAddCopyWith<$Res> {
+class _$ModAddCopyWithImpl<$Res, $Val extends ModAdd> implements $ModAddCopyWith<$Res> {
   _$ModAddCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -63,94 +57,86 @@ class _$ModAddCopyWithImpl<$Res, $Val extends ModAdd>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? modPersonId = null,
-    Object? otherPersonId = null,
-    Object? removed = null,
-    Object? when = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      modPersonId: null == modPersonId
-          ? _value.modPersonId
-          : modPersonId // ignore: cast_nullable_to_non_nullable
-              as int,
-      otherPersonId: null == otherPersonId
-          ? _value.otherPersonId
-          : otherPersonId // ignore: cast_nullable_to_non_nullable
-              as int,
-      removed: null == removed
-          ? _value.removed
-          : removed // ignore: cast_nullable_to_non_nullable
-              as bool,
-      when: null == when
-          ? _value.when
-          : when // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? id = null, Object? modPersonId = null, Object? otherPersonId = null, Object? removed = null, Object? when = null}) {
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as int,
+            modPersonId:
+                null == modPersonId
+                    ? _value.modPersonId
+                    : modPersonId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            otherPersonId:
+                null == otherPersonId
+                    ? _value.otherPersonId
+                    : otherPersonId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            removed:
+                null == removed
+                    ? _value.removed
+                    : removed // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            when:
+                null == when
+                    ? _value.when
+                    : when // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$ModAddImplCopyWith<$Res> implements $ModAddCopyWith<$Res> {
-  factory _$$ModAddImplCopyWith(
-          _$ModAddImpl value, $Res Function(_$ModAddImpl) then) =
-      __$$ModAddImplCopyWithImpl<$Res>;
+  factory _$$ModAddImplCopyWith(_$ModAddImpl value, $Res Function(_$ModAddImpl) then) = __$$ModAddImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int id,
-      int modPersonId,
-      int otherPersonId,
-      bool removed,
-      @JsonKey(name: 'when_') String when});
+  $Res call({int id, int modPersonId, int otherPersonId, bool removed, @JsonKey(name: 'when_') String when});
 }
 
 /// @nodoc
-class __$$ModAddImplCopyWithImpl<$Res>
-    extends _$ModAddCopyWithImpl<$Res, _$ModAddImpl>
-    implements _$$ModAddImplCopyWith<$Res> {
-  __$$ModAddImplCopyWithImpl(
-      _$ModAddImpl _value, $Res Function(_$ModAddImpl) _then)
-      : super(_value, _then);
+class __$$ModAddImplCopyWithImpl<$Res> extends _$ModAddCopyWithImpl<$Res, _$ModAddImpl> implements _$$ModAddImplCopyWith<$Res> {
+  __$$ModAddImplCopyWithImpl(_$ModAddImpl _value, $Res Function(_$ModAddImpl) _then) : super(_value, _then);
 
   /// Create a copy of ModAdd
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? modPersonId = null,
-    Object? otherPersonId = null,
-    Object? removed = null,
-    Object? when = null,
-  }) {
-    return _then(_$ModAddImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      modPersonId: null == modPersonId
-          ? _value.modPersonId
-          : modPersonId // ignore: cast_nullable_to_non_nullable
-              as int,
-      otherPersonId: null == otherPersonId
-          ? _value.otherPersonId
-          : otherPersonId // ignore: cast_nullable_to_non_nullable
-              as int,
-      removed: null == removed
-          ? _value.removed
-          : removed // ignore: cast_nullable_to_non_nullable
-              as bool,
-      when: null == when
-          ? _value.when
-          : when // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? id = null, Object? modPersonId = null, Object? otherPersonId = null, Object? removed = null, Object? when = null}) {
+    return _then(
+      _$ModAddImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as int,
+        modPersonId:
+            null == modPersonId
+                ? _value.modPersonId
+                : modPersonId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        otherPersonId:
+            null == otherPersonId
+                ? _value.otherPersonId
+                : otherPersonId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        removed:
+            null == removed
+                ? _value.removed
+                : removed // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        when:
+            null == when
+                ? _value.when
+                : when // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -158,29 +144,22 @@ class __$$ModAddImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$ModAddImpl extends _ModAdd {
-  const _$ModAddImpl(
-      {required this.id,
-      required this.modPersonId,
-      required this.otherPersonId,
-      required this.removed,
-      @JsonKey(name: 'when_') required this.when})
-      : super._();
+  const _$ModAddImpl({required this.id, required this.modPersonId, required this.otherPersonId, required this.removed, @JsonKey(name: 'when_') required this.when}) : super._();
 
-  factory _$ModAddImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ModAddImplFromJson(json);
+  factory _$ModAddImpl.fromJson(Map<String, dynamic> json) => _$$ModAddImplFromJson(json);
 
   @override
   final int id;
-// v0.18.0
+  // v0.18.0
   @override
   final int modPersonId;
-// v0.18.0
+  // v0.18.0
   @override
   final int otherPersonId;
-// v0.18.0
+  // v0.18.0
   @override
   final bool removed;
-// v0.18.0
+  // v0.18.0
   @override
   @JsonKey(name: 'when_')
   final String when;
@@ -196,42 +175,32 @@ class _$ModAddImpl extends _ModAdd {
         (other.runtimeType == runtimeType &&
             other is _$ModAddImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.modPersonId, modPersonId) ||
-                other.modPersonId == modPersonId) &&
-            (identical(other.otherPersonId, otherPersonId) ||
-                other.otherPersonId == otherPersonId) &&
+            (identical(other.modPersonId, modPersonId) || other.modPersonId == modPersonId) &&
+            (identical(other.otherPersonId, otherPersonId) || other.otherPersonId == otherPersonId) &&
             (identical(other.removed, removed) || other.removed == removed) &&
             (identical(other.when, when) || other.when == when));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, modPersonId, otherPersonId, removed, when);
+  int get hashCode => Object.hash(runtimeType, id, modPersonId, otherPersonId, removed, when);
 
   /// Create a copy of ModAdd
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ModAddImplCopyWith<_$ModAddImpl> get copyWith =>
-      __$$ModAddImplCopyWithImpl<_$ModAddImpl>(this, _$identity);
+  _$$ModAddImplCopyWith<_$ModAddImpl> get copyWith => __$$ModAddImplCopyWithImpl<_$ModAddImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ModAddImplToJson(
-      this,
-    );
+    return _$$ModAddImplToJson(this);
   }
 }
 
 abstract class _ModAdd extends ModAdd {
-  const factory _ModAdd(
-      {required final int id,
-      required final int modPersonId,
-      required final int otherPersonId,
-      required final bool removed,
-      @JsonKey(name: 'when_') required final String when}) = _$ModAddImpl;
+  const factory _ModAdd({required final int id, required final int modPersonId, required final int otherPersonId, required final bool removed, @JsonKey(name: 'when_') required final String when}) =
+      _$ModAddImpl;
   const _ModAdd._() : super._();
 
   factory _ModAdd.fromJson(Map<String, dynamic> json) = _$ModAddImpl.fromJson;
@@ -252,6 +221,5 @@ abstract class _ModAdd extends ModAdd {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ModAddImplCopyWith<_$ModAddImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ModAddImplCopyWith<_$ModAddImpl> get copyWith => throw _privateConstructorUsedError;
 }

@@ -33,6 +33,5 @@ class Community with _$Community {
   }) = _Community;
 
   const Community._();
-  factory Community.fromJson(Map<String, dynamic> json) =>
-      _$CommunityFromJson(json);
+  factory Community.fromJson(Map<String, dynamic> json) => _$CommunityFromJson(json);
 }

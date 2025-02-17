@@ -13,6 +13,5 @@ class DeleteAccountResponse with _$DeleteAccountResponse {
   }) = _DeleteAccountResponse;
 
   const DeleteAccountResponse._();
-  factory DeleteAccountResponse.fromJson(Map<String, dynamic> json) =>
-      _$DeleteAccountResponseFromJson(json);
+  factory DeleteAccountResponse.fromJson(Map<String, dynamic> json) => _$DeleteAccountResponseFromJson(json);
 }

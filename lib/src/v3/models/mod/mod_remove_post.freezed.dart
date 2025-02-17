@@ -12,7 +12,8 @@ part of 'mod_remove_post.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ModRemovePost _$ModRemovePostFromJson(Map<String, dynamic> json) {
   return _ModRemovePost.fromJson(json);
@@ -34,28 +35,18 @@ mixin _$ModRemovePost {
   /// Create a copy of ModRemovePost
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ModRemovePostCopyWith<ModRemovePost> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ModRemovePostCopyWith<ModRemovePost> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ModRemovePostCopyWith<$Res> {
-  factory $ModRemovePostCopyWith(
-          ModRemovePost value, $Res Function(ModRemovePost) then) =
-      _$ModRemovePostCopyWithImpl<$Res, ModRemovePost>;
+  factory $ModRemovePostCopyWith(ModRemovePost value, $Res Function(ModRemovePost) then) = _$ModRemovePostCopyWithImpl<$Res, ModRemovePost>;
   @useResult
-  $Res call(
-      {int id,
-      int modPersonId,
-      int postId,
-      String? reason,
-      bool removed,
-      @JsonKey(name: 'when_') String when});
+  $Res call({int id, int modPersonId, int postId, String? reason, bool removed, @JsonKey(name: 'when_') String when});
 }
 
 /// @nodoc
-class _$ModRemovePostCopyWithImpl<$Res, $Val extends ModRemovePost>
-    implements $ModRemovePostCopyWith<$Res> {
+class _$ModRemovePostCopyWithImpl<$Res, $Val extends ModRemovePost> implements $ModRemovePostCopyWith<$Res> {
   _$ModRemovePostCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -67,106 +58,96 @@ class _$ModRemovePostCopyWithImpl<$Res, $Val extends ModRemovePost>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? modPersonId = null,
-    Object? postId = null,
-    Object? reason = freezed,
-    Object? removed = null,
-    Object? when = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      modPersonId: null == modPersonId
-          ? _value.modPersonId
-          : modPersonId // ignore: cast_nullable_to_non_nullable
-              as int,
-      postId: null == postId
-          ? _value.postId
-          : postId // ignore: cast_nullable_to_non_nullable
-              as int,
-      reason: freezed == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      removed: null == removed
-          ? _value.removed
-          : removed // ignore: cast_nullable_to_non_nullable
-              as bool,
-      when: null == when
-          ? _value.when
-          : when // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? id = null, Object? modPersonId = null, Object? postId = null, Object? reason = freezed, Object? removed = null, Object? when = null}) {
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as int,
+            modPersonId:
+                null == modPersonId
+                    ? _value.modPersonId
+                    : modPersonId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            postId:
+                null == postId
+                    ? _value.postId
+                    : postId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            reason:
+                freezed == reason
+                    ? _value.reason
+                    : reason // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            removed:
+                null == removed
+                    ? _value.removed
+                    : removed // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            when:
+                null == when
+                    ? _value.when
+                    : when // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$ModRemovePostImplCopyWith<$Res>
-    implements $ModRemovePostCopyWith<$Res> {
-  factory _$$ModRemovePostImplCopyWith(
-          _$ModRemovePostImpl value, $Res Function(_$ModRemovePostImpl) then) =
-      __$$ModRemovePostImplCopyWithImpl<$Res>;
+abstract class _$$ModRemovePostImplCopyWith<$Res> implements $ModRemovePostCopyWith<$Res> {
+  factory _$$ModRemovePostImplCopyWith(_$ModRemovePostImpl value, $Res Function(_$ModRemovePostImpl) then) = __$$ModRemovePostImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int id,
-      int modPersonId,
-      int postId,
-      String? reason,
-      bool removed,
-      @JsonKey(name: 'when_') String when});
+  $Res call({int id, int modPersonId, int postId, String? reason, bool removed, @JsonKey(name: 'when_') String when});
 }
 
 /// @nodoc
-class __$$ModRemovePostImplCopyWithImpl<$Res>
-    extends _$ModRemovePostCopyWithImpl<$Res, _$ModRemovePostImpl>
-    implements _$$ModRemovePostImplCopyWith<$Res> {
-  __$$ModRemovePostImplCopyWithImpl(
-      _$ModRemovePostImpl _value, $Res Function(_$ModRemovePostImpl) _then)
-      : super(_value, _then);
+class __$$ModRemovePostImplCopyWithImpl<$Res> extends _$ModRemovePostCopyWithImpl<$Res, _$ModRemovePostImpl> implements _$$ModRemovePostImplCopyWith<$Res> {
+  __$$ModRemovePostImplCopyWithImpl(_$ModRemovePostImpl _value, $Res Function(_$ModRemovePostImpl) _then) : super(_value, _then);
 
   /// Create a copy of ModRemovePost
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? modPersonId = null,
-    Object? postId = null,
-    Object? reason = freezed,
-    Object? removed = null,
-    Object? when = null,
-  }) {
-    return _then(_$ModRemovePostImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      modPersonId: null == modPersonId
-          ? _value.modPersonId
-          : modPersonId // ignore: cast_nullable_to_non_nullable
-              as int,
-      postId: null == postId
-          ? _value.postId
-          : postId // ignore: cast_nullable_to_non_nullable
-              as int,
-      reason: freezed == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String?,
-      removed: null == removed
-          ? _value.removed
-          : removed // ignore: cast_nullable_to_non_nullable
-              as bool,
-      when: null == when
-          ? _value.when
-          : when // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? id = null, Object? modPersonId = null, Object? postId = null, Object? reason = freezed, Object? removed = null, Object? when = null}) {
+    return _then(
+      _$ModRemovePostImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as int,
+        modPersonId:
+            null == modPersonId
+                ? _value.modPersonId
+                : modPersonId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        postId:
+            null == postId
+                ? _value.postId
+                : postId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        reason:
+            freezed == reason
+                ? _value.reason
+                : reason // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        removed:
+            null == removed
+                ? _value.removed
+                : removed // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        when:
+            null == when
+                ? _value.when
+                : when // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -174,33 +155,25 @@ class __$$ModRemovePostImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$ModRemovePostImpl extends _ModRemovePost {
-  const _$ModRemovePostImpl(
-      {required this.id,
-      required this.modPersonId,
-      required this.postId,
-      this.reason,
-      required this.removed,
-      @JsonKey(name: 'when_') required this.when})
-      : super._();
+  const _$ModRemovePostImpl({required this.id, required this.modPersonId, required this.postId, this.reason, required this.removed, @JsonKey(name: 'when_') required this.when}) : super._();
 
-  factory _$ModRemovePostImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ModRemovePostImplFromJson(json);
+  factory _$ModRemovePostImpl.fromJson(Map<String, dynamic> json) => _$$ModRemovePostImplFromJson(json);
 
   @override
   final int id;
-// v0.18.0
+  // v0.18.0
   @override
   final int modPersonId;
-// v0.18.0
+  // v0.18.0
   @override
   final int postId;
-// v0.18.0
+  // v0.18.0
   @override
   final String? reason;
-// v0.18.0
+  // v0.18.0
   @override
   final bool removed;
-// v0.18.0
+  // v0.18.0
   @override
   @JsonKey(name: 'when_')
   final String when;
@@ -216,8 +189,7 @@ class _$ModRemovePostImpl extends _ModRemovePost {
         (other.runtimeType == runtimeType &&
             other is _$ModRemovePostImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.modPersonId, modPersonId) ||
-                other.modPersonId == modPersonId) &&
+            (identical(other.modPersonId, modPersonId) || other.modPersonId == modPersonId) &&
             (identical(other.postId, postId) || other.postId == postId) &&
             (identical(other.reason, reason) || other.reason == reason) &&
             (identical(other.removed, removed) || other.removed == removed) &&
@@ -226,38 +198,33 @@ class _$ModRemovePostImpl extends _ModRemovePost {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, modPersonId, postId, reason, removed, when);
+  int get hashCode => Object.hash(runtimeType, id, modPersonId, postId, reason, removed, when);
 
   /// Create a copy of ModRemovePost
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ModRemovePostImplCopyWith<_$ModRemovePostImpl> get copyWith =>
-      __$$ModRemovePostImplCopyWithImpl<_$ModRemovePostImpl>(this, _$identity);
+  _$$ModRemovePostImplCopyWith<_$ModRemovePostImpl> get copyWith => __$$ModRemovePostImplCopyWithImpl<_$ModRemovePostImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ModRemovePostImplToJson(
-      this,
-    );
+    return _$$ModRemovePostImplToJson(this);
   }
 }
 
 abstract class _ModRemovePost extends ModRemovePost {
-  const factory _ModRemovePost(
-          {required final int id,
-          required final int modPersonId,
-          required final int postId,
-          final String? reason,
-          required final bool removed,
-          @JsonKey(name: 'when_') required final String when}) =
-      _$ModRemovePostImpl;
+  const factory _ModRemovePost({
+    required final int id,
+    required final int modPersonId,
+    required final int postId,
+    final String? reason,
+    required final bool removed,
+    @JsonKey(name: 'when_') required final String when,
+  }) = _$ModRemovePostImpl;
   const _ModRemovePost._() : super._();
 
-  factory _ModRemovePost.fromJson(Map<String, dynamic> json) =
-      _$ModRemovePostImpl.fromJson;
+  factory _ModRemovePost.fromJson(Map<String, dynamic> json) = _$ModRemovePostImpl.fromJson;
 
   @override
   int get id; // v0.18.0
@@ -277,6 +244,5 @@ abstract class _ModRemovePost extends ModRemovePost {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ModRemovePostImplCopyWith<_$ModRemovePostImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ModRemovePostImplCopyWith<_$ModRemovePostImpl> get copyWith => throw _privateConstructorUsedError;
 }

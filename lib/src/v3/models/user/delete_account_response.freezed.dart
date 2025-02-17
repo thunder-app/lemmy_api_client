@@ -12,10 +12,10 @@ part of 'delete_account_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
-DeleteAccountResponse _$DeleteAccountResponseFromJson(
-    Map<String, dynamic> json) {
+DeleteAccountResponse _$DeleteAccountResponseFromJson(Map<String, dynamic> json) {
   return _DeleteAccountResponse.fromJson(json);
 }
 
@@ -29,23 +29,18 @@ mixin _$DeleteAccountResponse {
   /// Create a copy of DeleteAccountResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $DeleteAccountResponseCopyWith<DeleteAccountResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $DeleteAccountResponseCopyWith<DeleteAccountResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $DeleteAccountResponseCopyWith<$Res> {
-  factory $DeleteAccountResponseCopyWith(DeleteAccountResponse value,
-          $Res Function(DeleteAccountResponse) then) =
-      _$DeleteAccountResponseCopyWithImpl<$Res, DeleteAccountResponse>;
+  factory $DeleteAccountResponseCopyWith(DeleteAccountResponse value, $Res Function(DeleteAccountResponse) then) = _$DeleteAccountResponseCopyWithImpl<$Res, DeleteAccountResponse>;
   @useResult
   $Res call({bool? success});
 }
 
 /// @nodoc
-class _$DeleteAccountResponseCopyWithImpl<$Res,
-        $Val extends DeleteAccountResponse>
-    implements $DeleteAccountResponseCopyWith<$Res> {
+class _$DeleteAccountResponseCopyWithImpl<$Res, $Val extends DeleteAccountResponse> implements $DeleteAccountResponseCopyWith<$Res> {
   _$DeleteAccountResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -57,52 +52,46 @@ class _$DeleteAccountResponseCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? success = freezed,
-  }) {
-    return _then(_value.copyWith(
-      success: freezed == success
-          ? _value.success
-          : success // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+  $Res call({Object? success = freezed}) {
+    return _then(
+      _value.copyWith(
+            success:
+                freezed == success
+                    ? _value.success
+                    : success // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$DeleteAccountResponseImplCopyWith<$Res>
-    implements $DeleteAccountResponseCopyWith<$Res> {
-  factory _$$DeleteAccountResponseImplCopyWith(
-          _$DeleteAccountResponseImpl value,
-          $Res Function(_$DeleteAccountResponseImpl) then) =
-      __$$DeleteAccountResponseImplCopyWithImpl<$Res>;
+abstract class _$$DeleteAccountResponseImplCopyWith<$Res> implements $DeleteAccountResponseCopyWith<$Res> {
+  factory _$$DeleteAccountResponseImplCopyWith(_$DeleteAccountResponseImpl value, $Res Function(_$DeleteAccountResponseImpl) then) = __$$DeleteAccountResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool? success});
 }
 
 /// @nodoc
-class __$$DeleteAccountResponseImplCopyWithImpl<$Res>
-    extends _$DeleteAccountResponseCopyWithImpl<$Res,
-        _$DeleteAccountResponseImpl>
-    implements _$$DeleteAccountResponseImplCopyWith<$Res> {
-  __$$DeleteAccountResponseImplCopyWithImpl(_$DeleteAccountResponseImpl _value,
-      $Res Function(_$DeleteAccountResponseImpl) _then)
-      : super(_value, _then);
+class __$$DeleteAccountResponseImplCopyWithImpl<$Res> extends _$DeleteAccountResponseCopyWithImpl<$Res, _$DeleteAccountResponseImpl> implements _$$DeleteAccountResponseImplCopyWith<$Res> {
+  __$$DeleteAccountResponseImplCopyWithImpl(_$DeleteAccountResponseImpl _value, $Res Function(_$DeleteAccountResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of DeleteAccountResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? success = freezed,
-  }) {
-    return _then(_$DeleteAccountResponseImpl(
-      success: freezed == success
-          ? _value.success
-          : success // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+  $Res call({Object? success = freezed}) {
+    return _then(
+      _$DeleteAccountResponseImpl(
+        success:
+            freezed == success
+                ? _value.success
+                : success // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
@@ -112,8 +101,7 @@ class __$$DeleteAccountResponseImplCopyWithImpl<$Res>
 class _$DeleteAccountResponseImpl extends _DeleteAccountResponse {
   const _$DeleteAccountResponseImpl({this.success}) : super._();
 
-  factory _$DeleteAccountResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$DeleteAccountResponseImplFromJson(json);
+  factory _$DeleteAccountResponseImpl.fromJson(Map<String, dynamic> json) => _$$DeleteAccountResponseImplFromJson(json);
 
   @override
   final bool? success;
@@ -125,10 +113,7 @@ class _$DeleteAccountResponseImpl extends _DeleteAccountResponse {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$DeleteAccountResponseImpl &&
-            (identical(other.success, success) || other.success == success));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$DeleteAccountResponseImpl && (identical(other.success, success) || other.success == success));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -140,25 +125,19 @@ class _$DeleteAccountResponseImpl extends _DeleteAccountResponse {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$DeleteAccountResponseImplCopyWith<_$DeleteAccountResponseImpl>
-      get copyWith => __$$DeleteAccountResponseImplCopyWithImpl<
-          _$DeleteAccountResponseImpl>(this, _$identity);
+  _$$DeleteAccountResponseImplCopyWith<_$DeleteAccountResponseImpl> get copyWith => __$$DeleteAccountResponseImplCopyWithImpl<_$DeleteAccountResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DeleteAccountResponseImplToJson(
-      this,
-    );
+    return _$$DeleteAccountResponseImplToJson(this);
   }
 }
 
 abstract class _DeleteAccountResponse extends DeleteAccountResponse {
-  const factory _DeleteAccountResponse({final bool? success}) =
-      _$DeleteAccountResponseImpl;
+  const factory _DeleteAccountResponse({final bool? success}) = _$DeleteAccountResponseImpl;
   const _DeleteAccountResponse._() : super._();
 
-  factory _DeleteAccountResponse.fromJson(Map<String, dynamic> json) =
-      _$DeleteAccountResponseImpl.fromJson;
+  factory _DeleteAccountResponse.fromJson(Map<String, dynamic> json) = _$DeleteAccountResponseImpl.fromJson;
 
   @override
   bool? get success;
@@ -167,6 +146,5 @@ abstract class _DeleteAccountResponse extends DeleteAccountResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DeleteAccountResponseImplCopyWith<_$DeleteAccountResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$DeleteAccountResponseImplCopyWith<_$DeleteAccountResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

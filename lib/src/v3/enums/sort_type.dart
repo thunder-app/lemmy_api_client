@@ -17,16 +17,14 @@ enum SortType {
   topSixMonths('TopSixMonths'), // v0.18.0
   topNineMonths('TopNineMonths'), // v0.18.0
   controversial('Controversial'), // v0.19.0
-  scaled('Scaled'), // v0.19.0
+  scaled('Scaled') // v0.19.0
   ;
 
   final String value;
   const SortType(this.value);
 
   factory SortType.fromJson(dynamic value) {
-    return value is int
-        ? values[value]
-        : values.firstWhere((e) => e.value == value);
+    return value is int ? values[value] : values.firstWhere((e) => e.value == value);
   }
 
   String toJson() => value;

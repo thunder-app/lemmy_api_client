@@ -13,6 +13,5 @@ class BlockInstanceResponse with _$BlockInstanceResponse {
   }) = _BlockInstanceResponse;
 
   const BlockInstanceResponse._();
-  factory BlockInstanceResponse.fromJson(Map<String, dynamic> json) =>
-      _$BlockInstanceResponseFromJson(json);
+  factory BlockInstanceResponse.fromJson(Map<String, dynamic> json) => _$BlockInstanceResponseFromJson(json);
 }

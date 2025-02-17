@@ -16,6 +16,5 @@ class InstanceBlockView with _$InstanceBlockView {
   }) = _InstanceBlockView;
 
   const InstanceBlockView._();
-  factory InstanceBlockView.fromJson(Map<String, dynamic> json) =>
-      _$InstanceBlockViewFromJson(json);
+  factory InstanceBlockView.fromJson(Map<String, dynamic> json) => _$InstanceBlockViewFromJson(json);
 }

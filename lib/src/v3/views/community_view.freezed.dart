@@ -12,7 +12,8 @@ part of 'community_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 CommunityView _$CommunityViewFromJson(Map<String, dynamic> json) {
   return _CommunityView.fromJson(json);
@@ -21,11 +22,9 @@ CommunityView _$CommunityViewFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$CommunityView {
   Community get community => throw _privateConstructorUsedError; // v0.18.0
-  SubscribedType get subscribed =>
-      throw _privateConstructorUsedError; // v0.18.0
+  SubscribedType get subscribed => throw _privateConstructorUsedError; // v0.18.0
   bool get blocked => throw _privateConstructorUsedError; // v0.18.0
-  CommunityAggregates get counts =>
-      throw _privateConstructorUsedError; // v0.18.0
+  CommunityAggregates get counts => throw _privateConstructorUsedError; // v0.18.0
   bool? get bannedFromCommunity => throw _privateConstructorUsedError;
 
   /// Serializes this CommunityView to a JSON map.
@@ -34,30 +33,21 @@ mixin _$CommunityView {
   /// Create a copy of CommunityView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $CommunityViewCopyWith<CommunityView> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CommunityViewCopyWith<CommunityView> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CommunityViewCopyWith<$Res> {
-  factory $CommunityViewCopyWith(
-          CommunityView value, $Res Function(CommunityView) then) =
-      _$CommunityViewCopyWithImpl<$Res, CommunityView>;
+  factory $CommunityViewCopyWith(CommunityView value, $Res Function(CommunityView) then) = _$CommunityViewCopyWithImpl<$Res, CommunityView>;
   @useResult
-  $Res call(
-      {Community community,
-      SubscribedType subscribed,
-      bool blocked,
-      CommunityAggregates counts,
-      bool? bannedFromCommunity});
+  $Res call({Community community, SubscribedType subscribed, bool blocked, CommunityAggregates counts, bool? bannedFromCommunity});
 
   $CommunityCopyWith<$Res> get community;
   $CommunityAggregatesCopyWith<$Res> get counts;
 }
 
 /// @nodoc
-class _$CommunityViewCopyWithImpl<$Res, $Val extends CommunityView>
-    implements $CommunityViewCopyWith<$Res> {
+class _$CommunityViewCopyWithImpl<$Res, $Val extends CommunityView> implements $CommunityViewCopyWith<$Res> {
   _$CommunityViewCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -69,35 +59,37 @@ class _$CommunityViewCopyWithImpl<$Res, $Val extends CommunityView>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? community = null,
-    Object? subscribed = null,
-    Object? blocked = null,
-    Object? counts = null,
-    Object? bannedFromCommunity = freezed,
-  }) {
-    return _then(_value.copyWith(
-      community: null == community
-          ? _value.community
-          : community // ignore: cast_nullable_to_non_nullable
-              as Community,
-      subscribed: null == subscribed
-          ? _value.subscribed
-          : subscribed // ignore: cast_nullable_to_non_nullable
-              as SubscribedType,
-      blocked: null == blocked
-          ? _value.blocked
-          : blocked // ignore: cast_nullable_to_non_nullable
-              as bool,
-      counts: null == counts
-          ? _value.counts
-          : counts // ignore: cast_nullable_to_non_nullable
-              as CommunityAggregates,
-      bannedFromCommunity: freezed == bannedFromCommunity
-          ? _value.bannedFromCommunity
-          : bannedFromCommunity // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+  $Res call({Object? community = null, Object? subscribed = null, Object? blocked = null, Object? counts = null, Object? bannedFromCommunity = freezed}) {
+    return _then(
+      _value.copyWith(
+            community:
+                null == community
+                    ? _value.community
+                    : community // ignore: cast_nullable_to_non_nullable
+                        as Community,
+            subscribed:
+                null == subscribed
+                    ? _value.subscribed
+                    : subscribed // ignore: cast_nullable_to_non_nullable
+                        as SubscribedType,
+            blocked:
+                null == blocked
+                    ? _value.blocked
+                    : blocked // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            counts:
+                null == counts
+                    ? _value.counts
+                    : counts // ignore: cast_nullable_to_non_nullable
+                        as CommunityAggregates,
+            bannedFromCommunity:
+                freezed == bannedFromCommunity
+                    ? _value.bannedFromCommunity
+                    : bannedFromCommunity // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of CommunityView
@@ -122,19 +114,11 @@ class _$CommunityViewCopyWithImpl<$Res, $Val extends CommunityView>
 }
 
 /// @nodoc
-abstract class _$$CommunityViewImplCopyWith<$Res>
-    implements $CommunityViewCopyWith<$Res> {
-  factory _$$CommunityViewImplCopyWith(
-          _$CommunityViewImpl value, $Res Function(_$CommunityViewImpl) then) =
-      __$$CommunityViewImplCopyWithImpl<$Res>;
+abstract class _$$CommunityViewImplCopyWith<$Res> implements $CommunityViewCopyWith<$Res> {
+  factory _$$CommunityViewImplCopyWith(_$CommunityViewImpl value, $Res Function(_$CommunityViewImpl) then) = __$$CommunityViewImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {Community community,
-      SubscribedType subscribed,
-      bool blocked,
-      CommunityAggregates counts,
-      bool? bannedFromCommunity});
+  $Res call({Community community, SubscribedType subscribed, bool blocked, CommunityAggregates counts, bool? bannedFromCommunity});
 
   @override
   $CommunityCopyWith<$Res> get community;
@@ -143,46 +127,43 @@ abstract class _$$CommunityViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CommunityViewImplCopyWithImpl<$Res>
-    extends _$CommunityViewCopyWithImpl<$Res, _$CommunityViewImpl>
-    implements _$$CommunityViewImplCopyWith<$Res> {
-  __$$CommunityViewImplCopyWithImpl(
-      _$CommunityViewImpl _value, $Res Function(_$CommunityViewImpl) _then)
-      : super(_value, _then);
+class __$$CommunityViewImplCopyWithImpl<$Res> extends _$CommunityViewCopyWithImpl<$Res, _$CommunityViewImpl> implements _$$CommunityViewImplCopyWith<$Res> {
+  __$$CommunityViewImplCopyWithImpl(_$CommunityViewImpl _value, $Res Function(_$CommunityViewImpl) _then) : super(_value, _then);
 
   /// Create a copy of CommunityView
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? community = null,
-    Object? subscribed = null,
-    Object? blocked = null,
-    Object? counts = null,
-    Object? bannedFromCommunity = freezed,
-  }) {
-    return _then(_$CommunityViewImpl(
-      community: null == community
-          ? _value.community
-          : community // ignore: cast_nullable_to_non_nullable
-              as Community,
-      subscribed: null == subscribed
-          ? _value.subscribed
-          : subscribed // ignore: cast_nullable_to_non_nullable
-              as SubscribedType,
-      blocked: null == blocked
-          ? _value.blocked
-          : blocked // ignore: cast_nullable_to_non_nullable
-              as bool,
-      counts: null == counts
-          ? _value.counts
-          : counts // ignore: cast_nullable_to_non_nullable
-              as CommunityAggregates,
-      bannedFromCommunity: freezed == bannedFromCommunity
-          ? _value.bannedFromCommunity
-          : bannedFromCommunity // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+  $Res call({Object? community = null, Object? subscribed = null, Object? blocked = null, Object? counts = null, Object? bannedFromCommunity = freezed}) {
+    return _then(
+      _$CommunityViewImpl(
+        community:
+            null == community
+                ? _value.community
+                : community // ignore: cast_nullable_to_non_nullable
+                    as Community,
+        subscribed:
+            null == subscribed
+                ? _value.subscribed
+                : subscribed // ignore: cast_nullable_to_non_nullable
+                    as SubscribedType,
+        blocked:
+            null == blocked
+                ? _value.blocked
+                : blocked // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        counts:
+            null == counts
+                ? _value.counts
+                : counts // ignore: cast_nullable_to_non_nullable
+                    as CommunityAggregates,
+        bannedFromCommunity:
+            freezed == bannedFromCommunity
+                ? _value.bannedFromCommunity
+                : bannedFromCommunity // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
@@ -190,29 +171,22 @@ class __$$CommunityViewImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$CommunityViewImpl extends _CommunityView {
-  const _$CommunityViewImpl(
-      {required this.community,
-      required this.subscribed,
-      required this.blocked,
-      required this.counts,
-      this.bannedFromCommunity})
-      : super._();
+  const _$CommunityViewImpl({required this.community, required this.subscribed, required this.blocked, required this.counts, this.bannedFromCommunity}) : super._();
 
-  factory _$CommunityViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CommunityViewImplFromJson(json);
+  factory _$CommunityViewImpl.fromJson(Map<String, dynamic> json) => _$$CommunityViewImplFromJson(json);
 
   @override
   final Community community;
-// v0.18.0
+  // v0.18.0
   @override
   final SubscribedType subscribed;
-// v0.18.0
+  // v0.18.0
   @override
   final bool blocked;
-// v0.18.0
+  // v0.18.0
   @override
   final CommunityAggregates counts;
-// v0.18.0
+  // v0.18.0
   @override
   final bool? bannedFromCommunity;
 
@@ -226,48 +200,41 @@ class _$CommunityViewImpl extends _CommunityView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CommunityViewImpl &&
-            (identical(other.community, community) ||
-                other.community == community) &&
-            (identical(other.subscribed, subscribed) ||
-                other.subscribed == subscribed) &&
+            (identical(other.community, community) || other.community == community) &&
+            (identical(other.subscribed, subscribed) || other.subscribed == subscribed) &&
             (identical(other.blocked, blocked) || other.blocked == blocked) &&
             (identical(other.counts, counts) || other.counts == counts) &&
-            (identical(other.bannedFromCommunity, bannedFromCommunity) ||
-                other.bannedFromCommunity == bannedFromCommunity));
+            (identical(other.bannedFromCommunity, bannedFromCommunity) || other.bannedFromCommunity == bannedFromCommunity));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, community, subscribed, blocked, counts, bannedFromCommunity);
+  int get hashCode => Object.hash(runtimeType, community, subscribed, blocked, counts, bannedFromCommunity);
 
   /// Create a copy of CommunityView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$CommunityViewImplCopyWith<_$CommunityViewImpl> get copyWith =>
-      __$$CommunityViewImplCopyWithImpl<_$CommunityViewImpl>(this, _$identity);
+  _$$CommunityViewImplCopyWith<_$CommunityViewImpl> get copyWith => __$$CommunityViewImplCopyWithImpl<_$CommunityViewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CommunityViewImplToJson(
-      this,
-    );
+    return _$$CommunityViewImplToJson(this);
   }
 }
 
 abstract class _CommunityView extends CommunityView {
-  const factory _CommunityView(
-      {required final Community community,
-      required final SubscribedType subscribed,
-      required final bool blocked,
-      required final CommunityAggregates counts,
-      final bool? bannedFromCommunity}) = _$CommunityViewImpl;
+  const factory _CommunityView({
+    required final Community community,
+    required final SubscribedType subscribed,
+    required final bool blocked,
+    required final CommunityAggregates counts,
+    final bool? bannedFromCommunity,
+  }) = _$CommunityViewImpl;
   const _CommunityView._() : super._();
 
-  factory _CommunityView.fromJson(Map<String, dynamic> json) =
-      _$CommunityViewImpl.fromJson;
+  factory _CommunityView.fromJson(Map<String, dynamic> json) = _$CommunityViewImpl.fromJson;
 
   @override
   Community get community; // v0.18.0
@@ -284,6 +251,5 @@ abstract class _CommunityView extends CommunityView {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CommunityViewImplCopyWith<_$CommunityViewImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CommunityViewImplCopyWith<_$CommunityViewImpl> get copyWith => throw _privateConstructorUsedError;
 }

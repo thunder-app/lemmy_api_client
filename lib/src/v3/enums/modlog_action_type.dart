@@ -19,8 +19,7 @@ enum ModlogActionType {
   final String value;
   const ModlogActionType(this.value);
 
-  factory ModlogActionType.fromJson(String value) =>
-      values.firstWhere((e) => e.value == value);
+  factory ModlogActionType.fromJson(String value) => values.firstWhere((e) => e.value == value);
 
   String toJson() => value;
 

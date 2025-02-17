@@ -12,10 +12,10 @@ part of 'list_communities_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
-ListCommunitiesResponse _$ListCommunitiesResponseFromJson(
-    Map<String, dynamic> json) {
+ListCommunitiesResponse _$ListCommunitiesResponseFromJson(Map<String, dynamic> json) {
   return _ListCommunitiesResponse.fromJson(json);
 }
 
@@ -29,23 +29,18 @@ mixin _$ListCommunitiesResponse {
   /// Create a copy of ListCommunitiesResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ListCommunitiesResponseCopyWith<ListCommunitiesResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ListCommunitiesResponseCopyWith<ListCommunitiesResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ListCommunitiesResponseCopyWith<$Res> {
-  factory $ListCommunitiesResponseCopyWith(ListCommunitiesResponse value,
-          $Res Function(ListCommunitiesResponse) then) =
-      _$ListCommunitiesResponseCopyWithImpl<$Res, ListCommunitiesResponse>;
+  factory $ListCommunitiesResponseCopyWith(ListCommunitiesResponse value, $Res Function(ListCommunitiesResponse) then) = _$ListCommunitiesResponseCopyWithImpl<$Res, ListCommunitiesResponse>;
   @useResult
   $Res call({List<CommunityView> communities});
 }
 
 /// @nodoc
-class _$ListCommunitiesResponseCopyWithImpl<$Res,
-        $Val extends ListCommunitiesResponse>
-    implements $ListCommunitiesResponseCopyWith<$Res> {
+class _$ListCommunitiesResponseCopyWithImpl<$Res, $Val extends ListCommunitiesResponse> implements $ListCommunitiesResponseCopyWith<$Res> {
   _$ListCommunitiesResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -57,53 +52,46 @@ class _$ListCommunitiesResponseCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? communities = null,
-  }) {
-    return _then(_value.copyWith(
-      communities: null == communities
-          ? _value.communities
-          : communities // ignore: cast_nullable_to_non_nullable
-              as List<CommunityView>,
-    ) as $Val);
+  $Res call({Object? communities = null}) {
+    return _then(
+      _value.copyWith(
+            communities:
+                null == communities
+                    ? _value.communities
+                    : communities // ignore: cast_nullable_to_non_nullable
+                        as List<CommunityView>,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$ListCommunitiesResponseImplCopyWith<$Res>
-    implements $ListCommunitiesResponseCopyWith<$Res> {
-  factory _$$ListCommunitiesResponseImplCopyWith(
-          _$ListCommunitiesResponseImpl value,
-          $Res Function(_$ListCommunitiesResponseImpl) then) =
-      __$$ListCommunitiesResponseImplCopyWithImpl<$Res>;
+abstract class _$$ListCommunitiesResponseImplCopyWith<$Res> implements $ListCommunitiesResponseCopyWith<$Res> {
+  factory _$$ListCommunitiesResponseImplCopyWith(_$ListCommunitiesResponseImpl value, $Res Function(_$ListCommunitiesResponseImpl) then) = __$$ListCommunitiesResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<CommunityView> communities});
 }
 
 /// @nodoc
-class __$$ListCommunitiesResponseImplCopyWithImpl<$Res>
-    extends _$ListCommunitiesResponseCopyWithImpl<$Res,
-        _$ListCommunitiesResponseImpl>
-    implements _$$ListCommunitiesResponseImplCopyWith<$Res> {
-  __$$ListCommunitiesResponseImplCopyWithImpl(
-      _$ListCommunitiesResponseImpl _value,
-      $Res Function(_$ListCommunitiesResponseImpl) _then)
-      : super(_value, _then);
+class __$$ListCommunitiesResponseImplCopyWithImpl<$Res> extends _$ListCommunitiesResponseCopyWithImpl<$Res, _$ListCommunitiesResponseImpl> implements _$$ListCommunitiesResponseImplCopyWith<$Res> {
+  __$$ListCommunitiesResponseImplCopyWithImpl(_$ListCommunitiesResponseImpl _value, $Res Function(_$ListCommunitiesResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of ListCommunitiesResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? communities = null,
-  }) {
-    return _then(_$ListCommunitiesResponseImpl(
-      communities: null == communities
-          ? _value._communities
-          : communities // ignore: cast_nullable_to_non_nullable
-              as List<CommunityView>,
-    ));
+  $Res call({Object? communities = null}) {
+    return _then(
+      _$ListCommunitiesResponseImpl(
+        communities:
+            null == communities
+                ? _value._communities
+                : communities // ignore: cast_nullable_to_non_nullable
+                    as List<CommunityView>,
+      ),
+    );
   }
 }
 
@@ -111,13 +99,9 @@ class __$$ListCommunitiesResponseImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$ListCommunitiesResponseImpl extends _ListCommunitiesResponse {
-  const _$ListCommunitiesResponseImpl(
-      {required final List<CommunityView> communities})
-      : _communities = communities,
-        super._();
+  const _$ListCommunitiesResponseImpl({required final List<CommunityView> communities}) : _communities = communities, super._();
 
-  factory _$ListCommunitiesResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ListCommunitiesResponseImplFromJson(json);
+  factory _$ListCommunitiesResponseImpl.fromJson(Map<String, dynamic> json) => _$$ListCommunitiesResponseImplFromJson(json);
 
   final List<CommunityView> _communities;
   @override
@@ -134,43 +118,31 @@ class _$ListCommunitiesResponseImpl extends _ListCommunitiesResponse {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ListCommunitiesResponseImpl &&
-            const DeepCollectionEquality()
-                .equals(other._communities, _communities));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$ListCommunitiesResponseImpl && const DeepCollectionEquality().equals(other._communities, _communities));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_communities));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_communities));
 
   /// Create a copy of ListCommunitiesResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ListCommunitiesResponseImplCopyWith<_$ListCommunitiesResponseImpl>
-      get copyWith => __$$ListCommunitiesResponseImplCopyWithImpl<
-          _$ListCommunitiesResponseImpl>(this, _$identity);
+  _$$ListCommunitiesResponseImplCopyWith<_$ListCommunitiesResponseImpl> get copyWith => __$$ListCommunitiesResponseImplCopyWithImpl<_$ListCommunitiesResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ListCommunitiesResponseImplToJson(
-      this,
-    );
+    return _$$ListCommunitiesResponseImplToJson(this);
   }
 }
 
 abstract class _ListCommunitiesResponse extends ListCommunitiesResponse {
-  const factory _ListCommunitiesResponse(
-          {required final List<CommunityView> communities}) =
-      _$ListCommunitiesResponseImpl;
+  const factory _ListCommunitiesResponse({required final List<CommunityView> communities}) = _$ListCommunitiesResponseImpl;
   const _ListCommunitiesResponse._() : super._();
 
-  factory _ListCommunitiesResponse.fromJson(Map<String, dynamic> json) =
-      _$ListCommunitiesResponseImpl.fromJson;
+  factory _ListCommunitiesResponse.fromJson(Map<String, dynamic> json) = _$ListCommunitiesResponseImpl.fromJson;
 
   @override
   List<CommunityView> get communities;
@@ -179,6 +151,5 @@ abstract class _ListCommunitiesResponse extends ListCommunitiesResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ListCommunitiesResponseImplCopyWith<_$ListCommunitiesResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$ListCommunitiesResponseImplCopyWith<_$ListCommunitiesResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

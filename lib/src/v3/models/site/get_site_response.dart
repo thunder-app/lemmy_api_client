@@ -23,6 +23,5 @@ class GetSiteResponse with _$GetSiteResponse {
   }) = _GetSiteResponse;
 
   const GetSiteResponse._();
-  factory GetSiteResponse.fromJson(Map<String, dynamic> json) =>
-      _$GetSiteResponseFromJson(json);
+  factory GetSiteResponse.fromJson(Map<String, dynamic> json) => _$GetSiteResponseFromJson(json);
 }

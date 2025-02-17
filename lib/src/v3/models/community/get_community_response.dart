@@ -18,6 +18,5 @@ class GetCommunityResponse with _$GetCommunityResponse {
   }) = _GetCommunityResponse;
 
   const GetCommunityResponse._();
-  factory GetCommunityResponse.fromJson(Map<String, dynamic> json) =>
-      _$GetCommunityResponseFromJson(json);
+  factory GetCommunityResponse.fromJson(Map<String, dynamic> json) => _$GetCommunityResponseFromJson(json);
 }

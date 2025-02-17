@@ -12,7 +12,8 @@ part of 'mod_lock_post.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ModLockPost _$ModLockPostFromJson(Map<String, dynamic> json) {
   return _ModLockPost.fromJson(json);
@@ -33,27 +34,18 @@ mixin _$ModLockPost {
   /// Create a copy of ModLockPost
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ModLockPostCopyWith<ModLockPost> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ModLockPostCopyWith<ModLockPost> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ModLockPostCopyWith<$Res> {
-  factory $ModLockPostCopyWith(
-          ModLockPost value, $Res Function(ModLockPost) then) =
-      _$ModLockPostCopyWithImpl<$Res, ModLockPost>;
+  factory $ModLockPostCopyWith(ModLockPost value, $Res Function(ModLockPost) then) = _$ModLockPostCopyWithImpl<$Res, ModLockPost>;
   @useResult
-  $Res call(
-      {int id,
-      int modPersonId,
-      int postId,
-      bool locked,
-      @JsonKey(name: 'when_') String when});
+  $Res call({int id, int modPersonId, int postId, bool locked, @JsonKey(name: 'when_') String when});
 }
 
 /// @nodoc
-class _$ModLockPostCopyWithImpl<$Res, $Val extends ModLockPost>
-    implements $ModLockPostCopyWith<$Res> {
+class _$ModLockPostCopyWithImpl<$Res, $Val extends ModLockPost> implements $ModLockPostCopyWith<$Res> {
   _$ModLockPostCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -65,95 +57,86 @@ class _$ModLockPostCopyWithImpl<$Res, $Val extends ModLockPost>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? modPersonId = null,
-    Object? postId = null,
-    Object? locked = null,
-    Object? when = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      modPersonId: null == modPersonId
-          ? _value.modPersonId
-          : modPersonId // ignore: cast_nullable_to_non_nullable
-              as int,
-      postId: null == postId
-          ? _value.postId
-          : postId // ignore: cast_nullable_to_non_nullable
-              as int,
-      locked: null == locked
-          ? _value.locked
-          : locked // ignore: cast_nullable_to_non_nullable
-              as bool,
-      when: null == when
-          ? _value.when
-          : when // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? id = null, Object? modPersonId = null, Object? postId = null, Object? locked = null, Object? when = null}) {
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as int,
+            modPersonId:
+                null == modPersonId
+                    ? _value.modPersonId
+                    : modPersonId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            postId:
+                null == postId
+                    ? _value.postId
+                    : postId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            locked:
+                null == locked
+                    ? _value.locked
+                    : locked // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            when:
+                null == when
+                    ? _value.when
+                    : when // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$ModLockPostImplCopyWith<$Res>
-    implements $ModLockPostCopyWith<$Res> {
-  factory _$$ModLockPostImplCopyWith(
-          _$ModLockPostImpl value, $Res Function(_$ModLockPostImpl) then) =
-      __$$ModLockPostImplCopyWithImpl<$Res>;
+abstract class _$$ModLockPostImplCopyWith<$Res> implements $ModLockPostCopyWith<$Res> {
+  factory _$$ModLockPostImplCopyWith(_$ModLockPostImpl value, $Res Function(_$ModLockPostImpl) then) = __$$ModLockPostImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int id,
-      int modPersonId,
-      int postId,
-      bool locked,
-      @JsonKey(name: 'when_') String when});
+  $Res call({int id, int modPersonId, int postId, bool locked, @JsonKey(name: 'when_') String when});
 }
 
 /// @nodoc
-class __$$ModLockPostImplCopyWithImpl<$Res>
-    extends _$ModLockPostCopyWithImpl<$Res, _$ModLockPostImpl>
-    implements _$$ModLockPostImplCopyWith<$Res> {
-  __$$ModLockPostImplCopyWithImpl(
-      _$ModLockPostImpl _value, $Res Function(_$ModLockPostImpl) _then)
-      : super(_value, _then);
+class __$$ModLockPostImplCopyWithImpl<$Res> extends _$ModLockPostCopyWithImpl<$Res, _$ModLockPostImpl> implements _$$ModLockPostImplCopyWith<$Res> {
+  __$$ModLockPostImplCopyWithImpl(_$ModLockPostImpl _value, $Res Function(_$ModLockPostImpl) _then) : super(_value, _then);
 
   /// Create a copy of ModLockPost
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? modPersonId = null,
-    Object? postId = null,
-    Object? locked = null,
-    Object? when = null,
-  }) {
-    return _then(_$ModLockPostImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      modPersonId: null == modPersonId
-          ? _value.modPersonId
-          : modPersonId // ignore: cast_nullable_to_non_nullable
-              as int,
-      postId: null == postId
-          ? _value.postId
-          : postId // ignore: cast_nullable_to_non_nullable
-              as int,
-      locked: null == locked
-          ? _value.locked
-          : locked // ignore: cast_nullable_to_non_nullable
-              as bool,
-      when: null == when
-          ? _value.when
-          : when // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? id = null, Object? modPersonId = null, Object? postId = null, Object? locked = null, Object? when = null}) {
+    return _then(
+      _$ModLockPostImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as int,
+        modPersonId:
+            null == modPersonId
+                ? _value.modPersonId
+                : modPersonId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        postId:
+            null == postId
+                ? _value.postId
+                : postId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        locked:
+            null == locked
+                ? _value.locked
+                : locked // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        when:
+            null == when
+                ? _value.when
+                : when // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -161,29 +144,22 @@ class __$$ModLockPostImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$ModLockPostImpl extends _ModLockPost {
-  const _$ModLockPostImpl(
-      {required this.id,
-      required this.modPersonId,
-      required this.postId,
-      required this.locked,
-      @JsonKey(name: 'when_') required this.when})
-      : super._();
+  const _$ModLockPostImpl({required this.id, required this.modPersonId, required this.postId, required this.locked, @JsonKey(name: 'when_') required this.when}) : super._();
 
-  factory _$ModLockPostImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ModLockPostImplFromJson(json);
+  factory _$ModLockPostImpl.fromJson(Map<String, dynamic> json) => _$$ModLockPostImplFromJson(json);
 
   @override
   final int id;
-// v0.18.0
+  // v0.18.0
   @override
   final int modPersonId;
-// v0.18.0
+  // v0.18.0
   @override
   final int postId;
-// v0.18.0
+  // v0.18.0
   @override
   final bool locked;
-// v0.18.0
+  // v0.18.0
   @override
   @JsonKey(name: 'when_')
   final String when;
@@ -199,8 +175,7 @@ class _$ModLockPostImpl extends _ModLockPost {
         (other.runtimeType == runtimeType &&
             other is _$ModLockPostImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.modPersonId, modPersonId) ||
-                other.modPersonId == modPersonId) &&
+            (identical(other.modPersonId, modPersonId) || other.modPersonId == modPersonId) &&
             (identical(other.postId, postId) || other.postId == postId) &&
             (identical(other.locked, locked) || other.locked == locked) &&
             (identical(other.when, when) || other.when == when));
@@ -208,36 +183,27 @@ class _$ModLockPostImpl extends _ModLockPost {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, modPersonId, postId, locked, when);
+  int get hashCode => Object.hash(runtimeType, id, modPersonId, postId, locked, when);
 
   /// Create a copy of ModLockPost
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ModLockPostImplCopyWith<_$ModLockPostImpl> get copyWith =>
-      __$$ModLockPostImplCopyWithImpl<_$ModLockPostImpl>(this, _$identity);
+  _$$ModLockPostImplCopyWith<_$ModLockPostImpl> get copyWith => __$$ModLockPostImplCopyWithImpl<_$ModLockPostImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ModLockPostImplToJson(
-      this,
-    );
+    return _$$ModLockPostImplToJson(this);
   }
 }
 
 abstract class _ModLockPost extends ModLockPost {
-  const factory _ModLockPost(
-      {required final int id,
-      required final int modPersonId,
-      required final int postId,
-      required final bool locked,
-      @JsonKey(name: 'when_') required final String when}) = _$ModLockPostImpl;
+  const factory _ModLockPost({required final int id, required final int modPersonId, required final int postId, required final bool locked, @JsonKey(name: 'when_') required final String when}) =
+      _$ModLockPostImpl;
   const _ModLockPost._() : super._();
 
-  factory _ModLockPost.fromJson(Map<String, dynamic> json) =
-      _$ModLockPostImpl.fromJson;
+  factory _ModLockPost.fromJson(Map<String, dynamic> json) = _$ModLockPostImpl.fromJson;
 
   @override
   int get id; // v0.18.0
@@ -255,6 +221,5 @@ abstract class _ModLockPost extends ModLockPost {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ModLockPostImplCopyWith<_$ModLockPostImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ModLockPostImplCopyWith<_$ModLockPostImpl> get copyWith => throw _privateConstructorUsedError;
 }

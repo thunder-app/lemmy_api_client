@@ -17,6 +17,5 @@ class ModTransferCommunityView with _$ModTransferCommunityView {
   }) = _ModTransferCommunityView;
 
   const ModTransferCommunityView._();
-  factory ModTransferCommunityView.fromJson(Map<String, dynamic> json) =>
-      _$ModTransferCommunityViewFromJson(json);
+  factory ModTransferCommunityView.fromJson(Map<String, dynamic> json) => _$ModTransferCommunityViewFromJson(json);
 }

@@ -19,6 +19,5 @@ class CommunityView with _$CommunityView {
   }) = _CommunityView;
 
   const CommunityView._();
-  factory CommunityView.fromJson(Map<String, dynamic> json) =>
-      _$CommunityViewFromJson(json);
+  factory CommunityView.fromJson(Map<String, dynamic> json) => _$CommunityViewFromJson(json);
 }

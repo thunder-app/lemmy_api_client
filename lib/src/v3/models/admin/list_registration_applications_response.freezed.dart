@@ -12,17 +12,16 @@ part of 'list_registration_applications_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
-ListRegistrationApplicationsResponse
-    _$ListRegistrationApplicationsResponseFromJson(Map<String, dynamic> json) {
+ListRegistrationApplicationsResponse _$ListRegistrationApplicationsResponseFromJson(Map<String, dynamic> json) {
   return _ListRegistrationApplicationsResponse.fromJson(json);
 }
 
 /// @nodoc
 mixin _$ListRegistrationApplicationsResponse {
-  List<RegistrationApplicationView> get registrationApplications =>
-      throw _privateConstructorUsedError;
+  List<RegistrationApplicationView> get registrationApplications => throw _privateConstructorUsedError;
 
   /// Serializes this ListRegistrationApplicationsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -30,26 +29,19 @@ mixin _$ListRegistrationApplicationsResponse {
   /// Create a copy of ListRegistrationApplicationsResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ListRegistrationApplicationsResponseCopyWith<
-          ListRegistrationApplicationsResponse>
-      get copyWith => throw _privateConstructorUsedError;
+  $ListRegistrationApplicationsResponseCopyWith<ListRegistrationApplicationsResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ListRegistrationApplicationsResponseCopyWith<$Res> {
-  factory $ListRegistrationApplicationsResponseCopyWith(
-          ListRegistrationApplicationsResponse value,
-          $Res Function(ListRegistrationApplicationsResponse) then) =
-      _$ListRegistrationApplicationsResponseCopyWithImpl<$Res,
-          ListRegistrationApplicationsResponse>;
+  factory $ListRegistrationApplicationsResponseCopyWith(ListRegistrationApplicationsResponse value, $Res Function(ListRegistrationApplicationsResponse) then) =
+      _$ListRegistrationApplicationsResponseCopyWithImpl<$Res, ListRegistrationApplicationsResponse>;
   @useResult
   $Res call({List<RegistrationApplicationView> registrationApplications});
 }
 
 /// @nodoc
-class _$ListRegistrationApplicationsResponseCopyWithImpl<$Res,
-        $Val extends ListRegistrationApplicationsResponse>
-    implements $ListRegistrationApplicationsResponseCopyWith<$Res> {
+class _$ListRegistrationApplicationsResponseCopyWithImpl<$Res, $Val extends ListRegistrationApplicationsResponse> implements $ListRegistrationApplicationsResponseCopyWith<$Res> {
   _$ListRegistrationApplicationsResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -61,24 +53,23 @@ class _$ListRegistrationApplicationsResponseCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? registrationApplications = null,
-  }) {
-    return _then(_value.copyWith(
-      registrationApplications: null == registrationApplications
-          ? _value.registrationApplications
-          : registrationApplications // ignore: cast_nullable_to_non_nullable
-              as List<RegistrationApplicationView>,
-    ) as $Val);
+  $Res call({Object? registrationApplications = null}) {
+    return _then(
+      _value.copyWith(
+            registrationApplications:
+                null == registrationApplications
+                    ? _value.registrationApplications
+                    : registrationApplications // ignore: cast_nullable_to_non_nullable
+                        as List<RegistrationApplicationView>,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$ListRegistrationApplicationsResponseImplCopyWith<$Res>
-    implements $ListRegistrationApplicationsResponseCopyWith<$Res> {
-  factory _$$ListRegistrationApplicationsResponseImplCopyWith(
-          _$ListRegistrationApplicationsResponseImpl value,
-          $Res Function(_$ListRegistrationApplicationsResponseImpl) then) =
+abstract class _$$ListRegistrationApplicationsResponseImplCopyWith<$Res> implements $ListRegistrationApplicationsResponseCopyWith<$Res> {
+  factory _$$ListRegistrationApplicationsResponseImplCopyWith(_$ListRegistrationApplicationsResponseImpl value, $Res Function(_$ListRegistrationApplicationsResponseImpl) then) =
       __$$ListRegistrationApplicationsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -86,51 +77,39 @@ abstract class _$$ListRegistrationApplicationsResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ListRegistrationApplicationsResponseImplCopyWithImpl<$Res>
-    extends _$ListRegistrationApplicationsResponseCopyWithImpl<$Res,
-        _$ListRegistrationApplicationsResponseImpl>
+class __$$ListRegistrationApplicationsResponseImplCopyWithImpl<$Res> extends _$ListRegistrationApplicationsResponseCopyWithImpl<$Res, _$ListRegistrationApplicationsResponseImpl>
     implements _$$ListRegistrationApplicationsResponseImplCopyWith<$Res> {
-  __$$ListRegistrationApplicationsResponseImplCopyWithImpl(
-      _$ListRegistrationApplicationsResponseImpl _value,
-      $Res Function(_$ListRegistrationApplicationsResponseImpl) _then)
-      : super(_value, _then);
+  __$$ListRegistrationApplicationsResponseImplCopyWithImpl(_$ListRegistrationApplicationsResponseImpl _value, $Res Function(_$ListRegistrationApplicationsResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of ListRegistrationApplicationsResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? registrationApplications = null,
-  }) {
-    return _then(_$ListRegistrationApplicationsResponseImpl(
-      registrationApplications: null == registrationApplications
-          ? _value._registrationApplications
-          : registrationApplications // ignore: cast_nullable_to_non_nullable
-              as List<RegistrationApplicationView>,
-    ));
+  $Res call({Object? registrationApplications = null}) {
+    return _then(
+      _$ListRegistrationApplicationsResponseImpl(
+        registrationApplications:
+            null == registrationApplications
+                ? _value._registrationApplications
+                : registrationApplications // ignore: cast_nullable_to_non_nullable
+                    as List<RegistrationApplicationView>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 @modelSerde
-class _$ListRegistrationApplicationsResponseImpl
-    extends _ListRegistrationApplicationsResponse {
-  const _$ListRegistrationApplicationsResponseImpl(
-      {required final List<RegistrationApplicationView>
-          registrationApplications})
-      : _registrationApplications = registrationApplications,
-        super._();
+class _$ListRegistrationApplicationsResponseImpl extends _ListRegistrationApplicationsResponse {
+  const _$ListRegistrationApplicationsResponseImpl({required final List<RegistrationApplicationView> registrationApplications}) : _registrationApplications = registrationApplications, super._();
 
-  factory _$ListRegistrationApplicationsResponseImpl.fromJson(
-          Map<String, dynamic> json) =>
-      _$$ListRegistrationApplicationsResponseImplFromJson(json);
+  factory _$ListRegistrationApplicationsResponseImpl.fromJson(Map<String, dynamic> json) => _$$ListRegistrationApplicationsResponseImplFromJson(json);
 
   final List<RegistrationApplicationView> _registrationApplications;
   @override
   List<RegistrationApplicationView> get registrationApplications {
-    if (_registrationApplications is EqualUnmodifiableListView)
-      return _registrationApplications;
+    if (_registrationApplications is EqualUnmodifiableListView) return _registrationApplications;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_registrationApplications);
   }
@@ -143,46 +122,32 @@ class _$ListRegistrationApplicationsResponseImpl
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ListRegistrationApplicationsResponseImpl &&
-            const DeepCollectionEquality().equals(
-                other._registrationApplications, _registrationApplications));
+        (other.runtimeType == runtimeType && other is _$ListRegistrationApplicationsResponseImpl && const DeepCollectionEquality().equals(other._registrationApplications, _registrationApplications));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType,
-      const DeepCollectionEquality().hash(_registrationApplications));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_registrationApplications));
 
   /// Create a copy of ListRegistrationApplicationsResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ListRegistrationApplicationsResponseImplCopyWith<
-          _$ListRegistrationApplicationsResponseImpl>
-      get copyWith => __$$ListRegistrationApplicationsResponseImplCopyWithImpl<
-          _$ListRegistrationApplicationsResponseImpl>(this, _$identity);
+  _$$ListRegistrationApplicationsResponseImplCopyWith<_$ListRegistrationApplicationsResponseImpl> get copyWith =>
+      __$$ListRegistrationApplicationsResponseImplCopyWithImpl<_$ListRegistrationApplicationsResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ListRegistrationApplicationsResponseImplToJson(
-      this,
-    );
+    return _$$ListRegistrationApplicationsResponseImplToJson(this);
   }
 }
 
-abstract class _ListRegistrationApplicationsResponse
-    extends ListRegistrationApplicationsResponse {
-  const factory _ListRegistrationApplicationsResponse(
-          {required final List<RegistrationApplicationView>
-              registrationApplications}) =
-      _$ListRegistrationApplicationsResponseImpl;
+abstract class _ListRegistrationApplicationsResponse extends ListRegistrationApplicationsResponse {
+  const factory _ListRegistrationApplicationsResponse({required final List<RegistrationApplicationView> registrationApplications}) = _$ListRegistrationApplicationsResponseImpl;
   const _ListRegistrationApplicationsResponse._() : super._();
 
-  factory _ListRegistrationApplicationsResponse.fromJson(
-          Map<String, dynamic> json) =
-      _$ListRegistrationApplicationsResponseImpl.fromJson;
+  factory _ListRegistrationApplicationsResponse.fromJson(Map<String, dynamic> json) = _$ListRegistrationApplicationsResponseImpl.fromJson;
 
   @override
   List<RegistrationApplicationView> get registrationApplications;
@@ -191,7 +156,5 @@ abstract class _ListRegistrationApplicationsResponse
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ListRegistrationApplicationsResponseImplCopyWith<
-          _$ListRegistrationApplicationsResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$ListRegistrationApplicationsResponseImplCopyWith<_$ListRegistrationApplicationsResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

@@ -18,6 +18,5 @@ class PrivateMessageReportView with _$PrivateMessageReportView {
   }) = _PrivateMessageReportView;
 
   const PrivateMessageReportView._();
-  factory PrivateMessageReportView.fromJson(Map<String, dynamic> json) =>
-      _$PrivateMessageReportViewFromJson(json);
+  factory PrivateMessageReportView.fromJson(Map<String, dynamic> json) => _$PrivateMessageReportViewFromJson(json);
 }

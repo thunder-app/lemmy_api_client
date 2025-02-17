@@ -22,6 +22,5 @@ class SiteAggregates with _$SiteAggregates {
   }) = _SiteAggregates;
 
   const SiteAggregates._();
-  factory SiteAggregates.fromJson(Map<String, dynamic> json) =>
-      _$SiteAggregatesFromJson(json);
+  factory SiteAggregates.fromJson(Map<String, dynamic> json) => _$SiteAggregatesFromJson(json);
 }

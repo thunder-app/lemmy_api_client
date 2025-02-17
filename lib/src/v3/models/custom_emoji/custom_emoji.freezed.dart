@@ -12,7 +12,8 @@ part of 'custom_emoji.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 CustomEmoji _$CustomEmojiFromJson(Map<String, dynamic> json) {
   return _CustomEmoji.fromJson(json);
@@ -35,30 +36,18 @@ mixin _$CustomEmoji {
   /// Create a copy of CustomEmoji
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $CustomEmojiCopyWith<CustomEmoji> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CustomEmojiCopyWith<CustomEmoji> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CustomEmojiCopyWith<$Res> {
-  factory $CustomEmojiCopyWith(
-          CustomEmoji value, $Res Function(CustomEmoji) then) =
-      _$CustomEmojiCopyWithImpl<$Res, CustomEmoji>;
+  factory $CustomEmojiCopyWith(CustomEmoji value, $Res Function(CustomEmoji) then) = _$CustomEmojiCopyWithImpl<$Res, CustomEmoji>;
   @useResult
-  $Res call(
-      {int id,
-      int localSiteId,
-      String shortcode,
-      String imageUrl,
-      String altText,
-      String category,
-      DateTime published,
-      DateTime? updated});
+  $Res call({int id, int localSiteId, String shortcode, String imageUrl, String altText, String category, DateTime published, DateTime? updated});
 }
 
 /// @nodoc
-class _$CustomEmojiCopyWithImpl<$Res, $Val extends CustomEmoji>
-    implements $CustomEmojiCopyWith<$Res> {
+class _$CustomEmojiCopyWithImpl<$Res, $Val extends CustomEmoji> implements $CustomEmojiCopyWith<$Res> {
   _$CustomEmojiCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -80,69 +69,65 @@ class _$CustomEmojiCopyWithImpl<$Res, $Val extends CustomEmoji>
     Object? published = null,
     Object? updated = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      localSiteId: null == localSiteId
-          ? _value.localSiteId
-          : localSiteId // ignore: cast_nullable_to_non_nullable
-              as int,
-      shortcode: null == shortcode
-          ? _value.shortcode
-          : shortcode // ignore: cast_nullable_to_non_nullable
-              as String,
-      imageUrl: null == imageUrl
-          ? _value.imageUrl
-          : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      altText: null == altText
-          ? _value.altText
-          : altText // ignore: cast_nullable_to_non_nullable
-              as String,
-      category: null == category
-          ? _value.category
-          : category // ignore: cast_nullable_to_non_nullable
-              as String,
-      published: null == published
-          ? _value.published
-          : published // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updated: freezed == updated
-          ? _value.updated
-          : updated // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as int,
+            localSiteId:
+                null == localSiteId
+                    ? _value.localSiteId
+                    : localSiteId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            shortcode:
+                null == shortcode
+                    ? _value.shortcode
+                    : shortcode // ignore: cast_nullable_to_non_nullable
+                        as String,
+            imageUrl:
+                null == imageUrl
+                    ? _value.imageUrl
+                    : imageUrl // ignore: cast_nullable_to_non_nullable
+                        as String,
+            altText:
+                null == altText
+                    ? _value.altText
+                    : altText // ignore: cast_nullable_to_non_nullable
+                        as String,
+            category:
+                null == category
+                    ? _value.category
+                    : category // ignore: cast_nullable_to_non_nullable
+                        as String,
+            published:
+                null == published
+                    ? _value.published
+                    : published // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            updated:
+                freezed == updated
+                    ? _value.updated
+                    : updated // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$CustomEmojiImplCopyWith<$Res>
-    implements $CustomEmojiCopyWith<$Res> {
-  factory _$$CustomEmojiImplCopyWith(
-          _$CustomEmojiImpl value, $Res Function(_$CustomEmojiImpl) then) =
-      __$$CustomEmojiImplCopyWithImpl<$Res>;
+abstract class _$$CustomEmojiImplCopyWith<$Res> implements $CustomEmojiCopyWith<$Res> {
+  factory _$$CustomEmojiImplCopyWith(_$CustomEmojiImpl value, $Res Function(_$CustomEmojiImpl) then) = __$$CustomEmojiImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int id,
-      int localSiteId,
-      String shortcode,
-      String imageUrl,
-      String altText,
-      String category,
-      DateTime published,
-      DateTime? updated});
+  $Res call({int id, int localSiteId, String shortcode, String imageUrl, String altText, String category, DateTime published, DateTime? updated});
 }
 
 /// @nodoc
-class __$$CustomEmojiImplCopyWithImpl<$Res>
-    extends _$CustomEmojiCopyWithImpl<$Res, _$CustomEmojiImpl>
-    implements _$$CustomEmojiImplCopyWith<$Res> {
-  __$$CustomEmojiImplCopyWithImpl(
-      _$CustomEmojiImpl _value, $Res Function(_$CustomEmojiImpl) _then)
-      : super(_value, _then);
+class __$$CustomEmojiImplCopyWithImpl<$Res> extends _$CustomEmojiCopyWithImpl<$Res, _$CustomEmojiImpl> implements _$$CustomEmojiImplCopyWith<$Res> {
+  __$$CustomEmojiImplCopyWithImpl(_$CustomEmojiImpl _value, $Res Function(_$CustomEmojiImpl) _then) : super(_value, _then);
 
   /// Create a copy of CustomEmoji
   /// with the given fields replaced by the non-null parameter values.
@@ -158,40 +143,50 @@ class __$$CustomEmojiImplCopyWithImpl<$Res>
     Object? published = null,
     Object? updated = freezed,
   }) {
-    return _then(_$CustomEmojiImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      localSiteId: null == localSiteId
-          ? _value.localSiteId
-          : localSiteId // ignore: cast_nullable_to_non_nullable
-              as int,
-      shortcode: null == shortcode
-          ? _value.shortcode
-          : shortcode // ignore: cast_nullable_to_non_nullable
-              as String,
-      imageUrl: null == imageUrl
-          ? _value.imageUrl
-          : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      altText: null == altText
-          ? _value.altText
-          : altText // ignore: cast_nullable_to_non_nullable
-              as String,
-      category: null == category
-          ? _value.category
-          : category // ignore: cast_nullable_to_non_nullable
-              as String,
-      published: null == published
-          ? _value.published
-          : published // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updated: freezed == updated
-          ? _value.updated
-          : updated // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ));
+    return _then(
+      _$CustomEmojiImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as int,
+        localSiteId:
+            null == localSiteId
+                ? _value.localSiteId
+                : localSiteId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        shortcode:
+            null == shortcode
+                ? _value.shortcode
+                : shortcode // ignore: cast_nullable_to_non_nullable
+                    as String,
+        imageUrl:
+            null == imageUrl
+                ? _value.imageUrl
+                : imageUrl // ignore: cast_nullable_to_non_nullable
+                    as String,
+        altText:
+            null == altText
+                ? _value.altText
+                : altText // ignore: cast_nullable_to_non_nullable
+                    as String,
+        category:
+            null == category
+                ? _value.category
+                : category // ignore: cast_nullable_to_non_nullable
+                    as String,
+        published:
+            null == published
+                ? _value.published
+                : published // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        updated:
+            freezed == updated
+                ? _value.updated
+                : updated // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+      ),
+    );
   }
 }
 
@@ -199,41 +194,40 @@ class __$$CustomEmojiImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$CustomEmojiImpl extends _CustomEmoji {
-  const _$CustomEmojiImpl(
-      {required this.id,
-      required this.localSiteId,
-      required this.shortcode,
-      required this.imageUrl,
-      required this.altText,
-      required this.category,
-      required this.published,
-      this.updated})
-      : super._();
+  const _$CustomEmojiImpl({
+    required this.id,
+    required this.localSiteId,
+    required this.shortcode,
+    required this.imageUrl,
+    required this.altText,
+    required this.category,
+    required this.published,
+    this.updated,
+  }) : super._();
 
-  factory _$CustomEmojiImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CustomEmojiImplFromJson(json);
+  factory _$CustomEmojiImpl.fromJson(Map<String, dynamic> json) => _$$CustomEmojiImplFromJson(json);
 
   @override
   final int id;
-// v0.18.0
+  // v0.18.0
   @override
   final int localSiteId;
-// v0.18.0
+  // v0.18.0
   @override
   final String shortcode;
-// v0.18.0
+  // v0.18.0
   @override
   final String imageUrl;
-// v0.18.0
+  // v0.18.0
   @override
   final String altText;
-// v0.18.0
+  // v0.18.0
   @override
   final String category;
-// v0.18.0
+  // v0.18.0
   @override
   final DateTime published;
-// v0.18.0
+  // v0.18.0
   @override
   final DateTime? updated;
 
@@ -248,55 +242,46 @@ class _$CustomEmojiImpl extends _CustomEmoji {
         (other.runtimeType == runtimeType &&
             other is _$CustomEmojiImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.localSiteId, localSiteId) ||
-                other.localSiteId == localSiteId) &&
-            (identical(other.shortcode, shortcode) ||
-                other.shortcode == shortcode) &&
-            (identical(other.imageUrl, imageUrl) ||
-                other.imageUrl == imageUrl) &&
+            (identical(other.localSiteId, localSiteId) || other.localSiteId == localSiteId) &&
+            (identical(other.shortcode, shortcode) || other.shortcode == shortcode) &&
+            (identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl) &&
             (identical(other.altText, altText) || other.altText == altText) &&
-            (identical(other.category, category) ||
-                other.category == category) &&
-            (identical(other.published, published) ||
-                other.published == published) &&
+            (identical(other.category, category) || other.category == category) &&
+            (identical(other.published, published) || other.published == published) &&
             (identical(other.updated, updated) || other.updated == updated));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, localSiteId, shortcode,
-      imageUrl, altText, category, published, updated);
+  int get hashCode => Object.hash(runtimeType, id, localSiteId, shortcode, imageUrl, altText, category, published, updated);
 
   /// Create a copy of CustomEmoji
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$CustomEmojiImplCopyWith<_$CustomEmojiImpl> get copyWith =>
-      __$$CustomEmojiImplCopyWithImpl<_$CustomEmojiImpl>(this, _$identity);
+  _$$CustomEmojiImplCopyWith<_$CustomEmojiImpl> get copyWith => __$$CustomEmojiImplCopyWithImpl<_$CustomEmojiImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CustomEmojiImplToJson(
-      this,
-    );
+    return _$$CustomEmojiImplToJson(this);
   }
 }
 
 abstract class _CustomEmoji extends CustomEmoji {
-  const factory _CustomEmoji(
-      {required final int id,
-      required final int localSiteId,
-      required final String shortcode,
-      required final String imageUrl,
-      required final String altText,
-      required final String category,
-      required final DateTime published,
-      final DateTime? updated}) = _$CustomEmojiImpl;
+  const factory _CustomEmoji({
+    required final int id,
+    required final int localSiteId,
+    required final String shortcode,
+    required final String imageUrl,
+    required final String altText,
+    required final String category,
+    required final DateTime published,
+    final DateTime? updated,
+  }) = _$CustomEmojiImpl;
   const _CustomEmoji._() : super._();
 
-  factory _CustomEmoji.fromJson(Map<String, dynamic> json) =
-      _$CustomEmojiImpl.fromJson;
+  factory _CustomEmoji.fromJson(Map<String, dynamic> json) = _$CustomEmojiImpl.fromJson;
 
   @override
   int get id; // v0.18.0
@@ -319,6 +304,5 @@ abstract class _CustomEmoji extends CustomEmoji {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CustomEmojiImplCopyWith<_$CustomEmojiImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CustomEmojiImplCopyWith<_$CustomEmojiImpl> get copyWith => throw _privateConstructorUsedError;
 }

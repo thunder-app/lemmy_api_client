@@ -22,6 +22,5 @@ class PrivateMessageReport with _$PrivateMessageReport {
   }) = _PrivateMessageReport;
 
   const PrivateMessageReport._();
-  factory PrivateMessageReport.fromJson(Map<String, dynamic> json) =>
-      _$PrivateMessageReportFromJson(json);
+  factory PrivateMessageReport.fromJson(Map<String, dynamic> json) => _$PrivateMessageReportFromJson(json);
 }

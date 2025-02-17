@@ -12,17 +12,16 @@ part of 'add_mod_to_community_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
-AddModToCommunityResponse _$AddModToCommunityResponseFromJson(
-    Map<String, dynamic> json) {
+AddModToCommunityResponse _$AddModToCommunityResponseFromJson(Map<String, dynamic> json) {
   return _AddModToCommunityResponse.fromJson(json);
 }
 
 /// @nodoc
 mixin _$AddModToCommunityResponse {
-  List<CommunityModeratorView> get moderators =>
-      throw _privateConstructorUsedError;
+  List<CommunityModeratorView> get moderators => throw _privateConstructorUsedError;
 
   /// Serializes this AddModToCommunityResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -30,23 +29,18 @@ mixin _$AddModToCommunityResponse {
   /// Create a copy of AddModToCommunityResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $AddModToCommunityResponseCopyWith<AddModToCommunityResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $AddModToCommunityResponseCopyWith<AddModToCommunityResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AddModToCommunityResponseCopyWith<$Res> {
-  factory $AddModToCommunityResponseCopyWith(AddModToCommunityResponse value,
-          $Res Function(AddModToCommunityResponse) then) =
-      _$AddModToCommunityResponseCopyWithImpl<$Res, AddModToCommunityResponse>;
+  factory $AddModToCommunityResponseCopyWith(AddModToCommunityResponse value, $Res Function(AddModToCommunityResponse) then) = _$AddModToCommunityResponseCopyWithImpl<$Res, AddModToCommunityResponse>;
   @useResult
   $Res call({List<CommunityModeratorView> moderators});
 }
 
 /// @nodoc
-class _$AddModToCommunityResponseCopyWithImpl<$Res,
-        $Val extends AddModToCommunityResponse>
-    implements $AddModToCommunityResponseCopyWith<$Res> {
+class _$AddModToCommunityResponseCopyWithImpl<$Res, $Val extends AddModToCommunityResponse> implements $AddModToCommunityResponseCopyWith<$Res> {
   _$AddModToCommunityResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -58,53 +52,47 @@ class _$AddModToCommunityResponseCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? moderators = null,
-  }) {
-    return _then(_value.copyWith(
-      moderators: null == moderators
-          ? _value.moderators
-          : moderators // ignore: cast_nullable_to_non_nullable
-              as List<CommunityModeratorView>,
-    ) as $Val);
+  $Res call({Object? moderators = null}) {
+    return _then(
+      _value.copyWith(
+            moderators:
+                null == moderators
+                    ? _value.moderators
+                    : moderators // ignore: cast_nullable_to_non_nullable
+                        as List<CommunityModeratorView>,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$AddModToCommunityResponseImplCopyWith<$Res>
-    implements $AddModToCommunityResponseCopyWith<$Res> {
-  factory _$$AddModToCommunityResponseImplCopyWith(
-          _$AddModToCommunityResponseImpl value,
-          $Res Function(_$AddModToCommunityResponseImpl) then) =
-      __$$AddModToCommunityResponseImplCopyWithImpl<$Res>;
+abstract class _$$AddModToCommunityResponseImplCopyWith<$Res> implements $AddModToCommunityResponseCopyWith<$Res> {
+  factory _$$AddModToCommunityResponseImplCopyWith(_$AddModToCommunityResponseImpl value, $Res Function(_$AddModToCommunityResponseImpl) then) = __$$AddModToCommunityResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<CommunityModeratorView> moderators});
 }
 
 /// @nodoc
-class __$$AddModToCommunityResponseImplCopyWithImpl<$Res>
-    extends _$AddModToCommunityResponseCopyWithImpl<$Res,
-        _$AddModToCommunityResponseImpl>
+class __$$AddModToCommunityResponseImplCopyWithImpl<$Res> extends _$AddModToCommunityResponseCopyWithImpl<$Res, _$AddModToCommunityResponseImpl>
     implements _$$AddModToCommunityResponseImplCopyWith<$Res> {
-  __$$AddModToCommunityResponseImplCopyWithImpl(
-      _$AddModToCommunityResponseImpl _value,
-      $Res Function(_$AddModToCommunityResponseImpl) _then)
-      : super(_value, _then);
+  __$$AddModToCommunityResponseImplCopyWithImpl(_$AddModToCommunityResponseImpl _value, $Res Function(_$AddModToCommunityResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of AddModToCommunityResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? moderators = null,
-  }) {
-    return _then(_$AddModToCommunityResponseImpl(
-      moderators: null == moderators
-          ? _value._moderators
-          : moderators // ignore: cast_nullable_to_non_nullable
-              as List<CommunityModeratorView>,
-    ));
+  $Res call({Object? moderators = null}) {
+    return _then(
+      _$AddModToCommunityResponseImpl(
+        moderators:
+            null == moderators
+                ? _value._moderators
+                : moderators // ignore: cast_nullable_to_non_nullable
+                    as List<CommunityModeratorView>,
+      ),
+    );
   }
 }
 
@@ -112,13 +100,9 @@ class __$$AddModToCommunityResponseImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$AddModToCommunityResponseImpl extends _AddModToCommunityResponse {
-  const _$AddModToCommunityResponseImpl(
-      {required final List<CommunityModeratorView> moderators})
-      : _moderators = moderators,
-        super._();
+  const _$AddModToCommunityResponseImpl({required final List<CommunityModeratorView> moderators}) : _moderators = moderators, super._();
 
-  factory _$AddModToCommunityResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AddModToCommunityResponseImplFromJson(json);
+  factory _$AddModToCommunityResponseImpl.fromJson(Map<String, dynamic> json) => _$$AddModToCommunityResponseImplFromJson(json);
 
   final List<CommunityModeratorView> _moderators;
   @override
@@ -135,43 +119,31 @@ class _$AddModToCommunityResponseImpl extends _AddModToCommunityResponse {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$AddModToCommunityResponseImpl &&
-            const DeepCollectionEquality()
-                .equals(other._moderators, _moderators));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$AddModToCommunityResponseImpl && const DeepCollectionEquality().equals(other._moderators, _moderators));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_moderators));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_moderators));
 
   /// Create a copy of AddModToCommunityResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$AddModToCommunityResponseImplCopyWith<_$AddModToCommunityResponseImpl>
-      get copyWith => __$$AddModToCommunityResponseImplCopyWithImpl<
-          _$AddModToCommunityResponseImpl>(this, _$identity);
+  _$$AddModToCommunityResponseImplCopyWith<_$AddModToCommunityResponseImpl> get copyWith => __$$AddModToCommunityResponseImplCopyWithImpl<_$AddModToCommunityResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AddModToCommunityResponseImplToJson(
-      this,
-    );
+    return _$$AddModToCommunityResponseImplToJson(this);
   }
 }
 
 abstract class _AddModToCommunityResponse extends AddModToCommunityResponse {
-  const factory _AddModToCommunityResponse(
-          {required final List<CommunityModeratorView> moderators}) =
-      _$AddModToCommunityResponseImpl;
+  const factory _AddModToCommunityResponse({required final List<CommunityModeratorView> moderators}) = _$AddModToCommunityResponseImpl;
   const _AddModToCommunityResponse._() : super._();
 
-  factory _AddModToCommunityResponse.fromJson(Map<String, dynamic> json) =
-      _$AddModToCommunityResponseImpl.fromJson;
+  factory _AddModToCommunityResponse.fromJson(Map<String, dynamic> json) = _$AddModToCommunityResponseImpl.fromJson;
 
   @override
   List<CommunityModeratorView> get moderators;
@@ -180,6 +152,5 @@ abstract class _AddModToCommunityResponse extends AddModToCommunityResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AddModToCommunityResponseImplCopyWith<_$AddModToCommunityResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$AddModToCommunityResponseImplCopyWith<_$AddModToCommunityResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

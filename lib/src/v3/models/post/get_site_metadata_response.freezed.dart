@@ -12,10 +12,10 @@ part of 'get_site_metadata_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
-GetSiteMetadataResponse _$GetSiteMetadataResponseFromJson(
-    Map<String, dynamic> json) {
+GetSiteMetadataResponse _$GetSiteMetadataResponseFromJson(Map<String, dynamic> json) {
   return _GetSiteMetadataResponse.fromJson(json);
 }
 
@@ -29,15 +29,12 @@ mixin _$GetSiteMetadataResponse {
   /// Create a copy of GetSiteMetadataResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $GetSiteMetadataResponseCopyWith<GetSiteMetadataResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $GetSiteMetadataResponseCopyWith<GetSiteMetadataResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GetSiteMetadataResponseCopyWith<$Res> {
-  factory $GetSiteMetadataResponseCopyWith(GetSiteMetadataResponse value,
-          $Res Function(GetSiteMetadataResponse) then) =
-      _$GetSiteMetadataResponseCopyWithImpl<$Res, GetSiteMetadataResponse>;
+  factory $GetSiteMetadataResponseCopyWith(GetSiteMetadataResponse value, $Res Function(GetSiteMetadataResponse) then) = _$GetSiteMetadataResponseCopyWithImpl<$Res, GetSiteMetadataResponse>;
   @useResult
   $Res call({LinkMetadata metadata});
 
@@ -45,9 +42,7 @@ abstract class $GetSiteMetadataResponseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$GetSiteMetadataResponseCopyWithImpl<$Res,
-        $Val extends GetSiteMetadataResponse>
-    implements $GetSiteMetadataResponseCopyWith<$Res> {
+class _$GetSiteMetadataResponseCopyWithImpl<$Res, $Val extends GetSiteMetadataResponse> implements $GetSiteMetadataResponseCopyWith<$Res> {
   _$GetSiteMetadataResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -59,15 +54,17 @@ class _$GetSiteMetadataResponseCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? metadata = null,
-  }) {
-    return _then(_value.copyWith(
-      metadata: null == metadata
-          ? _value.metadata
-          : metadata // ignore: cast_nullable_to_non_nullable
-              as LinkMetadata,
-    ) as $Val);
+  $Res call({Object? metadata = null}) {
+    return _then(
+      _value.copyWith(
+            metadata:
+                null == metadata
+                    ? _value.metadata
+                    : metadata // ignore: cast_nullable_to_non_nullable
+                        as LinkMetadata,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of GetSiteMetadataResponse
@@ -82,12 +79,8 @@ class _$GetSiteMetadataResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$GetSiteMetadataResponseImplCopyWith<$Res>
-    implements $GetSiteMetadataResponseCopyWith<$Res> {
-  factory _$$GetSiteMetadataResponseImplCopyWith(
-          _$GetSiteMetadataResponseImpl value,
-          $Res Function(_$GetSiteMetadataResponseImpl) then) =
-      __$$GetSiteMetadataResponseImplCopyWithImpl<$Res>;
+abstract class _$$GetSiteMetadataResponseImplCopyWith<$Res> implements $GetSiteMetadataResponseCopyWith<$Res> {
+  factory _$$GetSiteMetadataResponseImplCopyWith(_$GetSiteMetadataResponseImpl value, $Res Function(_$GetSiteMetadataResponseImpl) then) = __$$GetSiteMetadataResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({LinkMetadata metadata});
@@ -97,28 +90,23 @@ abstract class _$$GetSiteMetadataResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$GetSiteMetadataResponseImplCopyWithImpl<$Res>
-    extends _$GetSiteMetadataResponseCopyWithImpl<$Res,
-        _$GetSiteMetadataResponseImpl>
-    implements _$$GetSiteMetadataResponseImplCopyWith<$Res> {
-  __$$GetSiteMetadataResponseImplCopyWithImpl(
-      _$GetSiteMetadataResponseImpl _value,
-      $Res Function(_$GetSiteMetadataResponseImpl) _then)
-      : super(_value, _then);
+class __$$GetSiteMetadataResponseImplCopyWithImpl<$Res> extends _$GetSiteMetadataResponseCopyWithImpl<$Res, _$GetSiteMetadataResponseImpl> implements _$$GetSiteMetadataResponseImplCopyWith<$Res> {
+  __$$GetSiteMetadataResponseImplCopyWithImpl(_$GetSiteMetadataResponseImpl _value, $Res Function(_$GetSiteMetadataResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of GetSiteMetadataResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? metadata = null,
-  }) {
-    return _then(_$GetSiteMetadataResponseImpl(
-      metadata: null == metadata
-          ? _value.metadata
-          : metadata // ignore: cast_nullable_to_non_nullable
-              as LinkMetadata,
-    ));
+  $Res call({Object? metadata = null}) {
+    return _then(
+      _$GetSiteMetadataResponseImpl(
+        metadata:
+            null == metadata
+                ? _value.metadata
+                : metadata // ignore: cast_nullable_to_non_nullable
+                    as LinkMetadata,
+      ),
+    );
   }
 }
 
@@ -128,8 +116,7 @@ class __$$GetSiteMetadataResponseImplCopyWithImpl<$Res>
 class _$GetSiteMetadataResponseImpl extends _GetSiteMetadataResponse {
   const _$GetSiteMetadataResponseImpl({required this.metadata}) : super._();
 
-  factory _$GetSiteMetadataResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GetSiteMetadataResponseImplFromJson(json);
+  factory _$GetSiteMetadataResponseImpl.fromJson(Map<String, dynamic> json) => _$$GetSiteMetadataResponseImplFromJson(json);
 
   @override
   final LinkMetadata metadata;
@@ -141,11 +128,7 @@ class _$GetSiteMetadataResponseImpl extends _GetSiteMetadataResponse {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$GetSiteMetadataResponseImpl &&
-            (identical(other.metadata, metadata) ||
-                other.metadata == metadata));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$GetSiteMetadataResponseImpl && (identical(other.metadata, metadata) || other.metadata == metadata));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -157,25 +140,19 @@ class _$GetSiteMetadataResponseImpl extends _GetSiteMetadataResponse {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetSiteMetadataResponseImplCopyWith<_$GetSiteMetadataResponseImpl>
-      get copyWith => __$$GetSiteMetadataResponseImplCopyWithImpl<
-          _$GetSiteMetadataResponseImpl>(this, _$identity);
+  _$$GetSiteMetadataResponseImplCopyWith<_$GetSiteMetadataResponseImpl> get copyWith => __$$GetSiteMetadataResponseImplCopyWithImpl<_$GetSiteMetadataResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetSiteMetadataResponseImplToJson(
-      this,
-    );
+    return _$$GetSiteMetadataResponseImplToJson(this);
   }
 }
 
 abstract class _GetSiteMetadataResponse extends GetSiteMetadataResponse {
-  const factory _GetSiteMetadataResponse(
-      {required final LinkMetadata metadata}) = _$GetSiteMetadataResponseImpl;
+  const factory _GetSiteMetadataResponse({required final LinkMetadata metadata}) = _$GetSiteMetadataResponseImpl;
   const _GetSiteMetadataResponse._() : super._();
 
-  factory _GetSiteMetadataResponse.fromJson(Map<String, dynamic> json) =
-      _$GetSiteMetadataResponseImpl.fromJson;
+  factory _GetSiteMetadataResponse.fromJson(Map<String, dynamic> json) = _$GetSiteMetadataResponseImpl.fromJson;
 
   @override
   LinkMetadata get metadata;
@@ -184,6 +161,5 @@ abstract class _GetSiteMetadataResponse extends GetSiteMetadataResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetSiteMetadataResponseImplCopyWith<_$GetSiteMetadataResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$GetSiteMetadataResponseImplCopyWith<_$GetSiteMetadataResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

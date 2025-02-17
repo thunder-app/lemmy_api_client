@@ -6,9 +6,7 @@ enum CommunityVisibility {
   const CommunityVisibility(this.value);
 
   factory CommunityVisibility.fromJson(dynamic value) {
-    return value is int
-        ? values[value]
-        : values.firstWhere((e) => e.value == value);
+    return value is int ? values[value] : values.firstWhere((e) => e.value == value);
   }
 
   String toJson() => value;

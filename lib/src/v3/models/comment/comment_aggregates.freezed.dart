@@ -12,7 +12,8 @@ part of 'comment_aggregates.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 CommentAggregates _$CommentAggregatesFromJson(Map<String, dynamic> json) {
   return _CommentAggregates.fromJson(json);
@@ -21,8 +22,7 @@ CommentAggregates _$CommentAggregatesFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$CommentAggregates {
   @deprecated
-  int? get id =>
-      throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
+  int? get id => throw _privateConstructorUsedError; // v0.18.0 [deprecated in v0.19.0]
   int get commentId => throw _privateConstructorUsedError; // v0.18.0
   int get score => throw _privateConstructorUsedError; // v0.18.0
   int get upvotes => throw _privateConstructorUsedError; // v0.18.0
@@ -38,30 +38,18 @@ mixin _$CommentAggregates {
   /// Create a copy of CommentAggregates
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $CommentAggregatesCopyWith<CommentAggregates> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CommentAggregatesCopyWith<CommentAggregates> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CommentAggregatesCopyWith<$Res> {
-  factory $CommentAggregatesCopyWith(
-          CommentAggregates value, $Res Function(CommentAggregates) then) =
-      _$CommentAggregatesCopyWithImpl<$Res, CommentAggregates>;
+  factory $CommentAggregatesCopyWith(CommentAggregates value, $Res Function(CommentAggregates) then) = _$CommentAggregatesCopyWithImpl<$Res, CommentAggregates>;
   @useResult
-  $Res call(
-      {@deprecated int? id,
-      int commentId,
-      int score,
-      int upvotes,
-      int downvotes,
-      DateTime published,
-      int childCount,
-      @deprecated int? hotRank});
+  $Res call({@deprecated int? id, int commentId, int score, int upvotes, int downvotes, DateTime published, int childCount, @deprecated int? hotRank});
 }
 
 /// @nodoc
-class _$CommentAggregatesCopyWithImpl<$Res, $Val extends CommentAggregates>
-    implements $CommentAggregatesCopyWith<$Res> {
+class _$CommentAggregatesCopyWithImpl<$Res, $Val extends CommentAggregates> implements $CommentAggregatesCopyWith<$Res> {
   _$CommentAggregatesCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -83,69 +71,65 @@ class _$CommentAggregatesCopyWithImpl<$Res, $Val extends CommentAggregates>
     Object? childCount = null,
     Object? hotRank = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      commentId: null == commentId
-          ? _value.commentId
-          : commentId // ignore: cast_nullable_to_non_nullable
-              as int,
-      score: null == score
-          ? _value.score
-          : score // ignore: cast_nullable_to_non_nullable
-              as int,
-      upvotes: null == upvotes
-          ? _value.upvotes
-          : upvotes // ignore: cast_nullable_to_non_nullable
-              as int,
-      downvotes: null == downvotes
-          ? _value.downvotes
-          : downvotes // ignore: cast_nullable_to_non_nullable
-              as int,
-      published: null == published
-          ? _value.published
-          : published // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      childCount: null == childCount
-          ? _value.childCount
-          : childCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      hotRank: freezed == hotRank
-          ? _value.hotRank
-          : hotRank // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                freezed == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            commentId:
+                null == commentId
+                    ? _value.commentId
+                    : commentId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            score:
+                null == score
+                    ? _value.score
+                    : score // ignore: cast_nullable_to_non_nullable
+                        as int,
+            upvotes:
+                null == upvotes
+                    ? _value.upvotes
+                    : upvotes // ignore: cast_nullable_to_non_nullable
+                        as int,
+            downvotes:
+                null == downvotes
+                    ? _value.downvotes
+                    : downvotes // ignore: cast_nullable_to_non_nullable
+                        as int,
+            published:
+                null == published
+                    ? _value.published
+                    : published // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            childCount:
+                null == childCount
+                    ? _value.childCount
+                    : childCount // ignore: cast_nullable_to_non_nullable
+                        as int,
+            hotRank:
+                freezed == hotRank
+                    ? _value.hotRank
+                    : hotRank // ignore: cast_nullable_to_non_nullable
+                        as int?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$CommentAggregatesImplCopyWith<$Res>
-    implements $CommentAggregatesCopyWith<$Res> {
-  factory _$$CommentAggregatesImplCopyWith(_$CommentAggregatesImpl value,
-          $Res Function(_$CommentAggregatesImpl) then) =
-      __$$CommentAggregatesImplCopyWithImpl<$Res>;
+abstract class _$$CommentAggregatesImplCopyWith<$Res> implements $CommentAggregatesCopyWith<$Res> {
+  factory _$$CommentAggregatesImplCopyWith(_$CommentAggregatesImpl value, $Res Function(_$CommentAggregatesImpl) then) = __$$CommentAggregatesImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {@deprecated int? id,
-      int commentId,
-      int score,
-      int upvotes,
-      int downvotes,
-      DateTime published,
-      int childCount,
-      @deprecated int? hotRank});
+  $Res call({@deprecated int? id, int commentId, int score, int upvotes, int downvotes, DateTime published, int childCount, @deprecated int? hotRank});
 }
 
 /// @nodoc
-class __$$CommentAggregatesImplCopyWithImpl<$Res>
-    extends _$CommentAggregatesCopyWithImpl<$Res, _$CommentAggregatesImpl>
-    implements _$$CommentAggregatesImplCopyWith<$Res> {
-  __$$CommentAggregatesImplCopyWithImpl(_$CommentAggregatesImpl _value,
-      $Res Function(_$CommentAggregatesImpl) _then)
-      : super(_value, _then);
+class __$$CommentAggregatesImplCopyWithImpl<$Res> extends _$CommentAggregatesCopyWithImpl<$Res, _$CommentAggregatesImpl> implements _$$CommentAggregatesImplCopyWith<$Res> {
+  __$$CommentAggregatesImplCopyWithImpl(_$CommentAggregatesImpl _value, $Res Function(_$CommentAggregatesImpl) _then) : super(_value, _then);
 
   /// Create a copy of CommentAggregates
   /// with the given fields replaced by the non-null parameter values.
@@ -161,40 +145,50 @@ class __$$CommentAggregatesImplCopyWithImpl<$Res>
     Object? childCount = null,
     Object? hotRank = freezed,
   }) {
-    return _then(_$CommentAggregatesImpl(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      commentId: null == commentId
-          ? _value.commentId
-          : commentId // ignore: cast_nullable_to_non_nullable
-              as int,
-      score: null == score
-          ? _value.score
-          : score // ignore: cast_nullable_to_non_nullable
-              as int,
-      upvotes: null == upvotes
-          ? _value.upvotes
-          : upvotes // ignore: cast_nullable_to_non_nullable
-              as int,
-      downvotes: null == downvotes
-          ? _value.downvotes
-          : downvotes // ignore: cast_nullable_to_non_nullable
-              as int,
-      published: null == published
-          ? _value.published
-          : published // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      childCount: null == childCount
-          ? _value.childCount
-          : childCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      hotRank: freezed == hotRank
-          ? _value.hotRank
-          : hotRank // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
+    return _then(
+      _$CommentAggregatesImpl(
+        id:
+            freezed == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        commentId:
+            null == commentId
+                ? _value.commentId
+                : commentId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        score:
+            null == score
+                ? _value.score
+                : score // ignore: cast_nullable_to_non_nullable
+                    as int,
+        upvotes:
+            null == upvotes
+                ? _value.upvotes
+                : upvotes // ignore: cast_nullable_to_non_nullable
+                    as int,
+        downvotes:
+            null == downvotes
+                ? _value.downvotes
+                : downvotes // ignore: cast_nullable_to_non_nullable
+                    as int,
+        published:
+            null == published
+                ? _value.published
+                : published // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        childCount:
+            null == childCount
+                ? _value.childCount
+                : childCount // ignore: cast_nullable_to_non_nullable
+                    as int,
+        hotRank:
+            freezed == hotRank
+                ? _value.hotRank
+                : hotRank // ignore: cast_nullable_to_non_nullable
+                    as int?,
+      ),
+    );
   }
 }
 
@@ -202,42 +196,41 @@ class __$$CommentAggregatesImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$CommentAggregatesImpl extends _CommentAggregates {
-  const _$CommentAggregatesImpl(
-      {@deprecated this.id,
-      required this.commentId,
-      required this.score,
-      required this.upvotes,
-      required this.downvotes,
-      required this.published,
-      required this.childCount,
-      @deprecated this.hotRank})
-      : super._();
+  const _$CommentAggregatesImpl({
+    @deprecated this.id,
+    required this.commentId,
+    required this.score,
+    required this.upvotes,
+    required this.downvotes,
+    required this.published,
+    required this.childCount,
+    @deprecated this.hotRank,
+  }) : super._();
 
-  factory _$CommentAggregatesImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CommentAggregatesImplFromJson(json);
+  factory _$CommentAggregatesImpl.fromJson(Map<String, dynamic> json) => _$$CommentAggregatesImplFromJson(json);
 
   @override
   @deprecated
   final int? id;
-// v0.18.0 [deprecated in v0.19.0]
+  // v0.18.0 [deprecated in v0.19.0]
   @override
   final int commentId;
-// v0.18.0
+  // v0.18.0
   @override
   final int score;
-// v0.18.0
+  // v0.18.0
   @override
   final int upvotes;
-// v0.18.0
+  // v0.18.0
   @override
   final int downvotes;
-// v0.18.0
+  // v0.18.0
   @override
   final DateTime published;
-// v0.18.0
+  // v0.18.0
   @override
   final int childCount;
-// v0.18.0
+  // v0.18.0
   @override
   @deprecated
   final int? hotRank;
@@ -253,55 +246,46 @@ class _$CommentAggregatesImpl extends _CommentAggregates {
         (other.runtimeType == runtimeType &&
             other is _$CommentAggregatesImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.commentId, commentId) ||
-                other.commentId == commentId) &&
+            (identical(other.commentId, commentId) || other.commentId == commentId) &&
             (identical(other.score, score) || other.score == score) &&
             (identical(other.upvotes, upvotes) || other.upvotes == upvotes) &&
-            (identical(other.downvotes, downvotes) ||
-                other.downvotes == downvotes) &&
-            (identical(other.published, published) ||
-                other.published == published) &&
-            (identical(other.childCount, childCount) ||
-                other.childCount == childCount) &&
+            (identical(other.downvotes, downvotes) || other.downvotes == downvotes) &&
+            (identical(other.published, published) || other.published == published) &&
+            (identical(other.childCount, childCount) || other.childCount == childCount) &&
             (identical(other.hotRank, hotRank) || other.hotRank == hotRank));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, commentId, score, upvotes,
-      downvotes, published, childCount, hotRank);
+  int get hashCode => Object.hash(runtimeType, id, commentId, score, upvotes, downvotes, published, childCount, hotRank);
 
   /// Create a copy of CommentAggregates
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$CommentAggregatesImplCopyWith<_$CommentAggregatesImpl> get copyWith =>
-      __$$CommentAggregatesImplCopyWithImpl<_$CommentAggregatesImpl>(
-          this, _$identity);
+  _$$CommentAggregatesImplCopyWith<_$CommentAggregatesImpl> get copyWith => __$$CommentAggregatesImplCopyWithImpl<_$CommentAggregatesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CommentAggregatesImplToJson(
-      this,
-    );
+    return _$$CommentAggregatesImplToJson(this);
   }
 }
 
 abstract class _CommentAggregates extends CommentAggregates {
-  const factory _CommentAggregates(
-      {@deprecated final int? id,
-      required final int commentId,
-      required final int score,
-      required final int upvotes,
-      required final int downvotes,
-      required final DateTime published,
-      required final int childCount,
-      @deprecated final int? hotRank}) = _$CommentAggregatesImpl;
+  const factory _CommentAggregates({
+    @deprecated final int? id,
+    required final int commentId,
+    required final int score,
+    required final int upvotes,
+    required final int downvotes,
+    required final DateTime published,
+    required final int childCount,
+    @deprecated final int? hotRank,
+  }) = _$CommentAggregatesImpl;
   const _CommentAggregates._() : super._();
 
-  factory _CommentAggregates.fromJson(Map<String, dynamic> json) =
-      _$CommentAggregatesImpl.fromJson;
+  factory _CommentAggregates.fromJson(Map<String, dynamic> json) = _$CommentAggregatesImpl.fromJson;
 
   @override
   @deprecated
@@ -326,6 +310,5 @@ abstract class _CommentAggregates extends CommentAggregates {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CommentAggregatesImplCopyWith<_$CommentAggregatesImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CommentAggregatesImplCopyWith<_$CommentAggregatesImpl> get copyWith => throw _privateConstructorUsedError;
 }

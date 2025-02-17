@@ -7,22 +7,21 @@ part of 'mod_ban.dart';
 // **************************************************************************
 
 _$ModBanImpl _$$ModBanImplFromJson(Map<String, dynamic> json) => _$ModBanImpl(
-      id: (json['id'] as num).toInt(),
-      modPersonId: (json['mod_person_id'] as num).toInt(),
-      otherPersonId: (json['other_person_id'] as num).toInt(),
-      reason: json['reason'] as String?,
-      banned: json['banned'] as bool,
-      expires: json['expires'] as String?,
-      when: json['when_'] as String,
-    );
+  id: (json['id'] as num).toInt(),
+  modPersonId: (json['mod_person_id'] as num).toInt(),
+  otherPersonId: (json['other_person_id'] as num).toInt(),
+  reason: json['reason'] as String?,
+  banned: json['banned'] as bool,
+  expires: json['expires'] as String?,
+  when: json['when_'] as String,
+);
 
-Map<String, dynamic> _$$ModBanImplToJson(_$ModBanImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'mod_person_id': instance.modPersonId,
-      'other_person_id': instance.otherPersonId,
-      'reason': instance.reason,
-      'banned': instance.banned,
-      'expires': instance.expires,
-      'when_': instance.when,
-    };
+Map<String, dynamic> _$$ModBanImplToJson(_$ModBanImpl instance) => <String, dynamic>{
+  'id': instance.id,
+  'mod_person_id': instance.modPersonId,
+  'other_person_id': instance.otherPersonId,
+  'reason': instance.reason,
+  'banned': instance.banned,
+  'expires': instance.expires,
+  'when_': instance.when,
+};

@@ -7,41 +7,27 @@ part of 'search.dart';
 // **************************************************************************
 
 _$SearchImpl _$$SearchImplFromJson(Map<String, dynamic> json) => _$SearchImpl(
-      q: json['q'] as String,
-      communityId: (json['community_id'] as num?)?.toInt(),
-      communityName: json['community_name'] as String?,
-      creatorId: (json['creator_id'] as num?)?.toInt(),
-      type: json['type_'] == null
-          ? null
-          : SearchType.fromJson(json['type_'] as String),
-      sort: json['sort'] == null ? null : SortType.fromJson(json['sort']),
-      listingType: json['listing_type'] == null
-          ? null
-          : ListingType.fromJson(json['listing_type']),
-      page: (json['page'] as num?)?.toInt(),
-      limit: (json['limit'] as num?)?.toInt(),
-      auth: json['auth'] as String?,
-    );
+  q: json['q'] as String,
+  communityId: (json['community_id'] as num?)?.toInt(),
+  communityName: json['community_name'] as String?,
+  creatorId: (json['creator_id'] as num?)?.toInt(),
+  type: json['type_'] == null ? null : SearchType.fromJson(json['type_'] as String),
+  sort: json['sort'] == null ? null : SortType.fromJson(json['sort']),
+  listingType: json['listing_type'] == null ? null : ListingType.fromJson(json['listing_type']),
+  page: (json['page'] as num?)?.toInt(),
+  limit: (json['limit'] as num?)?.toInt(),
+  auth: json['auth'] as String?,
+);
 
-Map<String, dynamic> _$$SearchImplToJson(_$SearchImpl instance) {
-  final val = <String, dynamic>{
-    'q': instance.q,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('community_id', instance.communityId);
-  writeNotNull('community_name', instance.communityName);
-  writeNotNull('creator_id', instance.creatorId);
-  writeNotNull('type_', instance.type?.toJson());
-  writeNotNull('sort', instance.sort?.toJson());
-  writeNotNull('listing_type', instance.listingType?.toJson());
-  writeNotNull('page', instance.page);
-  writeNotNull('limit', instance.limit);
-  writeNotNull('auth', instance.auth);
-  return val;
-}
+Map<String, dynamic> _$$SearchImplToJson(_$SearchImpl instance) => <String, dynamic>{
+  'q': instance.q,
+  if (instance.communityId case final value?) 'community_id': value,
+  if (instance.communityName case final value?) 'community_name': value,
+  if (instance.creatorId case final value?) 'creator_id': value,
+  if (instance.type?.toJson() case final value?) 'type_': value,
+  if (instance.sort?.toJson() case final value?) 'sort': value,
+  if (instance.listingType?.toJson() case final value?) 'listing_type': value,
+  if (instance.page case final value?) 'page': value,
+  if (instance.limit case final value?) 'limit': value,
+  if (instance.auth case final value?) 'auth': value,
+};

@@ -20,6 +20,5 @@ class MyUserInfo with _$MyUserInfo {
   }) = _MyUserInfo;
 
   const MyUserInfo._();
-  factory MyUserInfo.fromJson(Map<String, dynamic> json) =>
-      _$MyUserInfoFromJson(json);
+  factory MyUserInfo.fromJson(Map<String, dynamic> json) => _$MyUserInfoFromJson(json);
 }

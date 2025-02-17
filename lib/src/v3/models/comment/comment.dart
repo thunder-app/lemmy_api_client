@@ -26,6 +26,5 @@ class Comment with _$Comment {
   }) = _Comment;
 
   const Comment._();
-  factory Comment.fromJson(Map<String, dynamic> json) =>
-      _$CommentFromJson(json);
+  factory Comment.fromJson(Map<String, dynamic> json) => _$CommentFromJson(json);
 }

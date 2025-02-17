@@ -18,6 +18,5 @@ class ModHideCommunity with _$ModHideCommunity {
   }) = _ModHideCommunity;
 
   const ModHideCommunity._();
-  factory ModHideCommunity.fromJson(Map<String, dynamic> json) =>
-      _$ModHideCommunityFromJson(json);
+  factory ModHideCommunity.fromJson(Map<String, dynamic> json) => _$ModHideCommunityFromJson(json);
 }
