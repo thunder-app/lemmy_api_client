@@ -15,6 +15,5 @@ class AdminPurgePersonView with _$AdminPurgePersonView {
   }) = _AdminPurgePersonView;
 
   const AdminPurgePersonView._();
-  factory AdminPurgePersonView.fromJson(Map<String, dynamic> json) =>
-      _$AdminPurgePersonViewFromJson(json);
+  factory AdminPurgePersonView.fromJson(Map<String, dynamic> json) => _$AdminPurgePersonViewFromJson(json);
 }

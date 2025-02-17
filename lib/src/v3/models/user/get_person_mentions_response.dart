@@ -14,6 +14,5 @@ class GetPersonMentionsResponse with _$GetPersonMentionsResponse {
   }) = _GetPersonMentionsResponse;
 
   const GetPersonMentionsResponse._();
-  factory GetPersonMentionsResponse.fromJson(Map<String, dynamic> json) =>
-      _$GetPersonMentionsResponseFromJson(json);
+  factory GetPersonMentionsResponse.fromJson(Map<String, dynamic> json) => _$GetPersonMentionsResponseFromJson(json);
 }

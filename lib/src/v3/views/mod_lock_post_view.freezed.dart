@@ -12,7 +12,8 @@ part of 'mod_lock_post_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ModLockPostView _$ModLockPostViewFromJson(Map<String, dynamic> json) {
   return _ModLockPostView.fromJson(json);
@@ -31,21 +32,14 @@ mixin _$ModLockPostView {
   /// Create a copy of ModLockPostView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ModLockPostViewCopyWith<ModLockPostView> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ModLockPostViewCopyWith<ModLockPostView> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ModLockPostViewCopyWith<$Res> {
-  factory $ModLockPostViewCopyWith(
-          ModLockPostView value, $Res Function(ModLockPostView) then) =
-      _$ModLockPostViewCopyWithImpl<$Res, ModLockPostView>;
+  factory $ModLockPostViewCopyWith(ModLockPostView value, $Res Function(ModLockPostView) then) = _$ModLockPostViewCopyWithImpl<$Res, ModLockPostView>;
   @useResult
-  $Res call(
-      {ModLockPost modLockPost,
-      Person? moderator,
-      Post post,
-      Community community});
+  $Res call({ModLockPost modLockPost, Person? moderator, Post post, Community community});
 
   $ModLockPostCopyWith<$Res> get modLockPost;
   $PersonCopyWith<$Res>? get moderator;
@@ -54,8 +48,7 @@ abstract class $ModLockPostViewCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ModLockPostViewCopyWithImpl<$Res, $Val extends ModLockPostView>
-    implements $ModLockPostViewCopyWith<$Res> {
+class _$ModLockPostViewCopyWithImpl<$Res, $Val extends ModLockPostView> implements $ModLockPostViewCopyWith<$Res> {
   _$ModLockPostViewCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -67,30 +60,32 @@ class _$ModLockPostViewCopyWithImpl<$Res, $Val extends ModLockPostView>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? modLockPost = null,
-    Object? moderator = freezed,
-    Object? post = null,
-    Object? community = null,
-  }) {
-    return _then(_value.copyWith(
-      modLockPost: null == modLockPost
-          ? _value.modLockPost
-          : modLockPost // ignore: cast_nullable_to_non_nullable
-              as ModLockPost,
-      moderator: freezed == moderator
-          ? _value.moderator
-          : moderator // ignore: cast_nullable_to_non_nullable
-              as Person?,
-      post: null == post
-          ? _value.post
-          : post // ignore: cast_nullable_to_non_nullable
-              as Post,
-      community: null == community
-          ? _value.community
-          : community // ignore: cast_nullable_to_non_nullable
-              as Community,
-    ) as $Val);
+  $Res call({Object? modLockPost = null, Object? moderator = freezed, Object? post = null, Object? community = null}) {
+    return _then(
+      _value.copyWith(
+            modLockPost:
+                null == modLockPost
+                    ? _value.modLockPost
+                    : modLockPost // ignore: cast_nullable_to_non_nullable
+                        as ModLockPost,
+            moderator:
+                freezed == moderator
+                    ? _value.moderator
+                    : moderator // ignore: cast_nullable_to_non_nullable
+                        as Person?,
+            post:
+                null == post
+                    ? _value.post
+                    : post // ignore: cast_nullable_to_non_nullable
+                        as Post,
+            community:
+                null == community
+                    ? _value.community
+                    : community // ignore: cast_nullable_to_non_nullable
+                        as Community,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of ModLockPostView
@@ -139,18 +134,11 @@ class _$ModLockPostViewCopyWithImpl<$Res, $Val extends ModLockPostView>
 }
 
 /// @nodoc
-abstract class _$$ModLockPostViewImplCopyWith<$Res>
-    implements $ModLockPostViewCopyWith<$Res> {
-  factory _$$ModLockPostViewImplCopyWith(_$ModLockPostViewImpl value,
-          $Res Function(_$ModLockPostViewImpl) then) =
-      __$$ModLockPostViewImplCopyWithImpl<$Res>;
+abstract class _$$ModLockPostViewImplCopyWith<$Res> implements $ModLockPostViewCopyWith<$Res> {
+  factory _$$ModLockPostViewImplCopyWith(_$ModLockPostViewImpl value, $Res Function(_$ModLockPostViewImpl) then) = __$$ModLockPostViewImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {ModLockPost modLockPost,
-      Person? moderator,
-      Post post,
-      Community community});
+  $Res call({ModLockPost modLockPost, Person? moderator, Post post, Community community});
 
   @override
   $ModLockPostCopyWith<$Res> get modLockPost;
@@ -163,41 +151,38 @@ abstract class _$$ModLockPostViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ModLockPostViewImplCopyWithImpl<$Res>
-    extends _$ModLockPostViewCopyWithImpl<$Res, _$ModLockPostViewImpl>
-    implements _$$ModLockPostViewImplCopyWith<$Res> {
-  __$$ModLockPostViewImplCopyWithImpl(
-      _$ModLockPostViewImpl _value, $Res Function(_$ModLockPostViewImpl) _then)
-      : super(_value, _then);
+class __$$ModLockPostViewImplCopyWithImpl<$Res> extends _$ModLockPostViewCopyWithImpl<$Res, _$ModLockPostViewImpl> implements _$$ModLockPostViewImplCopyWith<$Res> {
+  __$$ModLockPostViewImplCopyWithImpl(_$ModLockPostViewImpl _value, $Res Function(_$ModLockPostViewImpl) _then) : super(_value, _then);
 
   /// Create a copy of ModLockPostView
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? modLockPost = null,
-    Object? moderator = freezed,
-    Object? post = null,
-    Object? community = null,
-  }) {
-    return _then(_$ModLockPostViewImpl(
-      modLockPost: null == modLockPost
-          ? _value.modLockPost
-          : modLockPost // ignore: cast_nullable_to_non_nullable
-              as ModLockPost,
-      moderator: freezed == moderator
-          ? _value.moderator
-          : moderator // ignore: cast_nullable_to_non_nullable
-              as Person?,
-      post: null == post
-          ? _value.post
-          : post // ignore: cast_nullable_to_non_nullable
-              as Post,
-      community: null == community
-          ? _value.community
-          : community // ignore: cast_nullable_to_non_nullable
-              as Community,
-    ));
+  $Res call({Object? modLockPost = null, Object? moderator = freezed, Object? post = null, Object? community = null}) {
+    return _then(
+      _$ModLockPostViewImpl(
+        modLockPost:
+            null == modLockPost
+                ? _value.modLockPost
+                : modLockPost // ignore: cast_nullable_to_non_nullable
+                    as ModLockPost,
+        moderator:
+            freezed == moderator
+                ? _value.moderator
+                : moderator // ignore: cast_nullable_to_non_nullable
+                    as Person?,
+        post:
+            null == post
+                ? _value.post
+                : post // ignore: cast_nullable_to_non_nullable
+                    as Post,
+        community:
+            null == community
+                ? _value.community
+                : community // ignore: cast_nullable_to_non_nullable
+                    as Community,
+      ),
+    );
   }
 }
 
@@ -205,25 +190,19 @@ class __$$ModLockPostViewImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$ModLockPostViewImpl extends _ModLockPostView {
-  const _$ModLockPostViewImpl(
-      {required this.modLockPost,
-      this.moderator,
-      required this.post,
-      required this.community})
-      : super._();
+  const _$ModLockPostViewImpl({required this.modLockPost, this.moderator, required this.post, required this.community}) : super._();
 
-  factory _$ModLockPostViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ModLockPostViewImplFromJson(json);
+  factory _$ModLockPostViewImpl.fromJson(Map<String, dynamic> json) => _$$ModLockPostViewImplFromJson(json);
 
   @override
   final ModLockPost modLockPost;
-// v0.18.0
+  // v0.18.0
   @override
   final Person? moderator;
-// v0.18.0
+  // v0.18.0
   @override
   final Post post;
-// v0.18.0
+  // v0.18.0
   @override
   final Community community;
 
@@ -237,47 +216,34 @@ class _$ModLockPostViewImpl extends _ModLockPostView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ModLockPostViewImpl &&
-            (identical(other.modLockPost, modLockPost) ||
-                other.modLockPost == modLockPost) &&
-            (identical(other.moderator, moderator) ||
-                other.moderator == moderator) &&
+            (identical(other.modLockPost, modLockPost) || other.modLockPost == modLockPost) &&
+            (identical(other.moderator, moderator) || other.moderator == moderator) &&
             (identical(other.post, post) || other.post == post) &&
-            (identical(other.community, community) ||
-                other.community == community));
+            (identical(other.community, community) || other.community == community));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, modLockPost, moderator, post, community);
+  int get hashCode => Object.hash(runtimeType, modLockPost, moderator, post, community);
 
   /// Create a copy of ModLockPostView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ModLockPostViewImplCopyWith<_$ModLockPostViewImpl> get copyWith =>
-      __$$ModLockPostViewImplCopyWithImpl<_$ModLockPostViewImpl>(
-          this, _$identity);
+  _$$ModLockPostViewImplCopyWith<_$ModLockPostViewImpl> get copyWith => __$$ModLockPostViewImplCopyWithImpl<_$ModLockPostViewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ModLockPostViewImplToJson(
-      this,
-    );
+    return _$$ModLockPostViewImplToJson(this);
   }
 }
 
 abstract class _ModLockPostView extends ModLockPostView {
-  const factory _ModLockPostView(
-      {required final ModLockPost modLockPost,
-      final Person? moderator,
-      required final Post post,
-      required final Community community}) = _$ModLockPostViewImpl;
+  const factory _ModLockPostView({required final ModLockPost modLockPost, final Person? moderator, required final Post post, required final Community community}) = _$ModLockPostViewImpl;
   const _ModLockPostView._() : super._();
 
-  factory _ModLockPostView.fromJson(Map<String, dynamic> json) =
-      _$ModLockPostViewImpl.fromJson;
+  factory _ModLockPostView.fromJson(Map<String, dynamic> json) = _$ModLockPostViewImpl.fromJson;
 
   @override
   ModLockPost get modLockPost; // v0.18.0
@@ -292,6 +258,5 @@ abstract class _ModLockPostView extends ModLockPostView {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ModLockPostViewImplCopyWith<_$ModLockPostViewImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ModLockPostViewImplCopyWith<_$ModLockPostViewImpl> get copyWith => throw _privateConstructorUsedError;
 }

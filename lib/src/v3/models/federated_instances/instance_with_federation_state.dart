@@ -21,6 +21,5 @@ class InstanceWithFederationState with _$InstanceWithFederationState {
   }) = _InstanceWithFederationState;
 
   const InstanceWithFederationState._();
-  factory InstanceWithFederationState.fromJson(Map<String, dynamic> json) =>
-      _$InstanceWithFederationStateFromJson(json);
+  factory InstanceWithFederationState.fromJson(Map<String, dynamic> json) => _$InstanceWithFederationStateFromJson(json);
 }

@@ -16,6 +16,5 @@ class VoteView with _$VoteView {
   }) = _VoteView;
 
   const VoteView._();
-  factory VoteView.fromJson(Map<String, dynamic> json) =>
-      _$VoteViewFromJson(json);
+  factory VoteView.fromJson(Map<String, dynamic> json) => _$VoteViewFromJson(json);
 }

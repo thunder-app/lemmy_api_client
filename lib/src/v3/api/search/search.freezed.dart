@@ -12,7 +12,8 @@ part of 'search.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 Search _$SearchFromJson(Map<String, dynamic> json) {
   return _Search.fromJson(json);
@@ -43,25 +44,24 @@ mixin _$Search {
 
 /// @nodoc
 abstract class $SearchCopyWith<$Res> {
-  factory $SearchCopyWith(Search value, $Res Function(Search) then) =
-      _$SearchCopyWithImpl<$Res, Search>;
+  factory $SearchCopyWith(Search value, $Res Function(Search) then) = _$SearchCopyWithImpl<$Res, Search>;
   @useResult
-  $Res call(
-      {String q,
-      int? communityId,
-      String? communityName,
-      int? creatorId,
-      @JsonKey(name: 'type_') SearchType? type,
-      SortType? sort,
-      ListingType? listingType,
-      int? page,
-      int? limit,
-      String? auth});
+  $Res call({
+    String q,
+    int? communityId,
+    String? communityName,
+    int? creatorId,
+    @JsonKey(name: 'type_') SearchType? type,
+    SortType? sort,
+    ListingType? listingType,
+    int? page,
+    int? limit,
+    String? auth,
+  });
 }
 
 /// @nodoc
-class _$SearchCopyWithImpl<$Res, $Val extends Search>
-    implements $SearchCopyWith<$Res> {
+class _$SearchCopyWithImpl<$Res, $Val extends Search> implements $SearchCopyWith<$Res> {
   _$SearchCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -85,78 +85,86 @@ class _$SearchCopyWithImpl<$Res, $Val extends Search>
     Object? limit = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_value.copyWith(
-      q: null == q
-          ? _value.q
-          : q // ignore: cast_nullable_to_non_nullable
-              as String,
-      communityId: freezed == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      communityName: freezed == communityName
-          ? _value.communityName
-          : communityName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      creatorId: freezed == creatorId
-          ? _value.creatorId
-          : creatorId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as SearchType?,
-      sort: freezed == sort
-          ? _value.sort
-          : sort // ignore: cast_nullable_to_non_nullable
-              as SortType?,
-      listingType: freezed == listingType
-          ? _value.listingType
-          : listingType // ignore: cast_nullable_to_non_nullable
-              as ListingType?,
-      page: freezed == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as int?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            q:
+                null == q
+                    ? _value.q
+                    : q // ignore: cast_nullable_to_non_nullable
+                        as String,
+            communityId:
+                freezed == communityId
+                    ? _value.communityId
+                    : communityId // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            communityName:
+                freezed == communityName
+                    ? _value.communityName
+                    : communityName // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            creatorId:
+                freezed == creatorId
+                    ? _value.creatorId
+                    : creatorId // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            type:
+                freezed == type
+                    ? _value.type
+                    : type // ignore: cast_nullable_to_non_nullable
+                        as SearchType?,
+            sort:
+                freezed == sort
+                    ? _value.sort
+                    : sort // ignore: cast_nullable_to_non_nullable
+                        as SortType?,
+            listingType:
+                freezed == listingType
+                    ? _value.listingType
+                    : listingType // ignore: cast_nullable_to_non_nullable
+                        as ListingType?,
+            page:
+                freezed == page
+                    ? _value.page
+                    : page // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            limit:
+                freezed == limit
+                    ? _value.limit
+                    : limit // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            auth:
+                freezed == auth
+                    ? _value.auth
+                    : auth // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$SearchImplCopyWith<$Res> implements $SearchCopyWith<$Res> {
-  factory _$$SearchImplCopyWith(
-          _$SearchImpl value, $Res Function(_$SearchImpl) then) =
-      __$$SearchImplCopyWithImpl<$Res>;
+  factory _$$SearchImplCopyWith(_$SearchImpl value, $Res Function(_$SearchImpl) then) = __$$SearchImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String q,
-      int? communityId,
-      String? communityName,
-      int? creatorId,
-      @JsonKey(name: 'type_') SearchType? type,
-      SortType? sort,
-      ListingType? listingType,
-      int? page,
-      int? limit,
-      String? auth});
+  $Res call({
+    String q,
+    int? communityId,
+    String? communityName,
+    int? creatorId,
+    @JsonKey(name: 'type_') SearchType? type,
+    SortType? sort,
+    ListingType? listingType,
+    int? page,
+    int? limit,
+    String? auth,
+  });
 }
 
 /// @nodoc
-class __$$SearchImplCopyWithImpl<$Res>
-    extends _$SearchCopyWithImpl<$Res, _$SearchImpl>
-    implements _$$SearchImplCopyWith<$Res> {
-  __$$SearchImplCopyWithImpl(
-      _$SearchImpl _value, $Res Function(_$SearchImpl) _then)
-      : super(_value, _then);
+class __$$SearchImplCopyWithImpl<$Res> extends _$SearchCopyWithImpl<$Res, _$SearchImpl> implements _$$SearchImplCopyWith<$Res> {
+  __$$SearchImplCopyWithImpl(_$SearchImpl _value, $Res Function(_$SearchImpl) _then) : super(_value, _then);
 
   /// Create a copy of Search
   /// with the given fields replaced by the non-null parameter values.
@@ -174,48 +182,60 @@ class __$$SearchImplCopyWithImpl<$Res>
     Object? limit = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_$SearchImpl(
-      q: null == q
-          ? _value.q
-          : q // ignore: cast_nullable_to_non_nullable
-              as String,
-      communityId: freezed == communityId
-          ? _value.communityId
-          : communityId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      communityName: freezed == communityName
-          ? _value.communityName
-          : communityName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      creatorId: freezed == creatorId
-          ? _value.creatorId
-          : creatorId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as SearchType?,
-      sort: freezed == sort
-          ? _value.sort
-          : sort // ignore: cast_nullable_to_non_nullable
-              as SortType?,
-      listingType: freezed == listingType
-          ? _value.listingType
-          : listingType // ignore: cast_nullable_to_non_nullable
-              as ListingType?,
-      page: freezed == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as int?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
-      auth: freezed == auth
-          ? _value.auth
-          : auth // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$SearchImpl(
+        q:
+            null == q
+                ? _value.q
+                : q // ignore: cast_nullable_to_non_nullable
+                    as String,
+        communityId:
+            freezed == communityId
+                ? _value.communityId
+                : communityId // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        communityName:
+            freezed == communityName
+                ? _value.communityName
+                : communityName // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        creatorId:
+            freezed == creatorId
+                ? _value.creatorId
+                : creatorId // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        type:
+            freezed == type
+                ? _value.type
+                : type // ignore: cast_nullable_to_non_nullable
+                    as SearchType?,
+        sort:
+            freezed == sort
+                ? _value.sort
+                : sort // ignore: cast_nullable_to_non_nullable
+                    as SortType?,
+        listingType:
+            freezed == listingType
+                ? _value.listingType
+                : listingType // ignore: cast_nullable_to_non_nullable
+                    as ListingType?,
+        page:
+            freezed == page
+                ? _value.page
+                : page // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        limit:
+            freezed == limit
+                ? _value.limit
+                : limit // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        auth:
+            freezed == auth
+                ? _value.auth
+                : auth // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
@@ -223,50 +243,39 @@ class __$$SearchImplCopyWithImpl<$Res>
 
 @apiSerde
 class _$SearchImpl extends _Search {
-  const _$SearchImpl(
-      {required this.q,
-      this.communityId,
-      this.communityName,
-      this.creatorId,
-      @JsonKey(name: 'type_') this.type,
-      this.sort,
-      this.listingType,
-      this.page,
-      this.limit,
-      this.auth})
-      : super._();
+  const _$SearchImpl({required this.q, this.communityId, this.communityName, this.creatorId, @JsonKey(name: 'type_') this.type, this.sort, this.listingType, this.page, this.limit, this.auth})
+    : super._();
 
-  factory _$SearchImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SearchImplFromJson(json);
+  factory _$SearchImpl.fromJson(Map<String, dynamic> json) => _$$SearchImplFromJson(json);
 
   @override
   final String q;
-// v0.18.0
+  // v0.18.0
   @override
   final int? communityId;
-// v0.18.0
+  // v0.18.0
   @override
   final String? communityName;
-// v0.18.0
+  // v0.18.0
   @override
   final int? creatorId;
-// v0.18.0
+  // v0.18.0
   @override
   @JsonKey(name: 'type_')
   final SearchType? type;
-// v0.18.0
+  // v0.18.0
   @override
   final SortType? sort;
-// v0.18.0
+  // v0.18.0
   @override
   final ListingType? listingType;
-// v0.18.0
+  // v0.18.0
   @override
   final int? page;
-// v0.18.0
+  // v0.18.0
   @override
   final int? limit;
-// v0.18.0
+  // v0.18.0
   @override
   final String? auth;
 
@@ -281,16 +290,12 @@ class _$SearchImpl extends _Search {
         (other.runtimeType == runtimeType &&
             other is _$SearchImpl &&
             (identical(other.q, q) || other.q == q) &&
-            (identical(other.communityId, communityId) ||
-                other.communityId == communityId) &&
-            (identical(other.communityName, communityName) ||
-                other.communityName == communityName) &&
-            (identical(other.creatorId, creatorId) ||
-                other.creatorId == creatorId) &&
+            (identical(other.communityId, communityId) || other.communityId == communityId) &&
+            (identical(other.communityName, communityName) || other.communityName == communityName) &&
+            (identical(other.creatorId, creatorId) || other.creatorId == creatorId) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.sort, sort) || other.sort == sort) &&
-            (identical(other.listingType, listingType) ||
-                other.listingType == listingType) &&
+            (identical(other.listingType, listingType) || other.listingType == listingType) &&
             (identical(other.page, page) || other.page == page) &&
             (identical(other.limit, limit) || other.limit == limit) &&
             (identical(other.auth, auth) || other.auth == auth));
@@ -298,37 +303,34 @@ class _$SearchImpl extends _Search {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, q, communityId, communityName,
-      creatorId, type, sort, listingType, page, limit, auth);
+  int get hashCode => Object.hash(runtimeType, q, communityId, communityName, creatorId, type, sort, listingType, page, limit, auth);
 
   /// Create a copy of Search
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$SearchImplCopyWith<_$SearchImpl> get copyWith =>
-      __$$SearchImplCopyWithImpl<_$SearchImpl>(this, _$identity);
+  _$$SearchImplCopyWith<_$SearchImpl> get copyWith => __$$SearchImplCopyWithImpl<_$SearchImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SearchImplToJson(
-      this,
-    );
+    return _$$SearchImplToJson(this);
   }
 }
 
 abstract class _Search extends Search {
-  const factory _Search(
-      {required final String q,
-      final int? communityId,
-      final String? communityName,
-      final int? creatorId,
-      @JsonKey(name: 'type_') final SearchType? type,
-      final SortType? sort,
-      final ListingType? listingType,
-      final int? page,
-      final int? limit,
-      final String? auth}) = _$SearchImpl;
+  const factory _Search({
+    required final String q,
+    final int? communityId,
+    final String? communityName,
+    final int? creatorId,
+    @JsonKey(name: 'type_') final SearchType? type,
+    final SortType? sort,
+    final ListingType? listingType,
+    final int? page,
+    final int? limit,
+    final String? auth,
+  }) = _$SearchImpl;
   const _Search._() : super._();
 
   factory _Search.fromJson(Map<String, dynamic> json) = _$SearchImpl.fromJson;
@@ -359,6 +361,5 @@ abstract class _Search extends Search {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SearchImplCopyWith<_$SearchImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SearchImplCopyWith<_$SearchImpl> get copyWith => throw _privateConstructorUsedError;
 }

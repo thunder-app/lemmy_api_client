@@ -17,6 +17,5 @@ class ModAddCommunityView with _$ModAddCommunityView {
   }) = _ModAddCommunityView;
 
   const ModAddCommunityView._();
-  factory ModAddCommunityView.fromJson(Map<String, dynamic> json) =>
-      _$ModAddCommunityViewFromJson(json);
+  factory ModAddCommunityView.fromJson(Map<String, dynamic> json) => _$ModAddCommunityViewFromJson(json);
 }

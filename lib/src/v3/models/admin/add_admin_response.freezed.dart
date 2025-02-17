@@ -12,7 +12,8 @@ part of 'add_admin_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 AddAdminResponse _$AddAdminResponseFromJson(Map<String, dynamic> json) {
   return _AddAdminResponse.fromJson(json);
@@ -28,22 +29,18 @@ mixin _$AddAdminResponse {
   /// Create a copy of AddAdminResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $AddAdminResponseCopyWith<AddAdminResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $AddAdminResponseCopyWith<AddAdminResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AddAdminResponseCopyWith<$Res> {
-  factory $AddAdminResponseCopyWith(
-          AddAdminResponse value, $Res Function(AddAdminResponse) then) =
-      _$AddAdminResponseCopyWithImpl<$Res, AddAdminResponse>;
+  factory $AddAdminResponseCopyWith(AddAdminResponse value, $Res Function(AddAdminResponse) then) = _$AddAdminResponseCopyWithImpl<$Res, AddAdminResponse>;
   @useResult
   $Res call({List<PersonView> admins});
 }
 
 /// @nodoc
-class _$AddAdminResponseCopyWithImpl<$Res, $Val extends AddAdminResponse>
-    implements $AddAdminResponseCopyWith<$Res> {
+class _$AddAdminResponseCopyWithImpl<$Res, $Val extends AddAdminResponse> implements $AddAdminResponseCopyWith<$Res> {
   _$AddAdminResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -55,50 +52,46 @@ class _$AddAdminResponseCopyWithImpl<$Res, $Val extends AddAdminResponse>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? admins = null,
-  }) {
-    return _then(_value.copyWith(
-      admins: null == admins
-          ? _value.admins
-          : admins // ignore: cast_nullable_to_non_nullable
-              as List<PersonView>,
-    ) as $Val);
+  $Res call({Object? admins = null}) {
+    return _then(
+      _value.copyWith(
+            admins:
+                null == admins
+                    ? _value.admins
+                    : admins // ignore: cast_nullable_to_non_nullable
+                        as List<PersonView>,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$AddAdminResponseImplCopyWith<$Res>
-    implements $AddAdminResponseCopyWith<$Res> {
-  factory _$$AddAdminResponseImplCopyWith(_$AddAdminResponseImpl value,
-          $Res Function(_$AddAdminResponseImpl) then) =
-      __$$AddAdminResponseImplCopyWithImpl<$Res>;
+abstract class _$$AddAdminResponseImplCopyWith<$Res> implements $AddAdminResponseCopyWith<$Res> {
+  factory _$$AddAdminResponseImplCopyWith(_$AddAdminResponseImpl value, $Res Function(_$AddAdminResponseImpl) then) = __$$AddAdminResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<PersonView> admins});
 }
 
 /// @nodoc
-class __$$AddAdminResponseImplCopyWithImpl<$Res>
-    extends _$AddAdminResponseCopyWithImpl<$Res, _$AddAdminResponseImpl>
-    implements _$$AddAdminResponseImplCopyWith<$Res> {
-  __$$AddAdminResponseImplCopyWithImpl(_$AddAdminResponseImpl _value,
-      $Res Function(_$AddAdminResponseImpl) _then)
-      : super(_value, _then);
+class __$$AddAdminResponseImplCopyWithImpl<$Res> extends _$AddAdminResponseCopyWithImpl<$Res, _$AddAdminResponseImpl> implements _$$AddAdminResponseImplCopyWith<$Res> {
+  __$$AddAdminResponseImplCopyWithImpl(_$AddAdminResponseImpl _value, $Res Function(_$AddAdminResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of AddAdminResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? admins = null,
-  }) {
-    return _then(_$AddAdminResponseImpl(
-      admins: null == admins
-          ? _value._admins
-          : admins // ignore: cast_nullable_to_non_nullable
-              as List<PersonView>,
-    ));
+  $Res call({Object? admins = null}) {
+    return _then(
+      _$AddAdminResponseImpl(
+        admins:
+            null == admins
+                ? _value._admins
+                : admins // ignore: cast_nullable_to_non_nullable
+                    as List<PersonView>,
+      ),
+    );
   }
 }
 
@@ -106,12 +99,9 @@ class __$$AddAdminResponseImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$AddAdminResponseImpl extends _AddAdminResponse {
-  const _$AddAdminResponseImpl({required final List<PersonView> admins})
-      : _admins = admins,
-        super._();
+  const _$AddAdminResponseImpl({required final List<PersonView> admins}) : _admins = admins, super._();
 
-  factory _$AddAdminResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AddAdminResponseImplFromJson(json);
+  factory _$AddAdminResponseImpl.fromJson(Map<String, dynamic> json) => _$$AddAdminResponseImplFromJson(json);
 
   final List<PersonView> _admins;
   @override
@@ -128,41 +118,31 @@ class _$AddAdminResponseImpl extends _AddAdminResponse {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$AddAdminResponseImpl &&
-            const DeepCollectionEquality().equals(other._admins, _admins));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$AddAdminResponseImpl && const DeepCollectionEquality().equals(other._admins, _admins));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_admins));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_admins));
 
   /// Create a copy of AddAdminResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$AddAdminResponseImplCopyWith<_$AddAdminResponseImpl> get copyWith =>
-      __$$AddAdminResponseImplCopyWithImpl<_$AddAdminResponseImpl>(
-          this, _$identity);
+  _$$AddAdminResponseImplCopyWith<_$AddAdminResponseImpl> get copyWith => __$$AddAdminResponseImplCopyWithImpl<_$AddAdminResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AddAdminResponseImplToJson(
-      this,
-    );
+    return _$$AddAdminResponseImplToJson(this);
   }
 }
 
 abstract class _AddAdminResponse extends AddAdminResponse {
-  const factory _AddAdminResponse({required final List<PersonView> admins}) =
-      _$AddAdminResponseImpl;
+  const factory _AddAdminResponse({required final List<PersonView> admins}) = _$AddAdminResponseImpl;
   const _AddAdminResponse._() : super._();
 
-  factory _AddAdminResponse.fromJson(Map<String, dynamic> json) =
-      _$AddAdminResponseImpl.fromJson;
+  factory _AddAdminResponse.fromJson(Map<String, dynamic> json) = _$AddAdminResponseImpl.fromJson;
 
   @override
   List<PersonView> get admins;
@@ -171,6 +151,5 @@ abstract class _AddAdminResponse extends AddAdminResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AddAdminResponseImplCopyWith<_$AddAdminResponseImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$AddAdminResponseImplCopyWith<_$AddAdminResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

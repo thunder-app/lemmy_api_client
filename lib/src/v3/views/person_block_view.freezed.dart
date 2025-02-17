@@ -12,7 +12,8 @@ part of 'person_block_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 PersonBlockView _$PersonBlockViewFromJson(Map<String, dynamic> json) {
   return _PersonBlockView.fromJson(json);
@@ -29,15 +30,12 @@ mixin _$PersonBlockView {
   /// Create a copy of PersonBlockView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PersonBlockViewCopyWith<PersonBlockView> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PersonBlockViewCopyWith<PersonBlockView> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PersonBlockViewCopyWith<$Res> {
-  factory $PersonBlockViewCopyWith(
-          PersonBlockView value, $Res Function(PersonBlockView) then) =
-      _$PersonBlockViewCopyWithImpl<$Res, PersonBlockView>;
+  factory $PersonBlockViewCopyWith(PersonBlockView value, $Res Function(PersonBlockView) then) = _$PersonBlockViewCopyWithImpl<$Res, PersonBlockView>;
   @useResult
   $Res call({Person person, Person target});
 
@@ -46,8 +44,7 @@ abstract class $PersonBlockViewCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PersonBlockViewCopyWithImpl<$Res, $Val extends PersonBlockView>
-    implements $PersonBlockViewCopyWith<$Res> {
+class _$PersonBlockViewCopyWithImpl<$Res, $Val extends PersonBlockView> implements $PersonBlockViewCopyWith<$Res> {
   _$PersonBlockViewCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -59,20 +56,22 @@ class _$PersonBlockViewCopyWithImpl<$Res, $Val extends PersonBlockView>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? person = null,
-    Object? target = null,
-  }) {
-    return _then(_value.copyWith(
-      person: null == person
-          ? _value.person
-          : person // ignore: cast_nullable_to_non_nullable
-              as Person,
-      target: null == target
-          ? _value.target
-          : target // ignore: cast_nullable_to_non_nullable
-              as Person,
-    ) as $Val);
+  $Res call({Object? person = null, Object? target = null}) {
+    return _then(
+      _value.copyWith(
+            person:
+                null == person
+                    ? _value.person
+                    : person // ignore: cast_nullable_to_non_nullable
+                        as Person,
+            target:
+                null == target
+                    ? _value.target
+                    : target // ignore: cast_nullable_to_non_nullable
+                        as Person,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of PersonBlockView
@@ -97,11 +96,8 @@ class _$PersonBlockViewCopyWithImpl<$Res, $Val extends PersonBlockView>
 }
 
 /// @nodoc
-abstract class _$$PersonBlockViewImplCopyWith<$Res>
-    implements $PersonBlockViewCopyWith<$Res> {
-  factory _$$PersonBlockViewImplCopyWith(_$PersonBlockViewImpl value,
-          $Res Function(_$PersonBlockViewImpl) then) =
-      __$$PersonBlockViewImplCopyWithImpl<$Res>;
+abstract class _$$PersonBlockViewImplCopyWith<$Res> implements $PersonBlockViewCopyWith<$Res> {
+  factory _$$PersonBlockViewImplCopyWith(_$PersonBlockViewImpl value, $Res Function(_$PersonBlockViewImpl) then) = __$$PersonBlockViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Person person, Person target});
@@ -113,31 +109,28 @@ abstract class _$$PersonBlockViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PersonBlockViewImplCopyWithImpl<$Res>
-    extends _$PersonBlockViewCopyWithImpl<$Res, _$PersonBlockViewImpl>
-    implements _$$PersonBlockViewImplCopyWith<$Res> {
-  __$$PersonBlockViewImplCopyWithImpl(
-      _$PersonBlockViewImpl _value, $Res Function(_$PersonBlockViewImpl) _then)
-      : super(_value, _then);
+class __$$PersonBlockViewImplCopyWithImpl<$Res> extends _$PersonBlockViewCopyWithImpl<$Res, _$PersonBlockViewImpl> implements _$$PersonBlockViewImplCopyWith<$Res> {
+  __$$PersonBlockViewImplCopyWithImpl(_$PersonBlockViewImpl _value, $Res Function(_$PersonBlockViewImpl) _then) : super(_value, _then);
 
   /// Create a copy of PersonBlockView
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? person = null,
-    Object? target = null,
-  }) {
-    return _then(_$PersonBlockViewImpl(
-      person: null == person
-          ? _value.person
-          : person // ignore: cast_nullable_to_non_nullable
-              as Person,
-      target: null == target
-          ? _value.target
-          : target // ignore: cast_nullable_to_non_nullable
-              as Person,
-    ));
+  $Res call({Object? person = null, Object? target = null}) {
+    return _then(
+      _$PersonBlockViewImpl(
+        person:
+            null == person
+                ? _value.person
+                : person // ignore: cast_nullable_to_non_nullable
+                    as Person,
+        target:
+            null == target
+                ? _value.target
+                : target // ignore: cast_nullable_to_non_nullable
+                    as Person,
+      ),
+    );
   }
 }
 
@@ -145,15 +138,13 @@ class __$$PersonBlockViewImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$PersonBlockViewImpl extends _PersonBlockView {
-  const _$PersonBlockViewImpl({required this.person, required this.target})
-      : super._();
+  const _$PersonBlockViewImpl({required this.person, required this.target}) : super._();
 
-  factory _$PersonBlockViewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PersonBlockViewImplFromJson(json);
+  factory _$PersonBlockViewImpl.fromJson(Map<String, dynamic> json) => _$$PersonBlockViewImplFromJson(json);
 
   @override
   final Person person;
-// v0.18.0
+  // v0.18.0
   @override
   final Person target;
 
@@ -180,26 +171,19 @@ class _$PersonBlockViewImpl extends _PersonBlockView {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$PersonBlockViewImplCopyWith<_$PersonBlockViewImpl> get copyWith =>
-      __$$PersonBlockViewImplCopyWithImpl<_$PersonBlockViewImpl>(
-          this, _$identity);
+  _$$PersonBlockViewImplCopyWith<_$PersonBlockViewImpl> get copyWith => __$$PersonBlockViewImplCopyWithImpl<_$PersonBlockViewImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PersonBlockViewImplToJson(
-      this,
-    );
+    return _$$PersonBlockViewImplToJson(this);
   }
 }
 
 abstract class _PersonBlockView extends PersonBlockView {
-  const factory _PersonBlockView(
-      {required final Person person,
-      required final Person target}) = _$PersonBlockViewImpl;
+  const factory _PersonBlockView({required final Person person, required final Person target}) = _$PersonBlockViewImpl;
   const _PersonBlockView._() : super._();
 
-  factory _PersonBlockView.fromJson(Map<String, dynamic> json) =
-      _$PersonBlockViewImpl.fromJson;
+  factory _PersonBlockView.fromJson(Map<String, dynamic> json) = _$PersonBlockViewImpl.fromJson;
 
   @override
   Person get person; // v0.18.0
@@ -210,6 +194,5 @@ abstract class _PersonBlockView extends PersonBlockView {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PersonBlockViewImplCopyWith<_$PersonBlockViewImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PersonBlockViewImplCopyWith<_$PersonBlockViewImpl> get copyWith => throw _privateConstructorUsedError;
 }

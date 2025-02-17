@@ -14,6 +14,5 @@ class GetSiteMetadataResponse with _$GetSiteMetadataResponse {
   }) = _GetSiteMetadataResponse;
 
   const GetSiteMetadataResponse._();
-  factory GetSiteMetadataResponse.fromJson(Map<String, dynamic> json) =>
-      _$GetSiteMetadataResponseFromJson(json);
+  factory GetSiteMetadataResponse.fromJson(Map<String, dynamic> json) => _$GetSiteMetadataResponseFromJson(json);
 }

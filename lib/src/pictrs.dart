@@ -15,33 +15,19 @@ class PictrsApi {
 
   const PictrsApi(this.host);
 
-  Future<PictrsUpload> upload({
-    required String filePath,
-    String? auth,
-  }) async {
-    final req = http.MultipartRequest('POST', Uri.https(host, extraPath))
-      ..files.add(await http.MultipartFile.fromPath('images[]', filePath));
+  Future<PictrsUpload> upload({required String filePath, String? auth}) async {
+    final req = http.MultipartRequest('POST', Uri.https(host, extraPath))..files.add(await http.MultipartFile.fromPath('images[]', filePath));
     req.headers['Cookie'] = 'jwt=$auth';
 
     final res = await req.send();
-    final Map<String, dynamic> body =
-        jsonDecode(utf8.decode(await res.stream.toBytes()));
+    final Map<String, dynamic> body = jsonDecode(utf8.decode(await res.stream.toBytes()));
     body['instance_host'] = host;
 
     return PictrsUpload.fromJson(body);
   }
 
-  Future<void> delete(
-    PictrsUploadFile pictrsFile,
-    String? auth,
-  ) async {
-    final res = await http.get(
-      Uri.https(
-        host,
-        '$extraPath/delete/${pictrsFile.deleteToken}/${pictrsFile.file}',
-      ),
-      headers: {'Authorization': 'Bearer $auth'},
-    );
+  Future<void> delete(PictrsUploadFile pictrsFile, String? auth) async {
+    final res = await http.get(Uri.https(host, '$extraPath/delete/${pictrsFile.deleteToken}/${pictrsFile.file}'), headers: {'Authorization': 'Bearer $auth'});
 
     if (!res.ok) {
       switch (res.statusCode) {
@@ -61,26 +47,17 @@ class PictrsApi {
 @freezed
 class PictrsUploadFile with _$PictrsUploadFile {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  const factory PictrsUploadFile({
-    required String deleteToken,
-    required String file,
-  }) = _PictrsUploadFile;
+  const factory PictrsUploadFile({required String deleteToken, required String file}) = _PictrsUploadFile;
 
   const PictrsUploadFile._();
-  factory PictrsUploadFile.fromJson(Map<String, dynamic> json) =>
-      _$PictrsUploadFileFromJson(json);
+  factory PictrsUploadFile.fromJson(Map<String, dynamic> json) => _$PictrsUploadFileFromJson(json);
 }
 
 @freezed
 class PictrsUpload with _$PictrsUpload {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  const factory PictrsUpload({
-    required String msg,
-    required List<PictrsUploadFile> files,
-    required String instanceHost,
-  }) = _PictrsUpload;
+  const factory PictrsUpload({required String msg, required List<PictrsUploadFile> files, required String instanceHost}) = _PictrsUpload;
 
   const PictrsUpload._();
-  factory PictrsUpload.fromJson(Map<String, dynamic> json) =>
-      _$PictrsUploadFromJson(json);
+  factory PictrsUpload.fromJson(Map<String, dynamic> json) => _$PictrsUploadFromJson(json);
 }

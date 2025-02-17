@@ -12,10 +12,10 @@ part of 'comment_report_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
-CommentReportResponse _$CommentReportResponseFromJson(
-    Map<String, dynamic> json) {
+CommentReportResponse _$CommentReportResponseFromJson(Map<String, dynamic> json) {
   return _CommentReportResponse.fromJson(json);
 }
 
@@ -29,15 +29,12 @@ mixin _$CommentReportResponse {
   /// Create a copy of CommentReportResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $CommentReportResponseCopyWith<CommentReportResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CommentReportResponseCopyWith<CommentReportResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CommentReportResponseCopyWith<$Res> {
-  factory $CommentReportResponseCopyWith(CommentReportResponse value,
-          $Res Function(CommentReportResponse) then) =
-      _$CommentReportResponseCopyWithImpl<$Res, CommentReportResponse>;
+  factory $CommentReportResponseCopyWith(CommentReportResponse value, $Res Function(CommentReportResponse) then) = _$CommentReportResponseCopyWithImpl<$Res, CommentReportResponse>;
   @useResult
   $Res call({CommentReportView commentReportView});
 
@@ -45,9 +42,7 @@ abstract class $CommentReportResponseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CommentReportResponseCopyWithImpl<$Res,
-        $Val extends CommentReportResponse>
-    implements $CommentReportResponseCopyWith<$Res> {
+class _$CommentReportResponseCopyWithImpl<$Res, $Val extends CommentReportResponse> implements $CommentReportResponseCopyWith<$Res> {
   _$CommentReportResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -59,15 +54,17 @@ class _$CommentReportResponseCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? commentReportView = null,
-  }) {
-    return _then(_value.copyWith(
-      commentReportView: null == commentReportView
-          ? _value.commentReportView
-          : commentReportView // ignore: cast_nullable_to_non_nullable
-              as CommentReportView,
-    ) as $Val);
+  $Res call({Object? commentReportView = null}) {
+    return _then(
+      _value.copyWith(
+            commentReportView:
+                null == commentReportView
+                    ? _value.commentReportView
+                    : commentReportView // ignore: cast_nullable_to_non_nullable
+                        as CommentReportView,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of CommentReportResponse
@@ -82,12 +79,8 @@ class _$CommentReportResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$CommentReportResponseImplCopyWith<$Res>
-    implements $CommentReportResponseCopyWith<$Res> {
-  factory _$$CommentReportResponseImplCopyWith(
-          _$CommentReportResponseImpl value,
-          $Res Function(_$CommentReportResponseImpl) then) =
-      __$$CommentReportResponseImplCopyWithImpl<$Res>;
+abstract class _$$CommentReportResponseImplCopyWith<$Res> implements $CommentReportResponseCopyWith<$Res> {
+  factory _$$CommentReportResponseImplCopyWith(_$CommentReportResponseImpl value, $Res Function(_$CommentReportResponseImpl) then) = __$$CommentReportResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({CommentReportView commentReportView});
@@ -97,27 +90,23 @@ abstract class _$$CommentReportResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CommentReportResponseImplCopyWithImpl<$Res>
-    extends _$CommentReportResponseCopyWithImpl<$Res,
-        _$CommentReportResponseImpl>
-    implements _$$CommentReportResponseImplCopyWith<$Res> {
-  __$$CommentReportResponseImplCopyWithImpl(_$CommentReportResponseImpl _value,
-      $Res Function(_$CommentReportResponseImpl) _then)
-      : super(_value, _then);
+class __$$CommentReportResponseImplCopyWithImpl<$Res> extends _$CommentReportResponseCopyWithImpl<$Res, _$CommentReportResponseImpl> implements _$$CommentReportResponseImplCopyWith<$Res> {
+  __$$CommentReportResponseImplCopyWithImpl(_$CommentReportResponseImpl _value, $Res Function(_$CommentReportResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of CommentReportResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? commentReportView = null,
-  }) {
-    return _then(_$CommentReportResponseImpl(
-      commentReportView: null == commentReportView
-          ? _value.commentReportView
-          : commentReportView // ignore: cast_nullable_to_non_nullable
-              as CommentReportView,
-    ));
+  $Res call({Object? commentReportView = null}) {
+    return _then(
+      _$CommentReportResponseImpl(
+        commentReportView:
+            null == commentReportView
+                ? _value.commentReportView
+                : commentReportView // ignore: cast_nullable_to_non_nullable
+                    as CommentReportView,
+      ),
+    );
   }
 }
 
@@ -125,11 +114,9 @@ class __$$CommentReportResponseImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$CommentReportResponseImpl extends _CommentReportResponse {
-  const _$CommentReportResponseImpl({required this.commentReportView})
-      : super._();
+  const _$CommentReportResponseImpl({required this.commentReportView}) : super._();
 
-  factory _$CommentReportResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CommentReportResponseImplFromJson(json);
+  factory _$CommentReportResponseImpl.fromJson(Map<String, dynamic> json) => _$$CommentReportResponseImplFromJson(json);
 
   @override
   final CommentReportView commentReportView;
@@ -142,10 +129,7 @@ class _$CommentReportResponseImpl extends _CommentReportResponse {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CommentReportResponseImpl &&
-            (identical(other.commentReportView, commentReportView) ||
-                other.commentReportView == commentReportView));
+        (other.runtimeType == runtimeType && other is _$CommentReportResponseImpl && (identical(other.commentReportView, commentReportView) || other.commentReportView == commentReportView));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -157,26 +141,19 @@ class _$CommentReportResponseImpl extends _CommentReportResponse {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$CommentReportResponseImplCopyWith<_$CommentReportResponseImpl>
-      get copyWith => __$$CommentReportResponseImplCopyWithImpl<
-          _$CommentReportResponseImpl>(this, _$identity);
+  _$$CommentReportResponseImplCopyWith<_$CommentReportResponseImpl> get copyWith => __$$CommentReportResponseImplCopyWithImpl<_$CommentReportResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CommentReportResponseImplToJson(
-      this,
-    );
+    return _$$CommentReportResponseImplToJson(this);
   }
 }
 
 abstract class _CommentReportResponse extends CommentReportResponse {
-  const factory _CommentReportResponse(
-          {required final CommentReportView commentReportView}) =
-      _$CommentReportResponseImpl;
+  const factory _CommentReportResponse({required final CommentReportView commentReportView}) = _$CommentReportResponseImpl;
   const _CommentReportResponse._() : super._();
 
-  factory _CommentReportResponse.fromJson(Map<String, dynamic> json) =
-      _$CommentReportResponseImpl.fromJson;
+  factory _CommentReportResponse.fromJson(Map<String, dynamic> json) = _$CommentReportResponseImpl.fromJson;
 
   @override
   CommentReportView get commentReportView;
@@ -185,6 +162,5 @@ abstract class _CommentReportResponse extends CommentReportResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CommentReportResponseImplCopyWith<_$CommentReportResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$CommentReportResponseImplCopyWith<_$CommentReportResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

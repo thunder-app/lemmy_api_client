@@ -12,7 +12,8 @@ part of 'post_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 PostResponse _$PostResponseFromJson(Map<String, dynamic> json) {
   return _PostResponse.fromJson(json);
@@ -28,15 +29,12 @@ mixin _$PostResponse {
   /// Create a copy of PostResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PostResponseCopyWith<PostResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PostResponseCopyWith<PostResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PostResponseCopyWith<$Res> {
-  factory $PostResponseCopyWith(
-          PostResponse value, $Res Function(PostResponse) then) =
-      _$PostResponseCopyWithImpl<$Res, PostResponse>;
+  factory $PostResponseCopyWith(PostResponse value, $Res Function(PostResponse) then) = _$PostResponseCopyWithImpl<$Res, PostResponse>;
   @useResult
   $Res call({PostView postView});
 
@@ -44,8 +42,7 @@ abstract class $PostResponseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PostResponseCopyWithImpl<$Res, $Val extends PostResponse>
-    implements $PostResponseCopyWith<$Res> {
+class _$PostResponseCopyWithImpl<$Res, $Val extends PostResponse> implements $PostResponseCopyWith<$Res> {
   _$PostResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -57,15 +54,17 @@ class _$PostResponseCopyWithImpl<$Res, $Val extends PostResponse>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postView = null,
-  }) {
-    return _then(_value.copyWith(
-      postView: null == postView
-          ? _value.postView
-          : postView // ignore: cast_nullable_to_non_nullable
-              as PostView,
-    ) as $Val);
+  $Res call({Object? postView = null}) {
+    return _then(
+      _value.copyWith(
+            postView:
+                null == postView
+                    ? _value.postView
+                    : postView // ignore: cast_nullable_to_non_nullable
+                        as PostView,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of PostResponse
@@ -80,11 +79,8 @@ class _$PostResponseCopyWithImpl<$Res, $Val extends PostResponse>
 }
 
 /// @nodoc
-abstract class _$$PostResponseImplCopyWith<$Res>
-    implements $PostResponseCopyWith<$Res> {
-  factory _$$PostResponseImplCopyWith(
-          _$PostResponseImpl value, $Res Function(_$PostResponseImpl) then) =
-      __$$PostResponseImplCopyWithImpl<$Res>;
+abstract class _$$PostResponseImplCopyWith<$Res> implements $PostResponseCopyWith<$Res> {
+  factory _$$PostResponseImplCopyWith(_$PostResponseImpl value, $Res Function(_$PostResponseImpl) then) = __$$PostResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({PostView postView});
@@ -94,26 +90,23 @@ abstract class _$$PostResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PostResponseImplCopyWithImpl<$Res>
-    extends _$PostResponseCopyWithImpl<$Res, _$PostResponseImpl>
-    implements _$$PostResponseImplCopyWith<$Res> {
-  __$$PostResponseImplCopyWithImpl(
-      _$PostResponseImpl _value, $Res Function(_$PostResponseImpl) _then)
-      : super(_value, _then);
+class __$$PostResponseImplCopyWithImpl<$Res> extends _$PostResponseCopyWithImpl<$Res, _$PostResponseImpl> implements _$$PostResponseImplCopyWith<$Res> {
+  __$$PostResponseImplCopyWithImpl(_$PostResponseImpl _value, $Res Function(_$PostResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of PostResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postView = null,
-  }) {
-    return _then(_$PostResponseImpl(
-      postView: null == postView
-          ? _value.postView
-          : postView // ignore: cast_nullable_to_non_nullable
-              as PostView,
-    ));
+  $Res call({Object? postView = null}) {
+    return _then(
+      _$PostResponseImpl(
+        postView:
+            null == postView
+                ? _value.postView
+                : postView // ignore: cast_nullable_to_non_nullable
+                    as PostView,
+      ),
+    );
   }
 }
 
@@ -123,8 +116,7 @@ class __$$PostResponseImplCopyWithImpl<$Res>
 class _$PostResponseImpl extends _PostResponse {
   const _$PostResponseImpl({required this.postView}) : super._();
 
-  factory _$PostResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PostResponseImplFromJson(json);
+  factory _$PostResponseImpl.fromJson(Map<String, dynamic> json) => _$$PostResponseImplFromJson(json);
 
   @override
   final PostView postView;
@@ -136,11 +128,7 @@ class _$PostResponseImpl extends _PostResponse {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PostResponseImpl &&
-            (identical(other.postView, postView) ||
-                other.postView == postView));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$PostResponseImpl && (identical(other.postView, postView) || other.postView == postView));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -152,24 +140,19 @@ class _$PostResponseImpl extends _PostResponse {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$PostResponseImplCopyWith<_$PostResponseImpl> get copyWith =>
-      __$$PostResponseImplCopyWithImpl<_$PostResponseImpl>(this, _$identity);
+  _$$PostResponseImplCopyWith<_$PostResponseImpl> get copyWith => __$$PostResponseImplCopyWithImpl<_$PostResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PostResponseImplToJson(
-      this,
-    );
+    return _$$PostResponseImplToJson(this);
   }
 }
 
 abstract class _PostResponse extends PostResponse {
-  const factory _PostResponse({required final PostView postView}) =
-      _$PostResponseImpl;
+  const factory _PostResponse({required final PostView postView}) = _$PostResponseImpl;
   const _PostResponse._() : super._();
 
-  factory _PostResponse.fromJson(Map<String, dynamic> json) =
-      _$PostResponseImpl.fromJson;
+  factory _PostResponse.fromJson(Map<String, dynamic> json) = _$PostResponseImpl.fromJson;
 
   @override
   PostView get postView;
@@ -178,6 +161,5 @@ abstract class _PostResponse extends PostResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PostResponseImplCopyWith<_$PostResponseImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PostResponseImplCopyWith<_$PostResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

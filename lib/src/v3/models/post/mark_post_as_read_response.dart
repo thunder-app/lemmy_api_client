@@ -15,6 +15,5 @@ class MarkPostAsReadResponse with _$MarkPostAsReadResponse {
   }) = _MarkPostAsReadResponse;
 
   const MarkPostAsReadResponse._();
-  factory MarkPostAsReadResponse.fromJson(Map<String, dynamic> json) =>
-      _$MarkPostAsReadResponseFromJson(json);
+  factory MarkPostAsReadResponse.fromJson(Map<String, dynamic> json) => _$MarkPostAsReadResponseFromJson(json);
 }

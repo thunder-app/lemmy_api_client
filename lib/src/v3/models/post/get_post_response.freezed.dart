@@ -12,7 +12,8 @@ part of 'get_post_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 GetPostResponse _$GetPostResponseFromJson(Map<String, dynamic> json) {
   return _GetPostResponse.fromJson(json);
@@ -21,10 +22,8 @@ GetPostResponse _$GetPostResponseFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$GetPostResponse {
   PostView get postView => throw _privateConstructorUsedError; // v0.18.0
-  CommunityView get communityView =>
-      throw _privateConstructorUsedError; // v0.18.0
-  List<CommunityModeratorView> get moderators =>
-      throw _privateConstructorUsedError; // v0.18.0
+  CommunityView get communityView => throw _privateConstructorUsedError; // v0.18.0
+  List<CommunityModeratorView> get moderators => throw _privateConstructorUsedError; // v0.18.0
   List<PostView> get crossPosts => throw _privateConstructorUsedError;
 
   /// Serializes this GetPostResponse to a JSON map.
@@ -33,29 +32,21 @@ mixin _$GetPostResponse {
   /// Create a copy of GetPostResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $GetPostResponseCopyWith<GetPostResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $GetPostResponseCopyWith<GetPostResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GetPostResponseCopyWith<$Res> {
-  factory $GetPostResponseCopyWith(
-          GetPostResponse value, $Res Function(GetPostResponse) then) =
-      _$GetPostResponseCopyWithImpl<$Res, GetPostResponse>;
+  factory $GetPostResponseCopyWith(GetPostResponse value, $Res Function(GetPostResponse) then) = _$GetPostResponseCopyWithImpl<$Res, GetPostResponse>;
   @useResult
-  $Res call(
-      {PostView postView,
-      CommunityView communityView,
-      List<CommunityModeratorView> moderators,
-      List<PostView> crossPosts});
+  $Res call({PostView postView, CommunityView communityView, List<CommunityModeratorView> moderators, List<PostView> crossPosts});
 
   $PostViewCopyWith<$Res> get postView;
   $CommunityViewCopyWith<$Res> get communityView;
 }
 
 /// @nodoc
-class _$GetPostResponseCopyWithImpl<$Res, $Val extends GetPostResponse>
-    implements $GetPostResponseCopyWith<$Res> {
+class _$GetPostResponseCopyWithImpl<$Res, $Val extends GetPostResponse> implements $GetPostResponseCopyWith<$Res> {
   _$GetPostResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -67,30 +58,32 @@ class _$GetPostResponseCopyWithImpl<$Res, $Val extends GetPostResponse>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postView = null,
-    Object? communityView = null,
-    Object? moderators = null,
-    Object? crossPosts = null,
-  }) {
-    return _then(_value.copyWith(
-      postView: null == postView
-          ? _value.postView
-          : postView // ignore: cast_nullable_to_non_nullable
-              as PostView,
-      communityView: null == communityView
-          ? _value.communityView
-          : communityView // ignore: cast_nullable_to_non_nullable
-              as CommunityView,
-      moderators: null == moderators
-          ? _value.moderators
-          : moderators // ignore: cast_nullable_to_non_nullable
-              as List<CommunityModeratorView>,
-      crossPosts: null == crossPosts
-          ? _value.crossPosts
-          : crossPosts // ignore: cast_nullable_to_non_nullable
-              as List<PostView>,
-    ) as $Val);
+  $Res call({Object? postView = null, Object? communityView = null, Object? moderators = null, Object? crossPosts = null}) {
+    return _then(
+      _value.copyWith(
+            postView:
+                null == postView
+                    ? _value.postView
+                    : postView // ignore: cast_nullable_to_non_nullable
+                        as PostView,
+            communityView:
+                null == communityView
+                    ? _value.communityView
+                    : communityView // ignore: cast_nullable_to_non_nullable
+                        as CommunityView,
+            moderators:
+                null == moderators
+                    ? _value.moderators
+                    : moderators // ignore: cast_nullable_to_non_nullable
+                        as List<CommunityModeratorView>,
+            crossPosts:
+                null == crossPosts
+                    ? _value.crossPosts
+                    : crossPosts // ignore: cast_nullable_to_non_nullable
+                        as List<PostView>,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of GetPostResponse
@@ -115,18 +108,11 @@ class _$GetPostResponseCopyWithImpl<$Res, $Val extends GetPostResponse>
 }
 
 /// @nodoc
-abstract class _$$GetPostResponseImplCopyWith<$Res>
-    implements $GetPostResponseCopyWith<$Res> {
-  factory _$$GetPostResponseImplCopyWith(_$GetPostResponseImpl value,
-          $Res Function(_$GetPostResponseImpl) then) =
-      __$$GetPostResponseImplCopyWithImpl<$Res>;
+abstract class _$$GetPostResponseImplCopyWith<$Res> implements $GetPostResponseCopyWith<$Res> {
+  factory _$$GetPostResponseImplCopyWith(_$GetPostResponseImpl value, $Res Function(_$GetPostResponseImpl) then) = __$$GetPostResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {PostView postView,
-      CommunityView communityView,
-      List<CommunityModeratorView> moderators,
-      List<PostView> crossPosts});
+  $Res call({PostView postView, CommunityView communityView, List<CommunityModeratorView> moderators, List<PostView> crossPosts});
 
   @override
   $PostViewCopyWith<$Res> get postView;
@@ -135,41 +121,38 @@ abstract class _$$GetPostResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$GetPostResponseImplCopyWithImpl<$Res>
-    extends _$GetPostResponseCopyWithImpl<$Res, _$GetPostResponseImpl>
-    implements _$$GetPostResponseImplCopyWith<$Res> {
-  __$$GetPostResponseImplCopyWithImpl(
-      _$GetPostResponseImpl _value, $Res Function(_$GetPostResponseImpl) _then)
-      : super(_value, _then);
+class __$$GetPostResponseImplCopyWithImpl<$Res> extends _$GetPostResponseCopyWithImpl<$Res, _$GetPostResponseImpl> implements _$$GetPostResponseImplCopyWith<$Res> {
+  __$$GetPostResponseImplCopyWithImpl(_$GetPostResponseImpl _value, $Res Function(_$GetPostResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of GetPostResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? postView = null,
-    Object? communityView = null,
-    Object? moderators = null,
-    Object? crossPosts = null,
-  }) {
-    return _then(_$GetPostResponseImpl(
-      postView: null == postView
-          ? _value.postView
-          : postView // ignore: cast_nullable_to_non_nullable
-              as PostView,
-      communityView: null == communityView
-          ? _value.communityView
-          : communityView // ignore: cast_nullable_to_non_nullable
-              as CommunityView,
-      moderators: null == moderators
-          ? _value._moderators
-          : moderators // ignore: cast_nullable_to_non_nullable
-              as List<CommunityModeratorView>,
-      crossPosts: null == crossPosts
-          ? _value._crossPosts
-          : crossPosts // ignore: cast_nullable_to_non_nullable
-              as List<PostView>,
-    ));
+  $Res call({Object? postView = null, Object? communityView = null, Object? moderators = null, Object? crossPosts = null}) {
+    return _then(
+      _$GetPostResponseImpl(
+        postView:
+            null == postView
+                ? _value.postView
+                : postView // ignore: cast_nullable_to_non_nullable
+                    as PostView,
+        communityView:
+            null == communityView
+                ? _value.communityView
+                : communityView // ignore: cast_nullable_to_non_nullable
+                    as CommunityView,
+        moderators:
+            null == moderators
+                ? _value._moderators
+                : moderators // ignore: cast_nullable_to_non_nullable
+                    as List<CommunityModeratorView>,
+        crossPosts:
+            null == crossPosts
+                ? _value._crossPosts
+                : crossPosts // ignore: cast_nullable_to_non_nullable
+                    as List<PostView>,
+      ),
+    );
   }
 }
 
@@ -177,26 +160,21 @@ class __$$GetPostResponseImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$GetPostResponseImpl extends _GetPostResponse {
-  const _$GetPostResponseImpl(
-      {required this.postView,
-      required this.communityView,
-      required final List<CommunityModeratorView> moderators,
-      required final List<PostView> crossPosts})
-      : _moderators = moderators,
-        _crossPosts = crossPosts,
-        super._();
+  const _$GetPostResponseImpl({required this.postView, required this.communityView, required final List<CommunityModeratorView> moderators, required final List<PostView> crossPosts})
+    : _moderators = moderators,
+      _crossPosts = crossPosts,
+      super._();
 
-  factory _$GetPostResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GetPostResponseImplFromJson(json);
+  factory _$GetPostResponseImpl.fromJson(Map<String, dynamic> json) => _$$GetPostResponseImplFromJson(json);
 
   @override
   final PostView postView;
-// v0.18.0
+  // v0.18.0
   @override
   final CommunityView communityView;
-// v0.18.0
+  // v0.18.0
   final List<CommunityModeratorView> _moderators;
-// v0.18.0
+  // v0.18.0
   @override
   List<CommunityModeratorView> get moderators {
     if (_moderators is EqualUnmodifiableListView) return _moderators;
@@ -204,9 +182,9 @@ class _$GetPostResponseImpl extends _GetPostResponse {
     return EqualUnmodifiableListView(_moderators);
   }
 
-// v0.18.0
+  // v0.18.0
   final List<PostView> _crossPosts;
-// v0.18.0
+  // v0.18.0
   @override
   List<PostView> get crossPosts {
     if (_crossPosts is EqualUnmodifiableListView) return _crossPosts;
@@ -224,52 +202,39 @@ class _$GetPostResponseImpl extends _GetPostResponse {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetPostResponseImpl &&
-            (identical(other.postView, postView) ||
-                other.postView == postView) &&
-            (identical(other.communityView, communityView) ||
-                other.communityView == communityView) &&
-            const DeepCollectionEquality()
-                .equals(other._moderators, _moderators) &&
-            const DeepCollectionEquality()
-                .equals(other._crossPosts, _crossPosts));
+            (identical(other.postView, postView) || other.postView == postView) &&
+            (identical(other.communityView, communityView) || other.communityView == communityView) &&
+            const DeepCollectionEquality().equals(other._moderators, _moderators) &&
+            const DeepCollectionEquality().equals(other._crossPosts, _crossPosts));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      postView,
-      communityView,
-      const DeepCollectionEquality().hash(_moderators),
-      const DeepCollectionEquality().hash(_crossPosts));
+  int get hashCode => Object.hash(runtimeType, postView, communityView, const DeepCollectionEquality().hash(_moderators), const DeepCollectionEquality().hash(_crossPosts));
 
   /// Create a copy of GetPostResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetPostResponseImplCopyWith<_$GetPostResponseImpl> get copyWith =>
-      __$$GetPostResponseImplCopyWithImpl<_$GetPostResponseImpl>(
-          this, _$identity);
+  _$$GetPostResponseImplCopyWith<_$GetPostResponseImpl> get copyWith => __$$GetPostResponseImplCopyWithImpl<_$GetPostResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetPostResponseImplToJson(
-      this,
-    );
+    return _$$GetPostResponseImplToJson(this);
   }
 }
 
 abstract class _GetPostResponse extends GetPostResponse {
-  const factory _GetPostResponse(
-      {required final PostView postView,
-      required final CommunityView communityView,
-      required final List<CommunityModeratorView> moderators,
-      required final List<PostView> crossPosts}) = _$GetPostResponseImpl;
+  const factory _GetPostResponse({
+    required final PostView postView,
+    required final CommunityView communityView,
+    required final List<CommunityModeratorView> moderators,
+    required final List<PostView> crossPosts,
+  }) = _$GetPostResponseImpl;
   const _GetPostResponse._() : super._();
 
-  factory _GetPostResponse.fromJson(Map<String, dynamic> json) =
-      _$GetPostResponseImpl.fromJson;
+  factory _GetPostResponse.fromJson(Map<String, dynamic> json) = _$GetPostResponseImpl.fromJson;
 
   @override
   PostView get postView; // v0.18.0
@@ -284,6 +249,5 @@ abstract class _GetPostResponse extends GetPostResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetPostResponseImplCopyWith<_$GetPostResponseImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetPostResponseImplCopyWith<_$GetPostResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

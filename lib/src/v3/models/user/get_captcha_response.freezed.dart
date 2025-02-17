@@ -12,7 +12,8 @@ part of 'get_captcha_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 GetCaptchaResponse _$GetCaptchaResponseFromJson(Map<String, dynamic> json) {
   return _GetCaptchaResponse.fromJson(json);
@@ -28,15 +29,12 @@ mixin _$GetCaptchaResponse {
   /// Create a copy of GetCaptchaResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $GetCaptchaResponseCopyWith<GetCaptchaResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $GetCaptchaResponseCopyWith<GetCaptchaResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GetCaptchaResponseCopyWith<$Res> {
-  factory $GetCaptchaResponseCopyWith(
-          GetCaptchaResponse value, $Res Function(GetCaptchaResponse) then) =
-      _$GetCaptchaResponseCopyWithImpl<$Res, GetCaptchaResponse>;
+  factory $GetCaptchaResponseCopyWith(GetCaptchaResponse value, $Res Function(GetCaptchaResponse) then) = _$GetCaptchaResponseCopyWithImpl<$Res, GetCaptchaResponse>;
   @useResult
   $Res call({CaptchaResponse? ok});
 
@@ -44,8 +42,7 @@ abstract class $GetCaptchaResponseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$GetCaptchaResponseCopyWithImpl<$Res, $Val extends GetCaptchaResponse>
-    implements $GetCaptchaResponseCopyWith<$Res> {
+class _$GetCaptchaResponseCopyWithImpl<$Res, $Val extends GetCaptchaResponse> implements $GetCaptchaResponseCopyWith<$Res> {
   _$GetCaptchaResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -57,15 +54,17 @@ class _$GetCaptchaResponseCopyWithImpl<$Res, $Val extends GetCaptchaResponse>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? ok = freezed,
-  }) {
-    return _then(_value.copyWith(
-      ok: freezed == ok
-          ? _value.ok
-          : ok // ignore: cast_nullable_to_non_nullable
-              as CaptchaResponse?,
-    ) as $Val);
+  $Res call({Object? ok = freezed}) {
+    return _then(
+      _value.copyWith(
+            ok:
+                freezed == ok
+                    ? _value.ok
+                    : ok // ignore: cast_nullable_to_non_nullable
+                        as CaptchaResponse?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of GetCaptchaResponse
@@ -84,11 +83,8 @@ class _$GetCaptchaResponseCopyWithImpl<$Res, $Val extends GetCaptchaResponse>
 }
 
 /// @nodoc
-abstract class _$$GetCaptchaResponseImplCopyWith<$Res>
-    implements $GetCaptchaResponseCopyWith<$Res> {
-  factory _$$GetCaptchaResponseImplCopyWith(_$GetCaptchaResponseImpl value,
-          $Res Function(_$GetCaptchaResponseImpl) then) =
-      __$$GetCaptchaResponseImplCopyWithImpl<$Res>;
+abstract class _$$GetCaptchaResponseImplCopyWith<$Res> implements $GetCaptchaResponseCopyWith<$Res> {
+  factory _$$GetCaptchaResponseImplCopyWith(_$GetCaptchaResponseImpl value, $Res Function(_$GetCaptchaResponseImpl) then) = __$$GetCaptchaResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({CaptchaResponse? ok});
@@ -98,26 +94,23 @@ abstract class _$$GetCaptchaResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$GetCaptchaResponseImplCopyWithImpl<$Res>
-    extends _$GetCaptchaResponseCopyWithImpl<$Res, _$GetCaptchaResponseImpl>
-    implements _$$GetCaptchaResponseImplCopyWith<$Res> {
-  __$$GetCaptchaResponseImplCopyWithImpl(_$GetCaptchaResponseImpl _value,
-      $Res Function(_$GetCaptchaResponseImpl) _then)
-      : super(_value, _then);
+class __$$GetCaptchaResponseImplCopyWithImpl<$Res> extends _$GetCaptchaResponseCopyWithImpl<$Res, _$GetCaptchaResponseImpl> implements _$$GetCaptchaResponseImplCopyWith<$Res> {
+  __$$GetCaptchaResponseImplCopyWithImpl(_$GetCaptchaResponseImpl _value, $Res Function(_$GetCaptchaResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of GetCaptchaResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? ok = freezed,
-  }) {
-    return _then(_$GetCaptchaResponseImpl(
-      ok: freezed == ok
-          ? _value.ok
-          : ok // ignore: cast_nullable_to_non_nullable
-              as CaptchaResponse?,
-    ));
+  $Res call({Object? ok = freezed}) {
+    return _then(
+      _$GetCaptchaResponseImpl(
+        ok:
+            freezed == ok
+                ? _value.ok
+                : ok // ignore: cast_nullable_to_non_nullable
+                    as CaptchaResponse?,
+      ),
+    );
   }
 }
 
@@ -127,8 +120,7 @@ class __$$GetCaptchaResponseImplCopyWithImpl<$Res>
 class _$GetCaptchaResponseImpl extends _GetCaptchaResponse {
   const _$GetCaptchaResponseImpl({this.ok}) : super._();
 
-  factory _$GetCaptchaResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GetCaptchaResponseImplFromJson(json);
+  factory _$GetCaptchaResponseImpl.fromJson(Map<String, dynamic> json) => _$$GetCaptchaResponseImplFromJson(json);
 
   @override
   final CaptchaResponse? ok;
@@ -140,10 +132,7 @@ class _$GetCaptchaResponseImpl extends _GetCaptchaResponse {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$GetCaptchaResponseImpl &&
-            (identical(other.ok, ok) || other.ok == ok));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$GetCaptchaResponseImpl && (identical(other.ok, ok) || other.ok == ok));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -155,25 +144,19 @@ class _$GetCaptchaResponseImpl extends _GetCaptchaResponse {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetCaptchaResponseImplCopyWith<_$GetCaptchaResponseImpl> get copyWith =>
-      __$$GetCaptchaResponseImplCopyWithImpl<_$GetCaptchaResponseImpl>(
-          this, _$identity);
+  _$$GetCaptchaResponseImplCopyWith<_$GetCaptchaResponseImpl> get copyWith => __$$GetCaptchaResponseImplCopyWithImpl<_$GetCaptchaResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GetCaptchaResponseImplToJson(
-      this,
-    );
+    return _$$GetCaptchaResponseImplToJson(this);
   }
 }
 
 abstract class _GetCaptchaResponse extends GetCaptchaResponse {
-  const factory _GetCaptchaResponse({final CaptchaResponse? ok}) =
-      _$GetCaptchaResponseImpl;
+  const factory _GetCaptchaResponse({final CaptchaResponse? ok}) = _$GetCaptchaResponseImpl;
   const _GetCaptchaResponse._() : super._();
 
-  factory _GetCaptchaResponse.fromJson(Map<String, dynamic> json) =
-      _$GetCaptchaResponseImpl.fromJson;
+  factory _GetCaptchaResponse.fromJson(Map<String, dynamic> json) = _$GetCaptchaResponseImpl.fromJson;
 
   @override
   CaptchaResponse? get ok;
@@ -182,6 +165,5 @@ abstract class _GetCaptchaResponse extends GetCaptchaResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetCaptchaResponseImplCopyWith<_$GetCaptchaResponseImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetCaptchaResponseImplCopyWith<_$GetCaptchaResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

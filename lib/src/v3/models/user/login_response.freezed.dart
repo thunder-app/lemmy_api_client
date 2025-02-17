@@ -12,7 +12,8 @@ part of 'login_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 LoginResponse _$LoginResponseFromJson(Map<String, dynamic> json) {
   return _LoginResponse.fromJson(json);
@@ -30,22 +31,18 @@ mixin _$LoginResponse {
   /// Create a copy of LoginResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $LoginResponseCopyWith<LoginResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $LoginResponseCopyWith<LoginResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $LoginResponseCopyWith<$Res> {
-  factory $LoginResponseCopyWith(
-          LoginResponse value, $Res Function(LoginResponse) then) =
-      _$LoginResponseCopyWithImpl<$Res, LoginResponse>;
+  factory $LoginResponseCopyWith(LoginResponse value, $Res Function(LoginResponse) then) = _$LoginResponseCopyWithImpl<$Res, LoginResponse>;
   @useResult
   $Res call({String? jwt, bool registrationCreated, bool verifyEmailSent});
 }
 
 /// @nodoc
-class _$LoginResponseCopyWithImpl<$Res, $Val extends LoginResponse>
-    implements $LoginResponseCopyWith<$Res> {
+class _$LoginResponseCopyWithImpl<$Res, $Val extends LoginResponse> implements $LoginResponseCopyWith<$Res> {
   _$LoginResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -57,70 +54,66 @@ class _$LoginResponseCopyWithImpl<$Res, $Val extends LoginResponse>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? jwt = freezed,
-    Object? registrationCreated = null,
-    Object? verifyEmailSent = null,
-  }) {
-    return _then(_value.copyWith(
-      jwt: freezed == jwt
-          ? _value.jwt
-          : jwt // ignore: cast_nullable_to_non_nullable
-              as String?,
-      registrationCreated: null == registrationCreated
-          ? _value.registrationCreated
-          : registrationCreated // ignore: cast_nullable_to_non_nullable
-              as bool,
-      verifyEmailSent: null == verifyEmailSent
-          ? _value.verifyEmailSent
-          : verifyEmailSent // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ) as $Val);
+  $Res call({Object? jwt = freezed, Object? registrationCreated = null, Object? verifyEmailSent = null}) {
+    return _then(
+      _value.copyWith(
+            jwt:
+                freezed == jwt
+                    ? _value.jwt
+                    : jwt // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            registrationCreated:
+                null == registrationCreated
+                    ? _value.registrationCreated
+                    : registrationCreated // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            verifyEmailSent:
+                null == verifyEmailSent
+                    ? _value.verifyEmailSent
+                    : verifyEmailSent // ignore: cast_nullable_to_non_nullable
+                        as bool,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$LoginResponseImplCopyWith<$Res>
-    implements $LoginResponseCopyWith<$Res> {
-  factory _$$LoginResponseImplCopyWith(
-          _$LoginResponseImpl value, $Res Function(_$LoginResponseImpl) then) =
-      __$$LoginResponseImplCopyWithImpl<$Res>;
+abstract class _$$LoginResponseImplCopyWith<$Res> implements $LoginResponseCopyWith<$Res> {
+  factory _$$LoginResponseImplCopyWith(_$LoginResponseImpl value, $Res Function(_$LoginResponseImpl) then) = __$$LoginResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? jwt, bool registrationCreated, bool verifyEmailSent});
 }
 
 /// @nodoc
-class __$$LoginResponseImplCopyWithImpl<$Res>
-    extends _$LoginResponseCopyWithImpl<$Res, _$LoginResponseImpl>
-    implements _$$LoginResponseImplCopyWith<$Res> {
-  __$$LoginResponseImplCopyWithImpl(
-      _$LoginResponseImpl _value, $Res Function(_$LoginResponseImpl) _then)
-      : super(_value, _then);
+class __$$LoginResponseImplCopyWithImpl<$Res> extends _$LoginResponseCopyWithImpl<$Res, _$LoginResponseImpl> implements _$$LoginResponseImplCopyWith<$Res> {
+  __$$LoginResponseImplCopyWithImpl(_$LoginResponseImpl _value, $Res Function(_$LoginResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of LoginResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? jwt = freezed,
-    Object? registrationCreated = null,
-    Object? verifyEmailSent = null,
-  }) {
-    return _then(_$LoginResponseImpl(
-      jwt: freezed == jwt
-          ? _value.jwt
-          : jwt // ignore: cast_nullable_to_non_nullable
-              as String?,
-      registrationCreated: null == registrationCreated
-          ? _value.registrationCreated
-          : registrationCreated // ignore: cast_nullable_to_non_nullable
-              as bool,
-      verifyEmailSent: null == verifyEmailSent
-          ? _value.verifyEmailSent
-          : verifyEmailSent // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
+  $Res call({Object? jwt = freezed, Object? registrationCreated = null, Object? verifyEmailSent = null}) {
+    return _then(
+      _$LoginResponseImpl(
+        jwt:
+            freezed == jwt
+                ? _value.jwt
+                : jwt // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        registrationCreated:
+            null == registrationCreated
+                ? _value.registrationCreated
+                : registrationCreated // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        verifyEmailSent:
+            null == verifyEmailSent
+                ? _value.verifyEmailSent
+                : verifyEmailSent // ignore: cast_nullable_to_non_nullable
+                    as bool,
+      ),
+    );
   }
 }
 
@@ -128,21 +121,16 @@ class __$$LoginResponseImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$LoginResponseImpl extends _LoginResponse {
-  const _$LoginResponseImpl(
-      {this.jwt,
-      required this.registrationCreated,
-      required this.verifyEmailSent})
-      : super._();
+  const _$LoginResponseImpl({this.jwt, required this.registrationCreated, required this.verifyEmailSent}) : super._();
 
-  factory _$LoginResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$LoginResponseImplFromJson(json);
+  factory _$LoginResponseImpl.fromJson(Map<String, dynamic> json) => _$$LoginResponseImplFromJson(json);
 
   @override
   final String? jwt;
-// v0.18.0
+  // v0.18.0
   @override
   final bool registrationCreated;
-// v0.18.0
+  // v0.18.0
   @override
   final bool verifyEmailSent;
 
@@ -157,42 +145,32 @@ class _$LoginResponseImpl extends _LoginResponse {
         (other.runtimeType == runtimeType &&
             other is _$LoginResponseImpl &&
             (identical(other.jwt, jwt) || other.jwt == jwt) &&
-            (identical(other.registrationCreated, registrationCreated) ||
-                other.registrationCreated == registrationCreated) &&
-            (identical(other.verifyEmailSent, verifyEmailSent) ||
-                other.verifyEmailSent == verifyEmailSent));
+            (identical(other.registrationCreated, registrationCreated) || other.registrationCreated == registrationCreated) &&
+            (identical(other.verifyEmailSent, verifyEmailSent) || other.verifyEmailSent == verifyEmailSent));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, jwt, registrationCreated, verifyEmailSent);
+  int get hashCode => Object.hash(runtimeType, jwt, registrationCreated, verifyEmailSent);
 
   /// Create a copy of LoginResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$LoginResponseImplCopyWith<_$LoginResponseImpl> get copyWith =>
-      __$$LoginResponseImplCopyWithImpl<_$LoginResponseImpl>(this, _$identity);
+  _$$LoginResponseImplCopyWith<_$LoginResponseImpl> get copyWith => __$$LoginResponseImplCopyWithImpl<_$LoginResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$LoginResponseImplToJson(
-      this,
-    );
+    return _$$LoginResponseImplToJson(this);
   }
 }
 
 abstract class _LoginResponse extends LoginResponse {
-  const factory _LoginResponse(
-      {final String? jwt,
-      required final bool registrationCreated,
-      required final bool verifyEmailSent}) = _$LoginResponseImpl;
+  const factory _LoginResponse({final String? jwt, required final bool registrationCreated, required final bool verifyEmailSent}) = _$LoginResponseImpl;
   const _LoginResponse._() : super._();
 
-  factory _LoginResponse.fromJson(Map<String, dynamic> json) =
-      _$LoginResponseImpl.fromJson;
+  factory _LoginResponse.fromJson(Map<String, dynamic> json) = _$LoginResponseImpl.fromJson;
 
   @override
   String? get jwt; // v0.18.0
@@ -205,6 +183,5 @@ abstract class _LoginResponse extends LoginResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LoginResponseImplCopyWith<_$LoginResponseImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$LoginResponseImplCopyWith<_$LoginResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

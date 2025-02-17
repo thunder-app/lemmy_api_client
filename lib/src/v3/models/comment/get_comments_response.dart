@@ -14,6 +14,5 @@ class GetCommentsResponse with _$GetCommentsResponse {
   }) = _GetCommentsResponse;
 
   const GetCommentsResponse._();
-  factory GetCommentsResponse.fromJson(Map<String, dynamic> json) =>
-      _$GetCommentsResponseFromJson(json);
+  factory GetCommentsResponse.fromJson(Map<String, dynamic> json) => _$GetCommentsResponseFromJson(json);
 }

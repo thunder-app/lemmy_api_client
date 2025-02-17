@@ -6,14 +6,6 @@ part of 'block_instance_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$BlockInstanceResponseImpl _$$BlockInstanceResponseImplFromJson(
-        Map<String, dynamic> json) =>
-    _$BlockInstanceResponseImpl(
-      blocked: json['blocked'] as bool,
-    );
+_$BlockInstanceResponseImpl _$$BlockInstanceResponseImplFromJson(Map<String, dynamic> json) => _$BlockInstanceResponseImpl(blocked: json['blocked'] as bool);
 
-Map<String, dynamic> _$$BlockInstanceResponseImplToJson(
-        _$BlockInstanceResponseImpl instance) =>
-    <String, dynamic>{
-      'blocked': instance.blocked,
-    };
+Map<String, dynamic> _$$BlockInstanceResponseImplToJson(_$BlockInstanceResponseImpl instance) => <String, dynamic>{'blocked': instance.blocked};

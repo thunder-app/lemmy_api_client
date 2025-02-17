@@ -16,6 +16,5 @@ class LocalImage with _$LocalImage {
   }) = _LocalImage;
 
   const LocalImage._();
-  factory LocalImage.fromJson(Map<String, dynamic> json) =>
-      _$LocalImageFromJson(json);
+  factory LocalImage.fromJson(Map<String, dynamic> json) => _$LocalImageFromJson(json);
 }

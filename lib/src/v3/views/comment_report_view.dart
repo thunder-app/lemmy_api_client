@@ -28,6 +28,5 @@ class CommentReportView with _$CommentReportView {
   }) = _CommentReportView;
 
   const CommentReportView._();
-  factory CommentReportView.fromJson(Map<String, dynamic> json) =>
-      _$CommentReportViewFromJson(json);
+  factory CommentReportView.fromJson(Map<String, dynamic> json) => _$CommentReportViewFromJson(json);
 }

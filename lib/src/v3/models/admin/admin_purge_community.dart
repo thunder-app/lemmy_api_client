@@ -16,6 +16,5 @@ class AdminPurgeCommunity with _$AdminPurgeCommunity {
   }) = _AdminPurgeCommunity;
 
   const AdminPurgeCommunity._();
-  factory AdminPurgeCommunity.fromJson(Map<String, dynamic> json) =>
-      _$AdminPurgeCommunityFromJson(json);
+  factory AdminPurgeCommunity.fromJson(Map<String, dynamic> json) => _$AdminPurgeCommunityFromJson(json);
 }

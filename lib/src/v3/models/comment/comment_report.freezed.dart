@@ -12,7 +12,8 @@ part of 'comment_report.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 CommentReport _$CommentReportFromJson(Map<String, dynamic> json) {
   return _CommentReport.fromJson(json);
@@ -23,8 +24,7 @@ mixin _$CommentReport {
   int get id => throw _privateConstructorUsedError; // v0.18.0
   int get creatorId => throw _privateConstructorUsedError; // v0.18.0
   int get commentId => throw _privateConstructorUsedError; // v0.18.0
-  String get originalCommentText =>
-      throw _privateConstructorUsedError; // v0.18.0
+  String get originalCommentText => throw _privateConstructorUsedError; // v0.18.0
   String get reason => throw _privateConstructorUsedError; // v0.18.0
   bool get resolved => throw _privateConstructorUsedError; // v0.18.0
   int? get resolverId => throw _privateConstructorUsedError; // v0.18.0
@@ -37,31 +37,18 @@ mixin _$CommentReport {
   /// Create a copy of CommentReport
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $CommentReportCopyWith<CommentReport> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CommentReportCopyWith<CommentReport> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CommentReportCopyWith<$Res> {
-  factory $CommentReportCopyWith(
-          CommentReport value, $Res Function(CommentReport) then) =
-      _$CommentReportCopyWithImpl<$Res, CommentReport>;
+  factory $CommentReportCopyWith(CommentReport value, $Res Function(CommentReport) then) = _$CommentReportCopyWithImpl<$Res, CommentReport>;
   @useResult
-  $Res call(
-      {int id,
-      int creatorId,
-      int commentId,
-      String originalCommentText,
-      String reason,
-      bool resolved,
-      int? resolverId,
-      DateTime published,
-      DateTime? updated});
+  $Res call({int id, int creatorId, int commentId, String originalCommentText, String reason, bool resolved, int? resolverId, DateTime published, DateTime? updated});
 }
 
 /// @nodoc
-class _$CommentReportCopyWithImpl<$Res, $Val extends CommentReport>
-    implements $CommentReportCopyWith<$Res> {
+class _$CommentReportCopyWithImpl<$Res, $Val extends CommentReport> implements $CommentReportCopyWith<$Res> {
   _$CommentReportCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -84,74 +71,70 @@ class _$CommentReportCopyWithImpl<$Res, $Val extends CommentReport>
     Object? published = null,
     Object? updated = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      creatorId: null == creatorId
-          ? _value.creatorId
-          : creatorId // ignore: cast_nullable_to_non_nullable
-              as int,
-      commentId: null == commentId
-          ? _value.commentId
-          : commentId // ignore: cast_nullable_to_non_nullable
-              as int,
-      originalCommentText: null == originalCommentText
-          ? _value.originalCommentText
-          : originalCommentText // ignore: cast_nullable_to_non_nullable
-              as String,
-      reason: null == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String,
-      resolved: null == resolved
-          ? _value.resolved
-          : resolved // ignore: cast_nullable_to_non_nullable
-              as bool,
-      resolverId: freezed == resolverId
-          ? _value.resolverId
-          : resolverId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      published: null == published
-          ? _value.published
-          : published // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updated: freezed == updated
-          ? _value.updated
-          : updated // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as int,
+            creatorId:
+                null == creatorId
+                    ? _value.creatorId
+                    : creatorId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            commentId:
+                null == commentId
+                    ? _value.commentId
+                    : commentId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            originalCommentText:
+                null == originalCommentText
+                    ? _value.originalCommentText
+                    : originalCommentText // ignore: cast_nullable_to_non_nullable
+                        as String,
+            reason:
+                null == reason
+                    ? _value.reason
+                    : reason // ignore: cast_nullable_to_non_nullable
+                        as String,
+            resolved:
+                null == resolved
+                    ? _value.resolved
+                    : resolved // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            resolverId:
+                freezed == resolverId
+                    ? _value.resolverId
+                    : resolverId // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            published:
+                null == published
+                    ? _value.published
+                    : published // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            updated:
+                freezed == updated
+                    ? _value.updated
+                    : updated // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$CommentReportImplCopyWith<$Res>
-    implements $CommentReportCopyWith<$Res> {
-  factory _$$CommentReportImplCopyWith(
-          _$CommentReportImpl value, $Res Function(_$CommentReportImpl) then) =
-      __$$CommentReportImplCopyWithImpl<$Res>;
+abstract class _$$CommentReportImplCopyWith<$Res> implements $CommentReportCopyWith<$Res> {
+  factory _$$CommentReportImplCopyWith(_$CommentReportImpl value, $Res Function(_$CommentReportImpl) then) = __$$CommentReportImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int id,
-      int creatorId,
-      int commentId,
-      String originalCommentText,
-      String reason,
-      bool resolved,
-      int? resolverId,
-      DateTime published,
-      DateTime? updated});
+  $Res call({int id, int creatorId, int commentId, String originalCommentText, String reason, bool resolved, int? resolverId, DateTime published, DateTime? updated});
 }
 
 /// @nodoc
-class __$$CommentReportImplCopyWithImpl<$Res>
-    extends _$CommentReportCopyWithImpl<$Res, _$CommentReportImpl>
-    implements _$$CommentReportImplCopyWith<$Res> {
-  __$$CommentReportImplCopyWithImpl(
-      _$CommentReportImpl _value, $Res Function(_$CommentReportImpl) _then)
-      : super(_value, _then);
+class __$$CommentReportImplCopyWithImpl<$Res> extends _$CommentReportCopyWithImpl<$Res, _$CommentReportImpl> implements _$$CommentReportImplCopyWith<$Res> {
+  __$$CommentReportImplCopyWithImpl(_$CommentReportImpl _value, $Res Function(_$CommentReportImpl) _then) : super(_value, _then);
 
   /// Create a copy of CommentReport
   /// with the given fields replaced by the non-null parameter values.
@@ -168,44 +151,55 @@ class __$$CommentReportImplCopyWithImpl<$Res>
     Object? published = null,
     Object? updated = freezed,
   }) {
-    return _then(_$CommentReportImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      creatorId: null == creatorId
-          ? _value.creatorId
-          : creatorId // ignore: cast_nullable_to_non_nullable
-              as int,
-      commentId: null == commentId
-          ? _value.commentId
-          : commentId // ignore: cast_nullable_to_non_nullable
-              as int,
-      originalCommentText: null == originalCommentText
-          ? _value.originalCommentText
-          : originalCommentText // ignore: cast_nullable_to_non_nullable
-              as String,
-      reason: null == reason
-          ? _value.reason
-          : reason // ignore: cast_nullable_to_non_nullable
-              as String,
-      resolved: null == resolved
-          ? _value.resolved
-          : resolved // ignore: cast_nullable_to_non_nullable
-              as bool,
-      resolverId: freezed == resolverId
-          ? _value.resolverId
-          : resolverId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      published: null == published
-          ? _value.published
-          : published // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updated: freezed == updated
-          ? _value.updated
-          : updated // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ));
+    return _then(
+      _$CommentReportImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as int,
+        creatorId:
+            null == creatorId
+                ? _value.creatorId
+                : creatorId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        commentId:
+            null == commentId
+                ? _value.commentId
+                : commentId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        originalCommentText:
+            null == originalCommentText
+                ? _value.originalCommentText
+                : originalCommentText // ignore: cast_nullable_to_non_nullable
+                    as String,
+        reason:
+            null == reason
+                ? _value.reason
+                : reason // ignore: cast_nullable_to_non_nullable
+                    as String,
+        resolved:
+            null == resolved
+                ? _value.resolved
+                : resolved // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        resolverId:
+            freezed == resolverId
+                ? _value.resolverId
+                : resolverId // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        published:
+            null == published
+                ? _value.published
+                : published // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        updated:
+            freezed == updated
+                ? _value.updated
+                : updated // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+      ),
+    );
   }
 }
 
@@ -213,45 +207,44 @@ class __$$CommentReportImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$CommentReportImpl extends _CommentReport {
-  const _$CommentReportImpl(
-      {required this.id,
-      required this.creatorId,
-      required this.commentId,
-      required this.originalCommentText,
-      required this.reason,
-      required this.resolved,
-      this.resolverId,
-      required this.published,
-      this.updated})
-      : super._();
+  const _$CommentReportImpl({
+    required this.id,
+    required this.creatorId,
+    required this.commentId,
+    required this.originalCommentText,
+    required this.reason,
+    required this.resolved,
+    this.resolverId,
+    required this.published,
+    this.updated,
+  }) : super._();
 
-  factory _$CommentReportImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CommentReportImplFromJson(json);
+  factory _$CommentReportImpl.fromJson(Map<String, dynamic> json) => _$$CommentReportImplFromJson(json);
 
   @override
   final int id;
-// v0.18.0
+  // v0.18.0
   @override
   final int creatorId;
-// v0.18.0
+  // v0.18.0
   @override
   final int commentId;
-// v0.18.0
+  // v0.18.0
   @override
   final String originalCommentText;
-// v0.18.0
+  // v0.18.0
   @override
   final String reason;
-// v0.18.0
+  // v0.18.0
   @override
   final bool resolved;
-// v0.18.0
+  // v0.18.0
   @override
   final int? resolverId;
-// v0.18.0
+  // v0.18.0
   @override
   final DateTime published;
-// v0.18.0
+  // v0.18.0
   @override
   final DateTime? updated;
 
@@ -266,58 +259,48 @@ class _$CommentReportImpl extends _CommentReport {
         (other.runtimeType == runtimeType &&
             other is _$CommentReportImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.creatorId, creatorId) ||
-                other.creatorId == creatorId) &&
-            (identical(other.commentId, commentId) ||
-                other.commentId == commentId) &&
-            (identical(other.originalCommentText, originalCommentText) ||
-                other.originalCommentText == originalCommentText) &&
+            (identical(other.creatorId, creatorId) || other.creatorId == creatorId) &&
+            (identical(other.commentId, commentId) || other.commentId == commentId) &&
+            (identical(other.originalCommentText, originalCommentText) || other.originalCommentText == originalCommentText) &&
             (identical(other.reason, reason) || other.reason == reason) &&
-            (identical(other.resolved, resolved) ||
-                other.resolved == resolved) &&
-            (identical(other.resolverId, resolverId) ||
-                other.resolverId == resolverId) &&
-            (identical(other.published, published) ||
-                other.published == published) &&
+            (identical(other.resolved, resolved) || other.resolved == resolved) &&
+            (identical(other.resolverId, resolverId) || other.resolverId == resolverId) &&
+            (identical(other.published, published) || other.published == published) &&
             (identical(other.updated, updated) || other.updated == updated));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, creatorId, commentId,
-      originalCommentText, reason, resolved, resolverId, published, updated);
+  int get hashCode => Object.hash(runtimeType, id, creatorId, commentId, originalCommentText, reason, resolved, resolverId, published, updated);
 
   /// Create a copy of CommentReport
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$CommentReportImplCopyWith<_$CommentReportImpl> get copyWith =>
-      __$$CommentReportImplCopyWithImpl<_$CommentReportImpl>(this, _$identity);
+  _$$CommentReportImplCopyWith<_$CommentReportImpl> get copyWith => __$$CommentReportImplCopyWithImpl<_$CommentReportImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CommentReportImplToJson(
-      this,
-    );
+    return _$$CommentReportImplToJson(this);
   }
 }
 
 abstract class _CommentReport extends CommentReport {
-  const factory _CommentReport(
-      {required final int id,
-      required final int creatorId,
-      required final int commentId,
-      required final String originalCommentText,
-      required final String reason,
-      required final bool resolved,
-      final int? resolverId,
-      required final DateTime published,
-      final DateTime? updated}) = _$CommentReportImpl;
+  const factory _CommentReport({
+    required final int id,
+    required final int creatorId,
+    required final int commentId,
+    required final String originalCommentText,
+    required final String reason,
+    required final bool resolved,
+    final int? resolverId,
+    required final DateTime published,
+    final DateTime? updated,
+  }) = _$CommentReportImpl;
   const _CommentReport._() : super._();
 
-  factory _CommentReport.fromJson(Map<String, dynamic> json) =
-      _$CommentReportImpl.fromJson;
+  factory _CommentReport.fromJson(Map<String, dynamic> json) = _$CommentReportImpl.fromJson;
 
   @override
   int get id; // v0.18.0
@@ -342,6 +325,5 @@ abstract class _CommentReport extends CommentReport {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CommentReportImplCopyWith<_$CommentReportImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CommentReportImplCopyWith<_$CommentReportImpl> get copyWith => throw _privateConstructorUsedError;
 }

@@ -16,6 +16,5 @@ class AdminPurgePostView with _$AdminPurgePostView {
   }) = _AdminPurgePostView;
 
   const AdminPurgePostView._();
-  factory AdminPurgePostView.fromJson(Map<String, dynamic> json) =>
-      _$AdminPurgePostViewFromJson(json);
+  factory AdminPurgePostView.fromJson(Map<String, dynamic> json) => _$AdminPurgePostViewFromJson(json);
 }

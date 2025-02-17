@@ -31,6 +31,5 @@ class LocalSiteRateLimit with _$LocalSiteRateLimit {
   }) = _LocalSiteRateLimit;
 
   const LocalSiteRateLimit._();
-  factory LocalSiteRateLimit.fromJson(Map<String, dynamic> json) =>
-      _$LocalSiteRateLimitFromJson(json);
+  factory LocalSiteRateLimit.fromJson(Map<String, dynamic> json) => _$LocalSiteRateLimitFromJson(json);
 }

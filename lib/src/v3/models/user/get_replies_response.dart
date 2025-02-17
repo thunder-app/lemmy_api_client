@@ -14,6 +14,5 @@ class GetRepliesResponse with _$GetRepliesResponse {
   }) = _GetRepliesResponse;
 
   const GetRepliesResponse._();
-  factory GetRepliesResponse.fromJson(Map<String, dynamic> json) =>
-      _$GetRepliesResponseFromJson(json);
+  factory GetRepliesResponse.fromJson(Map<String, dynamic> json) => _$GetRepliesResponseFromJson(json);
 }

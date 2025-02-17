@@ -41,6 +41,5 @@ class LocalSite with _$LocalSite {
   }) = _LocalSite;
 
   const LocalSite._();
-  factory LocalSite.fromJson(Map<String, dynamic> json) =>
-      _$LocalSiteFromJson(json);
+  factory LocalSite.fromJson(Map<String, dynamic> json) => _$LocalSiteFromJson(json);
 }

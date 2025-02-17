@@ -17,6 +17,5 @@ class LocalSiteUrlBlocklist with _$LocalSiteUrlBlocklist {
   }) = _LocalSiteUrlBlocklist;
 
   const LocalSiteUrlBlocklist._();
-  factory LocalSiteUrlBlocklist.fromJson(Map<String, dynamic> json) =>
-      _$LocalSiteUrlBlocklistFromJson(json);
+  factory LocalSiteUrlBlocklist.fromJson(Map<String, dynamic> json) => _$LocalSiteUrlBlocklistFromJson(json);
 }

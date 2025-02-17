@@ -12,7 +12,8 @@ part of 'custom_emoji_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 CustomEmojiResponse _$CustomEmojiResponseFromJson(Map<String, dynamic> json) {
   return _CustomEmojiResponse.fromJson(json);
@@ -28,15 +29,12 @@ mixin _$CustomEmojiResponse {
   /// Create a copy of CustomEmojiResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $CustomEmojiResponseCopyWith<CustomEmojiResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CustomEmojiResponseCopyWith<CustomEmojiResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CustomEmojiResponseCopyWith<$Res> {
-  factory $CustomEmojiResponseCopyWith(
-          CustomEmojiResponse value, $Res Function(CustomEmojiResponse) then) =
-      _$CustomEmojiResponseCopyWithImpl<$Res, CustomEmojiResponse>;
+  factory $CustomEmojiResponseCopyWith(CustomEmojiResponse value, $Res Function(CustomEmojiResponse) then) = _$CustomEmojiResponseCopyWithImpl<$Res, CustomEmojiResponse>;
   @useResult
   $Res call({CustomEmojiView customEmoji});
 
@@ -44,8 +42,7 @@ abstract class $CustomEmojiResponseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CustomEmojiResponseCopyWithImpl<$Res, $Val extends CustomEmojiResponse>
-    implements $CustomEmojiResponseCopyWith<$Res> {
+class _$CustomEmojiResponseCopyWithImpl<$Res, $Val extends CustomEmojiResponse> implements $CustomEmojiResponseCopyWith<$Res> {
   _$CustomEmojiResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -57,15 +54,17 @@ class _$CustomEmojiResponseCopyWithImpl<$Res, $Val extends CustomEmojiResponse>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? customEmoji = null,
-  }) {
-    return _then(_value.copyWith(
-      customEmoji: null == customEmoji
-          ? _value.customEmoji
-          : customEmoji // ignore: cast_nullable_to_non_nullable
-              as CustomEmojiView,
-    ) as $Val);
+  $Res call({Object? customEmoji = null}) {
+    return _then(
+      _value.copyWith(
+            customEmoji:
+                null == customEmoji
+                    ? _value.customEmoji
+                    : customEmoji // ignore: cast_nullable_to_non_nullable
+                        as CustomEmojiView,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of CustomEmojiResponse
@@ -80,11 +79,8 @@ class _$CustomEmojiResponseCopyWithImpl<$Res, $Val extends CustomEmojiResponse>
 }
 
 /// @nodoc
-abstract class _$$CustomEmojiResponseImplCopyWith<$Res>
-    implements $CustomEmojiResponseCopyWith<$Res> {
-  factory _$$CustomEmojiResponseImplCopyWith(_$CustomEmojiResponseImpl value,
-          $Res Function(_$CustomEmojiResponseImpl) then) =
-      __$$CustomEmojiResponseImplCopyWithImpl<$Res>;
+abstract class _$$CustomEmojiResponseImplCopyWith<$Res> implements $CustomEmojiResponseCopyWith<$Res> {
+  factory _$$CustomEmojiResponseImplCopyWith(_$CustomEmojiResponseImpl value, $Res Function(_$CustomEmojiResponseImpl) then) = __$$CustomEmojiResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({CustomEmojiView customEmoji});
@@ -94,26 +90,23 @@ abstract class _$$CustomEmojiResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CustomEmojiResponseImplCopyWithImpl<$Res>
-    extends _$CustomEmojiResponseCopyWithImpl<$Res, _$CustomEmojiResponseImpl>
-    implements _$$CustomEmojiResponseImplCopyWith<$Res> {
-  __$$CustomEmojiResponseImplCopyWithImpl(_$CustomEmojiResponseImpl _value,
-      $Res Function(_$CustomEmojiResponseImpl) _then)
-      : super(_value, _then);
+class __$$CustomEmojiResponseImplCopyWithImpl<$Res> extends _$CustomEmojiResponseCopyWithImpl<$Res, _$CustomEmojiResponseImpl> implements _$$CustomEmojiResponseImplCopyWith<$Res> {
+  __$$CustomEmojiResponseImplCopyWithImpl(_$CustomEmojiResponseImpl _value, $Res Function(_$CustomEmojiResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of CustomEmojiResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? customEmoji = null,
-  }) {
-    return _then(_$CustomEmojiResponseImpl(
-      customEmoji: null == customEmoji
-          ? _value.customEmoji
-          : customEmoji // ignore: cast_nullable_to_non_nullable
-              as CustomEmojiView,
-    ));
+  $Res call({Object? customEmoji = null}) {
+    return _then(
+      _$CustomEmojiResponseImpl(
+        customEmoji:
+            null == customEmoji
+                ? _value.customEmoji
+                : customEmoji // ignore: cast_nullable_to_non_nullable
+                    as CustomEmojiView,
+      ),
+    );
   }
 }
 
@@ -123,8 +116,7 @@ class __$$CustomEmojiResponseImplCopyWithImpl<$Res>
 class _$CustomEmojiResponseImpl extends _CustomEmojiResponse {
   const _$CustomEmojiResponseImpl({required this.customEmoji}) : super._();
 
-  factory _$CustomEmojiResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CustomEmojiResponseImplFromJson(json);
+  factory _$CustomEmojiResponseImpl.fromJson(Map<String, dynamic> json) => _$$CustomEmojiResponseImplFromJson(json);
 
   @override
   final CustomEmojiView customEmoji;
@@ -136,11 +128,7 @@ class _$CustomEmojiResponseImpl extends _CustomEmojiResponse {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CustomEmojiResponseImpl &&
-            (identical(other.customEmoji, customEmoji) ||
-                other.customEmoji == customEmoji));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$CustomEmojiResponseImpl && (identical(other.customEmoji, customEmoji) || other.customEmoji == customEmoji));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -152,25 +140,19 @@ class _$CustomEmojiResponseImpl extends _CustomEmojiResponse {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$CustomEmojiResponseImplCopyWith<_$CustomEmojiResponseImpl> get copyWith =>
-      __$$CustomEmojiResponseImplCopyWithImpl<_$CustomEmojiResponseImpl>(
-          this, _$identity);
+  _$$CustomEmojiResponseImplCopyWith<_$CustomEmojiResponseImpl> get copyWith => __$$CustomEmojiResponseImplCopyWithImpl<_$CustomEmojiResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CustomEmojiResponseImplToJson(
-      this,
-    );
+    return _$$CustomEmojiResponseImplToJson(this);
   }
 }
 
 abstract class _CustomEmojiResponse extends CustomEmojiResponse {
-  const factory _CustomEmojiResponse(
-      {required final CustomEmojiView customEmoji}) = _$CustomEmojiResponseImpl;
+  const factory _CustomEmojiResponse({required final CustomEmojiView customEmoji}) = _$CustomEmojiResponseImpl;
   const _CustomEmojiResponse._() : super._();
 
-  factory _CustomEmojiResponse.fromJson(Map<String, dynamic> json) =
-      _$CustomEmojiResponseImpl.fromJson;
+  factory _CustomEmojiResponse.fromJson(Map<String, dynamic> json) = _$CustomEmojiResponseImpl.fromJson;
 
   @override
   CustomEmojiView get customEmoji;
@@ -179,6 +161,5 @@ abstract class _CustomEmojiResponse extends CustomEmojiResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CustomEmojiResponseImplCopyWith<_$CustomEmojiResponseImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CustomEmojiResponseImplCopyWith<_$CustomEmojiResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

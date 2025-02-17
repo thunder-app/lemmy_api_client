@@ -12,7 +12,8 @@ part of 'person_mention.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 PersonMention _$PersonMentionFromJson(Map<String, dynamic> json) {
   return _PersonMention.fromJson(json);
@@ -32,23 +33,18 @@ mixin _$PersonMention {
   /// Create a copy of PersonMention
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PersonMentionCopyWith<PersonMention> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PersonMentionCopyWith<PersonMention> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PersonMentionCopyWith<$Res> {
-  factory $PersonMentionCopyWith(
-          PersonMention value, $Res Function(PersonMention) then) =
-      _$PersonMentionCopyWithImpl<$Res, PersonMention>;
+  factory $PersonMentionCopyWith(PersonMention value, $Res Function(PersonMention) then) = _$PersonMentionCopyWithImpl<$Res, PersonMention>;
   @useResult
-  $Res call(
-      {int id, int recipientId, int commentId, bool read, DateTime published});
+  $Res call({int id, int recipientId, int commentId, bool read, DateTime published});
 }
 
 /// @nodoc
-class _$PersonMentionCopyWithImpl<$Res, $Val extends PersonMention>
-    implements $PersonMentionCopyWith<$Res> {
+class _$PersonMentionCopyWithImpl<$Res, $Val extends PersonMention> implements $PersonMentionCopyWith<$Res> {
   _$PersonMentionCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -60,91 +56,86 @@ class _$PersonMentionCopyWithImpl<$Res, $Val extends PersonMention>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? recipientId = null,
-    Object? commentId = null,
-    Object? read = null,
-    Object? published = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      recipientId: null == recipientId
-          ? _value.recipientId
-          : recipientId // ignore: cast_nullable_to_non_nullable
-              as int,
-      commentId: null == commentId
-          ? _value.commentId
-          : commentId // ignore: cast_nullable_to_non_nullable
-              as int,
-      read: null == read
-          ? _value.read
-          : read // ignore: cast_nullable_to_non_nullable
-              as bool,
-      published: null == published
-          ? _value.published
-          : published // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-    ) as $Val);
+  $Res call({Object? id = null, Object? recipientId = null, Object? commentId = null, Object? read = null, Object? published = null}) {
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as int,
+            recipientId:
+                null == recipientId
+                    ? _value.recipientId
+                    : recipientId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            commentId:
+                null == commentId
+                    ? _value.commentId
+                    : commentId // ignore: cast_nullable_to_non_nullable
+                        as int,
+            read:
+                null == read
+                    ? _value.read
+                    : read // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            published:
+                null == published
+                    ? _value.published
+                    : published // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$PersonMentionImplCopyWith<$Res>
-    implements $PersonMentionCopyWith<$Res> {
-  factory _$$PersonMentionImplCopyWith(
-          _$PersonMentionImpl value, $Res Function(_$PersonMentionImpl) then) =
-      __$$PersonMentionImplCopyWithImpl<$Res>;
+abstract class _$$PersonMentionImplCopyWith<$Res> implements $PersonMentionCopyWith<$Res> {
+  factory _$$PersonMentionImplCopyWith(_$PersonMentionImpl value, $Res Function(_$PersonMentionImpl) then) = __$$PersonMentionImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int id, int recipientId, int commentId, bool read, DateTime published});
+  $Res call({int id, int recipientId, int commentId, bool read, DateTime published});
 }
 
 /// @nodoc
-class __$$PersonMentionImplCopyWithImpl<$Res>
-    extends _$PersonMentionCopyWithImpl<$Res, _$PersonMentionImpl>
-    implements _$$PersonMentionImplCopyWith<$Res> {
-  __$$PersonMentionImplCopyWithImpl(
-      _$PersonMentionImpl _value, $Res Function(_$PersonMentionImpl) _then)
-      : super(_value, _then);
+class __$$PersonMentionImplCopyWithImpl<$Res> extends _$PersonMentionCopyWithImpl<$Res, _$PersonMentionImpl> implements _$$PersonMentionImplCopyWith<$Res> {
+  __$$PersonMentionImplCopyWithImpl(_$PersonMentionImpl _value, $Res Function(_$PersonMentionImpl) _then) : super(_value, _then);
 
   /// Create a copy of PersonMention
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? recipientId = null,
-    Object? commentId = null,
-    Object? read = null,
-    Object? published = null,
-  }) {
-    return _then(_$PersonMentionImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      recipientId: null == recipientId
-          ? _value.recipientId
-          : recipientId // ignore: cast_nullable_to_non_nullable
-              as int,
-      commentId: null == commentId
-          ? _value.commentId
-          : commentId // ignore: cast_nullable_to_non_nullable
-              as int,
-      read: null == read
-          ? _value.read
-          : read // ignore: cast_nullable_to_non_nullable
-              as bool,
-      published: null == published
-          ? _value.published
-          : published // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-    ));
+  $Res call({Object? id = null, Object? recipientId = null, Object? commentId = null, Object? read = null, Object? published = null}) {
+    return _then(
+      _$PersonMentionImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as int,
+        recipientId:
+            null == recipientId
+                ? _value.recipientId
+                : recipientId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        commentId:
+            null == commentId
+                ? _value.commentId
+                : commentId // ignore: cast_nullable_to_non_nullable
+                    as int,
+        read:
+            null == read
+                ? _value.read
+                : read // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        published:
+            null == published
+                ? _value.published
+                : published // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+      ),
+    );
   }
 }
 
@@ -152,29 +143,22 @@ class __$$PersonMentionImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$PersonMentionImpl extends _PersonMention {
-  const _$PersonMentionImpl(
-      {required this.id,
-      required this.recipientId,
-      required this.commentId,
-      required this.read,
-      required this.published})
-      : super._();
+  const _$PersonMentionImpl({required this.id, required this.recipientId, required this.commentId, required this.read, required this.published}) : super._();
 
-  factory _$PersonMentionImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PersonMentionImplFromJson(json);
+  factory _$PersonMentionImpl.fromJson(Map<String, dynamic> json) => _$$PersonMentionImplFromJson(json);
 
   @override
   final int id;
-// v0.18.0
+  // v0.18.0
   @override
   final int recipientId;
-// v0.18.0
+  // v0.18.0
   @override
   final int commentId;
-// v0.18.0
+  // v0.18.0
   @override
   final bool read;
-// v0.18.0
+  // v0.18.0
   @override
   final DateTime published;
 
@@ -189,47 +173,35 @@ class _$PersonMentionImpl extends _PersonMention {
         (other.runtimeType == runtimeType &&
             other is _$PersonMentionImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.recipientId, recipientId) ||
-                other.recipientId == recipientId) &&
-            (identical(other.commentId, commentId) ||
-                other.commentId == commentId) &&
+            (identical(other.recipientId, recipientId) || other.recipientId == recipientId) &&
+            (identical(other.commentId, commentId) || other.commentId == commentId) &&
             (identical(other.read, read) || other.read == read) &&
-            (identical(other.published, published) ||
-                other.published == published));
+            (identical(other.published, published) || other.published == published));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, recipientId, commentId, read, published);
+  int get hashCode => Object.hash(runtimeType, id, recipientId, commentId, read, published);
 
   /// Create a copy of PersonMention
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$PersonMentionImplCopyWith<_$PersonMentionImpl> get copyWith =>
-      __$$PersonMentionImplCopyWithImpl<_$PersonMentionImpl>(this, _$identity);
+  _$$PersonMentionImplCopyWith<_$PersonMentionImpl> get copyWith => __$$PersonMentionImplCopyWithImpl<_$PersonMentionImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PersonMentionImplToJson(
-      this,
-    );
+    return _$$PersonMentionImplToJson(this);
   }
 }
 
 abstract class _PersonMention extends PersonMention {
-  const factory _PersonMention(
-      {required final int id,
-      required final int recipientId,
-      required final int commentId,
-      required final bool read,
-      required final DateTime published}) = _$PersonMentionImpl;
+  const factory _PersonMention({required final int id, required final int recipientId, required final int commentId, required final bool read, required final DateTime published}) =
+      _$PersonMentionImpl;
   const _PersonMention._() : super._();
 
-  factory _PersonMention.fromJson(Map<String, dynamic> json) =
-      _$PersonMentionImpl.fromJson;
+  factory _PersonMention.fromJson(Map<String, dynamic> json) = _$PersonMentionImpl.fromJson;
 
   @override
   int get id; // v0.18.0
@@ -246,6 +218,5 @@ abstract class _PersonMention extends PersonMention {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PersonMentionImplCopyWith<_$PersonMentionImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PersonMentionImplCopyWith<_$PersonMentionImpl> get copyWith => throw _privateConstructorUsedError;
 }

@@ -18,6 +18,5 @@ class ModRemoveComment with _$ModRemoveComment {
   }) = _ModRemoveComment;
 
   const ModRemoveComment._();
-  factory ModRemoveComment.fromJson(Map<String, dynamic> json) =>
-      _$ModRemoveCommentFromJson(json);
+  factory ModRemoveComment.fromJson(Map<String, dynamic> json) => _$ModRemoveCommentFromJson(json);
 }

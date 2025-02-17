@@ -12,10 +12,10 @@ part of 'person_mention_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
-PersonMentionResponse _$PersonMentionResponseFromJson(
-    Map<String, dynamic> json) {
+PersonMentionResponse _$PersonMentionResponseFromJson(Map<String, dynamic> json) {
   return _PersonMentionResponse.fromJson(json);
 }
 
@@ -29,15 +29,12 @@ mixin _$PersonMentionResponse {
   /// Create a copy of PersonMentionResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PersonMentionResponseCopyWith<PersonMentionResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PersonMentionResponseCopyWith<PersonMentionResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PersonMentionResponseCopyWith<$Res> {
-  factory $PersonMentionResponseCopyWith(PersonMentionResponse value,
-          $Res Function(PersonMentionResponse) then) =
-      _$PersonMentionResponseCopyWithImpl<$Res, PersonMentionResponse>;
+  factory $PersonMentionResponseCopyWith(PersonMentionResponse value, $Res Function(PersonMentionResponse) then) = _$PersonMentionResponseCopyWithImpl<$Res, PersonMentionResponse>;
   @useResult
   $Res call({PersonMentionView personMentionView});
 
@@ -45,9 +42,7 @@ abstract class $PersonMentionResponseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PersonMentionResponseCopyWithImpl<$Res,
-        $Val extends PersonMentionResponse>
-    implements $PersonMentionResponseCopyWith<$Res> {
+class _$PersonMentionResponseCopyWithImpl<$Res, $Val extends PersonMentionResponse> implements $PersonMentionResponseCopyWith<$Res> {
   _$PersonMentionResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -59,15 +54,17 @@ class _$PersonMentionResponseCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? personMentionView = null,
-  }) {
-    return _then(_value.copyWith(
-      personMentionView: null == personMentionView
-          ? _value.personMentionView
-          : personMentionView // ignore: cast_nullable_to_non_nullable
-              as PersonMentionView,
-    ) as $Val);
+  $Res call({Object? personMentionView = null}) {
+    return _then(
+      _value.copyWith(
+            personMentionView:
+                null == personMentionView
+                    ? _value.personMentionView
+                    : personMentionView // ignore: cast_nullable_to_non_nullable
+                        as PersonMentionView,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of PersonMentionResponse
@@ -82,12 +79,8 @@ class _$PersonMentionResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$PersonMentionResponseImplCopyWith<$Res>
-    implements $PersonMentionResponseCopyWith<$Res> {
-  factory _$$PersonMentionResponseImplCopyWith(
-          _$PersonMentionResponseImpl value,
-          $Res Function(_$PersonMentionResponseImpl) then) =
-      __$$PersonMentionResponseImplCopyWithImpl<$Res>;
+abstract class _$$PersonMentionResponseImplCopyWith<$Res> implements $PersonMentionResponseCopyWith<$Res> {
+  factory _$$PersonMentionResponseImplCopyWith(_$PersonMentionResponseImpl value, $Res Function(_$PersonMentionResponseImpl) then) = __$$PersonMentionResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({PersonMentionView personMentionView});
@@ -97,27 +90,23 @@ abstract class _$$PersonMentionResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PersonMentionResponseImplCopyWithImpl<$Res>
-    extends _$PersonMentionResponseCopyWithImpl<$Res,
-        _$PersonMentionResponseImpl>
-    implements _$$PersonMentionResponseImplCopyWith<$Res> {
-  __$$PersonMentionResponseImplCopyWithImpl(_$PersonMentionResponseImpl _value,
-      $Res Function(_$PersonMentionResponseImpl) _then)
-      : super(_value, _then);
+class __$$PersonMentionResponseImplCopyWithImpl<$Res> extends _$PersonMentionResponseCopyWithImpl<$Res, _$PersonMentionResponseImpl> implements _$$PersonMentionResponseImplCopyWith<$Res> {
+  __$$PersonMentionResponseImplCopyWithImpl(_$PersonMentionResponseImpl _value, $Res Function(_$PersonMentionResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of PersonMentionResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? personMentionView = null,
-  }) {
-    return _then(_$PersonMentionResponseImpl(
-      personMentionView: null == personMentionView
-          ? _value.personMentionView
-          : personMentionView // ignore: cast_nullable_to_non_nullable
-              as PersonMentionView,
-    ));
+  $Res call({Object? personMentionView = null}) {
+    return _then(
+      _$PersonMentionResponseImpl(
+        personMentionView:
+            null == personMentionView
+                ? _value.personMentionView
+                : personMentionView // ignore: cast_nullable_to_non_nullable
+                    as PersonMentionView,
+      ),
+    );
   }
 }
 
@@ -125,11 +114,9 @@ class __$$PersonMentionResponseImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$PersonMentionResponseImpl extends _PersonMentionResponse {
-  const _$PersonMentionResponseImpl({required this.personMentionView})
-      : super._();
+  const _$PersonMentionResponseImpl({required this.personMentionView}) : super._();
 
-  factory _$PersonMentionResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PersonMentionResponseImplFromJson(json);
+  factory _$PersonMentionResponseImpl.fromJson(Map<String, dynamic> json) => _$$PersonMentionResponseImplFromJson(json);
 
   @override
   final PersonMentionView personMentionView;
@@ -142,10 +129,7 @@ class _$PersonMentionResponseImpl extends _PersonMentionResponse {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PersonMentionResponseImpl &&
-            (identical(other.personMentionView, personMentionView) ||
-                other.personMentionView == personMentionView));
+        (other.runtimeType == runtimeType && other is _$PersonMentionResponseImpl && (identical(other.personMentionView, personMentionView) || other.personMentionView == personMentionView));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -157,26 +141,19 @@ class _$PersonMentionResponseImpl extends _PersonMentionResponse {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$PersonMentionResponseImplCopyWith<_$PersonMentionResponseImpl>
-      get copyWith => __$$PersonMentionResponseImplCopyWithImpl<
-          _$PersonMentionResponseImpl>(this, _$identity);
+  _$$PersonMentionResponseImplCopyWith<_$PersonMentionResponseImpl> get copyWith => __$$PersonMentionResponseImplCopyWithImpl<_$PersonMentionResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PersonMentionResponseImplToJson(
-      this,
-    );
+    return _$$PersonMentionResponseImplToJson(this);
   }
 }
 
 abstract class _PersonMentionResponse extends PersonMentionResponse {
-  const factory _PersonMentionResponse(
-          {required final PersonMentionView personMentionView}) =
-      _$PersonMentionResponseImpl;
+  const factory _PersonMentionResponse({required final PersonMentionView personMentionView}) = _$PersonMentionResponseImpl;
   const _PersonMentionResponse._() : super._();
 
-  factory _PersonMentionResponse.fromJson(Map<String, dynamic> json) =
-      _$PersonMentionResponseImpl.fromJson;
+  factory _PersonMentionResponse.fromJson(Map<String, dynamic> json) = _$PersonMentionResponseImpl.fromJson;
 
   @override
   PersonMentionView get personMentionView;
@@ -185,6 +162,5 @@ abstract class _PersonMentionResponse extends PersonMentionResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PersonMentionResponseImplCopyWith<_$PersonMentionResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$PersonMentionResponseImplCopyWith<_$PersonMentionResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

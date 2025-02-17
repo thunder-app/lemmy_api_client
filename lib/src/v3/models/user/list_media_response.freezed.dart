@@ -12,7 +12,8 @@ part of 'list_media_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ListMediaResponse _$ListMediaResponseFromJson(Map<String, dynamic> json) {
   return _ListMediaResponse.fromJson(json);
@@ -28,22 +29,18 @@ mixin _$ListMediaResponse {
   /// Create a copy of ListMediaResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ListMediaResponseCopyWith<ListMediaResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ListMediaResponseCopyWith<ListMediaResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ListMediaResponseCopyWith<$Res> {
-  factory $ListMediaResponseCopyWith(
-          ListMediaResponse value, $Res Function(ListMediaResponse) then) =
-      _$ListMediaResponseCopyWithImpl<$Res, ListMediaResponse>;
+  factory $ListMediaResponseCopyWith(ListMediaResponse value, $Res Function(ListMediaResponse) then) = _$ListMediaResponseCopyWithImpl<$Res, ListMediaResponse>;
   @useResult
   $Res call({List<LocalImageView> images});
 }
 
 /// @nodoc
-class _$ListMediaResponseCopyWithImpl<$Res, $Val extends ListMediaResponse>
-    implements $ListMediaResponseCopyWith<$Res> {
+class _$ListMediaResponseCopyWithImpl<$Res, $Val extends ListMediaResponse> implements $ListMediaResponseCopyWith<$Res> {
   _$ListMediaResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -55,50 +52,46 @@ class _$ListMediaResponseCopyWithImpl<$Res, $Val extends ListMediaResponse>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? images = null,
-  }) {
-    return _then(_value.copyWith(
-      images: null == images
-          ? _value.images
-          : images // ignore: cast_nullable_to_non_nullable
-              as List<LocalImageView>,
-    ) as $Val);
+  $Res call({Object? images = null}) {
+    return _then(
+      _value.copyWith(
+            images:
+                null == images
+                    ? _value.images
+                    : images // ignore: cast_nullable_to_non_nullable
+                        as List<LocalImageView>,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$ListMediaResponseImplCopyWith<$Res>
-    implements $ListMediaResponseCopyWith<$Res> {
-  factory _$$ListMediaResponseImplCopyWith(_$ListMediaResponseImpl value,
-          $Res Function(_$ListMediaResponseImpl) then) =
-      __$$ListMediaResponseImplCopyWithImpl<$Res>;
+abstract class _$$ListMediaResponseImplCopyWith<$Res> implements $ListMediaResponseCopyWith<$Res> {
+  factory _$$ListMediaResponseImplCopyWith(_$ListMediaResponseImpl value, $Res Function(_$ListMediaResponseImpl) then) = __$$ListMediaResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<LocalImageView> images});
 }
 
 /// @nodoc
-class __$$ListMediaResponseImplCopyWithImpl<$Res>
-    extends _$ListMediaResponseCopyWithImpl<$Res, _$ListMediaResponseImpl>
-    implements _$$ListMediaResponseImplCopyWith<$Res> {
-  __$$ListMediaResponseImplCopyWithImpl(_$ListMediaResponseImpl _value,
-      $Res Function(_$ListMediaResponseImpl) _then)
-      : super(_value, _then);
+class __$$ListMediaResponseImplCopyWithImpl<$Res> extends _$ListMediaResponseCopyWithImpl<$Res, _$ListMediaResponseImpl> implements _$$ListMediaResponseImplCopyWith<$Res> {
+  __$$ListMediaResponseImplCopyWithImpl(_$ListMediaResponseImpl _value, $Res Function(_$ListMediaResponseImpl) _then) : super(_value, _then);
 
   /// Create a copy of ListMediaResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? images = null,
-  }) {
-    return _then(_$ListMediaResponseImpl(
-      images: null == images
-          ? _value._images
-          : images // ignore: cast_nullable_to_non_nullable
-              as List<LocalImageView>,
-    ));
+  $Res call({Object? images = null}) {
+    return _then(
+      _$ListMediaResponseImpl(
+        images:
+            null == images
+                ? _value._images
+                : images // ignore: cast_nullable_to_non_nullable
+                    as List<LocalImageView>,
+      ),
+    );
   }
 }
 
@@ -106,12 +99,9 @@ class __$$ListMediaResponseImplCopyWithImpl<$Res>
 
 @modelSerde
 class _$ListMediaResponseImpl extends _ListMediaResponse {
-  const _$ListMediaResponseImpl({required final List<LocalImageView> images})
-      : _images = images,
-        super._();
+  const _$ListMediaResponseImpl({required final List<LocalImageView> images}) : _images = images, super._();
 
-  factory _$ListMediaResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ListMediaResponseImplFromJson(json);
+  factory _$ListMediaResponseImpl.fromJson(Map<String, dynamic> json) => _$$ListMediaResponseImplFromJson(json);
 
   final List<LocalImageView> _images;
   @override
@@ -128,41 +118,31 @@ class _$ListMediaResponseImpl extends _ListMediaResponse {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ListMediaResponseImpl &&
-            const DeepCollectionEquality().equals(other._images, _images));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$ListMediaResponseImpl && const DeepCollectionEquality().equals(other._images, _images));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_images));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_images));
 
   /// Create a copy of ListMediaResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ListMediaResponseImplCopyWith<_$ListMediaResponseImpl> get copyWith =>
-      __$$ListMediaResponseImplCopyWithImpl<_$ListMediaResponseImpl>(
-          this, _$identity);
+  _$$ListMediaResponseImplCopyWith<_$ListMediaResponseImpl> get copyWith => __$$ListMediaResponseImplCopyWithImpl<_$ListMediaResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ListMediaResponseImplToJson(
-      this,
-    );
+    return _$$ListMediaResponseImplToJson(this);
   }
 }
 
 abstract class _ListMediaResponse extends ListMediaResponse {
-  const factory _ListMediaResponse(
-      {required final List<LocalImageView> images}) = _$ListMediaResponseImpl;
+  const factory _ListMediaResponse({required final List<LocalImageView> images}) = _$ListMediaResponseImpl;
   const _ListMediaResponse._() : super._();
 
-  factory _ListMediaResponse.fromJson(Map<String, dynamic> json) =
-      _$ListMediaResponseImpl.fromJson;
+  factory _ListMediaResponse.fromJson(Map<String, dynamic> json) = _$ListMediaResponseImpl.fromJson;
 
   @override
   List<LocalImageView> get images;
@@ -171,6 +151,5 @@ abstract class _ListMediaResponse extends ListMediaResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ListMediaResponseImplCopyWith<_$ListMediaResponseImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ListMediaResponseImplCopyWith<_$ListMediaResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

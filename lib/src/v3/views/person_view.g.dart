@@ -7,15 +7,6 @@ part of 'person_view.dart';
 // **************************************************************************
 
 _$PersonViewImpl _$$PersonViewImplFromJson(Map<String, dynamic> json) =>
-    _$PersonViewImpl(
-      person: Person.fromJson(json['person'] as Map<String, dynamic>),
-      counts: PersonAggregates.fromJson(json['counts'] as Map<String, dynamic>),
-      isAdmin: json['is_admin'] as bool?,
-    );
+    _$PersonViewImpl(person: Person.fromJson(json['person'] as Map<String, dynamic>), counts: PersonAggregates.fromJson(json['counts'] as Map<String, dynamic>), isAdmin: json['is_admin'] as bool?);
 
-Map<String, dynamic> _$$PersonViewImplToJson(_$PersonViewImpl instance) =>
-    <String, dynamic>{
-      'person': instance.person.toJson(),
-      'counts': instance.counts.toJson(),
-      'is_admin': instance.isAdmin,
-    };
+Map<String, dynamic> _$$PersonViewImplToJson(_$PersonViewImpl instance) => <String, dynamic>{'person': instance.person.toJson(), 'counts': instance.counts.toJson(), 'is_admin': instance.isAdmin};
