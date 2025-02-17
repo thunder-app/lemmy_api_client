@@ -12,8 +12,8 @@ class GetPersonDetailsResponse with _$GetPersonDetailsResponse {
   const factory GetPersonDetailsResponse({
     required PersonView personView, // v0.18.0
     Site? site, // v0.19.2 (optional)
-    required List<CommentView> comments, // v0.18.0
-    required List<PostView> posts, // v0.18.0
+    @Deprecated('Deprecated in v1.0.0') List<CommentView>? comments, // v0.18.0
+    @Deprecated('Deprecated in v1.0.0') List<PostView>? posts, // v0.18.0
     required List<CommunityModeratorView> moderates, // v0.18.0
   }) = _GetPersonDetailsResponse;
 

@@ -1604,10 +1604,15 @@ GetPersonDetails _$GetPersonDetailsFromJson(Map<String, dynamic> json) {
 mixin _$GetPersonDetails {
   int? get personId => throw _privateConstructorUsedError; // v0.18.0
   String? get username => throw _privateConstructorUsedError; // v0.18.0
+  @Deprecated('Deprecated in v1.0.0')
   SortType? get sort => throw _privateConstructorUsedError; // v0.18.0
+  @Deprecated('Deprecated in v1.0.0')
   int? get page => throw _privateConstructorUsedError; // v0.18.0
+  @Deprecated('Deprecated in v1.0.0')
   int? get limit => throw _privateConstructorUsedError; // v0.18.0
+  @Deprecated('Deprecated in v1.0.0')
   int? get communityId => throw _privateConstructorUsedError; // v0.18.0
+  @Deprecated('Deprecated in v1.0.0')
   bool? get savedOnly => throw _privateConstructorUsedError; // v0.18.0
   String? get auth => throw _privateConstructorUsedError;
 
@@ -1624,7 +1629,16 @@ mixin _$GetPersonDetails {
 abstract class $GetPersonDetailsCopyWith<$Res> {
   factory $GetPersonDetailsCopyWith(GetPersonDetails value, $Res Function(GetPersonDetails) then) = _$GetPersonDetailsCopyWithImpl<$Res, GetPersonDetails>;
   @useResult
-  $Res call({int? personId, String? username, SortType? sort, int? page, int? limit, int? communityId, bool? savedOnly, String? auth});
+  $Res call({
+    int? personId,
+    String? username,
+    @Deprecated('Deprecated in v1.0.0') SortType? sort,
+    @Deprecated('Deprecated in v1.0.0') int? page,
+    @Deprecated('Deprecated in v1.0.0') int? limit,
+    @Deprecated('Deprecated in v1.0.0') int? communityId,
+    @Deprecated('Deprecated in v1.0.0') bool? savedOnly,
+    String? auth,
+  });
 }
 
 /// @nodoc
@@ -1703,7 +1717,16 @@ abstract class _$$GetPersonDetailsImplCopyWith<$Res> implements $GetPersonDetail
   factory _$$GetPersonDetailsImplCopyWith(_$GetPersonDetailsImpl value, $Res Function(_$GetPersonDetailsImpl) then) = __$$GetPersonDetailsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int? personId, String? username, SortType? sort, int? page, int? limit, int? communityId, bool? savedOnly, String? auth});
+  $Res call({
+    int? personId,
+    String? username,
+    @Deprecated('Deprecated in v1.0.0') SortType? sort,
+    @Deprecated('Deprecated in v1.0.0') int? page,
+    @Deprecated('Deprecated in v1.0.0') int? limit,
+    @Deprecated('Deprecated in v1.0.0') int? communityId,
+    @Deprecated('Deprecated in v1.0.0') bool? savedOnly,
+    String? auth,
+  });
 }
 
 /// @nodoc
@@ -1775,7 +1798,16 @@ class __$$GetPersonDetailsImplCopyWithImpl<$Res> extends _$GetPersonDetailsCopyW
 
 @apiSerde
 class _$GetPersonDetailsImpl extends _GetPersonDetails {
-  const _$GetPersonDetailsImpl({this.personId, this.username, this.sort, this.page, this.limit, this.communityId, this.savedOnly, this.auth}) : super._();
+  const _$GetPersonDetailsImpl({
+    this.personId,
+    this.username,
+    @Deprecated('Deprecated in v1.0.0') this.sort,
+    @Deprecated('Deprecated in v1.0.0') this.page,
+    @Deprecated('Deprecated in v1.0.0') this.limit,
+    @Deprecated('Deprecated in v1.0.0') this.communityId,
+    @Deprecated('Deprecated in v1.0.0') this.savedOnly,
+    this.auth,
+  }) : super._();
 
   factory _$GetPersonDetailsImpl.fromJson(Map<String, dynamic> json) => _$$GetPersonDetailsImplFromJson(json);
 
@@ -1786,18 +1818,23 @@ class _$GetPersonDetailsImpl extends _GetPersonDetails {
   final String? username;
   // v0.18.0
   @override
+  @Deprecated('Deprecated in v1.0.0')
   final SortType? sort;
   // v0.18.0
   @override
+  @Deprecated('Deprecated in v1.0.0')
   final int? page;
   // v0.18.0
   @override
+  @Deprecated('Deprecated in v1.0.0')
   final int? limit;
   // v0.18.0
   @override
+  @Deprecated('Deprecated in v1.0.0')
   final int? communityId;
   // v0.18.0
   @override
+  @Deprecated('Deprecated in v1.0.0')
   final bool? savedOnly;
   // v0.18.0
   @override
@@ -1844,11 +1881,11 @@ abstract class _GetPersonDetails extends GetPersonDetails {
   const factory _GetPersonDetails({
     final int? personId,
     final String? username,
-    final SortType? sort,
-    final int? page,
-    final int? limit,
-    final int? communityId,
-    final bool? savedOnly,
+    @Deprecated('Deprecated in v1.0.0') final SortType? sort,
+    @Deprecated('Deprecated in v1.0.0') final int? page,
+    @Deprecated('Deprecated in v1.0.0') final int? limit,
+    @Deprecated('Deprecated in v1.0.0') final int? communityId,
+    @Deprecated('Deprecated in v1.0.0') final bool? savedOnly,
     final String? auth,
   }) = _$GetPersonDetailsImpl;
   const _GetPersonDetails._() : super._();
@@ -1860,14 +1897,19 @@ abstract class _GetPersonDetails extends GetPersonDetails {
   @override
   String? get username; // v0.18.0
   @override
+  @Deprecated('Deprecated in v1.0.0')
   SortType? get sort; // v0.18.0
   @override
+  @Deprecated('Deprecated in v1.0.0')
   int? get page; // v0.18.0
   @override
+  @Deprecated('Deprecated in v1.0.0')
   int? get limit; // v0.18.0
   @override
+  @Deprecated('Deprecated in v1.0.0')
   int? get communityId; // v0.18.0
   @override
+  @Deprecated('Deprecated in v1.0.0')
   bool? get savedOnly; // v0.18.0
   @override
   String? get auth;

@@ -23,8 +23,10 @@ GetPersonDetailsResponse _$GetPersonDetailsResponseFromJson(Map<String, dynamic>
 mixin _$GetPersonDetailsResponse {
   PersonView get personView => throw _privateConstructorUsedError; // v0.18.0
   Site? get site => throw _privateConstructorUsedError; // v0.19.2 (optional)
-  List<CommentView> get comments => throw _privateConstructorUsedError; // v0.18.0
-  List<PostView> get posts => throw _privateConstructorUsedError; // v0.18.0
+  @Deprecated('Deprecated in v1.0.0')
+  List<CommentView>? get comments => throw _privateConstructorUsedError; // v0.18.0
+  @Deprecated('Deprecated in v1.0.0')
+  List<PostView>? get posts => throw _privateConstructorUsedError; // v0.18.0
   List<CommunityModeratorView> get moderates => throw _privateConstructorUsedError;
 
   /// Serializes this GetPersonDetailsResponse to a JSON map.
@@ -40,7 +42,13 @@ mixin _$GetPersonDetailsResponse {
 abstract class $GetPersonDetailsResponseCopyWith<$Res> {
   factory $GetPersonDetailsResponseCopyWith(GetPersonDetailsResponse value, $Res Function(GetPersonDetailsResponse) then) = _$GetPersonDetailsResponseCopyWithImpl<$Res, GetPersonDetailsResponse>;
   @useResult
-  $Res call({PersonView personView, Site? site, List<CommentView> comments, List<PostView> posts, List<CommunityModeratorView> moderates});
+  $Res call({
+    PersonView personView,
+    Site? site,
+    @Deprecated('Deprecated in v1.0.0') List<CommentView>? comments,
+    @Deprecated('Deprecated in v1.0.0') List<PostView>? posts,
+    List<CommunityModeratorView> moderates,
+  });
 
   $PersonViewCopyWith<$Res> get personView;
   $SiteCopyWith<$Res>? get site;
@@ -59,7 +67,7 @@ class _$GetPersonDetailsResponseCopyWithImpl<$Res, $Val extends GetPersonDetails
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? personView = null, Object? site = freezed, Object? comments = null, Object? posts = null, Object? moderates = null}) {
+  $Res call({Object? personView = null, Object? site = freezed, Object? comments = freezed, Object? posts = freezed, Object? moderates = null}) {
     return _then(
       _value.copyWith(
             personView:
@@ -73,15 +81,15 @@ class _$GetPersonDetailsResponseCopyWithImpl<$Res, $Val extends GetPersonDetails
                     : site // ignore: cast_nullable_to_non_nullable
                         as Site?,
             comments:
-                null == comments
+                freezed == comments
                     ? _value.comments
                     : comments // ignore: cast_nullable_to_non_nullable
-                        as List<CommentView>,
+                        as List<CommentView>?,
             posts:
-                null == posts
+                freezed == posts
                     ? _value.posts
                     : posts // ignore: cast_nullable_to_non_nullable
-                        as List<PostView>,
+                        as List<PostView>?,
             moderates:
                 null == moderates
                     ? _value.moderates
@@ -122,7 +130,13 @@ abstract class _$$GetPersonDetailsResponseImplCopyWith<$Res> implements $GetPers
   factory _$$GetPersonDetailsResponseImplCopyWith(_$GetPersonDetailsResponseImpl value, $Res Function(_$GetPersonDetailsResponseImpl) then) = __$$GetPersonDetailsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({PersonView personView, Site? site, List<CommentView> comments, List<PostView> posts, List<CommunityModeratorView> moderates});
+  $Res call({
+    PersonView personView,
+    Site? site,
+    @Deprecated('Deprecated in v1.0.0') List<CommentView>? comments,
+    @Deprecated('Deprecated in v1.0.0') List<PostView>? posts,
+    List<CommunityModeratorView> moderates,
+  });
 
   @override
   $PersonViewCopyWith<$Res> get personView;
@@ -138,7 +152,7 @@ class __$$GetPersonDetailsResponseImplCopyWithImpl<$Res> extends _$GetPersonDeta
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? personView = null, Object? site = freezed, Object? comments = null, Object? posts = null, Object? moderates = null}) {
+  $Res call({Object? personView = null, Object? site = freezed, Object? comments = freezed, Object? posts = freezed, Object? moderates = null}) {
     return _then(
       _$GetPersonDetailsResponseImpl(
         personView:
@@ -152,15 +166,15 @@ class __$$GetPersonDetailsResponseImplCopyWithImpl<$Res> extends _$GetPersonDeta
                 : site // ignore: cast_nullable_to_non_nullable
                     as Site?,
         comments:
-            null == comments
+            freezed == comments
                 ? _value._comments
                 : comments // ignore: cast_nullable_to_non_nullable
-                    as List<CommentView>,
+                    as List<CommentView>?,
         posts:
-            null == posts
+            freezed == posts
                 ? _value._posts
                 : posts // ignore: cast_nullable_to_non_nullable
-                    as List<PostView>,
+                    as List<PostView>?,
         moderates:
             null == moderates
                 ? _value._moderates
@@ -178,8 +192,8 @@ class _$GetPersonDetailsResponseImpl extends _GetPersonDetailsResponse {
   const _$GetPersonDetailsResponseImpl({
     required this.personView,
     this.site,
-    required final List<CommentView> comments,
-    required final List<PostView> posts,
+    @Deprecated('Deprecated in v1.0.0') final List<CommentView>? comments,
+    @Deprecated('Deprecated in v1.0.0') final List<PostView>? posts,
     required final List<CommunityModeratorView> moderates,
   }) : _comments = comments,
        _posts = posts,
@@ -194,23 +208,29 @@ class _$GetPersonDetailsResponseImpl extends _GetPersonDetailsResponse {
   @override
   final Site? site;
   // v0.19.2 (optional)
-  final List<CommentView> _comments;
+  final List<CommentView>? _comments;
   // v0.19.2 (optional)
   @override
-  List<CommentView> get comments {
+  @Deprecated('Deprecated in v1.0.0')
+  List<CommentView>? get comments {
+    final value = _comments;
+    if (value == null) return null;
     if (_comments is EqualUnmodifiableListView) return _comments;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_comments);
+    return EqualUnmodifiableListView(value);
   }
 
   // v0.18.0
-  final List<PostView> _posts;
+  final List<PostView>? _posts;
   // v0.18.0
   @override
-  List<PostView> get posts {
+  @Deprecated('Deprecated in v1.0.0')
+  List<PostView>? get posts {
+    final value = _posts;
+    if (value == null) return null;
     if (_posts is EqualUnmodifiableListView) return _posts;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_posts);
+    return EqualUnmodifiableListView(value);
   }
 
   // v0.18.0
@@ -262,8 +282,8 @@ abstract class _GetPersonDetailsResponse extends GetPersonDetailsResponse {
   const factory _GetPersonDetailsResponse({
     required final PersonView personView,
     final Site? site,
-    required final List<CommentView> comments,
-    required final List<PostView> posts,
+    @Deprecated('Deprecated in v1.0.0') final List<CommentView>? comments,
+    @Deprecated('Deprecated in v1.0.0') final List<PostView>? posts,
     required final List<CommunityModeratorView> moderates,
   }) = _$GetPersonDetailsResponseImpl;
   const _GetPersonDetailsResponse._() : super._();
@@ -275,9 +295,11 @@ abstract class _GetPersonDetailsResponse extends GetPersonDetailsResponse {
   @override
   Site? get site; // v0.19.2 (optional)
   @override
-  List<CommentView> get comments; // v0.18.0
+  @Deprecated('Deprecated in v1.0.0')
+  List<CommentView>? get comments; // v0.18.0
   @override
-  List<PostView> get posts; // v0.18.0
+  @Deprecated('Deprecated in v1.0.0')
+  List<PostView>? get posts; // v0.18.0
   @override
   List<CommunityModeratorView> get moderates;
 

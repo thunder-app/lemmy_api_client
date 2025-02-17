@@ -262,11 +262,11 @@ class GetPersonDetails with _$GetPersonDetails implements LemmyApiQuery<GetPerso
   const factory GetPersonDetails({
     int? personId, // v0.18.0
     String? username, // v0.18.0
-    SortType? sort, // v0.18.0
-    int? page, // v0.18.0
-    int? limit, // v0.18.0
-    int? communityId, // v0.18.0
-    bool? savedOnly, // v0.18.0
+    @Deprecated('Deprecated in v1.0.0') SortType? sort, // v0.18.0
+    @Deprecated('Deprecated in v1.0.0') int? page, // v0.18.0
+    @Deprecated('Deprecated in v1.0.0') int? limit, // v0.18.0
+    @Deprecated('Deprecated in v1.0.0') int? communityId, // v0.18.0
+    @Deprecated('Deprecated in v1.0.0') bool? savedOnly, // v0.18.0
     String? auth,
   }) = _GetPersonDetails;
 
