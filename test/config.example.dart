@@ -5,7 +5,7 @@
 String version = 'v4';
 
 /// The instance to connect to. By default, it will use the docker container port.
-String instance = 'localhost:1236';
+String instance = 'proxy:1236';
 
 /// The scheme to use. By default, it will use HTTP.
 String scheme = 'http';
