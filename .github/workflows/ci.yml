@@ -12,16 +12,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: dart-lang/setup-dart@v1
-        with:
-          sdk: 3.7.0
-
       - uses: actions/checkout@v2
 
       - name: Get dependencies
         run: dart pub get
 
       - name: Check formatting
-        run: dart format --set-exit-if-changed --output none .
+        run: dart format -l 200 --set-exit-if-changed --output none .
 
       - name: Run lints
         run: dart analyze --no-fatal-warnings
+      
+      # TODO: Set up lemmy server for tests
